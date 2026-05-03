@@ -179,14 +179,16 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: rgba(237, 230, 218, 0.78);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* Almost transparent over hero — barest hint of frosted glass, video reads through clearly */
+    background: rgba(237, 230, 218, 0.08);
+    backdrop-filter: blur(8px) saturate(1.15);
+    -webkit-backdrop-filter: blur(8px) saturate(1.15);
     border-bottom: 1px solid transparent;
     transition: border-color .3s var(--ease), background .3s var(--ease);
   }
   .nav.scrolled {
-    background: rgba(237, 230, 218, 0.94);
+    /* When scrolled past hero, become more solid for readability over content sections */
+    background: rgba(237, 230, 218, 0.88);
     border-bottom-color: var(--grey-line);
   }
   .nav-inner {
@@ -310,7 +312,8 @@
     width: 100%; height: 100%;
     /* Cover fills the entire hero section on widescreen — crops excess instead of letterboxing */
     object-fit: cover;
-    object-position: center center;
+    /* Anchor the video lower so the visible focal area shifts down (more sky/upper landscape visible at top of hero) */
+    object-position: center 75%;
     opacity: 0;
     transition: opacity 1.2s ease-in-out;
     filter: url(#vid-sharpen) contrast(1.05) saturate(1.05);
@@ -318,7 +321,9 @@
     -webkit-backface-visibility: hidden;
     transform: translateZ(0);
     will-change: opacity;
-    /* No mask — video fills the entire hero as a full-bleed background, no fade cutoff */
+    /* Video sits BELOW the 76px ribbon. Fully transparent for the first 76px (behind ribbon = empty cream), then fades in over the next ~120px so the video gently emerges below the nav. */
+    mask-image: linear-gradient(180deg, transparent 0px, transparent 76px, black 200px, black 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0px, transparent 76px, black 200px, black 100%);
   }
   .hero-vid.active { opacity: 1; }
   /* Conformed overlay to match Context / Process / Record video sections */
@@ -614,10 +619,13 @@
     filter: url(#vid-sharpen) contrast(1.05) saturate(1.05);
     image-rendering: -webkit-optimize-contrast;
     transform: translateZ(0);
-    /* No mask — video fills the entire section, encroaching behind the stats grid as a full-bleed background */
+    /* Soft fade at TOP and BOTTOM so section 11 (Context) blends into both the section above (Before/After) and Credentials below */
+    mask-image: linear-gradient(180deg, transparent 0%, black 18%, black 78%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 18%, black 78%, transparent 100%);
   }
   .opportunity::before {
     content: ''; position: absolute; inset: 0; z-index: 1;
+    /* All stops use paper-bright now so the gradient ends in the SAME cream tone as the Credentials section below — clean blend, no visible boundary */
     background:
       linear-gradient(180deg,
         var(--paper-bright) 0%,
@@ -625,7 +633,7 @@
         color-mix(in srgb, var(--paper-bright) 70%, transparent) 35%,
         color-mix(in srgb, var(--paper-bright) 70%, transparent) 60%,
         color-mix(in srgb, var(--paper-bright) 80%, transparent) 88%,
-        var(--paper) 100%);
+        var(--paper-bright) 100%);
     pointer-events: none;
   }
   .opportunity > .container { position: relative; z-index: 2; }
@@ -1568,10 +1576,15 @@
     filter: url(#vid-sharpen) contrast(1.05) saturate(1.05);
     image-rendering: -webkit-optimize-contrast;
     transform: translateZ(0);
-    /* Fade in vw units so the fade-out lands at the video band edge regardless of section height (band height = ~56vw at full-bleed) */
+    /* Two videos alternate: only .active is visible, others fade out */
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    will-change: opacity;
+    /* Same fade formula as Track Record — vw units so fade lands at the video band edge regardless of section height */
     mask-image: linear-gradient(180deg, transparent 0vw, black 4vw, black 45vw, transparent 56vw);
     -webkit-mask-image: linear-gradient(180deg, transparent 0vw, black 4vw, black 45vw, transparent 56vw);
   }
+  .process-vid.active { opacity: 1; }
   .process::before {
     content: ''; position: absolute; inset: 0; z-index: 1;
     background:
@@ -2394,9 +2407,47 @@
   }
 
   /* =========================================================
-     FAQ (laymen audience)
+     FAQ (laymen audience) — full-bleed background portrait video
      ========================================================= */
-  .faq { background: var(--paper-bright); }
+  .faq {
+    background: var(--paper-bright);
+    position: relative;
+    overflow: hidden;
+  }
+  .faq-video-stage {
+    position: absolute; inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .faq-vid {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    /* Full-bleed background: cover fills entire section. Source is now upscaled to 1080x1920 (lanczos) — crisp on widescreen */
+    object-fit: cover;
+    object-position: center center;
+    filter: contrast(1.04) saturate(1.05);
+    /* image-rendering: auto — let browser pick the best smoothing for video (was 'optimize-contrast' which made video look blocky) */
+    image-rendering: auto;
+    transform: translateZ(0);
+    /* Soft top + bottom fade so it dissolves into the cream sections above and below */
+    mask-image: linear-gradient(180deg, transparent 0%, black 14%, black 86%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 14%, black 86%, transparent 100%);
+  }
+  /* Cream tint overlay so questions stay readable on top of the video */
+  .faq::before {
+    content: ''; position: absolute; inset: 0; z-index: 1;
+    background:
+      linear-gradient(180deg,
+        var(--paper-bright) 0%,
+        color-mix(in srgb, var(--paper-bright) 78%, transparent) 8%,
+        color-mix(in srgb, var(--paper-bright) 75%, transparent) 50%,
+        color-mix(in srgb, var(--paper-bright) 84%, transparent) 92%,
+        var(--paper-bright) 100%);
+    pointer-events: none;
+  }
+  .faq > .container { position: relative; z-index: 2; }
+  .faq > .contours { z-index: 1; }
   .faq-list { max-width: 920px; margin: 0 auto; }
   .faq-item {
     border-top: 1px solid var(--grey-line);
@@ -2451,7 +2502,8 @@
   /* =========================================================
      CREDENTIALS section
      ========================================================= */
-  .creds { background: var(--paper); }
+  /* Background matches FAQ section so 12 → 13 transition blends seamlessly (no visible cream-tone boundary) */
+  .creds { background: var(--paper-bright); }
   .creds-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2649,15 +2701,16 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 200;
-    background: color-mix(in srgb, var(--ink) 92%, transparent);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* Light cream pill with frosted glass — much softer than the dark ink it replaces */
+    background: color-mix(in srgb, var(--paper-bright) 82%, transparent);
+    backdrop-filter: blur(14px) saturate(1.2);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
     border-radius: 999px;
     padding: 6px;
     gap: 4px;
     align-items: center;
-    box-shadow: 0 12px 40px -10px rgba(0,0,0,0.35), 0 4px 12px -4px rgba(0,0,0,0.2);
-    border: 1px solid color-mix(in srgb, var(--paper) 14%, transparent);
+    box-shadow: 0 12px 40px -10px rgba(0,0,0,0.18), 0 4px 12px -4px rgba(0,0,0,0.10);
+    border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
     max-width: calc(100vw - 24px);
   }
   .bn-scroll {
@@ -2679,7 +2732,8 @@
     font-family: var(--mono);
     font-size: 8.5px;
     letter-spacing: 0.18em;
-    color: color-mix(in srgb, var(--paper) 60%, transparent);
+    /* Dark text now since the pill background is light cream */
+    color: color-mix(in srgb, var(--ink) 55%, transparent);
     padding: 0 6px 0 4px;
     align-self: center;
     flex-shrink: 0;
@@ -2697,7 +2751,8 @@
     gap: 2px;
     padding: 8px 12px;
     border-radius: 999px;
-    color: color-mix(in srgb, var(--paper) 75%, transparent);
+    /* Dark ink text on the new light cream pill */
+    color: color-mix(in srgb, var(--ink) 70%, transparent);
     text-decoration: none;
     font-family: var(--mono);
     font-size: 9px;
@@ -2708,8 +2763,8 @@
   }
   .bn-item svg { width: 20px; height: 20px; display: block; }
   .bn-item:hover, .bn-item:focus-visible {
-    color: var(--paper);
-    background: color-mix(in srgb, var(--paper) 8%, transparent);
+    color: var(--ink);
+    background: color-mix(in srgb, var(--ink) 6%, transparent);
   }
   .bn-item.bn-cta { background: var(--ic-red); color: #fff; }
   .bn-item.bn-cta:hover, .bn-item.bn-cta:focus-visible { background: var(--ic-red-deep); color: #fff; }
@@ -4035,9 +4090,13 @@
 
 <!-- ============== PROCESS / METHODOLOGY ============== -->
 <section class="process" id="process">
+  <!-- Engagement Process background: 2 videos alternate (clip 1 = drone/site, clip 2 = soil nail), fixed sequence, loop forever -->
   <div class="process-video-stage" aria-hidden="true">
-    <video class="process-vid" autoplay muted loop playsinline preload="auto">
+    <video class="process-vid active" data-idx="0" autoplay muted playsinline preload="auto">
       <source src="images/sections/methodology-video.mp4" type="video/mp4">
+    </video>
+    <video class="process-vid" data-idx="1" muted playsinline preload="auto">
+      <source src="images/sections/methodology-video-2.mp4" type="video/mp4">
     </video>
   </div>
   <div class="contours subtle" aria-hidden="true">
@@ -4788,6 +4847,12 @@
 
 <!-- ============== FAQ (laymen audience) ============== -->
 <section class="faq" id="faq">
+  <!-- Background video for the FAQ section -->
+  <div class="faq-video-stage" aria-hidden="true">
+    <video class="faq-vid" autoplay muted loop playsinline preload="auto">
+      <source src="images/sections/faq-video.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="contours subtle" aria-hidden="true">
     <svg viewBox="0 0 1600 900" preserveAspectRatio="none"><use href="#topo-default" stroke="#1F1B17" stroke-width="0.55" fill="none" opacity="0.5"/></svg>
   </div>
@@ -5227,6 +5292,49 @@
     document.addEventListener('visibilitychange', () => {
       if (!document.hidden) {
         const active = document.querySelector('.hero-vid.active');
+        if (active && active.paused) active.play().catch(() => {});
+      }
+    });
+  })();
+
+  // Engagement Process video carousel: 2 clips alternate (clip-1 = drone/site, clip-2 = soil nail), fixed sequence, cross-fade, loop forever
+  (() => {
+    const vids = Array.from(document.querySelectorAll('.process-vid'));
+    if (vids.length === 0) return;
+
+    let pos = 0;
+    vids.forEach(v => v.classList.remove('active'));
+    vids[pos].classList.add('active');
+    vids[pos].currentTime = 0;
+    vids[pos].play().catch(() => {});
+
+    vids.forEach((v) => {
+      v.addEventListener('ended', () => {
+        const currentIdx = pos;
+        pos = (pos + 1) % vids.length;
+        const nextIdx = pos;
+        vids[nextIdx].currentTime = 0;
+        vids[nextIdx].play().catch(() => {});
+        vids[nextIdx].classList.add('active');
+        setTimeout(() => {
+          vids[currentIdx].classList.remove('active');
+          vids[currentIdx].pause();
+        }, 1200);
+      });
+      v.addEventListener('error', () => v.dispatchEvent(new Event('ended')));
+    });
+
+    // Resilience: keep the active clip playing through autoplay throttles
+    setInterval(() => {
+      const active = document.querySelector('.process-vid.active');
+      if (active && active.paused && active.readyState >= 2) {
+        active.play().catch(() => {});
+      }
+    }, 2500);
+
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        const active = document.querySelector('.process-vid.active');
         if (active && active.paused) active.play().catch(() => {});
       }
     });
