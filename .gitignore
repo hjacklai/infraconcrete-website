@@ -1,0 +1,23 @@
+# Private working files — NEVER push these to GitHub
+_source/
+.claude/
+README.md
+
+# Sibling deploy folder created earlier (snapshot, no longer needed once git is wired)
+WEBPAGE INFRACONCRETE_DEPLOY/
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor noise
+*.swp
+*.bak
+*~
+.vscode/
+.idea/
+
+# Temp files
+*.tmp
+*.temp
