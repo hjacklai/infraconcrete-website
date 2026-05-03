@@ -93,10 +93,10 @@
     --ic-red-soft:   #E94557;
     --ic-red-tint:   #F8E5E8;
 
-    /* Panthera-derived stage (warm cream paper) */
-    --paper:         #EDE6DA;          /* Panthera cream, slightly warmer */
-    --paper-bright:  #F5EFE3;
-    --paper-dim:     #E2DACC;
+    /* Panthera-derived stage (warm cream paper) — moderately warm cream sweet spot */
+    --paper:         #ECE0C6;          /* deeper warm cream */
+    --paper-bright:  #F4EAD2;          /* primary cream surface — soft warm */
+    --paper-dim:     #E0D5BA;          /* dimmer accent cream */
     --ink:           #1F1B17;          /* very dark warm ink, not pure black */
     --ink-soft:      #3A332C;
     --grey-700:      #5A5148;
@@ -179,17 +179,16 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    /* Almost transparent over hero — barest hint of frosted glass, video reads through clearly */
-    background: rgba(237, 230, 218, 0.08);
-    backdrop-filter: blur(8px) saturate(1.15);
-    -webkit-backdrop-filter: blur(8px) saturate(1.15);
+    /* Even more transparent over hero — barely there, just frosted glass */
+    background: rgba(244, 234, 210, 0.04);
+    backdrop-filter: blur(10px) saturate(1.15);
+    -webkit-backdrop-filter: blur(10px) saturate(1.15);
     border-bottom: 1px solid transparent;
     transition: border-color .3s var(--ease), background .3s var(--ease);
   }
   .nav.scrolled {
-    /* When scrolled past hero, become more solid for readability over content sections */
-    background: rgba(237, 230, 218, 0.88);
-    border-bottom-color: var(--grey-line);
+    /* When scrolled past hero, slightly more visible but still see-through (no longer fully solid) */
+    background: rgba(244, 234, 210, 0.62);
   }
   .nav-inner {
     display: flex;
@@ -285,7 +284,8 @@
   .hero {
     background: var(--paper-bright);
     position: relative;
-    padding: 80px 0 60px;
+    /* Reduced bottom padding so the hero blends tightly into section 1 (Philosophy) — no visible cream gap between them */
+    padding: 80px 0 0;
     overflow: hidden;
     /* Always exactly one screen tall: 100vh on every device. Floor of 560px catches edge cases (e.g. landscape mobile). Capped at 1100px so it doesn't go absurd on 4K. */
     min-height: clamp(560px, 100vh, 1100px);
@@ -321,14 +321,15 @@
     -webkit-backface-visibility: hidden;
     transform: translateZ(0);
     will-change: opacity;
-    /* Video sits BELOW the 76px ribbon. Fully transparent for the first 76px (behind ribbon = empty cream), then fades in over the next ~120px so the video gently emerges below the nav. */
-    mask-image: linear-gradient(180deg, transparent 0px, transparent 76px, black 200px, black 100%);
-    -webkit-mask-image: linear-gradient(180deg, transparent 0px, transparent 76px, black 200px, black 100%);
+    /* Video sits BELOW the 76px ribbon, fades in over ~120px, then fades OUT in the bottom 22% so it dissolves into the cream Philosophy section below */
+    mask-image: linear-gradient(180deg, transparent 0px, transparent 76px, black 200px, black 78%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0px, transparent 76px, black 200px, black 78%, transparent 100%);
   }
   .hero-vid.active { opacity: 1; }
   /* Conformed overlay to match Context / Process / Record video sections */
   .hero::before {
     content: ''; position: absolute; inset: 0; z-index: 1;
+    /* Both ends use paper-bright so the hero blends top→bottom with no cream-tone shift, AND matches section 1 (Philosophy) below */
     background:
       linear-gradient(180deg,
         var(--paper-bright) 0%,
@@ -336,7 +337,7 @@
         color-mix(in srgb, var(--paper-bright) 70%, transparent) 35%,
         color-mix(in srgb, var(--paper-bright) 70%, transparent) 60%,
         color-mix(in srgb, var(--paper-bright) 80%, transparent) 88%,
-        var(--paper) 100%);
+        var(--paper-bright) 100%);
     pointer-events: none;
   }
   .hero > .container { position: relative; z-index: 2; }
@@ -494,14 +495,13 @@
     gap: clamp(32px, 5vw, 100px);
     align-items: end;
     margin-bottom: clamp(56px, 9vh, 100px);
-    border-top: 1px solid var(--grey-line);
-    padding-top: 32px;
+    /* border-top removed — was drawing a hairline above every section header */
+    padding-top: 0;
   }
   /* When the section header has no intro paragraph (we trimmed many of these), let the h2 use the full width so short titles can sit on one line */
   .sec-header:not(:has(p)) {
     grid-template-columns: 1fr;
   }
-  .sec-header.dark { border-top-color: rgba(255,255,255,0.22); }
   .sec-header h2 {
     font-family: var(--serif);
     font-weight: 300;
@@ -528,7 +528,8 @@
   /* =========================================================
      PHILOSOPHY (Panthera slide 02 echo)
      ========================================================= */
-  .philosophy { background: var(--paper); }
+  /* Background matches Problems section (02) so 01 → 02 transition blends seamlessly. Reduced top padding so it tucks tight under the hero with no cream gap. */
+  .philosophy { background: var(--paper-bright); padding-top: clamp(28px, 4vh, 48px); }
   .phil-grid {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
@@ -2701,10 +2702,10 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 200;
-    /* Light cream pill with frosted glass — much softer than the dark ink it replaces */
-    background: color-mix(in srgb, var(--paper-bright) 82%, transparent);
-    backdrop-filter: blur(14px) saturate(1.2);
-    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    /* Light cream pill with frosted glass — more transparent for floating glass feel */
+    background: color-mix(in srgb, var(--paper-bright) 58%, transparent);
+    backdrop-filter: blur(16px) saturate(1.25);
+    -webkit-backdrop-filter: blur(16px) saturate(1.25);
     border-radius: 999px;
     padding: 6px;
     gap: 4px;
@@ -3235,7 +3236,7 @@
     height: 6px; pointer-events: none; z-index: 0;
   }
   .footer-grid .footer-connector path {
-    stroke: rgba(237,230,218,0.25); stroke-width: 0.8; fill: none;
+    stroke: rgba(236,224,198,0.25); stroke-width: 0.8; fill: none;
     stroke-dasharray: var(--len, 1000);
     stroke-dashoffset: var(--len, 1000);
     transition: stroke-dashoffset 2200ms var(--ic-fx-ease);
@@ -3544,7 +3545,7 @@
 <!-- ============== CORE SOLUTIONS (3 with photos) ============== -->
 <section class="solutions" id="solutions">
   <div class="contours" aria-hidden="true">
-    <svg viewBox="0 0 1600 900" preserveAspectRatio="none"><use href="#topo-default" stroke="#EDE6DA" stroke-width="0.6" fill="none"/></svg>
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="none"><use href="#topo-default" stroke="#ECE0C6" stroke-width="0.6" fill="none"/></svg>
   </div>
   <div class="container">
     <div class="sec-header dark">
@@ -3707,7 +3708,7 @@
               <line x1="25" y1="17" x2="25" y2="23" stroke="#1F1B17" stroke-width="0.35" opacity="0.45"/>
               <!-- Windshield + roof (cabin) -->
               <path d="M 10 15 L 13 6 Q 15 4 18 4 L 32 4 Q 35 4 37 6 L 40 15"
-                    fill="#EDE6DA" stroke="#1F1B17" stroke-width="1.1" stroke-linejoin="round" opacity="0.9"/>
+                    fill="#ECE0C6" stroke="#1F1B17" stroke-width="1.1" stroke-linejoin="round" opacity="0.9"/>
               <!-- Wiper hint / windshield trim -->
               <line x1="16" y1="13" x2="20" y2="11" stroke="#1F1B17" stroke-width="0.4" opacity="0.5"/>
               <!-- Side mirrors -->
@@ -3732,7 +3733,7 @@
               <line x1="25" y1="17" x2="25" y2="23" stroke="#1F1B17" stroke-width="0.35" opacity="0.45"/>
               <!-- Rear window + roof (with rear wiper) -->
               <path d="M 10 15 L 13 6 Q 15 4 18 4 L 32 4 Q 35 4 37 6 L 40 15"
-                    fill="#EDE6DA" stroke="#1F1B17" stroke-width="1.1" stroke-linejoin="round" opacity="0.9"/>
+                    fill="#ECE0C6" stroke="#1F1B17" stroke-width="1.1" stroke-linejoin="round" opacity="0.9"/>
               <line x1="22" y1="11" x2="25" y2="13" stroke="#1F1B17" stroke-width="0.45" opacity="0.55"/>
               <!-- Side mirrors -->
               <ellipse cx="10.5" cy="12" rx="1.5" ry="1" fill="#1F1B17"/>
@@ -4553,7 +4554,7 @@
           <svg width="100%" height="100%" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <rect width="400" height="250" fill="#28221e"/>
             <!-- platform schematic -->
-            <g stroke="#EDE6DA" stroke-width="0.4" opacity="0.4" fill="none">
+            <g stroke="#ECE0C6" stroke-width="0.4" opacity="0.4" fill="none">
               <path d="M 0 80 Q 100 75, 200 82 T 400 78"/>
               <path d="M 0 130 Q 100 125, 200 132 T 400 128"/>
               <path d="M 0 180 Q 100 175, 200 182 T 400 178"/>
@@ -4686,7 +4687,7 @@
 <section class="value" id="value">
   <div class="value-progress" aria-hidden="true"><div class="value-progress-fill"></div></div>
   <div class="contours" aria-hidden="true">
-    <svg viewBox="0 0 1600 900" preserveAspectRatio="none"><use href="#topo-alt" stroke="#EDE6DA" stroke-width="0.5" fill="none"/></svg>
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="none"><use href="#topo-alt" stroke="#ECE0C6" stroke-width="0.5" fill="none"/></svg>
   </div>
   <div class="container">
     <div class="sec-header dark">
@@ -4931,7 +4932,7 @@
 <!-- ============== CONTACT ============== -->
 <section class="contact" id="contact">
   <div class="contours" aria-hidden="true">
-    <svg viewBox="0 0 1600 900" preserveAspectRatio="none"><use href="#topo-default" stroke="#EDE6DA" stroke-width="0.5" fill="none"/></svg>
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="none"><use href="#topo-default" stroke="#ECE0C6" stroke-width="0.5" fill="none"/></svg>
   </div>
   <div class="container">
     <div class="contact-grid">
