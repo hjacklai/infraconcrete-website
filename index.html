@@ -285,8 +285,20 @@
     position: relative;
     padding: 80px 0 60px;
     overflow: hidden;
-    min-height: 150px;
+    /* Always exactly one screen tall: 100vh on every device. Floor of 560px catches edge cases (e.g. landscape mobile). Capped at 1100px so it doesn't go absurd on 4K. */
+    min-height: clamp(560px, 100vh, 1100px);
+    /* Distribute content vertically — meta at top, h1+grid centered, footer at bottom */
+    display: flex;
+    flex-direction: column;
   }
+  .hero > .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Push h1 down from the meta strip and the hero-footer up to bottom — centers h1+grid vertically */
+  .hero h1 { margin-top: auto !important; }
+  .hero-footer { margin-top: auto; }
   .hero-video-stage {
     position: absolute; inset: 0;
     z-index: 0;
@@ -296,9 +308,9 @@
   .hero-vid {
     position: absolute; inset: 0;
     width: 100%; height: 100%;
-    /* Contain at native size, anchored top — same unzoomed behavior as methodology/track-record */
-    object-fit: contain;
-    object-position: center top;
+    /* Cover fills the entire hero section on widescreen — crops excess instead of letterboxing */
+    object-fit: cover;
+    object-position: center center;
     opacity: 0;
     transition: opacity 1.2s ease-in-out;
     filter: url(#vid-sharpen) contrast(1.05) saturate(1.05);
@@ -306,9 +318,7 @@
     -webkit-backface-visibility: hidden;
     transform: translateZ(0);
     will-change: opacity;
-    /* Fade in at top edge, fade out at video band edge (~56vw down on full-bleed) */
-    mask-image: linear-gradient(180deg, transparent 0vw, black 4vw, black 45vw, transparent 56vw);
-    -webkit-mask-image: linear-gradient(180deg, transparent 0vw, black 4vw, black 45vw, transparent 56vw);
+    /* No mask — video fills the entire hero as a full-bleed background, no fade cutoff */
   }
   .hero-vid.active { opacity: 1; }
   /* Conformed overlay to match Context / Process / Record video sections */
@@ -342,9 +352,10 @@
   .hero h1 {
     font-family: var(--serif);
     font-weight: 700;
-    font-size: clamp(40px, 6.4vw, 86px);
-    line-height: 1.02;
-    letter-spacing: -0.035em;
+    /* Bumped from max 86 to max 120 so the headline scales with the now-much-taller hero */
+    font-size: clamp(48px, 8vw, 120px);
+    line-height: 1.0;
+    letter-spacing: -0.04em;
     margin: 0;
     color: var(--ink);
     max-width: 1100px;
@@ -356,10 +367,11 @@
     font-weight: 500;
     display: block;
     position: relative;
-    font-size: clamp(22px, 3vw, 42px);
-    line-height: 1.18;
-    margin-top: 14px;
-    letter-spacing: -0.02em;
+    /* Bumped from max 42 to max 56 to keep hierarchy with the larger h1 */
+    font-size: clamp(26px, 4vw, 56px);
+    line-height: 1.15;
+    margin-top: 18px;
+    letter-spacing: -0.022em;
   }
   .hero h1 .hero-sub::before {
     content: '';
@@ -470,7 +482,7 @@
   /* =========================================================
      SECTION SCAFFOLD
      ========================================================= */
-  section { position: relative; padding: clamp(90px, 13vh, 150px) 0; overflow: hidden; }
+  section { position: relative; padding: clamp(56px, 8vh, 96px) 0; overflow: hidden; }
   .sec-header {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
@@ -584,7 +596,8 @@
     position: relative;
     overflow: hidden;
     padding: 8px 0 60px;
-    min-height: 150px;
+    /* ~Full screen tall: 88vh on every device. Floor of 500px keeps mobile landscape sane, capped at 1000px on 4K. */
+    min-height: clamp(500px, 88vh, 1000px);
   }
   .context-video-stage {
     position: absolute; inset: 0;
@@ -595,15 +608,13 @@
   .context-vid {
     position: absolute; inset: 0;
     width: 100%; height: 100%;
-    /* Contain + top to match hero / methodology / track-record */
-    object-fit: contain;
-    object-position: center top;
+    /* Cover fills the section on widescreen — crops excess instead of leaving empty space on the sides */
+    object-fit: cover;
+    object-position: center center;
     filter: url(#vid-sharpen) contrast(1.05) saturate(1.05);
     image-rendering: -webkit-optimize-contrast;
     transform: translateZ(0);
-    /* Fade in at top edge, fade out at video band edge (~56vw on full-bleed) */
-    mask-image: linear-gradient(180deg, transparent 0vw, black 4vw, black 45vw, transparent 56vw);
-    -webkit-mask-image: linear-gradient(180deg, transparent 0vw, black 4vw, black 45vw, transparent 56vw);
+    /* No mask — video fills the entire section, encroaching behind the stats grid as a full-bleed background */
   }
   .opportunity::before {
     content: ''; position: absolute; inset: 0; z-index: 1;
@@ -3670,8 +3681,8 @@
             <!-- Natural slope filled, starts at the freeway edge (240, 395) and climbs to top-right. The freeway parapet shows where the cut begins. -->
             <path d="M 240 395 Q 285 385 315 372 Q 350 340 390 320 Q 425 312 460 295 Q 500 270 540 245 Q 580 225 620 200 Q 660 180 700 167 Q 745 148 790 133 Q 850 118 920 105 Q 970 98 1000 95 L 1200 80 L 1200 460 L 240 460 Z" fill="#D4C9B5" opacity="0.6"/>
             <path d="M 240 395 Q 285 385 315 372 Q 350 340 390 320 Q 425 312 460 295 Q 500 270 540 245 Q 580 225 620 200 Q 660 180 700 167 Q 745 148 790 133 Q 850 118 920 105 Q 970 98 1000 95 L 1200 80 L 1200 460 L 240 460 Z" fill="url(#cs-soil)" opacity="0.5"/>
-            <!-- Slope-face top edge (the natural ground surface line) -->
-            <path d="M 240 395 Q 285 385 315 372 Q 350 340 390 320 Q 425 312 460 295 Q 500 270 540 245 Q 580 225 620 200 Q 660 180 700 167 Q 745 148 790 133 Q 850 118 920 105 Q 970 98 1000 95 L 1200 80" stroke="#1F1B17" stroke-width="1.1" fill="none" opacity="0.6"/>
+            <!-- Slope-face top edge (the natural ground surface line). Tagged with class so the slider handle can trace it. -->
+            <path class="cs-slope-line" d="M 240 395 Q 285 385 315 372 Q 350 340 390 320 Q 425 312 460 295 Q 500 270 540 245 Q 580 225 620 200 Q 660 180 700 167 Q 745 148 790 133 Q 850 118 920 105 Q 970 98 1000 95 L 1200 80" stroke="#1F1B17" stroke-width="1.1" fill="none" opacity="0.6"/>
             <!-- Slip circle: endpoints ON the slope curve exactly (toe at 240,395 and upper at 700,167). Center derived geometrically. -->
             <!-- Center dot -->
             <circle cx="364" cy="68" r="4" fill="#C8102E"/>
@@ -3854,11 +3865,11 @@
             <!-- horizontal divider between MSE and Soil Nail walls -->
             <line x1="540" y1="240" x2="1200" y2="240" stroke="#1F1B17" stroke-width="0.7" stroke-dasharray="2 3" opacity="0.5"/>
 
-            <!-- BUILDABLE PLATFORM on top of MSE wall -->
+            <!-- BUILDABLE PLATFORM on top of MSE wall — red band sits just below the building bases at y=80 so buildings rest on its top edge -->
             <line x1="540" y1="80" x2="1200" y2="80" stroke="#1F1B17" stroke-width="1"/>
-            <rect x="540" y="72" width="660" height="6" fill="#C8102E" opacity="0.9"/>
-            <!-- parapet at platform edge -->
-            <rect x="535" y="58" width="10" height="20" fill="#1F1B17"/>
+            <rect x="540" y="80" width="660" height="6" fill="#C8102E" opacity="0.9"/>
+            <!-- parapet at platform edge (bottom anchored to platform top y=80) -->
+            <rect x="535" y="60" width="10" height="20" fill="#1F1B17"/>
 
             <!-- Existing ground dashed curve — matches the BEFORE slope (starts at freeway edge). Shows what was there before excavation. -->
             <path d="M 240 395 Q 285 385 315 372 Q 350 340 390 320 Q 425 312 460 295 Q 500 270 540 245 Q 580 225 620 200 Q 660 180 700 167 Q 745 148 790 133 Q 850 118 920 105 Q 970 98 1000 95 L 1200 80" stroke="#1F1B17" stroke-width="1.4" stroke-dasharray="7 4" fill="none" opacity="0.75"/>
@@ -4018,24 +4029,6 @@
     </div>
 
     <div class="proc-steps proc-topo">
-      <!-- Topographic ascending contour backdrop: the process visually walks UP the slope -->
-      <div class="proc-topo-bg" aria-hidden="true">
-        <svg viewBox="0 0 1200 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- soft red fill below the rising contour, hints at "ground gained" -->
-          <path d="M 0 460 L 240 460 L 280 380 L 480 380 L 520 300 L 720 300 L 760 220 L 960 220 L 1000 140 L 1200 140 L 1200 500 L 0 500 Z" fill="rgba(200,16,46,0.05)"/>
-          <!-- the rising contour line itself -->
-          <path d="M 0 460 L 240 460 L 280 380 L 480 380 L 520 300 L 720 300 L 760 220 L 960 220 L 1000 140 L 1200 140" stroke="rgba(31,27,23,0.28)" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- 5 plateau markers showing the elevation gained at each step -->
-          <g fill="#C8102E">
-            <circle cx="120" cy="460" r="4"/>
-            <circle cx="380" cy="380" r="4"/>
-            <circle cx="620" cy="300" r="4"/>
-            <circle cx="860" cy="220" r="4"/>
-            <circle cx="1100" cy="140" r="4"/>
-          </g>
-        </svg>
-      </div>
-
       <div class="proc-step" data-step="1">
         <div class="proc-icon" aria-hidden="true">
           <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="8"/><line x1="19" y1="19" x2="27" y2="27"/></svg>
@@ -4068,7 +4061,7 @@
       </div>
       <div class="proc-step" data-step="4">
         <div class="proc-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22 Q 4 14 10 14 L22 14 Q 28 14 28 22 Z"/><line x1="2" y1="22" x2="30" y2="22"/><line x1="14" y1="14" x2="14" y2="8"/><line x1="18" y1="14" x2="18" y2="8"/><line x1="14" y1="8" x2="18" y2="8"/></svg>
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="20" width="24" height="6"/><rect x="8" y="13" width="16" height="6"/><rect x="12" y="6" width="8" height="6"/><line x1="2" y1="28" x2="30" y2="28"/></svg>
         </div>
         <div class="proc-body">
           <div class="stp">Step 04</div>
@@ -5340,16 +5333,36 @@
       });
     });
 
-    // The Context site cross-section: drag handle wipes BEFORE → AFTER
+    // The Context site cross-section: drag handle wipes BEFORE → AFTER.
+    // The handle now TRACES the slope curve (cs-slope-line) — slides along the natural ground line at an angle.
     document.querySelectorAll('.ctx-section-stage').forEach(stage => {
       const range = stage.querySelector('.cs-range');
       const clipRect = stage.querySelector('.cs-clip-rect');
       const clipRectBefore = stage.querySelector('.cs-clip-rect-before');
       const divider = stage.querySelector('.cs-divider');
       const handle = stage.querySelector('.cs-handle');
+      const slopeLine = stage.querySelector('.cs-slope-line');
       if (!range || !clipRect || !divider || !handle) return;
       const VIEW_W = 1200, VIEW_H = 460;
-      const HANDLE_Y = 230;
+      const HANDLE_Y_FALLBACK = 230;
+      // Slope curve domain: path starts at (240, 395) and ends at (1200, 80).
+      const SLOPE_START_X = 240, SLOPE_START_Y = 395;
+      const SLOPE_END_X = 1200, SLOPE_END_Y = 80;
+      const slopeLineLength = slopeLine ? slopeLine.getTotalLength() : 0;
+      // Binary-search the slope path to find the Y at a given X.
+      function getSlopeYAtX(targetX) {
+        if (!slopeLine || slopeLineLength === 0) return HANDLE_Y_FALLBACK;
+        if (targetX <= SLOPE_START_X) return SLOPE_START_Y;
+        if (targetX >= SLOPE_END_X) return SLOPE_END_Y;
+        let low = 0, high = slopeLineLength;
+        for (let i = 0; i < 22; i++) {
+          const mid = (low + high) / 2;
+          const point = slopeLine.getPointAtLength(mid);
+          if (point.x < targetX) low = mid;
+          else high = mid;
+        }
+        return slopeLine.getPointAtLength((low + high) / 2).y;
+      }
       const update = pct => {
         const clipped = Math.max(0, Math.min(100, pct));
         const x = (clipped / 100) * VIEW_W;
@@ -5360,7 +5373,9 @@
         }
         divider.setAttribute('x1', x);
         divider.setAttribute('x2', x);
-        handle.setAttribute('transform', `translate(${x}, ${HANDLE_Y})`);
+        // Handle Y follows the slope curve so it visually slides along the natural ground.
+        const y = getSlopeYAtX(x);
+        handle.setAttribute('transform', `translate(${x}, ${y})`);
         stage.dataset.pos = String(Math.round(clipped));
       };
       range.addEventListener('input', e => update(+e.target.value));
