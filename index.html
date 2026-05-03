@@ -2412,10 +2412,11 @@
     gap: 24px;
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(20px, 2.2vw, 26px);
-    line-height: 1.3;
+    /* Reduced from clamp(20, 2.2vw, 26) — 26px was too chunky for FAQ rows */
+    font-size: clamp(16px, 1.7vw, 20px);
+    line-height: 1.35;
     color: var(--ink);
-    letter-spacing: -0.015em;
+    letter-spacing: -0.012em;
     padding: 0;
   }
   .faq-q .ic {
@@ -2561,7 +2562,24 @@
       grid-template-columns: 1fr;
       gap: 10px;
     }
-    .cred-chain-arrow { transform: rotate(90deg); justify-self: center; }
+    /* Cards stretch full width on mobile, cleaner padding, bigger logos for readability */
+    .cred-chain-item {
+      padding: 14px 16px;
+      gap: 14px;
+    }
+    .cred-chain-item img { height: 34px; }
+    .cred-chain-name { font-size: 14.5px; }
+    .cred-chain-desc { font-size: 12px; }
+    /* Replace arrow with a subtle centered vertical bar between cards */
+    .cred-chain-arrow {
+      transform: none;
+      justify-self: center;
+      width: 1px;
+      height: 14px;
+      background: var(--grey-300);
+      color: transparent; /* hide the → glyph itself */
+      font-size: 0;
+    }
   }
   .cred-chain-item img {
     height: 28px;
@@ -2772,6 +2790,11 @@
   .contact-info a { color: var(--paper); }
   .phone-row { display: inline-flex; align-items: center; gap: 10px; }
   .contact-info .phone-row + .phone-row { margin-left: 18px; }
+  /* On narrow mobile, stack the two phones vertically so the 2nd phone doesn't wrap unaligned (Android browsers were misaligning the 2nd number) */
+  @media (max-width: 540px) {
+    .contact-info .phone-row { display: flex; }
+    .contact-info .phone-row + .phone-row { margin-left: 0; margin-top: 8px; }
+  }
   a.wa-icon {
     display: inline-flex;
     align-items: center;
@@ -4945,10 +4968,26 @@
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <span style="display:none;align-items:baseline;">Infra<b>concrete</b><sup>™</sup></span>
         </a>
-        <svg class="cascade-mark cascade-mark--sm" viewBox="0 0 200 60" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="display:block;margin-top:10px;opacity:0.4;width:140px;height:42px;"><defs><pattern id="hatch-sm-footer" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#1F1B17" stroke-width="0.3" opacity="0.18"/></pattern></defs><path d="M 0 45 L 30 45 L 40 35 L 70 35 L 80 25 L 110 25 L 120 15 L 150 15 L 160 5 L 200 5" stroke="#1F1B17" stroke-width="0.7" fill="none" opacity="0.5"/><path d="M 0 45 L 30 45 L 40 35 L 70 35 L 80 25 L 110 25 L 120 15 L 150 15 L 160 5 L 200 5 L 200 60 L 0 60 Z" fill="url(#hatch-sm-footer)"/><rect x="14" y="40" width="14" height="6" stroke="#C8102E" stroke-width="0.9" fill="none"/><rect x="50" y="30" width="14" height="6" stroke="#C8102E" stroke-width="0.9" fill="none"/><rect x="92" y="20" width="14" height="6" stroke="#C8102E" stroke-width="0.9" fill="none"/><rect x="134" y="10" width="14" height="6" stroke="#C8102E" stroke-width="0.9" fill="none"/></svg>
+        <svg class="cascade-mark cascade-mark--sm" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="display:block;margin-top:14px;opacity:0.75;width:240px;height:80px;">
+          <defs>
+            <pattern id="hatch-sm-footer" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="5" stroke="#1F1B17" stroke-width="0.4" opacity="0.18"/>
+            </pattern>
+          </defs>
+          <!-- Stepped slope mass with subtle hatch fill -->
+          <path d="M 0 60 L 30 60 L 40 46 L 80 46 L 92 32 L 132 32 L 144 18 L 184 18 L 196 6 L 240 6 L 240 80 L 0 80 Z" fill="url(#hatch-sm-footer)"/>
+          <!-- Crisp contour line on top of the stepped slope -->
+          <path d="M 0 60 L 30 60 L 40 46 L 80 46 L 92 32 L 132 32 L 144 18 L 184 18 L 196 6 L 240 6" stroke="#1F1B17" stroke-width="1" fill="none" opacity="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- 4 platforms (solid red blocks, much more visible than outline rects) -->
+          <rect x="6" y="55" width="20" height="6" fill="#C8102E"/>
+          <rect x="48" y="41" width="20" height="6" fill="#C8102E"/>
+          <rect x="100" y="27" width="20" height="6" fill="#C8102E"/>
+          <rect x="152" y="13" width="20" height="6" fill="#C8102E"/>
+          <rect x="204" y="-1" width="20" height="6" fill="#C8102E"/>
+        </svg>
         <p style="margin-top:14px; max-width:340px; color: var(--grey-700); line-height: 1.65;">
           <em style="font-family: var(--serif); font-style: italic; color: var(--ic-red);">Engineered slopes for maximum utility.</em><br/>
-          Specialist G7 geotechnical contractor. Slope, ground, and main contracting works across Peninsular Malaysia.
+          Specialist G7 geotechnical contractor. Slope, ground, and main contracting works across Malaysia.
         </p>
       </div>
       <div>
