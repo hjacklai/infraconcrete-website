@@ -573,14 +573,14 @@
 
   /* Cascading boxes on contour, the Panthera slide 02 diagram, redrawn */
   .cascade {
-    margin-top: 72px;
+    margin-top: 56px;
     width: 100%;
-    height: clamp(220px, 28vw, 360px);
+    aspect-ratio: 1400 / 180;
     position: relative;
     overflow: hidden;
   }
   @media (max-width: 540px) {
-    .cascade { margin-top: 36px; height: 180px; }
+    .cascade { margin-top: 32px; aspect-ratio: auto; height: 180px; }
     /* Scale the SVG up visually so the boxes look bigger; container hides any overflow */
     .cascade svg { transform: scale(1.9); transform-origin: center center; }
   }
