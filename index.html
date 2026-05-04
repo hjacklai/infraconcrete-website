@@ -3282,6 +3282,13 @@
       stroke-dashoffset: 0 !important;
     }
   }
+
+  /* iOS Safari: hide the play-button overlay when autoplay is blocked (Low Power Mode, etc.) */
+  /* Falls back gracefully to the poster image — looks like a hero photo, no awkward big play button */
+  video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+  video::-webkit-media-controls { display: none !important; }
+  video::-webkit-media-controls-enclosure { display: none !important; }
+  video::-webkit-media-controls-panel { display: none !important; }
 </style>
 </head>
 <body>
@@ -3417,13 +3424,13 @@
   <!-- Hero video carousel: 3 clips alternate in fixed order (Hero 1, Hero, VID-WA0242), cross-fade, loop forever -->
   <!-- Optimization: posters paint instantly, only the active video preloads fully; the others fetch in the background while it plays -->
   <div class="hero-video-stage" aria-hidden="true">
-    <video class="hero-vid active" data-idx="0" autoplay muted playsinline preload="auto" poster="images/hero/posters/hero-clip-2.jpg">
+    <video class="hero-vid active" data-idx="0" autoplay muted playsinline disablepictureinpicture disableremoteplayback preload="auto" poster="images/hero/posters/hero-clip-2.jpg">
       <source src="images/hero/hero-clip-2.mp4" type="video/mp4">
     </video>
-    <video class="hero-vid" data-idx="1" muted playsinline preload="metadata" poster="images/hero/posters/hero-clip-3.jpg">
+    <video class="hero-vid" data-idx="1" muted playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="images/hero/posters/hero-clip-3.jpg">
       <source src="images/hero/hero-clip-3.mp4" type="video/mp4">
     </video>
-    <video class="hero-vid" data-idx="2" muted playsinline preload="metadata" poster="images/hero/posters/hero-clip-1.jpg">
+    <video class="hero-vid" data-idx="2" muted playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="images/hero/posters/hero-clip-1.jpg">
       <source src="images/hero/hero-clip-1.mp4" type="video/mp4">
     </video>
   </div>
@@ -4101,10 +4108,10 @@
 <section class="process" id="process">
   <!-- Engagement Process background: 2 videos alternate (clip 1 = drone/site, clip 2 = soil nail), fixed sequence, loop forever -->
   <div class="process-video-stage" aria-hidden="true">
-    <video class="process-vid active" data-idx="0" autoplay muted playsinline preload="metadata">
+    <video class="process-vid active" data-idx="0" autoplay muted playsinline disablepictureinpicture disableremoteplayback preload="metadata">
       <source src="images/sections/methodology-video.mp4" type="video/mp4">
     </video>
-    <video class="process-vid" data-idx="1" muted playsinline preload="metadata">
+    <video class="process-vid" data-idx="1" muted playsinline disablepictureinpicture disableremoteplayback preload="metadata">
       <source src="images/sections/methodology-video-2.mp4" type="video/mp4">
     </video>
   </div>
@@ -4333,7 +4340,7 @@
 <!-- ============== TRACK RECORD ============== -->
 <section class="record" id="record">
   <div class="record-video-stage" aria-hidden="true">
-    <video class="record-vid" autoplay muted loop playsinline preload="metadata">
+    <video class="record-vid" autoplay muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata">
       <source src="images/sections/track-record-video.mp4" type="video/mp4">
     </video>
   </div>
@@ -4716,7 +4723,7 @@
 <!-- ============== OPPORTUNITY ============== -->
 <section class="opportunity">
   <div class="context-video-stage" aria-hidden="true">
-    <video class="context-vid" autoplay muted loop playsinline preload="metadata">
+    <video class="context-vid" autoplay muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata">
       <source src="images/sections/context-video.mp4" type="video/mp4">
     </video>
   </div>
@@ -4832,10 +4839,10 @@
   <!-- Background video for the FAQ section -->
   <!-- FAQ background video carousel: 2 clips alternate, cross-fade, loop forever -->
   <div class="faq-video-stage" aria-hidden="true">
-    <video class="faq-vid active" data-idx="0" autoplay muted playsinline preload="auto">
+    <video class="faq-vid active" data-idx="0" autoplay muted playsinline disablepictureinpicture disableremoteplayback preload="auto">
       <source src="images/sections/faq-video-2.mp4" type="video/mp4">
     </video>
-    <video class="faq-vid" data-idx="1" muted playsinline preload="metadata">
+    <video class="faq-vid" data-idx="1" muted playsinline disablepictureinpicture disableremoteplayback preload="metadata">
       <source src="images/sections/faq-video.mp4" type="video/mp4">
     </video>
   </div>
@@ -5233,6 +5240,21 @@
     }, { passive: true });
     window.addEventListener('resize', update);
     update();
+  })();
+
+  // iOS Safari autoplay rescue: if a video is paused (e.g. iOS blocked autoplay outside Low Power Mode), trigger play on first user interaction.
+  // Low Power Mode blocks autoplay at the OS level and cannot be bypassed.
+  (() => {
+    const playAll = () => {
+      document.querySelectorAll('video').forEach(v => {
+        if (v.paused && v.readyState >= 2) v.play().catch(() => {});
+      });
+    };
+    const handler = () => {
+      playAll();
+      ['touchstart', 'pointerdown', 'click', 'scroll'].forEach(evt => document.removeEventListener(evt, handler));
+    };
+    ['touchstart', 'pointerdown', 'click', 'scroll'].forEach(evt => document.addEventListener(evt, handler, { passive: true }));
   })();
 
   // Hero video carousel: 2 clips, fixed alternating order (clip-1 then clip-2 then clip-1 ...), cross-fade, loop forever
