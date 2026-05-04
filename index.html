@@ -303,9 +303,9 @@
     color: #fff;
     background: var(--ic-red);
   }
-  /* Mobile: keep top-right, but compact the pill so it doesn't crowd the
-     logo. The right side of the top nav is empty on phones (menu-btn is
-     hidden ≤880px), so it sits cleanly inside the nav-bar height. */
+  /* Mobile: top-right of nav bar. The group-badge ("Part of [Panthera]")
+     is hidden on phones since it overlaps the lang toggle and the
+     Panthera affiliation is shown again in the footer. */
   @media (max-width: 540px) {
     .lang-toggle {
       top: 14px;
@@ -319,6 +319,7 @@
       min-height: 24px;
       letter-spacing: 0.08em;
     }
+    .group-badge { display: none !important; }
   }
   /* Very small phones — drop to icon-only display by tightening further */
   @media (max-width: 360px) {
