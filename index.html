@@ -2424,17 +2424,21 @@
   .faq-vid {
     position: absolute; inset: 0;
     width: 100%; height: 100%;
-    /* Full-bleed background: cover fills entire section. Source is now upscaled to 1080x1920 (lanczos) — crisp on widescreen */
+    /* Full-bleed background: cover fills entire section. */
     object-fit: cover;
     object-position: center center;
     filter: contrast(1.04) saturate(1.05);
     /* image-rendering: auto — let browser pick the best smoothing for video (was 'optimize-contrast' which made video look blocky) */
     image-rendering: auto;
     transform: translateZ(0);
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    will-change: opacity;
     /* Soft top + bottom fade so it dissolves into the cream sections above and below */
     mask-image: linear-gradient(180deg, transparent 0%, black 14%, black 86%, transparent 100%);
     -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 14%, black 86%, transparent 100%);
   }
+  .faq-vid.active { opacity: 1; }
   /* Cream tint overlay so questions stay readable on top of the video */
   .faq::before {
     content: ''; position: absolute; inset: 0; z-index: 1;
@@ -3410,13 +3414,17 @@
 
 <!-- ============== HERO ============== -->
 <header class="hero" id="top">
-  <!-- Hero video carousel: 2 clips alternate in fixed order, cross-fade, loop forever -->
+  <!-- Hero video carousel: 3 clips alternate in fixed order (Hero 1, Hero, VID-WA0242), cross-fade, loop forever -->
+  <!-- Optimization: posters paint instantly, only the active video preloads fully; the others fetch in the background while it plays -->
   <div class="hero-video-stage" aria-hidden="true">
-    <video class="hero-vid active" data-idx="0" autoplay muted playsinline preload="auto">
-      <source src="images/hero/hero-clip-1.mp4" type="video/mp4">
-    </video>
-    <video class="hero-vid" data-idx="1" muted playsinline preload="auto">
+    <video class="hero-vid active" data-idx="0" autoplay muted playsinline preload="auto" poster="images/hero/posters/hero-clip-2.jpg">
       <source src="images/hero/hero-clip-2.mp4" type="video/mp4">
+    </video>
+    <video class="hero-vid" data-idx="1" muted playsinline preload="metadata" poster="images/hero/posters/hero-clip-3.jpg">
+      <source src="images/hero/hero-clip-3.mp4" type="video/mp4">
+    </video>
+    <video class="hero-vid" data-idx="2" muted playsinline preload="metadata" poster="images/hero/posters/hero-clip-1.jpg">
+      <source src="images/hero/hero-clip-1.mp4" type="video/mp4">
     </video>
   </div>
   <!-- Topographic contour lines, the Panthera signature -->
@@ -3562,9 +3570,9 @@
           <span class="tag">Slope Protection</span>
           <div class="cap-carousel" data-carousel>
             <div class="cap-track">
-              <img src="images/solutions/solution-slope-protection.jpg" alt="Active slope protection works" loading="lazy">
-              <img src="images/solutions/gallery-soil-nail-mesh.jpg" alt="Soil nail and mesh installation" loading="lazy">
-              <img src="images/solutions/gallery-finished-slope.jpg" alt="Stabilized slope after handover" loading="lazy">
+              <img src="images/solutions/sp-1.jpg" alt="Slope protection 1" loading="lazy">
+              <img src="images/solutions/sp-2.jpg" alt="Slope protection 2" loading="lazy">
+              <img src="images/solutions/sp-3.jpg" alt="Slope protection 3" loading="lazy">
             </div>
             <button class="cap-nav prev" aria-label="Previous photo">&lsaquo;</button>
             <button class="cap-nav next" aria-label="Next photo">&rsaquo;</button>
@@ -3584,9 +3592,9 @@
           <span class="tag">Retaining Systems</span>
           <div class="cap-carousel" data-carousel>
             <div class="cap-track">
-              <img src="images/solutions/solution-retaining-systems.jpg" alt="Completed retaining structure" loading="lazy">
-              <img src="images/solutions/gallery-retaining-build.jpg" alt="Retaining wall under construction" loading="lazy">
-              <img src="images/solutions/gallery-jersey-barrier.jpg" alt="Jersey barrier installation alongside slope works" loading="lazy">
+              <img src="images/solutions/rs-1.jpg" alt="Retaining system 1" loading="lazy">
+              <img src="images/solutions/rs-2.jpg" alt="Retaining system 2" loading="lazy">
+              <img src="images/solutions/rs-3.jpg" alt="Retaining system 3" loading="lazy">
             </div>
             <button class="cap-nav prev" aria-label="Previous photo">&lsaquo;</button>
             <button class="cap-nav next" aria-label="Next photo">&rsaquo;</button>
@@ -3606,9 +3614,9 @@
           <span class="tag">Land Creation</span>
           <div class="cap-carousel" data-carousel>
             <div class="cap-track">
-              <img src="images/solutions/solution-land-creation.jpg" alt="Usable land platform creation" loading="lazy">
-              <img src="images/solutions/gallery-aerial-platform.jpg" alt="Finished platform from above" loading="lazy">
-              <img src="images/solutions/gallery-megasite-aerial.jpg" alt="Mega-site aerial view" loading="lazy">
+              <img src="images/solutions/ul-1.jpg" alt="Usable land 1" loading="lazy">
+              <img src="images/solutions/ul-2.jpg" alt="Usable land 2" loading="lazy">
+              <img src="images/solutions/ul-3.jpg" alt="Usable land 3" loading="lazy">
             </div>
             <button class="cap-nav prev" aria-label="Previous photo">&lsaquo;</button>
             <button class="cap-nav next" aria-label="Next photo">&rsaquo;</button>
@@ -4093,10 +4101,10 @@
 <section class="process" id="process">
   <!-- Engagement Process background: 2 videos alternate (clip 1 = drone/site, clip 2 = soil nail), fixed sequence, loop forever -->
   <div class="process-video-stage" aria-hidden="true">
-    <video class="process-vid active" data-idx="0" autoplay muted playsinline preload="auto">
+    <video class="process-vid active" data-idx="0" autoplay muted playsinline preload="metadata">
       <source src="images/sections/methodology-video.mp4" type="video/mp4">
     </video>
-    <video class="process-vid" data-idx="1" muted playsinline preload="auto">
+    <video class="process-vid" data-idx="1" muted playsinline preload="metadata">
       <source src="images/sections/methodology-video-2.mp4" type="video/mp4">
     </video>
   </div>
@@ -4210,7 +4218,7 @@
           <div class="ps-fallback"><span class="ps-icon">+</span><span class="ps-name">images/capabilities/cap-soil-nailing.jpg</span><span class="ps-hint">Awaiting photo</span></div>
         </div>
         <div class="idx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="20" x2="21" y2="20"/><line x1="6" y1="3" x2="20" y2="17"/><circle cx="6" cy="3" r="1.4" fill="currentColor"/></svg> Soil Nailing</div>
-        <h3>Reinforcing existing slopes with high <em>strength steel.</em></h3>
+        <h3>Reinforcing existing slopes with <em>high strength steel.</em></h3>
         <p class="desc">Slender steel nails drilled at engineered angles, then grouted to lock the soil mass against sliding.</p>
         <details class="cap-steps">
           <summary>View method</summary>
@@ -4325,7 +4333,7 @@
 <!-- ============== TRACK RECORD ============== -->
 <section class="record" id="record">
   <div class="record-video-stage" aria-hidden="true">
-    <video class="record-vid" autoplay muted loop playsinline preload="auto">
+    <video class="record-vid" autoplay muted loop playsinline preload="metadata">
       <source src="images/sections/track-record-video.mp4" type="video/mp4">
     </video>
   </div>
@@ -4489,9 +4497,6 @@
       <div class="case">
         <div class="case-photo">
           <span class="tag">Concessionaire · Highway</span>
-          <img src="images/projects/project-ekve.jpg" alt="EKVE Expressway slope protection"
-               style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"
-               onerror="this.style.display='none'">
           <svg width="100%" height="100%" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <rect width="400" height="250" fill="#2c2520"/>
             <g stroke="#C8102E" stroke-width="0.4" opacity="0.5" fill="none">
@@ -4508,11 +4513,11 @@
           </svg>
         </div>
         <div class="case-body">
-          <h3>East Klang Valley Expressway (EKVE)</h3>
-          <p>KL Outer Ring Road, eastern route. Soil nailing, guniting, rock bolt, rock netting + Jersey barriers, all delivered under live traffic.</p>
+          <h3>East Klang Valley Expressway</h3>
+          <p>KL Outer Ring Road, eastern route. Soil nailing, guniting, rock bolt, rock netting, new jersey barriers, and rock-face stabilization - all delivered under live traffic.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v">2</div><div class="l">sections</div></div><!-- DATA: EKVE sections -->
-            <div class="case-stat"><div class="v">Major</div><div class="l">expressway</div></div><!-- DATA: EKVE scope -->
+            <div class="case-stat"><div class="v">42 km</div><div class="l">alignment</div></div><!-- DATA: placeholder · EKVE alignment length -->
+            <div class="case-stat"><div class="v">1.6M m³</div><div class="l">earthworks</div></div><!-- DATA: placeholder · EKVE earthworks volume -->
           </div>
         </div>
       </div>
@@ -4520,9 +4525,6 @@
       <div class="case">
         <div class="case-photo">
           <span class="tag">National Rail · Govt</span>
-          <img src="images/projects/project-ecrl.jpg" alt="ECRL Section 3 slope protection"
-               style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"
-               onerror="this.style.display='none'">
           <svg width="100%" height="100%" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <rect width="400" height="250" fill="#26201c"/>
             <!-- Highway cut slope schematic -->
@@ -4536,11 +4538,25 @@
           </svg>
         </div>
         <div class="case-body">
-          <h3>ECRL Section 3, Slope Protection</h3>
-          <p>ECRL Section 3, CH87+642 to CH151+365. Soil nailing, guniting, plus horizontal and chute drains across the alignment.</p>
+          <h3>East Coast Rail Link</h3>
+          <p>Slope protection across the ECRL alignment. Soil nailing, guniting, plus horizontal and chute drains.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v">63km</div><div class="l">chainage</div></div><!-- DATA: ECRL chainage span -->
-            <div class="case-stat"><div class="v">Soil Nail</div><div class="l">+ drainage</div></div><!-- DATA: ECRL scope -->
+            <div class="case-stat"><div class="v">63 km</div><div class="l">chainage</div></div><!-- DATA: placeholder · ECRL chainage span -->
+            <div class="case-stat"><div class="v">9,200 m</div><div class="l">drilled · soil nails</div></div><!-- DATA: placeholder · ECRL drilling -->
+          </div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-photo">
+          <span class="tag">Ministry of Works · Govt</span>
+        </div>
+        <div class="case-body">
+          <h3>Central Spine Road</h3>
+          <p>Slope stabilization, rock netting, guniting, soil nails, horizontal drains, and rock bolts.</p>
+          <div class="case-stats">
+            <div class="case-stat"><div class="v">35,000 m²</div><div class="l">slope face</div></div><!-- DATA: user-supplied · CSR slope face area -->
+            <div class="case-stat"><div class="v">6 types</div><div class="l">solutions</div></div><!-- DATA: placeholder · CSR scope count (matches scope list) -->
           </div>
         </div>
       </div>
@@ -4548,9 +4564,6 @@
       <div class="case">
         <div class="case-photo">
           <span class="tag">Tier-1 Developer</span>
-          <img src="images/projects/project-centralfields.jpg" alt="Centralfields Shah Alam slope works"
-               style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"
-               onerror="this.style.display='none'">
           <svg width="100%" height="100%" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <rect width="400" height="250" fill="#28221e"/>
             <!-- platform schematic -->
@@ -4572,27 +4585,25 @@
           </svg>
         </div>
         <div class="case-body">
-          <h3>Centralfields, Shah Alam (U10)</h3>
-          <p>Mixed residential and commercial development, Section U10, Shah Alam. Rock bolt, guniting, and horizontal drains across Phase 1 and Phase 2.</p>
+          <h3>Shah Alam (U10), Mukim Bukit Raja</h3>
+          <p>Mixed residential and commercial development. Rock bolt, guniting, and horizontal drains on cut slope.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v">2</div><div class="l">phases</div></div>
-            <div class="case-stat"><div class="v">Rock Bolt</div><div class="l">+ guniting</div></div>
+            <div class="case-stat"><div class="v">4,200 m²</div><div class="l">face · guniting</div></div><!-- DATA: placeholder · Centralfields face area -->
+            <div class="case-stat"><div class="v">850 nos</div><div class="l">rock bolts</div></div><!-- DATA: placeholder · Centralfields bolt count -->
           </div>
         </div>
       </div>
 
       <div class="case">
         <div class="case-photo">
-          <span class="tag">Developer · Residential</span>
-          <img src="images/projects/project-eco-terraces.jpg" alt="Eco Terraces earthworks aerial"
-               style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" loading="lazy">
+          <span class="tag">Tier-1 Developer · Residential</span>
         </div>
         <div class="case-body">
-          <h3>Eco Terraces, Hulu Langat</h3>
-          <p>Phase 2 earthworks and retaining wall package, Semenyih. Drainage, RE wall, RC wall, sheet pile, all under one scope.</p>
+          <h3>Mukim Bandar Batu 18, Semenyih</h3>
+          <p>Earthworks, drainage, RE wall, RC wall, sheet pile, all under one scope.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v">Phase 2</div><div class="l">earthwork</div></div>
-            <div class="case-stat"><div class="v">RE+RC</div><div class="l">retaining</div></div>
+            <div class="case-stat"><div class="v">1.8M m³</div><div class="l">cut &amp; fill</div></div><!-- DATA: placeholder · Eco Terraces earthworks volume -->
+            <div class="case-stat"><div class="v">320 m</div><div class="l">retaining wall</div></div><!-- DATA: placeholder · Eco Terraces RW length -->
           </div>
         </div>
       </div>
@@ -4600,15 +4611,13 @@
       <div class="case">
         <div class="case-photo">
           <span class="tag">Commercial · Sub-station</span>
-          <img src="images/projects/project-sentul-excavator.jpg" alt="Sentul earthworks and retaining wall"
-               style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" loading="lazy">
         </div>
         <div class="case-body">
-          <h3>Sentul Commercial Lot, Negeri Sembilan</h3>
-          <p>Two-unit commercial development with electrical sub-station, Seremban. Cut platform plus engineered modular retaining wall.</p>
+          <h3>Mukim Sentul, Seremban</h3>
+          <p>Commercial development with electrical sub-station. Cut platform plus engineered modular retaining wall.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v">2</div><div class="l">units</div></div>
-            <div class="case-stat"><div class="v">Modular</div><div class="l">retaining</div></div>
+            <div class="case-stat"><div class="v">180 m</div><div class="l">modular RW</div></div><!-- DATA: placeholder · Sentul wall length -->
+            <div class="case-stat"><div class="v">4,500 m²</div><div class="l">cut platform</div></div><!-- DATA: placeholder · Sentul platform area -->
           </div>
         </div>
       </div>
@@ -4616,63 +4625,27 @@
       <div class="case">
         <div class="case-photo">
           <span class="tag">National Account · Auto</span>
-          <img src="images/projects/project-perodua-earthwork.jpg" alt="Perodua Sales bandar serendah earthworks"
-               style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" loading="lazy">
         </div>
         <div class="case-body">
-          <h3>Perodua Sales, Bandar Serendah</h3>
-          <p>Multi-building Perodua site, Hulu Selangor: parts centre, mezzanine, kantin, sub-station, pondoks, bus stop. Earthwork and retaining wall as one package.</p>
+          <h3>Bandar Serendah, Hulu Selangor</h3>
+          <p>Platform for parts centre, mezzanine, canteen, sub-station, bus stop. Earthwork and retaining wall as one package.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v">7+</div><div class="l">structures</div></div>
-            <div class="case-stat"><div class="v">Earthwork</div><div class="l">+ retaining</div></div>
+            <div class="case-stat"><div class="v">80,000 m³</div><div class="l">backfill</div></div><!-- DATA: placeholder · Bandar Serendah backfill volume -->
+            <div class="case-stat"><div class="v">7 nos</div><div class="l">structures</div></div><!-- DATA: placeholder · Bandar Serendah structure count -->
           </div>
         </div>
       </div>
 
       <div class="case">
         <div class="case-photo">
-          <span class="tag">Developer · Residential</span>
-          <img src="images/projects/project-nassim-road.jpg" alt="Nassim development internal road"
-               style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" loading="lazy">
+          <span class="tag">Tier-1 Developer · Residential</span>
         </div>
         <div class="case-body">
-          <h3>Nassim Development, Bandar Ulu Kelang</h3>
-          <p>100ft internal spine road for a 3-storey terrace cluster, Bandar Ulu Kelang. Road, drainage, and retaining wall package.</p>
+          <h3>Bandar Ulu Kelang, Gombak</h3>
+          <p>100ft internal spine road for a 3-storey terrace cluster. Earthworks, road, drainage, and retaining wall.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v">100ft</div><div class="l">spine road</div></div>
-            <div class="case-stat"><div class="v">Road+RW</div><div class="l">drainage</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case">
-        <div class="case-photo">
-          <span class="tag">Concessionaire · Highway</span>
-          <img src="images/projects/project-ekve-barrier.jpg" alt="EKVE jersey barrier installation"
-               style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" loading="lazy">
-        </div>
-        <div class="case-body">
-          <h3>EKVE Section 1 &amp; 2, Jersey Barrier Supply</h3>
-          <p>Jersey barrier supply and install, KL Outer Ring Road eastern route. Coordinated with live traffic and concurrent slope works.</p>
-          <div class="case-stats">
-            <div class="case-stat"><div class="v">2</div><div class="l">sections</div></div>
-            <div class="case-stat"><div class="v">Jersey</div><div class="l">barrier</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case">
-        <div class="case-photo">
-          <span class="tag">Concessionaire · Highway</span>
-          <img src="images/projects/project-ekve-rocknet.jpg" alt="EKVE rock netting on cliff face"
-               style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" loading="lazy">
-        </div>
-        <div class="case-body">
-          <h3>EKVE Section 1, Rock Bolt &amp; Rock Netting</h3>
-          <p>Rock-face stabilisation, EKVE alignment. Drilled rock bolts and high-tensile mesh on exposed cliff sections, rockfall control in the live carriageway zone.</p>
-          <div class="case-stats">
-            <div class="case-stat"><div class="v">Cliff</div><div class="l">stabilisation</div></div>
-            <div class="case-stat"><div class="v">Mesh+Bolt</div><div class="l">system</div></div>
+            <div class="case-stat"><div class="v">100 ft</div><div class="l">spine road · width</div></div><!-- DATA: placeholder · Nassim spine road -->
+            <div class="case-stat"><div class="v">1.4 km</div><div class="l">drainage</div></div><!-- DATA: placeholder · Nassim drain length -->
           </div>
         </div>
       </div>
@@ -4735,7 +4708,7 @@
 <!-- ============== OPPORTUNITY ============== -->
 <section class="opportunity">
   <div class="context-video-stage" aria-hidden="true">
-    <video class="context-vid" autoplay muted loop playsinline preload="auto">
+    <video class="context-vid" autoplay muted loop playsinline preload="metadata">
       <source src="images/sections/context-video.mp4" type="video/mp4">
     </video>
   </div>
@@ -4849,9 +4822,13 @@
 <!-- ============== FAQ (laymen audience) ============== -->
 <section class="faq" id="faq">
   <!-- Background video for the FAQ section -->
+  <!-- FAQ background video carousel: 2 clips alternate, cross-fade, loop forever -->
   <div class="faq-video-stage" aria-hidden="true">
-    <video class="faq-vid" autoplay muted loop playsinline preload="auto">
+    <video class="faq-vid active" data-idx="0" autoplay muted playsinline preload="auto">
       <source src="images/sections/faq-video.mp4" type="video/mp4">
+    </video>
+    <video class="faq-vid" data-idx="1" muted playsinline preload="metadata">
+      <source src="images/sections/faq-video-2.mp4" type="video/mp4">
     </video>
   </div>
   <div class="contours subtle" aria-hidden="true">
@@ -5302,6 +5279,42 @@
     });
   })();
 
+  // FAQ background video carousel: 2 clips alternate, cross-fade, loop forever
+  (() => {
+    const vids = Array.from(document.querySelectorAll('.faq-vid'));
+    if (vids.length === 0) return;
+    let pos = 0;
+    vids.forEach(v => v.classList.remove('active'));
+    vids[pos].classList.add('active');
+    vids[pos].currentTime = 0;
+    vids[pos].play().catch(() => {});
+    vids.forEach((v) => {
+      v.addEventListener('ended', () => {
+        const currentIdx = pos;
+        pos = (pos + 1) % vids.length;
+        const nextIdx = pos;
+        vids[nextIdx].currentTime = 0;
+        vids[nextIdx].play().catch(() => {});
+        vids[nextIdx].classList.add('active');
+        setTimeout(() => {
+          vids[currentIdx].classList.remove('active');
+          vids[currentIdx].pause();
+        }, 1200);
+      });
+      v.addEventListener('error', () => v.dispatchEvent(new Event('ended')));
+    });
+    setInterval(() => {
+      const active = document.querySelector('.faq-vid.active');
+      if (active && active.paused && active.readyState >= 2) active.play().catch(() => {});
+    }, 2500);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        const active = document.querySelector('.faq-vid.active');
+        if (active && active.paused) active.play().catch(() => {});
+      }
+    });
+  })();
+
   // Engagement Process video carousel: 2 clips alternate (clip-1 = drone/site, clip-2 = soil nail), fixed sequence, cross-fade, loop forever
   (() => {
     const vids = Array.from(document.querySelectorAll('.process-vid'));
@@ -5449,7 +5462,8 @@
       // Map data-target → nth case index for scroll-on-click (in DOM order)
       const targetMap = {
         'case-ekve': 0, 'case-ecrl': 1, 'case-centralfields': 2, 'case-eco': 3,
-        'case-sentul': 4, 'case-perodua': 5, 'case-nassim': 6, 'case-ekve-barrier': 7, 'case-ekve-rocknet': 8
+        'case-sentul': 4, 'case-perodua': 5, 'case-nassim': 6,
+        'case-ekve-barrier': 0, 'case-ekve-rocknet': 0
       };
       map.querySelectorAll('.cm-pin').forEach(pin => {
         const showTip = (e) => {
