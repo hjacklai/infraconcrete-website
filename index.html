@@ -111,11 +111,14 @@
 
     --ease:     cubic-bezier(.2, .7, .1, 1);
     --max:      1440px;
-    --gutter:   clamp(24px, 7vw, 140px);
+    --gutter:   clamp(24px, 6vw, 60px);
   }
 
-  @media (min-width: 1080px) {
-    :root { --gutter: 200px; }
+  @media (min-width: 720px) {
+    :root { --gutter: clamp(60px, 9vw, 120px); }
+  }
+  @media (min-width: 1280px) {
+    :root { --gutter: clamp(140px, 16vw, 200px); }
   }
 
   * , *::before, *::after { box-sizing: border-box; }
@@ -854,7 +857,9 @@
     border: 1px solid var(--grey-line);
     overflow: hidden;
     user-select: none;
-    touch-action: pan-y;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: none;
   }
   .ctx-section-stage svg {
     width: 100%; height: 100%;
@@ -5582,7 +5587,40 @@
       };
       range.addEventListener('input', e => update(+e.target.value));
       // Hide the "DRAG" hint label after the user first interacts
-      range.addEventListener('input', () => stage.classList.add('has-dragged'), { once: true });
+      const markDragged = () => stage.classList.add('has-dragged');
+      range.addEventListener('input', markDragged, { once: true });
+
+      // Pointer-driven drag on the entire stage — fixes iOS Safari where the
+      // hidden range input's narrow thumb hit-area makes drags unreliable.
+      let dragging = false;
+      const setFromPointer = (clientX) => {
+        const r = stage.getBoundingClientRect();
+        if (r.width === 0) return;
+        const pct = Math.max(0, Math.min(100, ((clientX - r.left) / r.width) * 100));
+        range.value = String(pct);
+        update(pct);
+        markDragged();
+      };
+      stage.addEventListener('pointerdown', e => {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        dragging = true;
+        try { stage.setPointerCapture(e.pointerId); } catch {}
+        setFromPointer(e.clientX);
+        e.preventDefault();
+      });
+      stage.addEventListener('pointermove', e => {
+        if (!dragging) return;
+        setFromPointer(e.clientX);
+      });
+      const endDrag = (e) => {
+        if (!dragging) return;
+        dragging = false;
+        try { stage.releasePointerCapture(e.pointerId); } catch {}
+      };
+      stage.addEventListener('pointerup', endDrag);
+      stage.addEventListener('pointercancel', endDrag);
+      stage.addEventListener('lostpointercapture', () => { dragging = false; });
+
       // initial sync
       update(+range.value);
     });
