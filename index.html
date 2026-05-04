@@ -303,21 +303,34 @@
     color: #fff;
     background: var(--ic-red);
   }
-  /* Mobile: shift the lang toggle DOWN below the 76px nav bar so the
-     "Part of [Panthera]" group badge has the full top ribbon to itself.
-     The toggle floats at top-right of the page content, below the nav. */
+  /* Mobile: single-button cycling toggle. Show ONLY the active language
+     button — tapping it cycles to the next language (EN → BM → 中文 → EN).
+     Subtle cream pill, NOT red — quiet on the eye, fits in the nav bar
+     at top-right without competing with the brand. */
   @media (max-width: 540px) {
     .lang-toggle {
-      top: 88px;
+      top: 22px;
       right: 12px;
-      padding: 3px;
-      gap: 1px;
+      padding: 0;
+      gap: 0;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border: none;
+      box-shadow: none;
     }
-    .lang-toggle button {
-      padding: 4px 8px;
-      font-size: 10px;
-      min-height: 26px;
-      letter-spacing: 0.06em;
+    .lang-toggle button:not(.active) { display: none; }
+    .lang-toggle button.active {
+      padding: 5px 12px;
+      font-size: 11px;
+      min-height: 30px;
+      letter-spacing: 0.1em;
+      background: rgba(244, 234, 210, 0.85);
+      color: var(--ink);
+      border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
     }
   }
 
@@ -6627,8 +6640,19 @@
     try { initial = localStorage.getItem('lang') || 'en'; } catch (e) {}
     setLang(initial);
 
+    // On click: if user clicks the active button (the only one visible on
+    // mobile), cycle to the next language. Otherwise switch directly.
+    const langOrder = ['en', 'bm', 'zh'];
     document.querySelectorAll('.lang-toggle button').forEach(b => {
-      b.addEventListener('click', () => setLang(b.dataset.lang));
+      b.addEventListener('click', () => {
+        const current = (function () { try { return localStorage.getItem('lang') || 'en'; } catch (e) { return 'en'; } })();
+        if (b.dataset.lang === current) {
+          const next = langOrder[(langOrder.indexOf(current) + 1) % langOrder.length];
+          setLang(next);
+        } else {
+          setLang(b.dataset.lang);
+        }
+      });
     });
   })();
 
