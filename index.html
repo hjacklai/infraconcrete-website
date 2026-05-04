@@ -120,6 +120,13 @@
   @media (min-width: 1280px) {
     :root { --gutter: clamp(140px, 16vw, 200px); }
   }
+  /* Wide-screen tier: more breathing room on both sides AND a bigger content cap so the layout doesn't feel marooned in the middle of a 4K display. */
+  @media (min-width: 1920px) {
+    :root {
+      --gutter: clamp(200px, 14vw, 320px);
+      --max:    1600px;
+    }
+  }
 
   * , *::before, *::after { box-sizing: border-box; }
   html {
@@ -145,6 +152,36 @@
   button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
   .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); position: relative; z-index: 2; }
+
+  /* Readability: keep long-form prose paragraphs at a comfortable line length
+     even on wide screens. .sec-header p already has its own 540px cap; this
+     rule covers paragraphs that would otherwise stretch the full container. */
+  .faq-a, .ba-caption { max-width: 64ch; }
+
+  /* Skip-link: invisible to mouse users; slides into view when a keyboard
+     user presses Tab. Lets keyboard and screen-reader users jump past the
+     nav directly to the main content. Required by MAMPU / Section 508 a11y
+     standards for any government-tender-bound site. */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 12px;
+    z-index: 1000;
+    padding: 10px 16px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: top .15s var(--ease);
+  }
+  .skip-link:focus {
+    top: 12px;
+    outline: 2px solid var(--ic-red);
+    outline-offset: 2px;
+  }
 
   /* =========================================================
      TOPOGRAPHIC CONTOUR LINES (Panthera signature, redrawn)
@@ -370,8 +407,9 @@
   .hero h1 {
     font-family: var(--serif);
     font-weight: 700;
-    /* Bumped from max 86 to max 120 so the headline scales with the now-much-taller hero */
-    font-size: clamp(48px, 8vw, 120px);
+    /* 96px cap keeps the headline confident on desktop without overpowering
+       4K and ultrawide screens, where 120px started to dominate the page. */
+    font-size: clamp(48px, 7.6vw, 96px);
     line-height: 1.0;
     letter-spacing: -0.04em;
     margin: 0;
@@ -1005,6 +1043,7 @@
     height: 100%;
     object-fit: cover;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     user-select: none;
     -webkit-user-drag: none;
   }
@@ -2062,6 +2101,7 @@
   .case-grid > .case {
     flex: 0 0 clamp(260px, 24vw, 340px);
     scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
   .case-scroll-hint {
     margin-top: 18px;
@@ -2519,7 +2559,10 @@
     will-change: max-height;
   }
   .faq-item.open .faq-a {
-    max-height: 320px;
+    /* 1200px is well above the longest answer; lets the open transition still
+       animate but no longer truncates multi-paragraph answers with an inner
+       scrollbar. */
+    max-height: 1200px;
     margin-top: 18px;
     opacity: 1;
   }
@@ -2747,9 +2790,18 @@
     scroll-snap-type: x proximity;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    /* Stop iOS/Chrome from inserting a 300ms tap delay on this scroller */
+    touch-action: manipulation;
     /* Stronger fade on scroll edges, hints at more content */
     mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+  }
+  /* On small phones the 24px edge fade can clip the first/last nav item — soften it. */
+  @media (max-width: 480px) {
+    .bn-scroll {
+      mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
+    }
   }
   .bn-scroll::-webkit-scrollbar { display: none; }
   .bn-scroll .bn-item { scroll-snap-align: center; flex-shrink: 0; }
@@ -2786,6 +2838,7 @@
     text-transform: uppercase;
     transition: color .2s var(--ease), background .2s var(--ease);
     min-width: 52px;
+    min-height: 44px;
   }
   .bn-item svg { width: 20px; height: 20px; display: block; }
   .bn-item:hover, .bn-item:focus-visible {
@@ -3310,9 +3363,29 @@
   video::-webkit-media-controls { display: none !important; }
   video::-webkit-media-controls-enclosure { display: none !important; }
   video::-webkit-media-controls-panel { display: none !important; }
+
+  /* =========================================================
+     LANDSCAPE-PHONE / SHORT-VIEWPORT COMPRESSION
+     Phones held sideways (812×375) and short laptops would otherwise spend
+     ~60% of pixels on vertical padding. Halve the section padding, give the
+     fixed bottom-nav extra clearance, swap the 4:3 solution-card photos for
+     16:9 so a single card actually fits in the viewport, and let hero
+     breathe instead of forcing a 560px floor.
+     Placed at the end of the cascade so it overrides earlier rules. */
+  @media (max-height: 500px) and (orientation: landscape) {
+    section { padding: clamp(28px, 4vh, 48px) 0; }
+    body { padding-bottom: 110px; }
+    .bottom-nav { bottom: 16px; }
+    .sol-photo { aspect-ratio: 16 / 9; }
+    .hero { min-height: 100vh; }
+  }
 </style>
 </head>
 <body>
+
+<!-- A11y skip-link: keyboard / screen-reader users press Tab once and get an
+     escape-hatch past the nav straight to the hero. Invisible to mouse users. -->
+<a href="#top" class="skip-link">Skip to main content</a>
 
 <!-- Topographic survey contour pattern, reused across sections via <use href="#topo-default"> -->
 <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
@@ -3441,7 +3514,7 @@
 </nav>
 
 <!-- ============== HERO ============== -->
-<header class="hero" id="top">
+<header class="hero" id="top" tabindex="-1">
   <!-- Hero video carousel: 3 clips alternate in fixed order (Hero 1, Hero, VID-WA0242), cross-fade, loop forever -->
   <!-- Optimization: posters paint instantly, only the active video preloads fully; the others fetch in the background while it plays -->
   <div class="hero-video-stage" aria-hidden="true">
@@ -4966,7 +5039,7 @@
             </span>
             <span class="cta-wa-text">
               <span class="cta-wa-label">Open WhatsApp</span>
-              <span class="cta-wa-meta">+60 16-428 1214 · usually respond same day</span>
+              <span class="cta-wa-meta">+60 16-428 1214 · responds on same day</span>
             </span>
             <span class="cta-wa-arrow" aria-hidden="true">&rarr;</span>
           </a>
@@ -5165,9 +5238,13 @@
     };
     el.addEventListener('mouseleave', stop);
     el.addEventListener('mouseup', (e) => {
+      // Only suppress the click if BOTH the cursor moved >12px AND the scroll
+      // position actually changed. iOS/Android synthetic mouse events after
+      // touchend can drift several px on a stable finger-tap; without the
+      // scroll-delta check those false positives eat legit nav-link taps.
+      const movedScroll = Math.abs(el.scrollLeft - startScroll) > 4;
       stop();
-      // suppress click on links if user dragged > 6px
-      if (moved) {
+      if (moved && movedScroll) {
         const blocker = (ev) => { ev.preventDefault(); ev.stopPropagation(); el.removeEventListener('click', blocker, true); };
         el.addEventListener('click', blocker, true);
       }
@@ -5175,7 +5252,7 @@
     el.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       const dx = e.pageX - startX;
-      if (Math.abs(dx) > 6) moved = true;
+      if (Math.abs(dx) > 12) moved = true;
       el.scrollLeft = startScroll - dx;
     });
     el.style.cursor = 'grab';
@@ -5593,9 +5670,12 @@
         }
         divider.setAttribute('x1', x);
         divider.setAttribute('x2', x);
-        // Handle Y follows the slope curve so it visually slides along the natural ground.
-        const y = getSlopeYAtX(x);
-        handle.setAttribute('transform', `translate(${x}, ${y})`);
+        // Handle stays glued to the rendered slope line at all times — clamp X
+        // to the line's actual domain. Divider (above) still wipes edge-to-edge
+        // so the BEFORE/AFTER reveal still reaches both extremes.
+        const handleX = Math.max(SLOPE_START_X, Math.min(SLOPE_END_X, x));
+        const y = getSlopeYAtX(handleX);
+        handle.setAttribute('transform', `translate(${handleX}, ${y})`);
         stage.dataset.pos = String(Math.round(clipped));
       };
       range.addEventListener('input', e => update(+e.target.value));
