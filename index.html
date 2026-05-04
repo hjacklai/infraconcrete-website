@@ -1009,7 +1009,10 @@
     display: block;
     pointer-events: none;
   }
-  .ctx-section-stage .cs-handle { cursor: ew-resize; pointer-events: auto; transition: transform .25s var(--ic-fx-ease, ease); }
+  .ctx-section-stage .cs-handle { cursor: ew-resize; pointer-events: auto; }
+  /* No transition on transform — the ball must track the divider line exactly,
+     not lag behind it during drag. Earlier 0.25s ease made the ball detach
+     from the slider on fast drags. */
   .ctx-section-stage .cs-handle:hover { transform-origin: center; }
   .ctx-section-stage .cs-handle:active circle:first-child { fill: var(--ic-red-deep, #a30c25); }
   .ctx-section-stage .cs-drag-hint { pointer-events: none; opacity: 0.78; animation: cs-drag-hint-pulse 2.4s ease-in-out infinite; }
