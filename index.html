@@ -77,7 +77,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Manrope:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Manrope:wght@400;600&family=JetBrains+Mono:wght@500&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
   /* =========================================================
@@ -157,6 +157,35 @@
      even on wide screens. .sec-header p already has its own 540px cap; this
      rule covers paragraphs that would otherwise stretch the full container. */
   .faq-a, .ba-caption { max-width: 64ch; }
+
+  /* Mandarin (Simplified) font normalization. Latin display fonts have
+     smaller line-height and larger x-height than CJK fonts at the same
+     font-size — Chinese characters end up looking ~12% smaller than Latin.
+     When the page is in zh-Hans mode, swap in Noto Sans SC and bump
+     font-size slightly so Chinese reads at visual parity with English. */
+  :lang(zh-Hans) {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', var(--sans);
+  }
+  :lang(zh-Hans) body { font-size: 17px; }
+  :lang(zh-Hans) .hero h1,
+  :lang(zh-Hans) .sec-header h2,
+  :lang(zh-Hans) h1, :lang(zh-Hans) h2, :lang(zh-Hans) h3,
+  :lang(zh-Hans) h4, :lang(zh-Hans) h5, :lang(zh-Hans) h6 {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', var(--serif);
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  :lang(zh-Hans) em {
+    font-style: normal;
+    color: var(--ic-red);
+    font-weight: 700;
+  }
+  :lang(zh-Hans) .micro,
+  :lang(zh-Hans) .mono,
+  :lang(zh-Hans) .eyebrow {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', var(--mono);
+    letter-spacing: 0.08em;
+  }
 
   /* Skip-link: invisible to mouse users; slides into view when a keyboard
      user presses Tab. Lets keyboard and screen-reader users jump past the
@@ -3515,7 +3544,7 @@
     </a>
     <a href="#approach" class="bn-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18 L21 5"/><line x1="3" y1="20" x2="21" y2="20"/><circle cx="8" cy="15" r="0.8" fill="currentColor"/><circle cx="13" cy="11" r="0.8" fill="currentColor"/><circle cx="18" cy="7" r="0.8" fill="currentColor"/></svg>
-      <span data-i18n="nav.worked">Worked example</span>
+      <span data-i18n="nav.worked">Working example</span>
     </a>
     <a href="#before-after" class="bn-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="8" height="16" rx="1"/><rect x="13" y="4" width="8" height="16" rx="1"/></svg>
@@ -3636,9 +3665,9 @@
     <div class="sec-header">
       <div>
         <span class="eyebrow" data-i18n="s01.eyebrow">01 / Our Mission</span>
-        <h2>Difficult ground is <em>our category.</em></h2>
+        <h2 data-i18n="s01.h2">Difficult ground is <em>our category.</em></h2>
       </div>
-      <p>The land you're given is rarely the land that's easy to build on. Our job is to make it buildable.</p>
+      <p data-i18n="s01.p">The land you're given is rarely the land that's easy to build on. Our job is to make it buildable.</p>
     </div>
 
     <h3 class="phil-headline reveal">
@@ -3681,9 +3710,9 @@
     <div class="sec-header">
       <div>
         <span class="eyebrow" data-i18n="s02.eyebrow">02 / Where to start</span>
-        <h2>What's the situation <em>on your site?</em></h2>
+        <h2 data-i18n="s02.h2">What's the situation <em>on your site?</em></h2>
       </div>
-      <p>Most projects start with one of four problems. Pick yours, see how we solve it.</p>
+      <p data-i18n="s02.p">Most projects start with one of four problems. Pick yours, see how we solve it.</p>
     </div>
 
     <div class="problem-grid">
@@ -3720,9 +3749,9 @@
     <div class="sec-header dark">
       <div>
         <span class="eyebrow" data-i18n="s03.eyebrow">03 / Core Solutions</span>
-        <h2>We make <em>land work</em> for you.</h2>
+        <h2 data-i18n="s03.h2">We make <em>land work</em> for you.</h2>
       </div>
-      <p>Three solution pillars, serving developers, engineers, contractors, and government agencies across Malaysia.</p>
+      <p data-i18n="s03.p">Three solution pillars, serving developers, engineers, contractors, and government agencies across Malaysia.</p>
     </div>
 
     <div class="sol-grid">
@@ -3804,8 +3833,8 @@
     <!-- Site cross-section: drag the handle to wipe BEFORE → AFTER. -->
     <div class="ctx-section-block ctx-section-block--solo">
       <div class="ctx-section-head">
-        <span class="eyebrow" data-i18n="s04.eyebrow">04 / Worked example</span>
-        <h2>An unusable slope, turned into <em>a highway and a buildable platform.</em> No square footage lost.</h2>
+        <span class="eyebrow" data-i18n="s04.eyebrow">04 / Working example</span>
+        <h2 data-i18n="s04.h2">An unusable slope, turned into <em>a highway and a buildable platform.</em> No square footage lost.</h2>
       </div>
       <div class="ctx-section-stage" data-pos="50">
         <svg viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet">
@@ -4188,9 +4217,9 @@
     <div class="sec-header">
       <div>
         <span class="eyebrow" data-i18n="s05.eyebrow">05 / Before &amp; After</span>
-        <h2>Unlocking land value with <em>engineering precision.</em></h2>
+        <h2 data-i18n="s05.h2">Unlocking land value with <em>engineering precision.</em></h2>
       </div>
-      <p>Difficult ground turned into stable, buildable platforms. Residential slopes, highway corridors, industrial sites, the same outcome.</p>
+      <p data-i18n="s05.p">Difficult ground turned into stable, buildable platforms. Residential slopes, highway corridors, industrial sites, the same outcome.</p>
     </div>
 
     <div class="ba-list">
@@ -4272,7 +4301,7 @@
     <div class="sec-header">
       <div>
         <span class="eyebrow" data-i18n="s06.eyebrow">06 / Engagement Process</span>
-        <h2>Investigation to handover, <em>five stages.</em></h2>
+        <h2 data-i18n="s06.h2">Investigation to handover, <em>five stages.</em></h2>
       </div>
     </div>
 
@@ -4364,7 +4393,7 @@
     <div class="sec-header">
       <div>
         <span class="eyebrow" data-i18n="s07.eyebrow">07 / Capabilities</span>
-        <h2>Specialist services, <em>delivered in house.</em></h2>
+        <h2 data-i18n="s07.h2">Specialist services, <em>delivered in house.</em></h2>
       </div>
     </div>
 
@@ -4499,7 +4528,7 @@
     <div class="sec-header">
       <div>
         <span class="eyebrow" data-i18n="s08.eyebrow">08 / Track Record</span>
-        <h2>The numbers behind <em>the work.</em></h2>
+        <h2 data-i18n="s08.h2">The numbers behind <em>the work.</em></h2>
       </div>
     </div>
 
@@ -4644,7 +4673,7 @@
     <div class="sec-header">
       <div>
         <span class="eyebrow" data-i18n="s09.eyebrow">09 / Selected Work</span>
-        <h2>Recent <em>engagements.</em></h2>
+        <h2 data-i18n="s09.h2">Recent <em>engagements.</em></h2>
       </div>
     </div>
 
@@ -4829,7 +4858,7 @@
     <div class="sec-header dark">
       <div>
         <span class="eyebrow" data-i18n="s10.eyebrow">10 / Why clients come back</span>
-        <h2>Five reasons we win <em>repeat work.</em></h2>
+        <h2 data-i18n="s10.h2">Five reasons we win <em>repeat work.</em></h2>
       </div>
     </div>
 
@@ -4880,9 +4909,9 @@
     <div class="sec-header">
       <div>
         <span class="eyebrow" data-i18n="s11.eyebrow">11 / The Context</span>
-        <h2>Where flat ground ends, <em>our work begins.</em></h2>
+        <h2 data-i18n="s11.h2">Where flat ground ends, <em>our work begins.</em></h2>
       </div>
-      <p>Flat land is running out. What's left is slopes, floodplains, fragmented parcels, the complex kind.</p>
+      <p data-i18n="s11.p">Flat land is running out. What's left is slopes, floodplains, fragmented parcels, the complex kind.</p>
     </div>
 
     <div class="opp-stats">
@@ -4916,7 +4945,7 @@
     <div class="sec-header">
       <div>
         <span class="eyebrow" data-i18n="s12.eyebrow">12 / Credentials</span>
-        <h2>Verified, audited, <em>accredited.</em></h2>
+        <h2 data-i18n="s12.h2">Verified, audited, <em>accredited.</em></h2>
       </div>
     </div>
 
@@ -4995,7 +5024,7 @@
     <div class="sec-header">
       <div>
         <span class="eyebrow" data-i18n="s13.eyebrow">13 / Common Questions</span>
-        <h2>Frequently <em>asked.</em></h2>
+        <h2 data-i18n="s13.h2">Frequently <em>asked.</em></h2>
       </div>
     </div>
 
@@ -5073,7 +5102,7 @@
       <!-- LEFT: section header + intro + WhatsApp CTA card -->
       <div>
         <span class="eyebrow" style="color: var(--ic-red-soft);">14 / Get in Touch</span>
-        <h2>Let's enable <em>your space.</em></h2>
+        <h2 data-i18n="contact.h2">Let's enable <em>your space.</em></h2>
         <p style="font-size: 16px; line-height: 1.7; color: var(--paper-dim); max-width: 480px; margin: 0 0 40px 0;">Briefs received before 5pm Malaysia time typically receive a same day acknowledgement. For emergency slope or rockfall response, call us directly.</p>
 
         <div class="contact-cta">
@@ -5679,7 +5708,8 @@
     });
 
     // The Context site cross-section: drag handle wipes BEFORE → AFTER.
-    // The handle now TRACES the slope curve (cs-slope-line) — slides along the natural ground line at an angle.
+    // Ball + divider line are ONE unit: ball rides the vertical divider at a
+    // fixed midpoint Y, sliding horizontally as a single slider handle.
     document.querySelectorAll('.ctx-section-stage').forEach(stage => {
       const range = stage.querySelector('.cs-range');
       const clipRect = stage.querySelector('.cs-clip-rect');
@@ -5718,12 +5748,10 @@
         }
         divider.setAttribute('x1', x);
         divider.setAttribute('x2', x);
-        // Handle stays glued to the rendered slope line at all times — clamp X
-        // to the line's actual domain. Divider (above) still wipes edge-to-edge
-        // so the BEFORE/AFTER reveal still reaches both extremes.
-        const handleX = Math.max(SLOPE_START_X, Math.min(SLOPE_END_X, x));
-        const y = getSlopeYAtX(handleX);
-        handle.setAttribute('transform', `translate(${handleX}, ${y})`);
+        // Ball + divider line are ONE unit: ball rides the divider at a
+        // fixed midpoint Y. As the user drags, ball and line move together
+        // as a single slider handle.
+        handle.setAttribute('transform', `translate(${x}, ${HANDLE_Y_FALLBACK})`);
         stage.dataset.pos = String(Math.round(clipped));
       };
       range.addEventListener('input', e => update(+e.target.value));
@@ -5858,10 +5886,10 @@
         'nav.brief': 'Hubungi',
         // Hero
         'hero.eyebrow.spec': 'Kontraktor Geoteknikal Pakar · CIDB G7',
-        'hero.headline.line1': 'Membuka Ruang.',
+        'hero.headline.line1': 'Mengaktifkan Ruang.',
         'hero.headline.sub': 'Cerun direkayasa untuk kegunaan maksimum.',
-        'hero.side.label': 'Apa yang kami buat',
-        'hero.side.p': 'Stabilisasi cerun, sistem penahan, penciptaan tanah, kontraktor utama. Satu pasukan dari kajian sehingga serahan.',
+        'hero.side.label': 'Apa yang kami lakukan',
+        'hero.side.p': 'Stabilisasi cerun, sistem penahan, penciptaan tanah boleh guna, kontraktor utama. Satu pasukan dari siasatan tapak hingga serahan.',
         'hero.cta.brief': 'Mohon ringkasan projek',
         'hero.cta.see': 'Lihat keupayaan',
         'hero.footer.cidb': 'Gred tertinggi CIDB<br/>kontraktor pakar',
@@ -5881,10 +5909,36 @@
         's11.eyebrow': '11 / Konteks',
         's12.eyebrow': '12 / Kelayakan',
         's13.eyebrow': '13 / Soalan Lazim',
+        // Section h2 headlines (with <em> markup preserved)
+        's01.h2': 'Tanah yang sukar adalah <em>kepakaran kami.</em>',
+        's02.h2': 'Apakah keadaan <em>di tapak anda?</em>',
+        's03.h2': 'Kami buat <em>tanah berguna</em> untuk anda.',
+        's04.h2': 'Cerun yang tidak boleh diguna, dijadikan <em>lebuh raya dan platform boleh bina.</em> Tanpa kehilangan ruang.',
+        's05.h2': 'Membuka nilai tanah dengan <em>ketepatan kejuruteraan.</em>',
+        's06.h2': 'Daripada siasatan tapak ke serahan, <em>lima peringkat.</em>',
+        's07.h2': 'Perkhidmatan pakar, <em>dijalankan oleh pasukan kami sendiri.</em>',
+        's08.h2': 'Angka di sebalik <em>kerja kami.</em>',
+        's09.h2': 'Projek <em>terkini.</em>',
+        's10.h2': 'Lima sebab pelanggan <em>terus kembali.</em>',
+        's11.h2': 'Di mana tanah rata berakhir, <em>kerja kami bermula.</em>',
+        's12.h2': 'Disahkan, diaudit, <em>diakreditasi.</em>',
+        's13.h2': 'Soalan <em>lazim.</em>',
+        'contact.h2': 'Mari kita aktifkan <em>ruang anda.</em>',
+        // Section intro paragraphs
+        's01.p': 'Tanah yang anda diberi jarang mudah dibina. Tugas kami adalah menjadikannya boleh dibina.',
+        's02.p': 'Kebanyakan projek bermula dengan satu daripada empat masalah. Pilih masalah anda, lihat bagaimana kami menyelesaikannya.',
+        's03.p': 'Tiga tonggak penyelesaian, melayani pemaju, jurutera, kontraktor, dan agensi kerajaan di seluruh Malaysia.',
+        's05.p': 'Tanah sukar dijadikan platform stabil dan boleh dibina. Cerun perumahan, koridor lebuh raya, tapak perindustrian — hasil yang sama.',
+        's08.p': 'Skala, kepelbagaian, dan ketekalan merentasi sektor.',
+        's09.p': 'Pilihan daripada penglibatan baru-baru ini — pemilik kerajaan dan swasta, dari Lembah Klang ke Pantai Timur.',
+        's11.p': 'Geografi sebenar di mana kami beroperasi dan bagaimana tanah Malaysia membentuk apa yang kami bina.',
+        's12.p': 'Pendaftaran, akreditasi, dan kelayakan teknikal.',
+        's13.p': 'Apa yang biasanya ditanya oleh pemilik dan jurutera sebelum kami menggerakkan pasukan ke tapak.',
+        'contact.p': 'Beritahu kami tentang tapak anda. Kami akan kembali dengan jawapan, bukan brosur.',
         // CTAs
-        'cta.whatsapp': 'Buka WhatsApp',
-        'cta.same_day': 'balas pada hari yang sama',
-        'cta.wa.meta': '+60 16-428 1214 · balas pada hari yang sama',
+        'cta.whatsapp': 'Hubungi WhatsApp',
+        'cta.same_day': 'membalas pada hari yang sama',
+        'cta.wa.meta': '+60 16-428 1214 · membalas pada hari yang sama',
         // Contact info labels
         'contact.label.phone': 'Telefon',
         'contact.label.email': 'E-mel',
@@ -5924,18 +5978,44 @@
         'hero.footer.iso': '9001:2015 质量<br/>管理体系认证',
         // Section eyebrows (numbering matches the HTML order)
         's01.eyebrow': '01 / 我们的使命',
-        's02.eyebrow': '02 / 从何开始',
+        's02.eyebrow': '02 / 从哪里开始',
         's03.eyebrow': '03 / 核心解决方案',
         's04.eyebrow': '04 / 实例展示',
         's05.eyebrow': '05 / 前后对比',
         's06.eyebrow': '06 / 介入流程',
-        's07.eyebrow': '07 / 能力',
-        's08.eyebrow': '08 / 业绩',
+        's07.eyebrow': '07 / 专业能力',
+        's08.eyebrow': '08 / 业绩记录',
         's09.eyebrow': '09 / 精选项目',
         's10.eyebrow': '10 / 客户回头的理由',
         's11.eyebrow': '11 / 项目背景',
-        's12.eyebrow': '12 / 资质',
+        's12.eyebrow': '12 / 资质认证',
         's13.eyebrow': '13 / 常见问题',
+        // Section h2 headlines
+        's01.h2': '困难地形，<em>正是我们的专长。</em>',
+        's02.h2': '您的<em>工地状况如何？</em>',
+        's03.h2': '让<em>土地为您所用。</em>',
+        's04.h2': '一片无法利用的斜坡，化身<em>一条高速公路与可建平台。</em>用地分毫未减。',
+        's05.h2': '以<em>工程精度</em>释放土地价值。',
+        's06.h2': '从勘察到交付，<em>五个阶段。</em>',
+        's07.h2': '专业服务，<em>由我们的团队亲自交付。</em>',
+        's08.h2': '数据，见证<em>我们的实力。</em>',
+        's09.h2': '近期<em>承接项目。</em>',
+        's10.h2': '客户重复合作的<em>五大原因。</em>',
+        's11.h2': '平地止步之处，<em>我们的工作启程。</em>',
+        's12.h2': '经验证、经审核、<em>获认可。</em>',
+        's13.h2': '<em>常见</em>问题。',
+        'contact.h2': '让我们<em>共同启动您的工程。</em>',
+        // Section intro paragraphs
+        's01.p': '您所拿到的土地，往往不是容易建造的土地。我们的工作，就是让它变得可以建造。',
+        's02.p': '大多数项目都从四个问题之一开始。选择您的问题，看看我们如何解决。',
+        's03.p': '三大解决方案支柱，服务于马来西亚的开发商、工程师、承包商和政府机构。',
+        's05.p': '困难地基，化为稳固可建的平台。住宅边坡、高速公路走廊、工业用地，效果一致。',
+        's08.p': '规模、广度、跨行业的一贯水平。',
+        's09.p': '近期承接项目精选——政府与私营业主，从巴生河流域到东海岸。',
+        's11.p': '我们实际作业的地理环境，以及马来西亚地形如何塑造了我们的工程。',
+        's12.p': '注册、认证与技术资质。',
+        's13.p': '业主与工程师在我们动员团队进场之前，最常提出的问题。',
+        'contact.p': '告诉我们您的工地情况。我们会以解答回复，而不是宣传册。',
         // CTAs
         'cta.whatsapp': '打开 WhatsApp',
         'cta.same_day': '当天回复',
