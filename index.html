@@ -205,6 +205,40 @@
     letter-spacing: 0.04em;
   }
   :lang(zh-Hans) .bn-hint { font-size: 10.5px; }
+  /* Comprehensive font-size bumps for Chinese: small CJK labels need
+     ~2px extra to match Latin x-height and stay readable. */
+  :lang(zh-Hans) .eyebrow      { font-size: 12.5px; }
+  :lang(zh-Hans) .micro        { font-size: 12px; }
+  :lang(zh-Hans) .stp          { font-size: 12px; }
+  :lang(zh-Hans) .out-lbl      { font-size: 13px; }
+  :lang(zh-Hans) .ba-label     { font-size: 12px; }
+  :lang(zh-Hans) .case .tag,
+  :lang(zh-Hans) .sol-photo .tag,
+  :lang(zh-Hans) .case-photo .tag { font-size: 11.5px; }
+  :lang(zh-Hans) .gb-label     { font-size: 9.5px; }
+  :lang(zh-Hans) .fg-label     { font-size: 11px; }
+  :lang(zh-Hans) .case-scroll-hint { font-size: 12px; }
+  :lang(zh-Hans) .footer-bottom    { font-size: 12.5px; }
+  :lang(zh-Hans) .footer-group-r   { font-size: 13px; }
+  :lang(zh-Hans) .cred-meta,
+  :lang(zh-Hans) .cred-grade,
+  :lang(zh-Hans) .cred-view    { font-size: 12px; }
+  :lang(zh-Hans) .cred-chain-desc { font-size: 12.5px; }
+  :lang(zh-Hans) .case-card .case-stat .l,
+  :lang(zh-Hans) .case-stat .l { font-size: 11.5px; }
+  :lang(zh-Hans) .out-desc     { font-size: 14px; line-height: 1.6; }
+  :lang(zh-Hans) .stat .desc   { font-size: 14px; line-height: 1.6; }
+  :lang(zh-Hans) .opp-stat .desc { font-size: 14px; line-height: 1.6; }
+  :lang(zh-Hans) .ba-caption   { font-size: 14.5px; line-height: 1.7; }
+  :lang(zh-Hans) .faq-a        { font-size: 15.5px; line-height: 1.8; }
+  :lang(zh-Hans) .cap-card .desc { font-size: 14px; line-height: 1.65; }
+
+  /* Base bumps for all languages — these labels were too small even in EN. */
+  .gb-label                    { font-size: 9px !important; }
+  .case-card .case-stat .l,
+  .case-stat .l {
+    /* keep at original; bumped for zh above */
+  }
 
   /* Skip-link: invisible to mouse users; slides into view when a keyboard
      user presses Tab. Lets keyboard and screen-reader users jump past the
