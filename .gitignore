@@ -21,3 +21,6 @@ desktop.ini
 # Temp files
 *.tmp
 *.temp
+
+# Working folders (extracted from session transcripts, not for repo)
+_extracted_images/
