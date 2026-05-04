@@ -303,27 +303,22 @@
     color: #fff;
     background: var(--ic-red);
   }
-  /* Mobile: top-right of nav bar. The group-badge ("Part of [Panthera]")
-     is hidden on phones since it overlaps the lang toggle and the
-     Panthera affiliation is shown again in the footer. */
+  /* Mobile: shift the lang toggle DOWN below the 76px nav bar so the
+     "Part of [Panthera]" group badge has the full top ribbon to itself.
+     The toggle floats at top-right of the page content, below the nav. */
   @media (max-width: 540px) {
     .lang-toggle {
-      top: 14px;
+      top: 88px;
       right: 12px;
-      padding: 2px;
-      gap: 0;
+      padding: 3px;
+      gap: 1px;
     }
     .lang-toggle button {
-      padding: 4px 7px;
-      font-size: 9.5px;
-      min-height: 24px;
-      letter-spacing: 0.08em;
+      padding: 4px 8px;
+      font-size: 10px;
+      min-height: 26px;
+      letter-spacing: 0.06em;
     }
-    .group-badge { display: none !important; }
-  }
-  /* Very small phones — drop to icon-only display by tightening further */
-  @media (max-width: 360px) {
-    .lang-toggle button { padding: 3px 6px; font-size: 9px; }
   }
 
   /* =========================================================
