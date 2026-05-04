@@ -111,7 +111,7 @@
 
     --ease:     cubic-bezier(.2, .7, .1, 1);
     --max:      1440px;
-    --gutter:   clamp(24px, 6vw, 60px);
+    --gutter:   clamp(32px, 8vw, 64px);
   }
 
   @media (min-width: 720px) {
@@ -2510,14 +2510,18 @@
   .faq-a {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .5s var(--ease), margin .4s var(--ease);
+    transition: max-height .28s ease-out, margin-top .22s ease-out, opacity .22s ease-out;
     font-size: 15.5px;
     line-height: 1.7;
     color: var(--grey-700);
+    margin-top: 0;
+    opacity: 0;
+    will-change: max-height;
   }
   .faq-item.open .faq-a {
-    max-height: 600px;
+    max-height: 320px;
     margin-top: 18px;
+    opacity: 1;
   }
 
   /* =========================================================
@@ -4199,12 +4203,12 @@
     <div class="proc-outcomes">
       <div class="proc-out">
         <div class="out-lbl">Average mobilization</div>
-        <div class="out-val">2<em>wks</em></div><!-- DATA: avg mobilization weeks -->
+        <div class="out-val" data-count="2">2<em>wks</em></div>
         <div class="out-desc">From contract award to first crew on site.</div>
       </div>
       <div class="proc-out">
         <div class="out-lbl">Cost capture</div>
-        <div class="out-val">~8<em>pts</em></div>
+        <div class="out-val" data-count="8">~8<em>pts</em></div>
         <div class="out-desc">Margin saved versus outsourced multi tier delivery.</div>
       </div>
       <div class="proc-out">
@@ -4214,7 +4218,7 @@
       </div>
       <div class="proc-out">
         <div class="out-lbl">Compliance</div>
-        <div class="out-val">100<em>%</em></div>
+        <div class="out-val" data-count="100">100<em>%</em></div>
         <div class="out-desc">Of projects delivered to consultant specification.</div>
       </div>
     </div>
@@ -4399,37 +4403,37 @@
           <line x1="300" y1="175" x2="300" y2="153" stroke="#C8102E" stroke-width="1.2"/>
           <rect x="268" y="135" width="64" height="18" fill="#C8102E"/>
           <text x="300" y="148" text-anchor="middle" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="0.06em" font-weight="500">2019</text>
-          <text x="300" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em">~5 PROJECTS</text>
+          <text x="300" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em" data-count="5">~5 PROJECTS</text>
         </g>
         <g class="tl-flag" style="--i:2">
           <line x1="500" y1="150" x2="500" y2="128" stroke="#C8102E" stroke-width="1.2"/>
           <rect x="468" y="110" width="64" height="18" fill="#C8102E"/>
           <text x="500" y="123" text-anchor="middle" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="0.06em" font-weight="500">2020</text>
-          <text x="500" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em">~20 PROJECTS</text>
+          <text x="500" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em" data-count="20">~20 PROJECTS</text>
         </g>
         <g class="tl-flag" style="--i:3">
           <line x1="700" y1="125" x2="700" y2="103" stroke="#C8102E" stroke-width="1.2"/>
           <rect x="668" y="85" width="64" height="18" fill="#C8102E"/>
           <text x="700" y="98" text-anchor="middle" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="0.06em" font-weight="500">2021</text>
-          <text x="700" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em">~40 PROJECTS</text>
+          <text x="700" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em" data-count="40">~40 PROJECTS</text>
         </g>
         <g class="tl-flag" style="--i:4">
           <line x1="900" y1="105" x2="900" y2="83" stroke="#C8102E" stroke-width="1.2"/>
           <rect x="868" y="65" width="64" height="18" fill="#C8102E"/>
           <text x="900" y="78" text-anchor="middle" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="0.06em" font-weight="500">2023</text>
-          <text x="900" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em">~70 PROJECTS</text>
+          <text x="900" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em" data-count="70">~70 PROJECTS</text>
         </g>
         <g class="tl-flag" style="--i:5">
           <line x1="1100" y1="85" x2="1100" y2="63" stroke="#C8102E" stroke-width="1.2"/>
           <rect x="1068" y="45" width="64" height="18" fill="#C8102E"/>
           <text x="1100" y="58" text-anchor="middle" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="0.06em" font-weight="500">2024</text>
-          <text x="1100" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em">~90 PROJECTS</text>
+          <text x="1100" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em" data-count="90">~90 PROJECTS</text>
         </g>
         <g class="tl-flag" style="--i:6">
           <line x1="1300" y1="65" x2="1300" y2="43" stroke="#C8102E" stroke-width="1.2"/>
           <rect x="1268" y="25" width="64" height="18" fill="#C8102E"/>
           <text x="1300" y="38" text-anchor="middle" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="0.06em" font-weight="500">2025</text>
-          <text x="1300" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em">100+ TODAY</text>
+          <text x="1300" y="222" text-anchor="middle" fill="#1F1B17" opacity="0.7" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.1em" data-count="100">100+ TODAY</text>
         </g>
       </svg>
     </div>
@@ -4451,7 +4455,7 @@
         <div class="desc">Project footprint across Peninsular Malaysia.</div>
       </div>
       <div class="stat">
-        <div class="num">70<sup>%+</sup></div>
+        <div class="num" data-count="70">70<sup>%+</sup></div>
         <div class="lbl">Repeat Clients</div>
         <div class="desc">Of our pipeline comes from clients we've already delivered for. They come back because the work holds.</div>
       </div>
@@ -5412,11 +5416,12 @@
   function animateCount(el) {
     const target = parseFloat(el.dataset.count);
     if (!Number.isFinite(target) || target === 0) return;
-    // preserve the suffix HTML/text that follows the leading number
+    // Allow an optional non-digit prefix (e.g. "~"), then the number, then the suffix.
     const inner = el.innerHTML;
-    const m = inner.match(/^([\d.,]+)([\s\S]*)$/);
-    const initialNum = m ? m[1] : '';
-    const suffix = m ? m[2] : '';
+    const m = inner.match(/^(\D*)([\d.,]+)([\s\S]*)$/);
+    const prefix = m ? m[1] : '';
+    const initialNum = m ? m[2] : '';
+    const suffix = m ? m[3] : '';
     const decMatch = initialNum.match(/\.(\d+)$/);
     const decimals = decMatch ? decMatch[1].length : 0;
     const fmt = (n) => n.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
@@ -5426,7 +5431,7 @@
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      el.innerHTML = fmt(eased * target) + suffix;
+      el.innerHTML = prefix + fmt(eased * target) + suffix;
       if (progress < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
