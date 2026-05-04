@@ -158,22 +158,26 @@
      rule covers paragraphs that would otherwise stretch the full container. */
   .faq-a, .ba-caption { max-width: 64ch; }
 
-  /* Mandarin (Simplified) font normalization. Latin display fonts have
-     smaller line-height and larger x-height than CJK fonts at the same
-     font-size — Chinese characters end up looking ~12% smaller than Latin.
-     When the page is in zh-Hans mode, swap in Noto Sans SC and bump
-     font-size slightly so Chinese reads at visual parity with English. */
-  :lang(zh-Hans) {
-    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', var(--sans);
+  /* Mandarin (Simplified) font normalization. Strategy: put the Latin
+     fonts FIRST and the CJK fonts BEFORE any generic family fallback.
+     Per-character font matching (CSS spec): browser uses Manrope/Montserrat/
+     JetBrains Mono for Latin glyphs (matches EN mode exactly), and Noto
+     Sans SC for CJK glyphs. Generic 'sans-serif'/'monospace' is the last
+     resort. */
+  /* html:lang() restricts to the html element only — descendants inherit
+     instead of every element overriding its own font-family. This lets
+     class-specific rules like .micro / .hero h1 / h2 still apply, while
+     CJK chars fall through to Noto Sans SC inside any of those. */
+  html:lang(zh-Hans) {
+    font-family: 'Manrope', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', system-ui, sans-serif;
   }
   :lang(zh-Hans) body { font-size: 17px; }
   :lang(zh-Hans) .hero h1,
   :lang(zh-Hans) .sec-header h2,
   :lang(zh-Hans) h1, :lang(zh-Hans) h2, :lang(zh-Hans) h3,
   :lang(zh-Hans) h4, :lang(zh-Hans) h5, :lang(zh-Hans) h6 {
-    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', var(--serif);
+    font-family: 'Montserrat', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
     font-weight: 500;
-    letter-spacing: 0;
   }
   :lang(zh-Hans) em {
     font-style: normal;
@@ -183,8 +187,7 @@
   :lang(zh-Hans) .micro,
   :lang(zh-Hans) .mono,
   :lang(zh-Hans) .eyebrow {
-    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', var(--mono);
-    letter-spacing: 0.08em;
+    font-family: 'JetBrains Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', ui-monospace, monospace;
   }
   /* Bottom nav and small UI elements need a font-size bump in Chinese —
      Chinese characters at 9-10px are illegible. Letter-spacing also gets
@@ -2335,7 +2338,21 @@
     color: var(--ic-red);
     font-weight: 400;
     letter-spacing: -0.015em;
+    /* Tabular numerals: digits all have the same width, so the line
+       doesn't reflow up/down as the count animation increments
+       (especially noticeable on small screens). */
+    font-variant-numeric: tabular-nums;
   }
+  /* Reserve a stable line height on the stat row so the description
+     beneath doesn't stutter while the counter ticks up. */
+  .case-stat { min-height: 48px; }
+  /* Apply tabular-nums to all animated number counters site-wide so
+     digits never change width during the count-up animation. */
+  .stat .num,
+  .opp-stat .big,
+  .out-val,
+  .hero-footer .num,
+  [data-count] { font-variant-numeric: tabular-nums; }
   .case-stat .l {
     font-family: var(--mono);
     font-size: 9.5px;
