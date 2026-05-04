@@ -2371,16 +2371,12 @@
     color: color-mix(in srgb, var(--paper) 75%, transparent);
     margin: 0;
   }
-  /* Each card spans 2 of 6 cols → 3 cards per row */
-  .value-card { grid-column: span 2; }
-  /* When the grid has exactly 5 cards: top row has 3, bottom row has 2 — center the bottom row by shifting card 4 from col 1 to col 2 */
-  .value-card:nth-child(4):nth-last-child(2) { grid-column: 2 / span 2; }
+  /* 4 cards in a clean 2×2 grid: each card spans 3 of 6 cols */
+  .value-card { grid-column: span 3; }
   @media (max-width: 1100px) {
-    .value-card { grid-column: span 3; } /* 2 cards per row */
-    /* If there's a lone last card on its own row, span full width so it doesn't sit half-empty */
+    .value-card { grid-column: span 3; } /* same 2-per-row on tablet */
+    /* If there's a lone last card on its own row (odd count), span full width */
     .value-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
-    /* Reset the 5-card centering rule since it's a different layout now */
-    .value-card:nth-child(4):nth-last-child(2) { grid-column: span 3; }
   }
   /* Mobile / small tablets: stack all cards single column. Bumped from 560px to 760px so phones in landscape and small tablets don't show the awkward "lone last card spans full" layout. */
   @media (max-width: 760px)  {
@@ -3692,7 +3688,7 @@
       <p data-i18n="s01.p">The land you're given is rarely the land that's easy to build on. Our job is to make it buildable.</p>
     </div>
 
-    <h3 class="phil-headline reveal">
+    <h3 class="phil-headline reveal" data-i18n="phil.headline">
       Designed to adapt
       <em>to the terrain.</em>
     </h3>
@@ -4702,7 +4698,7 @@
     <div class="case-grid">
       <div class="case">
         <div class="case-photo">
-          <span class="tag">Concessionaire · Highway</span>
+          <span class="tag" data-i18n="case1.tag">Concessionaire · Highway</span>
           <img src="images/projects/project-ekve.jpg" alt="East Klang Valley Expressway slope works" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" onerror="this.style.display='none'">
           <svg width="100%" height="100%" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <rect width="400" height="250" fill="#2c2520"/>
@@ -4720,18 +4716,18 @@
           </svg>
         </div>
         <div class="case-body">
-          <h3>East Klang Valley Expressway</h3>
-          <p>KL Outer Ring Road, eastern route. Soil nailing, guniting, rock bolt, rock netting, new jersey barriers, and rock-face stabilization - all delivered under live traffic.</p>
+          <h3 data-i18n="case1.h3">East Klang Valley Expressway</h3>
+          <p data-i18n="case1.p">KL Outer Ring Road, eastern route. Soil nailing, guniting, rock bolt, rock netting, new jersey barriers, and rock-face stabilization - all delivered under live traffic.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v" data-count="39.5">39.5 km</div><div class="l">alignment</div></div>
-            <div class="case-stat"><div class="v" data-count="450000">450,000 m²</div><div class="l">surface protected</div></div>
+            <div class="case-stat"><div class="v" data-count="39.5">39.5 km</div><div class="l" data-i18n="case1.l1">alignment</div></div>
+            <div class="case-stat"><div class="v" data-count="450000">450,000 m²</div><div class="l" data-i18n="case1.l2">surface protected</div></div>
           </div>
         </div>
       </div>
 
       <div class="case">
         <div class="case-photo">
-          <span class="tag">National Rail · Govt</span>
+          <span class="tag" data-i18n="case2.tag">National Rail · Govt</span>
           <img src="images/projects/project-ecrl.jpg" alt="ECRL slope protection" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" onerror="this.style.display='none'">
           <svg width="100%" height="100%" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <rect width="400" height="250" fill="#26201c"/>
@@ -4746,33 +4742,33 @@
           </svg>
         </div>
         <div class="case-body">
-          <h3>East Coast Rail Link</h3>
-          <p>Slope protection across the ECRL alignment. Soil nailing, guniting, plus horizontal and chute drains.</p>
+          <h3 data-i18n="case2.h3">East Coast Rail Link</h3>
+          <p data-i18n="case2.p">Slope protection across the ECRL alignment. Soil nailing, guniting, plus horizontal and chute drains.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v" data-count="64">64 km</div><div class="l">chainage</div></div>
-            <div class="case-stat"><div class="v" data-count="320000">320,000 m</div><div class="l">drilled</div></div>
+            <div class="case-stat"><div class="v" data-count="64">64 km</div><div class="l" data-i18n="case2.l1">chainage</div></div>
+            <div class="case-stat"><div class="v" data-count="320000">320,000 m</div><div class="l" data-i18n="case2.l2">drilled</div></div>
           </div>
         </div>
       </div>
 
       <div class="case">
         <div class="case-photo">
-          <span class="tag">Ministry of Works · Govt</span>
+          <span class="tag" data-i18n="case3.tag">Ministry of Works · Govt</span>
           <img src="images/projects/project-central-spine-road.jpg" alt="Central Spine Road slope works" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" onerror="this.style.display='none'">
         </div>
         <div class="case-body">
-          <h3>Central Spine Road</h3>
-          <p>Slope stabilization, rock netting, guniting, soil nails, horizontal drains, and rock bolts.</p>
+          <h3 data-i18n="case3.h3">Central Spine Road</h3>
+          <p data-i18n="case3.p">Slope stabilization, rock netting, guniting, soil nails, horizontal drains, and rock bolts.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v" data-count="65000">65,000 m²</div><div class="l">slope face</div></div>
-            <div class="case-stat"><div class="v" data-count="6">6 types</div><div class="l">solutions</div></div>
+            <div class="case-stat"><div class="v" data-count="65000">65,000 m²</div><div class="l" data-i18n="case3.l1">slope face</div></div>
+            <div class="case-stat"><div class="v" data-count="6">6 types</div><div class="l" data-i18n="case3.l2">solutions</div></div>
           </div>
         </div>
       </div>
 
       <div class="case">
         <div class="case-photo">
-          <span class="tag">Tier-1 Developer</span>
+          <span class="tag" data-i18n="case4.tag">Tier-1 Developer</span>
           <img src="images/projects/project-shah-alam-u10.jpg" alt="Shah Alam U10 mixed development" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" onerror="this.style.display='none'">
           <svg width="100%" height="100%" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <rect width="400" height="250" fill="#28221e"/>
@@ -4795,78 +4791,78 @@
           </svg>
         </div>
         <div class="case-body">
-          <h3>Shah Alam (U10), Mukim Bukit Raja</h3>
-          <p>Mixed residential and commercial development. Rock bolt, guniting, and horizontal drains on cut slope.</p>
+          <h3 data-i18n="case4.h3">Shah Alam (U10), Mukim Bukit Raja</h3>
+          <p data-i18n="case4.p">Mixed residential and commercial development. Rock bolt, guniting, and horizontal drains on cut slope.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v" data-count="92000">92,000 m²</div><div class="l">face · guniting</div></div>
-            <div class="case-stat"><div class="v" data-count="1500">1,500 nos</div><div class="l">rock bolts</div></div>
+            <div class="case-stat"><div class="v" data-count="92000">92,000 m²</div><div class="l" data-i18n="case4.l1">face · guniting</div></div>
+            <div class="case-stat"><div class="v" data-count="1500">1,500 nos</div><div class="l" data-i18n="case4.l2">rock bolts</div></div>
           </div>
         </div>
       </div>
 
       <div class="case">
         <div class="case-photo">
-          <span class="tag">Tier-1 Developer · Residential</span>
+          <span class="tag" data-i18n="case5.tag">Tier-1 Developer · Residential</span>
           <img src="images/projects/project-bandar-batu-18.jpg" alt="Mukim Bandar Batu 18 Semenyih earthworks" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" onerror="this.style.display='none'">
         </div>
         <div class="case-body">
-          <h3>Mukim Bandar Batu 18, Semenyih</h3>
-          <p>Earthworks, drainage, RE wall, RC wall, sheet pile, all under one scope.</p>
+          <h3 data-i18n="case5.h3">Mukim Bandar Batu 18, Semenyih</h3>
+          <p data-i18n="case5.p">Earthworks, drainage, RE wall, RC wall, sheet pile, all under one scope.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v" data-count="120000">120,000 m³</div><div class="l">earthworks</div></div>
-            <div class="case-stat"><div class="v" data-count="11000">11,000 m²</div><div class="l">retaining wall</div></div>
+            <div class="case-stat"><div class="v" data-count="120000">120,000 m³</div><div class="l" data-i18n="case5.l1">earthworks</div></div>
+            <div class="case-stat"><div class="v" data-count="11000">11,000 m²</div><div class="l" data-i18n="case5.l2">retaining wall</div></div>
           </div>
         </div>
       </div>
 
       <div class="case">
         <div class="case-photo">
-          <span class="tag">Commercial · Sub-station</span>
+          <span class="tag" data-i18n="case6.tag">Commercial · Sub-station</span>
           <img src="images/projects/project-mukim-sentul.jpg" alt="Mukim Sentul Seremban commercial development" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" onerror="this.style.display='none'">
         </div>
         <div class="case-body">
-          <h3>Mukim Sentul, Seremban</h3>
-          <p>Commercial development with electrical sub-station. Cut platform plus engineered modular retaining wall.</p>
+          <h3 data-i18n="case6.h3">Mukim Sentul, Seremban</h3>
+          <p data-i18n="case6.p">Commercial development with electrical sub-station. Cut platform plus engineered modular retaining wall.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v" data-count="5000">5,000 m²</div><div class="l">modular RE wall</div></div>
-            <div class="case-stat"><div class="v" data-count="6000">6,000 m²</div><div class="l">cut platform</div></div>
+            <div class="case-stat"><div class="v" data-count="5000">5,000 m²</div><div class="l" data-i18n="case6.l1">modular RE wall</div></div>
+            <div class="case-stat"><div class="v" data-count="6000">6,000 m²</div><div class="l" data-i18n="case6.l2">cut platform</div></div>
           </div>
         </div>
       </div>
 
       <div class="case">
         <div class="case-photo">
-          <span class="tag">National Account · Auto</span>
+          <span class="tag" data-i18n="case7.tag">National Account · Auto</span>
           <img src="images/projects/project-bandar-serendah.jpg" alt="Bandar Serendah multi-building site" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;position:absolute;inset:0;" onerror="this.style.display='none'">
         </div>
         <div class="case-body">
-          <h3>Bandar Serendah, Hulu Selangor</h3>
-          <p>Platform for parts centre, mezzanine, canteen, sub-station, bus stop. Earthwork and retaining wall as one package.</p>
+          <h3 data-i18n="case7.h3">Bandar Serendah, Hulu Selangor</h3>
+          <p data-i18n="case7.p">Platform for parts centre, mezzanine, canteen, sub-station, bus stop. Earthwork and retaining wall as one package.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v" data-count="540000">540,000 m³</div><div class="l">backfill</div></div>
-            <div class="case-stat"><div class="v" data-count="7">7 nos</div><div class="l">structures</div></div>
+            <div class="case-stat"><div class="v" data-count="540000">540,000 m³</div><div class="l" data-i18n="case7.l1">backfill</div></div>
+            <div class="case-stat"><div class="v" data-count="7">7 nos</div><div class="l" data-i18n="case7.l2">structures</div></div>
           </div>
         </div>
       </div>
 
       <div class="case">
         <div class="case-photo">
-          <span class="tag">Tier-1 Developer · Residential</span>
+          <span class="tag" data-i18n="case8.tag">Tier-1 Developer · Residential</span>
           <img src="images/projects/project-bandar-ulu-kelang.jpg" alt="Bandar Ulu Kelang internal spine road" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" onerror="this.style.display='none'">
         </div>
         <div class="case-body">
-          <h3>Bandar Ulu Kelang, Gombak</h3>
-          <p>100ft internal spine road for a 3-storey terrace cluster. Earthworks, road, drainage, and retaining wall.</p>
+          <h3 data-i18n="case8.h3">Bandar Ulu Kelang, Gombak</h3>
+          <p data-i18n="case8.p">100ft internal spine road for a 3-storey terrace cluster. Earthworks, road, drainage, and retaining wall.</p>
           <div class="case-stats">
-            <div class="case-stat"><div class="v" data-count="100">100 ft</div><div class="l">spine road · width</div></div>
-            <div class="case-stat"><div class="v" data-count="2">2 km</div><div class="l">drainage</div></div>
+            <div class="case-stat"><div class="v" data-count="100">100 ft</div><div class="l" data-i18n="case8.l1">spine road · width</div></div>
+            <div class="case-stat"><div class="v" data-count="2">2 km</div><div class="l" data-i18n="case8.l2">drainage</div></div>
           </div>
         </div>
       </div>
 
     </div>
 
-    <div class="case-scroll-hint">Drag, scroll, or swipe →</div>
+    <div class="case-scroll-hint" data-i18n="case.scroll">Drag, scroll, or swipe →</div>
   </div>
 </section>
 
@@ -5906,8 +5902,8 @@
         'nav.brief': 'Hubungi',
         // Hero
         'hero.eyebrow.spec': 'Kontraktor Geoteknikal Pakar · CIDB G7',
-        'hero.headline.line1': 'Cerun yang direkayasa.',
-        'hero.headline.sub': 'Penggunaan tanah dinaikkan.',
+        'hero.headline.line1': 'Memungkinkan Ruang.',
+        'hero.headline.sub': 'Cerun direkayasa untuk hasil tanah maksimum.',
         'hero.side.label': 'Apa yang kami lakukan',
         'hero.side.p': 'Stabilisasi cerun, sistem penahan, penciptaan tanah boleh guna, kontraktor utama. Satu pasukan dari siasatan tapak hingga serahan.',
         'hero.cta.brief': 'Minta cadangan projek',
@@ -6099,6 +6095,50 @@
         'cs.drag': 'TARIK',
         // Philosophy cascade caption
         'phil.cascade': 'MENGIKUT KONTUR · PLATFORM ADAPTIF',
+        // Philosophy headline
+        'phil.headline': 'Direka bentuk untuk menyesuaikan <em>rupa bumi.</em>',
+        // Selected Work — 8 project cards (section 09)
+        'case1.tag': 'Konsesionari · Lebuh Raya',
+        'case1.h3': 'Lebuh Raya Lembah Klang Timur',
+        'case1.p': 'Lingkaran Luar Kuala Lumpur, laluan timur. Pemasangan paku tanah, penyemburan konkrit, bolt batu, jaring batu, penghadang jersey baharu, dan stabilisasi muka batu — semuanya disampaikan di bawah trafik langsung.',
+        'case1.l1': 'jajaran',
+        'case1.l2': 'permukaan dilindungi',
+        'case2.tag': 'Kereta Api Nasional · Kerajaan',
+        'case2.h3': 'Laluan Rel Pantai Timur',
+        'case2.p': 'Perlindungan cerun di sepanjang laluan ECRL. Pemasangan paku tanah, penyemburan konkrit, serta saliran mendatar dan saliran curam.',
+        'case2.l1': 'jajaran',
+        'case2.l2': 'jumlah dibor',
+        'case3.tag': 'Kementerian Kerja Raya · Kerajaan',
+        'case3.h3': 'Jalan Tulang Belakang Tengah',
+        'case3.p': 'Pengukuhan cerun, jaring batu, penyemburan konkrit, paku tanah, saliran mendatar, dan bolt batu.',
+        'case3.l1': 'muka cerun',
+        'case3.l2': 'penyelesaian',
+        'case4.tag': 'Pemaju Tier-1',
+        'case4.h3': 'Shah Alam (U10), Mukim Bukit Raja',
+        'case4.p': 'Pembangunan campuran kediaman dan komersil. Bolt batu, penyemburan konkrit, dan saliran mendatar pada cerun potong.',
+        'case4.l1': 'muka · penyemburan konkrit',
+        'case4.l2': 'bolt batu',
+        'case5.tag': 'Pemaju Tier-1 · Kediaman',
+        'case5.h3': 'Mukim Bandar Batu 18, Semenyih',
+        'case5.p': 'Kerja tanah, saliran, dinding tanah bertetulang (RE), dinding konkrit bertetulang, cerucuk keping — semuanya di bawah satu skop.',
+        'case5.l1': 'kerja tanah',
+        'case5.l2': 'dinding penahan',
+        'case6.tag': 'Komersil · Pencawang Elektrik',
+        'case6.h3': 'Mukim Sentul, Seremban',
+        'case6.p': 'Pembangunan komersil dengan pencawang elektrik. Platform potong serta dinding penahan modular yang direkayasa.',
+        'case6.l1': 'dinding RE modular',
+        'case6.l2': 'platform potong',
+        'case7.tag': 'Akaun Nasional · Automotif',
+        'case7.h3': 'Bandar Serendah, Hulu Selangor',
+        'case7.p': 'Platform untuk pusat alat ganti, mezanin, kantin, pencawang, dan perhentian bas. Kerja tanah dan dinding penahan sebagai satu pakej.',
+        'case7.l1': 'tanah timbus',
+        'case7.l2': 'struktur',
+        'case8.tag': 'Pemaju Tier-1 · Kediaman',
+        'case8.h3': 'Bandar Ulu Kelang, Gombak',
+        'case8.p': 'Jalan tulang belakang dalaman 100 kaki untuk kluster teres 3 tingkat. Kerja tanah, jalan, saliran, dan dinding penahan.',
+        'case8.l1': 'jalan utama · lebar',
+        'case8.l2': 'saliran',
+        'case.scroll': 'Seret, tatal, atau leret →',
         // Footer
         'footer.tagline': 'Syarikat Panthera Group. Merekayasa cerun untuk menaikkan penggunaan tanah, sejak 2018.',
         'footer.h.solutions': 'Penyelesaian',
@@ -6122,7 +6162,7 @@
         // Hero
         'hero.eyebrow.spec': '专业岩土工程承包商 · CIDB G7',
         'hero.headline.line1': '释放空间。',
-        'hero.headline.sub': '工程化边坡发挥土地最大用途。',
+        'hero.headline.sub': '工程化边坡 让土地用途最大化。',
         'hero.side.label': '我们的业务',
         'hero.side.p': '边坡稳定、挡土系统、土地创造、总承包。从勘察到交付，一个团队全程负责。',
         'hero.cta.brief': '提交项目咨询',
@@ -6314,6 +6354,50 @@
         'cs.drag': '拖动',
         // Philosophy cascade caption
         'phil.cascade': '随等高线分级 · 自适应平台',
+        // Philosophy headline — uses 因地制宜 idiom (literally "act according to local conditions")
+        'phil.headline': '因地制宜的<em>设计。</em>',
+        // Selected Work — 8 project cards (section 09)
+        'case1.tag': '特许经营 · 高速公路',
+        'case1.h3': '东巴生谷高速公路',
+        'case1.p': '吉隆坡外环路东段。土钉法、喷射混凝土、岩石锚杆、岩石防护网、新泽西护栏，以及岩面稳固 —— 全部在通车状态下交付。',
+        'case1.l1': '线路总长',
+        'case1.l2': '防护面积',
+        'case2.tag': '国家铁路 · 政府',
+        'case2.h3': '东海岸铁路连接',
+        'case2.p': '沿 ECRL 线路的边坡防护。土钉法、喷射混凝土，加水平排水与急流排水。',
+        'case2.l1': '里程',
+        'case2.l2': '钻孔总长',
+        'case3.tag': '工程部 · 政府',
+        'case3.h3': '中部脊柱公路',
+        'case3.p': '边坡稳定、岩石防护网、喷射混凝土、土钉、水平排水与岩石锚杆。',
+        'case3.l1': '坡面',
+        'case3.l2': '工艺种类',
+        'case4.tag': '顶级开发商',
+        'case4.h3': '莎亚南 U10 区，武吉拉惹镇',
+        'case4.p': '住宅与商业混合发展项目。切坡上施作岩石锚杆、喷射混凝土与水平排水。',
+        'case4.l1': '坡面 · 喷射混凝土',
+        'case4.l2': '岩石锚杆',
+        'case5.tag': '顶级开发商 · 住宅',
+        'case5.h3': '士毛月 18 哩镇区',
+        'case5.p': '土方工程、排水、加筋土墙、钢筋混凝土墙、钢板桩 —— 全部一站式承包。',
+        'case5.l1': '土方',
+        'case5.l2': '挡土墙',
+        'case6.tag': '商业 · 变电站',
+        'case6.h3': '芙蓉增龙区',
+        'case6.p': '商业项目附变电站。切方平台加工程化模块化挡土墙。',
+        'case6.l1': '模块化加筋土墙',
+        'case6.l2': '切方平台',
+        'case7.tag': '国家级客户 · 汽车业',
+        'case7.h3': '雪兰莪双拉央镇',
+        'case7.p': '整合平台，包含零件中心、夹层、食堂、变电站与巴士站。土方与挡土墙一站式交付。',
+        'case7.l1': '填方',
+        'case7.l2': '结构数量',
+        'case8.tag': '顶级开发商 · 住宅',
+        'case8.h3': '鹅唛峇都加央镇',
+        'case8.p': '三层排屋区内 100 英尺主干道。土方工程、道路、排水与挡土墙。',
+        'case8.l1': '主干道 · 宽度',
+        'case8.l2': '排水长度',
+        'case.scroll': '拖动、滚动或滑动 →',
         // Footer
         'footer.tagline': 'Panthera Group 旗下公司。自 2018 年起，专注边坡工程，发挥土地最大用途。',
         'footer.h.solutions': '解决方案',
