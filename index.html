@@ -150,6 +150,135 @@
 }
 </script>
 
+<!-- Schema.org FAQPage + Service catalogue (rich-result eligible, LLM-friendly) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://infraconcrete.co/#faq",
+      "url": "https://infraconcrete.co/#faq",
+      "inLanguage": "en-MY",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is soil nailing, and when is it the right solution?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A slope reinforcement technique. We drill into the soil at engineered angles, insert high-strength steel bars, and grout them in place. The soil itself becomes the wall. Best for cut slopes, retained excavations, and existing slopes showing distress, where major excavation isn't an option." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if my site needs slope stabilization?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Watch for cracks in the slope face, seepage, settling structures, leaning trees or fences, or prior landslide history. Honest answer: you can't be sure until a geotechnical investigation. We'll attend site, walk the ground, and tell you whether deeper investigation is warranted before any commitment." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work directly with consulting engineers, or only with developers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Both. Consulting engineers engage us as their specialist contractor; developers and authorities appoint us directly under design-build, where we lead engineering and construction. We prefer being involved from concept rather than tender." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the typical project timeline?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Site dependent. A 1,000 m² residential slope is typically 4-6 weeks mobilization to handover. A 20,000 m²+ government programme runs 6-12 months. Emergencies mobilize in days. A programme is always attached to the proposal, no ambiguity at award." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your works warranted, and for how long?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Defect liability follows CIDB and consultant spec, typically 12-24 months on workmanship. Material warranties (steel nails, mesh, rockfall barriers) follow manufacturer terms, up to 10 years on certain proprietary systems. Extended monitoring contracts available for critical assets." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you handle authority approval and submission?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, alongside the consulting engineer who carries professional design liability. We prepare drawings, method statements, and material certs in JKR / local authority submission format. Experience across MPSJ, MBPJ, MBAJ, MBSA, and JKR Slope Engineering Branch." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does engaging Infraconcrete actually look like, step by step?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Five steps: (1) You reach out via form, call, or WhatsApp. (2) We attend site at no obligation, walk the ground, and discuss what you're trying to achieve. (3) We issue a proposal with scope, programme, and pricing. (4) On award we mobilize. (5) Handover with as-built drawings, test certs, and a maintenance schedule." }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://infraconcrete.co/soil-nailing/#service",
+      "serviceType": "Soil Nailing",
+      "name": "Soil Nailing — Slope Reinforcement",
+      "description": "High-yield steel bars drilled and grouted at engineered angles to reinforce slopes against sliding. Designed and installed in-house to BS 8006-2, FHWA-NHI-14-007, Eurocode 7, and JKR specifications. Used on cut slopes, retained excavations, and distressed slopes.",
+      "url": "https://infraconcrete.co/soil-nailing/",
+      "provider": { "@type": "LocalBusiness", "name": "Infraconcrete Construction Sdn Bhd", "url": "https://infraconcrete.co/" },
+      "areaServed": { "@type": "Country", "name": "Malaysia" },
+      "category": "Geotechnical Engineering / Slope Stabilization"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://infraconcrete.co/guniting/#service",
+      "serviceType": "Guniting / Shotcrete",
+      "name": "Guniting and Shotcrete — Slope and Rock Face Protection",
+      "description": "Wet-mix and dry-mix sprayed concrete on slope and rock faces, tunnels, and structural repair. Engineered to ACI 506, EN 14487, and JKR specifications. The structural skin on soil-nailed and rock-bolted slopes.",
+      "url": "https://infraconcrete.co/guniting/",
+      "provider": { "@type": "LocalBusiness", "name": "Infraconcrete Construction Sdn Bhd", "url": "https://infraconcrete.co/" },
+      "areaServed": { "@type": "Country", "name": "Malaysia" },
+      "category": "Geotechnical Engineering / Slope Protection"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://infraconcrete.co/rock-bolting/#service",
+      "serviceType": "Rock Bolting",
+      "name": "Rock Bolting — Anchored Rock Stabilization",
+      "description": "Tensioned and grouted steel bolts that pin loose rock to competent strata. Eliminates rockfall on cut slopes, tunnel portals, and quarry benches. To BS 8081, EN 1537, AASHTO, and JKR.",
+      "url": "https://infraconcrete.co/rock-bolting/",
+      "provider": { "@type": "LocalBusiness", "name": "Infraconcrete Construction Sdn Bhd", "url": "https://infraconcrete.co/" },
+      "areaServed": { "@type": "Country", "name": "Malaysia" },
+      "category": "Geotechnical Engineering / Rock Stabilization"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://infraconcrete.co/rockfall-barrier/#service",
+      "serviceType": "Rockfall Barrier",
+      "name": "Rockfall Barriers and Dynamic Netting",
+      "description": "Energy-rated flexible barriers (100 kJ to 5000 kJ), drape mesh, and dynamic netting on highway corridors, rail lines, mining benches, and access roads under cliffs. To ETAG 027 / EAD 340059.",
+      "url": "https://infraconcrete.co/rockfall-barrier/",
+      "provider": { "@type": "LocalBusiness", "name": "Infraconcrete Construction Sdn Bhd", "url": "https://infraconcrete.co/" },
+      "areaServed": { "@type": "Country", "name": "Malaysia" },
+      "category": "Geotechnical Engineering / Rockfall Protection"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://infraconcrete.co/retaining-walls/#service",
+      "serviceType": "Retaining Walls",
+      "name": "Retaining Walls — Design-Build Earth Retaining Systems",
+      "description": "Reinforced earth (RE/MSE) walls, modular concrete block walls, RC cantilever walls, sheet piling, soldier piling, and gabion walls. Engineered to BS 8002, BS 8004, BS 8006, BS EN 1997 (Eurocode 7), and JKR.",
+      "url": "https://infraconcrete.co/retaining-walls/",
+      "provider": { "@type": "LocalBusiness", "name": "Infraconcrete Construction Sdn Bhd", "url": "https://infraconcrete.co/" },
+      "areaServed": { "@type": "Country", "name": "Malaysia" },
+      "category": "Geotechnical Engineering / Retaining Systems"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://infraconcrete.co/horizontal-drains/#service",
+      "serviceType": "Horizontal Drains",
+      "name": "Horizontal Drains — Subsurface Slope Drainage",
+      "description": "Drilled subsurface drains that lower the groundwater table by gravity. Often the single most cost-effective slope-stabilization measure when groundwater is the failure driver. To BS 6031 and JKR.",
+      "url": "https://infraconcrete.co/horizontal-drains/",
+      "provider": { "@type": "LocalBusiness", "name": "Infraconcrete Construction Sdn Bhd", "url": "https://infraconcrete.co/" },
+      "areaServed": { "@type": "Country", "name": "Malaysia" },
+      "category": "Geotechnical Engineering / Slope Drainage"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://infraconcrete.co/slope-stabilization/#service",
+      "serviceType": "Slope Stabilization",
+      "name": "Slope Stabilization — Integrated Geotechnical Solutions",
+      "description": "Integrated slope stabilization combining protection, reinforcement, repair, and remediation. Six in-house systems (soil nailing, guniting, rock bolting, rockfall barriers, retaining walls, horizontal drains) deployed as engineered packages across Malaysia.",
+      "url": "https://infraconcrete.co/slope-stabilization/",
+      "provider": { "@type": "LocalBusiness", "name": "Infraconcrete Construction Sdn Bhd", "url": "https://infraconcrete.co/" },
+      "areaServed": { "@type": "Country", "name": "Malaysia" },
+      "category": "Geotechnical Engineering / Slope Stabilization"
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Manrope:wght@400;600&family=JetBrains+Mono:wght@500&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -3173,8 +3302,7 @@
   }
   .bn-item.bn-cta { background: var(--ic-red); color: #fff; }
   .bn-item.bn-cta:hover, .bn-item.bn-cta:focus-visible { background: var(--ic-red-deep); color: #fff; }
-  /* Bottom nav is now always visible, so retire the sticky-bar everywhere and reserve body space */
-  .sticky-bar { display: none !important; }
+  /* Reserve space for the always-visible bottom nav pill */
   body { padding-bottom: 76px; }
   /* On wider viewports the swipe hint + edge fade aren't needed (everything fits cleanly) */
   @media (min-width: 1100px) {
@@ -3185,30 +3313,6 @@
   }
   @media (max-width: 880px) {
     .menu-btn { display: none !important; }
-  }
-
-  /* =========================================================
-     STICKY CTA BAR
-     ========================================================= */
-  .sticky-bar {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
-    background: var(--ink); color: var(--paper);
-    padding: 14px 24px;
-    display: flex; align-items: center; justify-content: center; gap: 20px;
-    font-family: var(--sans); font-size: 14px;
-    transform: translateY(100%);
-    transition: transform .35s cubic-bezier(.4,0,.2,1);
-    border-top: 2px solid var(--ic-red);
-  }
-  .sticky-bar.show { transform: translateY(0); }
-  .sticky-bar p { margin: 0; opacity: .85; }
-  .sticky-bar a { background: var(--ic-red); color: #fff; padding: 8px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; text-decoration: none; white-space: nowrap; transition: background .2s; }
-  .sticky-bar a:hover { background: #a00d22; }
-  .sticky-bar-dismiss { background: none; border: none; color: #888; cursor: pointer; font-size: 20px; line-height: 1; padding: 0 0 0 8px; flex-shrink: 0; }
-  .sticky-bar-dismiss:hover { color: #fff; }
-  @media (max-width: 480px) {
-    .sticky-bar { flex-wrap: wrap; gap: 10px; padding: 12px 16px; }
-    .sticky-bar p { font-size: 13px; }
   }
 
   /* =========================================================
@@ -3563,10 +3667,6 @@
     /* Nav */
     .nav-links.open { padding: 20px 16px; gap: 16px; }
 
-    /* Sticky bar */
-    .sticky-bar { padding: 10px 12px; font-size: 12px; }
-    .sticky-bar a { padding: 7px 14px; font-size: 12px; }
-
     /* Footer */
     .footer-grid { grid-template-columns: 1fr !important; gap: 32px; }
   }
@@ -3763,13 +3863,6 @@
     </symbol>
   </defs>
 </svg>
-
-<!-- Sticky CTA bar (appears after scrolling past hero, desktop only) -->
-<div class="sticky-bar" id="stickyBar" role="complementary" aria-label="Request a brief">
-  <p data-i18n="sticky.text">Ready to discuss your site?</p>
-  <a href="#contact" data-i18n="sticky.cta">Request a Project Brief →</a>
-  <button class="sticky-bar-dismiss" id="stickyDismiss" aria-label="Dismiss">&times;</button>
-</div>
 
 <!-- Mobile bottom nav (app-style, scrollable, replaces hamburger on small screens) -->
 <nav class="bottom-nav" aria-label="Site navigation">
@@ -4019,6 +4112,7 @@
           <h3 data-i18n="sol1.h3">Slope <em>Protection</em></h3>
           <p data-i18n="sol1.p">Reinforced systems that secure slopes against landslide, erosion, and progressive failure. Engineered for tropical climate and seismic conditions.</p>
           <a href="#capabilities" class="more"><span data-i18n="sol.more">Explore techniques</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/slope-protection/" data-href-en="/slope-protection/" data-href-bm="/bm/kontraktor-cerun/" data-href-zh="/zh/slope-stabilization/" class="cap-learn-more" data-i18n="sol1.learn">Read the full slope protection guide →</a>
         </div>
       </div>
 
@@ -4041,6 +4135,7 @@
           <h3 data-i18n="sol2.h3">Retaining <em>Systems</em></h3>
           <p data-i18n="sol2.p">Design-build retaining solutions: soil nail walls, MSE walls, anchored systems. To consultant spec.</p>
           <a href="#capabilities" class="more"><span data-i18n="sol.more">Explore techniques</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/retaining-walls/" data-href-en="/retaining-walls/" data-href-bm="/bm/tembok-penahan/" data-href-zh="/zh/retaining-walls/" class="cap-learn-more" data-i18n="sol2.learn">Read the full retaining systems guide →</a>
         </div>
       </div>
 
@@ -4063,6 +4158,7 @@
           <h3 data-i18n="sol3.h3">Usable Land <em>Creation</em></h3>
           <p data-i18n="sol3.p">Turning hillsides, floodplains, and fragmented parcels into compliant, developable platforms. We unlock land utility that others deem impossible to build on.</p>
           <a href="#capabilities" class="more"><span data-i18n="sol.more">Explore techniques</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/slope-stabilization/" data-href-en="/slope-stabilization/" data-href-bm="/bm/kontraktor-cerun/" data-href-zh="/zh/slope-stabilization/" class="cap-learn-more" data-i18n="sol3.learn">Read the full land creation guide →</a>
         </div>
       </div>
     </div>
@@ -4680,6 +4776,7 @@
             <li><span>03</span><span data-i18n="cap2.s3">High velocity application</span></li>
             <li><span>04</span><span data-i18n="cap2.s4">Curing and integrity check</span></li>
           </ul>
+          <a href="/guniting/" data-href-en="/guniting/" data-href-bm="/bm/guniting/" data-href-zh="/zh/guniting/" class="cap-learn-more" data-i18n="cap2.learn">Read the full guniting guide →</a>
         </details>
       </div>
 
@@ -4699,6 +4796,7 @@
             <li><span>03</span><span data-i18n="cap3.s3">Bolt installation and anchoring</span></li>
             <li><span>04</span><span data-i18n="cap3.s4">Tensioning and inspection</span></li>
           </ul>
+          <a href="/rock-bolting/" data-href-en="/rock-bolting/" data-href-bm="/rock-bolting/" data-href-zh="/zh/rock-bolting/" class="cap-learn-more" data-i18n="cap3.learn">Read the full rock bolting guide →</a>
         </details>
       </div>
 
@@ -4718,6 +4816,7 @@
             <li><span>03</span><span data-i18n="cap4.s3">Netting deployment</span></li>
             <li><span>04</span><span data-i18n="cap4.s4">Load inspection</span></li>
           </ul>
+          <a href="/rock-netting/" data-href-en="/rock-netting/" data-href-bm="/rock-netting/" data-href-zh="/zh/rockfall-barrier/" class="cap-learn-more" data-i18n="cap4.learn">Read the full rock netting guide →</a>
         </details>
       </div>
 
@@ -4737,6 +4836,7 @@
             <li><span>03</span><span data-i18n="cap5.s3">Implementation</span></li>
             <li><span>04</span><span data-i18n="cap5.s4">Post construction monitoring</span></li>
           </ul>
+          <a href="/slope-stabilization/" data-href-en="/slope-stabilization/" data-href-bm="/bm/kontraktor-cerun/" data-href-zh="/zh/slope-stabilization/" class="cap-learn-more" data-i18n="cap5.learn">Read the full slope stabilization guide →</a>
         </details>
       </div>
 
@@ -4756,6 +4856,7 @@
             <li><span>03</span><span data-i18n="cap6.s3">Anchored installation</span></li>
             <li><span>04</span><span data-i18n="cap6.s4">Testing and maintenance plan</span></li>
           </ul>
+          <a href="/rockfall-barrier/" data-href-en="/rockfall-barrier/" data-href-bm="/rockfall-barrier/" data-href-zh="/zh/rockfall-barrier/" class="cap-learn-more" data-i18n="cap6.learn">Read the full rockfall barrier guide →</a>
         </details>
       </div>
     </div>
@@ -5842,39 +5943,6 @@
 
   document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
 
-  // ── Sticky CTA bar ─────────────────────────────────────────────────
-  const stickyBar = document.getElementById('stickyBar');
-  const stickyDismiss = document.getElementById('stickyDismiss');
-  let stickyDismissed = false;
-
-  const heroHeight = document.querySelector('.hero')?.offsetHeight || window.innerHeight;
-
-  window.addEventListener('scroll', () => {
-    if (stickyDismissed) return;
-    if (window.scrollY > heroHeight * 0.8) {
-      stickyBar.classList.add('show');
-    } else {
-      stickyBar.classList.remove('show');
-    }
-  }, { passive: true });
-
-  stickyDismiss?.addEventListener('click', () => {
-    stickyDismissed = true;
-    stickyBar.classList.remove('show');
-  });
-
-  // Also hide bar when user reaches the contact section
-  const contactSection = document.getElementById('contact');
-  if (contactSection) {
-    const contactObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) stickyBar.classList.remove('show');
-        else if (!stickyDismissed && window.scrollY > heroHeight * 0.8) stickyBar.classList.add('show');
-      });
-    }, { threshold: 0.1 });
-    contactObserver.observe(contactSection);
-  }
-
   // Six small interactive flourishes (cascade settle, philosophy contour scroll-build,
   // form field ripple, submit micro-state, footer connector, FAQ underline).
   (() => {
@@ -6251,6 +6319,14 @@
         'cap1.s4': 'Pemasangan permukaan',
         'cap1.s5': 'Ujian beban dan pengesahan',
         'cap1.learn': 'Baca panduan lengkap soil nailing →',
+        'cap2.learn': 'Baca panduan lengkap guniting →',
+        'cap3.learn': 'Baca panduan lengkap bolt batu →',
+        'cap4.learn': 'Baca panduan lengkap jaring batu →',
+        'cap5.learn': 'Baca panduan lengkap pengukuhan cerun →',
+        'cap6.learn': 'Baca panduan lengkap penghadang batu jatuh →',
+        'sol1.learn': 'Baca panduan lengkap perlindungan cerun →',
+        'sol2.learn': 'Baca panduan lengkap sistem penahan →',
+        'sol3.learn': 'Baca panduan lengkap pembentukan tanah →',
         'foot.co.resources': 'Hab Sumber',
         'cap2.s1': 'Penyediaan permukaan',
         'cap2.s2': 'Reka bentuk campuran mengikut spesifikasi',
@@ -6387,9 +6463,6 @@
         'cred.chain.ars.desc': 'Badan pengeluar',
         'cred.chain.uaf.desc': 'Mengakreditasi ARS',
         'cred.chain.iaf.desc': 'Badan pengiktirafan global',
-        // Sticky CTA bar
-        'sticky.text': 'Bersedia bincangkan tapak anda?',
-        'sticky.cta': 'Mohon Cadangan Projek →',
         // Contact section (section 14)
         'contact.eyebrow': '14 / Hubungi',
         'contact.intro': 'Cadangan yang diterima sebelum 5 petang waktu Malaysia biasanya mendapat pengakuan pada hari yang sama. Untuk respons kecemasan cerun atau runtuhan batu, hubungi kami terus.',
@@ -6472,7 +6545,7 @@
         'hero.headline.line1': '赋能空间。',
         'hero.headline.sub': '工程化边坡 让土地用途最大化。',
         'hero.side.label': '我们的业务',
-        'hero.side.p': '边坡稳定、挡土系统、土地创造、总承包。专业岩土工程。',
+        'hero.side.p': '边坡稳定、挡土系统、土地创造、总承包。从勘察到移交，一个团队全程负责。',
         'hero.cta.brief': '提交项目咨询',
         'hero.cta.see': '查看能力',
         'hero.footer.cidb': 'CIDB 最高等级<br/>专业承包商',
@@ -6493,11 +6566,11 @@
         's12.eyebrow': '12 / 资质认证',
         's13.eyebrow': '13 / 常见问题',
         // Section h2 headlines
-        's01.h2': '困难地形，<em>正是我们的专长。</em>',
+        's01.h2': '崎岖的地形，<em>正是我们的专长。</em>',
         's02.h2': '您的<em>工地状况如何？</em>',
         's03.h2': '让<em>土地为您所用。</em>',
         's04.h2': '一片无法利用的边坡，化身<em>一条高速公路与可建平台。</em>用地分毫未减。',
-        's05.h2': '以<em>工程精度</em>释放土地价值。',
+        's05.h2': '以<em>工程精准性</em>释放土地价值。',
         's06.h2': '从勘察到交付，<em>五个阶段。</em>',
         's07.h2': '专业服务，<em>由我们的团队亲自交付。</em>',
         's08.h2': '数据，见证<em>我们的实力。</em>',
@@ -6509,9 +6582,9 @@
         'contact.h2': '让我们<em>开启您的空间。</em>',
         // Section intro paragraphs
         's01.p': '您手中的土地，往往不是容易建造的土地。我们的工作，就是让它变得可以建造。',
-        's02.p': '大多数项目都从四个问题之一开始。选择您的问题，看看我们如何解决。',
+        's02.p': '看看我们如何解决您的问题。',
         's03.p': '三大解决方案支柱，服务于马来西亚的开发商、工程师、承包商和政府机构。',
-        's05.p': '困难地基，化为稳固可建的平台。住宅边坡、高速公路走廊、工业用地，效果一致。',
+        's05.p': '崎岖不平的地面变成了稳定、适宜建造的平台。住宅边坡、高速公路走廊、工业用地，效果一致。',
         's08.p': '规模、广度、跨行业的一贯水平。',
         's09.p': '近期承接项目精选：政府与私营业主，从巴生河流域到东海岸。',
         's11.p': '我们实际作业的地理环境，以及马来西亚地形如何塑造了我们的工程。',
@@ -6530,13 +6603,13 @@
         'contact.brochure': '下载宣传册',
         // Problem cards (section 02)
         'p1.eyebrow': '边坡失稳',
-        'p1.h3': '我的边坡正在失稳、开裂或出现异常。',
+        'p1.h3': '我的边坡塌陷了，开裂或出现异常。',
         'p1.cta': '看我们如何加固 →',
         'p2.eyebrow': '邻近道路或建筑的边坡',
-        'p2.h3': '高速公路、铁路或建筑紧邻危险边坡。',
+        'p2.h3': '高速公路、铁路或建筑物位于危险斜坡旁。',
         'p2.cta': '看我们的挡土系统 →',
         'p3.eyebrow': '复杂地基',
-        'p3.h3': '陡峭、岩石或岩土条件复杂的工地。',
+        'p3.h3': '需要改造成可建设用地的山坡或不稳定土地。',
         'p3.cta': '看我们采用的工艺 →',
         'p4.eyebrow': '无法开发的土地',
         'p4.h3': '需化为可建用地的丘陵或不稳定地块。',
@@ -6547,7 +6620,7 @@
         'sol1.p': '加固系统，抵御滑坡、侵蚀与渐进性失稳。专为热带气候与地震条件设计。',
         'sol2.tag': '挡土系统',
         'sol2.h3': '<em>挡土</em>系统',
-        'sol2.p': '设计施工一体化挡土方案：土钉墙、加筋土墙、锚固系统。完全符合顾问规范。',
+        'sol2.p': '设计建造一体化挡土解决方案：土钉墙、钢筋混凝土挡土墙、锚固系统。完全符合顾问规范执行。',
         'sol3.tag': '土地创造',
         'sol3.h3': '创造<em>可用土地</em>',
         'sol3.p': '将山坡、洪泛区与零散地块转化为合规、可开发的平台。我们释放他人认为无法开发的土地。',
@@ -6595,6 +6668,14 @@
         'cap1.s4': '面层施作',
         'cap1.s5': '载荷测试与验收',
         'cap1.learn': '阅读完整土钉施工指南 →',
+        'cap2.learn': '阅读完整喷射混凝土指南 →',
+        'cap3.learn': '阅读完整岩石锚杆指南 →',
+        'cap4.learn': '阅读完整岩石防护网指南 →',
+        'cap5.learn': '阅读完整边坡稳定指南 →',
+        'cap6.learn': '阅读完整落石防护栏指南 →',
+        'sol1.learn': '阅读完整边坡防护指南 →',
+        'sol2.learn': '阅读完整挡土系统指南 →',
+        'sol3.learn': '阅读完整土地创造指南 →',
         'foot.co.resources': '资源中心',
         'cap2.s1': '表面准备',
         'cap2.s2': '按规范配比设计',
@@ -6654,7 +6735,7 @@
         'ba.after': '后',
         // Before/After captions
         'ba.cap1': '我们将斜坡与失稳土地转化为发展契机，把受限地形打造为安全、稳固、可建造的空间。',
-        'ba.cap2': '经加固的边坡系统，将复杂地形转化为合规、产出更高的可建用地。',
+        'ba.cap2': '加固边坡系统可以将崎岖地形转化为适合开发商使用的、产量更高的土地。',
         'ba.cap3': '我们助您建造他人无法建造之处，以工程化解决方案扩大土地用途，保护您的项目。',
         // Track Record timeline (section 08)
         'tl.founded': '成立',
@@ -6731,9 +6812,6 @@
         'cred.chain.ars.desc': '签发机构',
         'cred.chain.uaf.desc': '认可 ARS',
         'cred.chain.iaf.desc': '全球认可机构',
-        // Sticky CTA bar
-        'sticky.text': '准备讨论您的工地了吗？',
-        'sticky.cta': '提交项目咨询 →',
         // Contact section (section 14)
         'contact.eyebrow': '14 / 联系我们',
         'contact.intro': '马来西亚时间下午 5 点前收到的咨询通常当天即获回复。如遇紧急边坡或落石情况，请直接致电。',
