@@ -22,11 +22,12 @@ a { color: inherit; text-decoration: none; } img, svg { display: block; max-widt
 /* ===== Topbar (mirrors homepage .nav exactly) ===== */
 .topbar {
   padding: 0;
-  border-bottom: 1px solid var(--grey-line);
-  background: var(--paper-bright);
+  border-bottom: 1px solid transparent;
+  background: rgba(244, 234, 210, 0.58);
   position: sticky; top: 0; z-index: 100;
   backdrop-filter: blur(10px) saturate(1.15);
   -webkit-backdrop-filter: blur(10px) saturate(1.15);
+  transition: border-color .3s var(--ease), background .3s var(--ease);
 }
 .topbar-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 76px; }
 .topbar-left { display: flex; align-items: center; flex-shrink: 0; }
@@ -222,15 +223,15 @@ footer li a { font-size: 13.5px; color: var(--ink-soft); }
 /* Bottom-nav swipe pill (matches homepage). Injected by /js/seo-nav.js */
 body { padding-bottom: 100px; }
 .bottom-nav {
-  position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%);
-  z-index: 90;
+  position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%);
+  z-index: 200;
   display: flex; align-items: center; gap: 4px;
   padding: 6px;
-  background: rgba(250, 243, 224, 0.92);
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--grey-line);
+  background: rgba(250, 243, 224, 0.58);
+  backdrop-filter: blur(16px) saturate(1.25); -webkit-backdrop-filter: blur(16px) saturate(1.25);
+  border: 1px solid rgba(31, 27, 23, 0.12);
   border-radius: 999px;
-  box-shadow: 0 14px 36px -16px rgba(31, 27, 23, 0.28), 0 4px 12px -8px rgba(31, 27, 23, 0.18);
+  box-shadow: 0 12px 40px -10px rgba(0,0,0,0.18), 0 4px 12px -4px rgba(0,0,0,0.10);
   max-width: calc(100vw - 24px);
 }
 .bottom-nav .bn-hint {
