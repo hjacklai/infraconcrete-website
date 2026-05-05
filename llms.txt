@@ -21,14 +21,29 @@ Plus the [Slope Stabilization umbrella](https://infraconcrete.co/slope-stabiliza
 
 ## Service Areas
 
-Infraconcrete operates Malaysia-wide from a Klang Valley base, with project-specific mobilization to East Malaysia.
+Infraconcrete covers all 13 states + 3 federal territories in Malaysia from a Klang Valley base, with project-specific mobilization to East Malaysia.
 
+Peninsular Malaysia (West Coast):
 - [Klang Valley](https://infraconcrete.co/klang-valley/) — Kuala Lumpur, Selangor, Putrajaya, Cyberjaya, Petaling Jaya, Shah Alam, Subang Jaya, Klang, Puchong, Damansara, Mont Kiara, Cheras, Hulu Selangor, Gombak, Semenyih, Kajang, Bangi. Same-day site response.
 - [Penang](https://infraconcrete.co/penang/) — George Town, Bukit Mertajam, Bayan Lepas, Tanjung Bungah, Tanjung Tokong, Air Itam, Penang Hill, Balik Pulau, Butterworth, Seberang Perai. JKR slope class I-IV / Penang Hill Slope Guideline / MBPP submission compatible.
+- [Perak](https://infraconcrete.co/perak/) — Ipoh, Taiping, Kampar, Lumut, Manjung, Sitiawan, Teluk Intan, Kuala Kangsar, Tapah, Tanjung Malim, Gerik. Limestone hill country specialist; karst rock bolting and cliff-face stabilization.
+- [Kedah](https://infraconcrete.co/kedah/) — Alor Setar, Sungai Petani, Kulim, Langkawi, Kuala Kedah, Pendang, Baling, Yan, Pokok Sena. Kulim Hi-Tech Park industrial platforms; Langkawi resort hillside developments.
+- [Perlis](https://infraconcrete.co/perlis/) — Kangar, Arau, Padang Besar, Kuala Perlis. Northern border zone; quarry and infrastructure works.
+- [Negeri Sembilan](https://infraconcrete.co/negeri-sembilan/) — Seremban, Nilai, Port Dickson, Bahau, Senawang, Mantin, Rembau, Kuala Pilah, Tampin, Lukut. Greater KL spillover developer platforms.
+- [Melaka](https://infraconcrete.co/melaka/) — Melaka Tengah, Alor Gajah, Jasin, Bukit Beruang, Bukit Katil, Ayer Keroh, Klebang, Bandar Hilir. UNESCO heritage zone, AMJ corridor industrial works.
 - [Johor](https://infraconcrete.co/johor/) — Johor Bahru, Iskandar Puteri, Senai, Pasir Gudang, Skudai, Kulai, Pontian, Kluang, Batu Pahat, Muar, Mersing, Segamat. BS / EN / Eurocode native for Singapore-influenced specs.
+
+Peninsular Malaysia (Central + East Coast):
 - [Pahang](https://infraconcrete.co/pahang/) — Genting Highlands, Cameron Highlands, Bukit Tinggi, Fraser's Hill, Kuantan, Bentong, Raub, Temerloh, Maran. Hill-station Class III/IV slope specialist; Central Spine Road delivered (65,000 m²).
-- [East Coast](https://infraconcrete.co/east-coast/) — Kelantan (Kota Bharu, Kuala Krai, Gua Musang), Terengganu (Kuala Terengganu, Dungun, Kemaman), Pahang east coast. Monsoon-resilient design; ECRL alignment delivered (320,000 m drilled).
-- [Sabah & Sarawak](https://infraconcrete.co/sabah-sarawak/) — Kota Kinabalu, Sandakan, Tawau, Kuching, Miri, Sibu, Bintulu. Project-specific mobilization for medium-large works.
+- [Kelantan](https://infraconcrete.co/kelantan/) — Kota Bharu, Kuala Krai, Gua Musang, Pasir Mas, Tanah Merah, Machang, Tumpat, Bachok, Pasir Puteh. Monsoon-resilient design; ECRL alignment (320,000 m drilled across Pahang/Terengganu/Kelantan).
+- [Terengganu](https://infraconcrete.co/terengganu/) — Kuala Terengganu, Dungun, Kemaman, Kerteh, Marang, Setiu, Hulu Terengganu, Besut, Paka. ECRL corridor + Kerteh O&G platforms (Petronas-spec, salt-spray durability).
+- [East Coast (combined)](https://infraconcrete.co/east-coast/) — Combined Kelantan + Terengganu + east Pahang summary page for cross-state procurement.
+
+East Malaysia (Borneo):
+- [Sabah](https://infraconcrete.co/sabah/) — Kota Kinabalu, Sandakan, Tawau, Lahad Datu, Keningau, Beaufort, Kudat, Semporna, Ranau, Tuaran, Papar. Crocker Range hillside; oil palm estate platforms; East Coast post-monsoon remediation.
+- [Sarawak](https://infraconcrete.co/sarawak/) — Kuching, Miri, Sibu, Bintulu, Samarahan, Sri Aman, Sarikei, Limbang, Kapit, Mukah, Lawas. Pan Borneo Highway corridor + Bintulu SCORE industrial belt.
+- [Labuan](https://infraconcrete.co/labuan/) — Federal Territory; offshore oil & gas hub. Coastal infrastructure, port platform, salt-spray durability spec.
+- [Sabah & Sarawak (combined)](https://infraconcrete.co/sabah-sarawak/) — Combined Borneo summary page for cross-state procurement.
 
 ## Credentials
 
@@ -109,13 +124,23 @@ Service pages:
 - https://infraconcrete.co/bm/landslide-prevention/ — Pencegahan tanah runtuh (landslide prevention)
 - https://infraconcrete.co/bm/kontraktor-geoteknikal/ — Kontraktor geoteknikal (geotechnical contractor)
 
-Location pages:
+Location pages (every state + federal territory, native BM):
 - https://infraconcrete.co/bm/klang-valley/ — Lembah Klang
 - https://infraconcrete.co/bm/penang/ — Pulau Pinang
+- https://infraconcrete.co/bm/perak/ — Perak (Ipoh, Taiping, Kampar)
+- https://infraconcrete.co/bm/kedah/ — Kedah (Alor Setar, Sungai Petani, Langkawi)
+- https://infraconcrete.co/bm/perlis/ — Perlis (Kangar, Padang Besar)
+- https://infraconcrete.co/bm/negeri-sembilan/ — Negeri Sembilan (Seremban, Nilai, Port Dickson)
+- https://infraconcrete.co/bm/melaka/ — Melaka (Melaka Tengah, Alor Gajah, Jasin)
 - https://infraconcrete.co/bm/johor/ — Johor
 - https://infraconcrete.co/bm/pahang/ — Pahang
-- https://infraconcrete.co/bm/east-coast/ — Pantai Timur (Kelantan, Terengganu, east Pahang)
-- https://infraconcrete.co/bm/sabah-sarawak/ — Sabah & Sarawak
+- https://infraconcrete.co/bm/kelantan/ — Kelantan (Kota Bharu, Kuala Krai, Gua Musang)
+- https://infraconcrete.co/bm/terengganu/ — Terengganu (Kuala Terengganu, Kerteh, Kemaman)
+- https://infraconcrete.co/bm/east-coast/ — Pantai Timur (combined)
+- https://infraconcrete.co/bm/sabah/ — Sabah (Kota Kinabalu, Sandakan, Tawau)
+- https://infraconcrete.co/bm/sarawak/ — Sarawak (Kuching, Miri, Bintulu)
+- https://infraconcrete.co/bm/labuan/ — Labuan (offshore O&G hub)
+- https://infraconcrete.co/bm/sabah-sarawak/ — Sabah & Sarawak (combined)
 
 ### 中文 landing pages (Simplified Chinese)
 
@@ -133,13 +158,23 @@ Service pages:
 - https://infraconcrete.co/zh/hillside-remedial/ — 山坡边坡修复
 - https://infraconcrete.co/zh/landslide-prevention/ — 滑坡预防
 
-Location pages:
+Location pages (every state + federal territory, native simplified Chinese):
 - https://infraconcrete.co/zh/klang-valley/ — 巴生谷
 - https://infraconcrete.co/zh/penang/ — 槟城
+- https://infraconcrete.co/zh/perak/ — 霹雳 (怡保、太平、金宝)
+- https://infraconcrete.co/zh/kedah/ — 吉打 (亚罗士打、双溪大年、浮罗交怡)
+- https://infraconcrete.co/zh/perlis/ — 玻璃市 (加央、巴东勿刹)
+- https://infraconcrete.co/zh/negeri-sembilan/ — 森美兰 (芙蓉、汝来、波德申)
+- https://infraconcrete.co/zh/melaka/ — 马六甲 (马六甲中央、亚罗牙也、野新)
 - https://infraconcrete.co/zh/johor/ — 柔佛
 - https://infraconcrete.co/zh/pahang/ — 彭亨
-- https://infraconcrete.co/zh/east-coast/ — 东海岸
-- https://infraconcrete.co/zh/sabah-sarawak/ — 沙巴砂拉越
+- https://infraconcrete.co/zh/kelantan/ — 吉兰丹 (哥打巴鲁、瓜拉吉赖、话望生)
+- https://infraconcrete.co/zh/terengganu/ — 登嘉楼 (瓜拉登嘉楼、克尔特、甘马挽)
+- https://infraconcrete.co/zh/east-coast/ — 东海岸 (合并页)
+- https://infraconcrete.co/zh/sabah/ — 沙巴 (亚庇、山打根、斗湖)
+- https://infraconcrete.co/zh/sarawak/ — 砂拉越 (古晋、美里、民都鲁)
+- https://infraconcrete.co/zh/labuan/ — 纳闽 (离岸油气枢纽)
+- https://infraconcrete.co/zh/sabah-sarawak/ — 沙巴砂拉越 (合并页)
 
 ## Contact
 
