@@ -593,12 +593,10 @@
     flex-wrap: wrap;
     gap: 12px;
   }
-  /* Hide the hero meta strip (brand legal name + spec eyebrow) on
-     mobile and tablet views — too cluttered above the headline at
-     small viewports. Brand info is repeated in the footer anyway. */
-  @media (max-width: 1024px) {
-    .hero-meta { display: none; }
-  }
+  /* Hero meta strip (brand legal name + spec eyebrow) hidden on ALL
+     viewports — same info is now in the hero-side paragraph. Brand
+     legal name still shows in the footer. */
+  .hero-meta { display: none; }
   .hero-meta span { color: var(--ink-soft); text-shadow: 0 1px 2px color-mix(in srgb, var(--paper) 70%, transparent); }
   .hero-meta span.r { color: var(--ic-red); }
 
@@ -3788,7 +3786,7 @@
       <div></div>
       <div class="hero-side reveal">
         <span class="label micro" data-i18n="hero.side.label">What we do</span>
-        <p data-i18n="hero.side.p">Slope stabilization, retaining systems, land creation, main contracting. One team from investigation to handover.</p>
+        <p data-i18n="hero.side.p">Slope stabilization, retaining systems, land creation, main contracting. One team from investigation to handover, Specialist Geotechnical Engineering.</p>
         <div class="hero-cta-row">
           <a href="#contact" class="btn btn-primary"><span data-i18n="hero.cta.brief">Request a project brief</span> <span class="arr">→</span></a>
           <a href="#capabilities" class="btn btn-ghost" data-i18n="hero.cta.see">See capabilities</a>
@@ -6038,7 +6036,7 @@
         'hero.headline.line1': 'Mendayakan Ruang.',
         'hero.headline.sub': 'Cerun direkayasa untuk guna tanah maksimum.',
         'hero.side.label': 'Apa yang kami lakukan',
-        'hero.side.p': 'Stabilisasi cerun, sistem penahan, pembentukan tanah boleh guna, kontraktor utama. Satu pasukan dari siasatan tapak hingga serahan.',
+        'hero.side.p': 'Stabilisasi cerun, sistem penahan, pembentukan tanah boleh guna, kontraktor utama. Satu pasukan dari siasatan tapak hingga serahan, Kejuruteraan Geoteknikal Pakar.',
         'hero.cta.brief': 'Minta cadangan projek',
         'hero.cta.see': 'Lihat keupayaan',
         'hero.footer.cidb': 'Gred tertinggi CIDB<br/>kontraktor pakar',
@@ -6377,7 +6375,7 @@
         'hero.headline.line1': '赋能空间。',
         'hero.headline.sub': '工程化边坡 让土地用途最大化。',
         'hero.side.label': '我们的业务',
-        'hero.side.p': '边坡稳定、挡土系统、土地创造、总承包。从勘察到交付，一个团队全程负责。',
+        'hero.side.p': '边坡稳定、挡土系统、土地创造、总承包。从勘察到交付，一个团队全程负责，专业岩土工程。',
         'hero.cta.brief': '提交项目咨询',
         'hero.cta.see': '查看能力',
         'hero.footer.cidb': 'CIDB 最高等级<br/>专业承包商',
