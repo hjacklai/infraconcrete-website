@@ -1,21 +1,24 @@
-/* Shared topbar + bottom-nav enhancement for SEO landing pages.
-   Renders the text wordmark "Infraconcrete(TM) | Part of Panthera" on the left
-   and an EN/BM/Chinese language switcher pill on the right, plus the swipe-pill
-   bottom-nav matching the homepage. */
+/* Shared topbar + bottom-nav for SEO landing pages.
+   Matches homepage chrome: Infraconcrete logo image + Panthera badge on the
+   left, EN/BM/Chinese language switcher pill on the right, and the swipe-pill
+   bottom-nav. */
 (function () {
   const lang = (document.documentElement.lang || 'en').toLowerCase();
   const isMs = lang.indexOf('ms') === 0 || lang === 'bm';
   const isZh = lang.indexOf('zh') === 0;
   const isEn = !isMs && !isZh;
 
-  /* ---------- 1. TOPBAR ---------- */
+  /* ---------- 1. TOPBAR (matches homepage .nav structure) ---------- */
   const topbarRow = document.querySelector('.topbar .topbar-row');
   if (topbarRow && !topbarRow.querySelector('.lang-switch')) {
     const brand = topbarRow.querySelector('.brand');
     const homeLink = topbarRow.querySelector('.home-link');
 
-    if (brand && !brand.querySelector('.tm')) {
-      brand.insertAdjacentHTML('beforeend', '<sup class="tm">&trade;</sup>');
+    /* Replace text wordmark with logo image, mirroring homepage pattern */
+    if (brand && !brand.querySelector('img')) {
+      brand.innerHTML =
+        '<img src="/images/brand/logo.png" alt="Infraconcrete" height="36" style="display:block;width:auto;" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'inline-flex\';" />' +
+        '<span style="display:none;align-items:baseline;">Infra<b>concrete</b><sup>&trade;</sup></span>';
     }
 
     /* Wrap brand + Panthera badge into a single left group */
@@ -25,14 +28,12 @@
       brand.parentNode.insertBefore(leftGroup, brand);
       leftGroup.appendChild(brand);
 
-      const partOf = isMs ? 'Sebahagian' : isZh ? '隶属' : 'Part of';
       const badge = document.createElement('span');
-      badge.className = 'group-badge-inline';
+      badge.className = 'group-badge';
       badge.setAttribute('aria-label', 'Part of Panthera Group');
       badge.innerHTML =
-        '<span class="gb-divider" aria-hidden="true"></span>' +
-        '<span class="gb-label">' + partOf + '</span>' +
-        '<img class="panthera-logo" src="/images/brand/panthera-logo.png" alt="Panthera Group" height="14">';
+        '<span class="gb-label">Part of</span>' +
+        '<img src="/images/brand/panthera-logo.png" alt="Panthera Group" height="14" style="display:block;width:auto;opacity:.7;" />';
       leftGroup.appendChild(badge);
     }
 
@@ -139,7 +140,6 @@
     '</a>';
   document.body.appendChild(nav);
 
-  /* Hide swipe hint after first scroll */
   const track = nav.querySelector('.bn-scroll');
   if (track) {
     const dismiss = function () {
