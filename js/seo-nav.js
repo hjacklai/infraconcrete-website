@@ -201,18 +201,19 @@
     swipe: 'LEREK', home: 'Utama', start: 'Mula', solutions: 'Solusi',
     example: 'Contoh', ba: 'Sblm/Slps', process: 'Proses', services: 'Khidmat',
     record: 'Rekod', cases: 'Projek', why: 'Kenapa', trust: 'Kredensial',
-    faq: 'Soalan', cta: 'Brif'
+    faq: 'Soalan', resources: 'Sumber', cta: 'Brif'
   } : isZh ? {
     swipe: '滑动', home: '首页', start: '开始', solutions: '解决方案',
     example: '实例展示', ba: '前后对比', process: '流程', services: '服务',
     record: '业绩', cases: '项目', why: '为什么', trust: '凭证',
-    faq: '常见问题', cta: '联系我们'
+    faq: '常见问题', resources: '资源', cta: '联系我们'
   } : {
     swipe: 'SWIPE', home: 'Home', start: 'Start', solutions: 'Solutions',
     example: 'Working example', ba: 'Before/After', process: 'Process', services: 'Services',
     record: 'Record', cases: 'Projects', why: 'Why', trust: 'Trust',
-    faq: 'FAQ', cta: 'Brief'
+    faq: 'FAQ', resources: 'Resources', cta: 'Brief'
   };
+  const resHref = isMs ? '/bm/sumber/' : isZh ? '/zh/resources/' : '/resources/';
 
   const nav = document.createElement('nav');
   nav.className = 'bottom-nav';
@@ -268,6 +269,10 @@
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 9 a3 3 0 0 1 6 0 c0 2 -3 2 -3 4"/><circle cx="12" cy="17" r="0.8" fill="currentColor"/></svg>' +
         '<span>' + L.faq + '</span>' +
       '</a>' +
+      '<a href="' + resHref + '" class="bn-item">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h11l3 3v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><line x1="8" y1="9" x2="16" y2="9"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>' +
+        '<span>' + L.resources + '</span>' +
+      '</a>' +
     '</div>' +
     '<a href="/#contact" class="bn-item bn-cta">' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>' +
@@ -284,11 +289,14 @@
     track.addEventListener('scroll', dismiss, { passive: true, once: true });
   }
 
-  /* Reveal on scroll + sticky topbar scrolled state (matches homepage) */
+  /* Reveal on scroll + sticky topbar scrolled state (matches homepage).
+     Trigger at 40% of viewport (~430px on a 1080p screen) — appears as the
+     user nears the end of the hero section, well before the first content
+     block starts. */
   const topbarEl = document.querySelector('.topbar');
   function onScroll () {
     const y = window.scrollY;
-    nav.classList.toggle('is-revealed', y > window.innerHeight * 0.6);
+    nav.classList.toggle('is-revealed', y > window.innerHeight * 0.4);
     if (topbarEl) topbarEl.classList.toggle('scrolled', y > 12);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
