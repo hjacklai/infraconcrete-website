@@ -521,12 +521,13 @@
     display: flex;
     gap: 1px;
     padding: 3px;
-    background: rgba(244, 234, 210, 0.78);
-    backdrop-filter: blur(8px) saturate(1.2);
-    -webkit-backdrop-filter: blur(8px) saturate(1.2);
-    border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+    /* Translucent frosted-ribbon look — lower opacity, stronger blur so the
+       hero / page content shows through. Border kept ultra-subtle. */
+    background: rgba(244, 234, 210, 0.32);
+    backdrop-filter: blur(14px) saturate(1.35);
+    -webkit-backdrop-filter: blur(14px) saturate(1.35);
+    border: 1px solid color-mix(in srgb, var(--ink) 7%, transparent);
     border-radius: 999px;
-    /* Cleaner: no drop shadow. Border + backdrop-blur is enough definition. */
   }
   .lang-toggle button {
     padding: 5px 11px;
@@ -572,12 +573,13 @@
       font-size: 11px;
       min-height: 30px;
       letter-spacing: 0.1em;
-      background: rgba(244, 234, 210, 0.85);
+      /* Translucent ribbon — content shows through */
+      background: rgba(244, 234, 210, 0.35);
       color: var(--ink);
-      border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
       border-radius: 999px;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(12px) saturate(1.3);
+      -webkit-backdrop-filter: blur(12px) saturate(1.3);
     }
   }
 
