@@ -2856,6 +2856,19 @@
     gap: 28px;
     flex-wrap: wrap;
   }
+  /* At intermediate widths the label + 3 cards in a single row gets
+     squished (especially in BM where the label is longer). Stack
+     vertically so the cards can use the full width. */
+  @media (max-width: 1100px) {
+    .cred-chain {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 18px;
+    }
+    .cred-chain-label {
+      text-align: center;
+    }
+  }
   .cred-chain-label {
     font-family: var(--mono);
     font-size: 11px;
