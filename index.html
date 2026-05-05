@@ -593,6 +593,12 @@
     flex-wrap: wrap;
     gap: 12px;
   }
+  /* Hide the hero meta strip (brand legal name + spec eyebrow) on
+     mobile and tablet views — too cluttered above the headline at
+     small viewports. Brand info is repeated in the footer anyway. */
+  @media (max-width: 1024px) {
+    .hero-meta { display: none; }
+  }
   .hero-meta span { color: var(--ink-soft); text-shadow: 0 1px 2px color-mix(in srgb, var(--paper) 70%, transparent); }
   .hero-meta span.r { color: var(--ic-red); }
 
