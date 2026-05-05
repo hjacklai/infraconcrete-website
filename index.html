@@ -189,6 +189,11 @@
   :lang(zh-Hans) .eyebrow {
     font-family: 'JetBrains Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', ui-monospace, monospace;
   }
+  /* In Chinese mode, uppercase the brand name in the hero meta strip
+     for stronger visual presence next to CJK characters. */
+  :lang(zh-Hans) .hero-meta > span:first-child {
+    text-transform: uppercase;
+  }
   /* Bottom nav and small UI elements need a font-size bump in Chinese —
      Chinese characters at 9-10px are illegible. Letter-spacing also gets
      reset since CJK doesn't benefit from Latin-style tracking. */
@@ -6653,6 +6658,8 @@
       });
     }
 
+    // First-time visitors default to English. Returning visitors who
+    // previously selected BM or 中文 see their saved language on refresh.
     let initial = 'en';
     try { initial = localStorage.getItem('lang') || 'en'; } catch (e) {}
     setLang(initial);
