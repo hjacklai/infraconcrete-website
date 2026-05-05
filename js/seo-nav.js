@@ -76,6 +76,32 @@
       if (href) window.location.href = href;
     });
 
+    /* Smart back button: floats top-left, sits above the topbar.
+       Uses history.back() if user came from another infraconcrete.co page
+       (preserves their scroll position on the landing page); otherwise
+       navigates to "/". Always visible across all SEO pages. */
+    if (!document.querySelector('.seo-back-btn')) {
+      const backLabel = isMs ? 'Kembali' : isZh ? '返回' : 'Back';
+      const backTitle = isMs ? 'Kembali ke laman utama' : isZh ? '返回首页' : 'Back to home';
+      const backBtn = document.createElement('a');
+      backBtn.className = 'seo-back-btn';
+      backBtn.href = '/';
+      backBtn.setAttribute('aria-label', backTitle);
+      backBtn.innerHTML =
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>' +
+        '<span>' + backLabel + '</span>';
+      backBtn.addEventListener('click', function (e) {
+        try {
+          var ref = document.referrer || '';
+          if (ref && ref.indexOf(window.location.origin) === 0 && window.history.length > 1) {
+            e.preventDefault();
+            window.history.back();
+          }
+        } catch (err) { /* fall through to href="/" */ }
+      });
+      document.body.appendChild(backBtn);
+    }
+
     if (homeLink) homeLink.replaceWith(toggle);
     else topbarRow.appendChild(toggle);
   }

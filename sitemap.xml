@@ -166,6 +166,48 @@
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/horizontal-drains/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
+  <url>
+    <loc>https://infraconcrete.co/bm/mse-wall/</loc>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/mse-wall/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/mse-wall/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/mse-wall/"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/bm/slope-protection/</loc>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/slope-protection/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-protection/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/slope-protection/"/>
+    <changefreq>monthly</changefreq><priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/bm/rock-netting/</loc>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/rock-netting/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/rock-netting/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/rock-netting/"/>
+    <changefreq>monthly</changefreq><priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/zh/mse-wall/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/mse-wall/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/mse-wall/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/mse-wall/"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/zh/slope-protection/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/slope-protection/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-protection/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/slope-protection/"/>
+    <changefreq>monthly</changefreq><priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/zh/rock-netting/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/rock-netting/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/rock-netting/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/rock-netting/"/>
+    <changefreq>monthly</changefreq><priority>0.85</priority>
+  </url>
   <url><loc>https://infraconcrete.co/zh/rock-bolting/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
   <!-- BM location pages -->
