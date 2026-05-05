@@ -523,8 +523,11 @@
   :lang(zh-Hans) .faq-a        { font-size: 15.5px; line-height: 1.8; }
   :lang(zh-Hans) .cap-card .desc { font-size: 14px; line-height: 1.65; }
 
-  /* Base bumps for all languages — these labels were too small even in EN. */
-  .gb-label                    { font-size: 9px !important; }
+  /* Base bumps for all languages — these labels were too small even in EN.
+     "PART OF" Panthera label is REQUIRED on all viewports including mobile —
+     never hide via display:none, just shrink letter-spacing if space is tight. */
+  .gb-label                    { font-size: 9px !important; display: inline !important; }
+  .group-badge                 { display: inline-flex !important; }
   .case-card .case-stat .l,
   .case-stat .l {
     /* keep at original; bumped for zh above */
