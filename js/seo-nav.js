@@ -257,4 +257,14 @@
     };
     track.addEventListener('scroll', dismiss, { passive: true, once: true });
   }
+
+  /* Reveal on scroll + sticky topbar scrolled state (matches homepage) */
+  const topbarEl = document.querySelector('.topbar');
+  function onScroll () {
+    const y = window.scrollY;
+    nav.classList.toggle('is-revealed', y > window.innerHeight * 0.6);
+    if (topbarEl) topbarEl.classList.toggle('scrolled', y > 12);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 })();

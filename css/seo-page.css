@@ -227,7 +227,7 @@ footer li a { font-size: 13.5px; color: var(--ink-soft); }
 /* Bottom-nav swipe pill (matches homepage). Injected by /js/seo-nav.js */
 body { padding-bottom: 100px; }
 .bottom-nav {
-  position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%);
+  position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%) translateY(28px);
   z-index: 200;
   display: flex; align-items: center; gap: 4px;
   padding: 6px;
@@ -237,6 +237,13 @@ body { padding-bottom: 100px; }
   border-radius: 999px;
   box-shadow: 0 12px 40px -10px rgba(0,0,0,0.18), 0 4px 12px -4px rgba(0,0,0,0.10);
   max-width: calc(100vw - 24px);
+  /* Hidden until scrolled past ~60% of viewport (matches homepage) */
+  opacity: 0; pointer-events: none;
+  transition: opacity .35s var(--ease), transform .35s var(--ease);
+}
+.bottom-nav.is-revealed {
+  opacity: 1; pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
 }
 .bottom-nav .bn-hint {
   flex-shrink: 0;
