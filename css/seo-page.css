@@ -22,23 +22,42 @@ a { color: inherit; text-decoration: none; } img, svg { display: block; max-widt
 /* Topbar */
 .topbar { padding: 18px 0; border-bottom: 1px solid var(--grey-line); background: var(--paper-bright); }
 .topbar-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand { font-family: var(--serif); font-weight: 700; font-size: 19px; letter-spacing: -0.01em; color: var(--ink); display: inline-flex; align-items: center; }
+.topbar-left { display: inline-flex; align-items: center; gap: 0; min-width: 0; flex: 0 1 auto; }
+
+.brand { font-family: var(--serif); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink); display: inline-flex; align-items: baseline; line-height: 1; flex-shrink: 0; }
 .brand em { color: var(--ic-red); font-style: normal; }
-.brand .logo-wrap { display: inline-flex; align-items: center; gap: 14px; }
-.brand .brand-logo { display: block; width: auto; height: 32px; }
-.brand .group-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 0 5px 14px; margin-left: 4px; border-left: 1px solid var(--grey-line); }
-.brand .gb-label { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-500); }
-.brand .panthera-logo { display: block; width: auto; height: 13px; opacity: 0.7; }
+.brand .tm { font-family: var(--mono); font-size: 9px; font-weight: 400; color: var(--grey-500); margin-left: 2px; vertical-align: super; line-height: 1; }
+
+.group-badge-inline { display: inline-flex; align-items: center; gap: 10px; margin-left: 16px; padding-left: 16px; position: relative; flex-shrink: 1; min-width: 0; }
+.group-badge-inline .gb-divider { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 22px; background: var(--grey-line); }
+.group-badge-inline .gb-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-500); white-space: nowrap; }
+.group-badge-inline .panthera-logo { display: inline-block; width: auto; height: 14px; max-width: none; opacity: 0.65; flex-shrink: 0; }
+
+.lang-switch { display: inline-flex; align-items: center; padding: 3px; background: var(--paper); border: 1px solid var(--grey-line); border-radius: 999px; flex-shrink: 0; }
+.lang-switch .ls-item { padding: 6px 12px; font-family: var(--mono); font-size: 10.5px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--grey-700); border-radius: 999px; line-height: 1; transition: all .2s var(--ease); }
+.lang-switch .ls-item:hover { color: var(--ic-red); }
+.lang-switch .ls-item.is-active { background: var(--ic-red); color: #fff; }
+.lang-switch .ls-item.is-active:hover { color: #fff; }
+
+@media (max-width: 720px) {
+  .group-badge-inline { margin-left: 12px; padding-left: 12px; gap: 8px; }
+  .group-badge-inline .gb-label { font-size: 9px; letter-spacing: 0.16em; }
+  .group-badge-inline .panthera-logo { height: 12px; }
+  .lang-switch .ls-item { padding: 5px 10px; font-size: 10px; letter-spacing: 0.14em; }
+}
 @media (max-width: 540px) {
-  .brand .brand-logo { height: 26px; }
-  .brand .panthera-logo { height: 11px; }
-  .brand .group-badge { padding-left: 10px; gap: 6px; }
-  .brand .gb-label { font-size: 8.5px; letter-spacing: 0.14em; }
+  .brand { font-size: 17px; }
+  .group-badge-inline { margin-left: 10px; padding-left: 10px; gap: 6px; }
+  .group-badge-inline .gb-label { display: none; }
+  .group-badge-inline .panthera-logo { height: 11px; }
+  .lang-switch { padding: 2px; }
+  .lang-switch .ls-item { padding: 4px 8px; font-size: 9.5px; letter-spacing: 0.12em; }
 }
 @media (max-width: 380px) {
-  .brand .group-badge { padding-left: 8px; gap: 5px; }
-  .brand .gb-label { display: none; }
+  .brand { font-size: 15px; }
+  .group-badge-inline .panthera-logo { height: 10px; }
 }
+/* Legacy fallback (kept harmless if older HTML still references it) */
 .topbar a.home-link { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-700); }
 .topbar a.home-link:hover { color: var(--ic-red); }
 
@@ -207,3 +226,64 @@ body { padding-bottom: 100px; }
 @media (max-height: 500px) and (orientation: landscape) {
   body { padding-bottom: 110px; } .bottom-nav { bottom: 16px; }
 }
+
+/* ===== Chinese (Simplified) typography fixes =====
+   English uses negative tracking on display headings and tight uppercase tracking
+   on labels. On CJK characters those rules merge glyphs together or push them
+   apart unevenly. Reset tracking + force Noto Sans SC for zh-Hans pages. */
+[lang="zh-Hans"] body,
+[lang="zh-Hans"] .brand,
+[lang="zh-Hans"] .hero h1,
+[lang="zh-Hans"] .hero .lede,
+[lang="zh-Hans"] .block h2,
+[lang="zh-Hans"] .block h3,
+[lang="zh-Hans"] .block p,
+[lang="zh-Hans"] .case-card h4,
+[lang="zh-Hans"] .case-card p,
+[lang="zh-Hans"] .proj h4,
+[lang="zh-Hans"] .proj p,
+[lang="zh-Hans"] .step h4,
+[lang="zh-Hans"] .step p,
+[lang="zh-Hans"] .svc-link h4,
+[lang="zh-Hans"] .svc-link p,
+[lang="zh-Hans"] .faq-item summary,
+[lang="zh-Hans"] .faq-item .ans,
+[lang="zh-Hans"] .cta-block h2,
+[lang="zh-Hans"] .cta-block p,
+[lang="zh-Hans"] .specs td { font-family: 'Noto Sans SC', 'Manrope', system-ui, sans-serif; }
+
+[lang="zh-Hans"] .hero h1,
+[lang="zh-Hans"] .hero h1 em,
+[lang="zh-Hans"] .block h2,
+[lang="zh-Hans"] .block h2 em,
+[lang="zh-Hans"] .block h3,
+[lang="zh-Hans"] .case-card h4,
+[lang="zh-Hans"] .proj h4,
+[lang="zh-Hans"] .step h4,
+[lang="zh-Hans"] .svc-link h4,
+[lang="zh-Hans"] .faq-item summary,
+[lang="zh-Hans"] .cta-block h2,
+[lang="zh-Hans"] .cta-block h2 em { letter-spacing: 0; }
+
+[lang="zh-Hans"] .hero h1 em,
+[lang="zh-Hans"] .block h2 em,
+[lang="zh-Hans"] .cta-block h2 em { font-style: normal; }
+
+[lang="zh-Hans"] .crumbs,
+[lang="zh-Hans"] .eyebrow,
+[lang="zh-Hans"] .block-eye,
+[lang="zh-Hans"] .stat .l,
+[lang="zh-Hans"] .stat .v,
+[lang="zh-Hans"] .areas span,
+[lang="zh-Hans"] .proj .tag,
+[lang="zh-Hans"] .proj .stat-row .l,
+[lang="zh-Hans"] .step .n,
+[lang="zh-Hans"] .specs th,
+[lang="zh-Hans"] .svc-link .label,
+[lang="zh-Hans"] .svc-link .arr,
+[lang="zh-Hans"] .bn-item,
+[lang="zh-Hans"] .bn-hint,
+[lang="zh-Hans"] .gb-label,
+[lang="zh-Hans"] .ls-item,
+[lang="zh-Hans"] .topbar a.home-link,
+[lang="zh-Hans"] footer p { letter-spacing: 0.04em; }
