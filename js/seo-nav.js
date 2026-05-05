@@ -77,15 +77,19 @@
     });
 
     /* Standalone back button removed — the breadcrumb "← Home" is now the
-       primary back affordance. It's semantically a "go home" link, not a
-       browser back button: ALWAYS navigates to /. We just persist the
-       current lang to localStorage so the landing page restores it. */
-    const crumbHome = document.querySelector('.crumbs a[href="/"]');
+       primary back affordance. It's a "go home" link, not browser-back:
+       ALWAYS navigates to the homepage IN THE CURRENT LANGUAGE. We rewrite
+       the href to /?lang=bm or /?lang=zh so the URL itself preserves the
+       language choice (works even if localStorage is blocked). EN stays as
+       "/" since EN is the default. localStorage is also set as a backup. */
+    const crumbHome = document.querySelector('.crumbs a[href="/"], .crumbs a[href="/?lang=bm"], .crumbs a[href="/?lang=zh"]');
     if (crumbHome) {
       const langCode = isMs ? 'bm' : isZh ? 'zh' : 'en';
+      const homeHref = isMs ? '/?lang=bm' : isZh ? '/?lang=zh' : '/';
+      crumbHome.href = homeHref;
       crumbHome.addEventListener('click', function () {
         try { localStorage.setItem('lang', langCode); } catch (err) {}
-        /* Fall through to href="/" — always lands on the homepage. */
+        /* Fall through to href — homepage init reads ?lang= and localStorage. */
       });
     }
 
