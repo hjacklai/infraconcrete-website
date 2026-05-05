@@ -39,4 +39,6 @@
   <url><loc>https://infraconcrete.co/penang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://infraconcrete.co/johor/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://infraconcrete.co/pahang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/east-coast/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/sabah-sarawak/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
