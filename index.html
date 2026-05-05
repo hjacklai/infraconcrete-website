@@ -3085,7 +3085,7 @@
     position: fixed;
     bottom: 12px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(28px);
     z-index: 200;
     /* Light cream pill with frosted glass — more transparent for floating glass feel */
     background: color-mix(in srgb, var(--paper-bright) 58%, transparent);
@@ -3098,6 +3098,14 @@
     box-shadow: 0 12px 40px -10px rgba(0,0,0,0.18), 0 4px 12px -4px rgba(0,0,0,0.10);
     border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
     max-width: calc(100vw - 24px);
+    /* Hidden until scrolled past the hero — gives the landing-page hero
+       breathing room before the floating nav pill drops in. */
+    opacity: 0; pointer-events: none;
+    transition: opacity .35s var(--ease), transform .35s var(--ease);
+  }
+  .bottom-nav.is-revealed {
+    opacity: 1; pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
   }
   .bn-scroll {
     display: flex;
@@ -5475,10 +5483,13 @@
 </footer>
 
 <script>
-  // Nav scroll state
+  // Nav scroll state + bottom-nav reveal-on-scroll
   const nav = document.getElementById('nav');
+  const bottomNav = document.querySelector('.bottom-nav');
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 12);
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 12);
+    if (bottomNav) bottomNav.classList.toggle('is-revealed', y > window.innerHeight * 0.6);
   }, { passive: true });
 
   // Mobile menu
