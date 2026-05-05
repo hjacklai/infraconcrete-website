@@ -332,50 +332,90 @@
     };
     track.addEventListener('scroll', dismiss, { passive: true, once: true });
 
-    /* Click-and-drag scroll on the bottom-nav. Disables scroll-snap during
-       the drag so cursor tracks 1:1 (no jumpy snap fight), then restores
-       it on release. Click-after-drag suppression is gated on real movement
-       AND scroll-delta to avoid eating legit clicks. */
+    /* Long-press click-and-drag scroll. Quick click on a nav icon -> navigate.
+       Long-press (>=250ms) OR drag (>=6px move) on ANY surface (icon or gap)
+       -> activates pan/scroll mode. Mirrors homepage logic exactly so the
+       behavior is identical across landing + every SEO page. */
     (function enableDragScroll(el) {
       if (!el) return;
-      let isDown = false, startX = 0, startScroll = 0, moved = false;
-      const origSnap = el.style.scrollSnapType;
-      el.addEventListener('mousedown', function (e) {
-        if (e.target.closest('a, button')) return;
-        isDown = true; moved = false;
-        startX = e.pageX; startScroll = el.scrollLeft;
+      var isDown = false, isDragging = false;
+      var startX = 0, startScroll = 0, pressTimer = null, origSnap = '';
+
+      // Defense against browser native link drag-and-drop (the ghost image)
+      // which would otherwise hijack the pan handler.
+      el.addEventListener('dragstart', function (e) { e.preventDefault(); });
+      el.querySelectorAll('a, img, svg').forEach(function (n) { n.setAttribute('draggable', 'false'); });
+
+      function startDragMode () {
+        if (isDragging) return;
+        isDragging = true;
+        origSnap = el.style.scrollSnapType;
         el.style.scrollSnapType = 'none';
         el.style.scrollBehavior = 'auto';
-        el.style.cursor = 'grabbing'; el.style.userSelect = 'none';
+        el.style.cursor = 'grabbing';
+        el.style.userSelect = 'none';
+        el.querySelectorAll('a, button').forEach(function (n) { n.style.pointerEvents = 'none'; });
+      }
+
+      el.addEventListener('mousedown', function (e) {
+        if (e.button !== 0) return;
+        isDown = true;
+        isDragging = false;
+        startX = e.pageX;
+        startScroll = el.scrollLeft;
+        clearTimeout(pressTimer);
+        pressTimer = setTimeout(function () { if (isDown) startDragMode(); }, 250);
       });
-      const stop = function () {
-        if (!isDown) return;
+
+      function stop () {
+        clearTimeout(pressTimer);
+        pressTimer = null;
         isDown = false;
-        el.style.scrollSnapType = origSnap || '';
-        el.style.scrollBehavior = '';
-        el.style.cursor = ''; el.style.userSelect = '';
-      };
+        if (isDragging) {
+          isDragging = false;
+          el.style.scrollSnapType = origSnap || '';
+          el.style.scrollBehavior = '';
+          el.style.cursor = '';
+          el.style.userSelect = '';
+          el.querySelectorAll('a, button').forEach(function (n) { n.style.pointerEvents = ''; });
+        }
+      }
       el.addEventListener('mouseleave', stop);
+
       el.addEventListener('mouseup', function () {
-        const movedScroll = Math.abs(el.scrollLeft - startScroll) > 4;
-        const wasMoved = moved;
+        var wasDragging = isDragging;
         stop();
-        if (wasMoved && movedScroll) {
-          const blocker = function (ev) { ev.preventDefault(); ev.stopPropagation(); el.removeEventListener('click', blocker, true); };
+        if (wasDragging) {
+          var blocker = function (ev) { ev.preventDefault(); ev.stopPropagation(); el.removeEventListener('click', blocker, true); };
           el.addEventListener('click', blocker, true);
-          // Auto-remove blocker after one event loop so future clicks work
           setTimeout(function () { el.removeEventListener('click', blocker, true); }, 50);
         }
       });
+
       el.addEventListener('mousemove', function (e) {
         if (!isDown) return;
-        const dx = e.pageX - startX;
-        if (Math.abs(dx) > 6) moved = true;
-        el.scrollLeft = startScroll - dx;
-        e.preventDefault();
+        var dx = e.pageX - startX;
+        if (Math.abs(dx) > 6 && !isDragging) startDragMode();
+        if (isDragging) {
+          el.scrollLeft = startScroll - dx;
+          e.preventDefault();
+        }
       });
+
       el.style.cursor = 'grab';
+      el.querySelectorAll('a').forEach(function (n) { n.style.cursor = 'grab'; });
     })(track);
+
+    // Desktop wheel: convert vertical wheel ticks to horizontal pan.
+    // Clamp per-tick deltaY to ~70px (one icon) so a single notch never
+    // overshoots multiple items. Trackpad pixel deltas pass through unscaled.
+    track.addEventListener('wheel', function (e) {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      if (e.deltaY === 0) return;
+      e.preventDefault();
+      var dy = e.deltaY;
+      track.scrollLeft += Math.sign(dy) * Math.min(Math.abs(dy), 70);
+    }, { passive: false });
   }
 
   /* Reveal on scroll + sticky topbar scrolled state (matches homepage).

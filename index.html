@@ -5738,10 +5738,17 @@
     btn.setAttribute('aria-expanded', isOpening ? 'true' : 'false');
   }
 
-  // Click-and-drag scroll using LONG-PRESS gesture: a quick click navigates
-  // (link/button works normally), but holding for 250ms OR moving >8px while
-  // pressed activates drag-to-scroll mode. This way every nav item is
-  // clickable as a link AND the strip is drag-scrollable, with no conflict.
+  // Click-and-drag scroll using LONG-PRESS gesture on the bottom-nav strip.
+  // Quick click on an icon -> navigates to that section.
+  // Long-press (>=250ms) OR drag (>=6px movement) anywhere on the strip
+  // (including ON icons) -> activates pan/scroll mode.
+  //
+  // Critical fixes for small desktop:
+  // 1. preventDefault on dragstart — without this, browsers initiate native
+  //    link drag-and-drop (the ghost image) which kills our pan handler.
+  // 2. draggable=false on every nav item — same defense, attribute level.
+  // 3. cursor:grab applied via CSS class on the strip + all children so the
+  //    user sees the drag affordance on icons too (not just gaps).
   function enableDragScroll(el) {
     if (!el) return;
     let isDown = false;
@@ -5751,6 +5758,10 @@
     let pressTimer = null;
     let origSnap = '';
 
+    // Defense 1+2: kill native browser drag-and-drop on the strip + all links.
+    el.addEventListener('dragstart', (e) => e.preventDefault());
+    el.querySelectorAll('a, img, svg').forEach(n => n.setAttribute('draggable', 'false'));
+
     const startDragMode = () => {
       if (isDragging) return;
       isDragging = true;
@@ -5759,14 +5770,18 @@
       el.style.scrollBehavior = 'auto';
       el.style.cursor = 'grabbing';
       el.style.userSelect = 'none';
+      // Disable pointer events on link contents so they can't intercept
+      // mousemove during the pan. Restored in stop().
+      el.querySelectorAll('a, button').forEach(n => n.style.pointerEvents = 'none');
     };
 
     el.addEventListener('mousedown', (e) => {
+      // Only react to primary (left) button
+      if (e.button !== 0) return;
       isDown = true;
       isDragging = false;
       startX = e.pageX;
       startScroll = el.scrollLeft;
-      // Long-press: after 250ms still pressed -> drag mode activates
       clearTimeout(pressTimer);
       pressTimer = setTimeout(() => { if (isDown) startDragMode(); }, 250);
     });
@@ -5781,6 +5796,7 @@
         el.style.scrollBehavior = '';
         el.style.cursor = '';
         el.style.userSelect = '';
+        el.querySelectorAll('a, button').forEach(n => n.style.pointerEvents = '');
       }
     };
     el.addEventListener('mouseleave', stop);
@@ -5788,9 +5804,8 @@
     el.addEventListener('mouseup', () => {
       const wasDragging = isDragging;
       stop();
-      // Only suppress the click if a real drag happened (long-press OR moved>8px).
-      // A quick click never triggers this, so links/buttons fire normally.
       if (wasDragging) {
+        // Suppress the click that would otherwise fire on the item under cursor
         const blocker = (ev) => { ev.preventDefault(); ev.stopPropagation(); el.removeEventListener('click', blocker, true); };
         el.addEventListener('click', blocker, true);
         setTimeout(() => { el.removeEventListener('click', blocker, true); }, 50);
@@ -5800,15 +5815,18 @@
     el.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       const dx = e.pageX - startX;
-      // Intentional drag: >8px movement before timer fires -> activate immediately
-      if (Math.abs(dx) > 8 && !isDragging) startDragMode();
+      // Intentional drag: >6px movement before timer fires -> activate immediately
+      if (Math.abs(dx) > 6 && !isDragging) startDragMode();
       if (isDragging) {
         el.scrollLeft = startScroll - dx;
         e.preventDefault();
       }
     });
 
+    // Cursor:grab on the strip AND its child links so users see the drag
+    // affordance whether they hover on a gap or directly on an icon.
     el.style.cursor = 'grab';
+    el.querySelectorAll('a').forEach(n => n.style.cursor = 'grab');
   }
   // Apply to engagements carousel + all solution-card carousels
   enableDragScroll(document.querySelector('.case-grid'));
