@@ -37,7 +37,9 @@
       leftGroup.appendChild(badge);
     }
 
-    /* Build language switcher from the page's hreflang link tags */
+    /* Build language toggle - mirrors homepage .lang-toggle exactly:
+       desktop: 3-button pill (EN/BM/中文); mobile <=540px: only the active
+       button shows, tap cycles to next language. */
     function getHref(code, fallback) {
       const el = document.querySelector('link[rel="alternate"][hreflang="' + code + '"]');
       return el ? el.getAttribute('href') : fallback;
@@ -46,17 +48,36 @@
     const msHref = getHref('ms', '/?lang=bm');
     const zhHref = getHref('zh-Hans', '/?lang=zh');
 
-    const switcher = document.createElement('div');
-    switcher.className = 'lang-switch';
-    switcher.setAttribute('role', 'group');
-    switcher.setAttribute('aria-label', 'Language');
-    switcher.innerHTML =
-      '<a href="' + enHref + '" class="ls-item' + (isEn ? ' is-active' : '') + '" hreflang="en">EN</a>' +
-      '<a href="' + msHref + '" class="ls-item' + (isMs ? ' is-active' : '') + '" hreflang="ms">BM</a>' +
-      '<a href="' + zhHref + '" class="ls-item' + (isZh ? ' is-active' : '') + '" hreflang="zh-Hans">中文</a>';
+    const toggle = document.createElement('div');
+    toggle.className = 'lang-toggle';
+    toggle.setAttribute('role', 'group');
+    toggle.setAttribute('aria-label', 'Language');
+    toggle.innerHTML =
+      '<button type="button" data-lang="en" data-href="' + enHref + '"' + (isEn ? ' class="active"' : '') + '>EN</button>' +
+      '<button type="button" data-lang="ms" data-href="' + msHref + '"' + (isMs ? ' class="active"' : '') + '>BM</button>' +
+      '<button type="button" data-lang="zh" data-href="' + zhHref + '"' + (isZh ? ' class="active"' : '') + '>中文</button>';
 
-    if (homeLink) homeLink.replaceWith(switcher);
-    else topbarRow.appendChild(switcher);
+    /* Click handler: on desktop the button takes you to its target lang;
+       on mobile only the active button is visible so tapping cycles to the
+       next language (EN -> BM -> ZH -> EN). */
+    toggle.addEventListener('click', function (e) {
+      const btn = e.target.closest('button[data-lang]');
+      if (!btn) return;
+      e.preventDefault();
+      const isMobile = window.matchMedia('(max-width: 540px)').matches;
+      let target = btn;
+      if (isMobile && btn.classList.contains('active')) {
+        const order = ['en', 'ms', 'zh'];
+        const cur = order.indexOf(btn.dataset.lang);
+        const nextLang = order[(cur + 1) % 3];
+        target = toggle.querySelector('button[data-lang="' + nextLang + '"]');
+      }
+      const href = target && target.dataset.href;
+      if (href) window.location.href = href;
+    });
+
+    if (homeLink) homeLink.replaceWith(toggle);
+    else topbarRow.appendChild(toggle);
   }
 
   /* ---------- 2. RICH FOOTER (mirrors homepage .footer) ---------- */
