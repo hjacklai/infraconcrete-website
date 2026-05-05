@@ -545,8 +545,10 @@
     background: color-mix(in srgb, var(--ink) 8%, transparent);
   }
   .lang-toggle button.active {
-    color: #fff;
-    background: var(--ic-red);
+    /* Subtle deeper-cream pill with ink text. Not red, not black. */
+    color: var(--ink);
+    background: var(--paper);
+    box-shadow: inset 0 0 0 1px rgba(31, 27, 23, 0.18);
   }
   /* Mobile: single-button cycling toggle. Show ONLY the active language
      button — tapping it cycles to the next language (EN → BM → 中文 → EN).
