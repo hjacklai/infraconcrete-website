@@ -402,6 +402,51 @@
     text-transform: uppercase;
   }
 
+  /* ===== Holistic typography polish — readability bumps where small mono
+     labels and SVG diagram text struggle, esp. in CJK and on dense panels.
+     Applied site-wide, with extra bumps in :lang(zh-Hans). ===== */
+
+  /* Cross-section diagram labels: bump base sizes so the BEFORE/AFTER
+     diagram reads cleanly on tablet/mobile and in Chinese (CJK glyphs
+     need ~15% more pixel size than Latin to feel equally legible). */
+  .approach svg text { font-size: 14px; }
+  .approach svg text[data-i18n="cs.before"],
+  .approach svg text[data-i18n="cs.after"] { font-size: 22px; }
+  .approach svg text[data-i18n="cs.platform"] { font-size: 17px; }
+  .approach svg text[data-i18n^="cs.snw"]:first-of-type,
+  .approach svg text[data-i18n^="cs.mse"]:first-of-type,
+  .approach svg text[data-i18n="cs.cut"],
+  .approach svg text[data-i18n="cs.fill"] { font-size: 16px; }
+  .approach svg text[data-i18n="cs.center"],
+  .approach svg text[data-i18n="cs.slip"],
+  .approach svg text[data-i18n="cs.existing"],
+  .approach svg text[data-i18n="cs.freeway"],
+  .approach svg text[data-i18n="cs.drag"] { font-size: 15px; }
+  .approach svg text[data-i18n="cs.fill.sub"],
+  .approach svg text[data-i18n^="cs.snw.l"],
+  .approach svg text[data-i18n^="cs.mse.l"],
+  .approach svg text[data-i18n="cs.hillside"],
+  .approach svg text[data-i18n="cs.retaining"] { font-size: 13px; }
+  /* CJK gets one more level up — characters are visually denser */
+  :lang(zh-Hans) .approach svg text { font-size: 16px; }
+  :lang(zh-Hans) .approach svg text[data-i18n="cs.before"],
+  :lang(zh-Hans) .approach svg text[data-i18n="cs.after"] { font-size: 24px; }
+  :lang(zh-Hans) .approach svg text[data-i18n="cs.platform"] { font-size: 19px; }
+
+  /* Small mono labels in CN — compensate for CJK density. Targets eyebrows,
+     micro labels, capability/solution methodology lists, time scales, etc. */
+  :lang(zh-Hans) .cap-card .steps li,
+  :lang(zh-Hans) .cap-card .cap-steps summary,
+  :lang(zh-Hans) .cap-learn-more,
+  :lang(zh-Hans) .stat .l,
+  :lang(zh-Hans) .pl-label,
+  :lang(zh-Hans) .ts-label { font-size: 14px; }
+
+  /* Track-record + case numbering labels: bump for legibility on smaller cards */
+  :lang(zh-Hans) .tag,
+  :lang(zh-Hans) .label.micro,
+  :lang(zh-Hans) .micro { font-size: 12px; letter-spacing: 0.1em; }
+
   /* Better headline wrapping site-wide. text-wrap: balance distributes
      words across lines evenly so long phrases don't get an orphan
      last word on its own line. Especially helps BM (longer words). */
@@ -1982,7 +2027,7 @@
   }
   .cap-card .steps li {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--ink-soft);
@@ -2005,7 +2050,7 @@
     list-style: none;
     cursor: pointer;
     font-family: var(--mono);
-    font-size: 10.5px;
+    font-size: 12px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--ic-red);
@@ -2038,8 +2083,8 @@
     display: inline-block;
     margin-top: 14px;
     font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.18em;
+    font-size: 13px;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--ic-red);
     border-bottom: 1px solid var(--ic-red);
@@ -3273,7 +3318,9 @@
     overflow-x: auto;
     overscroll-behavior-x: none;
     scroll-behavior: smooth;
-    scroll-snap-type: x proximity;
+    /* Mandatory snap so wheel scroll AND drag-release always land precisely
+       on a nav item — no overshoot, no half-visible icons. */
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
     /* Stop iOS/Chrome from inserting a 300ms tap delay on this scroller */
@@ -3282,14 +3329,16 @@
     mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
   }
+  /* Each item is its own snap-stop — swipes/wheel can't skip past icons.
+     Combined with mandatory snap above, scrolling always lands on an item. */
+  .bn-scroll > .bn-item { scroll-snap-stop: always; }
   /* On small phones the 24px edge fade can clip the first/last nav item — soften it.
-     iOS momentum re-enabled (touch) and snap-stop relaxed to default so a strong
-     swipe can carry through multiple items. Still snaps to each item at rest. */
+     iOS momentum on so swipes feel native; snap-stop:always keeps each
+     swipe deliberate so users don't fly past their target icon. */
   @media (max-width: 540px) {
     .bn-scroll {
       mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
-      scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
     }
   }
@@ -5734,8 +5783,9 @@
   enableDragScroll(document.querySelector('.bn-scroll'));
 
   // Desktop wheel: convert vertical scroll-wheel ticks to horizontal scroll
-  // on the bottom-nav strip (otherwise the page scrolls instead — and with
-  // the scrollbar hidden, desktop mice have no way to pan the strip).
+  // on the bottom-nav strip. Clamp per-tick deltaY to ~one nav-item width
+  // (~70px) so a single wheel notch never overshoots the next icon — fixes
+  // the "scroll-too-fast, can't see what I'm scrolling past" problem.
   (() => {
     const bnScroll = document.querySelector('.bn-scroll');
     if (!bnScroll) return;
@@ -5744,7 +5794,11 @@
       if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
       if (e.deltaY === 0) return;
       e.preventDefault();
-      bnScroll.scrollLeft += e.deltaY;
+      // Clamp to ~70px per tick so each wheel detent moves about one icon,
+      // not three. Trackpad pixel-deltas (small) pass through unscaled.
+      const dy = e.deltaY;
+      const clamped = Math.sign(dy) * Math.min(Math.abs(dy), 70);
+      bnScroll.scrollLeft += clamped;
     }, { passive: false });
   })();
 
