@@ -94,6 +94,53 @@ The Infraconcrete website is available in three languages:
 
 The team responds in English, Bahasa Malaysia, and Mandarin/Cantonese.
 
+### Bahasa Malaysia landing pages (BM)
+
+Service pages:
+- https://infraconcrete.co/bm/kontraktor-cerun/ — Kontraktor cerun (slope contractor)
+- https://infraconcrete.co/bm/soil-nailing/ — Soil nailing
+- https://infraconcrete.co/bm/tembok-penahan/ — Tembok penahan (retaining walls)
+- https://infraconcrete.co/bm/guniting/ — Guniting
+- https://infraconcrete.co/bm/saliran-cerun/ — Saliran cerun (slope drainage)
+- https://infraconcrete.co/bm/kerja-tanah/ — Kerja tanah (earthworks)
+- https://infraconcrete.co/bm/sheet-pile/ — Sheet pile & soldier pile
+- https://infraconcrete.co/bm/erosion-control/ — Kawalan hakisan (erosion control)
+- https://infraconcrete.co/bm/hillside-remedial/ — Pemulihan cerun bukit (hillside remedial)
+- https://infraconcrete.co/bm/landslide-prevention/ — Pencegahan tanah runtuh (landslide prevention)
+- https://infraconcrete.co/bm/kontraktor-geoteknikal/ — Kontraktor geoteknikal (geotechnical contractor)
+
+Location pages:
+- https://infraconcrete.co/bm/klang-valley/ — Lembah Klang
+- https://infraconcrete.co/bm/penang/ — Pulau Pinang
+- https://infraconcrete.co/bm/johor/ — Johor
+- https://infraconcrete.co/bm/pahang/ — Pahang
+- https://infraconcrete.co/bm/east-coast/ — Pantai Timur (Kelantan, Terengganu, east Pahang)
+- https://infraconcrete.co/bm/sabah-sarawak/ — Sabah & Sarawak
+
+### 中文 landing pages (Simplified Chinese)
+
+Service pages:
+- https://infraconcrete.co/zh/slope-stabilization/ — 边坡承包商 (slope contractor)
+- https://infraconcrete.co/zh/soil-nailing/ — 土钉
+- https://infraconcrete.co/zh/retaining-walls/ — 挡土墙
+- https://infraconcrete.co/zh/guniting/ — 喷射混凝土
+- https://infraconcrete.co/zh/rock-bolting/ — 锚杆
+- https://infraconcrete.co/zh/rockfall-barrier/ — 防落石屏障
+- https://infraconcrete.co/zh/horizontal-drains/ — 水平排水管
+- https://infraconcrete.co/zh/sheet-pile/ — 钢板桩
+- https://infraconcrete.co/zh/earthworks/ — 土方工程
+- https://infraconcrete.co/zh/erosion-control/ — 水土流失控制
+- https://infraconcrete.co/zh/hillside-remedial/ — 山坡边坡修复
+- https://infraconcrete.co/zh/landslide-prevention/ — 滑坡预防
+
+Location pages:
+- https://infraconcrete.co/zh/klang-valley/ — 巴生谷
+- https://infraconcrete.co/zh/penang/ — 槟城
+- https://infraconcrete.co/zh/johor/ — 柔佛
+- https://infraconcrete.co/zh/pahang/ — 彭亨
+- https://infraconcrete.co/zh/east-coast/ — 东海岸
+- https://infraconcrete.co/zh/sabah-sarawak/ — 沙巴砂拉越
+
 ## Contact
 
 - WhatsApp: https://wa.me/60164281214 (same-day response, preferred)
