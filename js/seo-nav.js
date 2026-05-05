@@ -76,10 +76,11 @@
       if (href) window.location.href = href;
     });
 
-    /* Back button: floats top-left on every SEO page. Lands on the homepage
-       in the SAME language the visitor is currently viewing — EN -> /,
-       BM -> /?lang=bm, ZH -> /?lang=zh. The homepage's i18n loader picks up
-       the lang param on arrival and sets the matching language. */
+    /* Back button: sits top-right BELOW the topbar (under the language
+       toggle), so it doesn't block the brand logo on the left. Lands on
+       the homepage in the SAME language the visitor is currently viewing,
+       EN -> /, BM -> /?lang=bm, ZH -> /?lang=zh. The homepage's i18n loader
+       picks up the lang param on arrival and sets the matching language. */
     if (!document.querySelector('.seo-back-btn')) {
       const backLabel = isMs ? 'Kembali' : isZh ? '返回' : 'Back';
       const backTitle = isMs ? 'Kembali ke laman utama' : isZh ? '返回首页' : 'Back to home';
