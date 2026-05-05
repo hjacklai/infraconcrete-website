@@ -76,20 +76,73 @@
       if (href) window.location.href = href;
     });
 
-    /* Standalone back button removed — the breadcrumb "← Home" is now the
-       primary back affordance. It's a "go home" link, not browser-back:
-       ALWAYS navigates to the homepage IN THE CURRENT LANGUAGE. We rewrite
-       the href to /?lang=bm or /?lang=zh so the URL itself preserves the
-       language choice (works even if localStorage is blocked). EN stays as
-       "/" since EN is the default. localStorage is also set as a backup. */
+    /* Standalone back button removed — the breadcrumb "← Home" is the primary
+       back affordance. Goes to homepage IN THE CURRENT LANGUAGE, and ALSO
+       deep-links to the matching section so e.g. /soil-nailing/ -> #cap-soil-nailing,
+       /sabah/ -> #record. The href is rewritten on mount so it's always fresh. */
+    const SECTION_MAP = {
+      // Capabilities cards (each has a matching #cap-* id on the homepage)
+      'soil-nailing': '#cap-soil-nailing',
+      'guniting': '#cap-guniting',
+      'rock-bolting': '#cap-rock-bolting',
+      'rock-netting': '#cap-rock-netting',
+      'slope-stabilization': '#cap-slope-stabilization',
+      'rockfall-barrier': '#cap-rockfall-barrier',
+      // BM service slugs that map to the same cards
+      'kontraktor-cerun': '#cap-slope-stabilization',
+      // Slope-family pages -> the slope-stabilization umbrella card
+      'slope-protection': '#cap-slope-stabilization',
+      'slope-monitoring': '#cap-slope-stabilization',
+      'horizontal-drains': '#cap-slope-stabilization',
+      'erosion-control': '#cap-slope-stabilization',
+      'landslide-prevention': '#cap-slope-stabilization',
+      'post-landslide-remediation': '#cap-slope-stabilization',
+      'hillside-remedial': '#cap-slope-stabilization',
+      'reinforced-soil-slopes': '#cap-slope-stabilization',
+      'saliran-cerun': '#cap-slope-stabilization',
+      // Retaining-family pages -> the retaining systems card in #solutions
+      'retaining-walls': '#cap-retaining',
+      'mse-wall': '#cap-retaining',
+      'sheet-pile': '#cap-retaining',
+      'sheet-piling': '#cap-retaining',
+      'tembok-penahan': '#cap-retaining',
+      // Land-creation family
+      'land-creation': '#cap-landcreation',
+      'earthworks': '#cap-landcreation',
+      'kerja-tanah': '#cap-landcreation',
+      // Geotechnical umbrella -> capabilities section overall
+      'kontraktor-geoteknikal': '#capabilities',
+      // Location pages -> track record section (geographic delivery proof)
+      'klang-valley': '#record',
+      'penang': '#record', 'johor': '#record', 'pahang': '#record',
+      'east-coast': '#record', 'sabah-sarawak': '#record',
+      'sabah': '#record', 'sarawak': '#record',
+      'kelantan': '#record', 'terengganu': '#record',
+      'kedah': '#record', 'perlis': '#record',
+      'melaka': '#record', 'negeri-sembilan': '#record',
+      'perak': '#record', 'labuan': '#record',
+      // Audience pages -> "why us" section
+      'for-developers': '#value', 'for-government': '#value',
+      'for-consulting-engineers': '#value', 'for-quantity-surveyors': '#value',
+      // Resources -> faq area
+      'resources': '#faq', 'sumber': '#faq'
+    };
+
+    const path = window.location.pathname.replace(/\/+$/, '');
+    const segments = path.split('/').filter(Boolean);
+    const slug = segments[segments.length - 1] || '';
+    const sectionAnchor = SECTION_MAP[slug] || '';
+
     const crumbHome = document.querySelector('.crumbs a[href="/"], .crumbs a[href="/?lang=bm"], .crumbs a[href="/?lang=zh"]');
     if (crumbHome) {
       const langCode = isMs ? 'bm' : isZh ? 'zh' : 'en';
-      const homeHref = isMs ? '/?lang=bm' : isZh ? '/?lang=zh' : '/';
-      crumbHome.href = homeHref;
+      const langPath = isMs ? '/?lang=bm' : isZh ? '/?lang=zh' : '/';
+      crumbHome.href = langPath + sectionAnchor;
       crumbHome.addEventListener('click', function () {
         try { localStorage.setItem('lang', langCode); } catch (err) {}
-        /* Fall through to href — homepage init reads ?lang= and localStorage. */
+        /* Fall through to href — homepage init reads ?lang= and localStorage,
+           and the browser scrolls to the #anchor (with scroll-margin-top set
+           so the card isn't hidden under the sticky topbar). */
       });
     }
 
