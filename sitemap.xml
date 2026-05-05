@@ -11,6 +11,31 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://infraconcrete.co/resources/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/resources/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sumber/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/resources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/resources/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/bm/sumber/</loc>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sumber/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/resources/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/resources/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/zh/resources/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/resources/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/resources/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sumber/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://infraconcrete.co/?lang=bm</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/?lang=bm"/>

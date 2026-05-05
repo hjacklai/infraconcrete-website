@@ -4660,7 +4660,7 @@
             <li><span>04</span><span data-i18n="cap1.s4">Facing application</span></li>
             <li><span>05</span><span data-i18n="cap1.s5">Load testing and verification</span></li>
           </ul>
-          <a href="/soil-nailing/" class="cap-learn-more" data-i18n="cap1.learn">Read the full soil nailing guide →</a>
+          <a href="/soil-nailing/" data-href-en="/soil-nailing/" data-href-bm="/bm/soil-nailing/" data-href-zh="/zh/soil-nailing/" class="cap-learn-more" data-i18n="cap1.learn">Read the full soil nailing guide →</a>
         </details>
       </div>
 
@@ -5471,6 +5471,7 @@
           <li><a href="#process" data-i18n="foot.co.method">Methodology</a></li>
           <li><a href="#record" data-i18n="foot.co.record">Track Record</a></li>
           <li><a href="#faq" data-i18n="foot.co.faq">FAQ</a></li>
+          <li><a href="/resources/" data-href-en="/resources/" data-href-bm="/bm/sumber/" data-href-zh="/zh/resources/" data-i18n="foot.co.resources">Resources Hub</a></li>
         </ul>
       </div>
     </div>
@@ -6250,6 +6251,7 @@
         'cap1.s4': 'Pemasangan permukaan',
         'cap1.s5': 'Ujian beban dan pengesahan',
         'cap1.learn': 'Baca panduan lengkap soil nailing →',
+        'foot.co.resources': 'Hab Sumber',
         'cap2.s1': 'Penyediaan permukaan',
         'cap2.s2': 'Reka bentuk campuran mengikut spesifikasi',
         'cap2.s3': 'Penyemburan halaju tinggi',
@@ -6593,6 +6595,7 @@
         'cap1.s4': '面层施作',
         'cap1.s5': '载荷测试与验收',
         'cap1.learn': '阅读完整土钉施工指南 →',
+        'foot.co.resources': '资源中心',
         'cap2.s1': '表面准备',
         'cap2.s2': '按规范配比设计',
         'cap2.s3': '高速喷射',
@@ -6813,6 +6816,13 @@
         } else {
           el.innerHTML = I18N[lang][key];
         }
+      });
+      // Swap href on language-aware links (e.g. soil-nailing guide CTA)
+      // so /soil-nailing/ becomes /bm/soil-nailing/ or /zh/soil-nailing/
+      // when the visitor switches language.
+      document.querySelectorAll('a[data-href-en]').forEach(el => {
+        const map = { en: el.dataset.hrefEn, bm: el.dataset.hrefBm, zh: el.dataset.hrefZh };
+        el.setAttribute('href', map[lang] || el.dataset.hrefEn);
       });
       // Update <title> + meta description so search snippets / tab title match the chosen language.
       const t = (lang !== 'en' && I18N[lang] && I18N[lang]['meta.title']) ? I18N[lang]['meta.title'] : EN_TITLE;
