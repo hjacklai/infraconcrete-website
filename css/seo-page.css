@@ -20,10 +20,25 @@ a { color: inherit; text-decoration: none; } img, svg { display: block; max-widt
 .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
 
 /* Topbar */
-.topbar { padding: 22px 0; border-bottom: 1px solid var(--grey-line); background: var(--paper-bright); }
+.topbar { padding: 18px 0; border-bottom: 1px solid var(--grey-line); background: var(--paper-bright); }
 .topbar-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand { font-family: var(--serif); font-weight: 700; font-size: 19px; letter-spacing: -0.01em; color: var(--ink); }
+.brand { font-family: var(--serif); font-weight: 700; font-size: 19px; letter-spacing: -0.01em; color: var(--ink); display: inline-flex; align-items: center; }
 .brand em { color: var(--ic-red); font-style: normal; }
+.brand .logo-wrap { display: inline-flex; align-items: center; gap: 14px; }
+.brand .brand-logo { display: block; width: auto; height: 32px; }
+.brand .group-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 0 5px 14px; margin-left: 4px; border-left: 1px solid var(--grey-line); }
+.brand .gb-label { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-500); }
+.brand .panthera-logo { display: block; width: auto; height: 13px; opacity: 0.7; }
+@media (max-width: 540px) {
+  .brand .brand-logo { height: 26px; }
+  .brand .panthera-logo { height: 11px; }
+  .brand .group-badge { padding-left: 10px; gap: 6px; }
+  .brand .gb-label { font-size: 8.5px; letter-spacing: 0.14em; }
+}
+@media (max-width: 380px) {
+  .brand .group-badge { padding-left: 8px; gap: 5px; }
+  .brand .gb-label { display: none; }
+}
 .topbar a.home-link { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-700); }
 .topbar a.home-link:hover { color: var(--ic-red); }
 
@@ -126,6 +141,69 @@ section.block:first-of-type { border-top: 0; padding-top: 0; }
 .btn-ghost:hover { border-color: var(--paper); }
 
 /* Footer */
-footer { background: var(--paper-bright); padding: 36px 0; border-top: 1px solid var(--grey-line); }
+footer { background: var(--paper-bright); padding: 36px 0; border-top: 1px solid var(--grey-line); padding-bottom: 120px; }
 footer p { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey-500); margin: 0; text-align: center; }
 footer p a { color: var(--ic-red); }
+
+/* Bottom-nav swipe pill (matches homepage). Injected by /js/seo-nav.js */
+body { padding-bottom: 100px; }
+.bottom-nav {
+  position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%);
+  z-index: 90;
+  display: flex; align-items: center; gap: 4px;
+  padding: 6px;
+  background: rgba(250, 243, 224, 0.92);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--grey-line);
+  border-radius: 999px;
+  box-shadow: 0 14px 36px -16px rgba(31, 27, 23, 0.28), 0 4px 12px -8px rgba(31, 27, 23, 0.18);
+  max-width: calc(100vw - 24px);
+}
+.bottom-nav .bn-hint {
+  flex-shrink: 0;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--grey-500); padding: 0 14px 0 10px;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: opacity .35s var(--ease), max-width .35s var(--ease);
+  max-width: 90px; overflow: hidden; white-space: nowrap;
+}
+.bottom-nav.has-scrolled .bn-hint { opacity: 0; max-width: 0; padding: 0; }
+.bn-hint-arrow { color: var(--ic-red); }
+.bn-scroll {
+  display: flex; gap: 4px;
+  overflow-x: auto;
+  overscroll-behavior-x: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none; -ms-overflow-style: none;
+  mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+}
+.bn-scroll::-webkit-scrollbar { display: none; }
+.bn-scroll .bn-item { scroll-snap-align: center; flex-shrink: 0; }
+.bn-item {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 8px 12px; min-width: 64px;
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-soft);
+  border-radius: 999px;
+  transition: background .22s var(--ease), color .22s var(--ease);
+}
+.bn-item:hover { background: rgba(31, 27, 23, 0.06); color: var(--ic-red); }
+.bn-item svg { width: 22px; height: 22px; opacity: 0.85; }
+.bn-cta {
+  background: var(--ic-red); color: #fff !important;
+  padding: 10px 18px; min-width: auto;
+  margin-left: 4px;
+}
+.bn-cta:hover { background: var(--ic-red-deep); color: #fff !important; }
+.bn-cta svg { opacity: 1; }
+@media (max-width: 540px) {
+  .bottom-nav { gap: 2px; padding: 4px; bottom: 12px; }
+  .bn-item { min-width: 56px; padding: 7px 10px; font-size: 9px; }
+  .bn-item svg { width: 20px; height: 20px; }
+  .bottom-nav .bn-hint { padding: 0 8px; font-size: 9px; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  body { padding-bottom: 110px; } .bottom-nav { bottom: 16px; }
+}
