@@ -3256,12 +3256,17 @@
     mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
   }
-  /* On small phones the 24px edge fade can clip the first/last nav item — soften it. */
-  @media (max-width: 480px) {
+  /* On small phones the 24px edge fade can clip the first/last nav item — soften it.
+     Also: mandatory snap + scroll-snap-stop:always so each swipe lands cleanly
+     on one nav item — feels slower / more deliberate than momentum-fly-by. */
+  @media (max-width: 540px) {
     .bn-scroll {
       mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: auto;
     }
+    .bn-scroll .bn-item { scroll-snap-stop: always; }
   }
   .bn-scroll::-webkit-scrollbar { display: none; }
   .bn-scroll .bn-item { scroll-snap-align: center; flex-shrink: 0; }
@@ -5625,46 +5630,55 @@
     btn.setAttribute('aria-expanded', isOpening ? 'true' : 'false');
   }
 
-  // Click-and-drag scroll for any horizontal scrollable strip
+  // Click-and-drag scroll for any horizontal scrollable strip.
+  // Disables scroll-snap during drag so cursor tracks 1:1 (no snap fight),
+  // then restores on release. Click-after-drag suppression auto-clears after
+  // one event loop so subsequent clicks always work.
   function enableDragScroll(el) {
     if (!el) return;
     let isDown = false;
     let startX = 0;
     let startScroll = 0;
     let moved = false;
+    let origSnap = '';
     el.addEventListener('mousedown', (e) => {
-      if (e.target.closest('a, button')) return; // let interactive elements work normally
+      if (e.target.closest('a, button')) return;
       isDown = true;
       moved = false;
       startX = e.pageX;
       startScroll = el.scrollLeft;
+      origSnap = el.style.scrollSnapType;
+      el.style.scrollSnapType = 'none';
+      el.style.scrollBehavior = 'auto';
       el.style.cursor = 'grabbing';
       el.style.userSelect = 'none';
     });
     const stop = () => {
       if (!isDown) return;
       isDown = false;
+      el.style.scrollSnapType = origSnap || '';
+      el.style.scrollBehavior = '';
       el.style.cursor = '';
       el.style.userSelect = '';
     };
     el.addEventListener('mouseleave', stop);
     el.addEventListener('mouseup', (e) => {
-      // Only suppress the click if BOTH the cursor moved >12px AND the scroll
-      // position actually changed. iOS/Android synthetic mouse events after
-      // touchend can drift several px on a stable finger-tap; without the
-      // scroll-delta check those false positives eat legit nav-link taps.
       const movedScroll = Math.abs(el.scrollLeft - startScroll) > 4;
+      const wasMoved = moved;
       stop();
-      if (moved && movedScroll) {
+      if (wasMoved && movedScroll) {
         const blocker = (ev) => { ev.preventDefault(); ev.stopPropagation(); el.removeEventListener('click', blocker, true); };
         el.addEventListener('click', blocker, true);
+        // Auto-remove blocker after one event loop so future clicks work
+        setTimeout(() => { el.removeEventListener('click', blocker, true); }, 50);
       }
     });
     el.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       const dx = e.pageX - startX;
-      if (Math.abs(dx) > 12) moved = true;
+      if (Math.abs(dx) > 6) moved = true;
       el.scrollLeft = startScroll - dx;
+      e.preventDefault();
     });
     el.style.cursor = 'grab';
   }
