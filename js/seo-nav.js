@@ -59,7 +59,95 @@
     else topbarRow.appendChild(switcher);
   }
 
-  /* ---------- 2. BOTTOM-NAV ---------- */
+  /* ---------- 2. RICH FOOTER (mirrors homepage .footer) ---------- */
+  const existingFooter = document.querySelector('footer');
+  if (existingFooter && !existingFooter.classList.contains('footer-rich')) {
+    const F = isMs ? {
+      tagline: 'Cerun direka untuk kegunaan tanah maksima.',
+      desc: 'Kontraktor pakar geoteknikal G7. Kerja cerun, tanah, dan kontrak utama merentasi Malaysia.',
+      hSol: 'Penyelesaian', hCap: 'Kapabiliti', hLoc: 'Lokasi', hCo: 'Syarikat',
+      slope: 'Kontraktor cerun', soilNail: 'Soil nailing', retain: 'Tembok penahan',
+      gunit: 'Guniting', rockBolt: 'Rock bolting', drains: 'Saliran ufuk', earth: 'Kerja tanah',
+      kv: 'Klang Valley', pg: 'Pulau Pinang', jh: 'Johor', ph: 'Pahang', ec: 'Pantai Timur', ss: 'Sabah & Sarawak',
+      home: 'Laman Utama', contact: 'Hubungi', philo: 'Falsafah', record: 'Rekod',
+      partOf: 'Sebahagian', panOf: 'Syarikat Panthera Group sejak 2018.',
+      cred: 'CIDB G7 · ISO 9001:2015 · ARS · UAF · IAF'
+    } : isZh ? {
+      tagline: '为最大土地用途设计的边坡工程。',
+      desc: 'G7 资质专业岩土工程承包商。承接全马来西亚的边坡、地基与总承包工程。',
+      hSol: '解决方案', hCap: '能力', hLoc: '地区', hCo: '公司',
+      slope: '边坡承包商', soilNail: '土钉', retain: '挡土墙',
+      gunit: '喷射混凝土', rockBolt: '锚杆', drains: '水平排水管', earth: '土方工程',
+      kv: '巴生谷', pg: '槟城', jh: '柔佛', ph: '彭亨', ec: '东海岸', ss: '沙巴砂拉越',
+      home: '首页', contact: '联系', philo: '理念', record: '业绩',
+      partOf: '隶属', panOf: 'Panthera Group 旗下公司，自 2018 年起。',
+      cred: 'CIDB G7 · ISO 9001:2015 · ARS · UAF · IAF'
+    } : {
+      tagline: 'Engineered slopes for maximum utility.',
+      desc: 'Specialist G7 geotechnical contractor. Slope, ground, and main contracting works across Malaysia.',
+      hSol: 'Solutions', hCap: 'Capabilities', hLoc: 'Locations', hCo: 'Company',
+      slope: 'Slope Contractor', soilNail: 'Soil Nailing', retain: 'Retaining Walls',
+      gunit: 'Guniting', rockBolt: 'Rock Bolting', drains: 'Horizontal Drains', earth: 'Earthworks',
+      kv: 'Klang Valley', pg: 'Penang', jh: 'Johor', ph: 'Pahang', ec: 'East Coast', ss: 'Sabah & Sarawak',
+      home: 'Home', contact: 'Contact', philo: 'Philosophy', record: 'Track Record',
+      partOf: 'Part of', panOf: 'A Panthera Group company. Engineering slopes for maximum utility since 2018.',
+      cred: 'CIDB G7 · ISO 9001:2015 · ARS · UAF · IAF'
+    };
+
+    const langPrefix = isMs ? '/bm' : isZh ? '/zh' : '';
+    const slopeUrl = isMs ? '/bm/kontraktor-cerun/' : isZh ? '/zh/slope-stabilization/' : '/slope-stabilization/';
+    const retainUrl = isMs ? '/bm/tembok-penahan/' : isZh ? '/zh/retaining-walls/' : '/retaining-walls/';
+    const earthUrl = isMs ? '/bm/kerja-tanah/' : isZh ? '/zh/earthworks/' : '/earthworks/';
+
+    existingFooter.classList.add('footer-rich');
+    existingFooter.innerHTML =
+      '<div class="container">' +
+        '<div class="footer-grid">' +
+          '<div class="fg-brand">' +
+            '<a href="/" class="footer-logo">' +
+              '<img src="/images/brand/logo.png" alt="Infraconcrete" height="40" style="display:block;width:auto;" />' +
+            '</a>' +
+            '<p class="footer-tagline"><em>' + F.tagline + '</em><br/>' + F.desc + '</p>' +
+          '</div>' +
+          '<div>' +
+            '<h6>' + F.hCap + '</h6>' +
+            '<ul>' +
+              '<li><a href="' + slopeUrl + '">' + F.slope + '</a></li>' +
+              '<li><a href="' + langPrefix + '/soil-nailing/">' + F.soilNail + '</a></li>' +
+              '<li><a href="' + retainUrl + '">' + F.retain + '</a></li>' +
+              '<li><a href="' + langPrefix + '/guniting/">' + F.gunit + '</a></li>' +
+              '<li><a href="' + langPrefix + '/rock-bolting/">' + F.rockBolt + '</a></li>' +
+              '<li><a href="' + langPrefix + '/horizontal-drains/">' + F.drains + '</a></li>' +
+              '<li><a href="' + earthUrl + '">' + F.earth + '</a></li>' +
+            '</ul>' +
+          '</div>' +
+          '<div>' +
+            '<h6>' + F.hLoc + '</h6>' +
+            '<ul>' +
+              '<li><a href="' + langPrefix + '/klang-valley/">' + F.kv + '</a></li>' +
+              '<li><a href="' + langPrefix + '/penang/">' + F.pg + '</a></li>' +
+              '<li><a href="' + langPrefix + '/johor/">' + F.jh + '</a></li>' +
+              '<li><a href="' + langPrefix + '/pahang/">' + F.ph + '</a></li>' +
+              '<li><a href="' + langPrefix + '/east-coast/">' + F.ec + '</a></li>' +
+              '<li><a href="' + langPrefix + '/sabah-sarawak/">' + F.ss + '</a></li>' +
+            '</ul>' +
+          '</div>' +
+        '</div>' +
+        '<div class="footer-group">' +
+          '<div class="footer-group-l">' +
+            '<span class="fg-label">' + F.partOf + '</span>' +
+            '<img src="/images/brand/panthera-logo.png" alt="Panthera Group" height="22" style="display:block;width:auto;opacity:.65;" />' +
+          '</div>' +
+          '<p class="footer-group-r">' + F.panOf + '</p>' +
+        '</div>' +
+        '<div class="footer-bottom">' +
+          '<span>&copy; 2025 Infraconcrete Construction Sdn Bhd &middot; SSM 1278618-H &middot; CIDB Reg. 0120220822-WP104845</span>' +
+          '<span>' + F.cred + '</span>' +
+        '</div>' +
+      '</div>';
+  }
+
+  /* ---------- 3. BOTTOM-NAV ---------- */
   if (document.querySelector('.bottom-nav')) return;
 
   const L = isMs ? {
