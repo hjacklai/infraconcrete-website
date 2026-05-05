@@ -197,6 +197,36 @@
   :lang(zh-Hans) .hero-meta > span:first-child {
     text-transform: uppercase;
   }
+
+  /* Better headline wrapping site-wide. text-wrap: balance distributes
+     words across lines evenly so long phrases don't get an orphan
+     last word on its own line. Especially helps BM (longer words). */
+  .hero h1, .sec-header h2, .cap-card h3, .value-card h3, .sol-body h3,
+  .case-body h3, .proc-step h3 {
+    text-wrap: balance;
+  }
+
+  /* BM-specific font-size reductions. Malay phrases are typically
+     15-20% longer than the English source ("Meningkatkan", "kejuruteraan",
+     "kemahiran" are all 12+ chars). Without this, headlines wrap to 4-5
+     lines on standard column widths. Trimming the clamp maxes brings BM
+     to a similar visual rhythm as EN. */
+  :lang(ms) .hero h1 .hero-sub {
+    font-size: clamp(16px, 4.4vw, 22px);
+  }
+  :lang(ms) .sec-header h2 {
+    font-size: clamp(28px, 4.4vw, 40px);
+  }
+  :lang(ms) .cap-card h3 {
+    font-size: clamp(18px, 2.2vw, 22px);
+    line-height: 1.25;
+  }
+  :lang(ms) .sol-body h3 {
+    font-size: clamp(24px, 3.2vw, 30px);
+  }
+  :lang(ms) .value-card h3 {
+    font-size: clamp(15px, 1.6vw, 17px);
+  }
   /* Bottom nav and small UI elements need a font-size bump in Chinese —
      Chinese characters at 9-10px are illegible. Letter-spacing also gets
      reset since CJK doesn't benefit from Latin-style tracking. */
@@ -658,6 +688,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    justify-items: center;
+    text-align: center;
   }
   .hero-footer .item .num {
     font-family: var(--serif);
