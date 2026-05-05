@@ -516,7 +516,12 @@
   .lang-toggle {
     position: fixed;
     top: 18px;
-    right: clamp(20px, 3vw, 36px);
+    /* Align with the page content right edge on wide screens (content max-width
+       is 1100px). On narrow viewports stays at 20px from edge. The calc ties
+       the toggle to where the content actually is, not the raw viewport — so
+       on a 1920px screen it sits ~410px in from the edge instead of looking
+       pinned to the viewport corner. */
+    right: max(20px, calc((100vw - 1100px) / 2));
     z-index: 110;
     display: flex;
     gap: 1px;
