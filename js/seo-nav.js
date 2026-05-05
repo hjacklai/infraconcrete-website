@@ -280,6 +280,38 @@
       track.removeEventListener('scroll', dismiss);
     };
     track.addEventListener('scroll', dismiss, { passive: true, once: true });
+
+    /* Click-and-drag scroll on the bottom-nav (matches homepage behaviour).
+       Lets desktop users hold left mouse, drag to scroll horizontally,
+       then release and click an item. Mobile keeps native touch scroll. */
+    (function enableDragScroll(el) {
+      if (!el) return;
+      let isDown = false, startX = 0, startScroll = 0, moved = false;
+      el.addEventListener('mousedown', function (e) {
+        if (e.target.closest('a, button')) return; // let interactive children click normally
+        isDown = true; moved = false;
+        startX = e.pageX; startScroll = el.scrollLeft;
+        el.style.cursor = 'grabbing'; el.style.userSelect = 'none';
+      });
+      const stop = function () { if (!isDown) return; isDown = false; el.style.cursor = ''; el.style.userSelect = ''; };
+      el.addEventListener('mouseleave', stop);
+      el.addEventListener('mouseup', function () {
+        const movedScroll = Math.abs(el.scrollLeft - startScroll) > 4;
+        stop();
+        if (moved && movedScroll) {
+          // Suppress the click that would otherwise fire after drag-release
+          const blocker = function (ev) { ev.preventDefault(); ev.stopPropagation(); el.removeEventListener('click', blocker, true); };
+          el.addEventListener('click', blocker, true);
+        }
+      });
+      el.addEventListener('mousemove', function (e) {
+        if (!isDown) return;
+        const dx = e.pageX - startX;
+        if (Math.abs(dx) > 12) moved = true;
+        el.scrollLeft = startScroll - dx;
+      });
+      el.style.cursor = 'grab';
+    })(track);
   }
 
   /* Reveal on scroll + sticky topbar scrolled state (matches homepage).
