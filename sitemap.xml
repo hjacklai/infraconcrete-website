@@ -115,4 +115,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/horizontal-drains/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
+  <url><loc>https://infraconcrete.co/bm/guniting/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/saliran-cerun/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/rock-bolting/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 </urlset>
