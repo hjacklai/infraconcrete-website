@@ -155,8 +155,11 @@
 
   /* Readability: keep long-form prose paragraphs at a comfortable line length
      even on wide screens. .sec-header p already has its own 540px cap; this
-     rule covers paragraphs that would otherwise stretch the full container. */
-  .faq-a, .ba-caption { max-width: 64ch; }
+     rule covers paragraphs that would otherwise stretch the full container.
+     .ba-caption uses a wider 100ch cap so single-sentence captions can fit
+     on one line instead of awkwardly wrapping after a few words. */
+  .faq-a { max-width: 64ch; }
+  .ba-caption { max-width: 100ch; }
 
   /* Mandarin (Simplified) font normalization. Strategy: put the Latin
      fonts FIRST and the CJK fonts BEFORE any generic family fallback.
