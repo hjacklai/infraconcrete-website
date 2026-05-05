@@ -2843,31 +2843,24 @@
   }
   a.cred-card:hover .cred-view { transform: translateX(4px); }
 
-  /* Accreditation chain strip */
+  /* Accreditation chain — compact pill row, always horizontal.
+     Each pill shows just the org name (logo + abbreviation). The
+     descriptive text moves into a hover/focus tooltip so the chain
+     stays single-row at every viewport without squishing. */
   .cred-chain {
     margin-top: 28px;
-    padding: 22px 28px;
+    padding: 18px 24px;
     background: #fff;
     border: 1px solid var(--grey-line);
     border-radius: 4px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 28px;
+    justify-content: center;
+    gap: 18px;
     flex-wrap: wrap;
   }
-  /* At intermediate widths the label + 3 cards in a single row gets
-     squished (especially in BM where the label is longer). Stack
-     vertically so the cards can use the full width. */
-  @media (max-width: 1100px) {
-    .cred-chain {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 18px;
-    }
-    .cred-chain-label {
-      text-align: center;
-    }
+  @media (max-width: 540px) {
+    .cred-chain { padding: 14px 16px; gap: 12px; }
   }
   .cred-chain-label {
     font-family: var(--mono);
@@ -2878,84 +2871,97 @@
     flex-shrink: 0;
   }
   .cred-chain-logos {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr auto 1fr;
+    display: inline-flex;
     align-items: center;
-    gap: 14px;
-    flex: 1;
-    min-width: 0;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  /* Compact pill: logo + abbreviation. Tooltip on hover / tap. */
   .cred-chain-item {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 14px;
+    gap: 7px;
+    padding: 6px 12px 6px 8px;
     background: #fff;
     border: 1px solid var(--grey-line);
-    border-radius: 3px;
-    min-width: 0;
-    overflow: hidden;
+    border-radius: 999px;
+    position: relative;
+    cursor: help;
+    transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
   }
-  .cred-chain-item > * { min-width: 0; }
-  @media (max-width: 800px) {
-    .cred-chain-logos {
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-    /* Cards stretch full width on mobile, cleaner padding, bigger logos for readability */
-    .cred-chain-item {
-      padding: 14px 16px;
-      gap: 14px;
-    }
-    .cred-chain-item img { height: 34px; }
-    .cred-chain-name { font-size: 14.5px; }
-    .cred-chain-desc { font-size: 12px; }
-    /* Replace arrow with a subtle centered vertical bar between cards */
-    .cred-chain-arrow {
-      transform: none;
-      justify-self: center;
-      width: 1px;
-      height: 14px;
-      background: var(--grey-300);
-      color: transparent; /* hide the → glyph itself */
-      font-size: 0;
-    }
+  .cred-chain-item:hover, .cred-chain-item:focus {
+    border-color: var(--ink);
+    box-shadow: 0 4px 14px -4px rgba(0,0,0,0.12);
+    outline: none;
   }
   .cred-chain-item img {
-    height: 28px;
+    height: 18px;
     width: auto;
     object-fit: contain;
   }
   .cred-chain-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
   }
   .cred-chain-name {
     font-family: var(--serif);
     font-weight: 600;
-    font-size: 13px;
+    font-size: 13.5px;
     color: var(--ink);
     line-height: 1.2;
+    white-space: nowrap;
   }
+  /* Tooltip: position absolutely, hidden by default, reveal on hover/focus */
   .cred-chain-desc {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: var(--ink);
+    color: var(--paper);
+    padding: 7px 11px;
+    border-radius: 4px;
     font-family: var(--sans);
-    font-size: 11px;
-    color: var(--grey-500);
-    font-style: italic;
+    font-size: 11.5px;
     line-height: 1.35;
-    word-wrap: break-word;
-    overflow-wrap: anywhere;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s var(--ease), transform .18s var(--ease);
+    z-index: 5;
+    font-style: normal;
+    box-shadow: 0 6px 18px -6px rgba(0,0,0,0.3);
+  }
+  .cred-chain-desc::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--ink);
+  }
+  .cred-chain-item:hover .cred-chain-desc,
+  .cred-chain-item:focus .cred-chain-desc,
+  .cred-chain-item.is-open .cred-chain-desc {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  /* Mobile: full-width tooltip allowed since pills can be small */
+  @media (max-width: 540px) {
+    .cred-chain-item { padding: 5px 10px 5px 7px; gap: 6px; }
+    .cred-chain-item img { height: 16px; }
+    .cred-chain-name { font-size: 12.5px; }
+    .cred-chain-desc { font-size: 11px; max-width: 200px; white-space: normal; text-align: center; }
   }
   .cred-chain-arrow {
-    color: var(--grey-300);
-    font-size: 16px;
+    color: var(--grey-500);
+    font-size: 14px;
+    flex-shrink: 0;
   }
-  @media (max-width: 720px) {
-    .cred-chain { flex-direction: column; align-items: flex-start; gap: 14px; }
-    .cred-chain-logos { gap: 10px; }
-    .cred-chain-arrow { display: none; }
-  }
+  /* (legacy verbose-card rules superseded by the pill design above) */
 
   /* =========================================================
      WHAT HAPPENS NEXT strip
@@ -6060,7 +6066,7 @@
         's11.h2': 'Di mana tanah rata berakhir, <em>kerja kami bermula.</em>',
         's12.h2': 'Disahkan, diaudit, <em>diakreditasi.</em>',
         's13.h2': 'Soalan <em>lazim.</em>',
-        'contact.h2': 'Mari kita dayakan <em>penggunaan tanah anda.</em>',
+        'contact.h2': 'Mari kita dayakan <em>tanah anda.</em>',
         // Section intro paragraphs
         's01.p': 'Tanah yang anda memperoleh jarang mudah untuk dibina. Tugas kami adalah menjadikannya boleh dibina.',
         's02.p': 'Kebanyakan projek bermula dengan satu daripada empat masalah. Pilih masalah anda, lihat bagaimana kami menyelesaikannya.',
