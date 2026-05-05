@@ -2008,7 +2008,8 @@
     padding-top: 16px;
     margin-top: 4px;
   }
-  .cap-card .cap-learn-more {
+  /* Red 'Read the full guide' CTA — applies on both .cap-card and .sol-card */
+  .cap-learn-more {
     display: inline-block;
     margin-top: 14px;
     font-family: var(--mono);
@@ -2020,7 +2021,9 @@
     padding-bottom: 2px;
     transition: color .25s var(--ease), border-color .25s var(--ease);
   }
-  .cap-card .cap-learn-more:hover { color: var(--ic-red-deep); border-color: var(--ic-red-deep); }
+  .cap-learn-more:hover { color: var(--ic-red-deep); border-color: var(--ic-red-deep); }
+  /* Sol cards have darker body background — bump CTA contrast slightly */
+  .sol-card .cap-learn-more { font-weight: 600; }
   @media (max-width: 880px) { .cap-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .cap-grid { grid-template-columns: 1fr; } }
 
@@ -3916,6 +3919,10 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 9 a3 3 0 0 1 6 0 c0 2 -3 2 -3 4"/><circle cx="12" cy="17" r="0.8" fill="currentColor"/></svg>
       <span data-i18n="nav.faq">FAQ</span>
     </a>
+    <a href="/resources/" data-href-en="/resources/" data-href-bm="/bm/sumber/" data-href-zh="/zh/resources/" class="bn-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h11l3 3v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><line x1="8" y1="9" x2="16" y2="9"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+      <span data-i18n="nav.resources">Resources</span>
+    </a>
   </div>
   <a href="#contact" class="bn-item bn-cta">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -4155,7 +4162,7 @@
           <span class="num" aria-label="Solution 3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12 Q 8 5 12 9 Q 16 13 21 6" stroke-dasharray="2 2" opacity="0.55"/><line x1="3" y1="16" x2="21" y2="16"/><line x1="3" y1="20" x2="21" y2="20"/><rect x="8" y="12" width="3" height="4"/><rect x="13" y="12" width="3" height="4"/></svg></span>
           <h3 data-i18n="sol3.h3">Usable Land <em>Creation</em></h3>
           <p data-i18n="sol3.p">Turning hillsides, floodplains, and fragmented parcels into compliant, developable platforms. We unlock land utility that others deem impossible to build on.</p>
-          <a href="/slope-stabilization/" data-href-en="/slope-stabilization/" data-href-bm="/bm/kontraktor-cerun/" data-href-zh="/zh/slope-stabilization/" class="cap-learn-more" data-i18n="sol3.learn">Read the full land creation guide →</a>
+          <a href="/land-creation/" data-href-en="/land-creation/" data-href-bm="/bm/land-creation/" data-href-zh="/zh/land-creation/" class="cap-learn-more" data-i18n="sol3.learn">Read the full land creation guide →</a>
         </div>
       </div>
     </div>
@@ -5588,7 +5595,7 @@
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     nav.classList.toggle('scrolled', y > 12);
-    if (bottomNav) bottomNav.classList.toggle('is-revealed', y > window.innerHeight * 0.6);
+    if (bottomNav) bottomNav.classList.toggle('is-revealed', y > window.innerHeight * 0.4);
   }, { passive: true });
 
   // Mobile menu
@@ -6187,6 +6194,7 @@
         'nav.why': 'Mengapa',
         'nav.trust': 'Kepercayaan',
         'nav.faq': 'Soalan Lazim',
+        'nav.resources': 'Sumber',
         'nav.brief': 'Hubungi',
         // Hero
         'hero.eyebrow.spec': 'Kontraktor Geoteknikal Pakar · CIDB G7',
@@ -6535,6 +6543,7 @@
         'nav.why': '为什么',
         'nav.trust': '信任',
         'nav.faq': '常见问题',
+        'nav.resources': '资源',
         'nav.brief': '联系我们',
         // Hero
         'hero.eyebrow.spec': '专业岩土工程承包商 · CIDB G7',

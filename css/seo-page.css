@@ -20,42 +20,49 @@ body {
   font-size: 16px; line-height: 1.65; overscroll-behavior: none;
   position: relative;
 }
-/* Subtle full-page topo background — mirrors homepage's contour identity across every SEO page */
+/* Site-wide topo contour background on every SEO page — scrolls with content,
+   tiles vertically so the contour feels like a continuous topographic map (matches
+   homepage's section-by-section .contours.subtle pattern). */
 body::before {
-  content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.10;
-  background: no-repeat center / cover
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 100%; min-height: 100vh;
+  z-index: 0; pointer-events: none; opacity: 0.32;
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 100% 70vh;
+  background-image:
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900' preserveAspectRatio='xMidYMid slice'><g fill='none' stroke='%231F1B17' stroke-width='0.55' vector-effect='non-scaling-stroke'><path d='M -20 90 C 180 70, 320 100, 440 130 C 560 160, 680 130, 820 100 C 960 70, 1100 110, 1240 100 C 1380 90, 1500 70, 1620 85'/><path d='M -20 145 C 180 125, 320 155, 440 185 C 560 215, 680 185, 820 155 C 960 125, 1100 165, 1240 155 C 1380 145, 1500 125, 1620 140'/><path d='M -20 215 C 180 200, 310 235, 430 270 C 560 310, 690 280, 830 240 C 970 205, 1110 245, 1250 235 C 1390 225, 1510 205, 1620 220'/><path d='M -20 320 C 160 305, 280 340, 380 405 C 460 460, 540 460, 620 405 C 720 335, 820 305, 940 320 C 1060 335, 1180 380, 1320 365 C 1460 350, 1560 320, 1620 330'/><path d='M -20 380 C 160 365, 270 405, 365 470 C 450 530, 535 530, 620 470 C 720 400, 825 370, 945 385 C 1065 400, 1185 445, 1325 430 C 1465 415, 1560 385, 1620 395'/><path d='M -20 460 C 160 445, 260 485, 350 555 C 440 615, 530 615, 620 555 C 720 480, 830 450, 950 465 C 1070 480, 1190 525, 1330 510 C 1470 495, 1560 465, 1620 475'/><path d='M -20 580 C 180 565, 320 590, 460 615 C 580 635, 700 615, 840 590 C 980 565, 1120 600, 1260 590 C 1400 580, 1520 565, 1620 575'/><path d='M -20 660 C 180 645, 320 670, 460 695 C 580 715, 700 695, 840 670 C 980 645, 1120 680, 1260 670 C 1400 660, 1520 645, 1620 655'/><path d='M -20 760 C 180 750, 320 775, 460 795 C 580 810, 700 795, 840 775 C 980 755, 1120 785, 1260 775 C 1400 765, 1520 750, 1620 760'/><path d='M -20 845 C 200 838, 360 855, 520 865 C 680 875, 840 865, 1000 855 C 1160 845, 1320 855, 1480 850 C 1560 848, 1600 845, 1620 845'/></g></svg>");
 }
 body > * { position: relative; z-index: 1; }
 a { color: inherit; text-decoration: none; } img, svg { display: block; max-width: 100%; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
 
-/* ===== Smart back button (top-left, sits above topbar, JS-injected) ===== */
+/* ===== Smart back button (top-left, prominent, JS-injected on every SEO page) ===== */
 .seo-back-btn {
-  position: fixed; top: 18px; left: clamp(12px, 3vw, 28px);
-  z-index: 110;
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 7px 13px 7px 11px;
-  background: color-mix(in srgb, var(--paper-bright) 92%, transparent);
-  backdrop-filter: blur(10px) saturate(1.15);
-  -webkit-backdrop-filter: blur(10px) saturate(1.15);
-  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  position: fixed; top: 20px; left: clamp(14px, 3vw, 28px);
+  z-index: 200;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px 10px 14px;
+  background: var(--ic-red);
+  color: #fff;
+  border: 0;
   border-radius: 999px;
-  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--ink-soft);
+  font-family: var(--sans); font-size: 13px; font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
   text-decoration: none;
-  box-shadow: 0 4px 14px -6px rgba(31, 27, 23, 0.16);
+  box-shadow: 0 8px 22px -8px rgba(200, 16, 46, 0.55), 0 2px 6px -2px rgba(31, 27, 23, 0.18);
   transition: all .22s var(--ease);
 }
 .seo-back-btn:hover, .seo-back-btn:focus-visible {
-  color: var(--ic-red); border-color: var(--ic-red);
-  transform: translateX(-2px);
+  background: var(--ic-red-deep);
+  transform: translateX(-3px);
+  box-shadow: 0 10px 26px -8px rgba(200, 16, 46, 0.65), 0 3px 8px -2px rgba(31, 27, 23, 0.22);
   outline: none;
 }
-.seo-back-btn svg { stroke-width: 2; }
+.seo-back-btn svg { stroke-width: 2.2; width: 16px; height: 16px; }
 @media (max-width: 540px) {
-  .seo-back-btn { top: 14px; padding: 6px 11px 6px 9px; font-size: 10px; letter-spacing: 0.12em; }
-  .seo-back-btn span { display: none; }
+  .seo-back-btn { top: 14px; padding: 9px 14px 9px 12px; font-size: 12px; gap: 6px; }
 }
 
 /* ===== Topbar (mirrors homepage .nav exactly) ===== */
@@ -147,15 +154,8 @@ a { color: inherit; text-decoration: none; } img, svg { display: block; max-widt
 .crumbs a { color: var(--grey-500); } .crumbs a:hover { color: var(--ic-red); }
 .crumbs .sep { margin: 0 10px; opacity: 0.5; } .crumbs .here { color: var(--ic-red); }
 
-/* Hero */
-.hero { padding: 36px 0 48px; position: relative; overflow: hidden; }
-/* Topographic contour background — mirrors homepage's #topo-default symbol so SEO pages share the same visual language */
-.hero::before {
-  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.28;
-  background: no-repeat center / 100% 100%
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900' preserveAspectRatio='none'><g fill='none' stroke='%231F1B17' stroke-width='0.55' vector-effect='non-scaling-stroke'><path d='M -20 90 C 180 70, 320 100, 440 130 C 560 160, 680 130, 820 100 C 960 70, 1100 110, 1240 100 C 1380 90, 1500 70, 1620 85'/><path d='M -20 145 C 180 125, 320 155, 440 185 C 560 215, 680 185, 820 155 C 960 125, 1100 165, 1240 155 C 1380 145, 1500 125, 1620 140'/><path d='M -20 215 C 180 200, 310 235, 430 270 C 560 310, 690 280, 830 240 C 970 205, 1110 245, 1250 235 C 1390 225, 1510 205, 1620 220'/><path d='M -20 320 C 160 305, 280 340, 380 405 C 460 460, 540 460, 620 405 C 720 335, 820 305, 940 320 C 1060 335, 1180 380, 1320 365 C 1460 350, 1560 320, 1620 330'/><path d='M -20 380 C 160 365, 270 405, 365 470 C 450 530, 535 530, 620 470 C 720 400, 825 370, 945 385 C 1065 400, 1185 445, 1325 430 C 1465 415, 1560 385, 1620 395'/><path d='M -20 460 C 160 445, 260 485, 350 555 C 440 615, 530 615, 620 555 C 720 480, 830 450, 950 465 C 1070 480, 1190 525, 1330 510 C 1470 495, 1560 465, 1620 475'/><path d='M -20 580 C 180 565, 320 590, 460 615 C 580 635, 700 615, 840 590 C 980 565, 1120 600, 1260 590 C 1400 580, 1520 565, 1620 575'/><path d='M -20 660 C 180 645, 320 670, 460 695 C 580 715, 700 695, 840 670 C 980 645, 1120 680, 1260 670 C 1400 660, 1520 645, 1620 655'/><path d='M -20 760 C 180 750, 320 775, 460 795 C 580 810, 700 795, 840 775 C 980 755, 1120 785, 1260 775 C 1400 765, 1520 750, 1620 760'/><path d='M -20 845 C 200 838, 360 855, 520 865 C 680 875, 840 865, 1000 855 C 1160 845, 1320 855, 1480 850 C 1560 848, 1600 845, 1620 845'/></g></svg>");
-}
-.hero > .container { position: relative; z-index: 1; }
+/* Hero (topo background lives on body::before, single source of truth) */
+.hero { padding: 36px 0 48px; }
 .hero .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ic-red); margin-bottom: 16px; }
 .hero h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(34px, 5.5vw, 60px); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 18px; max-width: 920px; }
 .hero h1 em { font-style: italic; color: var(--ic-red); font-weight: 300; }
