@@ -296,34 +296,47 @@
     };
     track.addEventListener('scroll', dismiss, { passive: true, once: true });
 
-    /* Click-and-drag scroll on the bottom-nav (matches homepage behaviour).
-       Lets desktop users hold left mouse, drag to scroll horizontally,
-       then release and click an item. Mobile keeps native touch scroll. */
+    /* Click-and-drag scroll on the bottom-nav. Disables scroll-snap during
+       the drag so cursor tracks 1:1 (no jumpy snap fight), then restores
+       it on release. Click-after-drag suppression is gated on real movement
+       AND scroll-delta to avoid eating legit clicks. */
     (function enableDragScroll(el) {
       if (!el) return;
       let isDown = false, startX = 0, startScroll = 0, moved = false;
+      const origSnap = el.style.scrollSnapType;
       el.addEventListener('mousedown', function (e) {
-        if (e.target.closest('a, button')) return; // let interactive children click normally
+        if (e.target.closest('a, button')) return;
         isDown = true; moved = false;
         startX = e.pageX; startScroll = el.scrollLeft;
+        el.style.scrollSnapType = 'none';
+        el.style.scrollBehavior = 'auto';
         el.style.cursor = 'grabbing'; el.style.userSelect = 'none';
       });
-      const stop = function () { if (!isDown) return; isDown = false; el.style.cursor = ''; el.style.userSelect = ''; };
+      const stop = function () {
+        if (!isDown) return;
+        isDown = false;
+        el.style.scrollSnapType = origSnap || '';
+        el.style.scrollBehavior = '';
+        el.style.cursor = ''; el.style.userSelect = '';
+      };
       el.addEventListener('mouseleave', stop);
       el.addEventListener('mouseup', function () {
         const movedScroll = Math.abs(el.scrollLeft - startScroll) > 4;
+        const wasMoved = moved;
         stop();
-        if (moved && movedScroll) {
-          // Suppress the click that would otherwise fire after drag-release
+        if (wasMoved && movedScroll) {
           const blocker = function (ev) { ev.preventDefault(); ev.stopPropagation(); el.removeEventListener('click', blocker, true); };
           el.addEventListener('click', blocker, true);
+          // Auto-remove blocker after one event loop so future clicks work
+          setTimeout(function () { el.removeEventListener('click', blocker, true); }, 50);
         }
       });
       el.addEventListener('mousemove', function (e) {
         if (!isDown) return;
         const dx = e.pageX - startX;
-        if (Math.abs(dx) > 12) moved = true;
+        if (Math.abs(dx) > 6) moved = true;
         el.scrollLeft = startScroll - dx;
+        e.preventDefault();
       });
       el.style.cursor = 'grab';
     })(track);
