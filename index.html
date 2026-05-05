@@ -515,8 +515,8 @@
      CTAs, contact form, footer. Body paragraphs stay EN until Phase 2. */
   .lang-toggle {
     position: fixed;
-    top: 14px;
-    right: 14px;
+    top: 18px;
+    right: clamp(20px, 3vw, 36px);
     z-index: 110;
     display: flex;
     gap: 1px;
@@ -524,9 +524,9 @@
     background: rgba(244, 234, 210, 0.78);
     backdrop-filter: blur(8px) saturate(1.2);
     -webkit-backdrop-filter: blur(8px) saturate(1.2);
-    border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
     border-radius: 999px;
-    box-shadow: 0 4px 14px -4px rgba(0,0,0,0.12);
+    /* Cleaner: no drop shadow. Border + backdrop-blur is enough definition. */
   }
   .lang-toggle button {
     padding: 5px 11px;
@@ -556,8 +556,8 @@
      at top-right without competing with the brand. */
   @media (max-width: 540px) {
     .lang-toggle {
-      top: 22px;
-      right: 12px;
+      top: 20px;
+      right: 18px;
       padding: 0;
       gap: 0;
       background: transparent;
@@ -3257,16 +3257,15 @@
     -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
   }
   /* On small phones the 24px edge fade can clip the first/last nav item — soften it.
-     Also: mandatory snap + scroll-snap-stop:always so each swipe lands cleanly
-     on one nav item — feels slower / more deliberate than momentum-fly-by. */
+     iOS momentum re-enabled (touch) and snap-stop relaxed to default so a strong
+     swipe can carry through multiple items. Still snaps to each item at rest. */
   @media (max-width: 540px) {
     .bn-scroll {
       mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
       scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: auto;
+      -webkit-overflow-scrolling: touch;
     }
-    .bn-scroll .bn-item { scroll-snap-stop: always; }
   }
   .bn-scroll::-webkit-scrollbar { display: none; }
   .bn-scroll .bn-item { scroll-snap-align: center; flex-shrink: 0; }
@@ -5631,9 +5630,10 @@
   }
 
   // Click-and-drag scroll for any horizontal scrollable strip.
-  // Disables scroll-snap during drag so cursor tracks 1:1 (no snap fight),
-  // then restores on release. Click-after-drag suppression auto-clears after
-  // one event loop so subsequent clicks always work.
+  // CRITICAL: blocker must be gated on isDown, otherwise stale `moved` state
+  // from a previous real drag will block the next link click. Also: every
+  // mousedown resets state, even when bailing on links, so blocker can never
+  // fire on a non-drag interaction.
   function enableDragScroll(el) {
     if (!el) return;
     let isDown = false;
@@ -5642,11 +5642,13 @@
     let moved = false;
     let origSnap = '';
     el.addEventListener('mousedown', (e) => {
+      // Always reset state so a previous drag's `moved=true` can't poison
+      // a subsequent link click.
+      moved = false;
+      startScroll = el.scrollLeft;
       if (e.target.closest('a, button')) return;
       isDown = true;
-      moved = false;
       startX = e.pageX;
-      startScroll = el.scrollLeft;
       origSnap = el.style.scrollSnapType;
       el.style.scrollSnapType = 'none';
       el.style.scrollBehavior = 'auto';
@@ -5663,13 +5665,16 @@
     };
     el.addEventListener('mouseleave', stop);
     el.addEventListener('mouseup', (e) => {
+      const wasDragging = isDown;
       const movedScroll = Math.abs(el.scrollLeft - startScroll) > 4;
       const wasMoved = moved;
       stop();
-      if (wasMoved && movedScroll) {
+      // Only block click if a real drag actually happened (isDown was true
+      // AND user moved AND scroll changed). Without the wasDragging gate,
+      // a stale `moved=true` from a prior drag would kill a link click.
+      if (wasDragging && wasMoved && movedScroll) {
         const blocker = (ev) => { ev.preventDefault(); ev.stopPropagation(); el.removeEventListener('click', blocker, true); };
         el.addEventListener('click', blocker, true);
-        // Auto-remove blocker after one event loop so future clicks work
         setTimeout(() => { el.removeEventListener('click', blocker, true); }, 50);
       }
     });
@@ -5685,6 +5690,21 @@
   // Apply to engagements carousel + all solution-card carousels
   enableDragScroll(document.querySelector('.case-grid'));
   enableDragScroll(document.querySelector('.bn-scroll'));
+
+  // Desktop wheel: convert vertical scroll-wheel ticks to horizontal scroll
+  // on the bottom-nav strip (otherwise the page scrolls instead — and with
+  // the scrollbar hidden, desktop mice have no way to pan the strip).
+  (() => {
+    const bnScroll = document.querySelector('.bn-scroll');
+    if (!bnScroll) return;
+    bnScroll.addEventListener('wheel', (e) => {
+      // Skip if user is intentionally scrolling horizontally (trackpad/shift+wheel)
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      if (e.deltaY === 0) return;
+      e.preventDefault();
+      bnScroll.scrollLeft += e.deltaY;
+    }, { passive: false });
+  })();
 
   // Hide the bottom-nav SWIPE hint after the first user scroll
   (() => {
