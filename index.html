@@ -1879,6 +1879,19 @@
     padding-top: 16px;
     margin-top: 4px;
   }
+  .cap-card .cap-learn-more {
+    display: inline-block;
+    margin-top: 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ic-red);
+    border-bottom: 1px solid var(--ic-red);
+    padding-bottom: 2px;
+    transition: color .25s var(--ease), border-color .25s var(--ease);
+  }
+  .cap-card .cap-learn-more:hover { color: var(--ic-red-deep); border-color: var(--ic-red-deep); }
   @media (max-width: 880px) { .cap-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .cap-grid { grid-template-columns: 1fr; } }
 
@@ -4639,6 +4652,7 @@
             <li><span>04</span><span data-i18n="cap1.s4">Facing application</span></li>
             <li><span>05</span><span data-i18n="cap1.s5">Load testing and verification</span></li>
           </ul>
+          <a href="/soil-nailing/" class="cap-learn-more" data-i18n="cap1.learn">Read the full soil nailing guide →</a>
         </details>
       </div>
 
