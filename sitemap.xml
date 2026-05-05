@@ -97,6 +97,33 @@
   <url><loc>https://infraconcrete.co/kedah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://infraconcrete.co/perlis/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://infraconcrete.co/labuan/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- Sabah + Sarawak as dedicated separate pages (PR all-states) -->
+  <url><loc>https://infraconcrete.co/sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/kelantan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/terengganu/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <!-- BM versions of all 10 newly-added states -->
+  <url><loc>https://infraconcrete.co/bm/negeri-sembilan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/melaka/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/perak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/kedah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/perlis/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/bm/labuan/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/bm/sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/kelantan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/terengganu/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <!-- ZH versions of all 10 newly-added states -->
+  <url><loc>https://infraconcrete.co/zh/negeri-sembilan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/melaka/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/perak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/kedah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/perlis/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/zh/labuan/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/zh/sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/kelantan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/terengganu/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <!-- Reinforced Soil Slopes (RSS) — EN + BM + ZH -->
   <url>
     <loc>https://infraconcrete.co/reinforced-soil-slopes/</loc>
