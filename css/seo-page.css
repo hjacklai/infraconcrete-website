@@ -256,8 +256,10 @@ section.block:first-of-type { border-top: 0; padding-top: 0; }
 .btn-ghost { background: transparent; color: var(--paper); border: 1px solid rgba(244, 234, 210, 0.32); }
 .btn-ghost:hover { border-color: var(--paper); }
 
-/* Footer (rich, mirrors homepage .footer) */
-footer { background: var(--paper); color: var(--ink-soft); padding: 70px 0 32px; padding-bottom: 140px; font-size: 13px; border-top: 1px solid var(--grey-line); }
+/* Footer (rich, mirrors homepage .footer). Tight bottom padding so scroll
+   ends right after the credentials line — bottom-nav clearance is handled
+   by body { padding-bottom } below, no need to double-pad here. */
+footer { background: var(--paper); color: var(--ink-soft); padding: 70px 0 28px; font-size: 13px; border-top: 1px solid var(--grey-line); }
 footer .container { max-width: 1100px; }
 footer p { margin: 0 0 16px; }
 footer a { color: var(--ink-soft); }
@@ -279,8 +281,10 @@ footer li a { font-size: 13.5px; color: var(--ink-soft); }
 @media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-grid .fg-brand { grid-column: 1 / -1; } }
 @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } .footer-group { gap: 14px; } .footer-group-r { font-size: 11px; } .footer-bottom { font-size: 9.5px; flex-direction: column; align-items: flex-start; gap: 10px; } }
 
-/* Bottom-nav swipe pill (matches homepage). Injected by /js/seo-nav.js */
-body { padding-bottom: 100px; }
+/* Bottom-nav swipe pill (matches homepage). Injected by /js/seo-nav.js.
+   Just enough clearance for the floating pill (~72px tall + 12px from bottom)
+   so scroll ends right after the credentials line — no big blank below. */
+body { padding-bottom: 60px; }
 .bottom-nav {
   position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%) translateY(28px);
   z-index: 200;

@@ -560,7 +560,11 @@
      CTAs, contact form, footer. Body paragraphs stay EN until Phase 2. */
   .lang-toggle {
     position: fixed;
-    top: 18px;
+    /* Vertically center with the nav's logo + Panthera badge.
+       Nav-inner is 76px tall with align-items:center, so its visual
+       center is at y=38px. Toggle pill is ~30px tall, so top: 23px
+       puts its center at 38px — perfectly aligned with the logo. */
+    top: 23px;
     /* Right offset uses TWO rules whichever is larger:
        (a) clamp(20px, 4vw, 48px) — keeps tablet/narrow-desktop breathing room
            proportional to viewport (~28px @ 720px, ~44px @ 1100px).
@@ -638,12 +642,13 @@
        extend under the fixed-position lang toggle. ~70px = pill width + gap. */
     .nav-inner { padding-right: 70px; }
   }
-  /* Very narrow phones: hide "Part of" label, keep just the Panthera logo
-     image so the lang toggle has even more room. Logo still communicates
-     parentage without the wordmark. */
+  /* Very narrow phones: keep "Part of" label visible (user request — important
+     brand context). Just shrink it tighter so it fits next to the Panthera
+     logo without competing with the lang toggle. */
   @media (max-width: 420px) {
-    .group-badge .gb-label { display: none; }
-    .group-badge { padding-left: 6px; margin-left: 6px; }
+    .group-badge { padding-left: 6px; margin-left: 6px; gap: 3px; }
+    .group-badge .gb-label { font-size: 6.5px; letter-spacing: 0.08em; }
+    .group-badge img { height: 9px; }
   }
 
   /* =========================================================
@@ -5662,6 +5667,14 @@
           <li><a href="/resources/" data-href-en="/resources/" data-href-bm="/bm/sumber/" data-href-zh="/zh/resources/" data-i18n="foot.co.resources">Resources Hub</a></li>
         </ul>
       </div>
+    </div>
+
+    <div class="footer-group">
+      <div class="footer-group-l">
+        <span class="fg-label" data-i18n="footer.partof">Part of</span>
+        <img src="images/brand/panthera-logo.png" alt="Panthera Group" height="22" style="display:block;width:auto;opacity:.65;">
+      </div>
+      <p class="footer-group-r" data-i18n="footer.tagline">A Panthera Group company. Engineering slopes for maximum utility since 2018.</p>
     </div>
 
     <div class="footer-bottom">
