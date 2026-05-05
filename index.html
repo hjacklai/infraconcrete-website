@@ -516,12 +516,13 @@
   .lang-toggle {
     position: fixed;
     top: 18px;
-    /* Align with the page content right edge on wide screens (content max-width
-       is 1100px). On narrow viewports stays at 20px from edge. The calc ties
-       the toggle to where the content actually is, not the raw viewport — so
-       on a 1920px screen it sits ~410px in from the edge instead of looking
-       pinned to the viewport corner. */
-    right: max(20px, calc((100vw - 1100px) / 2));
+    /* Right offset uses TWO rules whichever is larger:
+       (a) clamp(20px, 4vw, 48px) — keeps tablet/narrow-desktop breathing room
+           proportional to viewport (~28px @ 720px, ~44px @ 1100px).
+       (b) calc((100vw - 1100px) / 2) — on wide screens, aligns with the page
+           content right edge so it doesn't look pinned to the viewport corner.
+       max() picks whichever is bigger so both regimes get good spacing. */
+    right: max(clamp(20px, 4vw, 48px), calc((100vw - 1100px) / 2));
     z-index: 110;
     display: flex;
     gap: 1px;
@@ -574,10 +575,12 @@
     }
     .lang-toggle button:not(.active) { display: none; }
     .lang-toggle button.active {
-      padding: 5px 12px;
-      font-size: 11px;
-      min-height: 30px;
-      letter-spacing: 0.1em;
+      /* Compact pill so it doesn't overlap the Panthera badge in the nav,
+         especially when 中文 is active (CJK glyphs are wider than EN/BM). */
+      padding: 3px 10px;
+      font-size: 10px;
+      min-height: 26px;
+      letter-spacing: 0.08em;
       /* Translucent ribbon — content shows through */
       background: rgba(244, 234, 210, 0.35);
       color: var(--ink);
@@ -586,6 +589,16 @@
       backdrop-filter: blur(12px) saturate(1.3);
       -webkit-backdrop-filter: blur(12px) saturate(1.3);
     }
+    /* Reserve right-side space in the nav so the brand+badge can never
+       extend under the fixed-position lang toggle. ~70px = pill width + gap. */
+    .nav-inner { padding-right: 70px; }
+  }
+  /* Very narrow phones: hide "Part of" label, keep just the Panthera logo
+     image so the lang toggle has even more room. Logo still communicates
+     parentage without the wordmark. */
+  @media (max-width: 420px) {
+    .group-badge .gb-label { display: none; }
+    .group-badge { padding-left: 6px; margin-left: 6px; }
   }
 
   /* =========================================================
@@ -3241,7 +3254,10 @@
     align-items: center;
     box-shadow: 0 12px 40px -10px rgba(0,0,0,0.18), 0 4px 12px -4px rgba(0,0,0,0.10);
     border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
-    max-width: calc(100vw - 24px);
+    /* Tablet / narrow desktop: 24px breathing room each side so the pill
+       doesn't kiss the viewport edges. Mobile (<=540px) gets a tighter rule
+       below since there the pill is meant to feel app-bar-edge-to-edge. */
+    max-width: calc(100vw - 48px);
     /* Hidden until scrolled past the hero — gives the landing-page hero
        breathing room before the floating nav pill drops in. */
     opacity: 0; pointer-events: none;
@@ -3327,7 +3343,7 @@
   @media (min-width: 1100px) {
     .bn-scroll { mask-image: none; -webkit-mask-image: none; }
     .bn-hint { display: none; }
-    .bottom-nav { padding: 6px 10px 6px 14px; gap: 6px; }
+    .bottom-nav { padding: 6px 10px 6px 14px; gap: 6px; max-width: calc(100vw - 24px); }
     .bn-scroll { padding-right: 4px; }
   }
   @media (max-width: 880px) {
@@ -5639,62 +5655,76 @@
     btn.setAttribute('aria-expanded', isOpening ? 'true' : 'false');
   }
 
-  // Click-and-drag scroll for any horizontal scrollable strip.
-  // CRITICAL: blocker must be gated on isDown, otherwise stale `moved` state
-  // from a previous real drag will block the next link click. Also: every
-  // mousedown resets state, even when bailing on links, so blocker can never
-  // fire on a non-drag interaction.
+  // Click-and-drag scroll using LONG-PRESS gesture: a quick click navigates
+  // (link/button works normally), but holding for 250ms OR moving >8px while
+  // pressed activates drag-to-scroll mode. This way every nav item is
+  // clickable as a link AND the strip is drag-scrollable, with no conflict.
   function enableDragScroll(el) {
     if (!el) return;
     let isDown = false;
+    let isDragging = false;
     let startX = 0;
     let startScroll = 0;
-    let moved = false;
+    let pressTimer = null;
     let origSnap = '';
-    el.addEventListener('mousedown', (e) => {
-      // Always reset state so a previous drag's `moved=true` can't poison
-      // a subsequent link click.
-      moved = false;
-      startScroll = el.scrollLeft;
-      if (e.target.closest('a, button')) return;
-      isDown = true;
-      startX = e.pageX;
+
+    const startDragMode = () => {
+      if (isDragging) return;
+      isDragging = true;
       origSnap = el.style.scrollSnapType;
       el.style.scrollSnapType = 'none';
       el.style.scrollBehavior = 'auto';
       el.style.cursor = 'grabbing';
       el.style.userSelect = 'none';
+    };
+
+    el.addEventListener('mousedown', (e) => {
+      isDown = true;
+      isDragging = false;
+      startX = e.pageX;
+      startScroll = el.scrollLeft;
+      // Long-press: after 250ms still pressed -> drag mode activates
+      clearTimeout(pressTimer);
+      pressTimer = setTimeout(() => { if (isDown) startDragMode(); }, 250);
     });
+
     const stop = () => {
-      if (!isDown) return;
+      clearTimeout(pressTimer);
+      pressTimer = null;
       isDown = false;
-      el.style.scrollSnapType = origSnap || '';
-      el.style.scrollBehavior = '';
-      el.style.cursor = '';
-      el.style.userSelect = '';
+      if (isDragging) {
+        isDragging = false;
+        el.style.scrollSnapType = origSnap || '';
+        el.style.scrollBehavior = '';
+        el.style.cursor = '';
+        el.style.userSelect = '';
+      }
     };
     el.addEventListener('mouseleave', stop);
-    el.addEventListener('mouseup', (e) => {
-      const wasDragging = isDown;
-      const movedScroll = Math.abs(el.scrollLeft - startScroll) > 4;
-      const wasMoved = moved;
+
+    el.addEventListener('mouseup', () => {
+      const wasDragging = isDragging;
       stop();
-      // Only block click if a real drag actually happened (isDown was true
-      // AND user moved AND scroll changed). Without the wasDragging gate,
-      // a stale `moved=true` from a prior drag would kill a link click.
-      if (wasDragging && wasMoved && movedScroll) {
+      // Only suppress the click if a real drag happened (long-press OR moved>8px).
+      // A quick click never triggers this, so links/buttons fire normally.
+      if (wasDragging) {
         const blocker = (ev) => { ev.preventDefault(); ev.stopPropagation(); el.removeEventListener('click', blocker, true); };
         el.addEventListener('click', blocker, true);
         setTimeout(() => { el.removeEventListener('click', blocker, true); }, 50);
       }
     });
+
     el.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       const dx = e.pageX - startX;
-      if (Math.abs(dx) > 6) moved = true;
-      el.scrollLeft = startScroll - dx;
-      e.preventDefault();
+      // Intentional drag: >8px movement before timer fires -> activate immediately
+      if (Math.abs(dx) > 8 && !isDragging) startDragMode();
+      if (isDragging) {
+        el.scrollLeft = startScroll - dx;
+        e.preventDefault();
+      }
     });
+
     el.style.cursor = 'grab';
   }
   // Apply to engagements carousel + all solution-card carousels
