@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /.claude/
+Disallow: /_source/
+
+Sitemap: https://infraconcrete.co/sitemap.xml
