@@ -81,4 +81,38 @@
   </url>
   <url><loc>https://infraconcrete.co/landslide-prevention/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/hillside-remedial/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/sheet-piling/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/earthworks/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/erosion-control/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/post-landslide-remediation/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/slope-monitoring/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/for-developers/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/for-consulting-engineers/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/for-government/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/for-quantity-surveyors/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://infraconcrete.co/bm/kontraktor-geoteknikal/</loc>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/kontraktor-geoteknikal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/bm/soil-nailing/</loc>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/soil-nailing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/soil-nailing/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/soil-nailing/"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/zh/guniting/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/guniting/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/guniting/"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/zh/horizontal-drains/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/horizontal-drains/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/horizontal-drains/"/>
+    <changefreq>monthly</changefreq><priority>0.85</priority>
+  </url>
 </urlset>
