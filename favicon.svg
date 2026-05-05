@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="4" fill="#C8102E"/>
-  <!-- Panthera cascading "E" — three contour arms stepping down right -->
-  <path d="M 6 9 L 18 9 L 22 13 L 26 13" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 6 16 L 18 16 L 22 20 L 26 20" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="6" y1="23" x2="22" y2="23" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Panthera "E" — three stacked angled hooks (matches the brand mark) -->
+  <path d="M 6 9 L 21 9 L 25 13 L 23 13 L 23 11" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 6 16 L 21 16 L 25 20 L 23 20 L 23 18" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 6 23 L 21 23 L 25 27 L 23 27 L 23 25" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
