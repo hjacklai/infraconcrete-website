@@ -1,7 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#FAF3E0"/>
-  <!-- Panthera "E" — three angled hooks, brand grey on cream paper (matches the wordmark) -->
-  <path d="M 6 9 L 21 9 L 25 13 L 23 13 L 23 11" stroke="#5A5148" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 6 16 L 21 16 L 25 20 L 23 20 L 23 18" stroke="#5A5148" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 6 23 L 21 23 L 25 27 L 23 27 L 23 25" stroke="#5A5148" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <image href="/images/brand/panthera-e.png" xlink:href="/images/brand/panthera-e.png" width="32" height="32" preserveAspectRatio="xMidYMid meet"/>
 </svg>
