@@ -6940,6 +6940,22 @@
     } catch (e) {}
     setLang(initial, { updateUrl: false });
 
+    // Re-apply lang when page is restored from bfcache (back/forward nav).
+    // If a visitor came back from a SEO page they had switched to BM/ZH on,
+    // their localStorage now reflects that, but bfcache doesn't re-run JS
+    // init. This pageshow handler syncs the displayed language to whatever
+    // localStorage says — so back-button preserves the chosen language too.
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) {
+        try {
+          const stored = localStorage.getItem('lang') || 'en';
+          if (stored !== document.documentElement.lang.replace(/-Hans$/, '').replace('zh', 'zh').replace('ms', 'bm')) {
+            setLang(stored, { updateUrl: false });
+          }
+        } catch (err) {}
+      }
+    });
+
     // On click: if user clicks the active button (the only one visible on
     // mobile), cycle to the next language. Otherwise switch directly.
     const langOrder = ['en', 'bm', 'zh'];

@@ -76,14 +76,15 @@
       if (href) window.location.href = href;
     });
 
-    /* Back button: sits top-right BELOW the topbar (under the language
-       toggle), so it doesn't block the brand logo on the left. Lands on
-       the homepage in the SAME language the visitor is currently viewing,
-       EN -> /, BM -> /?lang=bm, ZH -> /?lang=zh. The homepage's i18n loader
-       picks up the lang param on arrival and sets the matching language. */
+    /* Back button: sits INSIDE the topbar-row (between brand group and the
+       language toggle) so it doesn't block content or overlap with text.
+       On click: persist current lang to localStorage so the landing page
+       picks it up; if previous page was on infraconcrete.co, history.back()
+       to preserve scroll position; otherwise hard-navigate to /?lang=X. */
     if (!document.querySelector('.seo-back-btn')) {
       const backLabel = isMs ? 'Kembali' : isZh ? '返回' : 'Back';
       const backTitle = isMs ? 'Kembali ke laman utama' : isZh ? '返回首页' : 'Back to home';
+      const langCode = isMs ? 'bm' : isZh ? 'zh' : 'en';
       const backHref = isMs ? '/?lang=bm' : isZh ? '/?lang=zh' : '/';
       const backBtn = document.createElement('a');
       backBtn.className = 'seo-back-btn';
@@ -92,7 +93,21 @@
       backBtn.innerHTML =
         '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>' +
         '<span>' + backLabel + '</span>';
-      document.body.appendChild(backBtn);
+      backBtn.addEventListener('click', function (e) {
+        try { localStorage.setItem('lang', langCode); } catch (err) {}
+        try {
+          var ref = document.referrer || '';
+          // If user came from another infraconcrete.co page, history.back()
+          // restores their scroll position via bfcache. The homepage's
+          // pageshow handler picks up localStorage.lang on bfcache restore.
+          if (ref && ref.indexOf(window.location.origin) === 0 && window.history.length > 1) {
+            e.preventDefault();
+            window.history.back();
+          }
+        } catch (err) { /* fall through to href */ }
+      });
+      // Insert into topbar between brand group and lang toggle
+      topbarRow.appendChild(backBtn);
     }
 
     if (homeLink) homeLink.replaceWith(toggle);
