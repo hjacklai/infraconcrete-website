@@ -81,32 +81,35 @@
        deep-links to the matching section so e.g. /soil-nailing/ -> #cap-soil-nailing,
        /sabah/ -> #record. The href is rewritten on mount so it's always fresh. */
     const SECTION_MAP = {
-      // Capabilities cards (each has a matching #cap-* id on the homepage)
+      // Capabilities cards (in-house specialist services — each has its own #cap-* card)
       'soil-nailing': '#cap-soil-nailing',
       'guniting': '#cap-guniting',
       'rock-bolting': '#cap-rock-bolting',
       'rock-netting': '#cap-rock-netting',
       'slope-stabilization': '#cap-slope-stabilization',
       'rockfall-barrier': '#cap-rockfall-barrier',
-      // BM service slugs that map to the same cards
-      'kontraktor-cerun': '#cap-slope-stabilization',
-      // Slope-family pages -> the slope-stabilization umbrella card
-      'slope-protection': '#cap-slope-stabilization',
-      'slope-monitoring': '#cap-slope-stabilization',
-      'horizontal-drains': '#cap-slope-stabilization',
-      'erosion-control': '#cap-slope-stabilization',
-      'landslide-prevention': '#cap-slope-stabilization',
-      'post-landslide-remediation': '#cap-slope-stabilization',
-      'hillside-remedial': '#cap-slope-stabilization',
-      'reinforced-soil-slopes': '#cap-slope-stabilization',
-      'saliran-cerun': '#cap-slope-stabilization',
-      // Retaining-family pages -> the retaining systems card in #solutions
+      // SOLUTIONS sol-cards (high-level "what we do" — return user to where they came from)
+      // The /slope-protection/ guide is opened from the Slope Protection sol-card,
+      // so HOME from there should land back on that exact card (#cap-slope), NOT
+      // the lower-down cap-slope-stabilization (capabilities) card.
+      'slope-protection': '#cap-slope',
+      'kontraktor-cerun': '#cap-slope',
+      // Slope-family pages — return to slope protection sol-card (the umbrella)
+      'slope-monitoring': '#cap-slope',
+      'horizontal-drains': '#cap-slope',
+      'erosion-control': '#cap-slope',
+      'landslide-prevention': '#cap-slope',
+      'post-landslide-remediation': '#cap-slope',
+      'hillside-remedial': '#cap-slope',
+      'saliran-cerun': '#cap-slope',
+      // Retaining family — return to retaining systems sol-card
       'retaining-walls': '#cap-retaining',
       'mse-wall': '#cap-retaining',
+      'reinforced-soil-slopes': '#cap-retaining',
       'sheet-pile': '#cap-retaining',
       'sheet-piling': '#cap-retaining',
       'tembok-penahan': '#cap-retaining',
-      // Land-creation family
+      // Land-creation family — return to land creation sol-card
       'land-creation': '#cap-landcreation',
       'earthworks': '#cap-landcreation',
       'kerja-tanah': '#cap-landcreation',

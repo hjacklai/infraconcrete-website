@@ -327,16 +327,20 @@ body { padding-bottom: 60px; }
 }
 .bn-scroll::-webkit-scrollbar { display: none; }
 .bn-scroll .bn-item { scroll-snap-align: center; flex-shrink: 0; }
+/* .bn-item sizing matches homepage exactly so the floating pill looks identical
+   on landing page and every SEO page. min-height:44px = WCAG tap target. */
 .bn-item {
-  display: flex; flex-direction: column; align-items: center; gap: 3px;
-  padding: 8px 12px; min-width: 64px;
-  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--ink-soft);
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px; padding: 8px 12px;
+  min-width: 52px; min-height: 44px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--ink) 70%, transparent);
+  text-decoration: none;
   border-radius: 999px;
   transition: background .22s var(--ease), color .22s var(--ease);
 }
 .bn-item:hover { background: rgba(31, 27, 23, 0.06); color: var(--ic-red); }
-.bn-item svg { width: 22px; height: 22px; opacity: 0.85; }
+.bn-item svg { width: 20px; height: 20px; display: block; }
 .bn-cta {
   background: var(--ic-red); color: #fff !important;
   padding: 10px 18px; min-width: auto;
@@ -344,11 +348,13 @@ body { padding-bottom: 60px; }
 }
 .bn-cta:hover { background: var(--ic-red-deep); color: #fff !important; }
 .bn-cta svg { opacity: 1; }
+/* Mobile bottom-nav sizing now matches homepage: same gap (6px), same outer
+   padding, same item size — no more "smaller pill on SEO pages" mismatch. */
 @media (max-width: 540px) {
-  .bottom-nav { gap: 2px; padding: 4px; bottom: 12px; }
-  .bn-item { min-width: 56px; padding: 7px 10px; font-size: 9px; }
+  .bottom-nav { padding: 6px 10px 6px 14px; gap: 6px; bottom: 12px; max-width: calc(100vw - 24px); }
+  .bn-item { font-size: 9px; }
   .bn-item svg { width: 20px; height: 20px; }
-  .bottom-nav .bn-hint { padding: 0 8px; font-size: 9px; }
+  .bottom-nav .bn-hint { padding: 0 6px 0 4px; font-size: 8.5px; }
   /* Mobile scroll: proximity snap + iOS momentum on (touch) + snap-stop:normal
      so a stronger swipe carries through 2-3 items but still rests on a snap
      point. Faster/smoother feel than mandatory + always-stop. */
