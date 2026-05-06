@@ -349,13 +349,14 @@ body { padding-bottom: 60px; }
   .bn-item { min-width: 56px; padding: 7px 10px; font-size: 9px; }
   .bn-item svg { width: 20px; height: 20px; }
   .bottom-nav .bn-hint { padding: 0 8px; font-size: 9px; }
-  /* Slower, more deliberate scroll on mobile: mandatory snap forces each
-     swipe to land cleanly on one nav item instead of momentum-flying past. */
+  /* Mobile scroll: proximity snap + iOS momentum on (touch) + snap-stop:normal
+     so a stronger swipe carries through 2-3 items but still rests on a snap
+     point. Faster/smoother feel than mandatory + always-stop. */
   .bn-scroll {
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
   }
-  .bn-scroll .bn-item { scroll-snap-stop: always; }
+  .bn-scroll .bn-item { scroll-snap-stop: normal; }
 }
 @media (max-height: 500px) and (orientation: landscape) {
   body { padding-bottom: 110px; } .bottom-nav { bottom: 16px; }

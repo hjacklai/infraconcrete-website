@@ -3357,14 +3357,17 @@
      Combined with mandatory snap above, scrolling always lands on an item. */
   .bn-scroll > .bn-item { scroll-snap-stop: always; }
   /* On small phones the 24px edge fade can clip the first/last nav item — soften it.
-     iOS momentum on so swipes feel native; snap-stop:always keeps each
-     swipe deliberate so users don't fly past their target icon. */
+     iOS momentum on so swipes feel native. Mobile relaxes snap-stop to default
+     so a stronger swipe carries through 2-3 items (still snaps to one at rest)
+     — feels noticeably faster than the desktop "always stop on next item" rule. */
   @media (max-width: 540px) {
     .bn-scroll {
       mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
       -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x proximity;
     }
+    .bn-scroll > .bn-item { scroll-snap-stop: normal; }
   }
   .bn-scroll::-webkit-scrollbar { display: none; }
   .bn-scroll .bn-item { scroll-snap-align: center; flex-shrink: 0; }
