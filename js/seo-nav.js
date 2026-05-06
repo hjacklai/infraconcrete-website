@@ -117,9 +117,13 @@
       'kontraktor-geoteknikal': '#capabilities',
       'geotechnical-contractor': '#capabilities',
       // Slope-specialty terms (repair / rectification / reinforcement) -> Slope Protection sol-card
+      // EN + BM + ZH parity for the same set of slugs.
       'slope-repair': '#cap-slope',
       'slope-rectification': '#cap-slope',
       'slope-reinforcement': '#cap-slope',
+      'pembaikan-cerun': '#cap-slope',
+      'pemulihan-cerun': '#cap-slope',
+      'pengukuhan-cerun': '#cap-slope',
       // Location pages -> track record section (geographic delivery proof)
       'klang-valley': '#record',
       'penang': '#record', 'johor': '#record', 'pahang': '#record',
