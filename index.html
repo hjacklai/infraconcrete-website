@@ -3342,9 +3342,11 @@
     overflow-x: auto;
     overscroll-behavior-x: none;
     scroll-behavior: smooth;
-    /* Mandatory snap so wheel scroll AND drag-release always land precisely
-       on a nav item — no overshoot, no half-visible icons. */
-    scroll-snap-type: x mandatory;
+    /* Proximity snap (universal): scroll lands on a nav item at rest, but
+       a stronger drag/swipe/wheel can carry through 2-3 items via momentum.
+       Same behavior on mobile, tablet, and desktop — feels smooth across
+       all input methods. snap-stop defaults to normal (no force-stop). */
+    scroll-snap-type: x proximity;
     scrollbar-width: none;
     -ms-overflow-style: none;
     /* Stop iOS/Chrome from inserting a 300ms tap delay on this scroller */
@@ -3353,21 +3355,16 @@
     mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
   }
-  /* Each item is its own snap-stop — swipes/wheel can't skip past icons.
-     Combined with mandatory snap above, scrolling always lands on an item. */
-  .bn-scroll > .bn-item { scroll-snap-stop: always; }
   /* On small phones the 24px edge fade can clip the first/last nav item — soften it.
-     iOS momentum on so swipes feel native. Mobile relaxes snap-stop to default
-     so a stronger swipe carries through 2-3 items (still snaps to one at rest)
-     — feels noticeably faster than the desktop "always stop on next item" rule. */
+     iOS momentum on so swipes feel native. Snap behavior already matches
+     desktop now (proximity + default snap-stop) so the feel is identical
+     across mobile, tablet, and desktop. */
   @media (max-width: 540px) {
     .bn-scroll {
       mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
       -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x proximity;
     }
-    .bn-scroll > .bn-item { scroll-snap-stop: normal; }
   }
   .bn-scroll::-webkit-scrollbar { display: none; }
   .bn-scroll .bn-item { scroll-snap-align: center; flex-shrink: 0; }
@@ -5836,21 +5833,18 @@
   enableDragScroll(document.querySelector('.bn-scroll'));
 
   // Desktop wheel: convert vertical scroll-wheel ticks to horizontal scroll
-  // on the bottom-nav strip. Clamp per-tick deltaY to ~one nav-item width
-  // (~70px) so a single wheel notch never overshoots the next icon — fixes
-  // the "scroll-too-fast, can't see what I'm scrolling past" problem.
+  // on the bottom-nav strip. Clamp per-tick deltaY to ~120px (~2 icons) so
+  // wheel scrolling feels smooth and momentum-ish, matching the mobile swipe
+  // feel. With proximity snap it lands cleanly on an icon at rest.
   (() => {
     const bnScroll = document.querySelector('.bn-scroll');
     if (!bnScroll) return;
     bnScroll.addEventListener('wheel', (e) => {
-      // Skip if user is intentionally scrolling horizontally (trackpad/shift+wheel)
       if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
       if (e.deltaY === 0) return;
       e.preventDefault();
-      // Clamp to ~70px per tick so each wheel detent moves about one icon,
-      // not three. Trackpad pixel-deltas (small) pass through unscaled.
       const dy = e.deltaY;
-      const clamped = Math.sign(dy) * Math.min(Math.abs(dy), 70);
+      const clamped = Math.sign(dy) * Math.min(Math.abs(dy), 120);
       bnScroll.scrollLeft += clamped;
     }, { passive: false });
   })();

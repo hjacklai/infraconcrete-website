@@ -410,14 +410,13 @@
     })(track);
 
     // Desktop wheel: convert vertical wheel ticks to horizontal pan.
-    // Clamp per-tick deltaY to ~70px (one icon) so a single notch never
-    // overshoots multiple items. Trackpad pixel deltas pass through unscaled.
+    // 120px clamp (~2 icons) matches homepage feel — smooth/momentum-ish.
     track.addEventListener('wheel', function (e) {
       if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
       if (e.deltaY === 0) return;
       e.preventDefault();
       var dy = e.deltaY;
-      track.scrollLeft += Math.sign(dy) * Math.min(Math.abs(dy), 70);
+      track.scrollLeft += Math.sign(dy) * Math.min(Math.abs(dy), 120);
     }, { passive: false });
   }
 

@@ -355,14 +355,12 @@ body { padding-bottom: 60px; }
   .bn-item { font-size: 9px; }
   .bn-item svg { width: 20px; height: 20px; }
   .bottom-nav .bn-hint { padding: 0 6px 0 4px; font-size: 8.5px; }
-  /* Mobile scroll: proximity snap + iOS momentum on (touch) + snap-stop:normal
-     so a stronger swipe carries through 2-3 items but still rests on a snap
-     point. Faster/smoother feel than mandatory + always-stop. */
+  /* Mobile scroll: just iOS momentum on (touch). Snap behavior is now
+     proximity (universal) + default snap-stop, so feel is consistent
+     across mobile, tablet, and desktop. */
   .bn-scroll {
-    scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
   }
-  .bn-scroll .bn-item { scroll-snap-stop: normal; }
 }
 @media (max-height: 500px) and (orientation: landscape) {
   body { padding-bottom: 110px; } .bottom-nav { bottom: 16px; }
