@@ -110,6 +110,22 @@ Slope Repair × State (post-failure remediation, emergency response):
 Geotechnical Contractor × State (specialist geotech / "geotech contractor"):
 - https://infraconcrete.co/geotechnical-contractor-klang-valley/ · /penang/ · /johor/ · /pahang/ · /sabah/ · /sarawak/
 
+Slope Rectification × State (JKR directives, federal expressway):
+- https://infraconcrete.co/slope-rectification-klang-valley/ · /penang/ · /johor/ · /pahang/ · /sabah/ · /sarawak/
+
+Slope Reinforcement × State (soil-nail / MSE / ground-anchor reinforcement):
+- https://infraconcrete.co/slope-reinforcement-klang-valley/ · /penang/ · /johor/ · /pahang/ · /sabah/ · /sarawak/
+
+### Specialty Geotech Service Pages (EN + BM + ZH parity)
+
+For high-intent search queries beyond the core six in-house systems:
+
+- [Geotechnical Investigation](https://infraconcrete.co/geotechnical-investigation/) — Site investigation (SI) contractor: borehole, in-situ testing, lab classification. JKR / Eurocode 7 submission format. Also: /bm/penyiasatan-tanah/ · /zh/geotechnical-investigation/
+- [Ground Improvement](https://infraconcrete.co/ground-improvement/) — Soft-soil specialist: dynamic compaction, vibroflotation, PVD, surcharge consolidation. Also: /bm/penambahbaikan-tanah/ · /zh/ground-improvement/
+- [Ground Anchor](https://infraconcrete.co/ground-anchor/) — Post-tensioned permanent + temporary anchors for high retaining, deep excavation, dam tie-back. To BS 8081 / EN 1537. Also: /bm/sauh-tanah/ · /zh/ground-anchor/
+- [Underpinning](https://infraconcrete.co/underpinning/) — Foundation remedial: mass concrete, micropile, jet-grout column, ground-anchor tie-back. Also: /bm/sokong-bawah/ · /zh/underpinning/
+- [Hillside Development](https://infraconcrete.co/hillside-development/) — Hill-station + KL hillside platform creation, slope protection, infrastructure. JKR Class III/IV, Penang Hill Slope Guideline. Also: /bm/pembangunan-bukit/ · /zh/hillside-development/
+
 ## Credentials
 
 - **CIDB G7** — Highest grade specialist contractor, Reg. 0120220822-WP104845. Categories: B04, CE01/06/08/21/36, M15.

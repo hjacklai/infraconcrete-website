@@ -20,6 +20,8 @@ declare -a SERVICES=(
   "horizontal-drains|Horizontal Drains|cap-slope-stabilization|Drilled subsurface drains that lower the groundwater table by gravity. To BS 6031, JKR. Often the single most effective slope-stabilization measure when groundwater is the failure driver."
   "slope-repair|Slope Repair|cap-slope|Post-failure slope repair, emergency slope repair after monsoon damage, hillside development distress, retaining wall remedial works. Drainage-first methodology then structural reinforcement. Soil nailing, guniting, ground anchors, horizontal drains as integrated systems."
   "geotechnical-contractor|Geotechnical Contractor|capabilities|Specialist geotechnical contractor and geotech specialist team — six in-house systems: soil nailing, guniting, rock bolting, rockfall barriers, retaining walls, horizontal drains. CIDB G7 panel-registered. Federal-grade documentation discipline."
+  "slope-rectification|Slope Rectification|cap-slope|JKR slope rectification specialist contractor. Federal-grade documentation, panel-registered, live-traffic execution. Soil nailing, guniting, drainage, ground anchors as integrated rectification packages to JKR / authority directives."
+  "slope-reinforcement|Slope Reinforcement|cap-slope|Slope reinforcement contractor — soil nailing, MSE walls, ground anchors, rock bolting. Adding tensile capacity to soil masses so slopes stand at steeper angles or carry higher loads. To BS 8006-2, FHWA, Eurocode 7."
 )
 
 # ---- State catalog ----

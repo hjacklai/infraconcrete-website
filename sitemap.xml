@@ -484,4 +484,35 @@
   <url><loc>https://infraconcrete.co/geotechnical-contractor-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/geotechnical-contractor-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/geotechnical-contractor-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Specialty geotech / slope pages (EN + BM + ZH) -->
+  <url><loc>https://infraconcrete.co/geotechnical-investigation/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://infraconcrete.co/bm/penyiasatan-tanah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/zh/geotechnical-investigation/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/ground-improvement/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://infraconcrete.co/bm/penambahbaikan-tanah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/zh/ground-improvement/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/ground-anchor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/bm/sauh-tanah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/ground-anchor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/underpinning/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/bm/sokong-bawah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/underpinning/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/hillside-development/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/bm/pembangunan-bukit/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/hillside-development/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Slope-rectification + slope-reinforcement x state combos -->
+  <url><loc>https://infraconcrete.co/slope-rectification-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-rectification-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-rectification-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-rectification-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-rectification-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-rectification-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-reinforcement-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-reinforcement-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-reinforcement-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-reinforcement-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-reinforcement-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-reinforcement-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 </urlset>

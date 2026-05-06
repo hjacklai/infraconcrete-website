@@ -124,6 +124,17 @@
       'pembaikan-cerun': '#cap-slope',
       'pemulihan-cerun': '#cap-slope',
       'pengukuhan-cerun': '#cap-slope',
+      // Specialty geotech terms (EN + BM + ZH)
+      'geotechnical-investigation': '#capabilities',
+      'penyiasatan-tanah': '#capabilities',
+      'ground-improvement': '#capabilities',
+      'penambahbaikan-tanah': '#capabilities',
+      'ground-anchor': '#cap-retaining',
+      'sauh-tanah': '#cap-retaining',
+      'underpinning': '#cap-retaining',
+      'sokong-bawah': '#cap-retaining',
+      'hillside-development': '#cap-slope',
+      'pembangunan-bukit': '#cap-slope',
       // Location pages -> track record section (geographic delivery proof)
       'klang-valley': '#record',
       'penang': '#record', 'johor': '#record', 'pahang': '#record',
