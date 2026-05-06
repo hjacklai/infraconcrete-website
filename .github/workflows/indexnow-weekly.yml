@@ -1,0 +1,26 @@
+name: IndexNow Weekly Re-ping
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch sitemap URLs and POST to IndexNow
+        run: |
+          set -e
+          KEY="4b05c74fbd3d0003855c82c9e69e8a66"
+          KEY_LOCATION="https://infraconcrete.co/${KEY}.txt"
+          HOST="infraconcrete.co"
+          curl -sf "https://infraconcrete.co/sitemap.xml" -o /tmp/s.xml
+          URLS=$(grep -oE '<loc>[^<]+</loc>' /tmp/s.xml | sed 's/<\/\?loc>//g')
+          URL_JSON=$(echo "$URLS" | awk 'BEGIN{printf "["} {if(NR>1)printf ","; printf "\"%s\"",$0} END{print "]"}')
+          PAYLOAD=$(printf '{"host":"%s","key":"%s","keyLocation":"%s","urlList":%s}' "$HOST" "$KEY" "$KEY_LOCATION" "$URL_JSON")
+          STATUS=$(curl -sS -o /tmp/r.txt -w "%{http_code}" -X POST 'https://api.indexnow.org/indexnow' -H 'Content-Type: application/json' -d "$PAYLOAD")
+          echo "HTTP $STATUS"
+          cat /tmp/r.txt || true
+          [ "$STATUS" = "200" ] || [ "$STATUS" = "202" ] || exit 1
