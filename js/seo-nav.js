@@ -115,6 +115,11 @@
       'kerja-tanah': '#cap-landcreation',
       // Geotechnical umbrella -> capabilities section overall
       'kontraktor-geoteknikal': '#capabilities',
+      'geotechnical-contractor': '#capabilities',
+      // Slope-specialty terms (repair / rectification / reinforcement) -> Slope Protection sol-card
+      'slope-repair': '#cap-slope',
+      'slope-rectification': '#cap-slope',
+      'slope-reinforcement': '#cap-slope',
       // Location pages -> track record section (geographic delivery proof)
       'klang-valley': '#record',
       'penang': '#record', 'johor': '#record', 'pahang': '#record',
