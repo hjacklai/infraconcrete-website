@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://infraconcrete.co/</loc>
+    <loc>https://infraconcrete.co/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/?lang=bm"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/?lang=zh"/>
@@ -11,7 +11,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/resources/</loc>
+    <loc>https://infraconcrete.co/resources/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/resources/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sumber/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/resources/"/>
@@ -20,7 +20,7 @@
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/sumber/</loc>
+    <loc>https://infraconcrete.co/bm/sumber/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sumber/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/resources/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/resources/"/>
@@ -28,7 +28,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/resources/</loc>
+    <loc>https://infraconcrete.co/zh/resources/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/resources/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/resources/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sumber/"/>
@@ -36,7 +36,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/?lang=bm</loc>
+    <loc>https://infraconcrete.co/?lang=bm</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/?lang=bm"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/?lang=zh"/>
@@ -45,7 +45,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/?lang=zh</loc>
+    <loc>https://infraconcrete.co/?lang=zh</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/?lang=bm"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/?lang=zh"/>
@@ -53,409 +53,409 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url><loc>https://infraconcrete.co/slope-stabilization/</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://infraconcrete.co/slope-protection/</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://infraconcrete.co/soil-nailing/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/rock-bolting/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/guniting/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/rockfall-barrier/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-netting/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/retaining-walls/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/mse-wall/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/horizontal-drains/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-stabilization/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://infraconcrete.co/slope-protection/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://infraconcrete.co/soil-nailing/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/rock-bolting/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/guniting/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/rockfall-barrier/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-netting/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/retaining-walls/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/mse-wall/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/horizontal-drains/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url>
-    <loc>https://infraconcrete.co/land-creation/</loc>
+    <loc>https://infraconcrete.co/land-creation/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/land-creation/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/land-creation/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/land-creation/"/>
     <changefreq>monthly</changefreq><priority>0.95</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/land-creation/</loc>
+    <loc>https://infraconcrete.co/bm/land-creation/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/land-creation/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/land-creation/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/land-creation/"/>
     <changefreq>monthly</changefreq><priority>0.95</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/land-creation/</loc>
+    <loc>https://infraconcrete.co/zh/land-creation/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/land-creation/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/land-creation/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/land-creation/"/>
     <changefreq>monthly</changefreq><priority>0.95</priority>
   </url>
-  <url><loc>https://infraconcrete.co/klang-valley/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/penang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/johor/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/pahang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/east-coast/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/sabah-sarawak/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/east-coast/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/sabah-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <!-- Additional state coverage (PR #14, #15) -->
-  <url><loc>https://infraconcrete.co/negeri-sembilan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/melaka/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/perak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/kedah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/perlis/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://infraconcrete.co/labuan/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/negeri-sembilan/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/melaka/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/perak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/kedah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/perlis/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/labuan/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <!-- Sabah + Sarawak as dedicated separate pages (PR all-states) -->
-  <url><loc>https://infraconcrete.co/sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/kelantan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/terengganu/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/kelantan/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/terengganu/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <!-- BM versions of all 10 newly-added states -->
-  <url><loc>https://infraconcrete.co/bm/negeri-sembilan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/melaka/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/perak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/kedah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/perlis/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://infraconcrete.co/bm/labuan/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://infraconcrete.co/bm/sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/kelantan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/terengganu/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/negeri-sembilan/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/melaka/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/perak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/kedah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/perlis/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/bm/labuan/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/bm/sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/kelantan/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/terengganu/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <!-- ZH versions of all 10 newly-added states -->
-  <url><loc>https://infraconcrete.co/zh/negeri-sembilan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/melaka/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/perak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/kedah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/perlis/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://infraconcrete.co/zh/labuan/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://infraconcrete.co/zh/sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/kelantan/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/terengganu/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/negeri-sembilan/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/melaka/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/perak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/kedah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/perlis/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/zh/labuan/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/zh/sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/kelantan/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/terengganu/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <!-- Reinforced Soil Slopes (RSS) — EN + BM + ZH -->
   <url>
-    <loc>https://infraconcrete.co/reinforced-soil-slopes/</loc>
+    <loc>https://infraconcrete.co/reinforced-soil-slopes/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/reinforced-soil-slopes/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/reinforced-soil-slopes/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/reinforced-soil-slopes/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/reinforced-soil-slopes/</loc>
+    <loc>https://infraconcrete.co/bm/reinforced-soil-slopes/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/reinforced-soil-slopes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/reinforced-soil-slopes/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/reinforced-soil-slopes/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/reinforced-soil-slopes/</loc>
+    <loc>https://infraconcrete.co/zh/reinforced-soil-slopes/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/reinforced-soil-slopes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/reinforced-soil-slopes/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/reinforced-soil-slopes/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/kontraktor-cerun/</loc>
+    <loc>https://infraconcrete.co/bm/kontraktor-cerun/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/kontraktor-cerun/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-stabilization/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/slope-stabilization/"/>
     <changefreq>monthly</changefreq><priority>0.95</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/tembok-penahan/</loc>
+    <loc>https://infraconcrete.co/bm/tembok-penahan/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/tembok-penahan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/retaining-walls/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/kerja-tanah/</loc>
+    <loc>https://infraconcrete.co/bm/kerja-tanah/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/kerja-tanah/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/slope-stabilization/</loc>
+    <loc>https://infraconcrete.co/zh/slope-stabilization/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/slope-stabilization/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-stabilization/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/kontraktor-cerun/"/>
     <changefreq>monthly</changefreq><priority>0.95</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/soil-nailing/</loc>
+    <loc>https://infraconcrete.co/zh/soil-nailing/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/soil-nailing/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/soil-nailing/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/retaining-walls/</loc>
+    <loc>https://infraconcrete.co/zh/retaining-walls/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/retaining-walls/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/retaining-walls/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/tembok-penahan/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
-  <url><loc>https://infraconcrete.co/landslide-prevention/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/hillside-remedial/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/sheet-piling/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/earthworks/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/erosion-control/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/post-landslide-remediation/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/slope-monitoring/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://infraconcrete.co/for-developers/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/for-consulting-engineers/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/for-government/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/for-quantity-surveyors/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/landslide-prevention/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/hillside-remedial/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/sheet-piling/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/earthworks/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/erosion-control/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/post-landslide-remediation/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/slope-monitoring/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://infraconcrete.co/for-developers/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/for-consulting-engineers/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/for-government/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/for-quantity-surveyors/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url>
-    <loc>https://infraconcrete.co/bm/kontraktor-geoteknikal/</loc>
+    <loc>https://infraconcrete.co/bm/kontraktor-geoteknikal/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/kontraktor-geoteknikal/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/soil-nailing/</loc>
+    <loc>https://infraconcrete.co/bm/soil-nailing/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/soil-nailing/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/soil-nailing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/soil-nailing/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/guniting/</loc>
+    <loc>https://infraconcrete.co/zh/guniting/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/guniting/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/guniting/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/horizontal-drains/</loc>
+    <loc>https://infraconcrete.co/zh/horizontal-drains/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/horizontal-drains/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/horizontal-drains/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
-  <url><loc>https://infraconcrete.co/bm/guniting/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/saliran-cerun/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/guniting/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/bm/saliran-cerun/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url>
-    <loc>https://infraconcrete.co/bm/rock-bolting/</loc>
+    <loc>https://infraconcrete.co/bm/rock-bolting/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/rock-bolting/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/rock-bolting/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/rock-bolting/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/rockfall-barrier/</loc>
+    <loc>https://infraconcrete.co/bm/rockfall-barrier/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/rockfall-barrier/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/rockfall-barrier/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/rockfall-barrier/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/horizontal-drains/</loc>
+    <loc>https://infraconcrete.co/bm/horizontal-drains/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/horizontal-drains/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/horizontal-drains/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/horizontal-drains/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/mse-wall/</loc>
+    <loc>https://infraconcrete.co/bm/mse-wall/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/mse-wall/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/mse-wall/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/mse-wall/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/slope-protection/</loc>
+    <loc>https://infraconcrete.co/bm/slope-protection/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/slope-protection/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-protection/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/slope-protection/"/>
     <changefreq>monthly</changefreq><priority>0.95</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/rock-netting/</loc>
+    <loc>https://infraconcrete.co/bm/rock-netting/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/rock-netting/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/rock-netting/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/rock-netting/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/mse-wall/</loc>
+    <loc>https://infraconcrete.co/zh/mse-wall/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/mse-wall/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/mse-wall/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/mse-wall/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/slope-protection/</loc>
+    <loc>https://infraconcrete.co/zh/slope-protection/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/slope-protection/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-protection/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/slope-protection/"/>
     <changefreq>monthly</changefreq><priority>0.95</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/zh/rock-netting/</loc>
+    <loc>https://infraconcrete.co/zh/rock-netting/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/rock-netting/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/rock-netting/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/rock-netting/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
-  <url><loc>https://infraconcrete.co/zh/rock-bolting/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/zh/rock-bolting/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
   <!-- BM location pages -->
-  <url><loc>https://infraconcrete.co/bm/klang-valley/</loc>
+  <url><loc>https://infraconcrete.co/bm/klang-valley/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/klang-valley/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/klang-valley/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/klang-valley/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/bm/penang/</loc>
+  <url><loc>https://infraconcrete.co/bm/penang/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/penang/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/penang/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/penang/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/johor/</loc>
+  <url><loc>https://infraconcrete.co/bm/johor/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/johor/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/johor/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/johor/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/pahang/</loc>
+  <url><loc>https://infraconcrete.co/bm/pahang/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/pahang/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/pahang/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/pahang/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/east-coast/</loc>
+  <url><loc>https://infraconcrete.co/bm/east-coast/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/east-coast/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/east-coast/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/east-coast/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/sabah-sarawak/</loc>
+  <url><loc>https://infraconcrete.co/bm/sabah-sarawak/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sabah-sarawak/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/sabah-sarawak/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/sabah-sarawak/"/>
     <changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- BM service pages -->
-  <url><loc>https://infraconcrete.co/bm/landslide-prevention/</loc>
+  <url><loc>https://infraconcrete.co/bm/landslide-prevention/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/landslide-prevention/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/landslide-prevention/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/landslide-prevention/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/bm/sheet-pile/</loc>
+  <url><loc>https://infraconcrete.co/bm/sheet-pile/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sheet-pile/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/sheet-piling/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/sheet-pile/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/erosion-control/</loc>
+  <url><loc>https://infraconcrete.co/bm/erosion-control/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/erosion-control/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/erosion-control/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/erosion-control/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/bm/hillside-remedial/</loc>
+  <url><loc>https://infraconcrete.co/bm/hillside-remedial/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/hillside-remedial/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/hillside-remedial/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/hillside-remedial/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
 
   <!-- ZH location pages -->
-  <url><loc>https://infraconcrete.co/zh/klang-valley/</loc>
+  <url><loc>https://infraconcrete.co/zh/klang-valley/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/klang-valley/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/klang-valley/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/klang-valley/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/zh/penang/</loc>
+  <url><loc>https://infraconcrete.co/zh/penang/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/penang/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/penang/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/penang/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/johor/</loc>
+  <url><loc>https://infraconcrete.co/zh/johor/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/johor/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/johor/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/johor/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/pahang/</loc>
+  <url><loc>https://infraconcrete.co/zh/pahang/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/pahang/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/pahang/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/pahang/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/east-coast/</loc>
+  <url><loc>https://infraconcrete.co/zh/east-coast/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/east-coast/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/east-coast/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/east-coast/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/sabah-sarawak/</loc>
+  <url><loc>https://infraconcrete.co/zh/sabah-sarawak/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/sabah-sarawak/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/sabah-sarawak/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sabah-sarawak/"/>
     <changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- ZH service pages -->
-  <url><loc>https://infraconcrete.co/zh/landslide-prevention/</loc>
+  <url><loc>https://infraconcrete.co/zh/landslide-prevention/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/landslide-prevention/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/landslide-prevention/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/landslide-prevention/"/>
     <changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/zh/rockfall-barrier/</loc>
+  <url><loc>https://infraconcrete.co/zh/rockfall-barrier/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/rockfall-barrier/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/rockfall-barrier/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/sheet-pile/</loc>
+  <url><loc>https://infraconcrete.co/zh/sheet-pile/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/sheet-pile/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/sheet-piling/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sheet-pile/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/earthworks/</loc>
+  <url><loc>https://infraconcrete.co/zh/earthworks/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/earthworks/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/earthworks/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/erosion-control/</loc>
+  <url><loc>https://infraconcrete.co/zh/erosion-control/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/erosion-control/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/erosion-control/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/erosion-control/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/zh/hillside-remedial/</loc>
+  <url><loc>https://infraconcrete.co/zh/hillside-remedial/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/hillside-remedial/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/hillside-remedial/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/hillside-remedial/"/>
     <changefreq>monthly</changefreq><priority>0.85</priority></url>
 
   <!-- Service x State combo pages (long-tail SEO targets: e.g. "soil nail sabah") -->
-  <url><loc>https://infraconcrete.co/soil-nailing-klang-valley/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/soil-nailing-penang/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/soil-nailing-johor/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/soil-nailing-pahang/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/soil-nailing-sabah/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/soil-nailing-sarawak/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/guniting-klang-valley/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/guniting-penang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/guniting-johor/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/guniting-pahang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/guniting-sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/guniting-sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-bolting-klang-valley/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-bolting-penang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-bolting-johor/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-bolting-pahang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-bolting-sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-bolting-sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-netting-klang-valley/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-netting-penang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-netting-johor/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-netting-pahang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-netting-sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rock-netting-sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/slope-stabilization-klang-valley/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/slope-stabilization-penang/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/slope-stabilization-johor/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/slope-stabilization-pahang/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/slope-stabilization-sabah/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/slope-stabilization-sarawak/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/rockfall-barrier-klang-valley/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rockfall-barrier-penang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rockfall-barrier-johor/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rockfall-barrier-pahang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rockfall-barrier-sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/rockfall-barrier-sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/retaining-walls-klang-valley/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/retaining-walls-penang/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/retaining-walls-johor/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/retaining-walls-pahang/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/retaining-walls-sabah/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/retaining-walls-sarawak/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/land-creation-klang-valley/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/land-creation-penang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/land-creation-johor/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/land-creation-pahang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/land-creation-sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/land-creation-sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/horizontal-drains-klang-valley/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/horizontal-drains-penang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/horizontal-drains-johor/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/horizontal-drains-pahang/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/horizontal-drains-sabah/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/horizontal-drains-sarawak/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/soil-nailing-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/soil-nailing-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/soil-nailing-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/soil-nailing-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/soil-nailing-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/soil-nailing-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/guniting-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/guniting-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/guniting-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/guniting-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/guniting-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/guniting-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-bolting-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-bolting-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-bolting-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-bolting-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-bolting-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-bolting-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-netting-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-netting-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-netting-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-netting-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-netting-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rock-netting-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/slope-stabilization-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/slope-stabilization-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/slope-stabilization-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/slope-stabilization-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/slope-stabilization-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/slope-stabilization-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/rockfall-barrier-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rockfall-barrier-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rockfall-barrier-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rockfall-barrier-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rockfall-barrier-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/rockfall-barrier-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/retaining-walls-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/retaining-walls-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/retaining-walls-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/retaining-walls-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/retaining-walls-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/retaining-walls-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/land-creation-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/land-creation-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/land-creation-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/land-creation-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/land-creation-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/land-creation-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/horizontal-drains-klang-valley/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/horizontal-drains-penang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/horizontal-drains-johor/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/horizontal-drains-pahang/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/horizontal-drains-sabah/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/horizontal-drains-sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 </urlset>
