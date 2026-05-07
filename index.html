@@ -7590,21 +7590,19 @@
       /* ============================================================
          AUTO-DEMO ON VIEWPORT ENTRY
          ============================================================
-         When the slider enters the viewport for the first time, briefly
-         animate the divider 50 -> 25 -> 75 -> 50 over ~1.5s so visitors
-         literally see the BEFORE/AFTER swap and learn the interaction
-         without any explicit text. Industry standard for comparison
-         sliders (Apple, Stripe). Fires once per session per slider.
+         When the slider enters the viewport for the first time on this
+         page load, briefly animate the divider 50 -> 22 -> 78 -> 50 over
+         ~1.6s so visitors literally see the BEFORE/AFTER swap and learn
+         the interaction without any explicit text. Industry standard for
+         comparison sliders (Apple, Stripe).
+         Fires ONCE per page load (re-fires on every refresh).
          Skips if:
            - user has already dragged (.has-dragged set)
            - user prefers reduced motion
-           - demo already played this session for this slider
          If the user grabs the slider mid-demo, the demo aborts and
          their input wins. */
       (() => {
         if (reduceMotion) return;
-        const demoKey = 'ic-cs-demo-' + stageIdx;
-        try { if (sessionStorage.getItem(demoKey)) return; } catch (_) {}
 
         const easeInOut = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
         const waypoints = [50, 22, 78, 50];
@@ -7629,7 +7627,6 @@
               range.value = '50';
               update(50);
               demoActive = false;
-              try { sessionStorage.setItem(demoKey, '1'); } catch (_) {}
               return;
             }
             const segIdx = Math.min(segments - 1, Math.floor(elapsed / segDur));
@@ -7645,15 +7642,15 @@
           requestAnimationFrame(tick);
         };
 
-        // Fire on viewport entry (>=55% visible to ensure the slider is
-        // actually in the user's reading area, not just barely peeking in).
+        // Fire on viewport entry (>=50% visible). Disconnect after the
+        // first fire so the demo runs ONCE per page load - the user sees
+        // it the moment they reach the slider, never replayed thereafter.
+        // Re-fires fresh on every page refresh.
         if (typeof IntersectionObserver === 'undefined') return;
         const obs = new IntersectionObserver((entries) => {
           entries.forEach(e => {
             if (e.isIntersecting && e.intersectionRatio >= 0.5) {
-              // 350ms grace so the section settles into view first,
-              // then the divider sweeps - feels intentional, not jumpy.
-              setTimeout(playDemo, 350);
+              setTimeout(playDemo, 100);
               obs.disconnect();
             }
           });
