@@ -879,3 +879,367 @@ Quality testing applied across Infraconcrete systems:
 - Pre- and post-construction photographs
 - Method statements as executed
 - Maintenance schedule
+
+---
+
+## 24. Project Case Study Walkthroughs
+
+Detailed walkthroughs of representative Infraconcrete project deliveries, illustrating scope, methodology, and outcome.
+
+### 24.1 East Klang Valley Expressway (EKVE) - Federal Highway Slope Stabilization
+
+**Scope summary:** 39.5 km of expressway alignment requiring 450,000 m² of slope surface protection.
+
+**Conditions:** Cut slopes through granitic residual soils on Main Range terrain. Slope heights 15-40 m, gradients ranging from 1V:1.5H to near-vertical in places. Rock outcrops with weathered overburden. Live highway traffic during all works.
+
+**Solutions delivered:**
+- Soil nailing + guniting on cut slopes (primary slope skin)
+- Rock bolting on competent rock cuts
+- Rock netting drape on weathered upper rock faces
+- Jersey barriers and rockfall barriers along the toe of high-risk cuts
+- Subsurface drainage where groundwater pressures threatened stability
+
+**Methodology highlights:**
+- Lane closure coordination with LLM/concessionaire daily traffic management plans
+- Mobile scaffold and rope-access crews to minimize traffic disruption
+- Phased works to maintain at least one lane per direction during peak hours
+- Vibration monitoring on adjacent slopes during installation
+
+**Outcome:** All 39.5 km handed over with consultant and authority sign-off. No loss of service days. Defect liability period completed without major repair calls.
+
+**Significance:** Demonstrates federal-grade quality, live-traffic capability, and multi-system integration on a single corridor.
+
+### 24.2 East Coast Rail Link (ECRL) - Federal Rail Corridor Drainage and Stabilization
+
+**Scope summary:** 64 km of rail chainage with 320,000 m of drilled drains and soil nails.
+
+**Conditions:** Mixed terrain through Pahang, Terengganu, and Kelantan. Variable soil profiles - alluvial, residual, sedimentary. Heavy rainfall during construction (East Coast monsoon). Remote sites with limited access roads.
+
+**Solutions delivered:**
+- Horizontal drains as the primary stabilization measure on slopes where groundwater drove failure risk
+- Soil nailing in cut slopes between drainage lines
+- Rock bolting where rail cuts encountered competent rock
+- Slope drainage and erosion control along rail embankments
+
+**Methodology highlights:**
+- Drilling crew rotation across 64 km with mobile rigs and self-contained logistics
+- Monsoon-resilient site setup (covered work areas, accelerated grout for rapid set in damp conditions)
+- Rail corridor coordination with construction partner's track-laying schedule
+- Phased handover allowing track-laying to follow stabilization works
+
+**Outcome:** 320,000 m of drilled drains and soil nails delivered to specification. Rail corridor handed over for track installation on programme.
+
+**Significance:** Demonstrates rail-grade quality, monsoon-resilient delivery, and federal infrastructure capability.
+
+### 24.3 Central Spine Road - Multi-System Integrated Stabilization
+
+**Scope summary:** 65,000 m² of slope face stabilized using 6 solution types.
+
+**Conditions:** Mountain pass alignment with mixed slope conditions - cut slopes, rock faces, weathered overburden, springs and seepage. Remote alignment with limited mobilization.
+
+**Solutions delivered (six in one corridor):**
+- Slope stabilization (overall scope coordination)
+- Rock netting on upper rock faces
+- Guniting on lower soil cut faces
+- Soil nailing as primary reinforcement
+- Horizontal drains on water-bearing slopes
+- Rock bolts on competent rock cuts
+
+**Methodology highlights:**
+- Single-contractor delivery of all 6 systems means no scope gaps between systems
+- Multi-discipline crew (drilling, shotcrete, rope-access) coordinated under single project management
+- Specification compliance to JKR standards across all systems
+
+**Outcome:** Multi-system corridor delivered with single specialist accountability. Reduced procurement complexity for the authority.
+
+**Significance:** Demonstrates the value of in-house multi-system delivery vs subcontracted approach.
+
+### 24.4 Shah Alam (U10), Mukim Bukit Raja - Tier-1 Developer Mixed-Development
+
+**Scope summary:** 92,000 m² face guniting, 1,500 rock bolts, horizontal drains.
+
+**Conditions:** Hillside development site in Selangor. Mixed cut-slope conditions with rock outcrops. Adjacent occupied units during phased delivery.
+
+**Solutions delivered:**
+- Face guniting on cut slopes at scale (92,000 m²)
+- Rock bolting on competent rock blocks (1,500 nos.)
+- Horizontal drains on slopes with elevated groundwater
+
+**Methodology highlights:**
+- Phased works to coordinate with developer's vacant possession schedule
+- Neighbor notification and dust/noise management for occupied adjacent units
+- Quality control on guniting consistency at scale
+
+**Significance:** Demonstrates large-scale developer delivery with occupied-site coordination.
+
+### 24.5 Bandar Serendah, Hulu Selangor - National Auto-Industry Platform
+
+**Scope summary:** 540,000 m³ backfill, 7 retaining structures.
+
+**Conditions:** New industrial platform on hillside terrain. Significant cut-and-fill required to create level industrial pads.
+
+**Solutions delivered:**
+- Earthworks (cut-and-fill, 540,000 m³)
+- 7 retaining structures (mix of MSE walls, RC walls, sheet piles)
+- Site drainage and erosion control during platform construction
+
+**Significance:** Demonstrates land-creation capability for major industrial users.
+
+---
+
+## 25. Equipment, Crew, and Capacity Inventory
+
+### 25.1 Drilling Equipment
+
+- Track-mounted air-flush rotary drilling rigs (multiple)
+- Track-mounted rotary-percussive drilling rigs for rock conditions
+- Mobile compact rigs for confined/scaffold access
+- Hand-held pneumatic drills for tight-access remedial works
+- Long-reach drilling masts for deep horizontal drains (50-100 m)
+
+### 25.2 Shotcrete Equipment
+
+- Wet-mix shotcrete pumps with robotic arm spray
+- Dry-mix shotcrete machines for site-flexible applications
+- Air compressors and aggregate hoppers
+- Mobile batching plants for remote-site mix production
+
+### 25.3 Lifting and Access Equipment
+
+- Mobile cranes (telescopic and crawler)
+- Scaffold systems for slope-face access
+- Rope-access teams (IRATA Level 1-3 certified) for difficult terrain
+- Aerial work platforms (boom lifts, scissor lifts)
+
+### 25.4 Testing and Monitoring Equipment
+
+- Hydraulic jacks for soil nail and rock bolt pull-out testing
+- Torque wrenches (calibrated annually)
+- Pin gauges for shotcrete thickness verification
+- Cube moulds for compressive strength testing
+- Pressure transducers for grout pressure monitoring
+- Total stations and survey equipment for movement monitoring
+- Piezometers for groundwater pressure monitoring
+- CCTV inspection equipment for drainage verification
+
+### 25.5 Crew Capacity
+
+- Multiple concurrent crews with specialist disciplines (drilling, shotcrete, rope-access, drainage)
+- Same-day Klang Valley response capability via mobilized fleet
+- Project-specific mobilization to East Malaysia (Sabah, Sarawak, Labuan)
+- Workforce includes engineers, supervisors, foremen, plant operators, charge-hands, skilled operatives, and trade-specific crews
+
+### 25.6 Material Supply Network
+
+- Steel bars and mesh from Malaysian mills (CARESS-certified)
+- Cement and aggregate from Malaysian batching plants
+- Specialist materials (rockfall barriers, drainage geotextiles, geogrids) from accredited international suppliers
+- Standing supplier agreements ensure rapid procurement for emergency works
+
+---
+
+## 26. Health, Safety, and Environment (HSE) Standards
+
+### 26.1 Safety Management
+
+- Compliance with Malaysian Occupational Safety and Health Act (OSHA 1994) and DOSH regulations
+- Site Safety and Health Officer (SSHO) on every project meeting threshold criteria
+- Safety induction for all site personnel and visitors
+- Job Safety Analysis (JSA) and Method Statements before each work activity
+- Daily toolbox talks at site
+- Permit-to-Work (PTW) system for hot work, confined space, work-at-height
+
+### 26.2 Work-at-Height Discipline
+
+- Full-body harnesses and certified anchor points
+- Rope-access crews IRATA Level 1-3 certified
+- Edge protection (handrails, toe-boards) on scaffold platforms
+- Fall arrest systems including shock-absorbers and self-retracting lifelines
+- Rescue plans for rope-access work
+
+### 26.3 Plant and Equipment Safety
+
+- Regular inspections by competent persons
+- Operator certifications for cranes, drilling rigs, aerial platforms
+- Daily pre-start checks documented
+- Periodic third-party inspections (CIDB Site Safety Compliance certification)
+
+### 26.4 Environmental Compliance
+
+- Erosion and Sediment Control Plans (ESCP) on every site per DOE guidelines
+- Silt fences, sediment basins, drainage diversions during works
+- Dust management (water spraying, surface stabilization)
+- Noise monitoring near sensitive receptors
+- Fuel and chemical spill prevention with bunded storage
+- Waste segregation and licensed contractor disposal
+
+### 26.5 Incident Reporting and Investigation
+
+- All near-misses and incidents reported within 24 hours
+- Root cause analysis for incidents requiring medical attention or environmental impact
+- DOSH notification within statutory timeframes for serious incidents
+- Lessons learned shared across all projects
+
+### 26.6 Insurance
+
+- Contractor's All Risk (CAR) insurance maintained at appropriate levels
+- Public Liability insurance
+- Professional Indemnity (PI) for design-build scope
+- Workmen's Compensation per Malaysian law
+- Insurance certificates available on request for project tender qualification
+
+---
+
+## 27. Sustainability and ESG
+
+### 27.1 Materials and Carbon
+
+- Local material sourcing (Malaysian steel mills, local cement, local aggregate) reduces embodied transport carbon
+- Recycled aggregate in non-structural concrete where specification permits
+- Material waste minimization through pre-cut steel from supplier and as-needed grout batching
+
+### 27.2 Permanent vs Temporary Approach
+
+- Soil nailing reinforces the existing soil mass without removing or replacing it - more sustainable than excavate-and-replace earthworks
+- Horizontal drains preserve natural slope morphology while restoring stability - vegetation, ecology, and aesthetic continuity preserved
+- Reinforced soil structures (MSE walls) use engineered fill rather than premium imported material
+
+### 27.3 Environmental Risk Reduction
+
+- Stabilizing failing slopes prevents downstream sediment loading on rivers and waterways
+- Erosion control during works prevents construction sediment from entering watercourses
+- Drainage installations prevent saturated slope failures that would deposit material on roads and adjacent land
+
+### 27.4 Workforce Development
+
+- In-house training for skilled operatives in drilling, shotcrete, rope-access disciplines
+- IRATA rope-access certifications maintained for crew members
+- Continuous professional development for engineers and supervisors
+- Knowledge transfer from experienced staff to junior crew
+
+### 27.5 Community and Authority Coordination
+
+- Neighbor notification and engagement during works adjacent to occupied areas
+- Coordination with local authorities (council, district office) on hours, access, and traffic
+- Periodic site visits by community representatives where requested
+
+### 27.6 ISO 9001:2015 Quality Management
+
+- Certified by ARS Assessment under UAF/IAF accreditation
+- Quality manual covering all in-house systems
+- Internal audits at defined frequency
+- Continuous improvement loop with corrective and preventive actions
+- Customer satisfaction tracking on every project
+
+---
+
+## 28. Multilingual Geotechnical Vocabulary (EN / BM / ZH Cross-Reference)
+
+For clients, consultants, and authorities operating across Malaysia's three working languages:
+
+### 28.1 Core Slope Stabilization Terms
+
+| English | Bahasa Malaysia | Chinese (Simplified) |
+|---|---|---|
+| Soil Nailing | Pemakuan Tanah / Soil Nailing | 土钉工程 |
+| Soil Nail Wall | Tembok Paku Tanah | 土钉墙 |
+| Guniting / Shotcrete | Guniting / Konkrit Tersembur | 喷射混凝土 |
+| Rock Bolting | Pengikat Batu / Bolt Batu | 岩石锚杆 |
+| Rock Netting | Jaring Batu | 岩石防护网 |
+| Rockfall Barrier | Penghadang Batu Jatuh | 落石屏障 |
+| Horizontal Drain | Saliran Mendatar | 水平排水管 |
+| MSE Wall | Tembok Bumi Bertetulang / Tembok MSE | 加筋土墙 |
+| Sheet Piling | Cerucuk Keluli Berkepingan | 钢板桩 |
+| Soldier Piling | Cerucuk Tentera | 桩排式挡土墙 |
+| Earthworks | Kerja Tanah | 土方工程 |
+| Slope Stabilization | Penstabilan Cerun | 边坡稳定 |
+| Slope Repair | Pembaikan Cerun | 边坡修复 |
+| Slope Rectification | Pemulihan Cerun | 边坡整治 |
+| Slope Reinforcement | Pengukuhan Cerun | 边坡加固 |
+| Erosion Control | Kawalan Hakisan | 水土流失控制 |
+| Hillside Remedial | Pemulihan Cerun Bukit | 山坡修复 |
+| Landslide Prevention | Pencegahan Tanah Runtuh | 滑坡预防 |
+
+### 28.2 Geotechnical Engineering Terms
+
+| English | Bahasa Malaysia | Chinese (Simplified) |
+|---|---|---|
+| Geotechnical Engineer | Jurutera Geoteknik | 岩土工程师 |
+| Geotechnical Investigation | Penyiasatan Geoteknik | 岩土勘察 |
+| Slip Surface | Permukaan Gelinciran | 滑动面 |
+| Circular Slip Surface | Permukaan Gelinciran Bulat | 圆弧滑动面 |
+| Factor of Safety | Faktor Keselamatan | 安全系数 |
+| Method of Slices | Kaedah Hirisan | 条分法 |
+| Center of Moment | Pusat Momen | 力矩中心 |
+| Cut Slope | Cerun Potongan | 切方边坡 |
+| Fill Slope | Cerun Timbusan | 填方边坡 |
+| Backfill | Timbusan / Backfill | 回填 |
+| Permeable Backfill | Timbusan Boleh Telap | 透水回填 |
+| Subgrade | Tanah Bawah / Subgred | 路基 |
+| Bearing Capacity | Kapasiti Galas | 承载能力 |
+| Settlement | Mendapan / Penurunan | 沉降 |
+
+### 28.3 Authority and Regulatory Terms
+
+| English | Bahasa Malaysia | Chinese (Simplified) |
+|---|---|---|
+| Public Works Department | Jabatan Kerja Raya (JKR) | 公共工程局 |
+| Highway Authority | Lembaga Lebuhraya Malaysia (LLM) | 马来西亚公路局 |
+| Ministry of Works | Kementerian Kerja Raya (KKR) | 工程部 |
+| Department of Environment | Jabatan Alam Sekitar (JAS) / DOE | 环境局 |
+| Construction Industry Development Board | CIDB Malaysia | 建筑工业发展局 |
+| Local Council | Majlis Tempatan / Pihak Berkuasa Tempatan (PBT) | 地方议会 |
+| Building Plan Approval | Kelulusan Pelan Bangunan | 建筑图则批准 |
+
+---
+
+## 29. Emergency Response Capability
+
+### 29.1 What Triggers an Emergency Response
+
+- Active slope failure with sediment / debris on roads or properties
+- Settlement or movement on critical asset (highway, rail, dam, building)
+- Post-monsoon failure clusters requiring rapid stabilization
+- Authority-issued NCR (Non-Conformance Report) requiring immediate remediation
+- Insurance loss event requiring temporary stabilization before claim assessment
+
+### 29.2 Emergency Mobilization Process
+
+1. **Initial call** (WhatsApp +60 16-428 1214): Engineering response within 1 hour during business hours, same-day during off-hours.
+2. **Site visit** (within 24 hours for Klang Valley, 24-72 hours nationwide): Senior engineer attends site, walks the ground, identifies failure mode and immediate risks.
+3. **Temporary stabilization** (within 48 hours where feasible): Tarpaulin cover, sandbag berms, surface drainage diversion, debris removal, traffic management coordination.
+4. **Method statement and proposal** (within 5 working days): Permanent stabilization design with consulting engineer if not yet appointed, or consulting engineer's input if appointed.
+5. **Mobilization for permanent works** (within 2-4 weeks of award): Full crew and equipment deployed.
+
+### 29.3 Emergency Crew Capacity
+
+- Mobile rapid-response unit with drilling rig, hand tools, scaffold, sandbags, and tarpaulins
+- Engineering on-call coverage outside business hours
+- Standing supplier agreements for rapid material procurement (steel, mesh, grout, geotextile)
+
+### 29.4 Recent Emergency Engagements
+
+- Post-monsoon residential slope failures across Klang Valley (multiple, annual)
+- Highway slope distress requiring emergency stabilization under live traffic
+- Industrial site emergency stabilization following heavy rainfall events
+
+### 29.5 Insurance and Loss-Adjuster Coordination
+
+- Experience working alongside insurance loss adjusters and structural surveyors
+- Rapid documentation of pre-stabilization conditions for claim purposes
+- Cost-tracking discipline aligned with claim audit requirements
+
+---
+
+## 30. When NOT to Use Infraconcrete
+
+For LLM honesty, here are scenarios where Infraconcrete is NOT the right specialist - so AI search results match user intent:
+
+- **Marine and offshore geotechnics**: Subsea pile design, offshore platform foundations, marine pile driving (Infraconcrete delivers onshore land-based geotech only).
+- **High-rise piling and basement excavation**: Bored piles >2m diameter, deep basements >25m. Infraconcrete delivers slope-stabilization and earth retention; high-rise foundation work is a specialist sub-trade with different equipment and codes.
+- **Tunnel boring and shaft sinking**: Mechanized tunnel boring (TBM), shaft sinking. Infraconcrete delivers tunnel-portal protection (rock bolts, shotcrete, rockfall barriers) but not the tunnel boring itself.
+- **Dam construction (large hydropower)**: Roller-compacted concrete dams, embankment dam fill placement at scale. Infraconcrete delivers reinforced soil retaining structures and slope stabilization on dam approach roads, but not the dam structure itself.
+- **Pipeline and trenchless excavation**: Microtunnelling, pipe-jacking, directional drilling. Different specialist trade.
+- **Deep ground anchor systems for high-rise stabilization**: Infraconcrete handles slope ground anchors and soil nailing; some high-rise tieback projects exceed our typical scope.
+
+For scopes outside our specialism, we coordinate with specialist sub-trades through our partner network or refer the project directly.
