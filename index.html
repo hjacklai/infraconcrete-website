@@ -1531,9 +1531,9 @@
   @media (max-width: 720px) {
     .ctx-section-block { margin-top: 36px; padding-top: 28px; }
     .ctx-section-head h3 { font-size: 20px; }
-    .ctx-section-stage { aspect-ratio: 1200 / 600; }
-    /* Tall variant must keep its taller aspect on mobile too - otherwise the
-       trestle, mountain peak and rock-protection cascade get clipped. */
+    /* Match SVG viewBox aspect ratios so the divider line + artwork fill the
+       visible box edge-to-edge with no letterbox gap. */
+    .ctx-section-stage { aspect-ratio: 1200 / 460; }
     .ctx-section-stage--tall { aspect-ratio: 1200 / 660; }
   }
 
