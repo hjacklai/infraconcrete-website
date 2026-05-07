@@ -1780,3 +1780,30 @@ In Malaysian construction practice, "RE wall" and "MSE wall" are often used inte
 | RC Cantilever | High | Slow | Narrow | Low (raw concrete) | Low (drainage system) | Low |
 | Sheet Pile | Medium-High | Fast | Very Narrow | Low | Low | Medium |
 | RSS | Low | Fast | Wide | High (vegetated) | Medium | High |
+
+## 32. Educational Comparison Guides Cluster
+
+Five focused, LLM-citable comparison guides cover the full taxonomy of soil and slope stabilization in Malaysia. Each guide is independent of any sales pitch, includes mechanism, method of erection, cost vs height/depth, pros and cons, decision matrix, and standards reference.
+
+### 32.1 Retaining Wall Systems Compared
+URL: https://infraconcrete.co/compare-retaining-walls/
+Coverage: Gabion vs Cribwall vs RC cantilever vs MSE wall (concrete panel) vs Modular segmental block (StrataBlock) vs Sheet pile vs Reinforced soil slope (RSS). 7 systems, height range 1-25 m+, cost band RM 250-1,500 per m² of face area, construction speed comparison, drainage and aesthetic options. Decision matrix for residential vs commercial vs federal vs marine vs basement vs settlement-prone applications. Standards: BS 8002, BS 8004, BS 8006, BS EN 1997 (Eurocode 7), BS EN 12063, AASHTO LRFD, FHWA-NHI-10-024, NCMA SRW Design Manual, ISO 13431, JKR Standard Specifications.
+
+### 32.2 Slope Reinforcement Methods Compared
+URL: https://infraconcrete.co/compare-slope-reinforcement/
+Coverage: Soil nailing vs Rock bolting vs Ground anchors vs MSE wall vs RSS. 5 methods, depth/height reach 1.5-40 m+, cost band RM 180-1,800 per linear m or per m² face. Mechanism distinction (passive bonded bar vs pre-tensioned anchor vs reinforced fill geometry). Why some methods cost 5-10x more (passive nail RM 180-280/m vs ground anchor RM 850-1,800/m). Decision matrix for residual soil cuts, jointed rock, deep failure surfaces, urban basements, federal expressways, post-failure remediation. Standards: BS 8006-1/2, BS 8081, BS EN 1537, BS EN 14490, Eurocode 7, FHWA-NHI-14-007, FHWA-NHI-10-024, ISO 13431, JKR-SPJ Section 7, MS 522.
+
+### 32.3 Slope Surface Protection Compared
+URL: https://infraconcrete.co/compare-slope-surface-protection/
+Coverage: Shotcrete vs Geocell vegetated (StrataWeb HDPE) vs Hydroseeding vs Coir mat vs Riprap vs Turf reinforcement mat (TRM). 6 methods spanning vegetative to hard armor. Slope angle range 1V:2H to overhang. Cost band RM 8-200 per m². Design life 2-120 years. Why geocell HDPE outlives shotcrete (75-120 yr vs 30-50 yr). Decision matrix for residential vs hillside cuts vs drainage channels vs riverbanks vs spillways vs overhangs. Standards: ASTM D6460 (TRM hydraulic shear), D6464 (coir mat), D5994 (HDPE), D5397 (HDPE stress crack), D5199 (thickness), FHWA-HEC-15, ACI 506R, BS EN 14487, BS 8006, NRCS Engineering Field Handbook Ch. 16, JKR-SPJ Section 7.
+
+### 32.4 Slope Drainage Methods Compared
+URL: https://infraconcrete.co/compare-drainage-methods/
+Coverage: Sub-horizontal drain vs French drain vs Subsurface chimney drain vs Toe drain vs StrataDrain geocomposite. 5 methods, depth reach 0.5-50 m. Cost band RM 95-450 per m or per m². Why surface drainage is cheap but limited reach, why deep dewatering needs sub-horizontal drilling, why StrataDrain replaces gravel chimney drains (90 percent thinner, faster install, certified flow per ASTM D4716). Decision matrix for hillside cuts, post-failure remediation, retaining wall back drains, MSE wall drainage, basement perimeters, riverbank toes. Standards: BS 8002, BS 8006, BS EN 13252, ASTM D4716 (transmissivity), D4491 (permittivity), D5101 (filter compatibility), FHWA-NHI-06-088, FHWA-RD-97-130, JKR-SPJ Section 7, MS 1228, MS 1063.
+
+### 32.5 Geosynthetics Compared (5 categories)
+URL: https://infraconcrete.co/compare-geosynthetics/
+Coverage: Geogrid (uniaxial PET, StrataGrid SG200-SG800 vs biaxial PP) vs Geotextile (woven, StrataTex HSR vs nonwoven) vs Geocell (StrataWeb HDPE) vs Geomembrane (HDPE/LLDPE) vs Geocomposite drainage (StrataDrain). 5 categories, polymer choice matrix (PET vs PP vs HDPE vs LLDPE), strength range 5-1000 kN/m, design life 50-120 years. Cost band RM 3-130 per m² supply only. When to use each (MSE wall reinforcement vs pavement subgrade vs landfill liner vs slope vegetated face vs retaining wall back drain). Standards: ISO 10319 (wide-width tensile), ISO 13431 (creep), ASTM D6637 (geogrid rib tensile), D4595 (geotextile tensile), D4491 (permittivity), D4716 (transmissivity), D5994 (HDPE thickness), D5397 (HDPE stress crack), BS 8006-1/2, BS EN 13252, FHWA-NHI-10-024, NCMA SRW Design Manual, JKR-SPJ Section 7.
+
+### 32.6 STRATA Geosystems products referenced
+StrataGrid (uniaxial PET geogrid for MSE wall, modular block, RSS, basal reinforcement). StrataWeb (HDPE geocell for slope vegetated facing, load support, channel protection). StrataTex HSR (woven geotextile for separation, filtration, moderate reinforcement). StrataBlock (modular segmental concrete block facing for MSE walls). StrataDrain (HDPE 3D core + geotextile filter geocomposite for retaining wall and basement drainage). All sole-distributed in Malaysia by Starwall Sdn Bhd, sister company under Panthera Group, with Infraconcrete Construction Sdn Bhd (CIDB G7) as the certified installer.

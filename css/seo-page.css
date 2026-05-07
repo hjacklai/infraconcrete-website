@@ -1,4 +1,4 @@
-/* Shared stylesheet for SEO landing pages — service pages, location pages, problem pages */
+/* Shared stylesheet for SEO landing pages ,  service pages, location pages, problem pages */
 :root {
   --ic-red: #C8102E; --ic-red-deep: #9F0B22; --ic-red-soft: #E94557;
   --paper: #F4EAD2; --paper-bright: #FAF3E0;
@@ -20,7 +20,7 @@ body {
   font-size: 16px; line-height: 1.65; overscroll-behavior: none;
   position: relative;
 }
-/* Site-wide topo contour background on every SEO page — uses the EXACT same
+/* Site-wide topo contour background on every SEO page ,  uses the EXACT same
    topo-default SVG paths as the homepage <symbol id="topo-default"> so the
    visual identity is consistent landing-page → SEO-page. 10 contour lines
    organized as upper terrain (3 ridges) + mid valley (3 V-shapes) + lower
@@ -39,7 +39,7 @@ body > * { position: relative; z-index: 1; }
 a { color: inherit; text-decoration: none; } img, svg { display: block; max-width: 100%; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
 
-/* ===== Topbar (mirrors homepage .nav exactly — same transparency,
+/* ===== Topbar (mirrors homepage .nav exactly ,  same transparency,
    same border behavior, same height. Barely-there frosted glass at the
    top of page; scrolled state adds visible cream + bottom border. ===== */
 .topbar {
@@ -87,7 +87,7 @@ a { color: inherit; text-decoration: none; } img, svg { display: block; max-widt
 .group-badge img { max-width: none; height: 14px; width: auto; }
 
 /* Language toggle pill (mirrors homepage .lang-toggle exactly).
-   Translucent frosted-ribbon look — content shows through; border + blur
+   Translucent frosted-ribbon look ,  content shows through; border + blur
    provide definition without a heavy fill. */
 .lang-toggle { display: flex; gap: 1px; padding: 3px; background: rgba(244, 234, 210, 0.32); backdrop-filter: blur(14px) saturate(1.35); -webkit-backdrop-filter: blur(14px) saturate(1.35); border: 1px solid rgba(31, 27, 23, 0.08); border-radius: 999px; flex-shrink: 0; }
 .lang-toggle button { padding: 5px 11px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(31, 27, 23, 0.65); background: transparent; border: 0; cursor: pointer; border-radius: 999px; transition: color .2s var(--ease), background .2s var(--ease); min-height: 28px; line-height: 1; }
@@ -108,7 +108,7 @@ a { color: inherit; text-decoration: none; } img, svg { display: block; max-widt
   .group-badge .gb-label { font-size: 8px; }
 }
 @media (max-width: 720px) {
-  /* Topbar height stays 76px on all viewports — matches homepage .nav-inner
+  /* Topbar height stays 76px on all viewports ,  matches homepage .nav-inner
      for visual coherence between landing and SEO pages. */
   .lang-switch .ls-item { padding: 5px 10px; font-size: 10px; letter-spacing: 0.14em; }
 }
@@ -130,7 +130,7 @@ a { color: inherit; text-decoration: none; } img, svg { display: block; max-widt
 .topbar a.home-link { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-700); }
 .topbar a.home-link:hover { color: var(--ic-red); }
 
-/* Breadcrumbs — first link (Home) is the primary "back" affordance now that
+/* Breadcrumbs ,  first link (Home) is the primary "back" affordance now that
    the standalone .seo-back-btn was removed. Render it as a filled red pill
    so it's unmistakably a button, not just colored text. */
 .crumbs { padding: 18px 0; font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--grey-500); display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
@@ -260,7 +260,7 @@ section.block:first-of-type { border-top: 0; padding-top: 0; }
 .btn-ghost:hover { border-color: var(--paper); }
 
 /* Footer (rich, mirrors homepage .footer). Tight bottom padding so scroll
-   ends right after the credentials line — bottom-nav clearance is handled
+   ends right after the credentials line ,  bottom-nav clearance is handled
    by body { padding-bottom } below, no need to double-pad here. */
 footer { background: var(--paper); color: var(--ink-soft); padding: 70px 0 28px; font-size: 13px; border-top: 1px solid var(--grey-line); }
 footer .container { max-width: 1100px; }
@@ -286,7 +286,7 @@ footer li a { font-size: 13.5px; color: var(--ink-soft); }
 
 /* Bottom-nav swipe pill (matches homepage). Injected by /js/seo-nav.js.
    Just enough clearance for the floating pill (~72px tall + 12px from bottom)
-   so scroll ends right after the credentials line — no big blank below. */
+   so scroll ends right after the credentials line ,  no big blank below. */
 body { padding-bottom: 60px; }
 .bottom-nav {
   position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%) translateY(28px);
@@ -351,7 +351,7 @@ body { padding-bottom: 60px; }
 .bn-cta:hover { background: var(--ic-red-deep); color: #fff !important; }
 .bn-cta svg { opacity: 1; }
 /* Mobile bottom-nav sizing now matches homepage: same gap (6px), same outer
-   padding, same item size — no more "smaller pill on SEO pages" mismatch. */
+   padding, same item size ,  no more "smaller pill on SEO pages" mismatch. */
 @media (max-width: 540px) {
   .bottom-nav { padding: 6px 10px 6px 14px; gap: 6px; bottom: 12px; max-width: calc(100vw - 24px); }
   .bn-item { font-size: 9px; }

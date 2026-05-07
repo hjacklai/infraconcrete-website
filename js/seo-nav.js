@@ -76,25 +76,25 @@
       if (href) window.location.href = href;
     });
 
-    /* Standalone back button removed — the breadcrumb "← Home" is the primary
+    /* Standalone back button removed ,  the breadcrumb "← Home" is the primary
        back affordance. Goes to homepage IN THE CURRENT LANGUAGE, and ALSO
        deep-links to the matching section so e.g. /soil-nailing/ -> #cap-soil-nailing,
        /sabah/ -> #record. The href is rewritten on mount so it's always fresh. */
     const SECTION_MAP = {
-      // Capabilities cards (in-house specialist services — each has its own #cap-* card)
+      // Capabilities cards (in-house specialist services ,  each has its own #cap-* card)
       'soil-nailing': '#cap-soil-nailing',
       'guniting': '#cap-guniting',
       'rock-bolting': '#cap-rock-bolting',
       'rock-netting': '#cap-rock-netting',
       'slope-stabilization': '#cap-slope-stabilization',
       'rockfall-barrier': '#cap-rockfall-barrier',
-      // SOLUTIONS sol-cards (high-level "what we do" — return user to where they came from)
+      // SOLUTIONS sol-cards (high-level "what we do" ,  return user to where they came from)
       // The /slope-protection/ guide is opened from the Slope Protection sol-card,
       // so HOME from there should land back on that exact card (#cap-slope), NOT
       // the lower-down cap-slope-stabilization (capabilities) card.
       'slope-protection': '#cap-slope',
       'kontraktor-cerun': '#cap-slope',
-      // Slope-family pages — return to slope protection sol-card (the umbrella)
+      // Slope-family pages ,  return to slope protection sol-card (the umbrella)
       'slope-monitoring': '#cap-slope',
       'horizontal-drains': '#cap-slope',
       'erosion-control': '#cap-slope',
@@ -102,14 +102,14 @@
       'post-landslide-remediation': '#cap-slope',
       'hillside-remedial': '#cap-slope',
       'saliran-cerun': '#cap-slope',
-      // Retaining family — return to retaining systems sol-card
+      // Retaining family ,  return to retaining systems sol-card
       'retaining-walls': '#cap-retaining',
       'mse-wall': '#cap-retaining',
       'reinforced-soil-slopes': '#cap-retaining',
       'sheet-pile': '#cap-retaining',
       'sheet-piling': '#cap-retaining',
       'tembok-penahan': '#cap-retaining',
-      // Land-creation family — return to land creation sol-card
+      // Land-creation family ,  return to land creation sol-card
       'land-creation': '#cap-landcreation',
       'earthworks': '#cap-landcreation',
       'kerja-tanah': '#cap-landcreation',
@@ -163,7 +163,7 @@
       crumbHome.href = langPath + sectionAnchor;
       crumbHome.addEventListener('click', function () {
         try { localStorage.setItem('lang', langCode); } catch (err) {}
-        /* Fall through to href — homepage init reads ?lang= and localStorage,
+        /* Fall through to href ,  homepage init reads ?lang= and localStorage,
            and the browser scrolls to the #anchor (with scroll-margin-top set
            so the card isn't hidden under the sticky topbar). */
       });
@@ -430,7 +430,7 @@
     })(track);
 
     // Desktop wheel: convert vertical wheel ticks to horizontal pan.
-    // 120px clamp (~2 icons) matches homepage feel — smooth/momentum-ish.
+    // 120px clamp (~2 icons) matches homepage feel ,  smooth/momentum-ish.
     track.addEventListener('wheel', function (e) {
       if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
       if (e.deltaY === 0) return;
@@ -441,7 +441,7 @@
   }
 
   /* Reveal on scroll + sticky topbar scrolled state (matches homepage).
-     Trigger at 40% of viewport (~430px on a 1080p screen) — appears as the
+     Trigger at 40% of viewport (~430px on a 1080p screen) ,  appears as the
      user nears the end of the hero section, well before the first content
      block starts. */
   const topbarEl = document.querySelector('.topbar');
