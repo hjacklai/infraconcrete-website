@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Geotechnical Design Guide Malaysia | Soil Nail, MSE Wall, Rock Bolt Design Parameters | Infraconcrete</title>
+<meta name="description" content="The engineer's design guide for slope stabilization in Malaysia. Typical design parameters, factor of safety targets, and code-referenced design checks for soil nailing, MSE wall, Reinforced Earth, rock bolting, ground anchors, tieback walls, gabion, crib wall, sheet pile, RC cantilever, reinforced soil slopes, horizontal drains. Designed to BS 8006, FHWA, AASHTO, Eurocode 7, JKR. By Infraconcrete - CIDB G7 specialist geotechnical contractor." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="author" content="Infraconcrete Construction Sdn Bhd" />
+<meta name="keywords" content="geotechnical design Malaysia, soil nail design, MSE wall design, rock bolt design, ground anchor design, tieback wall design, slope stability analysis, factor of safety JKR, BS 8006-2, FHWA-NHI-14-007, BS 8081, Eurocode 7, JKR slope design, Bishop method, Janbu method, Spencer method, Morgenstern-Price, slope stabilization design parameters, retaining wall design, geotechnical engineer Malaysia" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Geotechnical Design Guide Malaysia | The Engineer's Reference | Infraconcrete" />
+<meta property="og:description" content="Typical design parameters, factor of safety targets, and code-referenced design checks for every slope stabilization system used in Malaysia. By CIDB G7 specialist." />
+<meta property="og:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<meta property="og:url" content="https://infraconcrete.co/geotechnical-design-guide/" />
+<meta property="og:site_name" content="Infraconcrete Construction Sdn Bhd" />
+<meta property="og:locale" content="en_MY" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Geotechnical Design Guide Malaysia | The Engineer's Reference" />
+<meta name="twitter:description" content="Typical design parameters, FoS targets, and code-referenced design checks for soil nail, MSE wall, rock bolt, tieback, gabion, sheet pile, and more." />
+<meta name="twitter:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://infraconcrete.co/geotechnical-design-guide/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/geotechnical-design-guide/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geotechnical-design-guide/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="any" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<!-- Schema.org Article + Breadcrumb + FAQ -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://infraconcrete.co/geotechnical-design-guide/#article",
+   "headline": "Geotechnical Design Guide Malaysia - Typical Parameters and Factor of Safety Targets",
+   "description": "Comprehensive design reference for slope stabilization systems used in Malaysia. Typical input parameters, design checks, factor of safety targets, common pitfalls, and code references for soil nailing, MSE wall, Reinforced Earth, rock bolting, ground anchors, tieback walls, gabion, crib wall, sheet pile, RC cantilever, reinforced soil slopes, and horizontal drains.",
+   "datePublished": "2026-05-08",
+   "dateModified": "2026-05-08",
+   "author": { "@type": "Organization", "name": "Infraconcrete Construction Sdn Bhd", "url": "https://infraconcrete.co/" },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Infraconcrete Construction Sdn Bhd",
+    "logo": { "@type": "ImageObject", "url": "https://infraconcrete.co/images/brand/logo.png" }
+   },
+   "image": "https://infraconcrete.co/images/projects/project-ekve.jpg",
+   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://infraconcrete.co/geotechnical-design-guide/" },
+   "about": [
+    { "@type": "Thing", "name": "Soil Nail Design (BS 8006-2 / FHWA-NHI-14-007)" },
+    { "@type": "Thing", "name": "MSE Wall Design (BS 8006 / AASHTO LRFD)" },
+    { "@type": "Thing", "name": "Reinforced Earth Wall Design" },
+    { "@type": "Thing", "name": "Rock Bolt Design (BS 8081 / EN 1537)" },
+    { "@type": "Thing", "name": "Ground Anchor / Tieback Wall Design" },
+    { "@type": "Thing", "name": "Gabion Wall Design" },
+    { "@type": "Thing", "name": "Crib Wall Design" },
+    { "@type": "Thing", "name": "Sheet Pile Design (BS EN 12063)" },
+    { "@type": "Thing", "name": "RC Cantilever Wall Design" },
+    { "@type": "Thing", "name": "Reinforced Soil Slope (RSS) Design" },
+    { "@type": "Thing", "name": "Horizontal Drain Design" },
+    { "@type": "Thing", "name": "Slope Stability Analysis Methods" },
+    { "@type": "Thing", "name": "Factor of Safety Targets (JKR)" }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://infraconcrete.co/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://infraconcrete.co/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Geotechnical Design Guide", "item": "https://infraconcrete.co/geotechnical-design-guide/" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What factor of safety should I design for on a permanent slope in Malaysia?",
+     "acceptedAnswer": { "@type": "Answer", "text": "Per JKR Slope Engineering Manual: long-term static FoS of 1.4 to 1.5 for permanent slopes (1.5 typical for residential or critical infrastructure), 1.2 to 1.3 for short-term or temporary cuts, 1.1 to 1.2 under seismic loading. Eurocode 7 (BS EN 1997) uses partial factors instead of global FoS - typical equivalent global FoS is 1.4 to 1.5 for permanent works. For Class III and Class IV slopes (JKR hillside categorization), tighter targets apply due to consequence-of-failure considerations." }
+    },
+    {
+     "@type": "Question",
+     "name": "What's the typical soil nail length and spacing for a 10 m cut slope in Malaysian residual soil?",
+     "acceptedAnswer": { "@type": "Answer", "text": "Indicative range subject to design verification: nail length 0.7 to 1.0 times slope height (so 7 to 10 m for a 10 m cut), nail diameter Y25 to Y32 high-yield steel, hole diameter 100 to 150 mm, vertical and horizontal spacing 1.5 to 2.5 m, inclination 10 to 15 degrees below horizontal. Final values come from BS 8006-2 / FHWA-NHI-14-007 design analysis with site-specific soil parameters from a geotechnical investigation. Pull-out tests on 1 to 2 percent of installed nails verify the design assumptions." }
+    },
+    {
+     "@type": "Question",
+     "name": "What's the typical reinforcement length for an MSE wall?",
+     "acceptedAnswer": { "@type": "Answer", "text": "Per BS 8006 / FHWA-NHI-10-024: reinforcement length is typically 0.7 times the wall height (0.7H), with a minimum of 2.4 m. For seismic conditions, 0.8H may be required. Vertical spacing of reinforcement layers is typically 0.4 to 0.8 m. The exact length, spacing, strength, and connection type are determined by internal stability checks (tensile strength, pull-out resistance, connection strength) and external stability checks (sliding, overturning, bearing, global stability)." }
+    },
+    {
+     "@type": "Question",
+     "name": "What design code do I use for ground anchors in Malaysia?",
+     "acceptedAnswer": { "@type": "Answer", "text": "Primary references: BS 8081 (Code of Practice for Ground Anchorages), BS EN 1537 (Execution of Special Geotechnical Works - Ground Anchors), and FHWA-IF-99-015 (Geotechnical Engineering Circular No. 4 - Ground Anchors and Anchored Systems). PTI Recommendations for Prestressed Rock and Soil Anchors are also widely referenced. JKR specifications govern federal works. Acceptance testing per BS 8081 - load to 1.5 times working load, hold for 60 minutes, less than 5 percent creep allowed." }
+    },
+    {
+     "@type": "Question",
+     "name": "Which slope stability analysis method should I use?",
+     "acceptedAnswer": { "@type": "Answer", "text": "For circular slip surfaces in homogeneous soils: Bishop's Simplified Method is the standard Malaysian practice. For non-circular slip surfaces or layered soils: Janbu's Simplified, Spencer's Method, or Morgenstern-Price are more appropriate (Morgenstern-Price is the most rigorous and is required for some federal projects). For wedge failures in jointed rock: kinematic analysis followed by limit equilibrium. Software commonly used: Slope/W, RocScience Slide, PLAXIS LE." }
+    },
+    {
+     "@type": "Question",
+     "name": "When do I need a tieback wall instead of a cantilever sheet pile?",
+     "acceptedAnswer": { "@type": "Answer", "text": "Cantilever sheet pile capacity is typically limited to retained heights of 4 to 6 m depending on soil conditions. Above this, the bending moments become uneconomical. For deeper excavations: 6 to 12 m retained height usually requires one row of tieback anchors; 12 to 20 m requires two rows; over 20 m requires three or more rows. Decision drivers: depth, soil stiffness, allowable wall deformation, surcharge loads, adjacent structure sensitivity, and groundwater. Design to BS 8081, BS EN 1537, and PTI Recommendations." }
+    }
+   ]
+  }
+ ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Manrope:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/seo-page.css">
+<script src="/js/seo-nav.js" defer></script>
+<style>
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 16px;margin:20px 0;padding:16px;background:rgba(31,27,23,0.04);border-radius:6px}
+.toc-grid a{display:block;padding:6px 0;color:#1F1B17;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;border-bottom:1px solid rgba(31,27,23,0.08)}
+.toc-grid a:hover{color:#C8102E}
+.design-block{padding:32px 0;border-top:1px solid rgba(31,27,23,0.12)}
+.design-block:first-of-type{border-top:none}
+.design-block h3{font-size:clamp(22px,2.4vw,30px);margin:8px 0 16px}
+.design-block .sys-eye{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#C8102E;text-transform:uppercase}
+.design-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:20px}
+@media(min-width:880px){.design-grid{grid-template-columns:1fr 1fr}}
+.design-section h4{font-size:14px;letter-spacing:0.06em;margin:0 0 8px;color:#1F1B17;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.design-section p{margin:0 0 10px;font-size:15px;line-height:1.6}
+.design-section ul{margin:0;padding-left:20px;font-size:14px;line-height:1.7}
+.params-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13px}
+.params-table th,.params-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(31,27,23,0.1);vertical-align:top}
+.params-table th{background:rgba(31,27,23,0.06);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;font-size:11px;text-transform:uppercase}
+.params-table tr:hover td{background:rgba(200,16,46,0.03)}
+.fos-callout{background:rgba(200,16,46,0.06);border-left:3px solid #C8102E;padding:14px 18px;margin:16px 0;font-size:14px;line-height:1.55}
+.fos-callout strong{color:#C8102E}
+.warn{background:rgba(31,27,23,0.06);border-left:3px solid #1F1B17;padding:12px 16px;margin:14px 0;font-size:14px;line-height:1.55}
+.warn::before{content:"PITFALL ";color:#C8102E;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;font-weight:700}
+.pill{display:inline-block;padding:2px 8px;background:rgba(200,16,46,0.1);color:#C8102E;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;border-radius:3px;margin-right:6px}
+.disclaimer{background:rgba(31,27,23,0.04);padding:16px 20px;border-radius:6px;margin:24px 0;font-size:13px;line-height:1.55;color:rgba(31,27,23,0.75)}
+.disclaimer strong{color:#1F1B17}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+ <div class="container topbar-row">
+  <a href="/" class="brand">Infra<em>concrete</em></a>
+  <a href="/" class="home-link">← Back to home</a>
+ </div>
+</header>
+
+<div class="container">
+ <nav class="crumbs" aria-label="Breadcrumb">
+  <a href="/">Home</a><span class="sep">·</span>
+  <a href="/resources/">Resources</a><span class="sep">·</span>
+  <span class="here">Geotechnical Design Guide</span>
+ </nav>
+</div>
+
+<main>
+ <div class="container">
+  <section class="hero">
+   <div class="eyebrow">The Engineer's Design Reference</div>
+   <h1>Geotechnical design guide for <em>Malaysian slopes.</em></h1>
+   <p class="lede">Typical design parameters, factor of safety targets, and code-referenced design checks for every slope stabilization system used in Malaysian construction. Soil nailing, MSE wall, Reinforced Earth, rock bolting, ground anchors, tieback walls, gabion, crib wall, rubble pitching, sheet pile, RC cantilever, reinforced soil slope, horizontal drains. Each system covered with design philosophy, key input parameters, design checks, typical parameter ranges, FoS targets, and common pitfalls. Designed to BS 8006, FHWA-NHI-14-007, BS 8081, BS EN 1537, AASHTO LRFD, Eurocode 7, ETAG 027, ACI 506, NCMA, and JKR Slope Engineering Manual specifications. By Infraconcrete - CIDB G7 specialist geotechnical contractor, ISO 9001:2015 certified, 100+ projects delivered.</p>
+
+   <div class="stats">
+    <div class="stat"><div class="v">12</div><div class="l">Systems with design parameters</div></div>
+    <div class="stat"><div class="v">10+</div><div class="l">Design codes referenced</div></div>
+    <div class="stat"><div class="v">G7</div><div class="l">CIDB highest grade</div></div>
+    <div class="stat"><div class="v">100+</div><div class="l">Projects delivered</div></div>
+   </div>
+  </section>
+
+  <div class="disclaimer">
+   <strong>Use this guide as a starting reference, not as a final design.</strong> All values shown are indicative ranges typical of Malaysian residual soil, alluvial, and sedimentary conditions. Site-specific design must come from a qualified geotechnical engineer with site investigation data, ground parameters, and a slope stability analysis to the relevant code. Infraconcrete delivers in-house design where appointed direct (design-build), or as the specialist contractor under the consulting engineer's design.
+  </div>
+
+  <section class="block">
+   <div class="block-eye">Navigation</div>
+   <h2>Jump to a system or topic.</h2>
+   <div class="toc-grid">
+    <a href="#design-philosophy">→ Design Philosophy</a>
+    <a href="#fos-targets">→ Factor of Safety Targets</a>
+    <a href="#stability-analysis">→ Slope Stability Analysis</a>
+    <a href="#soil-nailing">→ Soil Nailing Design</a>
+    <a href="#mse-wall">→ MSE Wall Design</a>
+    <a href="#re-wall">→ Reinforced Earth Design</a>
+    <a href="#modular-block">→ Modular Block Design</a>
+    <a href="#crib-wall">→ Crib Wall Design</a>
+    <a href="#gabion-wall">→ Gabion Wall Design</a>
+    <a href="#rc-cantilever">→ RC Cantilever Design</a>
+    <a href="#sheet-pile">→ Sheet Pile Design</a>
+    <a href="#tieback-wall">→ Tieback / Anchor Design</a>
+    <a href="#rss">→ RSS Design</a>
+    <a href="#rock-bolt">→ Rock Bolt Design</a>
+    <a href="#rockfall-barrier">→ Rockfall Barrier Design</a>
+    <a href="#horizontal-drain">→ Horizontal Drain Design</a>
+    <a href="#guniting">→ Guniting Design</a>
+    <a href="#standards">→ Standards Reference</a>
+    <a href="#faq">→ FAQ</a>
+   </div>
+  </section>
+
+  <!-- ===== DESIGN PHILOSOPHY ===== -->
+  <section class="block design-block" id="design-philosophy">
+   <div class="sys-eye">Foundation</div>
+   <h3>Design philosophy for Malaysian slopes.</h3>
+   <p>Geotechnical design in Malaysia is governed by the <strong>JKR Slope Engineering Manual</strong> for federal and state-government works, supplemented by British Standards (BS 6031, BS 8002, BS 8004, BS 8006, BS 8081), Eurocode 7 (BS EN 1997), FHWA reference manuals, AASHTO LRFD, and discipline-specific codes (ACI for shotcrete, ETAG for rockfall barriers, NCMA for segmental walls). Local conditions - tropical climate, residual soil profiles, seismic Zone 1 to 2, monsoon rainfall, sensitive ecology - shape every design decision.</p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Limit State vs Working Load Design</h4>
+     <p><strong>Working Load Design (WLD)</strong>, a global factor of safety approach, remains the dominant Malaysian practice for slope stability. Single FoS applied to resisting/driving force ratio.</p>
+     <p><strong>Limit State Design (LSD)</strong>, partial factors on loads and resistances per Eurocode 7 and AASHTO LRFD. Increasingly required for federal infrastructure.</p>
+     <p>Modern practice: run both, present the more conservative result. Some authority specifications now mandate LSD checks alongside traditional FoS.</p>
+    </div>
+    <div class="design-section">
+     <h4>Site Investigation Minimum</h4>
+     <ul>
+      <li>Borehole density: 1 per 25 m of slope length, minimum 3 boreholes</li>
+      <li>Borehole depth: at least 1.5 times the slope height below the toe</li>
+      <li>SPT, undisturbed sampling, lab testing (UCS, triaxial, direct shear)</li>
+      <li>Groundwater monitoring via piezometer for 3-month minimum, ideally through one wet season</li>
+      <li>For Class III / IV slopes: instrumented monitoring may be required during and after construction</li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== FACTOR OF SAFETY ===== -->
+  <section class="block design-block" id="fos-targets">
+   <div class="sys-eye">Targets</div>
+   <h3>Factor of Safety targets per JKR / BS / Eurocode 7.</h3>
+   <table class="params-table">
+    <thead><tr><th>Loading condition</th><th>FoS target (JKR)</th><th>BS 6031 / EN 1997</th><th>Notes</th></tr></thead>
+    <tbody>
+     <tr><td>Long-term static, permanent slope</td><td>1.4 to 1.5</td><td>1.4</td><td>1.5 typical for residential / critical infrastructure</td></tr>
+     <tr><td>Long-term static, temporary cut</td><td>1.2 to 1.3</td><td>1.2 to 1.3</td><td>Construction stage only</td></tr>
+     <tr><td>Short-term static (during construction)</td><td>1.2</td><td>1.2</td><td>Undrained analysis where applicable</td></tr>
+     <tr><td>Seismic (rare event in Malaysia, Zone 1-2)</td><td>1.1 to 1.2</td><td>1.1</td><td>Pseudo-static analysis with horizontal coefficient kh</td></tr>
+     <tr><td>Post-failure (back-analysis)</td><td>1.0 (target)</td><td>1.0</td><td>Confirms failure surface and parameters</td></tr>
+     <tr><td>Class III / IV slope (consequence-driven)</td><td>1.5+</td><td>1.5+</td><td>JKR hillside categorization, higher consequence-of-failure</td></tr>
+     <tr><td>Ultimate Limit State (Eurocode 7)</td><td>N/A (partial factors)</td><td>Equivalent FoS 1.4 to 1.5</td><td>Combinations with permanent + variable load factors</td></tr>
+    </tbody>
+   </table>
+   <div class="fos-callout">
+    <strong>JKR Class III / IV slopes</strong> require higher FoS targets due to consequence-of-failure considerations (proximity to occupied structures, traffic, public spaces). These slopes also typically require deeper site investigation, instrumented monitoring during construction, and post-construction performance verification.
+   </div>
+  </section>
+
+  <!-- ===== STABILITY ANALYSIS ===== -->
+  <section class="block design-block" id="stability-analysis">
+   <div class="sys-eye">Methods</div>
+   <h3>Slope stability analysis methods.</h3>
+   <table class="params-table">
+    <thead><tr><th>Method</th><th>Slip surface</th><th>Equilibrium satisfied</th><th>Typical use</th></tr></thead>
+    <tbody>
+     <tr><td>Fellenius / Ordinary Method of Slices</td><td>Circular</td><td>Moment only (vertical slice)</td><td>Manual hand calc, conservative, rarely used in practice</td></tr>
+     <tr><td>Bishop's Simplified Method</td><td>Circular</td><td>Moment + vertical force</td><td><strong>Standard Malaysian practice for circular failures.</strong> Most software default.</td></tr>
+     <tr><td>Janbu's Simplified Method</td><td>Non-circular (any shape)</td><td>Force only, no moment</td><td>Layered soils, weak interface, planar failures</td></tr>
+     <tr><td>Spencer's Method</td><td>Non-circular</td><td>Both force and moment</td><td>Rigorous; better for complex geometries</td></tr>
+     <tr><td>Morgenstern-Price</td><td>Non-circular</td><td>Both force and moment, variable inter-slice force function</td><td>Most rigorous; required for some federal projects</td></tr>
+     <tr><td>Sarma Method</td><td>Non-circular wedges</td><td>All equilibrium, with horizontal acceleration</td><td>Seismic analysis, rock wedges</td></tr>
+     <tr><td>Finite Element / Finite Difference</td><td>Any (continuum)</td><td>Strain-based, all equilibrium</td><td>Complex geometries, soil-structure interaction, deformation prediction</td></tr>
+    </tbody>
+   </table>
+   <p style="margin-top:14px;font-size:14px;line-height:1.6">Software in common Malaysian use: <strong>Slope/W (GeoStudio)</strong> for limit equilibrium; <strong>RocScience Slide / Slide3</strong> for 2D and 3D limit equilibrium; <strong>PLAXIS LE / 2D / 3D</strong> for finite element including soil-structure interaction; <strong>OASYS Slope</strong> for UK-spec workflows; <strong>FLAC / FLAC3D</strong> for advanced finite difference (rock, mining).</p>
+  </section>
+
+  <!-- ===== SOIL NAILING ===== -->
+  <section class="block design-block" id="soil-nailing">
+   <div class="sys-eye">01 / Slope Reinforcement</div>
+   <h3>Soil Nailing design.</h3>
+   <p><span class="pill">BS 8006-2</span><span class="pill">FHWA-NHI-14-007</span><span class="pill">Eurocode 7</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Soil nailing reinforces the existing soil mass. The reinforced block behaves as a coherent gravity wall resisting external instability and as a reinforced soil mass resisting internal failure. Design checks: <strong>internal stability</strong> (bond, tensile, head bearing), <strong>external stability</strong> (sliding, overturning, bearing, global), <strong>face stability</strong> (flexural, punching).</p>
+     <h4>Typical input parameters</h4>
+     <ul>
+      <li>Soil shear strength (c, phi) from triaxial / direct shear / SPT correlations</li>
+      <li>Slope geometry: height H, face angle, geometry of cut</li>
+      <li>Surcharge loads: traffic, structures, water</li>
+      <li>Groundwater: design water table position</li>
+      <li>Seismic coefficient kh (Malaysia: 0.05 to 0.10g typical)</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters (indicative, residual soil)</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Bar diameter</td><td>Y20 to Y32 high-yield (Grade 460 / 500)</td></tr>
+       <tr><td>Hole diameter</td><td>100 to 150 mm</td></tr>
+       <tr><td>Nail length L</td><td>0.7H to 1.0H (min 6 m, max 15 m typical)</td></tr>
+       <tr><td>Spacing (H x V)</td><td>1.5 to 2.5 m centres</td></tr>
+       <tr><td>Inclination</td><td>10 to 15 degrees below horizontal</td></tr>
+       <tr><td>Grout strength</td><td>Min 30 N/mm2 at 28 days</td></tr>
+       <tr><td>Grout-to-ground bond (residual soil)</td><td>50 to 200 kPa (verified by pull-out test)</td></tr>
+       <tr><td>Facing</td><td>Shotcrete 75 to 150 mm + welded mesh, or vegetated mat</td></tr>
+       <tr><td>FoS target (long-term)</td><td>1.4 to 1.5 (JKR)</td></tr>
+      </tbody>
+     </table>
+     <h4>Design Verification</h4>
+     <p>Pull-out test on 1 to 2 percent of installed nails, loaded to 1.5x design working load, hold 60 minutes, less than 5 percent creep. Bond results back to consultant for design assumption verification before production nails proceed.</p>
+    </div>
+   </div>
+   <div class="warn">Bond capacity in residual soils varies widely depending on weathering grade, fines content, and groundwater. Do not assume textbook values - verify on site with sacrificial nails before finalizing design.</div>
+   <p><a href="/soil-nailing/">→ Read the full Soil Nailing capability page</a></p>
+  </section>
+
+  <!-- ===== MSE WALL ===== -->
+  <section class="block design-block" id="mse-wall">
+   <div class="sys-eye">02 / Reinforced Earth Retaining Wall</div>
+   <h3>MSE Wall design.</h3>
+   <p><span class="pill">BS 8006</span><span class="pill">AASHTO LRFD</span><span class="pill">FHWA-NHI-10-024</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>MSE walls are gravity structures where engineered fill reinforced with horizontal tendons (geogrid, geostrap, or steel strip) acts as a coherent block. Design checks split into <strong>internal stability</strong> (tensile rupture of reinforcement, pull-out resistance, connection strength) and <strong>external stability</strong> (sliding, overturning, bearing, global stability of the soil-structure system).</p>
+     <h4>Reinforcement Length</h4>
+     <ul>
+      <li>Minimum reinforcement length: <strong>0.7H</strong> per BS 8006 / FHWA-NHI-10-024</li>
+      <li>Minimum absolute length: 2.4 m</li>
+      <li>Seismic loading: 0.8H or longer</li>
+      <li>Heavy surcharge: extended length per design</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Wall height H</td><td>3 to 25+ m (most economical above 5 m)</td></tr>
+       <tr><td>Reinforcement length</td><td>0.7H minimum, 0.8H seismic</td></tr>
+       <tr><td>Vertical reinforcement spacing</td><td>0.4 to 0.8 m</td></tr>
+       <tr><td>Backfill compaction</td><td>95 to 98 percent modified Proctor</td></tr>
+       <tr><td>Backfill plasticity index</td><td>Less than 6 (BS 8006 cohesive fines limit)</td></tr>
+       <tr><td>Backfill internal angle phi</td><td>Min 30 degrees (typical 32 to 36 degrees for engineered granular)</td></tr>
+       <tr><td>FoS sliding</td><td>Min 1.5 (BS 8006); 1.0 LSD (Eurocode 7)</td></tr>
+       <tr><td>FoS overturning (eccentricity)</td><td>e less than B/6 (typical) or B/4 (strict)</td></tr>
+       <tr><td>FoS bearing</td><td>Min 2.0 to 3.0 depending on code</td></tr>
+       <tr><td>FoS global stability</td><td>Min 1.4 to 1.5</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="fos-callout"><strong>Design code priority:</strong> For federal infrastructure, AASHTO LRFD or BS 8006-1 with JKR overlay. For developer-spec, BS 8006 typical. For tall walls (>15 m), AASHTO LRFD with seismic check. Connection strength to facing is often the controlling design check - verify per ASTM D6638 or manufacturer test data.</div>
+   <p><a href="/mse-wall/">→ Read the full MSE Wall capability page</a></p>
+  </section>
+
+  <!-- ===== REINFORCED EARTH ===== -->
+  <section class="block design-block" id="re-wall">
+   <div class="sys-eye">03 / Steel Strip + Concrete Panel System</div>
+   <h3>Reinforced Earth (RE) Wall design.</h3>
+   <p><span class="pill">BS 8006</span><span class="pill">AASHTO LRFD</span><span class="pill">FHWA-NHI-10-024</span><span class="pill">ASTM A572 / A123</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Same external stability checks as MSE wall. Internal stability uses friction-based pull-out for high-adherence (HA) ribbed steel strips. Critical added consideration: <strong>steel durability</strong> over design life (typically 75 to 120 years). Section loss allowance per FHWA / AASHTO based on backfill aggressiveness.</p>
+     <h4>Backfill Aggressiveness Limits (FHWA)</h4>
+     <ul>
+      <li>Resistivity: greater than 3000 Ohm-cm</li>
+      <li>pH: 5 to 10</li>
+      <li>Chlorides: less than 100 ppm</li>
+      <li>Sulphates: less than 200 ppm</li>
+      <li>Organic content: less than 1 percent</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Strip dimensions</td><td>50 to 60 mm wide x 4 to 6 mm thick HA ribbed</td></tr>
+       <tr><td>Strip vertical spacing</td><td>0.75 m</td></tr>
+       <tr><td>Strip horizontal spacing</td><td>0.75 to 1.5 m</td></tr>
+       <tr><td>Strip length</td><td>0.7H typical (verified by pull-out check)</td></tr>
+       <tr><td>Galvanizing</td><td>Hot-dip zinc per ASTM A123, 86 microns minimum</td></tr>
+       <tr><td>Section loss allowance</td><td>15 microns per side per year (residual soil)</td></tr>
+       <tr><td>Panel size</td><td>1.5 x 1.5 m typical, 140 to 180 mm thick, cruciform/hexagonal</td></tr>
+       <tr><td>Concrete strength (panel)</td><td>Min 35 N/mm2 at 28 days</td></tr>
+       <tr><td>Lateral wall deformation</td><td>Less than 1 percent of height (typical)</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="warn">Steel strip section loss is the controlling long-term durability check. If backfill aggressiveness limits cannot be met, switch to geogrid (extensible) reinforcement which has no metallic durability concern.</div>
+  </section>
+
+  <!-- ===== MODULAR BLOCK ===== -->
+  <section class="block design-block" id="modular-block">
+   <div class="sys-eye">04 / Segmental Block Wall</div>
+   <h3>Modular Block (SRW) design.</h3>
+   <p><span class="pill">NCMA SRW Manual</span><span class="pill">BS 8006</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>For gravity walls (less than 3 m), block weight + interlock resists earth pressure. For taller walls, geogrid reinforcement extending into backfill creates a modular MSE variant. Design checks: external stability (sliding, overturning, bearing), internal stability of geogrid layers, and <strong>block-to-geogrid connection strength</strong> (often the limiting factor at the facing).</p>
+     <h4>Block Selection</h4>
+     <ul>
+      <li>Specify NCMA-compliant blocks for assured performance</li>
+      <li>Connection type: pin, lip-and-lock, or friction (gravity walls only)</li>
+      <li>Compressive strength: min 28 MPa per ASTM C90</li>
+      <li>Freeze-thaw not a concern in Malaysia, but absorption limits apply</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Wall height (gravity)</td><td>1 to 3 m</td></tr>
+       <tr><td>Wall height (with geogrid)</td><td>5 to 15 m, occasionally 20 m</td></tr>
+       <tr><td>Geogrid spacing</td><td>Every 2 to 3 courses (0.4 to 0.6 m vertical)</td></tr>
+       <tr><td>Geogrid length</td><td>0.7H minimum (per BS 8006)</td></tr>
+       <tr><td>Backfill compaction (within 1 m of face)</td><td>Light hand-compaction only (avoid block displacement)</td></tr>
+       <tr><td>Backfill compaction (rest)</td><td>95 percent modified Proctor</td></tr>
+       <tr><td>Drainage</td><td>Granular drainage layer + chimney drain at back; weep holes at toe</td></tr>
+       <tr><td>FoS (overall)</td><td>Min 1.4 to 1.5 per BS 8006</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="warn">Connection strength testing per NCMA SRW Manual is required if the block-geogrid pair is not from the manufacturer's tested matrix. Substitution of geogrid type without re-testing is not allowed.</div>
+  </section>
+
+  <!-- ===== CRIB WALL ===== -->
+  <section class="block design-block" id="crib-wall">
+   <div class="sys-eye">05 / Cribbing Gravity Wall</div>
+   <h3>Crib Wall design.</h3>
+   <p><span class="pill">BS 8002</span><span class="pill">AS 4678</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Gravity wall - combined weight of crib structure plus granular fill resists earth pressure. Design checks: external stability (sliding, overturning, bearing, global), member capacity (timber decay or concrete strength over design life), and global stability through the foundation.</p>
+     <h4>Material Considerations</h4>
+     <ul>
+      <li>Timber: hardwood Class 1 or 2 durability per MS 360 / AS 1604; pressure-treated</li>
+      <li>Concrete: min 30 N/mm2 strength, reinforced for tensile duty</li>
+      <li>Cell fill: free-draining granular (typical D50 = 25 to 75 mm)</li>
+      <li>Toe foundation: concrete sill or piled footing depending on bearing</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Wall height</td><td>2 to 8 m (taller with engineered design)</td></tr>
+       <tr><td>Base width to height ratio</td><td>0.5 to 0.8</td></tr>
+       <tr><td>Cell fill internal phi</td><td>Min 35 degrees (granular)</td></tr>
+       <tr><td>Member spacing (timber)</td><td>0.5 to 1.0 m</td></tr>
+       <tr><td>FoS sliding</td><td>Min 1.5</td></tr>
+       <tr><td>FoS overturning</td><td>Min 2.0</td></tr>
+       <tr><td>FoS bearing</td><td>Min 2.5 to 3.0</td></tr>
+       <tr><td>Design life (timber)</td><td>15 to 30 years (Malaysian climate)</td></tr>
+       <tr><td>Design life (concrete)</td><td>50+ years</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="warn">Timber crib durability in tropical climate is shorter than temperate-zone references suggest. Specify pressure-treated hardwood, design for replacement, or default to concrete crib for permanent infrastructure.</div>
+  </section>
+
+  <!-- ===== GABION WALL ===== -->
+  <section class="block design-block" id="gabion-wall">
+   <div class="sys-eye">06 / Stone-Filled Gravity Wall</div>
+   <h3>Gabion Wall design.</h3>
+   <p><span class="pill">BS EN 10223-3</span><span class="pill">EAD 200019</span><span class="pill">BS 8002</span><span class="pill">ASTM A975</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Pure gravity wall to 6 m, stepped or battered for taller walls, with optional reinforced soil backfill (geogrid) for 10 to 20 m heights. Design checks: external stability (sliding, overturning, bearing, global), internal stability of basket lacing under pressure, and <strong>scour protection at toe</strong> for riverine applications.</p>
+     <h4>Wire Spec by Application</h4>
+     <ul>
+      <li><strong>Galvanized:</strong> standard slope retaining, dry conditions</li>
+      <li><strong>Galfan (Zn-Al alloy):</strong> elevated durability, mildly aggressive</li>
+      <li><strong>PVC-coated:</strong> riverine, coastal, saline, chemical exposure</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Wall height (gravity)</td><td>1 to 6 m</td></tr>
+       <tr><td>Wall height (stepped)</td><td>up to 8 to 10 m</td></tr>
+       <tr><td>Wall height (with geogrid)</td><td>up to 15 to 20 m</td></tr>
+       <tr><td>Base width to height ratio</td><td>0.5 to 0.7 (gravity), reduced with geogrid</td></tr>
+       <tr><td>Stone size (face)</td><td>D50 = 100 to 200 mm angular, hand-placed</td></tr>
+       <tr><td>Stone size (interior)</td><td>D50 = 100 to 250 mm</td></tr>
+       <tr><td>Stone density</td><td>Min 2.5 t/m3 dry</td></tr>
+       <tr><td>Wire mesh aperture</td><td>80 x 100 mm typical (hexagonal woven)</td></tr>
+       <tr><td>Wire diameter</td><td>2.7 to 3.0 mm (galvanized core), plus PVC if coated</td></tr>
+       <tr><td>FoS sliding</td><td>Min 1.5</td></tr>
+       <tr><td>FoS overturning</td><td>Min 2.0</td></tr>
+       <tr><td>Toe scour depth (riverine)</td><td>1.5x to 2x design flood depth</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="fos-callout"><strong>Riverine applications</strong> require flow velocity check (typical limit 4 to 6 m/s for properly sized stone) and scour protection at toe. Add gabion mattress apron extending 1.5x to 2x the basket height into the riverbed.</div>
+  </section>
+
+  <!-- ===== RC CANTILEVER ===== -->
+  <section class="block design-block" id="rc-cantilever">
+   <div class="sys-eye">07 / Rigid Concrete Wall</div>
+   <h3>RC Cantilever Wall design.</h3>
+   <p><span class="pill">BS 8002</span><span class="pill">BS 8004</span><span class="pill">BS EN 1997 (Eurocode 7)</span><span class="pill">BS EN 1992 (Eurocode 2)</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Rigid wall - external stability (sliding, overturning, bearing, global) plus structural design of concrete stem and footing per Eurocode 2 / BS 8110. <strong>Drainage critical</strong>: clogged weep holes lead to hydrostatic pressure that can overstress the wall stem. Counterfort or buttressed variants for taller walls.</p>
+     <h4>Loading</h4>
+     <ul>
+      <li>Active or at-rest earth pressure (depends on wall flexibility allowance)</li>
+      <li>Surcharge: traffic (typically 10 kPa), structures, embankment loads</li>
+      <li>Hydrostatic if drainage fails (assume drainage works under permanent design)</li>
+      <li>Seismic: pseudo-static with kh = 0.05 to 0.10g for Malaysia</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Wall height (cantilever)</td><td>1 to 8 m</td></tr>
+       <tr><td>Wall height (counterfort)</td><td>8 to 15 m</td></tr>
+       <tr><td>Stem thickness (top)</td><td>200 to 300 mm</td></tr>
+       <tr><td>Stem thickness (base)</td><td>H/12 to H/10 typical</td></tr>
+       <tr><td>Footing width</td><td>0.5H to 0.7H (verify by sliding/bearing checks)</td></tr>
+       <tr><td>Footing thickness</td><td>H/12 to H/10</td></tr>
+       <tr><td>Concrete grade</td><td>25 to 35 N/mm2</td></tr>
+       <tr><td>Rebar grade</td><td>460 / 500 high-yield deformed</td></tr>
+       <tr><td>Cover to rebar</td><td>50 mm (against soil), 40 mm (exposed face)</td></tr>
+       <tr><td>FoS sliding</td><td>Min 1.5</td></tr>
+       <tr><td>FoS overturning</td><td>Min 2.0</td></tr>
+       <tr><td>FoS bearing</td><td>Min 2.5 to 3.0</td></tr>
+       <tr><td>Weep hole spacing</td><td>1 to 3 m horizontal, 1 to 2 m vertical</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="warn">RC cantilever walls in Malaysia routinely fail through <strong>drainage clogging</strong>. Specify granular drainage layer with filter geotextile, weep holes at proper spacing, and a maintenance schedule. Drainage failure is the leading cause of RC wall distress.</div>
+  </section>
+
+  <!-- ===== SHEET PILE ===== -->
+  <section class="block design-block" id="sheet-pile">
+   <div class="sys-eye">08 / Driven Steel Wall</div>
+   <h3>Sheet Pile Wall design.</h3>
+   <p><span class="pill">BS EN 12063</span><span class="pill">BS EN 10248</span><span class="pill">Eurocode 7</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Cantilever sheet pile up to 4 to 6 m retained height. Anchored sheet pile or strutted excavation for greater depths. Design checks: bending moment in pile, embedment depth (passive earth pressure resistance), and <strong>vibration impact</strong> on adjacent structures during driving.</p>
+     <h4>Pile Profile Selection</h4>
+     <ul>
+      <li><strong>Z-profile (e.g. AZ):</strong> high section modulus, common for permanent walls</li>
+      <li><strong>U-profile:</strong> traditional, easier handling, lower section modulus</li>
+      <li><strong>Combined wall:</strong> tubular piles + sheet pile infill for very deep retention</li>
+      <li><strong>Cold-formed (CSP) sheet:</strong> lighter sections, lower capacity</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Cantilever retained height</td><td>3 to 6 m (soil-dependent)</td></tr>
+       <tr><td>With one tieback level</td><td>6 to 12 m</td></tr>
+       <tr><td>With two tieback levels</td><td>12 to 20 m</td></tr>
+       <tr><td>Embedment depth</td><td>0.5H to 1.5H below excavation level</td></tr>
+       <tr><td>Section: AZ 14 to AZ 50 typical (BS EN 10248-1)</td><td>Section modulus 1500 to 5000 cm3/m</td></tr>
+       <tr><td>Steel grade</td><td>S270GP, S320GP, S355GP, S430GP</td></tr>
+       <tr><td>Vibration limit (BS 7385)</td><td>Less than 5 mm/s peak particle velocity at sensitive structures</td></tr>
+       <tr><td>Lateral wall deflection</td><td>Less than 0.5 percent retained height (typical for adjacent buildings)</td></tr>
+       <tr><td>FoS overturning (cantilever)</td><td>Min 1.5 (gross pressure method)</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="warn">Cantilever sheet pile capacity drops rapidly in soft soils (cu less than 50 kPa). Where soft layers extend below excavation, use anchored or strutted system - cantilever bending moments become uneconomical.</div>
+   <p><a href="/sheet-piling/">→ Read the full Sheet Piling capability page</a></p>
+  </section>
+
+  <!-- ===== TIEBACK / GROUND ANCHOR ===== -->
+  <section class="block design-block" id="tieback-wall">
+   <div class="sys-eye">09 / Anchored Retention</div>
+   <h3>Tieback Wall / Ground Anchor design.</h3>
+   <p><span class="pill">BS 8081</span><span class="pill">BS EN 1537</span><span class="pill">FHWA-IF-99-015</span><span class="pill">PTI Recommendations</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Wall face structure (sheet pile, soldier pile + lagging, RC, or shotcrete face) combined with ground anchors that transfer load to competent strata behind the wall. <strong>Three-zone design</strong>: free length (no bond), bond length (grouted into competent ground), and stressing length (between anchor head and bond zone start). Critical: locate bond zone behind any potential failure surface.</p>
+     <h4>Anchor Acceptance Test (BS 8081)</h4>
+     <ul>
+      <li>Load to 1.5 times working load, hold 60 minutes</li>
+      <li>Allowable creep: less than 5 percent over 60 minutes</li>
+      <li>Lock-off at design working load + losses allowance</li>
+      <li>Periodic lift-off testing during defect liability to verify prestress retention</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Working load</td><td>200 to 1500 kN (multi-strand typical)</td></tr>
+       <tr><td>Strand: 15.7 mm 7-wire prestressing strand</td><td>3 to 8 strands per anchor</td></tr>
+       <tr><td>Strand grade</td><td>Y1860 (BS EN 10138-3), 1860 N/mm2 ultimate</td></tr>
+       <tr><td>Inclination</td><td>15 to 30 degrees below horizontal</td></tr>
+       <tr><td>Free length</td><td>5 to 15 m (extends past potential failure surface)</td></tr>
+       <tr><td>Bond length</td><td>5 to 15 m (in competent ground - rock, dense gravel, stiff clay)</td></tr>
+       <tr><td>Bond stress (rock)</td><td>500 to 1500 kPa (UCS dependent)</td></tr>
+       <tr><td>Bond stress (granular soil)</td><td>100 to 300 kPa</td></tr>
+       <tr><td>Bond stress (cohesive soil)</td><td>50 to 200 kPa</td></tr>
+       <tr><td>Hole diameter</td><td>100 to 200 mm</td></tr>
+       <tr><td>Grout strength</td><td>Min 30 N/mm2 at 28 days</td></tr>
+       <tr><td>Lateral wall deformation</td><td>Less than 0.1 to 0.5 percent of height</td></tr>
+       <tr><td>Acceptance test FoS</td><td>1.5 (BS 8081)</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="fos-callout"><strong>Bond zone location is critical.</strong> The bond zone must be behind any potential slip surface from the wall face - else the anchor fails to mobilize the resistance it was designed for. Check via slope stability analysis with anchor force as known restraint.</div>
+   <p><a href="/ground-anchor/">→ Read the full Ground Anchor capability page</a></p>
+  </section>
+
+  <!-- ===== RSS ===== -->
+  <section class="block design-block" id="rss">
+   <div class="sys-eye">10 / Reinforced Steep Slope</div>
+   <h3>Reinforced Soil Slope (RSS) design.</h3>
+   <p><span class="pill">BS 8006-1</span><span class="pill">FHWA-NHI-10-024</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Geogrid-reinforced fill slope at angles steeper than natural angle of repose (typically 45 to 70 degrees). Design checks: <strong>internal stability</strong> (geogrid tensile capacity at each layer, pull-out resistance), <strong>compound stability</strong> (failure surface partly through reinforced zone), <strong>global stability</strong> (failure surface through unreinforced foundation).</p>
+     <h4>Common Geogrid Types</h4>
+     <ul>
+      <li>PET (polyester): high creep performance, moderate UV durability (covered)</li>
+      <li>HDPE: long creep performance, good chemical durability</li>
+      <li>PP (polypropylene): low cost, moderate creep, biaxial common</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Slope angle</td><td>45 to 70 degrees</td></tr>
+       <tr><td>Slope height H</td><td>3 to 25 m</td></tr>
+       <tr><td>Geogrid vertical spacing</td><td>0.5 to 1.0 m</td></tr>
+       <tr><td>Geogrid length</td><td>0.7H to 1.0H (slope angle dependent)</td></tr>
+       <tr><td>Geogrid tensile strength</td><td>20 to 200 kN/m (selection per design)</td></tr>
+       <tr><td>Reduction factors</td><td>RFcr (creep) 1.4 to 2.5, RFid (installation damage) 1.05 to 1.25, RFd (durability) 1.0 to 1.3</td></tr>
+       <tr><td>Backfill compaction</td><td>95 percent modified Proctor</td></tr>
+       <tr><td>Face protection</td><td>Erosion mat + hydroseeding (vegetated face)</td></tr>
+       <tr><td>FoS internal</td><td>Min 1.5 (long-term)</td></tr>
+       <tr><td>FoS global</td><td>Min 1.4 to 1.5</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== ROCK BOLTING ===== -->
+  <section class="block design-block" id="rock-bolt">
+   <div class="sys-eye">11 / Rock Mass Reinforcement</div>
+   <h3>Rock Bolt design.</h3>
+   <p><span class="pill">BS 8081</span><span class="pill">BS EN 1537</span><span class="pill">AASHTO</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Active rock-mass reinforcement: tensioned bolts pin loose blocks to competent rock behind them, transferring load via bond zone in fresh rock. Design starts with <strong>kinematic analysis</strong> (joint orientation vs cut face) to identify wedges, planes, and toppling failure modes, followed by limit equilibrium analysis with bolt force as known restraint.</p>
+     <h4>Failure Mode by Joint Orientation</h4>
+     <ul>
+      <li>Plane: dip direction within +/- 20 deg of cut face</li>
+      <li>Wedge: two intersecting joints daylight on cut face</li>
+      <li>Toppling: steep joints dipping into the slope</li>
+      <li>Circular: highly fractured / weathered rock mass</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Bolt diameter</td><td>22 to 32 mm (Grade 1080+ steel typical)</td></tr>
+       <tr><td>Bolt length</td><td>3 to 12 m (extends past failure surface + bond zone)</td></tr>
+       <tr><td>Hole diameter</td><td>38 to 76 mm</td></tr>
+       <tr><td>Spacing</td><td>1 to 3 m centres (block pattern)</td></tr>
+       <tr><td>Grout: cement (slow set) or resin (fast set)</td><td>Cement min 30 N/mm2, resin per manufacturer</td></tr>
+       <tr><td>Bond stress (fresh rock UCS > 50 MPa)</td><td>1000 to 3000 kPa</td></tr>
+       <tr><td>Bond stress (weathered rock)</td><td>500 to 1500 kPa</td></tr>
+       <tr><td>Pre-tension (for tensioned anchors)</td><td>50 to 80 percent of yield</td></tr>
+       <tr><td>Acceptance test load</td><td>1.25 to 1.5x design working load</td></tr>
+       <tr><td>FoS rock bolt design</td><td>2.0 to 3.0 (BS 8081)</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <p><a href="/rock-bolting/">→ Read the full Rock Bolting capability page</a></p>
+  </section>
+
+  <!-- ===== ROCKFALL BARRIER ===== -->
+  <section class="block design-block" id="rockfall-barrier">
+   <div class="sys-eye">12 / Active Rockfall Interception</div>
+   <h3>Rockfall Barrier design.</h3>
+   <p><span class="pill">ETAG 027</span><span class="pill">EAD 340059</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Energy-rated barrier intercepts falling rock and dissipates kinetic energy via post deformation, ring net stretch, and brake elements. <strong>Energy class</strong> selected from rockfall analysis (RocFall, CRSP, similar tools) using rock block size, slope geometry, restitution coefficients, and trajectory analysis at design return period.</p>
+     <h4>Energy Classes (ETAG 027)</h4>
+     <ul>
+      <li>Class 0: 100 kJ - minor rockfall risk</li>
+      <li>Class 1: 250 kJ</li>
+      <li>Class 2: 500 kJ</li>
+      <li>Class 3: 1000 kJ</li>
+      <li>Class 4: 1500 kJ</li>
+      <li>Class 5: 2000 kJ</li>
+      <li>Class 6: 3000 kJ</li>
+      <li>Class 7: 4500 to 5000 kJ - extreme rockfall</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Energy capacity</td><td>100 kJ to 5000 kJ (ETAG 027 type tested)</td></tr>
+       <tr><td>Barrier height</td><td>2 to 7 m typical</td></tr>
+       <tr><td>Post spacing</td><td>8 to 12 m</td></tr>
+       <tr><td>Foundation type</td><td>Concrete footing or rock anchors (capacity verified)</td></tr>
+       <tr><td>Maximum elongation under impact</td><td>5 to 8 m horizontal (allow space behind barrier)</td></tr>
+       <tr><td>Service energy (residual)</td><td>50 percent of MEL (Maximum Energy Level)</td></tr>
+       <tr><td>Design rockfall block size</td><td>Based on joint spacing analysis (typical D90 from rock survey)</td></tr>
+       <tr><td>Design return period</td><td>50 to 100 years</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="warn">Most rockfall barriers fail at the <strong>foundation</strong>, not the net. Verify post anchor capacity (typically 250 to 500 kN) via pull-out test at every barrier location. Concrete footing volume scales with energy class - do not undersize.</div>
+   <p><a href="/rockfall-barrier/">→ Read the full Rockfall Barrier capability page</a></p>
+  </section>
+
+  <!-- ===== HORIZONTAL DRAIN ===== -->
+  <section class="block design-block" id="horizontal-drain">
+   <div class="sys-eye">13 / Subsurface Drainage</div>
+   <h3>Horizontal Drain design.</h3>
+   <p><span class="pill">BS 6031</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Drilled drains penetrate the slope at slight upward angle to lower the groundwater table by gravity. Effect on slope stability is via <strong>reduced pore water pressure</strong>, increasing effective stress and shear resistance. Often the single most cost-effective measure when groundwater is the failure driver.</p>
+     <h4>Hydrogeology Inputs</h4>
+     <ul>
+      <li>Phreatic surface from piezometer monitoring (3-month minimum)</li>
+      <li>Hydraulic conductivity from pumping or slug tests</li>
+      <li>Recharge rates (rainfall, surface water sources)</li>
+      <li>Seasonal fluctuation amplitude</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Drain length</td><td>30 to 100 m (max 150 m)</td></tr>
+       <tr><td>Drain diameter</td><td>50 to 100 mm</td></tr>
+       <tr><td>Upward angle</td><td>1 to 5 degrees above horizontal</td></tr>
+       <tr><td>Casing</td><td>Slotted PVC or HDPE, geotextile sock for filtration</td></tr>
+       <tr><td>Slot pattern</td><td>2 mm slots on 4 sides, 60 to 80 percent open area</td></tr>
+       <tr><td>Spacing (horizontal)</td><td>3 to 10 m</td></tr>
+       <tr><td>Spacing (vertical, multi-row)</td><td>5 to 15 m</td></tr>
+       <tr><td>Discharge rate (initial)</td><td>5 to 100 L/min per drain typical</td></tr>
+       <tr><td>Long-term retention check</td><td>50 percent of initial discharge after 1 year is acceptable</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="fos-callout"><strong>Cost-benefit ratio.</strong> A successful horizontal drain installation can lift FoS from 1.0 to 1.5+ at a fraction of the cost of structural reinforcement. On any failing slope, investigate groundwater first - if it is the driver, drains alone may resolve the issue.</div>
+   <p><a href="/horizontal-drains/">→ Read the full Horizontal Drains capability page</a></p>
+  </section>
+
+  <!-- ===== GUNITING ===== -->
+  <section class="block design-block" id="guniting">
+   <div class="sys-eye">14 / Sprayed Concrete Skin</div>
+   <h3>Guniting / Shotcrete design.</h3>
+   <p><span class="pill">ACI 506</span><span class="pill">BS EN 14487</span><span class="pill">JKR</span></p>
+
+   <div class="design-grid">
+    <div class="design-section">
+     <h4>Design Philosophy</h4>
+     <p>Structural skin reinforced with welded mesh or steel fibers. Resists <strong>flexural failure</strong> between soil nail heads (in soil-nailed walls) or rock bolt heads (in rock face protection). Punching capacity at nail/bolt heads governs facing thickness.</p>
+     <h4>Mix Selection</h4>
+     <ul>
+      <li><strong>Wet-mix:</strong> better quality control, suited for high-spec / federal works</li>
+      <li><strong>Dry-mix:</strong> site flexibility, lower equipment requirement, suited for variable conditions</li>
+      <li>Accelerator: only where set time critical (overhead, water-bearing, fast layering)</li>
+     </ul>
+    </div>
+    <div class="design-section">
+     <h4>Typical Design Parameters</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Specified strength</td><td>25 to 30 N/mm2 at 28 days (cube)</td></tr>
+       <tr><td>Layer thickness (slope skin)</td><td>75 to 150 mm total (50 to 75 mm per pass)</td></tr>
+       <tr><td>Layer thickness (tunnel primary)</td><td>100 to 250 mm</td></tr>
+       <tr><td>Mesh: BRC A6, A8, or welded fabric</td><td>5 to 8 mm bar diameter</td></tr>
+       <tr><td>Mesh cover</td><td>50 to 75 mm to face</td></tr>
+       <tr><td>Steel fiber dose (alternative to mesh)</td><td>30 to 60 kg/m3</td></tr>
+       <tr><td>Bond strength to substrate</td><td>Min 0.5 MPa (pull-off test, EN 1542)</td></tr>
+       <tr><td>Thickness tolerance</td><td>+/- 25 mm of design</td></tr>
+       <tr><td>Curing</td><td>Wet curing 7 days minimum, or curing membrane</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <p><a href="/guniting/">→ Read the full Guniting capability page</a></p>
+  </section>
+
+  <!-- ===== STANDARDS REFERENCE ===== -->
+  <section class="block" id="standards">
+   <div class="block-eye">Codes that govern</div>
+   <h2>Design standards <em>by system.</em></h2>
+   <table class="params-table">
+    <thead><tr><th>System</th><th>Primary design codes</th></tr></thead>
+    <tbody>
+     <tr><td>Soil Nailing</td><td>BS 8006-2, FHWA-NHI-14-007, BS EN 1997 (Eurocode 7), JKR Slope Engineering Manual</td></tr>
+     <tr><td>MSE Wall</td><td>BS 8006-1, AASHTO LRFD, FHWA-NHI-10-024, BS EN 14475, ASTM D6638, JKR</td></tr>
+     <tr><td>Reinforced Earth (RE) Wall</td><td>BS 8006, AASHTO LRFD, FHWA-NHI-10-024, ASTM A572 / A123, JKR</td></tr>
+     <tr><td>Modular Block (SRW)</td><td>NCMA SRW Design Manual, ICPI, BS 8006, ASTM C90, JKR</td></tr>
+     <tr><td>Crib Wall</td><td>BS 8002, AS 4678, JKR, MS 360 (timber)</td></tr>
+     <tr><td>Gabion Wall</td><td>BS EN 10223-3, BS EN 10218-2, BS 8002, EAD 200019-00-0102, ASTM A975, JKR</td></tr>
+     <tr><td>Rubble Pitching</td><td>JKR/SPJ Section 6, BS 6031, BS 8002</td></tr>
+     <tr><td>RC Cantilever Wall</td><td>BS 8002, BS 8004, BS EN 1997 (Eurocode 7), BS EN 1992 (Eurocode 2), JKR</td></tr>
+     <tr><td>Sheet Pile Wall</td><td>BS EN 12063, BS EN 10248, BS EN 1997, JKR</td></tr>
+     <tr><td>Tieback / Ground Anchor</td><td>BS 8081, BS EN 1537, FHWA-IF-99-015, PTI Recommendations, JKR</td></tr>
+     <tr><td>Reinforced Soil Slope (RSS)</td><td>BS 8006-1, FHWA-NHI-10-024, JKR</td></tr>
+     <tr><td>Guniting / Shotcrete</td><td>ACI 506, BS EN 14487, EN 1542 (bond), JKR</td></tr>
+     <tr><td>Rock Bolt</td><td>BS 8081, BS EN 1537, AASHTO, JKR</td></tr>
+     <tr><td>Rockfall Barrier</td><td>ETAG 027, EAD 340059, JKR</td></tr>
+     <tr><td>Horizontal Drain</td><td>BS 6031, JKR</td></tr>
+     <tr><td>Slope Stability Analysis</td><td>BS 6031, BS EN 1997 (Eurocode 7), JKR Slope Engineering Manual</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="block" id="faq">
+   <div class="block-eye">Frequently asked</div>
+   <h2>Design questions engineers <em>commonly ask.</em></h2>
+
+   <details class="faq-item">
+    <summary>What factor of safety should I design for on a permanent slope in Malaysia? <span class="ic">+</span></summary>
+    <div class="ans">Per JKR Slope Engineering Manual: long-term static FoS of 1.4 to 1.5 for permanent slopes (1.5 typical for residential or critical infrastructure), 1.2 to 1.3 for short-term or temporary cuts, 1.1 to 1.2 under seismic loading. Eurocode 7 uses partial factors instead of global FoS - typical equivalent global FoS is 1.4 to 1.5 for permanent works. Class III and Class IV slopes (JKR hillside categorization) require tighter targets due to consequence-of-failure considerations.</div>
+   </details>
+
+   <details class="faq-item">
+    <summary>What's the typical soil nail length and spacing for a 10 m cut slope? <span class="ic">+</span></summary>
+    <div class="ans">Indicative range: nail length 0.7H to 1.0H (so 7 to 10 m for a 10 m cut), nail diameter Y25 to Y32 high-yield steel, hole diameter 100 to 150 mm, vertical and horizontal spacing 1.5 to 2.5 m, inclination 10 to 15 degrees below horizontal. Final values come from BS 8006-2 / FHWA-NHI-14-007 design analysis with site-specific soil parameters from a geotechnical investigation. Pull-out tests on 1 to 2 percent of installed nails verify design assumptions.</div>
+   </details>
+
+   <details class="faq-item">
+    <summary>What's the typical reinforcement length for an MSE wall? <span class="ic">+</span></summary>
+    <div class="ans">Per BS 8006 / FHWA-NHI-10-024: reinforcement length is typically 0.7 times the wall height (0.7H), with a minimum of 2.4 m. For seismic conditions, 0.8H may be required. Vertical spacing is typically 0.4 to 0.8 m. The exact length, spacing, strength, and connection type are determined by internal stability checks (tensile strength, pull-out resistance, connection strength) and external stability checks (sliding, overturning, bearing, global stability).</div>
+   </details>
+
+   <details class="faq-item">
+    <summary>What design code do I use for ground anchors in Malaysia? <span class="ic">+</span></summary>
+    <div class="ans">Primary references: BS 8081 (Code of Practice for Ground Anchorages), BS EN 1537 (Execution of Special Geotechnical Works - Ground Anchors), FHWA-IF-99-015. PTI Recommendations for Prestressed Rock and Soil Anchors are also widely referenced. JKR specifications govern federal works. Acceptance testing per BS 8081 - load to 1.5 times working load, hold 60 minutes, less than 5 percent creep.</div>
+   </details>
+
+   <details class="faq-item">
+    <summary>Which slope stability analysis method should I use? <span class="ic">+</span></summary>
+    <div class="ans">For circular slip surfaces in homogeneous soils: Bishop's Simplified Method is the standard Malaysian practice. For non-circular slip surfaces or layered soils: Janbu's Simplified, Spencer's Method, or Morgenstern-Price (Morgenstern-Price is the most rigorous and is required for some federal projects). For wedge failures in jointed rock: kinematic analysis followed by limit equilibrium. Software commonly used: Slope/W, RocScience Slide, PLAXIS LE.</div>
+   </details>
+
+   <details class="faq-item">
+    <summary>When do I need a tieback wall instead of a cantilever sheet pile? <span class="ic">+</span></summary>
+    <div class="ans">Cantilever sheet pile capacity is typically limited to 4 to 6 m retained height. Above this, bending moments become uneconomical. For deeper excavations: 6 to 12 m retained height usually requires one row of tieback anchors; 12 to 20 m requires two rows; over 20 m requires three or more rows. Decision drivers: depth, soil stiffness, allowable wall deformation, surcharge loads, adjacent structure sensitivity, and groundwater. Design to BS 8081, BS EN 1537, and PTI Recommendations.</div>
+   </details>
+
+   <details class="faq-item">
+    <summary>What backfill material should I specify for an MSE wall? <span class="ic">+</span></summary>
+    <div class="ans">Per BS 8006: granular fill, plasticity index less than 6, free-draining, well-graded sand and gravel preferred. Compaction to 95 to 98 percent modified Proctor density. For Reinforced Earth (steel-strip) walls: also resistivity greater than 3000 Ohm-cm, pH 5 to 10, chlorides less than 100 ppm, sulphates less than 200 ppm, organic content less than 1 percent. Internal phi typically 32 to 36 degrees for engineered granular fill.</div>
+   </details>
+
+   <details class="faq-item">
+    <summary>What seismic coefficient should I use for slope design in Malaysia? <span class="ic">+</span></summary>
+    <div class="ans">Malaysia is in low-seismic zones (Zone 1 to 2). Pseudo-static analysis with horizontal seismic coefficient kh of 0.05 to 0.10g is typical for slope stability checks. Federal infrastructure (rail, highway) may require site-specific seismic hazard analysis. FoS target under seismic loading drops to 1.1 to 1.2 (vs 1.4 to 1.5 static).</div>
+   </details>
+
+   <details class="faq-item">
+    <summary>How do I design for groundwater on a slope where I don't have piezometer data? <span class="ic">+</span></summary>
+    <div class="ans">If piezometer data is not available, use conservative assumptions: design for the higher of (a) phreatic surface at slope crest level or (b) phreatic surface daylighting at slope toe. Always verify with a 3-month minimum piezometer monitoring before finalizing design. For Class III / IV slopes, longer monitoring through one wet season is best practice. Horizontal drain installation can both lower the design groundwater AND verify stability assumption post-construction.</div>
+   </details>
+
+   <details class="faq-item">
+    <summary>How do you check if a slope stabilization system has been designed correctly? <span class="ic">+</span></summary>
+    <div class="ans">Standard QA/QC chain: (1) review design report and supporting calculations against the specified code (BS, FHWA, JKR, etc.), (2) check geotechnical investigation depth and parameter selection, (3) verify slope stability analysis includes the proposed reinforcement and reaches target FoS, (4) check material specifications match design assumptions (steel grade, grout strength, backfill specification), (5) review test regime (pull-out, cube, lift-off) for verification of design parameters during construction, (6) confirm authority approval if required (JKR / local council).</div>
+   </details>
+  </section>
+
+ </div>
+
+ <section class="cta-block">
+  <div class="container">
+   <h2>Need design or design-build support <em>on a slope?</em></h2>
+   <p>Send the geometry, soil report (or describe the ground), and the constraint - live traffic, tight site, schedule, anything. Same-day response from the engineering team. We design in-house under design-build, or as the specialist contractor under your appointed consulting engineer.</p>
+   <div class="cta-row">
+    <a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp the team →</a>
+    <a class="btn btn-ghost" href="/#contact">All contact details</a>
+   </div>
+  </div>
+ </section>
+
+ <div class="container">
+  <section class="block">
+   <div class="block-eye">Cross-references</div>
+   <h2>Read more.</h2>
+   <div class="toc-grid">
+    <a href="/compare-slope-stabilization-systems/">→ Slope Systems Comparison Guide</a>
+    <a href="/compare-retaining-walls/">→ Retaining Wall Comparison</a>
+    <a href="/compare-slope-reinforcement/">→ Slope Reinforcement Comparison</a>
+    <a href="/compare-slope-surface-protection/">→ Surface Protection Comparison</a>
+    <a href="/compare-drainage-methods/">→ Slope Drainage Comparison</a>
+    <a href="/compare-geosynthetics/">→ Geosynthetics Comparison</a>
+    <a href="/soil-nailing/">→ Soil Nailing</a>
+    <a href="/mse-wall/">→ MSE Wall</a>
+    <a href="/retaining-walls/">→ Retaining Walls</a>
+    <a href="/sheet-piling/">→ Sheet Piling</a>
+    <a href="/ground-anchor/">→ Ground Anchor</a>
+    <a href="/guniting/">→ Guniting / Shotcrete</a>
+    <a href="/rock-bolting/">→ Rock Bolting</a>
+    <a href="/rockfall-barrier/">→ Rockfall Barrier</a>
+    <a href="/horizontal-drains/">→ Horizontal Drains</a>
+    <a href="/earthworks/">→ Earthworks</a>
+    <a href="/slope-stabilization/">→ Slope Stabilization</a>
+    <a href="/geotechnical-contractor/">→ Geotechnical Contractor</a>
+    <a href="/slope-monitoring/">→ Slope Monitoring</a>
+    <a href="/resources/">→ All Resources</a>
+   </div>
+  </section>
+ </div>
+</main>
+
+<footer>
+ <div class="container">
+  <p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor) · A <a href="/">Panthera Group</a> company</p>
+ </div>
+</footer>
+
+</body>
+</html>

@@ -305,6 +305,14 @@ Location pages (every state + federal territory, native simplified Chinese):
 - https://infraconcrete.co/zh/labuan/, 纳闽 (离岸油气枢纽)
 - https://infraconcrete.co/zh/sabah-sarawak/, 沙巴砂拉越 (合并页)
 
+## Engineer's Design Reference, Geotechnical Design Guide
+
+For typical design parameters, factor of safety targets, and code-referenced design checks for slope stabilization systems used in Malaysia, see the dedicated design guide:
+
+-> https://infraconcrete.co/geotechnical-design-guide/
+
+The design guide covers: design philosophy (Working Load Design vs Limit State Design), site investigation minimums, FoS targets per JKR Slope Engineering Manual, slope stability analysis methods (Bishop, Janbu, Spencer, Morgenstern-Price, Sarma, FE/FD), and per-system design parameters for soil nailing (BS 8006-2 / FHWA-NHI-14-007), MSE wall (BS 8006 / AASHTO LRFD / FHWA-NHI-10-024), Reinforced Earth wall (with backfill aggressiveness limits), modular block, crib wall, gabion wall, RC cantilever, sheet pile, tieback / ground anchor (BS 8081 / BS EN 1537 / FHWA-IF-99-015), reinforced soil slope, rock bolt, rockfall barrier (ETAG 027 energy classes), horizontal drain, and guniting. Each system includes typical input parameters, design checks, indicative parameter ranges (bar size, spacing, length, FoS), and common pitfalls.
+
 ## Engineer's Resource Hub, Educational Comparison Guides
 
 Five dedicated educational comparison guides cover the full taxonomy of soil and slope stabilization systems used in Malaysia. Each guide is independent, comparison-led, and includes mechanism, method of erection, cost vs height/depth, pros and cons, decision-making conclusion, and standards. Designed as the engineer's reference for system selection, not sales pitches.
