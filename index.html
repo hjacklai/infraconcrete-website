@@ -7588,19 +7588,21 @@
       update(+range.value);
 
       /* ============================================================
-         AUTO-DEMO ON VIEWPORT ENTRY
+         AUTO-DEMO ON EVERY VIEWPORT ENTRY
          ============================================================
-         When the slider enters the viewport for the first time on this
-         page load, briefly animate the divider 50 -> 22 -> 78 -> 50 over
-         ~1.6s so visitors literally see the BEFORE/AFTER swap and learn
-         the interaction without any explicit text. Industry standard for
-         comparison sliders (Apple, Stripe).
-         Fires ONCE per page load (re-fires on every refresh).
+         Every time the slider crosses into the viewport (>=50% visible),
+         briefly animate the divider 50 -> 12 -> 88 -> 50 over ~1.6s so
+         visitors literally see the BEFORE/AFTER swap. Industry standard
+         for comparison sliders (Apple, Stripe).
+         Fires every time the section re-enters - if the user scrolls
+         past and comes back, the demo plays again.
          Skips if:
-           - user has already dragged (.has-dragged set)
            - user prefers reduced motion
+           - a demo is already running on this slider
          If the user grabs the slider mid-demo, the demo aborts and
-         their input wins. */
+         their input wins (tracked via userInterruptedDemo flag, NOT
+         the persistent .has-dragged class - so subsequent re-entries
+         still play the demo). */
       (() => {
         if (reduceMotion) return;
 
@@ -7611,14 +7613,25 @@
         const segDur = totalDuration / segments;
 
         let demoActive = false;
+        let userInterruptedDemo = false;
+
+        // Track interruption: fires when user inputs to the range during
+        // a running demo. Doesn't pollute the persistent .has-dragged class.
+        range.addEventListener('input', () => {
+          if (demoActive) userInterruptedDemo = true;
+        });
+        stage.addEventListener('pointerdown', () => {
+          if (demoActive) userInterruptedDemo = true;
+        });
+
         const playDemo = () => {
           if (demoActive) return;
-          if (stage.classList.contains('has-dragged')) return;
           demoActive = true;
+          userInterruptedDemo = false;
           const startTime = performance.now();
           const tick = (now) => {
             // User grabbed it mid-demo - abort and let their drag win
-            if (stage.classList.contains('has-dragged')) {
+            if (userInterruptedDemo) {
               demoActive = false;
               return;
             }
@@ -7642,16 +7655,20 @@
           requestAnimationFrame(tick);
         };
 
-        // Fire on viewport entry (>=50% visible). Disconnect after the
-        // first fire so the demo runs ONCE per page load - the user sees
-        // it the moment they reach the slider, never replayed thereafter.
-        // Re-fires fresh on every page refresh.
+        // Fire on every fresh viewport entry. State machine: track whether
+        // the slider is currently in view (inView). Only trigger playDemo
+        // on the inView=false -> true transition so the observer doesn't
+        // re-fire while the section sits in view. Don't disconnect.
         if (typeof IntersectionObserver === 'undefined') return;
+        let inView = false;
         const obs = new IntersectionObserver((entries) => {
           entries.forEach(e => {
-            if (e.isIntersecting && e.intersectionRatio >= 0.5) {
+            const visible = e.isIntersecting && e.intersectionRatio >= 0.5;
+            if (visible && !inView) {
+              inView = true;
               playDemo();
-              obs.disconnect();
+            } else if (!e.isIntersecting) {
+              inView = false;
             }
           });
         }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
