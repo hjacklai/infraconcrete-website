@@ -7650,7 +7650,7 @@
         const obs = new IntersectionObserver((entries) => {
           entries.forEach(e => {
             if (e.isIntersecting && e.intersectionRatio >= 0.5) {
-              setTimeout(playDemo, 100);
+              playDemo();
               obs.disconnect();
             }
           });
