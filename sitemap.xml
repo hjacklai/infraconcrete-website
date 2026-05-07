@@ -212,7 +212,7 @@
   <url><loc>https://infraconcrete.co/zh/sarawak/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://infraconcrete.co/zh/kelantan/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://infraconcrete.co/zh/terengganu/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <!-- Reinforced Soil Slopes (RSS) — EN + BM + ZH -->
+  <!-- Reinforced Soil Slopes (RSS) - EN + BM + ZH -->
   <url>
     <loc>https://infraconcrete.co/reinforced-soil-slopes/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/reinforced-soil-slopes/"/>
