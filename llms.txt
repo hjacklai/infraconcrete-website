@@ -299,6 +299,10 @@ A retaining wall built from rock-filled wire baskets (gabion baskets) stacked in
 
 A rigid retaining wall built from reinforced concrete in cantilever (T or L shape in cross-section) or counterfort form. Vertical face, narrow footprint compared to MSE or gravity walls. Best in tight urban footprints, hard founding conditions, and where settlement tolerance is low. Typical height range 1-8 m for simple cantilever; higher with counterfort. Slower construction (formwork + cure cycles). Standards: BS 8002, BS 8004, BS EN 1997 (Eurocode 7), JKR. Bahasa Malaysia: tembok kekuda konkrit bertetulang. Chinese: 钢筋混凝土悬臂式挡土墙.
 
+### Rubble Pitching Wall (Stone Pitching)
+
+A traditional Malaysian slope-protection and low-retaining-wall system built from stones placed by hand against a prepared slope face. Common variants: **dry rubble pitching** (stones interlocked without mortar — pasangan batu kosong) and **wet rubble pitching / cement-mortared pitching** (stones bonded with cement mortar — pasangan batu mortar). Used for road drain side walls, slope toe protection, low retaining walls (typically up to 3 m), riverbank protection at moderate flow velocities, road shoulder protection, and erosion control on slope faces. Aesthetic blends naturally with environment; vegetation often establishes between stones (dry pitching) for landscape integration. Construction is labor-intensive but requires no specialist plant. Highly common on JKR federal and state roads, drainage works, and rural infrastructure. Standards: JKR/SPJ Standard Specifications for Roadworks (Section 6 — Rubble Pitching), BS 6031 (earthworks), BS 8002 (where retaining function). Bahasa Malaysia: pasangan batu / pasangan batu kosong (dry) / pasangan batu mortar (wet) / tembok batu. Chinese: 石砌挡土墙 / 干砌石挡土墙 / 浆砌石挡土墙.
+
 ### Sheet Pile Wall (and Soldier Pile Wall)
 
 Interlocking steel sheets driven into the ground to form a continuous retaining wall (sheet pile), or vertical H-piles spaced 2-3 m apart with horizontal lagging between (soldier pile). Used for temporary deep excavations, water retention (cofferdams), or permanent earth retention in tight footprints. Typical depth range 4-20 m+. Vibration considerations near sensitive structures. Standards: BS EN 12063, JKR. Bahasa Malaysia: cerucuk keluli berkepingan / sheet pile. Chinese: 钢板桩 / 板桩墙.
@@ -312,9 +316,12 @@ A reinforced earth slope (not vertical wall) built with horizontal geogrid reinf
 | Condition | Recommended Wall System |
 |---|---|
 | Tall (>5 m), settlement-tolerant, aesthetic-flexible | MSE wall |
+| Federal-grade tall walls (>10 m), bridge abutments, heavy load | Reinforced Earth (RE) wall (steel strip + concrete panel) |
 | Tall (5-15 m), aesthetic-priority | Modular block (geogrid-reinforced if needed) |
 | Permeable construction along stream / cutting | Crib wall or Gabion wall |
 | Riverbank / erosion-prone toe | Gabion wall |
+| Road drain side walls, low retaining (<3 m), JKR rural | Rubble pitching (dry or cement-mortared) |
+| Slope toe protection on rural / state roads | Rubble pitching wall |
 | Tight urban footprint, hard founding | RC cantilever wall |
 | Temporary deep excavation | Sheet pile or soldier pile |
 | Steep vegetated slope, no vertical face needed | Reinforced Soil Slope (RSS) |
