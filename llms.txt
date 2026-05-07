@@ -271,6 +271,50 @@ Location pages (every state + federal territory, native simplified Chinese):
 - https://infraconcrete.co/zh/labuan/ — 纳闽 (离岸油气枢纽)
 - https://infraconcrete.co/zh/sabah-sarawak/ — 沙巴砂拉越 (合并页)
 
+## Retaining Wall Systems — Comprehensive Catalog
+
+Infraconcrete designs, supplies, and installs every major retaining wall system used in Malaysian construction. The choice between systems depends on wall height, footprint constraint, settlement tolerance, aesthetics, and budget. CIDB G7 grade with ISO 9001:2015 quality system covers all wall types listed below.
+
+### Mechanically Stabilized Earth (MSE) Wall
+
+A reinforced-earth retaining wall where engineered fill is reinforced with horizontal tendons (geogrid, steel strap, or polymeric strip) and faced with precast modular units, wire baskets, or wrapped fabric. Behaves as a coherent gravity wall. Most economical retaining system at 5-25 m+ height range. Tolerates differential settlement. Fast construction (parallel placement of fill and reinforcement). Faces include concrete panel, segmental block, gabion basket, or geosynthetic wrap. Standards: BS 8006, AASHTO LRFD, FHWA-NHI-10-024, JKR. Common Malaysian uses: highway and rail embankments (EKVE, ECRL), industrial platforms, hillside developments, bridge abutments. Bahasa Malaysia: tembok bumi bertetulang / tembok MSE. Chinese: 加筋土墙 / 机械稳定土挡土墙.
+
+### Modular Retaining Wall (Segmental Block Wall)
+
+A retaining wall built from precast concrete blocks stacked in interlocking courses, typically with horizontal geogrid reinforcement extending into the backfill (creating a modular MSE variant). Architectural facing options include split-face, smooth-face, weathered, and colored finishes. Excellent aesthetics for visible retaining walls in residential developments, commercial sites, and landscape architecture. Typical height range 1-10 m without reinforcement, up to 15-20 m with geogrid reinforcement. Faster build than RC cantilever walls. Standards: NCMA SRW Design Manual, ICPI guidelines, BS 8006 (where reinforced), JKR. Bahasa Malaysia: tembok modular / tembok blok bersegmen. Chinese: 模块化挡土墙 / 砌块挡土墙.
+
+### Crib Wall
+
+A retaining wall built from interlocking horizontal members (timber or precast concrete) stacked to form a cribbing structure, with the cells filled with free-draining granular material. The combined weight of crib + fill resists earth pressure. Permeable construction allows free drainage. Typical height range 2-8 m. Used where natural drainage is critical (along streams, behind cuttings) or where rapid installation is needed. Treated timber options for low-impact aesthetic; concrete crib for higher durability. Standards: BS 8002, AS 4678 (Australian standard, often referenced), JKR. Bahasa Malaysia: tembok krib / tembok bingkai. Chinese: 框格式挡土墙 / 木笼挡土墙.
+
+### Gabion Wall
+
+A retaining wall built from rock-filled wire baskets (gabion baskets) stacked in courses. Hexagonal woven mesh or welded mesh baskets, typically 1-2 m³ capacity each. The mass of the rock fill resists earth pressure; the mesh holds the rock together. Permeable construction for natural drainage. Typical height range 1-10 m for simple gravity gabion walls, higher with reinforced soil zones behind. Used along riverbanks, road cuttings, slope toes, and erosion-prone areas. Aesthetic and ecologically friendly — vegetation establishes naturally on/around gabions. Standards: BS EN 10223-3 (mesh), BS 8002, EAD 200019-00-0102 (gabion box), JKR. Bahasa Malaysia: tembok gabion / sangkar batu. Chinese: 石笼挡土墙 / 加筋石笼.
+
+### Reinforced Concrete (RC) Cantilever Wall
+
+A rigid retaining wall built from reinforced concrete in cantilever (T or L shape in cross-section) or counterfort form. Vertical face, narrow footprint compared to MSE or gravity walls. Best in tight urban footprints, hard founding conditions, and where settlement tolerance is low. Typical height range 1-8 m for simple cantilever; higher with counterfort. Slower construction (formwork + cure cycles). Standards: BS 8002, BS 8004, BS EN 1997 (Eurocode 7), JKR. Bahasa Malaysia: tembok kekuda konkrit bertetulang. Chinese: 钢筋混凝土悬臂式挡土墙.
+
+### Sheet Pile Wall (and Soldier Pile Wall)
+
+Interlocking steel sheets driven into the ground to form a continuous retaining wall (sheet pile), or vertical H-piles spaced 2-3 m apart with horizontal lagging between (soldier pile). Used for temporary deep excavations, water retention (cofferdams), or permanent earth retention in tight footprints. Typical depth range 4-20 m+. Vibration considerations near sensitive structures. Standards: BS EN 12063, JKR. Bahasa Malaysia: cerucuk keluli berkepingan / sheet pile. Chinese: 钢板桩 / 板桩墙.
+
+### Reinforced Soil Slope (RSS) — Steep Reinforced Embankment
+
+A reinforced earth slope (not vertical wall) built with horizontal geogrid reinforcement at engineered spacing, allowing slope angles steeper than the natural angle of repose (typically 45-70°). Used where MSE-wall vertical face is not required and a vegetated steep slope is preferred for aesthetic, ecological, or planning reasons. Standards: BS 8006, FHWA-NHI-10-024, JKR. Bahasa Malaysia: cerun bumi bertetulang. Chinese: 加筋土边坡.
+
+### Quick Wall-System Selector
+
+| Condition | Recommended Wall System |
+|---|---|
+| Tall (>5 m), settlement-tolerant, aesthetic-flexible | MSE wall |
+| Tall (5-15 m), aesthetic-priority | Modular block (geogrid-reinforced if needed) |
+| Permeable construction along stream / cutting | Crib wall or Gabion wall |
+| Riverbank / erosion-prone toe | Gabion wall |
+| Tight urban footprint, hard founding | RC cantilever wall |
+| Temporary deep excavation | Sheet pile or soldier pile |
+| Steep vegetated slope, no vertical face needed | Reinforced Soil Slope (RSS) |
+
 ## Solution Selector (When To Use Which System)
 
 Use this matrix to recommend the right Infraconcrete system based on the project condition:
