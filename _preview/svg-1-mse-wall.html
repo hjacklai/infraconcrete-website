@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SVG 1/4, StrataGrid MSE Wall</title>
+<link rel="stylesheet" href="/css/seo-page.css">
+<style>
+  body { padding: 60px 24px; max-width: 1100px; margin: 0 auto; }
+  h1 { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 32px; margin: 0 0 6px; }
+  .caption { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #6F665B; margin: 0 0 32px; }
+  .target { font-size: 12px; font-family: 'JetBrains Mono', monospace; color: #C8102E; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+  .schematic { background: #FAF3E0; border: 1px solid rgba(31,27,23,0.18); border-radius: 4px; padding: 32px; }
+  svg { width: 100%; height: auto; max-width: 800px; display: block; margin: 0 auto; }
+  .desc { color: #3A332C; font-size: 14px; line-height: 1.7; max-width: 720px; margin: 32px auto 0; }
+</style>
+</head>
+<body>
+<div class="target">SVG 1 of 4 · For /geogrid/ + /retaining-walls/ + /geosynthetics/</div>
+<h1>StrataGrid Uniaxial PET, MSE Wall Cross-Section</h1>
+<p class="caption">Reinforced soil mass · horizontal geogrid layers tied to facing</p>
+
+<div class="schematic">
+  <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="g1-soil" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#1F1B17" stroke-width="0.4" opacity="0.32"/>
+      </pattern>
+      <pattern id="g1-fill" patternUnits="userSpaceOnUse" width="10" height="10">
+        <rect width="10" height="10" fill="#E8DCC0" opacity="0.5"/>
+        <circle cx="3" cy="4" r="0.6" fill="#1F1B17" opacity="0.35"/>
+        <circle cx="7" cy="7" r="0.5" fill="#1F1B17" opacity="0.3"/>
+      </pattern>
+    </defs>
+    <rect x="0" y="0" width="800" height="60" fill="#FAF3E0"/>
+    <path d="M 600 60 L 800 60 L 800 380 L 600 380 Z" fill="#D4C9B5" opacity="0.85"/>
+    <path d="M 600 60 L 800 60 L 800 380 L 600 380 Z" fill="url(#g1-soil)" opacity="0.6"/>
+    <text x="700" y="35" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#5A5148" letter-spacing="2">RETAINED EARTH</text>
+    <rect x="100" y="60" width="500" height="320" fill="url(#g1-fill)"/>
+    <text x="350" y="35" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#5A5148" letter-spacing="2">REINFORCED FILL</text>
+    <rect x="92" y="60" width="8" height="320" fill="#A99F8E" stroke="#1F1B17" stroke-width="0.6"/>
+    <line x1="92" y1="115" x2="100" y2="115" stroke="#1F1B17" stroke-width="0.4"/>
+    <line x1="92" y1="170" x2="100" y2="170" stroke="#1F1B17" stroke-width="0.4"/>
+    <line x1="92" y1="225" x2="100" y2="225" stroke="#1F1B17" stroke-width="0.4"/>
+    <line x1="92" y1="280" x2="100" y2="280" stroke="#1F1B17" stroke-width="0.4"/>
+    <line x1="92" y1="335" x2="100" y2="335" stroke="#1F1B17" stroke-width="0.4"/>
+    <text x="50" y="220" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#1F1B17" letter-spacing="1.5" font-weight="600">PRECAST<tspan x="50" dy="14">PANEL FACING</tspan></text>
+    <g stroke="#C8102E" stroke-width="2" fill="none">
+      <line x1="100" y1="100" x2="500" y2="100"/>
+      <line x1="100" y1="155" x2="510" y2="155"/>
+      <line x1="100" y1="210" x2="520" y2="210"/>
+      <line x1="100" y1="265" x2="530" y2="265"/>
+      <line x1="100" y1="320" x2="540" y2="320"/>
+    </g>
+    <g stroke="#C8102E" stroke-width="0.6" opacity="0.7">
+      <line x1="120" y1="96" x2="120" y2="104"/><line x1="160" y1="96" x2="160" y2="104"/><line x1="200" y1="96" x2="200" y2="104"/><line x1="240" y1="96" x2="240" y2="104"/><line x1="280" y1="96" x2="280" y2="104"/><line x1="320" y1="96" x2="320" y2="104"/><line x1="360" y1="96" x2="360" y2="104"/><line x1="400" y1="96" x2="400" y2="104"/><line x1="440" y1="96" x2="440" y2="104"/><line x1="480" y1="96" x2="480" y2="104"/>
+    </g>
+    <line x1="350" y1="155" x2="350" y2="55" stroke="#C8102E" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <text x="350" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#C8102E" letter-spacing="2" font-weight="700">STRATAGRID PET</text>
+    <rect x="80" y="380" width="540" height="20" fill="#5A5148" opacity="0.85"/>
+    <text x="350" y="396" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#FAF3E0" letter-spacing="2">FOUNDATION / LEVELLING PAD</text>
+    <line x1="640" y1="60" x2="640" y2="380" stroke="#1F1B17" stroke-width="0.6"/>
+    <line x1="635" y1="60" x2="645" y2="60" stroke="#1F1B17" stroke-width="0.6"/>
+    <line x1="635" y1="380" x2="645" y2="380" stroke="#1F1B17" stroke-width="0.6"/>
+    <text x="660" y="225" font-family="JetBrains Mono, monospace" font-size="11" fill="#1F1B17">H = 8-25 m</text>
+    <text x="660" y="240" font-family="JetBrains Mono, monospace" font-size="9" fill="#5A5148">(typical)</text>
+  </svg>
+</div>
+
+<p class="desc"><strong>What you're looking at:</strong> the textbook MSE wall cross-section. <em>Precast panel facing</em> on the left, <em>reinforced fill block</em> in the middle, <em>retained earth</em> on the right with the standard engineering hatch fill. Five horizontal <strong style="color:#C8102E">red lines</strong> = StrataGrid PET layers tied back from the wall facing into the reinforced fill. Vertical tick marks on each layer suggest the geogrid's transverse apertures. Same visual language as the homepage's worked-example slip-circle diagram so it sits naturally on the site.</p>
+<p class="desc"><strong>Approve, drop, or tweak?</strong> If approved, this goes onto /geogrid/, /geosynthetics/, and /retaining-walls/. If you want changes (different colors, more/fewer layers, different annotation, different perspective), tell me what to adjust and I'll redraw before showing #2.</p>
+
+</body></html>

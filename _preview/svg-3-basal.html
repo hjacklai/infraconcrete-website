@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SVG 3/4 v4, StrataTex HSR Basal Reinforcement (proper scale + chunky tires)</title>
+<link rel="stylesheet" href="/css/seo-page.css">
+<style>
+  body { padding: 60px 24px; max-width: 1100px; margin: 0 auto; }
+  h1 { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 32px; margin: 0 0 6px; }
+  .caption { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #6F665B; margin: 0 0 32px; }
+  .target { font-size: 12px; font-family: 'JetBrains Mono', monospace; color: #C8102E; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+  .schematic { background: #FAF3E0; border: 1px solid rgba(31,27,23,0.18); border-radius: 4px; padding: 32px; }
+  svg { width: 100%; height: auto; max-width: 900px; display: block; margin: 0 auto; }
+  .desc { color: #3A332C; font-size: 14px; line-height: 1.7; max-width: 720px; margin: 32px auto 0; }
+  .badge { display: inline-block; background: #C8102E; color: #fff; padding: 3px 10px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; }
+</style>
+</head>
+<body>
+<div class="target">SVG 3 of 4 (v4 with proper scale, bigger tires) · For /geotextile/ + /earthworks/ + /railways/ + /geosynthetics/</div>
+<h1>StrataTex HSR Woven, Basal Reinforcement Under Road on Soft Ground</h1>
+<p class="caption">Side-view cross-section, scale-correct cars, road, embankment, mat, subgrade <span class="badge">v4 PROPER SCALE</span></p>
+
+<div class="schematic">
+  <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="g3-clay" patternUnits="userSpaceOnUse" width="8" height="8">
+        <rect width="8" height="8" fill="#9A8270" opacity="0.7"/>
+        <circle cx="2" cy="3" r="0.7" fill="#1F1B17" opacity="0.45"/>
+        <circle cx="6" cy="6" r="0.55" fill="#1F1B17" opacity="0.4"/>
+      </pattern>
+      <pattern id="g3-fill" patternUnits="userSpaceOnUse" width="10" height="10">
+        <rect width="10" height="10" fill="#E8DCC0" opacity="0.55"/>
+        <line x1="0" y1="5" x2="10" y2="5" stroke="#1F1B17" stroke-width="0.3" opacity="0.4"/>
+      </pattern>
+      <marker id="g3-arrow" markerWidth="9" markerHeight="9" refX="4" refY="4" orient="auto"><polygon points="0 0, 9 4, 0 8" fill="#1F1B17"/></marker>
+      <marker id="g3-arrow-red" markerWidth="9" markerHeight="9" refX="4" refY="4" orient="auto"><polygon points="0 0, 9 4, 0 8" fill="#C8102E"/></marker>
+    </defs>
+
+    <!-- HEADER y=0..120 -->
+    <rect x="0" y="0" width="900" height="120" fill="#FAF3E0"/>
+    <text x="450" y="22" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#1F1B17" letter-spacing="2.5" font-weight="700">ROAD UNDER TRAFFIC LOAD (q)</text>
+
+    <!-- =========================================
+         3 SCALE-CORRECT SEDANS WITH CHUNKY TIRES
+         Each car bbox 100x60. Wheel radius 11.
+         Wheels touch asphalt at global y=120.
+         translate(?, 60) puts car top at 60, wheel bottom at 120.
+         ========================================= -->
+
+    <!-- Car 1: charcoal sedan -->
+    <g transform="translate(140, 60)">
+      <!-- Ground shadow -->
+      <ellipse cx="50" cy="60" rx="48" ry="2.5" fill="#1F1B17" opacity="0.18"/>
+      <!-- Lower body -->
+      <path d="M 6 42 L 14 42 L 18 35 L 30 35 L 34 42 L 66 42 L 70 35 L 82 35 L 86 42 L 94 42 L 92 50 L 8 50 Z" fill="#3D4954" stroke="#1F1B17" stroke-width="0.9" stroke-linejoin="round"/>
+      <!-- Body trim line -->
+      <line x1="14" y1="46" x2="86" y2="46" stroke="#1F1B17" stroke-width="0.4" opacity="0.4"/>
+      <!-- Roof + greenhouse -->
+      <path d="M 16 35 Q 22 14 38 11 L 62 11 Q 78 14 84 35 Z" fill="#3D4954" stroke="#1F1B17" stroke-width="0.9" stroke-linejoin="round"/>
+      <!-- Windscreen -->
+      <path d="M 22 17 Q 28 12 38 11 L 47 11 L 44 33 L 24 33 Z" fill="#7A8896" opacity="0.75"/>
+      <!-- B-pillar -->
+      <line x1="48" y1="11" x2="48" y2="33" stroke="#1F1B17" stroke-width="0.7"/>
+      <!-- Rear quarter window -->
+      <path d="M 48 11 L 62 11 Q 78 14 84 33 L 50 33 Z" fill="#7A8896" opacity="0.75"/>
+      <!-- A-pillar / C-pillar -->
+      <line x1="22" y1="17" x2="24" y2="33" stroke="#1F1B17" stroke-width="0.6"/>
+      <line x1="84" y1="33" x2="78" y2="14" stroke="#1F1B17" stroke-width="0.6"/>
+      <!-- Door cut lines + handles -->
+      <line x1="34" y1="35" x2="34" y2="42" stroke="#1F1B17" stroke-width="0.45"/>
+      <line x1="66" y1="35" x2="66" y2="42" stroke="#1F1B17" stroke-width="0.45"/>
+      <rect x="38" y="38.5" width="6" height="1" rx="0.5" fill="#1F1B17" opacity="0.7"/>
+      <rect x="56" y="38.5" width="6" height="1" rx="0.5" fill="#1F1B17" opacity="0.7"/>
+      <!-- Headlight + taillight -->
+      <path d="M 90 39 L 95 38 L 95 42 L 90 43 Z" fill="#FFE89E" stroke="#1F1B17" stroke-width="0.4"/>
+      <path d="M 10 39 L 5 38 L 5 42 L 10 43 Z" fill="#C8102E" stroke="#1F1B17" stroke-width="0.4"/>
+
+      <!-- ====== FRONT WHEEL (chunky, r=11) ====== -->
+      <circle cx="22" cy="49" r="11" fill="#1F1B17"/>
+      <circle cx="22" cy="49" r="9" fill="#2A241D"/>
+      <circle cx="22" cy="49" r="7" fill="#4A4035"/>
+      <!-- 5-spoke alloy -->
+      <g stroke="#9A8C72" stroke-width="1" stroke-linecap="round" opacity="0.9" transform="translate(22 49)">
+        <line x1="0" y1="-7" x2="0" y2="7"/>
+        <line x1="-6.7" y1="-2.2" x2="6.7" y2="2.2"/>
+        <line x1="-4.1" y1="5.7" x2="4.1" y2="-5.7"/>
+        <line x1="4.1" y1="5.7" x2="-4.1" y2="-5.7"/>
+        <line x1="6.7" y1="-2.2" x2="-6.7" y2="2.2"/>
+      </g>
+      <!-- Center cap -->
+      <circle cx="22" cy="49" r="2.2" fill="#1F1B17"/>
+      <circle cx="22" cy="49" r="1" fill="#5A5148"/>
+
+      <!-- ====== REAR WHEEL ====== -->
+      <circle cx="78" cy="49" r="11" fill="#1F1B17"/>
+      <circle cx="78" cy="49" r="9" fill="#2A241D"/>
+      <circle cx="78" cy="49" r="7" fill="#4A4035"/>
+      <g stroke="#9A8C72" stroke-width="1" stroke-linecap="round" opacity="0.9" transform="translate(78 49)">
+        <line x1="0" y1="-7" x2="0" y2="7"/>
+        <line x1="-6.7" y1="-2.2" x2="6.7" y2="2.2"/>
+        <line x1="-4.1" y1="5.7" x2="4.1" y2="-5.7"/>
+        <line x1="4.1" y1="5.7" x2="-4.1" y2="-5.7"/>
+        <line x1="6.7" y1="-2.2" x2="-6.7" y2="2.2"/>
+      </g>
+      <circle cx="78" cy="49" r="2.2" fill="#1F1B17"/>
+      <circle cx="78" cy="49" r="1" fill="#5A5148"/>
+    </g>
+
+    <!-- Car 2: burgundy sedan -->
+    <g transform="translate(370, 60)">
+      <ellipse cx="50" cy="60" rx="48" ry="2.5" fill="#1F1B17" opacity="0.18"/>
+      <path d="M 6 42 L 14 42 L 18 35 L 30 35 L 34 42 L 66 42 L 70 35 L 82 35 L 86 42 L 94 42 L 92 50 L 8 50 Z" fill="#6E2730" stroke="#1F1B17" stroke-width="0.9" stroke-linejoin="round"/>
+      <line x1="14" y1="46" x2="86" y2="46" stroke="#1F1B17" stroke-width="0.4" opacity="0.4"/>
+      <path d="M 16 35 Q 24 12 40 10 L 60 10 Q 76 12 84 35 Z" fill="#6E2730" stroke="#1F1B17" stroke-width="0.9" stroke-linejoin="round"/>
+      <path d="M 24 16 Q 30 11 40 10 L 47 10 L 44 33 L 26 33 Z" fill="#7A8896" opacity="0.75"/>
+      <line x1="48" y1="10" x2="48" y2="33" stroke="#1F1B17" stroke-width="0.7"/>
+      <path d="M 48 10 L 60 10 Q 76 12 84 33 L 50 33 Z" fill="#7A8896" opacity="0.75"/>
+      <line x1="24" y1="16" x2="26" y2="33" stroke="#1F1B17" stroke-width="0.6"/>
+      <line x1="84" y1="33" x2="76" y2="13" stroke="#1F1B17" stroke-width="0.6"/>
+      <line x1="34" y1="35" x2="34" y2="42" stroke="#1F1B17" stroke-width="0.45"/>
+      <line x1="66" y1="35" x2="66" y2="42" stroke="#1F1B17" stroke-width="0.45"/>
+      <rect x="38" y="38.5" width="6" height="1" rx="0.5" fill="#1F1B17" opacity="0.7"/>
+      <rect x="56" y="38.5" width="6" height="1" rx="0.5" fill="#1F1B17" opacity="0.7"/>
+      <path d="M 90 39 L 95 38 L 95 42 L 90 43 Z" fill="#FFE89E" stroke="#1F1B17" stroke-width="0.4"/>
+      <path d="M 10 39 L 5 38 L 5 42 L 10 43 Z" fill="#C8102E" stroke="#1F1B17" stroke-width="0.4"/>
+      <circle cx="22" cy="49" r="11" fill="#1F1B17"/>
+      <circle cx="22" cy="49" r="9" fill="#2A241D"/>
+      <circle cx="22" cy="49" r="7" fill="#4A4035"/>
+      <g stroke="#9A8C72" stroke-width="1" stroke-linecap="round" opacity="0.9" transform="translate(22 49)">
+        <line x1="0" y1="-7" x2="0" y2="7"/>
+        <line x1="-6.7" y1="-2.2" x2="6.7" y2="2.2"/>
+        <line x1="-4.1" y1="5.7" x2="4.1" y2="-5.7"/>
+        <line x1="4.1" y1="5.7" x2="-4.1" y2="-5.7"/>
+        <line x1="6.7" y1="-2.2" x2="-6.7" y2="2.2"/>
+      </g>
+      <circle cx="22" cy="49" r="2.2" fill="#1F1B17"/>
+      <circle cx="22" cy="49" r="1" fill="#5A5148"/>
+      <circle cx="78" cy="49" r="11" fill="#1F1B17"/>
+      <circle cx="78" cy="49" r="9" fill="#2A241D"/>
+      <circle cx="78" cy="49" r="7" fill="#4A4035"/>
+      <g stroke="#9A8C72" stroke-width="1" stroke-linecap="round" opacity="0.9" transform="translate(78 49)">
+        <line x1="0" y1="-7" x2="0" y2="7"/>
+        <line x1="-6.7" y1="-2.2" x2="6.7" y2="2.2"/>
+        <line x1="-4.1" y1="5.7" x2="4.1" y2="-5.7"/>
+        <line x1="4.1" y1="5.7" x2="-4.1" y2="-5.7"/>
+        <line x1="6.7" y1="-2.2" x2="-6.7" y2="2.2"/>
+      </g>
+      <circle cx="78" cy="49" r="2.2" fill="#1F1B17"/>
+      <circle cx="78" cy="49" r="1" fill="#5A5148"/>
+    </g>
+
+    <!-- Car 3: deep navy sedan -->
+    <g transform="translate(600, 60)">
+      <ellipse cx="50" cy="60" rx="48" ry="2.5" fill="#1F1B17" opacity="0.18"/>
+      <path d="M 6 42 L 14 42 L 18 35 L 30 35 L 34 42 L 66 42 L 70 35 L 82 35 L 86 42 L 94 42 L 92 50 L 8 50 Z" fill="#2A3548" stroke="#1F1B17" stroke-width="0.9" stroke-linejoin="round"/>
+      <line x1="14" y1="46" x2="86" y2="46" stroke="#1F1B17" stroke-width="0.4" opacity="0.4"/>
+      <path d="M 16 35 Q 22 14 38 11 L 62 11 Q 78 14 84 35 Z" fill="#2A3548" stroke="#1F1B17" stroke-width="0.9" stroke-linejoin="round"/>
+      <path d="M 22 17 Q 28 12 38 11 L 47 11 L 44 33 L 24 33 Z" fill="#7A8896" opacity="0.75"/>
+      <line x1="48" y1="11" x2="48" y2="33" stroke="#1F1B17" stroke-width="0.7"/>
+      <path d="M 48 11 L 62 11 Q 78 14 84 33 L 50 33 Z" fill="#7A8896" opacity="0.75"/>
+      <line x1="22" y1="17" x2="24" y2="33" stroke="#1F1B17" stroke-width="0.6"/>
+      <line x1="84" y1="33" x2="78" y2="14" stroke="#1F1B17" stroke-width="0.6"/>
+      <line x1="34" y1="35" x2="34" y2="42" stroke="#1F1B17" stroke-width="0.45"/>
+      <line x1="66" y1="35" x2="66" y2="42" stroke="#1F1B17" stroke-width="0.45"/>
+      <rect x="38" y="38.5" width="6" height="1" rx="0.5" fill="#1F1B17" opacity="0.7"/>
+      <rect x="56" y="38.5" width="6" height="1" rx="0.5" fill="#1F1B17" opacity="0.7"/>
+      <path d="M 90 39 L 95 38 L 95 42 L 90 43 Z" fill="#FFE89E" stroke="#1F1B17" stroke-width="0.4"/>
+      <path d="M 10 39 L 5 38 L 5 42 L 10 43 Z" fill="#C8102E" stroke="#1F1B17" stroke-width="0.4"/>
+      <circle cx="22" cy="49" r="11" fill="#1F1B17"/>
+      <circle cx="22" cy="49" r="9" fill="#2A241D"/>
+      <circle cx="22" cy="49" r="7" fill="#4A4035"/>
+      <g stroke="#9A8C72" stroke-width="1" stroke-linecap="round" opacity="0.9" transform="translate(22 49)">
+        <line x1="0" y1="-7" x2="0" y2="7"/>
+        <line x1="-6.7" y1="-2.2" x2="6.7" y2="2.2"/>
+        <line x1="-4.1" y1="5.7" x2="4.1" y2="-5.7"/>
+        <line x1="4.1" y1="5.7" x2="-4.1" y2="-5.7"/>
+        <line x1="6.7" y1="-2.2" x2="-6.7" y2="2.2"/>
+      </g>
+      <circle cx="22" cy="49" r="2.2" fill="#1F1B17"/>
+      <circle cx="22" cy="49" r="1" fill="#5A5148"/>
+      <circle cx="78" cy="49" r="11" fill="#1F1B17"/>
+      <circle cx="78" cy="49" r="9" fill="#2A241D"/>
+      <circle cx="78" cy="49" r="7" fill="#4A4035"/>
+      <g stroke="#9A8C72" stroke-width="1" stroke-linecap="round" opacity="0.9" transform="translate(78 49)">
+        <line x1="0" y1="-7" x2="0" y2="7"/>
+        <line x1="-6.7" y1="-2.2" x2="6.7" y2="2.2"/>
+        <line x1="-4.1" y1="5.7" x2="4.1" y2="-5.7"/>
+        <line x1="4.1" y1="5.7" x2="-4.1" y2="-5.7"/>
+        <line x1="6.7" y1="-2.2" x2="-6.7" y2="2.2"/>
+      </g>
+      <circle cx="78" cy="49" r="2.2" fill="#1F1B17"/>
+      <circle cx="78" cy="49" r="1" fill="#5A5148"/>
+    </g>
+
+    <!-- ASPHALT STRIP y=120..130 (thicker for proportion) -->
+    <rect x="100" y="120" width="700" height="10" fill="#1F1B17"/>
+    <g stroke="#FAF3E0" stroke-width="0.9" stroke-dasharray="14 10">
+      <line x1="120" y1="125" x2="780" y2="125"/>
+    </g>
+    <line x1="80" y1="125" x2="50" y2="100" stroke="#1F1B17" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <text x="48" y="92" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#1F1B17" letter-spacing="1" font-weight="600">ASPHALT</text>
+    <text x="48" y="104" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#1F1B17" letter-spacing="1" font-weight="600">PAVEMENT</text>
+
+    <!-- ============================================================
+         EMBANKMENT FILL y=130..290 (160px, ~2.7x car height = realistic)
+         ============================================================ -->
+    <path d="M 100 290 L 800 290 L 700 130 L 200 130 Z" fill="url(#g3-fill)"/>
+    <g stroke="#1F1B17" stroke-width="0.4" opacity="0.45">
+      <path d="M 130 165 L 770 165"/>
+      <path d="M 145 200 L 755 200"/>
+      <path d="M 175 240 L 725 240"/>
+      <path d="M 195 270 L 705 270"/>
+    </g>
+    <line x1="800" y1="210" x2="828" y2="210" stroke="#1F1B17" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <text x="895" y="202" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#1F1B17" letter-spacing="1" font-weight="600">ENGINEERED</text>
+    <text x="895" y="214" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#1F1B17" letter-spacing="1" font-weight="600">EMBANKMENT</text>
+    <text x="895" y="226" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#1F1B17" letter-spacing="1" font-weight="600">FILL</text>
+
+    <!-- STRATATEX HSR MAT y=290..296 -->
+    <rect x="80" y="290" width="740" height="6" fill="#C8102E"/>
+    <g stroke="#1F1B17" stroke-width="0.4" opacity="0.5">
+      <line x1="120" y1="292" x2="120" y2="294"/><line x1="180" y1="292" x2="180" y2="294"/><line x1="240" y1="292" x2="240" y2="294"/><line x1="300" y1="292" x2="300" y2="294"/><line x1="360" y1="292" x2="360" y2="294"/><line x1="420" y1="292" x2="420" y2="294"/><line x1="480" y1="292" x2="480" y2="294"/><line x1="540" y1="292" x2="540" y2="294"/><line x1="600" y1="292" x2="600" y2="294"/><line x1="660" y1="292" x2="660" y2="294"/><line x1="720" y1="292" x2="720" y2="294"/><line x1="780" y1="292" x2="780" y2="294"/>
+    </g>
+
+    <!-- Tensile arrows -->
+    <line x1="80" y1="293" x2="40" y2="293" stroke="#C8102E" stroke-width="2" marker-end="url(#g3-arrow-red)"/>
+    <line x1="820" y1="293" x2="860" y2="293" stroke="#C8102E" stroke-width="2" marker-end="url(#g3-arrow-red)"/>
+    <text x="35" y="287" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="14" fill="#C8102E" font-weight="700">T</text>
+    <text x="865" y="287" font-family="JetBrains Mono, monospace" font-size="14" fill="#C8102E" font-weight="700">T</text>
+    <text x="35" y="275" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="8" fill="#C8102E" letter-spacing="0.5">TENSILE</text>
+    <text x="865" y="275" font-family="JetBrains Mono, monospace" font-size="8" fill="#C8102E" letter-spacing="0.5">TENSILE</text>
+
+    <!-- SOFT CLAY y=296..400 -->
+    <rect x="0" y="296" width="900" height="104" fill="url(#g3-clay)"/>
+
+    <!-- FOOTER y=400..480 -->
+    <rect x="0" y="400" width="900" height="80" fill="#FAF3E0"/>
+
+    <!-- StrataTex callout: leader from mat to footer -->
+    <line x1="450" y1="296" x2="450" y2="435" stroke="#C8102E" stroke-width="0.7" stroke-dasharray="3 3"/>
+    <text x="450" y="450" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" fill="#C8102E" letter-spacing="2" font-weight="700">STRATATEX HSR</text>
+    <text x="450" y="468" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#5A5148" letter-spacing="1">100, 400 kN/m WOVEN PET BASAL MAT</text>
+
+    <!-- Soft clay callout: leader to footer -->
+    <line x1="200" y1="380" x2="200" y2="420" stroke="#1F1B17" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <text x="200" y="436" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#1F1B17" letter-spacing="1.5" font-weight="600">SOFT CLAY SUBGRADE</text>
+    <text x="200" y="452" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#5A5148" letter-spacing="0.5">cu &lt; 25 kPa</text>
+
+    <text x="700" y="436" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#1F1B17" letter-spacing="1.5" font-weight="600">TENSILE LOAD T</text>
+    <text x="700" y="452" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#5A5148" letter-spacing="0.5">restrains lateral spread</text>
+
+  </svg>
+</div>
+
+<p class="desc"><strong>What changed in v4 (your scale + tire feedback):</strong></p>
+<ul style="font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.8; color: #3A332C;">
+<li><strong>Wheels much chunkier:</strong> radius 11 (was 6.5). Wheels now visibly take up the lower half of the car, like real cars on a Malaysian highway.</li>
+<li><strong>5-spoke alloy detail</strong> on every wheel, with hub center cap, rim, sidewall, tire layers visible.</li>
+<li><strong>Embankment fill scaled to ~2.7x car height</strong> (160px vs 60px car). Real-world ratio for a 4-5m road embankment carrying 1.5m sedans, no longer "embankment is 5x the cars".</li>
+<li><strong>Asphalt strip slightly thicker</strong> (10px) for visibility and proportion.</li>
+<li>Cars repositioned so wheels touch asphalt cleanly.</li>
+<li>All labels stay outside illustration in margin/footer bands.</li>
+</ul>
+
+<p class="desc"><strong>Approve, drop, or further tweak?</strong></p>
+
+</body></html>
