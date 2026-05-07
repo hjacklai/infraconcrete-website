@@ -3,7 +3,7 @@ Allow: /
 Disallow: /.claude/
 Disallow: /_source/
 
-# ===== AI / LLM crawlers — explicitly allowed =====
+# ===== AI / LLM crawlers ,  explicitly allowed =====
 # Granting these bots full access maximizes recall in AI search,
 # Claude / ChatGPT / Perplexity / Gemini / Copilot answers.
 
