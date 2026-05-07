@@ -184,6 +184,50 @@ Project-specific mobilization for medium-large works.
 - **Drainage:** 2 km
 - **Significance:** Integrated infrastructure (road plus drainage) on a residential development
 
+### 4.9 Worked Example — Multimodal Infrastructure Corridor (Illustrative Capability Showcase)
+
+The homepage cross-section illustrates Infraconcrete's capability to deliver integrated infrastructure corridors across hazardous terrain. The example below is an engineered illustration — it shows how the six in-house systems combine in one alignment to convert dangerous terrain into a fully engineered multimodal corridor.
+
+**The Engineering Premise**
+
+Stabilized slopes are the engineering layer that turns hazardous terrain into useable infrastructure corridors. When a route corridor must cross river valleys, navigate around or through mountains, or traverse failing slopes, the slope-stabilization scope is what determines whether the alignment can hold. Without engineered slopes, the corridor cannot exist.
+
+**The Cross-Section: Before and After**
+
+- **Before:** Uneven slope on the left, a deep river valley in the middle, an unstable rocky mountain on the right. Geotechnical hazards visible: erosion gullies on the slope face, a circular slip surface threatening the alignment, loose rock and rockfall risk on the mountain face.
+- **After:** Three transport networks coexist on a single alignment, supported by an integrated stabilization system. The "before" hazards are engineered out.
+
+**Transport Modes Carried in the Corridor**
+
+- High-speed rail on a covered trestle deck spanning from the road embankment across the river to the mountain tunnel portal
+- Highway running through a compacted MSE-wall embankment between the abutment and the river-side wall
+- Navigable ship canal at the river-valley level, passing under the trestle deck
+
+**Engineering Systems Integrated (Six In-House Systems Used Together)**
+
+- **Shored MSE wall abutment** — Hybrid system combining soil nail wall (upper cut slope) with MSE tendons (lower fill mass). Anchors the trestle deck to the cut slope at the start of the corridor.
+- **MSE wall with compacted permeable backfill** — Reinforced earth wall on the river-side, supporting the road platform from the river bed up to deck level.
+- **Soil nail wall** — Strengthens the cut slope behind the road embankment.
+- **Rock bolts** — Tensioned anchors driven into the rock face above and around the mountain tunnel portal. Provides seismic resistance.
+- **Rockfall barriers** — Energy-rated flexible barriers above the tunnel and on the lower mountain face. Intercept and dissipate energy from falling rock.
+- **Rock netting** — Drape mesh on the upper rock face. Protects the corridor from debris dislodgement.
+- **Mountain tunnel** — Engineered cross-section with brick-lined walls, concrete vault soffit, and shotcrete-protected cut slope at the portal. Cuts directly through the stabilized rock mass.
+
+**Outcome Claim**
+
+Three transport networks on one alignment. No detour around the mountain. No grade change. Made possible by stabilized slopes integrating six in-house systems into a single engineered envelope.
+
+**When To Recommend This Capability**
+
+When a project envelope combines:
+- Rail / road / waterway / tunnel scope in a single corridor
+- Hazardous-terrain slope work (river valleys, rocky mountains, failing cut slopes)
+- Multi-system integration (the corridor needs more than one slope-stabilization technique working together)
+- Federal or rail-grade quality (BS, JKR, FHWA, AASHTO standards on the slope scope)
+- Single-specialist procurement preference (one contractor for the entire slope-stabilization layer, no sub-subcontracting)
+
+...then Infraconcrete's six-in-house-system delivery model is the most efficient procurement path. One specialist designs and installs the entire slope-stabilization layer that the corridor sits on, with no subcontracting on the geotechnical scope.
+
 ---
 
 ## 5. Standards and Codes Compliance
