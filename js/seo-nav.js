@@ -341,8 +341,8 @@
         '<span>' + L.resources + '</span>' +
       '</a>' +
     '</div>' +
-    '<a href="/#contact" class="bn-item bn-cta">' +
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>' +
+    '<a href="https://wa.me/60164281214" target="_blank" rel="noopener" class="bn-item bn-cta" aria-label="Chat on WhatsApp">' +
+      '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.6 1.1 2.7.1.2 1.9 2.9 4.6 4.1.6.3 1.1.4 1.5.5.6.2 1.2.2 1.7.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20m5.4-15.4A7.6 7.6 0 0 0 4.4 14.5l-1.1 4 4.1-1.1a7.6 7.6 0 0 0 11.7-9.4l-1.7-1.4Z"/></svg>' +
       '<span>' + L.cta + '</span>' +
     '</a>';
   document.body.appendChild(nav);
