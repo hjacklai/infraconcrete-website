@@ -7499,7 +7499,7 @@
     // The Context site cross-section: drag handle wipes BEFORE → AFTER.
     // Ball + divider line are ONE unit: ball rides the vertical divider at a
     // fixed midpoint Y, sliding horizontally as a single slider handle.
-    document.querySelectorAll('.ctx-section-stage').forEach(stage => {
+    document.querySelectorAll('.ctx-section-stage').forEach((stage, stageIdx) => {
       const range = stage.querySelector('.cs-range');
       const clipRect = stage.querySelector('.cs-clip-rect');
       const clipRectBefore = stage.querySelector('.cs-clip-rect-before');
@@ -7586,6 +7586,80 @@
 
       // initial sync
       update(+range.value);
+
+      /* ============================================================
+         AUTO-DEMO ON VIEWPORT ENTRY
+         ============================================================
+         When the slider enters the viewport for the first time, briefly
+         animate the divider 50 -> 25 -> 75 -> 50 over ~1.5s so visitors
+         literally see the BEFORE/AFTER swap and learn the interaction
+         without any explicit text. Industry standard for comparison
+         sliders (Apple, Stripe). Fires once per session per slider.
+         Skips if:
+           - user has already dragged (.has-dragged set)
+           - user prefers reduced motion
+           - demo already played this session for this slider
+         If the user grabs the slider mid-demo, the demo aborts and
+         their input wins. */
+      (() => {
+        if (reduceMotion) return;
+        const demoKey = 'ic-cs-demo-' + stageIdx;
+        try { if (sessionStorage.getItem(demoKey)) return; } catch (_) {}
+
+        const easeInOut = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        const waypoints = [50, 22, 78, 50];
+        const totalDuration = 1600;
+        const segments = waypoints.length - 1;
+        const segDur = totalDuration / segments;
+
+        let demoActive = false;
+        const playDemo = () => {
+          if (demoActive) return;
+          if (stage.classList.contains('has-dragged')) return;
+          demoActive = true;
+          const startTime = performance.now();
+          const tick = (now) => {
+            // User grabbed it mid-demo - abort and let their drag win
+            if (stage.classList.contains('has-dragged')) {
+              demoActive = false;
+              return;
+            }
+            const elapsed = now - startTime;
+            if (elapsed >= totalDuration) {
+              range.value = '50';
+              update(50);
+              demoActive = false;
+              try { sessionStorage.setItem(demoKey, '1'); } catch (_) {}
+              return;
+            }
+            const segIdx = Math.min(segments - 1, Math.floor(elapsed / segDur));
+            const segT = (elapsed - segIdx * segDur) / segDur;
+            const eased = easeInOut(segT);
+            const from = waypoints[segIdx];
+            const to = waypoints[segIdx + 1];
+            const pct = from + (to - from) * eased;
+            range.value = String(pct);
+            update(pct);
+            requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        };
+
+        // Fire on viewport entry (>=55% visible to ensure the slider is
+        // actually in the user's reading area, not just barely peeking in).
+        if (typeof IntersectionObserver === 'undefined') return;
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting && e.intersectionRatio >= 0.5) {
+              // 350ms grace so the section settles into view first,
+              // then the divider sweeps - feels intentional, not jumpy.
+              setTimeout(playDemo, 350);
+              obs.disconnect();
+            }
+          });
+        }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+        obs.observe(stage);
+      })();
     });
 
 
