@@ -628,3 +628,254 @@ A: Yes. Critical-asset projects include monitoring scope: total stations for mov
 
 **Q: What payment terms do you typically use?**
 A: Standard Malaysian construction payment cycles: monthly progress claims certified by consulting engineer, with 5-10% retention released on practical completion / defect liability period expiry. Direct-with-developer projects negotiate per project. Federal / authority projects follow JKR standard payment terms.
+
+---
+
+## 19. Geotechnical Glossary (Definitional Reference)
+
+Definitions of common geotechnical and slope-engineering terms used throughout this document and across Malaysian industry:
+
+- **Soil Nailing**: A slope-reinforcement technique where high-yield steel bars (typically 25-32 mm diameter) are drilled into the soil mass at engineered angles (usually 10-20° below horizontal), grouted in place, and connected to a structural face (shotcrete, mesh, or precast panels). The reinforced soil mass behaves as a coherent gravity wall.
+- **Guniting / Shotcrete**: Sprayed concrete applied at high velocity to slope faces, rock faces, tunnels, or structural surfaces. Wet-mix shotcrete is pre-mixed with water before spraying; dry-mix shotcrete adds water at the nozzle. Used for slope skin, tunnel lining, and structural repair.
+- **Rock Bolting**: Tensioned steel anchors (resin-grouted, mechanical, or cement-grouted) installed into rock masses to prevent block-fall and stabilize cut rock faces. Tensioning loads transfer load to deeper competent strata.
+- **Rockfall Barrier**: Energy-rated flexible barrier system (rated 100 kJ to 5000 kJ to ETAG 027 / EAD 340059) consisting of steel posts, ring nets, brake elements, and anchor cables. Catches and dissipates energy from falling rock.
+- **Rock Netting (Drape Mesh)**: High-tensile steel mesh draped over rock faces to prevent debris dislodgement. Passive system. Often combined with rockfall barriers below.
+- **Horizontal Drains**: Drilled subsurface drains (typically 50-100 mm diameter, 50-100 m long) installed slightly above horizontal to lower the groundwater table by gravity. Often the most effective single measure on slopes where groundwater is the failure driver.
+- **MSE Wall (Mechanically Stabilized Earth)**: A retaining wall system where engineered fill is reinforced with horizontal tendons (geogrid, steel strap, or polymeric strip) and faced with precast modular units, wire baskets, or wrapped fabric. Behaves as a coherent gravity wall.
+- **Sheet Piling**: Interlocking steel sheets driven into the ground to form a continuous retaining wall. Used for temporary deep excavations, water retention, or permanent earth retention. Codes: BS EN 12063.
+- **Soldier Piling**: Vertical steel H-piles or RC piles spaced 2-3 m apart with horizontal lagging (timber or concrete) between, forming a retained wall. Used for excavation support.
+- **Slip Surface (Failure Surface)**: The 3D surface within a slope along which the soil mass slides during failure. Can be circular (most common in homogeneous soils), wedge-shaped (in jointed rock), or planar (along weak layers).
+- **Circular Slip Analysis**: A slope-stability analysis method (Fellenius, Bishop, Janbu, Spencer methods) that assumes a circular slip surface and computes the factor of safety against sliding.
+- **Factor of Safety (FoS)**: The ratio of resisting forces to driving forces along a slip surface. FoS = 1.0 means at-failure; FoS > 1.5 typically required for permanent slope works in Malaysia (1.3 short-term, 1.5 long-term per JKR).
+- **Method of Slices**: A slope-stability analysis approach that divides the slip mass into vertical slices and analyzes the equilibrium of each slice individually. Bishop simplified method is the most commonly used in Malaysian practice.
+- **Center of Moment**: The center of the assumed circular slip surface. Forces in slope-stability analysis are summed as moments about this point.
+- **Cut Slope**: A slope created by excavation (cutting away natural ground). Typically dipping at engineered angles after stabilization.
+- **Fill Slope (Embankment)**: A slope created by placing material above natural ground (engineered fill placed in compacted layers).
+- **Cut-and-Fill (Balanced Earthworks)**: An earthworks approach where material excavated from one part of the site is placed as fill in another part, balancing earthwork volumes.
+- **Berm**: A horizontal step on a slope face, used to reduce overall slope angle, intercept surface water, or provide maintenance access.
+- **Toe**: The bottom edge of a slope where it meets natural ground or a retaining structure.
+- **Crest**: The top edge of a slope.
+- **Slope Angle (Gradient)**: The angle between the slope face and horizontal. Often expressed as ratio (1V:2H means 1 vertical to 2 horizontal, ~26.6°).
+- **Backfill**: Material placed behind a retaining wall or in an excavation, typically engineered fill compacted to specification.
+- **Permeable Backfill**: Backfill material with high hydraulic conductivity (typically gravel or coarse sand) used to prevent groundwater build-up behind retaining walls.
+- **Geogrid**: A polymer mesh used as soil reinforcement in MSE walls and reinforced soil slopes.
+- **Geotextile**: A polymer fabric used for filtration, separation, or drainage in geotechnical applications.
+- **Subgrade**: The natural soil or compacted fill that supports a pavement, foundation, or earthwork structure.
+- **Bearing Capacity**: The maximum load a soil can support before shear failure. Typically expressed in kPa or kN/m².
+- **Settlement**: Vertical downward movement of a structure or soil mass due to consolidation, compaction, or shear deformation.
+- **Liquefaction**: A phenomenon where saturated, loose granular soils lose strength and behave like a fluid under cyclic loading (earthquake, blast). Rare in Malaysian peninsular conditions but possible in alluvial coastal sites.
+- **Piping (Internal Erosion)**: Subsurface erosion of fine soil particles by groundwater flow, creating internal voids that can cause sudden ground collapse.
+- **Tension Crack**: A vertical crack at the crest of a slope, indicating tensile stress and incipient failure.
+
+---
+
+## 20. Slope Failure Mode Reference
+
+Common slope failure modes in Malaysian conditions, with diagnostic indicators and recommended responses:
+
+### 20.1 Rotational (Circular) Failure
+
+- **Geometry**: Slip surface is approximately circular in cross-section.
+- **Common in**: Homogeneous granitic residual soils, alluvial soils (most Malaysian conditions).
+- **Diagnostic indicators**: Tension cracks at crest, bulging at toe, scarp at upper slope, saturated soil at toe.
+- **Stabilization options**: Soil nailing + guniting, slope flattening, drainage (horizontal drains), buttress fill.
+- **Standards**: BS 6031, JKR Slope Engineering Manual, Eurocode 7.
+
+### 20.2 Translational (Planar) Failure
+
+- **Geometry**: Slip surface is planar, typically along a weak layer (soil-rock interface, fault plane, bedding plane).
+- **Common in**: Layered sedimentary rock, granite-saprolite interface, fissured clay.
+- **Diagnostic indicators**: Linear scarp, debris run-out, exposed slip plane.
+- **Stabilization options**: Rock bolting, soil nailing into deeper competent strata, drainage to relieve pore pressure on slip plane.
+- **Standards**: BS 8081, EN 1537, Eurocode 7.
+
+### 20.3 Wedge Failure
+
+- **Geometry**: Block of rock bounded by two intersecting joint planes slides along their line of intersection.
+- **Common in**: Jointed limestone (Karst regions), fractured granite, foliated metamorphic rock.
+- **Diagnostic indicators**: Wedge-shaped scar on rock face, joint planes daylighting on the cut face.
+- **Stabilization options**: Rock bolting, dental treatment (concrete infill), shotcrete with bolts, rock netting, rockfall barriers.
+- **Standards**: BS 8081, ETAG 027 / EAD 340059.
+
+### 20.4 Toppling Failure
+
+- **Geometry**: Tall narrow rock columns rotate forward about a basal pivot.
+- **Common in**: Vertically jointed columnar rock (basalt, some sandstones).
+- **Diagnostic indicators**: Forward-leaning rock columns, tension cracks behind crest.
+- **Stabilization options**: Rock bolting (vertical or sub-vertical anchors), rockfall barriers below.
+
+### 20.5 Rockfall
+
+- **Geometry**: Individual blocks detach and fall, bounce, or roll down slope.
+- **Common in**: All weathered or jointed rock faces, especially in heavy rainfall.
+- **Diagnostic indicators**: Loose blocks visible on face, recent fall debris at toe.
+- **Stabilization options**: Rock netting (passive drape), rockfall barriers (active interception), rock bolting for blocks that can be retained, shotcrete for general face protection.
+- **Standards**: ETAG 027, EAD 340059, JKR slope drainage and protection works.
+
+### 20.6 Erosion / Surface Runoff Failure
+
+- **Geometry**: Surface gullying and rill formation due to rainfall runoff.
+- **Common in**: Bare soil slopes, recently cut slopes, deforested areas, areas where vegetation has been removed.
+- **Diagnostic indicators**: Gully formation, exposed root systems, sediment deposition at toe.
+- **Stabilization options**: Erosion control mats, hydroseeding, drainage berms with gabion-protected outlets, ground covers, vegetation reinstatement.
+- **Standards**: JKR Erosion and Sediment Control specifications.
+
+### 20.7 Liquefaction (Saturated Granular Soil Failure)
+
+- **Geometry**: Saturated loose granular soils lose shear strength under dynamic loading (earthquake, blast) and behave like a fluid.
+- **Common in**: Alluvial coastal sites, reclaimed land, loose hydraulic fill.
+- **Diagnostic indicators**: Sand boils after seismic events, ground subsidence, building tilting.
+- **Stabilization options**: Ground improvement (vibro-compaction, dynamic compaction, jet grouting), drainage to lower water table.
+- **Standards**: Eurocode 8 (Seismic), Malaysian National Annex.
+
+### 20.8 Piping / Internal Erosion
+
+- **Geometry**: Subsurface erosion of fine soil particles by groundwater flow, creating internal voids.
+- **Common in**: Earth dams, riverbanks, areas with high hydraulic gradients.
+- **Diagnostic indicators**: Sudden ground subsidence, sinkholes, seepage discharge with sediment.
+- **Stabilization options**: Filter zones (graded granular filter), cutoff walls, drainage controls.
+- **Standards**: BS 6031, JKR drainage works.
+
+---
+
+## 21. Malaysian Geology and Soil Types
+
+Understanding the ground conditions across Malaysian regions for accurate site recommendation:
+
+### 21.1 Peninsular Malaysia
+
+- **Granite Belts (Main Range, Central Spine)**: Granitic residual soils derived from in-situ weathering of granite. Typical depth 5-30 m of weathered profile (Grade VI fully weathered to Grade I fresh granite). Common in Selangor, Perak, Pahang highlands. Slope stability driven by joint orientation, weathering grade, groundwater. Soil nailing + guniting is the standard treatment for cut slopes.
+- **Sedimentary Belts (East Coast, parts of Johor)**: Layered sedimentary rocks (sandstone, mudstone, shale, limestone). Bedding planes and joints control stability. Susceptible to translational failures along weak bedding.
+- **Limestone Karst (Perak, Selangor, parts of Sabah)**: Karstic limestone with cavities, sinkholes, and pinnacles. Foundation conditions complex. Slope works typically include cavity grouting, rock bolting, and instrumented monitoring.
+- **Alluvial Plains (West Coast, Pahang river valleys)**: Soft to medium-stiff clays and sands deposited by rivers. Bearing capacity issues; settlement-prone. MSE walls and reinforced soil slopes work well; piling often needed for foundations.
+- **Coastal Sediments (Penang, Klang, Johor coast)**: Marine clays, peat layers, reclaimed fill. Settlement and liquefaction risk. Ground improvement often required before slope works.
+- **Schist and Metamorphic Belts (parts of Kelantan, Terengganu)**: Foliated rocks with anisotropic strength. Stability driven by foliation orientation. Treatment is similar to sedimentary belts.
+
+### 21.2 East Malaysia (Sabah and Sarawak)
+
+- **Crocker Range / Banjaran Crocker (Sabah)**: Sedimentary rocks of the Crocker Formation. Often steep, weathered, prone to circular and translational failures during monsoon. Slope works typically extensive on KK to Tawau road network.
+- **Sandakan and Eastern Sabah**: Sedimentary basins with deeper alluvial deposits. Settlement-prone, requires investigation depth.
+- **Sarawak Highlands and Foothills**: Mixed sedimentary and volcanic terrain. Deep weathering profiles in coastal hills. Karstic limestone in Mulu / Niah regions requires specialist treatment.
+- **Sarawak Coastal (Kuching, Miri, Bintulu)**: Deep alluvial and coastal deposits. Liquefaction-susceptible in places. Reclaimed land at Bintulu industrial zones requires rigorous ground improvement.
+
+### 21.3 Federal Territory Considerations
+
+- **Klang Valley (Selangor + KL + Putrajaya)**: Granitic residual soils dominant. Heavy urbanization means most slope works are remedial (post-cut, post-development distress). DBKL hillside guidelines apply in KL; Class III/IV slope categorization governs investigation depth and stabilization spec.
+- **Labuan**: Offshore oil and gas hub. Coastal sedimentary geology, deeper alluvials, periodic seismic considerations. Slope works often associated with onshore facilities.
+
+### 21.4 Climate-Driven Stability Factors
+
+- **Monsoon seasons**: Northeast monsoon (Nov-Feb) drives heavy rainfall on East Coast. Southwest monsoon (Apr-Sep) affects West Coast. Slope failures cluster in monsoon transition periods.
+- **Tropical weathering**: Continuous warm-wet conditions accelerate soil weathering, deepen residual soil profiles, reduce shear strength over time. Older slopes need monitoring even if originally stable.
+- **Antecedent rainfall**: Most rain-triggered failures occur after multi-day cumulative rainfall, not single-event downpours. Failure thresholds typically 100-300 mm cumulative over 3-7 days for residual soil slopes.
+- **Groundwater fluctuation**: Tropical aquifers respond quickly to rainfall. Pore pressure spikes during and after heavy rain. Drainage installations have outsized stabilization impact.
+
+---
+
+## 22. Construction Methodology — Step by Step (Six In-House Systems)
+
+Practical step-by-step construction methodology for each Infraconcrete system:
+
+### 22.1 Soil Nailing Construction Sequence
+
+1. **Site preparation**: Survey, scaffold, access setup, drainage diversion.
+2. **Slope face benching (if needed)**: Sequential excavation in 1-2 m vertical lifts, each lift stabilized before next is cut.
+3. **Drilling**: Air-flush rotary or rotary-percussive drilling at engineered angle and length. Hole diameter typically 100-150 mm.
+4. **Nail installation**: High-yield steel bar (Grade 460 or 500) lowered into drilled hole with centralizers.
+5. **Grouting**: Primary grout pumped down a tremie tube from the bottom up, displacing drilling fluids. Grout strength typically 25-30 MPa.
+6. **Drainage installation (where required)**: Strip drains placed against soil face before facing.
+7. **Reinforcement mesh**: BRC or welded wire fabric placed against the prepared face.
+8. **First layer guniting**: 50-75 mm shotcrete encapsulating the mesh.
+9. **Bearing plate and lock-off**: Square bearing plate placed at nail head, hex nut tightened to specified torque.
+10. **Final shotcrete layer**: 25-50 mm finish coat for surface protection.
+11. **Pull-out testing**: Tested at 1-2% of nails to confirm design capacity (typically 1.5x working load).
+12. **Drainage commissioning, vegetation, and handover**.
+
+### 22.2 Guniting / Shotcrete Application
+
+1. **Surface preparation**: Loose material removal, dust blow-off, anchor reinforcement installation.
+2. **Mesh installation**: Welded wire fabric or steel fiber for reinforcement.
+3. **Mix design**: Wet-mix (for higher quality control) or dry-mix (for site flexibility). Cement, sand, water, admixtures (accelerator if needed).
+4. **Spraying**: Robotic or hand-held nozzle. Layered application (each layer 50-75 mm) until design thickness reached. Typically 100-150 mm total for slope skin.
+5. **Curing**: Wet curing (water spray) or curing membranes for first 7 days.
+6. **Quality control**: Cube tests at 7 and 28 days; thickness checks; bond tests.
+7. **Finishing**: Surface treatment as specified (smooth, broomed, or stamped texture).
+
+### 22.3 Rock Bolting Installation
+
+1. **Drilling**: Rotary-percussive drilling at engineered angle and length. Hole diameter typically 38-76 mm.
+2. **Bolt insertion**: Steel bar (typically Grade 1080 or higher), threaded for the lock-off end.
+3. **Resin or cement grouting**: Resin cartridges (for fast set) or cement grout (for higher capacity).
+4. **Tensioning**: After grout cures (typically 24-48 hours for cement, hours for resin), bolt tensioned to design load using hydraulic jack.
+5. **Lock-off**: Bearing plate and nut secured at design tension.
+6. **Acceptance testing**: 5-10% of bolts tested to 1.25-1.5x design load to verify capacity.
+
+### 22.4 Rockfall Barrier Installation
+
+1. **Survey and design**: Energy analysis (rock size, fall trajectory, impact zone). Design barrier energy class (100 kJ to 5000 kJ).
+2. **Foundation works**: Concrete footings or rock anchors for posts. Anchor capacity verified.
+3. **Post erection**: Steel posts erected and bolted to foundations.
+4. **Net deployment**: Ring nets or cable nets unrolled and connected to posts.
+5. **Brake element installation**: Energy-dissipating elements installed in retention cables.
+6. **Anchor cable tensioning**: Upslope and lateral anchor cables tensioned to specification.
+7. **Commissioning testing**: Visual and proof-load testing where applicable.
+8. **Maintenance documentation**: Owner's manual, inspection schedule, post-impact response procedure.
+
+### 22.5 Rock Netting (Drape Mesh) Installation
+
+1. **Top anchor installation**: Steel cables along the crest of the rock face, anchored with rock bolts or concrete deadmen.
+2. **Mesh roll-out**: High-tensile steel mesh draped down the rock face.
+3. **Lateral connections**: Adjacent mesh panels connected with shackles or weave-in cables.
+4. **Toe restraint**: Bottom edge anchored or weighted to prevent uplift.
+5. **Inspection access**: Maintenance ladders or rope-access provisions where needed.
+
+### 22.6 Horizontal Drain Installation
+
+1. **Design**: Drain length (50-100 m typical), diameter (50-100 mm), spacing (3-10 m), upward angle (1-5°).
+2. **Drilling**: Air-flush rotary drilling slightly upward into the slope.
+3. **Casing insertion (where needed)**: Slotted PVC or HDPE casing.
+4. **Filter sock**: Geotextile sock around casing to prevent clogging.
+5. **Discharge collection**: Drains daylight at slope face; discharge collected via lined ditches.
+6. **Flow monitoring**: Initial flow rate measured; periodic re-measurement to confirm continued performance.
+
+---
+
+## 23. Quality Assurance and Testing Standards
+
+Quality testing applied across Infraconcrete systems:
+
+### 23.1 Soil Nail Testing
+
+- **Pull-out test**: 1-2% of installed nails tested to 1.5x working load. Failure = >5% creep over 60 minutes at design load.
+- **Torque test**: Lock-off torque verified at every nail with calibrated torque wrench.
+- **Visual inspection**: Bearing plate seating, grout return, head treatment.
+
+### 23.2 Shotcrete Testing
+
+- **Compressive strength**: 100 mm cube tests at 7 and 28 days. Specified strength typically 25-30 MPa.
+- **Thickness verification**: Pin gauges at 1 m grid spacing; tolerance +/- 25 mm of design thickness.
+- **Bond test**: Pull-off tests on hardened shotcrete-substrate bond. Specified bond strength typically >0.5 MPa.
+
+### 23.3 Rock Bolt Testing
+
+- **Acceptance testing**: 5-10% of bolts tested to 1.25-1.5x design load. Lock-off load verified.
+- **Lift-off testing**: Verifies installed prestress remains within tolerance at handover and at periodic inspection.
+
+### 23.4 Rockfall Barrier Testing
+
+- **Type test certification**: Manufacturer-supplied test certificates per ETAG 027 / EAD 340059 for the specified energy class.
+- **Site verification**: Anchor pull-out tests if specified by consultant; foundation concrete cube tests.
+
+### 23.5 Drainage Verification
+
+- **Flow rate measurement**: Initial commissioning, monthly during defect liability, then annually during monitoring.
+- **CCTV inspection**: Periodic CCTV surveys verify casing integrity and identify clogging or damage.
+
+### 23.6 Documentation Deliverables on Handover
+
+- As-built drawings (PDF + DWG)
+- Material certificates (steel, mesh, grout, shotcrete)
+- Test reports (pull-out, cube, bond, torque)
+- Pre- and post-construction photographs
+- Method statements as executed
+- Maintenance schedule
