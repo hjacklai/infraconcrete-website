@@ -1414,29 +1414,31 @@
   .ctx-section-stage .cs-drag-hint { pointer-events: none; opacity: 0.78; animation: cs-drag-hint-pulse 2.4s ease-in-out infinite; }
   @keyframes cs-drag-hint-pulse { 0%, 100% { opacity: 0.78; } 50% { opacity: 0.32; } }
   .ctx-section-stage.has-dragged .cs-drag-hint { opacity: 0; transition: opacity .4s ease; animation: none; }
-  /* Worked Example II — label styles. Class-based to win over the lower-specificity
-     `.approach svg text { font-size: 14px }` rule that otherwise forces all text small.
-     BEFORE side has more breathing room so labels can be bigger; AFTER is denser. */
-  /* Matches Worked Example I formatting — bold main labels (700) for emphasis,
-     light captions (400) at 0.65 opacity, letter-spacing 0.12em main / 0.1em cap. */
-  .cs2-after-labels .lbl   { font-size: 16px; font-weight: 700; fill: #1F1B17; letter-spacing: 0.12em; }
-  .cs2-after-labels .cap   { font-size: 13px; font-weight: 400; fill: #1F1B17; opacity: 0.65; letter-spacing: 0.1em; }
-  .cs2-after-labels .lead  { stroke: #1F1B17; stroke-width: 0.7; opacity: 0.7; }
-  .cs2-after-labels .dot   { fill: #1F1B17; opacity: 0.75; }
-  .cs2-before-labels .lbl  { font-size: 22px; font-weight: 700; fill: #1F1B17; letter-spacing: 0.12em; }
-  .cs2-before-labels .red  { font-size: 16px; fill: #C8102E; font-weight: 700; letter-spacing: 0.08em; }
-  .cs2-before-labels .slice{ font-size: 11px; font-weight: 400; fill: #1F1B17; opacity: 0.7; letter-spacing: 0.04em; }
+  /* Worked Example II label styles — class-based selectors with high enough specificity
+     to win over the global `.approach svg text { font-size: 14px }` cascade.
+     Mirrors Worked Example I formatting: bold (700) main labels, light (400) captions
+     at 0.65 opacity, 0.12em letter-spacing on main / 0.1em on caption. */
+  .cs2-after-labels,
+  .cs2-before-labels,
+  .cs2-banner              { fill: #1F1B17; }
+  .cs2-after-labels .lbl   { font-size: 16px; font-weight: 700; letter-spacing: 0.12em; }
+  .cs2-after-labels .cap   { font-size: 13px; font-weight: 400; opacity: 0.65; letter-spacing: 0.1em; }
+  .cs2-after-labels .lead  { stroke: #1F1B17; stroke-width: 0.7; opacity: 0.7; fill: none; }
+  .cs2-after-labels .dot   { opacity: 0.75; }
+  .cs2-before-labels .lbl  { font-size: 22px; font-weight: 700; letter-spacing: 0.12em; }
+  .cs2-before-labels .red  { font-size: 16px; font-weight: 700; fill: #C8102E; letter-spacing: 0.08em; }
+  .cs2-before-labels .slice{ font-size: 11px; font-weight: 400; opacity: 0.7; letter-spacing: 0.04em; }
   .cs2-banner              { font-family: 'JetBrains Mono', monospace; }
-  .cs2-banner .b-main      { font-size: 22px; font-weight: 600; fill: #1F1B17; letter-spacing: 0.18em; }
-  .cs2-banner .b-sub       { font-size: 13px; font-weight: 400; fill: #1F1B17; opacity: 0.6; letter-spacing: 0.12em; }
-  /* ZH overrides — Chinese glyphs read smaller per-pixel than Latin, so bump up for parity. */
-  :lang(zh-Hans) .cs2-after-labels .lbl   { font-size: 18px; }
-  :lang(zh-Hans) .cs2-after-labels .cap   { font-size: 15px; }
+  .cs2-banner .b-main      { font-size: 22px; font-weight: 600; letter-spacing: 0.18em; }
+  .cs2-banner .b-sub       { font-size: 13px; font-weight: 400; opacity: 0.6; letter-spacing: 0.12em; }
+  /* ZH overrides — CJK glyphs read smaller per-pixel than Latin, so bump for parity. */
+  :lang(zh-Hans) .cs2-after-labels  .lbl  { font-size: 18px; }
+  :lang(zh-Hans) .cs2-after-labels  .cap  { font-size: 15px; }
   :lang(zh-Hans) .cs2-before-labels .lbl  { font-size: 26px; }
   :lang(zh-Hans) .cs2-before-labels .red  { font-size: 18px; }
   :lang(zh-Hans) .cs2-before-labels .slice{ font-size: 13px; }
-  :lang(zh-Hans) .cs2-banner .b-main      { font-size: 26px; }
-  :lang(zh-Hans) .cs2-banner .b-sub       { font-size: 15px; }
+  :lang(zh-Hans) .cs2-banner        .b-main { font-size: 26px; }
+  :lang(zh-Hans) .cs2-banner        .b-sub  { font-size: 15px; }
   /* invisible range slider sits on top of the SVG so any drag horizontally works */
   .cs-range {
     position: absolute;
@@ -5792,8 +5794,7 @@
                  Presentation attrs (font-size/fill/opacity/stroke) live in CSS via the
                  .lbl / .cap / .lead / .dot classes. Geometry stays inline. -->
             <g class="cs2-after-labels" font-family="JetBrains Mono, monospace" letter-spacing="0.08em">
-              <!-- SHORED MSE WALL ABUTMENT — two leaders converge at (140,100) then fan out.
-                   Caption y bumped from 84→90 for breathing room (esp. ZH dense glyphs). -->
+              <!-- SHORED MSE WALL ABUTMENT — 2 leaders fan from (140,100) -->
               <text class="lbl" x="14" y="70" data-i18n="cs2.abutment">SHORED MSE WALL ABUTMENT</text>
               <text class="cap" x="14" y="90" data-i18n="cs2.abutment.sub">HYBRID — SOIL NAIL + MSE TENDONS</text>
               <line class="lead" x1="140" y1="100" x2="174" y2="215"/>
@@ -5801,53 +5802,48 @@
               <line class="lead" x1="140" y1="100" x2="110" y2="260"/>
               <circle class="dot" cx="110" cy="260" r="2.5"/>
 
-              <!-- FILL AREA — points to right side of fill, near abutment.
-                   Uses cs2.fill so BM gets a short label (won't touch the trestle column). -->
+              <!-- FILL AREA -->
               <text class="lbl" x="220" y="240" data-i18n="cs2.fill">FILL AREA</text>
               <line class="lead" x1="218" y1="236" x2="150" y2="260"/>
               <circle class="dot" cx="150" cy="260" r="2.5"/>
 
-              <!-- HIGH-SPEED RAIL — label shifted left, leader slants down to the train deck -->
+              <!-- HIGH-SPEED RAIL — leader slants down-right to the train deck -->
               <text class="lbl" x="380" y="50" data-i18n="cs2.rail">HIGH-SPEED RAIL</text>
               <line class="lead" x1="490" y1="54" x2="555" y2="168"/>
               <circle class="dot" cx="555" cy="168" r="2.5"/>
 
-              <!-- HIGHWAY — vertical leader straight down to the road kerbs -->
+              <!-- HIGHWAY -->
               <text class="lbl" x="335" y="330" text-anchor="middle" data-i18n="cs2.highway">HIGHWAY</text>
               <line class="lead" x1="335" y1="336" x2="335" y2="395"/>
               <circle class="dot" cx="335" cy="395" r="2.5"/>
 
-              <!-- MSE WALL — 3-line stack with extra breathing room for ZH dense glyphs.
-                   Uses cs2.mse so BM gets a short label (won't touch the trestle column). -->
+              <!-- MSE WALL — 3-line stack -->
               <text class="lbl" x="440" y="290" data-i18n="cs2.mse">MSE WALL</text>
               <text class="cap" x="440" y="314" data-i18n="cs2.mse.l1">WITH COMPACTED PERMEABLE</text>
               <text class="cap" x="440" y="334" data-i18n="cs2.mse.l2">BACKFILL</text>
               <line class="lead" x1="438" y1="340" x2="419" y2="460"/>
               <circle class="dot" cx="419" cy="460" r="2.5"/>
 
-              <!-- CUT AREA — endpoint slants up-left into the inner cut volume.
-                   Uses cs2.cut so BM gets a short label (won't touch the trestle column). -->
+              <!-- CUT AREA -->
               <text class="lbl" x="335" y="555" text-anchor="middle" data-i18n="cs2.cut">CUT AREA</text>
               <line class="lead" x1="335" y1="547" x2="285" y2="470"/>
               <circle class="dot" cx="285" cy="470" r="2.5"/>
 
-              <!-- SHIP CANAL — label sits centered below the river, no leader needed -->
+              <!-- SHIP CANAL — no leader, label sits in the canal -->
               <text class="lbl" x="600" y="555" text-anchor="middle" data-i18n="cs2.canal">SHIP CANAL</text>
 
-              <!-- SOIL NAIL WALL — leader to the vertical wall face -->
+              <!-- SOIL NAIL WALL -->
               <text class="lbl" x="14" y="510" data-i18n="cs.snw">SOIL NAIL WALL</text>
               <line class="lead" x1="91" y1="505" x2="208" y2="348"/>
               <circle class="dot" cx="208" cy="348" r="2.5"/>
 
-              <!-- ROCK NETTING — labels anchored at their RIGHT edge (x=900, where the
-                   leader begins). Moved right for tighter visual connection to the netting. -->
+              <!-- ROCK NETTING — text-anchor="end" anchors right edge to leader start -->
               <text class="lbl" x="900" y="-2" text-anchor="end" data-i18n="cs2.netting">ROCK NETTING</text>
               <text class="cap" x="900" y="18" text-anchor="end" data-i18n="cs2.netting.sub">DEBRIS DISLODGEMENT PROTECTION</text>
               <line class="lead" x1="900" y1="24" x2="1110" y2="20"/>
               <circle class="dot" cx="1110" cy="20" r="2.5"/>
 
-              <!-- ROCKFALL BARRIER — labels anchored at their RIGHT edge (x=900, where the
-                   two leaders converge). Moved right for tighter visual connection. -->
+              <!-- ROCKFALL BARRIER — 2 leaders fan from (900,100), text-anchor="end" -->
               <text class="lbl" x="900" y="72" text-anchor="end" data-i18n="cs2.barrier">ROCKFALL BARRIER</text>
               <text class="cap" x="900" y="92" text-anchor="end" data-i18n="cs2.barrier.sub">INTERCEPTION AND ENERGY DISSIPATION</text>
               <line class="lead" x1="900" y1="100" x2="1075" y2="90"/>
@@ -5855,7 +5851,7 @@
               <line class="lead" x1="900" y1="100" x2="925" y2="358"/>
               <circle class="dot" cx="925" cy="358" r="2.5"/>
 
-              <!-- ROCK BOLTS — 3-line stack with extra breathing room for ZH dense glyphs -->
+              <!-- ROCK BOLTS — 3-line stack -->
               <text class="lbl" x="990" y="465" data-i18n="cs2.bolts">ROCK BOLTS</text>
               <text class="cap" x="990" y="489" data-i18n="cs2.bolts.sub1">PROVIDES</text>
               <text class="cap" x="990" y="509" data-i18n="cs2.bolts.sub2">SEISMIC RESISTANCE</text>
