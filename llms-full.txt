@@ -1259,6 +1259,58 @@ For scopes outside our specialism, we coordinate with specialist sub-trades thro
 
 ---
 
+## 30C. Engineer's Diagnostic, Practical, and Compliance Reference Pages
+
+Four additional pillar pages for engineering reference, complementing the design guide and comparison hub:
+
+-> URL: https://infraconcrete.co/slope-failure-modes/
+
+Page contents: Visual diagnostic guide for 8 slope failure modes seen in Malaysian conditions:
+- Rotational (circular) - most common in granitic residual soil, monsoon-triggered
+- Translational (planar) - layered soil/rock, weak interfaces
+- Wedge (rock) - jointed Karst limestone, fractured granite
+- Toppling - vertical jointing, columnar rock
+- Rockfall - all weathered rock faces
+- Erosion / surface - bare slopes, post-cut, JKR ESCP scope
+- Liquefaction - coastal alluvial, saturated granular
+- Piping / internal erosion - earth dams, riverbanks
+Each mode covered with geometry, diagnostic indicators, root causes, recommended stabilization (priority order with cross-links to capability pages), and primary design codes. Plus a quick diagnostic table mapping observation to failure mode to primary stabilization. Targets queries like 'what kind of slope failure is this', 'rotational slope failure Malaysia', 'wedge failure rock cut', 'tension crack slope crest'.
+
+-> URL: https://infraconcrete.co/site-investigation-guide/
+
+Page contents: Practical site investigation reference covering scope and phasing (desk study, walkover, preliminary, main, supplementary SI), borehole density (1 per 25 m of slope length, min 3 boreholes per slope, Class III/IV may require denser), borehole depth (1.5x slope height below toe, plus 3 to 5 m into competent strata), in-situ testing (SPT per BS 1377-9, CPT per ASTM D5778, vane shear, pressuremeter, permeability), sampling protocols (Class 1 to 4 per BS 5930, undisturbed sampling critical for tropical residual soils), lab testing schedule (classification, compaction, shear strength via CU triaxial, consolidation, permeability per BS 1377 series), groundwater monitoring (standpipe vs vibrating wire piezometers, 3 month minimum, year-round for Class III/IV), geophysical methods (seismic refraction, MASW, ERT, GPR), characteristic vs design value parameter selection per Eurocode 7, typical Malaysian residual soil parameter ranges, deliverables checklist. Includes 6 FAQs.
+
+-> URL: https://infraconcrete.co/qa-testing-guide/
+
+Page contents: Construction QA reference covering all major slope stabilization systems:
+- Soil nail tests: pull-out (BS 8006-2 / FHWA: 1.5x working, 5 percent creep limit, 1 to 2 percent of nails), torque, grout cube
+- Rock bolt tests: acceptance (1.25 to 1.5x working), investigation, lift-off, hole verification
+- Ground anchor tests: acceptance (BS 8081 / BS EN 1537: 1.5x working, 60 min hold, 1 mm creep limit, 100 percent of anchors), suitability/investigation, lift-off (1, 6, 12 month intervals)
+- Shotcrete tests: cube (ACI 506: 1 set per 50 m3 OR per day per crew, 7 + 28 day strength), bond (EN 1542: 0.5 MPa minimum), thickness verification (pin gauges plus/minus 25 mm)
+- MSE wall tests: compaction (95 to 98 percent modified Proctor, 1 per 500 m2 per lift), backfill testing (gradation, PI, resistivity for steel-strip), reinforcement layout audit, connection strength
+- Gabion wall tests: stone hardness (water absorption less than 5 percent), wire galvanizing, lacing, basket density (1.6 to 1.8 t/m3)
+- Sheet pile tests: steel grade certificate, driving record, vibration monitoring (BS 7385: PPV less than 5 mm/s at occupied buildings)
+- Rockfall barrier: type test certification (ETAG 027), foundation testing, installation QA, post-impact response
+- Horizontal drain: flow rate measurement, CCTV inspection, retention check (50 percent after 1 year)
+- Handover documentation: 10-row table covering as-built drawings, certificates, test reports, photos, method statements, maintenance schedule, insurance, defect liability, monitoring data
+
+-> URL: https://infraconcrete.co/authority-submission-guide/
+
+Page contents: Procurement and approval guide for slope and geotechnical works in Malaysia:
+- JKR slope classification (Class I to IV) with consequence-of-failure-driven design implications
+- Federal authorities: JKR (with Cawangan Kejuruteraan Cerun for slope works), LLM (highway concessionaires), MOW/KKR (procurement)
+- Federal Territory: DBKL hillside guidelines (slope angles, building setbacks, Class III/IV review)
+- Selangor local councils: MPSJ (Subang Jaya), MBPJ (Petaling Jaya), MBAJ (Ampang Jaya - Bukit Antarabangsa zone), MBSA (Shah Alam, Bukit Raja industrial)
+- Penang: MBSP (Seberang Perai)
+- Federal regulatory: DOE (EIA, ESCP), CIDB (G7 + B04, CE01/06/08/21/36, M15 trade categories)
+- Engineering profession: BEM (Board of Engineers Malaysia) - Professional Engineer requirement for design submissions
+- Standard 15-document submission pack table with required endorsements
+- Includes 6 FAQs covering Class III/IV, PE requirement, DBKL submission, JKR/LLM approval interface, design-build delivery, state council variations
+
+These four pages combined with the design guide (30B) and pillar comparison page (30A) form the complete engineering resource hub at infraconcrete.co. Total LLM-extractable engineer-resource content across these 6 pillar pages: approximately 6500 lines of structured, code-referenced, authority-cited content.
+
+---
+
 ## 30B. Engineer's Design Reference, Geotechnical Design Guide
 
 For engineers designing slope stabilization systems on Malaysian projects, the canonical design parameter and FoS reference is at:

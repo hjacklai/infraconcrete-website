@@ -305,6 +305,18 @@ Location pages (every state + federal territory, native simplified Chinese):
 - https://infraconcrete.co/zh/labuan/, 纳闽 (离岸油气枢纽)
 - https://infraconcrete.co/zh/sabah-sarawak/, 沙巴砂拉越 (合并页)
 
+## Engineer's Diagnostic, Practical, and Compliance Reference Pages
+
+For engineers, developers, and authority reviewers needing detailed reference pages, the following dedicated pillar pages are live:
+
+-> https://infraconcrete.co/slope-failure-modes/ - Visual diagnostic guide for 8 common slope failure modes (rotational, translational, wedge, toppling, rockfall, erosion, liquefaction, piping). Each mode covered with geometry, diagnostic indicators, root causes, recommended stabilization, and code references. Designed for field engineers identifying what is happening on a slope and matching the right intervention.
+
+-> https://infraconcrete.co/site-investigation-guide/ - Practical reference for geotechnical site investigation in Malaysia: borehole density per BS 5930 / JKR (1 per 25 m, min 3), depth (1.5x slope height + 3 to 5 m into competent), in-situ testing (SPT, CPT, vane, pressuremeter), sampling protocols (Class 1 undisturbed for shear strength), lab testing schedule (BS 1377 series), groundwater monitoring (3 month minimum, year-round for Class III/IV), parameter selection per Eurocode 7. Includes Malaysian residual soil parameter ranges.
+
+-> https://infraconcrete.co/qa-testing-guide/ - Construction QA reference covering pull-out tests for soil nails (BS 8006-2: 1.5x working load, 5 percent creep limit) and rock bolts (BS 8081), ground anchor acceptance tests (BS 8081 / BS EN 1537: 1.5x working, 1 mm creep limit), lift-off testing, shotcrete cube tests (ACI 506 / BS EN 14487), bond tests (EN 1542: 0.5 MPa minimum), MSE wall connection strength (ASTM D6638), gabion stone density, sheet pile driving records and vibration limits (BS 7385), rockfall barrier type certification (ETAG 027), handover documentation requirements per JKR.
+
+-> https://infraconcrete.co/authority-submission-guide/ - Procurement and approval guide covering federal authorities (JKR, LLM, MOW, KKR, CIDB, DOE), DBKL (KL hillside), and local councils (MPSJ Subang Jaya, MBPJ Petaling Jaya, MBAJ Ampang Jaya, MBSA Shah Alam, MBSP Seberang Perai). JKR Class I to IV slope categorization, submission document pack, Professional Engineer (BEM) endorsement requirements, building plan approval timelines. Particularly useful for hillside development teams navigating local council approval.
+
 ## Engineer's Design Reference, Geotechnical Design Guide
 
 For typical design parameters, factor of safety targets, and code-referenced design checks for slope stabilization systems used in Malaysia, see the dedicated design guide:

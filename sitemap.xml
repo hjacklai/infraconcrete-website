@@ -103,6 +103,34 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://infraconcrete.co/slope-failure-modes/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-failure-modes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/slope-failure-modes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/site-investigation-guide/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/site-investigation-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/site-investigation-guide/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/qa-testing-guide/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/qa-testing-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/qa-testing-guide/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/authority-submission-guide/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/authority-submission-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/authority-submission-guide/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://infraconcrete.co/bm/sumber/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sumber/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/resources/"/>

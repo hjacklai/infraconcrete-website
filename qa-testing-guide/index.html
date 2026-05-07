@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Geotechnical QA Testing Guide Malaysia | Soil Nail, Anchor, Shotcrete Acceptance Tests | Infraconcrete</title>
+<meta name="description" content="Construction QA and testing reference for slope stabilization in Malaysia. Pull-out testing for soil nails and rock bolts, ground anchor acceptance, lift-off testing, shotcrete cube and bond tests, MSE wall connection strength, gabion stone density, sheet pile driving records, rockfall barrier type certification. Acceptance criteria, test frequency, documentation requirements. To BS 8081, BS 8006, ACI 506, ETAG 027, JKR." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="author" content="Infraconcrete Construction Sdn Bhd" />
+<meta name="keywords" content="soil nail pull-out test, rock bolt pull-out test, ground anchor acceptance test, lift-off test, shotcrete cube test, shotcrete bond test, MSE wall connection strength, gabion density test, sheet pile driving record, rockfall barrier type certification, geotechnical QA Malaysia, construction testing slope, BS 8081, ACI 506, ETAG 027, JKR testing" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Geotechnical QA Testing Guide Malaysia | Infraconcrete" />
+<meta property="og:description" content="Acceptance tests, test methods, criteria, and frequency for slope stabilization construction in Malaysia. By CIDB G7 specialist." />
+<meta property="og:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<meta property="og:url" content="https://infraconcrete.co/qa-testing-guide/" />
+<meta property="og:site_name" content="Infraconcrete Construction Sdn Bhd" />
+<meta property="og:locale" content="en_MY" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Geotechnical QA Testing Guide Malaysia" />
+<meta name="twitter:description" content="Pull-out, lift-off, cube, bond, type certification - acceptance tests for slope stabilization construction in Malaysia." />
+<meta name="twitter:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<link rel="canonical" href="https://infraconcrete.co/qa-testing-guide/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/qa-testing-guide/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/qa-testing-guide/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="any" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","@id":"https://infraconcrete.co/qa-testing-guide/#article","headline":"Construction QA and Testing Reference for Slope Stabilization in Malaysia","description":"Acceptance test methods, criteria, frequency, and documentation requirements for soil nail, ground anchor, rock bolt, shotcrete, MSE wall, gabion, sheet pile, and rockfall barrier construction.","datePublished":"2026-05-08","dateModified":"2026-05-08","author":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"publisher":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","logo":{"@type":"ImageObject","url":"https://infraconcrete.co/images/brand/logo.png"}},"image":"https://infraconcrete.co/images/projects/project-ekve.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://infraconcrete.co/qa-testing-guide/"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://infraconcrete.co/resources/"},{"@type":"ListItem","position":3,"name":"QA Testing Guide","item":"https://infraconcrete.co/qa-testing-guide/"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What's the soil nail pull-out test acceptance criteria?","acceptedAnswer":{"@type":"Answer","text":"Per BS 8006-2 / FHWA-NHI-14-007: load to 1.5 times design working load, hold for 60 minutes. Acceptance criterion: less than 5 percent creep over the 60 minute hold (creep is the change in displacement at constant load). Pull-out tests typically performed on 1 to 2 percent of installed nails. Sacrificial test nails (additional, not part of structural design) are tested first to confirm bond capacity assumed in design. Results back to the consulting engineer for design assumption verification before production nails proceed."}},
+{"@type":"Question","name":"What's the ground anchor acceptance test per BS 8081?","acceptedAnswer":{"@type":"Answer","text":"Per BS 8081 / BS EN 1537: load anchor to 1.5 times design working load, hold for 60 minutes minimum (longer for soft soils). Acceptance criterion: residual movement / creep less than 1 mm during the last 30 minutes of the hold (creep limit varies by code - some specify less than 5 percent of total displacement). Lock-off at design working load + losses allowance after acceptance. Lift-off testing at 1, 6, 12 month intervals during defect liability verifies prestress retention - load is briefly applied to confirm anchor head moves at the lock-off load (within tolerance)."}},
+{"@type":"Question","name":"How often should shotcrete cube tests be done?","acceptedAnswer":{"@type":"Answer","text":"Per ACI 506 / BS EN 14487: minimum 1 set (3 cubes) per day per mix per crew, OR 1 set per 50 m3 of shotcrete placed (whichever more frequent). Cube tested at 7 and 28 days for compressive strength. Specified strength typically 25 to 30 N/mm2 at 28 days. Wet curing of test cubes for 7 days minimum, matching site curing where possible. Shotcrete bond test (pull-off, BS EN 1542) on hardened shotcrete-substrate bond - typically 1 test per 200 m2 of placed area. Specified bond strength typically greater than 0.5 MPa."}},
+{"@type":"Question","name":"What documents are required for handover on a slope works contract?","acceptedAnswer":{"@type":"Answer","text":"Standard handover deliverables per JKR specifications: (1) As-built drawings (PDF + DWG), (2) Material certificates (steel mill certs, grout cube test reports, mesh batch certs, geogrid type certs, rockfall barrier type test certs), (3) Test reports (pull-out, lift-off, cube, bond, density, torque), (4) Pre and post-construction photographs, (5) Method statements as executed, (6) Maintenance schedule with inspection frequency and post-impact response procedures, (7) Insurance certificates (CAR, PI, PL valid through defect liability), (8) Defect liability commitment with named contact for response. Federal projects also require monitoring data summary and authority sign-off documentation."}}]}]}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Manrope:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/seo-page.css">
+<script src="/js/seo-nav.js" defer></script>
+<style>
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 16px;margin:20px 0;padding:16px;background:rgba(31,27,23,0.04);border-radius:6px}
+.toc-grid a{display:block;padding:6px 0;color:#1F1B17;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;border-bottom:1px solid rgba(31,27,23,0.08)}
+.toc-grid a:hover{color:#C8102E}
+.qa-block{padding:32px 0;border-top:1px solid rgba(31,27,23,0.12)}
+.qa-block:first-of-type{border-top:none}
+.qa-block h3{font-size:clamp(22px,2.4vw,30px);margin:8px 0 16px}
+.qa-block .sys-eye{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#C8102E;text-transform:uppercase}
+.qa-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:20px}
+@media(min-width:880px){.qa-grid{grid-template-columns:1fr 1fr}}
+.qa-section h4{font-size:14px;letter-spacing:0.06em;margin:0 0 8px;color:#1F1B17;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.qa-section p{margin:0 0 10px;font-size:15px;line-height:1.6}
+.qa-section ul{margin:0;padding-left:20px;font-size:14px;line-height:1.7}
+.params-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13px}
+.params-table th,.params-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(31,27,23,0.1);vertical-align:top}
+.params-table th{background:rgba(31,27,23,0.06);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;font-size:11px;text-transform:uppercase}
+.crit{background:rgba(200,16,46,0.06);border-left:3px solid #C8102E;padding:14px 18px;margin:14px 0;font-size:14px;line-height:1.55}
+.crit strong{color:#C8102E}
+.note{background:rgba(31,27,23,0.06);border-left:3px solid #1F1B17;padding:12px 16px;margin:14px 0;font-size:14px;line-height:1.55}
+.note::before{content:"NOTE ";color:#C8102E;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;font-weight:700}
+.pill{display:inline-block;padding:2px 8px;background:rgba(200,16,46,0.1);color:#C8102E;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;border-radius:3px;margin-right:6px}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+ <div class="container topbar-row">
+  <a href="/" class="brand">Infra<em>concrete</em></a>
+  <a href="/" class="home-link">← Back to home</a>
+ </div>
+</header>
+
+<div class="container">
+ <nav class="crumbs" aria-label="Breadcrumb">
+  <a href="/">Home</a><span class="sep">·</span>
+  <a href="/resources/">Resources</a><span class="sep">·</span>
+  <span class="here">QA &amp; Testing Guide</span>
+ </nav>
+</div>
+
+<main>
+ <div class="container">
+  <section class="hero">
+   <div class="eyebrow">Construction Verification · Resource Hub</div>
+   <h1>QA and testing guide for <em>slope stabilization works.</em></h1>
+   <p class="lede">The construction-verification reference for slope stabilization projects in Malaysia. Acceptance test methods, criteria, frequency, and documentation requirements for soil nailing, rock bolting, ground anchors / tieback walls, shotcrete / guniting, MSE walls, modular block, gabion, sheet pile, rockfall barriers, and horizontal drains. Each test covered with apparatus, procedure, acceptance criterion, frequency, and the standard governing it. Designed for QA managers, resident engineers, consulting engineers, authority inspectors, and main contractor coordinators. Built to BS 8081, BS 8006, ACI 506, BS EN 14487, ETAG 027, EAD 340059, JKR specifications. By Infraconcrete - CIDB G7 specialist geotechnical contractor, ISO 9001:2015 certified.</p>
+   <div class="stats">
+    <div class="stat"><div class="v">10</div><div class="l">Test categories</div></div>
+    <div class="stat"><div class="v">ISO</div><div class="l">9001:2015 QMS</div></div>
+    <div class="stat"><div class="v">G7</div><div class="l">CIDB highest grade</div></div>
+    <div class="stat"><div class="v">100+</div><div class="l">Projects delivered</div></div>
+   </div>
+  </section>
+
+  <section class="block">
+   <div class="block-eye">Navigation</div>
+   <h2>Jump to a test category.</h2>
+   <div class="toc-grid">
+    <a href="#soil-nail">→ Soil Nail Tests</a>
+    <a href="#rock-bolt">→ Rock Bolt Tests</a>
+    <a href="#ground-anchor">→ Ground Anchor Tests</a>
+    <a href="#shotcrete">→ Shotcrete Tests</a>
+    <a href="#mse-wall">→ MSE Wall Tests</a>
+    <a href="#gabion">→ Gabion Wall Tests</a>
+    <a href="#sheet-pile">→ Sheet Pile Tests</a>
+    <a href="#rockfall">→ Rockfall Barrier</a>
+    <a href="#horizontal-drain">→ Horizontal Drain</a>
+    <a href="#documentation">→ Handover Documentation</a>
+   </div>
+  </section>
+
+  <!-- ===== SOIL NAIL ===== -->
+  <section class="block qa-block" id="soil-nail">
+   <div class="sys-eye">01 / Slope Reinforcement</div>
+   <h3>Soil nail testing.</h3>
+   <p><span class="pill">BS 8006-2</span><span class="pill">FHWA-NHI-14-007</span><span class="pill">JKR</span></p>
+   <div class="qa-grid">
+    <div class="qa-section">
+     <h4>Pull-out test (acceptance)</h4>
+     <ul>
+      <li><strong>Apparatus:</strong> hydraulic jack with calibrated pressure gauge, displacement transducer / dial gauge, reaction frame</li>
+      <li><strong>Procedure:</strong> load nail in increments to 1.5x design working load, hold for 60 min</li>
+      <li><strong>Acceptance:</strong> creep less than 5 percent over 60 min hold</li>
+      <li><strong>Frequency:</strong> 1 to 2 percent of installed nails (typically 5 to 20 nails per project)</li>
+      <li><strong>Test record:</strong> load-displacement curve, creep curve, photographs</li>
+     </ul>
+     <h4>Sacrificial / verification test</h4>
+     <ul>
+      <li>Additional nails (not in structural design) tested first to confirm bond capacity assumed in design</li>
+      <li>Tested to failure or 2x design working load</li>
+      <li>Results back to consultant for design parameter confirmation before production proceeds</li>
+     </ul>
+    </div>
+    <div class="qa-section">
+     <h4>Other soil nail QA checks</h4>
+     <ul>
+      <li><strong>Torque test:</strong> lock-off torque verified at every nail with calibrated torque wrench</li>
+      <li><strong>Visual inspection:</strong> bearing plate seating, grout return at hole mouth, head treatment</li>
+      <li><strong>Grout cube test:</strong> 100 mm cubes per BS EN 12390-3 / BS 1881-116; 3 cubes per day per mix; tested 7 + 28 days; specified strength min 30 N/mm2</li>
+      <li><strong>Bar mill certificate:</strong> for each rebar batch (chemistry + tensile properties)</li>
+      <li><strong>Hole verification:</strong> diameter, depth, inclination checked at every nail; spot check by RE</li>
+     </ul>
+     <div class="crit"><strong>Bond capacity in residual soils varies widely.</strong> Always verify pull-out capacity on at least 2 to 3 sacrificial nails before locking in design assumption. The biggest source of soil nail wall failure in Malaysia is over-estimated bond capacity.</div>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== ROCK BOLT ===== -->
+  <section class="block qa-block" id="rock-bolt">
+   <div class="sys-eye">02 / Rock Mass Reinforcement</div>
+   <h3>Rock bolt testing.</h3>
+   <p><span class="pill">BS 8081</span><span class="pill">BS EN 1537</span><span class="pill">JKR</span></p>
+   <div class="qa-grid">
+    <div class="qa-section">
+     <h4>Acceptance test</h4>
+     <ul>
+      <li><strong>Procedure:</strong> load bolt to 1.25 to 1.5x design working load (project-specific), hold for 5 min</li>
+      <li><strong>Acceptance:</strong> displacement within elastic range; lock-off at design tension verified</li>
+      <li><strong>Frequency:</strong> 5 to 10 percent of installed bolts</li>
+     </ul>
+     <h4>Investigation test (sacrificial)</h4>
+     <ul>
+      <li>Loaded to 75 percent of bar yield or to failure (whichever first)</li>
+      <li>For first project on site to verify bond capacity</li>
+      <li>Bond capacity in fresh rock typically 1000 to 3000 kPa (UCS dependent)</li>
+     </ul>
+    </div>
+    <div class="qa-section">
+     <h4>Lift-off testing (long-term)</h4>
+     <ul>
+      <li><strong>Procedure:</strong> apply load to anchor head; record load at which head just lifts off bearing plate</li>
+      <li><strong>Acceptance:</strong> lift-off load within 5 to 10 percent of locked-off value</li>
+      <li><strong>Frequency:</strong> 1, 6, 12, 24 months during defect liability; ongoing for critical assets</li>
+      <li><strong>Use:</strong> verifies that anchor has retained design prestress, no creep loss, no corrosion</li>
+     </ul>
+     <h4>Other QA checks</h4>
+     <ul>
+      <li>Hole diameter, depth, inclination at every bolt</li>
+      <li>Grout pumping rate / return for full-grouted bolts</li>
+      <li>Resin curing time per manufacturer</li>
+      <li>Visual: bearing plate, lock-off nut, corrosion protection</li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== GROUND ANCHOR ===== -->
+  <section class="block qa-block" id="ground-anchor">
+   <div class="sys-eye">03 / Anchored Retention</div>
+   <h3>Ground anchor / tieback testing.</h3>
+   <p><span class="pill">BS 8081</span><span class="pill">BS EN 1537</span><span class="pill">FHWA-IF-99-015</span><span class="pill">PTI Recommendations</span></p>
+   <div class="qa-grid">
+    <div class="qa-section">
+     <h4>Acceptance test (every anchor)</h4>
+     <ul>
+      <li><strong>Procedure:</strong> load anchor to 1.5x design working load (test load), hold for 60 min minimum (longer in soft soil)</li>
+      <li><strong>Acceptance criteria:</strong>
+       <ul style="margin-top:6px"><li>Residual movement / creep less than 1 mm during the last 30 min of hold</li>
+        <li>Apparent free length within plus/minus 10 percent of design free length</li>
+        <li>Maximum displacement reasonable for soil/rock type</li></ul>
+      </li>
+      <li><strong>Lock-off:</strong> at design working load + immediate losses allowance, after acceptance test passed</li>
+      <li><strong>Frequency:</strong> 100 percent of production anchors</li>
+     </ul>
+    </div>
+    <div class="qa-section">
+     <h4>Suitability / investigation test</h4>
+     <ul>
+      <li>Pre-construction tests on additional anchors to confirm design assumptions</li>
+      <li>Loaded to 1.5x test load (i.e. 2.25x working load), or to failure</li>
+      <li>Frequency: 3 to 5 anchors per project, more for variable ground</li>
+     </ul>
+     <h4>Lift-off testing</h4>
+     <ul>
+      <li>1 month, 6 month, 12 month intervals during defect liability</li>
+      <li>Ongoing for critical assets</li>
+      <li>Acceptance: lift-off load within 5 to 10 percent of locked-off value</li>
+     </ul>
+     <h4>Other checks</h4>
+     <ul>
+      <li>Pre-stressing strand mill certificate (BS EN 10138-3)</li>
+      <li>Grout cube tests (BS EN 12390)</li>
+      <li>Bond zone confirmation via geological logging during drilling</li>
+      <li>Corrosion protection inspection (encapsulation, sheath)</li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== SHOTCRETE ===== -->
+  <section class="block qa-block" id="shotcrete">
+   <div class="sys-eye">04 / Sprayed Concrete</div>
+   <h3>Shotcrete / guniting testing.</h3>
+   <p><span class="pill">ACI 506</span><span class="pill">BS EN 14487</span><span class="pill">EN 1542</span><span class="pill">JKR</span></p>
+   <div class="qa-grid">
+    <div class="qa-section">
+     <h4>Compressive strength (cube test)</h4>
+     <ul>
+      <li><strong>Sample:</strong> 100 mm cubes per BS EN 12390-3 / BS 1881-116</li>
+      <li><strong>Frequency:</strong> minimum 1 set (3 cubes) per day per mix per crew, OR 1 set per 50 m3 of shotcrete</li>
+      <li><strong>Test ages:</strong> 7 and 28 days</li>
+      <li><strong>Specified strength:</strong> typically 25 to 30 N/mm2 at 28 days</li>
+      <li><strong>Curing:</strong> wet curing for 7 days minimum, matching site curing</li>
+     </ul>
+     <h4>Bond test (pull-off)</h4>
+     <ul>
+      <li><strong>Method:</strong> EN 1542 pull-off test, 50 mm partial-core diameter</li>
+      <li><strong>Frequency:</strong> 1 test per 200 m2 placed area, min 3 per project</li>
+      <li><strong>Acceptance:</strong> bond strength greater than 0.5 MPa typical</li>
+     </ul>
+    </div>
+    <div class="qa-section">
+     <h4>Thickness verification</h4>
+     <ul>
+      <li><strong>Method:</strong> pin gauges driven into wet shotcrete at design grid spacing (typically 1 m)</li>
+      <li><strong>Acceptance:</strong> within plus/minus 25 mm of design thickness</li>
+      <li><strong>Record:</strong> thickness measurements recorded against grid map</li>
+     </ul>
+     <h4>Other shotcrete QA</h4>
+     <ul>
+      <li><strong>Mix design verification:</strong> cement, aggregate, admixtures dosed per spec</li>
+      <li><strong>Slump (wet-mix) or workability test (dry-mix):</strong> per shift</li>
+      <li><strong>Visual:</strong> no rebound voids, no overspray, no shadows behind reinforcement</li>
+      <li><strong>Boiled absorption:</strong> typically less than 8 percent for durability</li>
+      <li><strong>Steel fiber dose verification (if specified):</strong> washout test or batch records</li>
+     </ul>
+     <div class="note">Shotcrete quality is HUGELY operator-dependent. The same mix design can give 20 MPa or 40 MPa cube strength depending on nozzleman skill, distance, angle, and pass technique. Specify minimum operator certification (ACI Shotcrete Nozzleman) for high-spec works.</div>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== MSE WALL ===== -->
+  <section class="block qa-block" id="mse-wall">
+   <div class="sys-eye">05 / Reinforced Earth Wall</div>
+   <h3>MSE wall testing.</h3>
+   <p><span class="pill">BS 8006</span><span class="pill">AASHTO LRFD</span><span class="pill">FHWA-NHI-10-024</span><span class="pill">ASTM D6638</span></p>
+   <div class="qa-grid">
+    <div class="qa-section">
+     <h4>Compaction testing</h4>
+     <ul>
+      <li><strong>Method:</strong> sand replacement (BS 1377-9), nuclear density gauge (ASTM D6938)</li>
+      <li><strong>Frequency:</strong> 1 test per 500 m2 per lift, minimum 1 per lift, more frequent at corners and behind facing</li>
+      <li><strong>Acceptance:</strong> 95 to 98 percent modified Proctor density per design spec</li>
+     </ul>
+     <h4>Backfill material testing</h4>
+     <ul>
+      <li>Particle size distribution per delivered batch</li>
+      <li>Atterberg limits (PI less than 6 typical)</li>
+      <li>For Reinforced Earth (steel strip): resistivity, pH, chlorides, sulphates, organic content</li>
+      <li>Internal phi via direct shear or correlation with N-value</li>
+     </ul>
+    </div>
+    <div class="qa-section">
+     <h4>Reinforcement verification</h4>
+     <ul>
+      <li>Geogrid roll number / batch certificate per delivery</li>
+      <li>Steel strip galvanizing thickness (BS EN ISO 1461) - 86 microns minimum typical</li>
+      <li>Connection strength to facing (ASTM D6638) - mfr-certified or site-tested</li>
+      <li>Layout audit per design drawings (length, spacing, orientation) at every layer</li>
+     </ul>
+     <h4>Facing / panel checks</h4>
+     <ul>
+      <li>Panel arrival inspection (cracks, dimensional tolerance)</li>
+      <li>Panel concrete grade certificate</li>
+      <li>Panel-to-panel joint bearing pad in place at every joint</li>
+      <li>Wall plumb / verticality verified at end of each lift (within 0.5 percent of height)</li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== GABION ===== -->
+  <section class="block qa-block" id="gabion">
+   <div class="sys-eye">06 / Stone-Filled Wire Basket</div>
+   <h3>Gabion wall testing.</h3>
+   <p><span class="pill">BS EN 10223-3</span><span class="pill">BS 8002</span><span class="pill">ASTM A975</span></p>
+   <div class="qa-grid">
+    <div class="qa-section">
+     <h4>Stone quality</h4>
+     <ul>
+      <li><strong>Hardness:</strong> water absorption less than 5 percent (BS 812)</li>
+      <li><strong>Strength:</strong> point load strength greater than 3 MPa (typical hard granite, basalt, limestone)</li>
+      <li><strong>Soundness:</strong> no slaking, no friable layers</li>
+      <li><strong>Size:</strong> per spec (D50 typically 100 to 200 mm angular for face)</li>
+      <li><strong>Source approval:</strong> quarry-of-origin must be approved (federal works require JKR-listed quarries)</li>
+     </ul>
+     <h4>Wire mesh</h4>
+     <ul>
+      <li>Galvanizing (zinc coating) thickness per BS EN 10244 (250 g/m2 typical)</li>
+      <li>Galfan / PVC coating per spec</li>
+      <li>Mesh aperture verification (BS EN 10223-3)</li>
+      <li>Tensile strength verification per delivered batch</li>
+     </ul>
+    </div>
+    <div class="qa-section">
+     <h4>Construction verification</h4>
+     <ul>
+      <li><strong>Hand placement at face:</strong> stones placed by hand for visual texture and interlock; not dumped</li>
+      <li><strong>Lacing inspection:</strong> proper lacing wire pattern at every joint, every basket</li>
+      <li><strong>Density check:</strong> filled basket density min 1.6 t/m3 (typical 1.6 to 1.8)</li>
+      <li><strong>Wall plumb / batter:</strong> verified per design drawings</li>
+      <li><strong>Toe scour protection:</strong> verified for riverine applications</li>
+      <li><strong>Drainage paths:</strong> behind-wall drainage continuous, geotextile filter in place</li>
+     </ul>
+     <div class="note">Reinforced gabion walls (with geogrid backfill) require all the standard MSE wall QA checks IN ADDITION to gabion quality. The gabion is just the facing - the structural performance comes from the reinforced backfill behind.</div>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== SHEET PILE ===== -->
+  <section class="block qa-block" id="sheet-pile">
+   <div class="sys-eye">07 / Driven Steel Wall</div>
+   <h3>Sheet pile testing.</h3>
+   <p><span class="pill">BS EN 12063</span><span class="pill">BS EN 10248</span><span class="pill">BS 7385</span></p>
+   <div class="qa-grid">
+    <div class="qa-section">
+     <h4>Pile quality</h4>
+     <ul>
+      <li>Steel grade certificate (BS EN 10248) per delivered batch</li>
+      <li>Section dimensions (interlock fit, pile length) verified at delivery</li>
+      <li>Coating (epoxy or galvanizing) per spec</li>
+      <li>Visual: no excessive corrosion, no damaged interlocks, straightness within tolerance</li>
+     </ul>
+     <h4>Driving record</h4>
+     <ul>
+      <li>Set per blow at multiple depths recorded</li>
+      <li>Refusal depth recorded</li>
+      <li>Verticality during driving (less than 1 percent of length)</li>
+      <li>Pile length after driving verified against drawings</li>
+      <li>Damaged interlocks or refusal anomalies flagged for engineer review</li>
+     </ul>
+    </div>
+    <div class="qa-section">
+     <h4>Vibration monitoring</h4>
+     <ul>
+      <li><strong>Method:</strong> tri-axial geophone at sensitive structures</li>
+      <li><strong>Limit (BS 7385):</strong> peak particle velocity (PPV) less than 5 mm/s at occupied buildings, less than 10 mm/s at unoccupied structures</li>
+      <li><strong>Frequency:</strong> continuous during driving operations near sensitive receptors</li>
+      <li><strong>Action:</strong> exceedance triggers driving halt, switch to vibratory hammer at lower amplitude or pre-jet</li>
+     </ul>
+     <h4>Tieback proof testing (anchored sheet pile)</h4>
+     <ul>
+      <li>Per BS 8081 acceptance test (1.5x working load, 60 min hold)</li>
+      <li>100 percent of anchors</li>
+      <li>Lock-off at design working load + losses</li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== ROCKFALL BARRIER ===== -->
+  <section class="block qa-block" id="rockfall">
+   <div class="sys-eye">08 / Rockfall Interception</div>
+   <h3>Rockfall barrier testing.</h3>
+   <p><span class="pill">ETAG 027</span><span class="pill">EAD 340059</span><span class="pill">JKR</span></p>
+   <div class="qa-grid">
+    <div class="qa-section">
+     <h4>Type test certification</h4>
+     <ul>
+      <li><strong>Source:</strong> manufacturer-supplied certification per ETAG 027 or EAD 340059</li>
+      <li><strong>Energy class verified:</strong> matches design specification</li>
+      <li><strong>MEL (Maximum Energy Level)</strong> and <strong>SEL (Service Energy Level)</strong> documented</li>
+      <li><strong>CE marking:</strong> per Construction Products Regulation</li>
+     </ul>
+     <h4>Foundation testing</h4>
+     <ul>
+      <li><strong>Anchor pull-out test:</strong> at every barrier post anchor (5 to 10 percent typical), to 1.25 to 1.5x design load</li>
+      <li><strong>Concrete cube tests:</strong> for footings (BS EN 12390)</li>
+      <li><strong>Visual inspection:</strong> footing dimensions, rebar placement, concrete cover</li>
+     </ul>
+    </div>
+    <div class="qa-section">
+     <h4>Installation QA</h4>
+     <ul>
+      <li>Post verticality and spacing per drawings</li>
+      <li>Net deployment continuity (no gaps, no twists)</li>
+      <li>Brake elements installed in correct configuration</li>
+      <li>Cable tension per manufacturer specification</li>
+      <li>Lateral and upslope anchor cable continuity</li>
+     </ul>
+     <h4>Handover inspection</h4>
+     <ul>
+      <li>Owner's manual delivered with full type-test documentation</li>
+      <li>Inspection schedule documented (typical: visual annual, post-impact immediate)</li>
+      <li>Post-impact response procedure documented (replace damaged brake elements, mesh, posts as applicable)</li>
+      <li>Maintenance contact named</li>
+     </ul>
+     <div class="crit"><strong>Most rockfall barriers fail at the foundation, not the net.</strong> Anchor pull-out testing is non-negotiable - verify capacity at every barrier location. Concrete footing volume scales with energy class - do not undersize.</div>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== HORIZONTAL DRAIN ===== -->
+  <section class="block qa-block" id="horizontal-drain">
+   <div class="sys-eye">09 / Subsurface Drainage</div>
+   <h3>Horizontal drain testing.</h3>
+   <p><span class="pill">BS 6031</span><span class="pill">JKR</span></p>
+   <div class="qa-grid">
+    <div class="qa-section">
+     <h4>Installation QA</h4>
+     <ul>
+      <li>Drilling: hole diameter, length, upward angle (1 to 5 deg) verified per drain</li>
+      <li>Casing: slotted PVC or HDPE, slot pattern per spec, geotextile sock continuous</li>
+      <li>Filter sock condition: no tears, properly secured, sock-to-casing seal at toe</li>
+      <li>Discharge collection: lined ditches, daylight at face per drawings</li>
+     </ul>
+    </div>
+    <div class="qa-section">
+     <h4>Performance verification</h4>
+     <ul>
+      <li><strong>Initial flow rate measurement:</strong> at commissioning, 5 to 100 L/min per drain typical</li>
+      <li><strong>Periodic re-measurement:</strong> monthly during defect liability, then annually</li>
+      <li><strong>CCTV inspection:</strong> at intervals to verify casing integrity, identify clogging or damage</li>
+      <li><strong>Long-term retention check:</strong> 50 percent of initial discharge after 1 year is acceptable; lower triggers maintenance</li>
+     </ul>
+     <h4>Documentation</h4>
+     <ul>
+      <li>Drain log: location, length, depth, flow rate, photos</li>
+      <li>Maintenance schedule: cleaning frequency, monitoring intervals</li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== HANDOVER DOCS ===== -->
+  <section class="block" id="documentation">
+   <div class="block-eye">Handover documentation</div>
+   <h2>What's required at <em>handover.</em></h2>
+   <table class="params-table">
+    <thead><tr><th>Document</th><th>Format</th><th>Required for</th></tr></thead>
+    <tbody>
+     <tr><td>As-built drawings</td><td>PDF + DWG</td><td>Every project</td></tr>
+     <tr><td>Material certificates</td><td>PDF</td><td>Steel, mesh, grout, geogrid, rockfall barrier types - all specified materials</td></tr>
+     <tr><td>Test reports</td><td>PDF, signed by lab</td><td>Pull-out, lift-off, cube, bond, density, torque - per test programme</td></tr>
+     <tr><td>Pre and post-construction photographs</td><td>Geo-tagged JPG, organized by area</td><td>Every project</td></tr>
+     <tr><td>Method statements as executed</td><td>PDF</td><td>Per JKR specification</td></tr>
+     <tr><td>Maintenance schedule</td><td>PDF + spreadsheet</td><td>Every project; details inspection frequency, post-event response</td></tr>
+     <tr><td>Insurance certificates</td><td>PDF</td><td>CAR, PI, PL valid through defect liability</td></tr>
+     <tr><td>Defect liability commitment</td><td>Signed letter</td><td>With named contact for response</td></tr>
+     <tr><td>Monitoring data summary</td><td>PDF + raw data CSV</td><td>Federal projects, instrumented slopes</td></tr>
+     <tr><td>Authority sign-off documentation</td><td>PDF</td><td>JKR / DBKL / MPSJ / etc. as applicable</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="block" id="faq">
+   <div class="block-eye">Frequently asked</div>
+   <h2>QA / testing <em>questions.</em></h2>
+   <details class="faq-item">
+    <summary>What's the soil nail pull-out test acceptance criteria? <span class="ic">+</span></summary>
+    <div class="ans">Per BS 8006-2 / FHWA-NHI-14-007: load to 1.5 times design working load, hold for 60 minutes. Acceptance: less than 5 percent creep over the 60 minute hold. Pull-out tests typically performed on 1 to 2 percent of installed nails. Sacrificial test nails (additional, not part of structural design) are tested first to confirm bond capacity before production nails proceed.</div>
+   </details>
+   <details class="faq-item">
+    <summary>What's the ground anchor acceptance test per BS 8081? <span class="ic">+</span></summary>
+    <div class="ans">Per BS 8081 / BS EN 1537: load anchor to 1.5 times design working load, hold for 60 minutes minimum. Acceptance: residual movement / creep less than 1 mm during the last 30 minutes. Lock-off at design working load + losses allowance after acceptance. Lift-off testing at 1, 6, 12 month intervals during defect liability verifies prestress retention.</div>
+   </details>
+   <details class="faq-item">
+    <summary>How often should shotcrete cube tests be done? <span class="ic">+</span></summary>
+    <div class="ans">Per ACI 506 / BS EN 14487: minimum 1 set (3 cubes) per day per mix per crew, OR 1 set per 50 m3 of shotcrete placed (whichever more frequent). Tested at 7 and 28 days. Specified strength typically 25 to 30 N/mm2 at 28 days. Bond test (pull-off, BS EN 1542) on hardened shotcrete-substrate bond - typically 1 test per 200 m2.</div>
+   </details>
+   <details class="faq-item">
+    <summary>What documents are required for handover? <span class="ic">+</span></summary>
+    <div class="ans">Standard JKR handover: as-built drawings (PDF + DWG), material certificates (steel, mesh, grout, geogrid, rockfall barrier types), test reports (pull-out, lift-off, cube, bond, density, torque), pre and post-construction photographs, method statements as executed, maintenance schedule, insurance certificates, defect liability commitment, monitoring data summary, authority sign-off documentation.</div>
+   </details>
+   <details class="faq-item">
+    <summary>Who can do laboratory testing in Malaysia? <span class="ic">+</span></summary>
+    <div class="ans">Accredited laboratories with ISO 17025 / SAMM accreditation. JKR maintains a list of approved labs for federal works. Lab certificates must be signed by the responsible accredited person. Field testing (pull-out, lift-off, density) can be done by the contractor's QA team but must be witnessed and signed off by the resident engineer or consultant for acceptance.</div>
+   </details>
+  </section>
+ </div>
+
+ <section class="cta-block">
+  <div class="container">
+   <h2>Need a QA programme <em>scoped for your project?</em></h2>
+   <p>Send the project context (scope, system, authority spec). Engineering team responds same-day with a recommended test schedule and documentation plan aligned to JKR / consulting engineer requirements.</p>
+   <div class="cta-row">
+    <a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp the team →</a>
+    <a class="btn btn-ghost" href="/#contact">All contact details</a>
+   </div>
+  </div>
+ </section>
+
+ <div class="container">
+  <section class="block">
+   <div class="block-eye">Cross-references</div>
+   <h2>Read more.</h2>
+   <div class="toc-grid">
+    <a href="/geotechnical-design-guide/">→ Geotechnical Design Guide</a>
+    <a href="/site-investigation-guide/">→ Site Investigation Guide</a>
+    <a href="/compare-slope-stabilization-systems/">→ Slope Systems Comparison</a>
+    <a href="/slope-failure-modes/">→ Slope Failure Modes</a>
+    <a href="/soil-nailing/">→ Soil Nailing</a>
+    <a href="/ground-anchor/">→ Ground Anchor</a>
+    <a href="/rock-bolting/">→ Rock Bolting</a>
+    <a href="/guniting/">→ Guniting / Shotcrete</a>
+    <a href="/mse-wall/">→ MSE Wall</a>
+    <a href="/sheet-piling/">→ Sheet Piling</a>
+    <a href="/rockfall-barrier/">→ Rockfall Barrier</a>
+    <a href="/horizontal-drains/">→ Horizontal Drains</a>
+    <a href="/slope-monitoring/">→ Slope Monitoring</a>
+    <a href="/resources/">→ All Resources</a>
+   </div>
+  </section>
+ </div>
+</main>
+
+<footer>
+ <div class="container">
+  <p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor) · A <a href="/">Panthera Group</a> company</p>
+ </div>
+</footer>
+
+</body>
+</html>
