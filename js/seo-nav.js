@@ -268,17 +268,17 @@
     swipe: 'LEREK', home: 'Utama', start: 'Mula', solutions: 'Solusi',
     example: 'Contoh', ba: 'Sblm/Slps', process: 'Proses', services: 'Khidmat',
     record: 'Rekod', cases: 'Projek', why: 'Kenapa', trust: 'Kredensial',
-    faq: 'Soalan', resources: 'Sumber', cta: 'Brif'
+    faq: 'Soalan', resources: 'Sumber', cta: 'WhatsApp'
   } : isZh ? {
     swipe: '滑动', home: '首页', start: '开始', solutions: '解决方案',
     example: '实例展示', ba: '前后对比', process: '流程', services: '服务',
     record: '业绩', cases: '项目', why: '为什么', trust: '凭证',
-    faq: '常见问题', resources: '资源', cta: '联系我们'
+    faq: '常见问题', resources: '资源', cta: 'WhatsApp'
   } : {
     swipe: 'SWIPE', home: 'Home', start: 'Start', solutions: 'Solutions',
     example: 'Working example', ba: 'Before/After', process: 'Process', services: 'Services',
     record: 'Record', cases: 'Projects', why: 'Why', trust: 'Trust',
-    faq: 'FAQ', resources: 'Resources', cta: 'Brief'
+    faq: 'FAQ', resources: 'Resources', cta: 'WhatsApp'
   };
   const resHref = isMs ? '/bm/sumber/' : isZh ? '/zh/resources/' : '/resources/';
 
