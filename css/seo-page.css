@@ -220,7 +220,10 @@ a.xref:hover, a.xref:focus-visible {
 
 /* Content blocks */
 section.block { padding: 56px 0; border-top: 1px solid var(--grey-line); }
-section.block:first-of-type { border-top: 0; padding-top: 0; }
+/* Only zero out top spacing for the FIRST block under main's primary container.
+   Otherwise blocks placed after a .cta-block (dark section) lose their breathing
+   room and the red eyebrow text crashes into the dark bar above. */
+main > .container > section.block:first-of-type { border-top: 0; padding-top: 0; }
 .block-eye { font-family: var(--mono); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ic-red); margin-bottom: 14px; }
 .block h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.15; letter-spacing: -0.018em; margin: 0 0 22px; max-width: 820px; }
 .block h2 em { font-style: italic; color: var(--ic-red); font-weight: 300; }
@@ -354,6 +357,95 @@ section.block[data-service-crosslinks] {
 /* Areas-served pill list (location pages) */
 .areas { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 8px; }
 .areas span { display: inline-block; padding: 6px 14px; border: 1px solid var(--grey-line); background: var(--paper-bright); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey-700); }
+
+/* === Use Cases by Industry — dedicated resource section ===
+   Industry-vertical cards that elaborate where each system applies, with
+   tag-style links to the specific service pages used per industry.
+   Used on the Resources hub and on per-service pages with data-usecases. */
+.usecase-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 12px; }
+@media (max-width: 720px) { .usecase-grid { grid-template-columns: 1fr; gap: 18px; } }
+.usecase-card {
+  padding: 28px;
+  border: 1px solid var(--grey-line);
+  background: var(--paper-bright);
+  border-left: 3px solid var(--ic-red);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-left-color .25s var(--ease);
+}
+.usecase-card:hover { transform: translateY(-2px); box-shadow: 0 14px 32px -18px rgba(31,27,23,0.18); }
+.usecase-card .uc-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ic-red);
+}
+.usecase-card h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--ink);
+}
+.usecase-card h3 em { font-style: italic; color: var(--ic-red); font-weight: 500; }
+.usecase-card .uc-desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--grey-700);
+  margin: 0;
+}
+.usecase-card .uc-references {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--grey-500);
+  margin: 0;
+  padding-top: 6px;
+  border-top: 1px dashed rgba(31,27,23,0.12);
+}
+.usecase-card .uc-references strong { color: var(--ink); font-weight: 600; }
+.usecase-card .uc-systems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid rgba(31,27,23,0.1);
+}
+.usecase-card .uc-systems-label {
+  flex-basis: 100%;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-500);
+  margin: 0 0 4px;
+}
+.usecase-card .uc-systems a {
+  display: inline-block;
+  padding: 5px 11px;
+  background: var(--paper);
+  border: 1px solid var(--grey-line);
+  border-radius: 3px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.usecase-card .uc-systems a:hover {
+  background: var(--ic-red);
+  color: #fff;
+  border-color: var(--ic-red);
+  transform: translateY(-1px);
+}
 
 /* FAQ */
 .faq-item { padding: 22px 0; border-top: 1px solid var(--grey-line); }
