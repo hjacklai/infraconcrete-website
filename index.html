@@ -1647,13 +1647,19 @@
     scrollbar-width: none;
   }
   .cap-track::-webkit-scrollbar { display: none; }
-  .cap-track img {
+  .cap-track > picture,
+  .cap-track > img {
     flex: 0 0 100%;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: block;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+  }
+  .cap-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     user-select: none;
     -webkit-user-drag: none;
   }
