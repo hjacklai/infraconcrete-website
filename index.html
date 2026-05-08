@@ -3270,7 +3270,14 @@
     .cred-card .cred-logo { width: 200px; height: auto; align-self: stretch; margin-bottom: 0; }
   }
 
-  .cred-logo img { max-width: 80%; max-height: 80%; object-fit: contain; }
+  .cred-logo picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cred-logo img { max-width: 80%; max-height: 80%; width: auto; height: auto; object-fit: contain; }
   .cred-logo svg { width: 100%; height: 100%; display: block; }
   /* SVG variants use no padding/background - SVG fills its own */
   .cred-cidb, .cred-iso, .cred-ars-svg, .cred-uaf-svg, .cred-iaf-svg { background: transparent; padding: 0; }
