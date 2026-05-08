@@ -14,7 +14,8 @@
 @media (min-width: 1280px) { :root { --gutter: clamp(140px, 16vw, 200px); } }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-font-smoothing: antialiased; overscroll-behavior: none; scroll-behavior: smooth; }
+/* background on <html> too: covers iOS Safari overscroll bounce so it doesn't show white above/below the page */
+html { -webkit-font-smoothing: antialiased; overscroll-behavior: none; scroll-behavior: smooth; background: var(--paper); }
 body {
   margin: 0; font-family: var(--sans); color: var(--ink); background: var(--paper);
   font-size: 16px; line-height: 1.65; overscroll-behavior: none;

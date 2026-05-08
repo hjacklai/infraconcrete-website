@@ -33,6 +33,9 @@
 <link rel="icon" type="image/png" sizes="any" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
+<!-- iOS Safari status bar + pull-to-refresh + overscroll bounce: tint to brand paper so the chrome doesn't show white above/below the page on phones and tablets -->
+<meta name="theme-color" content="#ECE0C6" />
+
 <!-- Performance hints: preload LCP hero poster (WebP for modern, JPEG for legacy) + brand logo, dns-prefetch CTA destination -->
 <link rel="preload" as="image" href="/images/hero/posters/hero-clip-2.webp" type="image/webp" fetchpriority="high" />
 <link rel="preload" as="image" href="/images/brand/logo.webp" type="image/webp" fetchpriority="high" />
@@ -425,6 +428,8 @@
   @media (prefers-reduced-motion: no-preference) {
     html { scroll-behavior: smooth; }
   }
+  /* Set on <html> too so iOS overscroll bounce (top + bottom) shows paper, not white */
+  html { background: var(--paper); }
   body {
     margin: 0;
     font-family: var(--sans);
