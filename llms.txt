@@ -229,6 +229,15 @@ Audiences served:
 - Main Contractors
 - Government Agencies (JKR, LLM, MOW, KKR)
 
+### Audience-specific landing pages (EN + BM + ZH)
+
+Each audience has a dedicated landing page positioning Infraconcrete's offer for that buyer type. All four pages exist in English, Bahasa Malaysia, and Simplified Chinese.
+
+- For Property Developers, [EN](https://infraconcrete.co/for-developers/) · [BM](https://infraconcrete.co/bm/for-developers/) · [ZH](https://infraconcrete.co/zh/for-developers/), Hillside township platforms, mixed-development cuts, basement excavations, retaining walls, ESCP, earthworks delivered as one specialist scope. Schedule-driven, REHDA-aligned, design-build comfortable.
+- For Government Agencies (JKR / LLM / MOW / KKR), [EN](https://infraconcrete.co/for-government/) · [BM](https://infraconcrete.co/bm/for-government/) · [ZH](https://infraconcrete.co/zh/for-government/), CIDB G7 panel-eligible across federal + state + local. JKR-spec documentation, MyEPerolehan / e-tender experienced, 2-5 day emergency mobilization. EKVE / ECRL / Central Spine Road federal references.
+- For Consulting Engineers (C&S, M&E, geotechnical, civil), [EN](https://infraconcrete.co/for-consulting-engineers/) · [BM](https://infraconcrete.co/bm/for-consulting-engineers/) · [ZH](https://infraconcrete.co/zh/for-consulting-engineers/), Specialist sub-contractor that executes design with method statements, RFI discipline, BS / EN / Eurocode 7 native, IEM / BEM / ACEM aligned. Test results closed-loop back to consultant.
+- For Quantity Surveyors, [EN](https://infraconcrete.co/for-quantity-surveyors/) · [BM](https://infraconcrete.co/bm/for-quantity-surveyors/) · [ZH](https://infraconcrete.co/zh/for-quantity-surveyors/), Schedule of rates pricing, transparent BoQ, disciplined VOs, clean progress claims, final account discipline. The geotechnical specialist QS firms recommend.
+
 ## Languages
 
 The Infraconcrete website is available in three languages:

@@ -329,10 +329,102 @@
   <url><loc>https://infraconcrete.co/erosion-control/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://infraconcrete.co/post-landslide-remediation/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/slope-monitoring/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://infraconcrete.co/for-developers/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/for-consulting-engineers/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/for-government/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://infraconcrete.co/for-quantity-surveyors/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://infraconcrete.co/for-developers/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-developers/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-developers/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-developers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-developers/"/>
+    <changefreq>monthly</changefreq><priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/for-consulting-engineers/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-consulting-engineers/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-consulting-engineers/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-consulting-engineers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-consulting-engineers/"/>
+    <changefreq>monthly</changefreq><priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/for-government/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-government/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-government/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-government/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-government/"/>
+    <changefreq>monthly</changefreq><priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/for-quantity-surveyors/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-quantity-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-quantity-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-quantity-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-quantity-surveyors/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/bm/for-developers/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-developers/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-developers/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-developers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-developers/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/bm/for-government/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-government/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-government/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-government/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-government/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/bm/for-consulting-engineers/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-consulting-engineers/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-consulting-engineers/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-consulting-engineers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-consulting-engineers/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/bm/for-quantity-surveyors/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-quantity-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-quantity-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-quantity-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-quantity-surveyors/"/>
+    <changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/zh/for-developers/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-developers/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-developers/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-developers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-developers/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/zh/for-government/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-government/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-government/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-government/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-government/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/zh/for-consulting-engineers/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-consulting-engineers/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-consulting-engineers/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-consulting-engineers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-consulting-engineers/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/zh/for-quantity-surveyors/</loc><lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/for-quantity-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/for-quantity-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/for-quantity-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/for-quantity-surveyors/"/>
+    <changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
   <url>
     <loc>https://infraconcrete.co/bm/kontraktor-geoteknikal/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/kontraktor-geoteknikal/"/>

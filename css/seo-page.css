@@ -235,6 +235,18 @@ section.block:first-of-type { border-top: 0; padding-top: 0; }
    Restyles the data-service-crosslinks footer block so its sub-headings
    read as mono micro-labels and its inline links look clickable.
    No markup change needed; pure CSS targeting the data attribute. */
+/* Constrain block to container width — the block usually sits OUTSIDE
+   <main>'s .container, so without this it would span the full viewport
+   while the rest of the page content stays centered at max 1100px.
+   Apply container's exact constraints (max-width + auto-margins +
+   gutter padding) so the block aligns with the surrounding sections. */
+section.block[data-service-crosslinks] {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
 [data-service-crosslinks] .two-col > div { display: flex; flex-direction: column; }
 [data-service-crosslinks] h3 {
   font-family: var(--mono);
