@@ -33,8 +33,9 @@
 <link rel="icon" type="image/png" sizes="any" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-<!-- Performance hints: preload LCP hero poster, dns-prefetch CTA destination -->
+<!-- Performance hints: preload LCP hero poster + brand logo, dns-prefetch CTA destination -->
 <link rel="preload" as="image" href="/images/hero/posters/hero-clip-2.jpg" fetchpriority="high" />
+<link rel="preload" as="image" href="/images/brand/logo.png" fetchpriority="high" />
 <link rel="dns-prefetch" href="https://wa.me" />
 
 <!-- Canonical -->
@@ -4151,13 +4152,13 @@
   <div class="container nav-inner">
     <div class="logo-wrap">
       <a href="#top" class="logo">
-        <img decoding="async" src="images/brand/logo.png" alt="Infraconcrete" height="36" style="display:block;width:auto;"
+        <img decoding="async" fetchpriority="high" src="images/brand/logo.png" alt="Infraconcrete" width="206" height="36" style="display:block;width:auto;"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <span style="display:none;align-items:baseline;">Infra<b>concrete</b><sup>™</sup></span>
       </a>
       <span class="group-badge" aria-label="Part of Panthera Group">
         <span class="gb-label">Part of</span>
-        <img decoding="async" src="images/brand/panthera-logo.png" alt="Panthera Group" height="14" style="display:block;width:auto;opacity:.7;">
+        <img decoding="async" src="images/brand/panthera-logo.png" alt="Panthera Group" width="98" height="14" style="display:block;width:auto;opacity:.7;">
       </span>
     </div>
   </div>
