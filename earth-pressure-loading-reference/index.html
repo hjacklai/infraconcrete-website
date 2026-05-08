@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Earth Pressure &amp; Loading Reference Malaysia | Active, Passive, At-Rest, Coulomb, Rankine, Surcharge | Infraconcrete</title>
+<meta name="description" content="Engineer's reference to lateral earth pressure and loading for retaining walls and embedded structures in Malaysia. Active, passive, at-rest pressure (Coulomb 1776, Rankine 1857). Surcharge (Boussinesq, Westergaard, line / strip / point loads). Compaction-induced lateral pressure (Ingold). Hydrostatic and seepage pressure. Seismic dynamic pressure (Mononobe-Okabe 1929, Steedman-Zeng). Wall friction, wall flexibility, and earth pressure mobilisation. To BS 8002, BS EN 1997, AASHTO LRFD, FHWA." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="keywords" content="earth pressure Malaysia, active passive at-rest, Coulomb Rankine, Mononobe-Okabe, surcharge Boussinesq, compaction Ingold, BS 8002, Eurocode 7, retaining wall load" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Earth Pressure &amp; Loading Reference | Engineer's Reference Malaysia" />
+<meta property="og:description" content="Active / passive / at-rest, surcharge, compaction, hydrostatic, seismic. Foundation reference for retaining wall and embedded structure design." />
+<meta property="og:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<meta property="og:url" content="https://infraconcrete.co/earth-pressure-loading-reference/" />
+<meta property="og:site_name" content="Infraconcrete Construction Sdn Bhd" />
+<meta property="og:locale" content="en_MY" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Earth Pressure &amp; Loading Reference Malaysia" />
+<meta name="twitter:description" content="Active / passive / at-rest, surcharge, compaction, hydrostatic, seismic - foundational reference." />
+<meta name="twitter:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<link rel="canonical" href="https://infraconcrete.co/earth-pressure-loading-reference/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/earth-pressure-loading-reference/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/earth-pressure-loading-reference/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="any" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","@id":"https://infraconcrete.co/earth-pressure-loading-reference/#article","headline":"Earth Pressure and Loading Reference for Malaysia","description":"Foundational reference to lateral earth pressure and loading for retaining wall and embedded structure design - active, passive, at-rest, surcharge, compaction, hydrostatic, seismic.","datePublished":"2026-05-08","dateModified":"2026-05-08","author":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"publisher":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","logo":{"@type":"ImageObject","url":"https://infraconcrete.co/images/brand/logo.png"}},"image":"https://infraconcrete.co/images/projects/project-ekve.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://infraconcrete.co/earth-pressure-loading-reference/"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://infraconcrete.co/resources/"},{"@type":"ListItem","position":3,"name":"Earth Pressure &amp; Loading Reference","item":"https://infraconcrete.co/earth-pressure-loading-reference/"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Active, passive, or at-rest - which earth pressure should I use?","acceptedAnswer":{"@type":"Answer","text":"Active pressure (Ka) where the wall can move away from the soil at least 0.001 to 0.005 of wall height (sand to clay) - cantilever walls, MSE walls, sheet pile, modular block. At-rest pressure (Ko) where wall movement is restrained - basement walls, propped walls, integral abutments, stiff walls bonded to building structure. Passive pressure (Kp) only as a resistance contribution - toe of cantilever wall, anchor passive zone, embedded pile resistance - and only after the displacement to mobilise it (typically 0.01 to 0.05 of wall height) is acceptable. Mononobe-Okabe (Kae, Kpe) for seismic / pseudo-static."}},
+{"@type":"Question","name":"How do I calculate surcharge loading on a retaining wall?","acceptedAnswer":{"@type":"Answer","text":"Uniform surcharge (q) - simplest. Lateral pressure increment = Ka * q applied uniformly to the wall back. Common Malaysian values: 10 kPa highway / behind kerb, 5 kPa residential, 12-15 kPa heavy traffic / industrial. Line / strip / point loads (foundations, footings, piles, parked vehicles) - use Boussinesq elastic distribution. For a strip load, the lateral stress on the wall is given by Boussinesq sigma_h = (q / pi) * (alpha - sin(alpha) * cos(alpha + 2 * delta)) where alpha and delta are angular coordinates of the load relative to the wall point. Westergaard distribution sometimes used for layered systems. AASHTO LRFD and FHWA NHI-10-024 give simplified design charts for traffic surcharge equivalent height of soil."}},
+{"@type":"Question","name":"What is compaction-induced lateral earth pressure?","acceptedAnswer":{"@type":"Answer","text":"Compaction of granular backfill behind a non-yielding wall locks in horizontal stress higher than active. The Ingold (1979) method estimates the residual lateral pressure: at shallow depth, sigma_h is governed by the compactor characteristics (peak stress beneath the roller); at depth, the residual is bounded by the at-rest line. Result: lateral pressure higher than Ka * gamma * z but bounded by Ko * gamma * z, with a depth-dependent envelope. For RC cantilever walls and basement walls, compaction-induced pressure can dominate over active pressure for the upper 2-3 m. Use lighter compaction near walls (hand compactor in the 1 m strip) to avoid stress lock-in."}},
+{"@type":"Question","name":"How does wall friction affect earth pressure?","acceptedAnswer":{"@type":"Answer","text":"Wall friction (delta - friction angle between wall and soil) reduces active pressure and increases passive pressure relative to Rankine values. Coulomb's theory accounts for it; Rankine ignores it (delta = 0 assumed). Typical delta values: 2/3 to 1.0 of phi-prime for rough concrete walls (cast-in-place, MSE facing units), 0.5 phi-prime for smooth concrete, 0.3-0.5 phi-prime for steel sheet pile (depends on coating). For active pressure, including wall friction reduces Ka by 5-15 percent. For passive pressure, including wall friction increases Kp by 30-100 percent - but caution: very high passive Kp values from Coulomb (with delta near phi') over-state real passive resistance because the failure surface is not planar. Use log-spiral or curved failure surface for passive when delta is large."}}]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Manrope:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/seo-page.css">
+<script src="/js/seo-nav.js" defer></script>
+<style>
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 16px;margin:20px 0;padding:16px;background:rgba(31,27,23,0.04);border-radius:6px}
+.toc-grid a{display:block;padding:6px 0;color:#1F1B17;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;border-bottom:1px solid rgba(31,27,23,0.08)}
+.toc-grid a:hover{color:#C8102E}
+.principle-block{padding:32px 0;border-top:1px solid rgba(31,27,23,0.12)}
+.principle-block:first-of-type{border-top:none}
+.principle-block h3{font-size:clamp(22px,2.4vw,30px);margin:8px 0 16px}
+.principle-block .sys-eye{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#C8102E;text-transform:uppercase}
+.p-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:20px}
+@media(min-width:880px){.p-grid{grid-template-columns:1fr 1fr}}
+.p-section h4{font-size:14px;letter-spacing:0.06em;margin:0 0 8px;color:#1F1B17;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.p-section p{margin:0 0 10px;font-size:15px;line-height:1.6}
+.p-section ul{margin:0;padding-left:20px;font-size:14px;line-height:1.7}
+.params-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13px}
+.params-table th,.params-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(31,27,23,0.1);vertical-align:top}
+.params-table th{background:rgba(31,27,23,0.06);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;font-size:11px;text-transform:uppercase}
+.callout{background:rgba(200,16,46,0.06);border-left:3px solid #C8102E;padding:14px 18px;margin:14px 0;font-size:14px;line-height:1.55}
+.callout strong{color:#C8102E}
+.formula{background:rgba(31,27,23,0.04);padding:14px 18px;border-radius:4px;margin:12px 0;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1.6}
+.formula strong{color:#C8102E}
+.pill{display:inline-block;padding:2px 8px;background:rgba(200,16,46,0.1);color:#C8102E;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;border-radius:3px;margin-right:6px}
+</style>
+</head>
+<body>
+
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">·</span><a href="/resources/">Resources</a><span class="sep">·</span><span class="here">Earth Pressure &amp; Loading Reference</span></nav></div>
+
+<main>
+ <div class="container">
+  <section class="hero">
+   <div class="eyebrow">Foundational Reference · Resource Hub</div>
+   <h1>Earth pressure &amp; <em>loading.</em></h1>
+   <p class="lede">The foundational reference for the engineer designing retaining walls, basements, sheet piles, anchored walls, MSE walls, modular blocks, and any embedded structure in Malaysia. Active, passive, and at-rest earth pressure (Coulomb 1776, Rankine 1857). Surcharge from uniform, line, strip, and point loads (Boussinesq elastic theory, Westergaard, AASHTO equivalent height of soil). Compaction-induced lateral pressure (Ingold 1979). Hydrostatic pressure and seepage. Seismic / pseudo-static dynamic pressure (Mononobe-Okabe 1929, Steedman-Zeng 1990). Wall friction (delta), wall flexibility, and earth pressure mobilisation thresholds. Aligned with BS 8002, BS EN 1997 (Eurocode 7), AASHTO LRFD, FHWA NHI-10-024. By Infraconcrete - CIDB G7 specialist geotechnical contractor.</p>
+   <div class="stats">
+    <div class="stat"><div class="v">7</div><div class="l">Pressure types</div></div>
+    <div class="stat"><div class="v">3</div><div class="l">Classical theories</div></div>
+    <div class="stat"><div class="v">G7</div><div class="l">CIDB highest grade</div></div>
+    <div class="stat"><div class="v">100+</div><div class="l">Wall designs</div></div>
+   </div>
+  </section>
+
+  <section class="block">
+   <div class="block-eye">Navigation</div>
+   <h2>Jump to a topic.</h2>
+   <div class="toc-grid">
+    <a href="#mobilisation">→ Pressure Mobilisation</a>
+    <a href="#at-rest">→ At-Rest Pressure (Ko)</a>
+    <a href="#active">→ Active Pressure (Ka)</a>
+    <a href="#passive">→ Passive Pressure (Kp)</a>
+    <a href="#wall-friction">→ Wall Friction (delta)</a>
+    <a href="#surcharge">→ Surcharge Loading</a>
+    <a href="#compaction">→ Compaction-Induced Pressure</a>
+    <a href="#hydrostatic">→ Hydrostatic &amp; Seepage</a>
+    <a href="#seismic">→ Seismic / Mononobe-Okabe</a>
+    <a href="#tension-crack">→ Tension Crack</a>
+    <a href="#standards">→ Standards Reference</a>
+    <a href="#faq">→ FAQ</a>
+   </div>
+  </section>
+
+  <!-- ===== 01 Mobilisation ===== -->
+  <section class="block principle-block" id="mobilisation">
+   <div class="sys-eye">01 / Earth Pressure Mobilisation</div>
+   <h3>Pressure depends on movement.</h3>
+   <p>Lateral earth pressure is not a fixed quantity - it depends on how the wall moves relative to the soil. Three states are conventionally recognised:</p>
+   <ul style="font-size:14px;line-height:1.7">
+    <li><strong>At-rest (Ko)</strong> - wall is rigid, no movement. Pressure is the in-situ horizontal stress.</li>
+    <li><strong>Active (Ka)</strong> - wall moves AWAY from the soil. Pressure DROPS to a minimum as soil reaches Mohr-Coulomb failure on internal slip surfaces.</li>
+    <li><strong>Passive (Kp)</strong> - wall moves INTO the soil. Pressure RISES to a maximum as soil reaches Mohr-Coulomb failure on internal slip surfaces.</li>
+   </ul>
+
+   <table class="params-table">
+    <thead><tr><th>State</th><th>Wall movement to mobilise</th><th>Sand</th><th>Stiff clay</th></tr></thead>
+    <tbody>
+     <tr><td>Active (Ka)</td><td>Translation (top to bottom of wall)</td><td>0.001 H</td><td>0.005 H</td></tr>
+     <tr><td>Passive (Kp)</td><td>Translation</td><td>0.05 H</td><td>0.10 H</td></tr>
+    </tbody>
+   </table>
+
+   <div class="callout"><strong>Design implication.</strong> Cantilever walls and MSE / SRW walls free to translate develop active pressure. Basement walls bonded to a building structure cannot translate - design at-rest. Toe resistance and anchor passive resistance require movement that may not be acceptable - reduce design Kp by a "passive resistance factor" (typically 0.5 of full Kp) for serviceability.</div>
+  </section>
+
+  <!-- ===== 02 At-Rest ===== -->
+  <section class="block principle-block" id="at-rest">
+   <div class="sys-eye">02 / At-Rest Pressure</div>
+   <h3>The undisturbed in-situ horizontal stress.</h3>
+   <div class="formula"><strong>Jaky (1944) - normally consolidated soil.</strong><br>Ko = 1 - sin(phi')<br>Typical: phi' = 30 deg gives Ko = 0.50; phi' = 35 deg gives Ko = 0.43.</div>
+   <div class="formula"><strong>Mayne &amp; Kulhawy (1982) - overconsolidated soil.</strong><br>Ko_OC = (1 - sin(phi')) * (OCR ^ sin(phi'))<br>For OCR = 4 and phi' = 28 deg: Ko = (1 - 0.469) * (4 ^ 0.469) = 0.531 * 1.882 = 1.00<br>OCR drives Ko upward; heavily overconsolidated clay can show Ko greater than 1.</div>
+
+   <div class="callout"><strong>When to design for Ko.</strong> Basement walls, propped retaining walls, integral bridge abutments, walls bonded to a stiff structure that cannot translate. Stiff diaphragm walls in deep excavation supported by struts before the upper struts are at fully active state. For Malaysian residual soil at typical OCR 1.5-3, design Ko 0.50-0.70.</div>
+  </section>
+
+  <!-- ===== 03 Active ===== -->
+  <section class="block principle-block" id="active">
+   <div class="sys-eye">03 / Active Pressure</div>
+   <h3>Coulomb 1776 and Rankine 1857.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Rankine (1857)</h4>
+     <p>Simpler theory. Assumes vertical wall, horizontal backfill, smooth wall (delta = 0). Stress state across the full backfill is at active failure.</p>
+     <div class="formula">Ka_R = tan^2(45 - phi'/2) = (1 - sin(phi')) / (1 + sin(phi'))<br>For phi' = 30 deg: Ka_R = 0.333; phi' = 35 deg: Ka_R = 0.271.</div>
+     <p>Cohesion contribution: sigma_h = Ka * gamma * z - 2 * c' * sqrt(Ka). Tension above z_tc = 2 * c' / (gamma * sqrt(Ka)).</p>
+    </div>
+    <div class="p-section">
+     <h4>Coulomb (1776)</h4>
+     <p>More general. Wedge equilibrium method - finds the wedge angle that maximises active force. Accounts for wall friction (delta), backfill slope (beta), and wall back angle (alpha).</p>
+     <div class="formula">Ka_C = sin^2(alpha + phi') / [ sin^2(alpha) * sin(alpha - delta) * (1 + Q)^2 ]<br>Q = sqrt[ sin(phi' + delta) * sin(phi' - beta) / (sin(alpha - delta) * sin(alpha + beta)) ]<br>(alpha = wall back angle from horizontal, default 90 deg for vertical wall; beta = backfill slope; delta = wall friction)</div>
+    </div>
+   </div>
+   <div class="callout"><strong>Coulomb vs Rankine - active.</strong> For vertical wall + horizontal backfill + delta = 0, both reduce to the same Ka. For walls with friction (typical concrete delta ~ 2/3 phi'), Coulomb gives Ka about 10-15 percent lower than Rankine - more economical. For sloping backfill, Coulomb is the correct method.</div>
+  </section>
+
+  <!-- ===== 04 Passive ===== -->
+  <section class="block principle-block" id="passive">
+   <div class="sys-eye">04 / Passive Pressure</div>
+   <h3>Resistance - but use it carefully.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Rankine</h4>
+     <div class="formula">Kp_R = tan^2(45 + phi'/2) = (1 + sin(phi')) / (1 - sin(phi'))<br>For phi' = 30 deg: Kp_R = 3.0; phi' = 35 deg: Kp_R = 3.69.</div>
+     <p>Cohesion contribution: sigma_h_p = Kp * gamma * z + 2 * c' * sqrt(Kp).</p>
+    </div>
+    <div class="p-section">
+     <h4>Coulomb &amp; log-spiral</h4>
+     <p>Coulomb passive with wall friction gives much higher Kp than Rankine. With delta = phi', Kp can exceed 10 - but this is unrealistic because the failure surface is not planar at high delta, it curves.</p>
+     <p>Log-spiral or Caquot-Kerisel solutions give more realistic Kp values when wall friction is large. Typically Kp_log-spiral is 50-70 percent of Kp_Coulomb for delta near phi'.</p>
+    </div>
+   </div>
+   <div class="callout"><strong>Passive design caution.</strong> (1) Apply a passive factor of safety (typically 2.0-3.0) to design Kp - or use 50-67 percent of theoretical Kp directly. (2) Check movement to mobilise full Kp (5-10 percent of wall height) is acceptable. (3) For passive resistance at the toe of a cantilever wall or in front of an anchor block, ignore the upper 0.5 m or so where confining stress is low and disturbance is likely. (4) Do not rely on passive resistance from soil that may be excavated, eroded, or disturbed in service.</div>
+  </section>
+
+  <!-- ===== 05 Wall Friction ===== -->
+  <section class="block principle-block" id="wall-friction">
+   <div class="sys-eye">05 / Wall Friction (delta)</div>
+   <h3>The interface friction between wall and soil.</h3>
+   <table class="params-table">
+    <thead><tr><th>Wall surface</th><th>delta / phi' (active)</th><th>delta / phi' (passive)</th><th>Notes</th></tr></thead>
+    <tbody>
+     <tr><td>Cast-in-place rough concrete</td><td>0.67 - 1.0</td><td>0.50 - 0.67</td><td>Concrete cast against soil, rough finish</td></tr>
+     <tr><td>Smooth (formed) concrete</td><td>0.50 - 0.67</td><td>0.33 - 0.50</td><td>Concrete cast in formwork, smooth surface</td></tr>
+     <tr><td>MSE / SRW facing (block)</td><td>0.67 - 1.0</td><td>n/a</td><td>Granular reinforced fill, mechanical interlock</td></tr>
+     <tr><td>Steel sheet pile (uncoated)</td><td>0.50 - 0.67</td><td>0.33 - 0.50</td><td>Steel-on-soil interface</td></tr>
+     <tr><td>Steel sheet pile (coated)</td><td>0.33 - 0.50</td><td>0.25 - 0.33</td><td>Bituminous or polymeric coating</td></tr>
+     <tr><td>Geomembrane / smooth liner</td><td>0.25 - 0.50</td><td>n/a</td><td>HDPE smooth, especially wet</td></tr>
+    </tbody>
+   </table>
+   <div class="callout"><strong>BS 8002 advice.</strong> For active design, take delta = 0.67 * phi' as a default for typical concrete walls. For passive design, take delta = 0.5 * phi' or use log-spiral with delta = 0.67 * phi'. Don't double-count: if you take delta high in passive, also use a higher Kp factor of safety.</div>
+  </section>
+
+  <!-- ===== 06 Surcharge ===== -->
+  <section class="block principle-block" id="surcharge">
+   <div class="sys-eye">06 / Surcharge Loading</div>
+   <h3>Loads on the backfill that translate to wall pressure.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Uniform surcharge (q)</h4>
+     <p>Simplest case. The surcharge acts as an additional column of equivalent soil. Lateral pressure increment is constant with depth.</p>
+     <div class="formula">delta_sigma_h = Ka * q (active) or Ko * q (at-rest)</div>
+     <p><strong>Typical Malaysian values:</strong></p>
+     <ul>
+      <li>Highway / traffic: 10 kPa (BS 8002, JKR)</li>
+      <li>Heavy traffic / industrial: 12-15 kPa</li>
+      <li>Residential / pedestrian: 5 kPa</li>
+      <li>Construction equipment: 20-30 kPa case-specific</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>Line, strip, point loads</h4>
+     <p>Use Boussinesq elastic distribution for foundations, footings, parked vehicles, building columns near wall.</p>
+     <div class="formula"><strong>Boussinesq strip load.</strong><br>sigma_h = (q / pi) * [alpha - sin(alpha) * cos(alpha + 2*delta)]<br>(alpha = angle subtended at the wall point by the strip; delta = inclination of bisector)</div>
+     <p><strong>AASHTO equivalent height of soil (h_eq):</strong></p>
+     <ul>
+      <li>Wall less than 1.5 m: h_eq = 1.5 m of soil</li>
+      <li>Wall 1.5 to 6 m: linearly interpolated</li>
+      <li>Wall greater than 6 m: h_eq = 0.6 m of soil</li>
+     </ul>
+     <p>Equivalent surcharge q_eq = gamma * h_eq, applied as uniform surcharge.</p>
+    </div>
+   </div>
+
+   <div class="callout"><strong>FHWA simplification.</strong> For approximate wall design, Boussinesq strip surcharge can be doubled compared to elastic theory (the "image" load) because the wall itself does not move - elastic solution assumes free field. For final design of important walls, use FE analysis or AASHTO charts.</div>
+  </section>
+
+  <!-- ===== 07 Compaction ===== -->
+  <section class="block principle-block" id="compaction">
+   <div class="sys-eye">07 / Compaction-Induced Lateral Pressure</div>
+   <h3>The pressure that walls don't shed.</h3>
+   <p>When granular backfill is compacted behind a wall that does not yield (cantilever, basement, propped), each compaction layer locks in horizontal stress. The soil cannot move outward to relieve the stress - the lateral pressure builds up above active and approaches at-rest in the upper zone.</p>
+
+   <div class="formula"><strong>Ingold (1979) residual lateral pressure.</strong><br>sigma_h_compaction = sqrt( gamma * Q * 2 * (1 + Ko) / pi ) approximately<br>(Q = peak vertical stress under compactor, depends on roller weight and contact area)<br>Bounded by Ko * gamma * z below; controlled by compactor characteristics in the upper zone.</div>
+
+   <div class="callout"><strong>Practical mitigation.</strong> (1) Use lighter compaction equipment in the 1 m strip behind the wall (hand-compactor, vibrating plate, NOT vibrating roller). (2) Compact in thinner lifts (150 mm) close to wall. (3) Specify peak granular fill density only for the bulk fill, allow lower density in the wall strip. (4) For RC cantilever walls, design the upper 2-3 m of stem for compaction-induced pressure (Ko envelope) regardless of theoretical Ka.</div>
+  </section>
+
+  <!-- ===== 08 Hydrostatic ===== -->
+  <section class="block principle-block" id="hydrostatic">
+   <div class="sys-eye">08 / Hydrostatic &amp; Seepage Pressure</div>
+   <h3>Water doubles your wall load if you let it.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Hydrostatic</h4>
+     <p>For a wall with water table at top of backfill and no drainage:</p>
+     <div class="formula">sigma_h_water = gamma_w * z (where gamma_w = 9.81 kN/m^3)<br>Total horizontal force per unit length:<br>P_water = 0.5 * gamma_w * H_water^2<br>For H = 5 m: P_water = 122.6 kN/m - approximately equal to the active soil pressure in dry residual soil.</div>
+     <p>For combined soil + water (no drainage): use buoyant unit weight (gamma' = gamma - gamma_w) with Ka, plus hydrostatic separately. The two are NOT additive in soil shear strength, only in lateral pressure.</p>
+    </div>
+    <div class="p-section">
+     <h4>Seepage pressure</h4>
+     <p>Water flowing through the backfill (downward percolation, lateral seepage) creates additional pore pressure that varies with the flow direction.</p>
+     <p>For a saturated, draining backfill with vertical seepage to a drainage layer at the wall base:</p>
+     <ul>
+      <li>Hydrostatic pressure is reduced (approaching zero at the drained boundary)</li>
+      <li>Effective stress increases due to seepage gradient</li>
+      <li>Net active pressure may slightly exceed dry-soil Ka due to seepage drag</li>
+     </ul>
+    </div>
+   </div>
+   <div class="callout"><strong>Drainage is non-negotiable.</strong> The cheapest insurance against catastrophic wall load is a properly designed drainage system. A 5 m wall with full hydrostatic head adds ~125 kN/m at the base - often more than active pressure alone. Most wall failures are drainage failures, not structural failures. See <a href="/drainage-design-reference/">drainage design reference</a> for components and detailing.</div>
+  </section>
+
+  <!-- ===== 09 Seismic ===== -->
+  <section class="block principle-block" id="seismic">
+   <div class="sys-eye">09 / Seismic / Pseudo-Static Pressure</div>
+   <h3>Dynamic earth pressure under seismic loading.</h3>
+   <div class="formula"><strong>Mononobe-Okabe (1929).</strong><br>Kae = cos^2(phi' - psi - alpha) / [cos(psi) * cos^2(alpha) * cos(delta + alpha + psi) * (1 + Q')^2]<br>Q' = sqrt[ sin(phi' + delta) * sin(phi' - psi - beta) / (cos(delta + alpha + psi) * cos(beta - alpha)) ]<br>psi = arctan(kh / (1 - kv))<br>(kh = horizontal seismic coefficient, kv = vertical seismic coefficient, alpha = wall back angle, beta = backfill slope, delta = wall friction)</div>
+
+   <p>Total seismic active force resolved into static and dynamic components:</p>
+   <div class="formula">P_ae = 0.5 * (1 - kv) * gamma * H^2 * Kae<br>Dynamic increment: delta_P_e = P_ae - P_a (static)<br>Application point: dynamic increment applied at 0.6 H above base (Seed-Whitman 1970), static at H/3.</div>
+
+   <table class="params-table">
+    <thead><tr><th>Region</th><th>kh (typical)</th><th>kv</th><th>Source</th></tr></thead>
+    <tbody>
+     <tr><td>Peninsular Malaysia (low seismicity)</td><td>0.05 - 0.07</td><td>0 (often)</td><td>Eurocode 8 Malaysian National Annex</td></tr>
+     <tr><td>Sabah / Sarawak (moderate)</td><td>0.08 - 0.10</td><td>0 - 0.05</td><td>Eurocode 8 Malaysian National Annex</td></tr>
+     <tr><td>Federal infrastructure (rail / bridges)</td><td>0.10 - 0.15</td><td>0 - 0.05</td><td>JKR / project-specific seismic hazard</td></tr>
+    </tbody>
+   </table>
+
+   <div class="callout"><strong>When seismic governs.</strong> Rarely for routine Malaysian retaining wall design - static governs. Seismic check is required for: federal rail / bridge infrastructure, dams, critical lifeline structures, walls greater than 10 m on weak foundation. Pseudo-static FoS targets are lower (1.1-1.2) reflecting rare-event nature.</div>
+  </section>
+
+  <!-- ===== 10 Tension Crack ===== -->
+  <section class="block principle-block" id="tension-crack">
+   <div class="sys-eye">10 / Tension Crack</div>
+   <h3>The negative pressure that doesn't exist in reality.</h3>
+   <p>Cohesive backfill develops theoretical negative active pressure in the upper zone (above z_tc = 2 * c' / (gamma * sqrt(Ka))). In reality, soil cannot sustain tension - a crack forms and the negative pressure does not act on the wall.</p>
+
+   <div class="callout"><strong>Design treatment.</strong> (1) Ignore the negative pressure - integrate from the tension crack depth z_tc downward. (2) Assume the tension crack fills with water during rainfall - apply hydrostatic pressure of gamma_w * z_tc at the crack base, in addition to the soil pressure below. This is the worst case for many cohesive backfill walls. (3) Avoid cohesive backfill for retaining walls where possible - granular backfill behaves more predictably and does not form tension cracks.</div>
+
+   <div class="formula"><strong>Tension crack depth (cohesive backfill, no surcharge).</strong><br>z_tc = 2 * c' / (gamma * sqrt(Ka))<br>For c' = 10 kPa, gamma = 18 kN/m^3, phi' = 28 deg (Ka = 0.361):<br>z_tc = 20 / (18 * 0.601) = 1.85 m<br>Worst case: water-filled crack adds (0.5 * 9.81 * 1.85^2) = 16.8 kN/m at z_tc.</div>
+  </section>
+
+  <!-- ===== 11 Standards ===== -->
+  <section class="block principle-block" id="standards">
+   <div class="sys-eye">11 / Standards Reference</div>
+   <h3>Codes and references.</h3>
+   <table class="params-table">
+    <thead><tr><th>Topic</th><th>Reference</th></tr></thead>
+    <tbody>
+     <tr><td>General earth retaining structures</td><td>BS 8002, BS EN 1997-1 (Eurocode 7), AASHTO LRFD</td></tr>
+     <tr><td>Coulomb (1776), Rankine (1857)</td><td>Classical theories - all major textbooks (Craig, Powrie, Bowles, Das)</td></tr>
+     <tr><td>At-rest pressure</td><td>Jaky (1944), Mayne &amp; Kulhawy (1982)</td></tr>
+     <tr><td>Wall friction</td><td>BS 8002 Clause 3.2.7, AASHTO LRFD Table 3.11.5.3-1</td></tr>
+     <tr><td>Surcharge (Boussinesq)</td><td>FHWA-NHI-10-024 Chapter 4, AASHTO LRFD 3.11.6</td></tr>
+     <tr><td>Compaction-induced pressure</td><td>Ingold (1979) "The Effects of Compaction on Retaining Walls"</td></tr>
+     <tr><td>Seismic earth pressure</td><td>Mononobe-Okabe (1929), Seed-Whitman (1970), Steedman-Zeng (1990)</td></tr>
+     <tr><td>Eurocode 8 seismic for retaining walls</td><td>BS EN 1998-5, Malaysian National Annex</td></tr>
+     <tr><td>Reinforced soil structures</td><td>BS 8006-1, FHWA-NHI-10-024, NCMA SRW Design Manual</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="block" id="faq">
+   <div class="block-eye">Frequently asked</div>
+   <h2>Loading <em>questions.</em></h2>
+   <details class="faq-item"><summary>Active, passive, or at-rest - which to use? <span class="ic">+</span></summary><div class="ans">Active where wall can move away from soil 0.001-0.005 H (cantilever, MSE, sheet pile, modular block). At-rest where movement is restrained (basement, propped, integral abutment, stiff bonded walls). Passive only as a resistance contribution at toe / anchor zone, with passive FoS 2-3 applied or 50-67 percent of theoretical Kp. Mononobe-Okabe for seismic.</div></details>
+   <details class="faq-item"><summary>How do I calculate surcharge? <span class="ic">+</span></summary><div class="ans">Uniform: delta_sigma_h = Ka * q applied uniformly. Typical 10 kPa highway, 5 kPa residential, 15 kPa heavy. Strip / line / point: Boussinesq elastic distribution. AASHTO equivalent height of soil for traffic (1.5 m for short walls, 0.6 m for tall walls). Convert h_eq to q_eq = gamma * h_eq.</div></details>
+   <details class="faq-item"><summary>What is compaction-induced pressure? <span class="ic">+</span></summary><div class="ans">Compaction of granular backfill behind a non-yielding wall locks in lateral stress higher than active, bounded by at-rest. Ingold (1979) gives the residual envelope. For RC cantilever and basement walls, design the upper 2-3 m for at-rest envelope regardless of theoretical Ka. Use lighter compaction in 1 m strip near the wall.</div></details>
+   <details class="faq-item"><summary>How does wall friction affect pressure? <span class="ic">+</span></summary><div class="ans">Wall friction (delta) reduces Ka and increases Kp relative to Rankine (delta = 0). Coulomb's theory accounts for it. Typical delta: 2/3 to 1.0 phi-prime for rough concrete, 0.5 phi-prime smooth concrete, 0.3-0.5 phi-prime steel sheet pile. BS 8002 default: delta = 2/3 phi-prime active. Caution: very high delta gives unrealistic Kp from Coulomb planar - use log-spiral or reduce.</div></details>
+   <details class="faq-item"><summary>When does seismic earth pressure govern in Malaysia? <span class="ic">+</span></summary><div class="ans">Rarely for routine retaining walls - static governs. Required for federal rail / bridges / dams / critical lifelines and walls greater than 10 m on weak foundation. Eurocode 8 / Malaysian National Annex gives kh = 0.05-0.10g typical. Mononobe-Okabe method for dynamic active. Pseudo-static FoS 1.1-1.2 (lower than static) reflecting rare-event nature.</div></details>
+  </section>
+ </div>
+
+ <section class="cta-block"><div class="container"><h2>Need <em>wall design support?</em></h2><p>Send the wall geometry, soil report, and constraints. Same-day response from the engineering team. We design under design-build, or as the specialist contractor under your appointed consulting engineer.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp the team →</a><a class="btn btn-ghost" href="/#contact">All contact details</a></div></div></section>
+
+ <div class="container"><section class="block"><div class="block-eye">Cross-references</div><h2>Read more.</h2>
+  <div class="toc-grid">
+   <a href="/retaining-wall-design/">→ Retaining Wall Design</a>
+   <a href="/geotechnical-design-guide/">→ Geotechnical Design Guide</a>
+   <a href="/drainage-design-reference/">→ Drainage Design Reference</a>
+   <a href="/compare-retaining-walls/">→ Retaining Wall Comparison</a>
+   <a href="/mse-wall/">→ MSE Wall</a>
+   <a href="/sheet-piling/">→ Sheet Piling</a>
+   <a href="/ground-anchor/">→ Ground Anchor</a>
+   <a href="/site-investigation-guide/">→ Site Investigation</a>
+   <a href="/resources/">→ All Resources</a>
+  </div>
+ </section></div>
+</main>
+
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor) · A <a href="/">Panthera Group</a> company</p></div></footer>
+
+</body>
+</html>

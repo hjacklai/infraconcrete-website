@@ -130,6 +130,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <!-- Engineer reference / pillar pages 2026-05-08 (12 added) -->
+  <url><loc>https://infraconcrete.co/retaining-wall-design/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/slope-stability-analysis-guide/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/tropical-residual-soil-guide/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/earth-pressure-loading-reference/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/drainage-design-reference/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/materials-specifications-guide/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/climate-monsoon-engineering-guide/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/tunnel-portal-engineering/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/geotechnical-software-reference/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/federal-project-case-studies/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/hillside-development-master-guide/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/cost-programme-guide/</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url>
     <loc>https://infraconcrete.co/bm/sumber/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sumber/"/>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Drainage Design Reference Malaysia | Subsoil, Weep Holes, Blanket, Chimney, French Drains | Infraconcrete</title>
+<meta name="description" content="Drainage design reference for Malaysian geotechnical works. Subsoil drains (perforated UPVC, geocomposite, French drain), weep holes, blanket drains, chimney drains, fin drains, herringbone surface drains, cascade drains, energy dissipators. Filter design (filter geotextile, sand filter, graded gravel). Drainage for retaining walls, slopes, embankments, basement walls. Hydraulic capacity calculation, outlet design, maintenance access. Aligned with BS 8000-14, JKR/SPJ Section 3, MASMA, FHWA-IF-99-016." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="keywords" content="drainage design Malaysia, subsoil drain, weep hole, blanket drain, chimney drain, French drain, filter geotextile, MASMA, JKR drainage, geocomposite drain" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Drainage Design Reference | Engineer's Reference Malaysia" />
+<meta property="og:description" content="Subsoil drains, weep holes, blanket / chimney / fin / French drains, filter design, capacity, maintenance. Practical drainage reference." />
+<meta property="og:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<meta property="og:url" content="https://infraconcrete.co/drainage-design-reference/" />
+<meta property="og:site_name" content="Infraconcrete Construction Sdn Bhd" />
+<meta property="og:locale" content="en_MY" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Drainage Design Reference Malaysia" />
+<meta name="twitter:description" content="Subsoil drains, weep holes, filter design, capacity, maintenance - geotech drainage reference." />
+<meta name="twitter:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<link rel="canonical" href="https://infraconcrete.co/drainage-design-reference/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/drainage-design-reference/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/drainage-design-reference/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="any" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","@id":"https://infraconcrete.co/drainage-design-reference/#article","headline":"Drainage Design Reference for Malaysia","description":"Practical drainage design reference - subsoil drains, weep holes, blanket / chimney / fin / French drains, filter design, capacity, maintenance, outlet detailing.","datePublished":"2026-05-08","dateModified":"2026-05-08","author":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"publisher":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","logo":{"@type":"ImageObject","url":"https://infraconcrete.co/images/brand/logo.png"}},"image":"https://infraconcrete.co/images/projects/project-ekve.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://infraconcrete.co/drainage-design-reference/"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://infraconcrete.co/resources/"},{"@type":"ListItem","position":3,"name":"Drainage Design Reference","item":"https://infraconcrete.co/drainage-design-reference/"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What weep hole spacing should I use for retaining walls?","acceptedAnswer":{"@type":"Answer","text":"BS 8002 / JKR / typical Malaysian practice: weep holes 75-100 mm diameter UPVC pipe, 1-3 m horizontal spacing (1.5-2 m typical), 1-2 m vertical spacing for tall walls (1 m near base where head is highest, 2 m higher up). Each weep hole drains a granular pocket / collector drain behind. Filter geotextile wrap around the pocket prevents soil ingress. Outlet must be visible (above splash apron / drainage channel) so blockage is detectable. Add backup subsoil drain at the base of the wall - perforated 100-150 mm UPVC in granular surround, drained to outlet. Weep holes alone are insufficient for tall walls or high water tables."}},
+{"@type":"Question","name":"How do I design a filter for a subsoil drain?","acceptedAnswer":{"@type":"Answer","text":"Two approaches. (1) Granular filter (graded gravel / sand) - design per Terzaghi-Bertram filter criteria: D15_filter less than 5 * D85_soil (retention), D15_filter greater than 4 * D15_soil (permeability), C_u_filter less than 20, no particles greater than 75 mm. Typical Malaysian Type B/D drainage stone (10-40 mm or 5-20 mm angular) wrapped in filter geotextile. (2) Geotextile filter - non-woven needle-punched, AOS (apparent opening size O95) less than 0.43 mm or per Christopher-Holtz / FHWA criteria, permittivity greater than 0.5 /sec, mass per unit area 200-300 g/m^2 typical. Wrap the granular fill on all sides where it interfaces with native soil. Avoid woven geotextiles for filtration unless specifically certified - they tend to clog."}},
+{"@type":"Question","name":"What's the difference between a blanket drain, chimney drain, and fin drain?","acceptedAnswer":{"@type":"Answer","text":"Blanket drain - horizontal layer of granular drainage material at the base of a fill or behind a wall, intercepting downward seepage and conducting it laterally to an outlet. Used at the base of MSE walls, RC retaining wall stems, embankment fill on saturated subgrade. Chimney drain - vertical strip of granular / geocomposite drainage material rising from the base, intercepting horizontal seepage from the retained side. Used in dam embankments and tall walls where lateral seepage needs vertical interception. Fin drain - thin pre-fabricated drainage strip (geocomposite of geonet plus geotextile, typically 25-50 mm thick) installed vertically against an excavation face. Fast install, low excavation footprint, equivalent hydraulic capacity to a 250-400 mm gravel drain. Used in basement walls, MSE wall facing back, sheet pile retained side."}},
+{"@type":"Question","name":"How much subsoil drain capacity do I need?","acceptedAnswer":{"@type":"Answer","text":"Capacity per Darcy / Manning depending on whether the drain is full-flow (under pressure) or open-channel (gravity). For typical Malaysian residual-soil slope subsoil drain: estimate inflow per linear metre = k * i * A_drainage, where k is the soil permeability (1e-7 to 1e-5 m/s), i is the hydraulic gradient (often around 1), A_drainage is the drainage catchment area per metre of drain. For 100 mm perforated UPVC pipe in graded gravel surround at 0.5 percent grade, capacity is typically 2-5 L/s - more than adequate for residual soil. Capacity is rarely the controlling design - filter design and clogging resistance govern. For high inflow zones (springs, seepage faces), use 150-200 mm pipe or twin pipes, and design longer outlet pipes to a positive discharge point."}}]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Manrope:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/seo-page.css">
+<script src="/js/seo-nav.js" defer></script>
+<style>
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 16px;margin:20px 0;padding:16px;background:rgba(31,27,23,0.04);border-radius:6px}
+.toc-grid a{display:block;padding:6px 0;color:#1F1B17;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;border-bottom:1px solid rgba(31,27,23,0.08)}
+.toc-grid a:hover{color:#C8102E}
+.principle-block{padding:32px 0;border-top:1px solid rgba(31,27,23,0.12)}
+.principle-block:first-of-type{border-top:none}
+.principle-block h3{font-size:clamp(22px,2.4vw,30px);margin:8px 0 16px}
+.principle-block .sys-eye{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#C8102E;text-transform:uppercase}
+.p-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:20px}
+@media(min-width:880px){.p-grid{grid-template-columns:1fr 1fr}}
+.p-section h4{font-size:14px;letter-spacing:0.06em;margin:0 0 8px;color:#1F1B17;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.p-section p{margin:0 0 10px;font-size:15px;line-height:1.6}
+.p-section ul{margin:0;padding-left:20px;font-size:14px;line-height:1.7}
+.params-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13px}
+.params-table th,.params-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(31,27,23,0.1);vertical-align:top}
+.params-table th{background:rgba(31,27,23,0.06);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;font-size:11px;text-transform:uppercase}
+.callout{background:rgba(200,16,46,0.06);border-left:3px solid #C8102E;padding:14px 18px;margin:14px 0;font-size:14px;line-height:1.55}
+.callout strong{color:#C8102E}
+.formula{background:rgba(31,27,23,0.04);padding:14px 18px;border-radius:4px;margin:12px 0;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1.6}
+.formula strong{color:#C8102E}
+.pill{display:inline-block;padding:2px 8px;background:rgba(200,16,46,0.1);color:#C8102E;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;border-radius:3px;margin-right:6px}
+</style>
+</head>
+<body>
+
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">·</span><a href="/resources/">Resources</a><span class="sep">·</span><span class="here">Drainage Design Reference</span></nav></div>
+
+<main>
+ <div class="container">
+  <section class="hero">
+   <div class="eyebrow">Engineering Reference · Resource Hub</div>
+   <h1>Drainage <em>design.</em></h1>
+   <p class="lede">The component-by-component reference for drainage in Malaysian geotechnical works. Subsoil drains (perforated UPVC, geocomposite pipe-in-pipe, French drain). Weep holes (UPVC, vermin grille). Blanket drains, chimney drains, fin drains. Surface drainage (herringbone, V-drain, cascade, energy dissipator, splash apron). Filter design (filter geotextile per Christopher-Holtz / FHWA, sand filter per Terzaghi-Bertram, graded gravel). Hydraulic capacity (Darcy, Manning, full-pipe vs open-channel). Outlet design and maintenance access. Drainage for retaining walls, slopes, embankments, basement walls, tunnel portals. Aligned with BS 8000-14, BS 8500, JKR/SPJ Section 3, MASMA (Stormwater Management for Malaysia DID), FHWA-IF-99-016. By Infraconcrete - CIDB G7 specialist geotechnical contractor.</p>
+   <div class="stats">
+    <div class="stat"><div class="v">7</div><div class="l">Drain types covered</div></div>
+    <div class="stat"><div class="v">3</div><div class="l">Filter design methods</div></div>
+    <div class="stat"><div class="v">G7</div><div class="l">CIDB highest grade</div></div>
+    <div class="stat"><div class="v">100+</div><div class="l">Drainage systems built</div></div>
+   </div>
+  </section>
+
+  <section class="block">
+   <div class="block-eye">Navigation</div>
+   <h2>Jump to a topic.</h2>
+   <div class="toc-grid">
+    <a href="#why">→ Why Drainage Matters</a>
+    <a href="#weep-holes">→ Weep Holes</a>
+    <a href="#subsoil">→ Subsoil Drains</a>
+    <a href="#blanket">→ Blanket Drain</a>
+    <a href="#chimney">→ Chimney Drain</a>
+    <a href="#fin">→ Fin Drain (Geocomposite)</a>
+    <a href="#french">→ French Drain</a>
+    <a href="#surface">→ Surface Drains</a>
+    <a href="#filter">→ Filter Design</a>
+    <a href="#capacity">→ Hydraulic Capacity</a>
+    <a href="#outlet">→ Outlet &amp; Maintenance</a>
+    <a href="#standards">→ Standards Reference</a>
+    <a href="#faq">→ FAQ</a>
+   </div>
+  </section>
+
+  <!-- ===== 01 Why Drainage Matters ===== -->
+  <section class="block principle-block" id="why">
+   <div class="sys-eye">01 / Why Drainage Matters</div>
+   <h3>The cheapest insurance against catastrophic ground load.</h3>
+   <p>Drainage is the most under-funded component of geotechnical works. It is also, from forensic case-history evidence, the most common failure mode for retaining walls and slope stabilization systems. The mechanism is simple: water raises pore pressure, pore pressure reduces effective stress, effective stress reduction reduces shear strength. Drainage carries the water away before pore pressure builds.</p>
+
+   <table class="params-table">
+    <thead><tr><th>System</th><th>Water hazard if drainage fails</th><th>Cost of drainage / total system</th></tr></thead>
+    <tbody>
+     <tr><td>RC cantilever retaining wall</td><td>Lateral pressure can DOUBLE - hydrostatic adds 0.5*gamma_w*H^2</td><td>2-5 percent</td></tr>
+     <tr><td>MSE wall</td><td>Reinforcement strain, facing block displacement, internal washout</td><td>3-7 percent</td></tr>
+     <tr><td>Cut slope (stabilized)</td><td>FoS reduction 5-20 percent; rainfall-induced failure trigger</td><td>3-8 percent</td></tr>
+     <tr><td>Embankment over soft soil</td><td>Stability failure during construction; long-term seepage erosion</td><td>2-5 percent</td></tr>
+     <tr><td>Basement wall</td><td>Hydrostatic uplift, water ingress, rebar corrosion, internal flooding</td><td>5-10 percent</td></tr>
+    </tbody>
+   </table>
+
+   <div class="callout"><strong>Forensic note.</strong> Most reported retaining wall failures in Malaysia have a drainage component - clogged weep holes, missing filter, no subsoil drain, or outlet pipe blocked at the discharge end. Spending 3-5 percent of project value on robust drainage prevents most failure modes. Skimping on drainage is the most expensive saving an engineer can make.</div>
+  </section>
+
+  <!-- ===== 02 Weep Holes ===== -->
+  <section class="block principle-block" id="weep-holes">
+   <div class="sys-eye">02 / Weep Holes</div>
+   <h3>The visible drainage outlet through the wall face.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Specification</h4>
+     <ul>
+      <li>Material: 75-100 mm UPVC pipe, schedule 80 or class D / E</li>
+      <li>Slope: 1-2 percent toward outlet face</li>
+      <li>Spacing: 1.5-2 m horizontal typical (1-3 m range)</li>
+      <li>Vertical: 1 m near base (high head), 2 m higher up</li>
+      <li>Vermin grille / fly screen at outlet to prevent blockage</li>
+      <li>Granular pocket / collector drain wrapped in filter geotextile behind each weep hole</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>Design rationale</h4>
+     <p>Weep holes alone are not sufficient for tall walls or high water tables - they relieve a local pocket but cannot drain a large saturated zone. Always combine with:</p>
+     <ul>
+      <li>Subsoil drain at the base of the wall (continuous, draining to outlet at low end)</li>
+      <li>Free-draining backfill (granular, less than 10 percent fines passing 75 micron)</li>
+      <li>Or - chimney / fin drain on the back face of the wall</li>
+     </ul>
+    </div>
+   </div>
+
+   <div class="callout"><strong>Maintenance.</strong> Weep holes must be visible at the outlet face - above splash apron, above drainage channel - so blockage is detectable on routine inspection. Hidden weep holes (buried by landscaping, concealed by render) become disabled drainage. Specify an "inspection during defect liability" task in contract documentation - flush each weep hole at handover and at end of DLP.</div>
+  </section>
+
+  <!-- ===== 03 Subsoil Drains ===== -->
+  <section class="block principle-block" id="subsoil">
+   <div class="sys-eye">03 / Subsoil Drains</div>
+   <h3>The continuous toe drain that catches everything.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Components</h4>
+     <ul>
+      <li>Pipe: 100-200 mm perforated UPVC (typical 100-150 mm), holes 5-10 mm at top, plain at base (or wrap pipe in filter geotextile sock)</li>
+      <li>Granular surround: 300-500 mm thick, free-draining angular gravel (10-40 mm or 5-20 mm)</li>
+      <li>Filter wrap: non-woven needle-punched geotextile (200-300 g/m^2) on all interfaces with native soil</li>
+      <li>Bedding: 100 mm bedding stone or sand-cement</li>
+      <li>Slope: 0.5 to 2 percent toward outlet</li>
+      <li>Manholes / inspection points: every 30-50 m, at every change of direction</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>Where to use</h4>
+     <ul>
+      <li>Toe of retaining wall (RC cantilever, MSE, modular block, gabion, crib)</li>
+      <li>Toe of cut slope above berms</li>
+      <li>Behind sheet pile / contiguous bored pile retaining wall</li>
+      <li>Beneath embankment fill (where saturated subgrade)</li>
+      <li>Around basement perimeter (with sump pump on intermittent inflow)</li>
+      <li>Cut-off drains across drainage paths to intercept seepage</li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== 04 Blanket Drain ===== -->
+  <section class="block principle-block" id="blanket">
+   <div class="sys-eye">04 / Blanket Drain</div>
+   <h3>Horizontal layer beneath fill or behind wall.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>What it does</h4>
+     <p>Continuous horizontal drainage layer that intercepts downward seepage from above (rainfall, surface infiltration) or upward seepage from below (saturated foundation, perched water table). Conducts collected water laterally to a discharge point at the perimeter.</p>
+    </div>
+    <div class="p-section">
+     <h4>Specification</h4>
+     <ul>
+      <li>Thickness: 200-500 mm typical (deeper for high inflow)</li>
+      <li>Material: free-draining angular gravel or geocomposite drainage mat</li>
+      <li>Filter: geotextile on top and bottom (or on the side facing fines-rich soil)</li>
+      <li>Discharge: connected to perimeter subsoil drain or weep holes / outlets at low edge</li>
+      <li>Slope: 1-3 percent toward outlet</li>
+     </ul>
+    </div>
+   </div>
+   <div class="callout"><strong>Use cases.</strong> Base of MSE wall (drainage layer between wall and foundation soil). Beneath rail / highway embankment fill placed on saturated subgrade. Behind RC retaining wall (if free-draining backfill is impractical, use blanket layer between wall back face and cohesive backfill). Top of soil-cement blanket / capping layer in landfill design.</div>
+  </section>
+
+  <!-- ===== 05 Chimney Drain ===== -->
+  <section class="block principle-block" id="chimney">
+   <div class="sys-eye">05 / Chimney Drain</div>
+   <h3>Vertical interception of lateral seepage.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>What it does</h4>
+     <p>Vertical strip of granular / geocomposite drainage rising from the base of an embankment or wall, intercepting horizontal seepage from the retained or upslope side. Directs water down to a base blanket drain or subsoil drain for outlet.</p>
+    </div>
+    <div class="p-section">
+     <h4>Specification</h4>
+     <ul>
+      <li>Width: 300-1000 mm (typical 500 mm) for granular; 25-100 mm for geocomposite fin</li>
+      <li>Material: free-draining granular fill or geocomposite (geonet plus geotextile)</li>
+      <li>Filter: geotextile on the soil-side face</li>
+      <li>Connection at base: continuous to subsoil drain or blanket drain</li>
+     </ul>
+    </div>
+   </div>
+   <div class="callout"><strong>Dam embankment classic.</strong> The chimney drain is the heart of zoned earth dam design (clay core, transition zones, granular shoulders, chimney drain at downstream face of core). Adapted to highway / rail embankments and large retaining walls in Malaysia. Less common in low retaining walls where blanket plus weep holes suffice.</div>
+  </section>
+
+  <!-- ===== 06 Fin Drain ===== -->
+  <section class="block principle-block" id="fin">
+   <div class="sys-eye">06 / Fin Drain (Geocomposite)</div>
+   <h3>Pre-fabricated, thin, fast-install drainage strip.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>What it is</h4>
+     <p>Thin pre-fabricated drainage panel: typically a geonet core (HDPE cuspated or biplanar) wrapped in non-woven geotextile filter. 25-50 mm thick. Comes in rolls or panels, installed directly against an excavation face or wall back.</p>
+     <p>Hydraulic capacity per unit width is equivalent to a 250-400 mm thick gravel drain - so a 25 mm geocomposite replaces a 0.3 m gravel section.</p>
+    </div>
+    <div class="p-section">
+     <h4>Where to use</h4>
+     <ul>
+      <li>Basement wall back face (cast-in-place or sheet-piled)</li>
+      <li>MSE wall facing back (between facing block and reinforced fill)</li>
+      <li>Tieback / anchored wall back face</li>
+      <li>Steep cut slope where excavation footprint must be minimized</li>
+      <li>Behind RC cantilever wall stem where backfill space is limited</li>
+     </ul>
+    </div>
+   </div>
+   <div class="callout"><strong>Connection detail matters.</strong> The fin drain must connect at the bottom to a subsoil drain or weep hole - it cannot terminate in the ground. Improperly terminated fin drains fail by routing water to where there is no outlet. Specify a continuous geocomposite-to-pipe transition with adequate overlap and waterproof seal at penetration points.</div>
+  </section>
+
+  <!-- ===== 07 French Drain ===== -->
+  <section class="block principle-block" id="french">
+   <div class="sys-eye">07 / French Drain</div>
+   <h3>Granular trench - the original subsoil drain.</h3>
+   <p>A French drain is a trench filled with permeable material (gravel) that may or may not contain a perforated pipe. Originally pipe-less, modern French drains include a perforated pipe as standard.</p>
+
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Specification</h4>
+     <ul>
+      <li>Trench: 300-600 mm wide, 600-1200 mm deep (depends on outlet level)</li>
+      <li>Pipe: 100-150 mm perforated UPVC, holes facing up</li>
+      <li>Surround: 10-40 mm angular gravel, full trench backfill</li>
+      <li>Filter geotextile lining: full trench wrap</li>
+      <li>Cap: 100-200 mm topsoil or paving (if hidden) or visible surface stone (if exposed)</li>
+      <li>Slope: 0.5-2 percent toward outlet</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>Best practice</h4>
+     <ul>
+      <li>Always wrap with filter geotextile - direct contact with native fines clogs the gravel within 5-10 years</li>
+      <li>Always install perforated pipe - gravel-only French drains have lower capacity and clog faster</li>
+      <li>Inspection chambers at every change of direction and every 30-50 m</li>
+      <li>Outlet: positive discharge to surface drain or sump - never blind into ground</li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== 08 Surface Drains ===== -->
+  <section class="block principle-block" id="surface">
+   <div class="sys-eye">08 / Surface Drains</div>
+   <h3>Stop water reaching the slope or wall.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Types</h4>
+     <ul>
+      <li><strong>Berm drains</strong> - V-section concrete drain along bench / berm at top of cut slope and at intermediate berms</li>
+      <li><strong>Toe drains</strong> - U-section or trapezoidal drain at toe of slope, conducting water to discharge</li>
+      <li><strong>Cascade drains</strong> - stepped concrete drain on slope face, energy-dissipated at each step</li>
+      <li><strong>Herringbone drains</strong> - shallow trench drains across the slope face, intercepting surface runoff</li>
+      <li><strong>Catch drains</strong> - perimeter drain at top of cut to prevent water entering the slope catchment</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>Design considerations</h4>
+     <ul>
+      <li>Capacity per MASMA (DID) and JKR design rainfall (typically 100-year return for arterial / federal works)</li>
+      <li>Energy dissipation at every drop greater than 0.5-1 m to prevent erosion at base</li>
+      <li>Concrete grade: 25 to 30 N/mm^2 typical, with anti-spalling for steep / cascade sections</li>
+      <li>Joint sealing - failure of joints in concrete drains is a primary maintenance issue</li>
+      <li>Outlet to existing drainage infrastructure - never blind discharge to slope toe</li>
+     </ul>
+    </div>
+   </div>
+   <div class="callout"><strong>Slope face hygiene.</strong> A well-drained slope is one where surface water is intercepted at the crest and at intermediate berms, conducted laterally by berm drains, then discharged via cascade drains at slope shoulder. Subsoil drains intercept any seepage that does enter the slope. Cracked, blocked, or eroded surface drains undo the design.</div>
+  </section>
+
+  <!-- ===== 09 Filter Design ===== -->
+  <section class="block principle-block" id="filter">
+   <div class="sys-eye">09 / Filter Design</div>
+   <h3>Stop fines clogging the drain.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Granular filter (Terzaghi-Bertram)</h4>
+     <div class="formula"><strong>Retention.</strong> D15_filter less than 5 * D85_protected_soil<br><strong>Permeability.</strong> D15_filter greater than 4 * D15_protected_soil<br><strong>Stability.</strong> D60_filter / D10_filter (C_u) less than 20<br><strong>Maximum size.</strong> D100_filter less than 75 mm; no oversize</div>
+     <p>Sand filter: typically washed concrete sand, well-graded medium sand, or graded gravel. Multi-stage filter (sand-gravel-coarse gravel) for very fine soils.</p>
+    </div>
+    <div class="p-section">
+     <h4>Geotextile filter (Christopher-Holtz / FHWA)</h4>
+     <p>Non-woven needle-punched geotextile selected by:</p>
+     <ul>
+      <li>AOS (apparent opening size O95): less than 0.43 mm or O95 less than 1.8 D85 (depends on soil)</li>
+      <li>Permittivity (psi): greater than 0.5 /sec (drained)</li>
+      <li>Mass per unit area: 200-300 g/m^2 typical for residual soil filtration</li>
+      <li>Tensile and puncture strength sufficient for installation stress</li>
+      <li>UV stability if exposed (usually buried)</li>
+     </ul>
+     <p>Avoid woven geotextiles for filter use - they tend to clog with fines.</p>
+    </div>
+   </div>
+
+   <div class="callout"><strong>Filter compatibility check.</strong> For residual soil with significant fines (less than 75 micron content greater than 30 percent), do a filter compatibility test - install a small column with proposed filter on top of soil sample, percolate water for 24-48 hours, check effluent clarity and flow rate over time. Excessive piping (turbid effluent) or significant clogging (flow drops more than 50 percent) means the filter is wrong - revise gradation or change geotextile AOS.</div>
+  </section>
+
+  <!-- ===== 10 Capacity ===== -->
+  <section class="block principle-block" id="capacity">
+   <div class="sys-eye">10 / Hydraulic Capacity</div>
+   <h3>How much water can the drain carry.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Inflow estimation</h4>
+     <p>For a slope subsoil drain intercepting steady seepage:</p>
+     <div class="formula">Q_inflow = k_soil * i * A_drainage<br>(k_soil = soil permeability ~ 1e-7 to 1e-5 m/s for residual soil; i = hydraulic gradient ~ 1 for wall toe drain; A_drainage = catchment area per unit length of drain)</div>
+     <p>For rainfall-dominated catchment (surface drain), use rational formula:</p>
+     <div class="formula">Q = C * I * A<br>(C = runoff coefficient 0.6-0.95 for paved / cleared slope; I = design intensity from MASMA; A = catchment area)</div>
+    </div>
+    <div class="p-section">
+     <h4>Pipe capacity (Manning)</h4>
+     <div class="formula">V = (1/n) * R^(2/3) * S^(1/2)<br>Q = V * A<br>(n = Manning roughness 0.011 for new UPVC, 0.013-0.015 for aged; R = hydraulic radius; S = slope; A = pipe cross section)</div>
+     <p>For 100 mm UPVC at 0.5 percent slope, full-flow capacity: ~3-4 L/s. At 1 percent slope: ~4-6 L/s. Typically 3-10x more than required for residual-soil seepage drainage.</p>
+    </div>
+   </div>
+
+   <table class="params-table">
+    <thead><tr><th>Pipe size</th><th>Slope 0.5%</th><th>Slope 1%</th><th>Slope 2%</th><th>Typical use</th></tr></thead>
+    <tbody>
+     <tr><td>100 mm UPVC perf</td><td>~2.5 L/s</td><td>~3.5 L/s</td><td>~5 L/s</td><td>Standard wall toe / slope subsoil</td></tr>
+     <tr><td>150 mm UPVC perf</td><td>~6 L/s</td><td>~9 L/s</td><td>~12 L/s</td><td>High inflow zone, spring intercept</td></tr>
+     <tr><td>200 mm UPVC perf</td><td>~12 L/s</td><td>~18 L/s</td><td>~25 L/s</td><td>Major collector, multiple sub-drains feeding in</td></tr>
+    </tbody>
+   </table>
+   <p>Values approximate, full-flow open-pipe Manning. For grated / open channel drains (V-drains, U-drains), use trapezoidal Manning.</p>
+  </section>
+
+  <!-- ===== 11 Outlet ===== -->
+  <section class="block principle-block" id="outlet">
+   <div class="sys-eye">11 / Outlet &amp; Maintenance Access</div>
+   <h3>The drain is only as good as its outlet.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Outlet design</h4>
+     <ul>
+      <li>Positive discharge - to existing drainage channel, sump, or stream</li>
+      <li>Visible at outlet face - so blockage is detectable</li>
+      <li>Above-flood-level (above 100-year flood mark for federal works)</li>
+      <li>Erosion protection at discharge - rip-rap, splash apron, or energy dissipator</li>
+      <li>Vermin / fauna grille at outlet</li>
+      <li>No back-flow pathway - non-return valve if discharging to higher water level (rare)</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>Maintenance access</h4>
+     <ul>
+      <li>Inspection chambers at every change of direction and every 30-50 m of straight pipe</li>
+      <li>Flushing access points at upstream end of each drain run</li>
+      <li>Marker / signage above buried outlet to prevent accidental burial</li>
+      <li>Operations and maintenance manual specifying inspection / flushing frequency</li>
+      <li>Records of inflow rate / clarity at handover, baseline for future comparison</li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== 12 Standards ===== -->
+  <section class="block principle-block" id="standards">
+   <div class="sys-eye">12 / Standards Reference</div>
+   <h3>Codes and references.</h3>
+   <table class="params-table">
+    <thead><tr><th>Topic</th><th>Reference</th></tr></thead>
+    <tbody>
+     <tr><td>General drainage standards</td><td>BS 8000-14 (drainage workmanship), BS 8500 (concrete), BS EN 1610 (drain construction)</td></tr>
+     <tr><td>Malaysian guidance</td><td>JKR/SPJ Section 3 (drainage), MASMA (DID Stormwater Management for Malaysia, 2nd Edition)</td></tr>
+     <tr><td>Filter design (granular)</td><td>Terzaghi &amp; Peck (1948), Bertram (1940), USACE EM 1110-2-1901</td></tr>
+     <tr><td>Filter design (geotextile)</td><td>Christopher &amp; Holtz (1985), FHWA-IF-99-016, Koerner (Designing with Geosynthetics)</td></tr>
+     <tr><td>Slope drainage</td><td>JKR Slope Engineering Manual, GCO Hong Kong publications</td></tr>
+     <tr><td>Embankment drainage</td><td>BS 6031, BS 8006-1, FHWA-NHI-12-024</td></tr>
+     <tr><td>Geocomposite drains</td><td>ASTM D4716, GRI-GC8, ISO 12958 (transmissivity)</td></tr>
+     <tr><td>Pipe materials</td><td>BS 4660 / BS EN 1401 (UPVC), BS EN 1852 (PP), MS 628 (Malaysian UPVC)</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="block" id="faq">
+   <div class="block-eye">Frequently asked</div>
+   <h2>Drainage <em>questions.</em></h2>
+   <details class="faq-item"><summary>What weep hole spacing should I use? <span class="ic">+</span></summary><div class="ans">75-100 mm UPVC, 1.5-2 m horizontal (1-3 m range), 1 m vertical near base / 2 m higher up. Each weep hole drains a granular pocket wrapped in filter geotextile. Combine with continuous subsoil drain at the base of the wall - weep holes alone are insufficient for tall walls.</div></details>
+   <details class="faq-item"><summary>How do I design a filter? <span class="ic">+</span></summary><div class="ans">Two methods. Granular: Terzaghi-Bertram - D15_filter less than 5 * D85_soil (retention), D15_filter greater than 4 * D15_soil (permeability), Cu less than 20. Geotextile: Christopher-Holtz / FHWA - non-woven needle-punched, AOS less than 0.43 mm, permittivity greater than 0.5/sec, mass 200-300 g/m^2.</div></details>
+   <details class="faq-item"><summary>What's the difference between blanket, chimney, and fin drains? <span class="ic">+</span></summary><div class="ans">Blanket: horizontal layer at base, intercepts vertical seepage. Chimney: vertical strip rising from base, intercepts horizontal seepage. Fin: thin pre-fabricated geocomposite (25-50 mm), installed against excavation face - replaces 250-400 mm gravel layer.</div></details>
+   <details class="faq-item"><summary>How much subsoil drain capacity do I need? <span class="ic">+</span></summary><div class="ans">Estimate inflow Q = k_soil * i * A_drainage. For Malaysian residual soil with k = 1e-6 m/s typical, the inflow per metre is small. 100 mm UPVC at 0.5 percent slope handles 2-5 L/s - typically 5-10x the actual inflow. Capacity rarely controls; filter design and clogging resistance govern.</div></details>
+   <details class="faq-item"><summary>Should I use granular or geocomposite drains? <span class="ic">+</span></summary><div class="ans">Granular (gravel + perforated pipe): proven, easy to inspect, low unit cost where excavation footprint is generous. Geocomposite (fin drain): fast install, low excavation, equivalent capacity in 25-50 mm vs 250-400 mm gravel - chosen where space is tight (basement walls, MSE back face, deep excavation). Both can fail at outlet connections - detail with care.</div></details>
+  </section>
+ </div>
+
+ <section class="cta-block"><div class="container"><h2>Need <em>drainage design</em> for your project?</h2><p>Send the wall / slope / embankment geometry, soil report, and constraints. Same-day response from the engineering team. We design under design-build, or as the specialist contractor under your appointed consulting engineer.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp the team →</a><a class="btn btn-ghost" href="/#contact">All contact details</a></div></div></section>
+
+ <div class="container"><section class="block"><div class="block-eye">Cross-references</div><h2>Read more.</h2>
+  <div class="toc-grid">
+   <a href="/retaining-wall-design/">→ Retaining Wall Design</a>
+   <a href="/earth-pressure-loading-reference/">→ Earth Pressure &amp; Loading</a>
+   <a href="/geotechnical-design-guide/">→ Geotechnical Design Guide</a>
+   <a href="/compare-drainage-methods/">→ Drainage Methods Comparison</a>
+   <a href="/erosion-control/">→ Erosion Control</a>
+   <a href="/slope-stabilization/">→ Slope Stabilization</a>
+   <a href="/qa-testing-guide/">→ QA &amp; Testing</a>
+   <a href="/resources/">→ All Resources</a>
+  </div>
+ </section></div>
+</main>
+
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor) · A <a href="/">Panthera Group</a> company</p></div></footer>
+
+</body>
+</html>

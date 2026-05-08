@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Geotechnical Software Reference Malaysia | Slope/W, Slide, PLAXIS, FLAC, RS2, Plaxis LE | Infraconcrete</title>
+<meta name="description" content="Comparative reference to geotechnical software used in Malaysia. Slope stability (Slope/W, Slide2/3, PLAXIS LE, RocPlane). FE soil (PLAXIS 2D/3D, RS2/RS3, FLAC). Settlement and consolidation (PLAXIS, GeoStudio). Seepage (Seep/W, PLAXIS Flow, RS2 Groundwater). Pile design (PIGLET, ALLPILE, Wallap). Wall analysis (Wallap, Geo5). Reinforced soil (MSEW, ReSSA, NCMA). Probabilistic / reliability (Slide / @Risk). With strengths, weaknesses, and Malaysian project use cases." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="keywords" content="geotechnical software Malaysia, Slope/W, Slide Rocscience, PLAXIS Malaysia, FLAC, RS2 RS3, Wallap, Plaxis LE, geotech software comparison" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Geotechnical Software Reference | Malaysia" />
+<meta property="og:description" content="Slope/W, Slide, PLAXIS, FLAC, RS2, Wallap, MSEW - what's used in Malaysia and when each tool is right." />
+<meta property="og:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<meta property="og:url" content="https://infraconcrete.co/geotechnical-software-reference/" />
+<meta property="og:site_name" content="Infraconcrete Construction Sdn Bhd" />
+<meta property="og:locale" content="en_MY" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Geotechnical Software Reference Malaysia" />
+<meta name="twitter:description" content="What software for slope, wall, pile, settlement, seepage - and when each is the right tool." />
+<meta name="twitter:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<link rel="canonical" href="https://infraconcrete.co/geotechnical-software-reference/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/geotechnical-software-reference/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geotechnical-software-reference/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="any" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","@id":"https://infraconcrete.co/geotechnical-software-reference/#article","headline":"Geotechnical Software Reference for Malaysia","description":"Comparative reference to geotechnical software used in Malaysia for slope stability, FE soil, settlement, seepage, pile design, retaining wall analysis, reinforced soil, and reliability.","datePublished":"2026-05-08","dateModified":"2026-05-08","author":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"publisher":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","logo":{"@type":"ImageObject","url":"https://infraconcrete.co/images/brand/logo.png"}},"image":"https://infraconcrete.co/images/projects/project-ekve.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://infraconcrete.co/geotechnical-software-reference/"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://infraconcrete.co/resources/"},{"@type":"ListItem","position":3,"name":"Geotechnical Software Reference","item":"https://infraconcrete.co/geotechnical-software-reference/"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What's the most common slope stability software in Malaysia?","acceptedAnswer":{"@type":"Answer","text":"Slope/W (GeoStudio, Bentley / Seequent) is the most widely used in Malaysia - the industry default for slope stability analysis. Reasons: gentle learning curve, strong support and training in Malaysia, all standard LEM methods (Bishop / Janbu / Spencer / Morgenstern-Price / Sarma / Ordinary), probabilistic analysis, integration with Seep/W (transient seepage) and Sigma/W (deformation). Slide2 / Slide3 (Rocscience) is the rising alternative with better slip search algorithms and 3D capability - increasingly common at large engineering consultancies. PLAXIS LE (formerly SVSlope) is used for 3D LEM and tightly coupled FE-LEM workflows. For FEM strength reduction (FEM-SRM): PLAXIS 2D / 3D dominates Malaysian practice, with RS2 / RS3 (Rocscience) and FLAC (Itasca) for specialist work."}},
+{"@type":"Question","name":"What software is used for soil-structure interaction?","acceptedAnswer":{"@type":"Answer","text":"PLAXIS 2D and PLAXIS 3D (Bentley) is the dominant FE software in Malaysia for soil-structure interaction problems. Use cases: deep excavations (basement, tunnel), retaining walls (cantilever, anchored, sheet pile, MSE), embankments on soft soil, pile groups under lateral / axial / combined loading, ground improvement (deep mixing, stone columns, PVD). Strong soil model library (Mohr-Coulomb, Hardening Soil HS, HSsmall, Soft Soil, Modified Cam-Clay, NGI-ADP for soft clay, Generalised Hardening Soil) and structural elements (plates, beams, geotextile, anchors, embedded piles). RS2 / RS3 (Rocscience) is the alternative for rock-dominated problems. FLAC / FLAC3D (Itasca) for large-strain, dynamic, or coupled stress-flow analyses (rapid drawdown, earthquake, debris flow initiation)."}},
+{"@type":"Question","name":"What software is used for retaining wall design in Malaysia?","acceptedAnswer":{"@type":"Answer","text":"For embedded retaining walls (sheet pile, secant pile, contiguous bored pile, diaphragm wall): Wallap (GEOS Department, Cambridge - now Geocentrix) is widely used in Malaysia for limit equilibrium / SSI analysis with construction sequence. ReWaRD (Geocentrix) for ground anchors / tieback walls. PLAXIS 2D for FE soil-structure interaction on complex projects. For MSE walls / SRW: MSEW (FHWA standard), ReSSA (ADAMA), NCMA SRW Design (US Concrete Masonry Association) - each implements the FHWA-NHI-10-024 / NCMA SRW Manual / BS 8006-1 design methods. Geo5 (Fine - Czech / EU) is gaining traction as an all-in-one for cantilever walls, gabion, sheet pile, MSE."}},
+{"@type":"Question","name":"What software is used for pile design?","acceptedAnswer":{"@type":"Answer","text":"For axial pile capacity and settlement: spreadsheet calculations to BS EN 1997-1 / Eurocode 7, FHWA-NHI-16-009, AASHTO are standard. Dedicated software: PIGLET (J. Randolph) for pile group analysis. ALLPILE (Civiltech) for individual pile analysis with various methods. PLAXIS or RS2 for FE pile-soil-structure interaction (load test simulation, group effects, lateral pile under cyclic load). For lateral piles: LPILE (Ensoft) is the international standard, COM624P legacy code; PLAXIS for FE. For pile installation modeling (driving stress, bearing capacity from driving): GRLWEAP or CAPWAP (Pile Dynamics) are specialist. Static load tests are interpreted via Davisson 1972, Chin 1970, Brinch Hansen 1963 methods, often in spreadsheet."}}]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Manrope:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/seo-page.css">
+<script src="/js/seo-nav.js" defer></script>
+<style>
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 16px;margin:20px 0;padding:16px;background:rgba(31,27,23,0.04);border-radius:6px}
+.toc-grid a{display:block;padding:6px 0;color:#1F1B17;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;border-bottom:1px solid rgba(31,27,23,0.08)}
+.toc-grid a:hover{color:#C8102E}
+.principle-block{padding:32px 0;border-top:1px solid rgba(31,27,23,0.12)}
+.principle-block:first-of-type{border-top:none}
+.principle-block h3{font-size:clamp(22px,2.4vw,30px);margin:8px 0 16px}
+.principle-block .sys-eye{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#C8102E;text-transform:uppercase}
+.p-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:20px}
+@media(min-width:880px){.p-grid{grid-template-columns:1fr 1fr}}
+.p-section h4{font-size:14px;letter-spacing:0.06em;margin:0 0 8px;color:#1F1B17;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.p-section p{margin:0 0 10px;font-size:15px;line-height:1.6}
+.p-section ul{margin:0;padding-left:20px;font-size:14px;line-height:1.7}
+.params-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13px}
+.params-table th,.params-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(31,27,23,0.1);vertical-align:top}
+.params-table th{background:rgba(31,27,23,0.06);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;font-size:11px;text-transform:uppercase}
+.callout{background:rgba(200,16,46,0.06);border-left:3px solid #C8102E;padding:14px 18px;margin:14px 0;font-size:14px;line-height:1.55}
+.callout strong{color:#C8102E}
+.formula{background:rgba(31,27,23,0.04);padding:14px 18px;border-radius:4px;margin:12px 0;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1.6}
+.formula strong{color:#C8102E}
+.pill{display:inline-block;padding:2px 8px;background:rgba(200,16,46,0.1);color:#C8102E;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;border-radius:3px;margin-right:6px}
+</style>
+</head>
+<body>
+
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">·</span><a href="/resources/">Resources</a><span class="sep">·</span><span class="here">Geotechnical Software Reference</span></nav></div>
+
+<main>
+ <div class="container">
+  <section class="hero">
+   <div class="eyebrow">Software Reference · Resource Hub</div>
+   <h1>Geotechnical <em>software.</em></h1>
+   <p class="lede">A comparative reference to the geotechnical software actually used in Malaysian engineering practice. Slope stability (Slope/W, Slide2/3, PLAXIS LE, RocPlane, Swedge). FE soil-structure interaction (PLAXIS 2D / 3D, RS2 / RS3, FLAC / FLAC3D, ZSoil, ABAQUS). Settlement and consolidation (PLAXIS, GeoStudio Sigma/W). Seepage (Seep/W, PLAXIS Flow, RS2 Groundwater, FEFLOW). Pile design (PIGLET, ALLPILE, LPILE, PLAXIS pile module). Retaining wall analysis (Wallap, ReWaRD, Geo5, PLAXIS). Reinforced soil walls (MSEW, ReSSA, NCMA SRW). Probabilistic and reliability (Slide / @Risk, Crystal Ball). With strengths, weaknesses, learning curve, and use cases for Malaysian projects. By Infraconcrete - CIDB G7 specialist geotechnical contractor.</p>
+   <div class="stats">
+    <div class="stat"><div class="v">25+</div><div class="l">Software titles covered</div></div>
+    <div class="stat"><div class="v">8</div><div class="l">Analysis categories</div></div>
+    <div class="stat"><div class="v">G7</div><div class="l">CIDB highest grade</div></div>
+    <div class="stat"><div class="v">200+</div><div class="l">Analyses run in-house</div></div>
+   </div>
+  </section>
+
+  <section class="block">
+   <div class="block-eye">Navigation</div>
+   <h2>Jump to a topic.</h2>
+   <div class="toc-grid">
+    <a href="#slope">→ Slope Stability</a>
+    <a href="#fe-soil">→ FE Soil-Structure</a>
+    <a href="#settlement">→ Settlement &amp; Consolidation</a>
+    <a href="#seepage">→ Seepage</a>
+    <a href="#pile">→ Pile Design</a>
+    <a href="#retaining-wall">→ Retaining Wall</a>
+    <a href="#mse">→ MSE / Reinforced Soil</a>
+    <a href="#rock">→ Rock Mechanics</a>
+    <a href="#probabilistic">→ Probabilistic / Reliability</a>
+    <a href="#choosing">→ Choosing the Right Tool</a>
+    <a href="#standards">→ Standards Reference</a>
+    <a href="#faq">→ FAQ</a>
+   </div>
+  </section>
+
+  <!-- ===== 01 Slope ===== -->
+  <section class="block principle-block" id="slope">
+   <div class="sys-eye">01 / Slope Stability</div>
+   <h3>Limit equilibrium and FE strength reduction.</h3>
+   <table class="params-table">
+    <thead><tr><th>Software</th><th>Vendor</th><th>Type</th><th>Strengths</th><th>Use case</th></tr></thead>
+    <tbody>
+     <tr><td>Slope/W (GeoStudio)</td><td>Bentley / Seequent</td><td>2D LEM</td><td>Industry default Malaysia. All LEM methods. Probabilistic. Coupled with Seep/W / Sigma/W. Easy to learn.</td><td>Routine cut/fill slope, embankment, dam, MSE wall global stability</td></tr>
+     <tr><td>Slide2 / Slide3</td><td>Rocscience</td><td>2D / 3D LEM</td><td>Best slip search algorithms. 3D capability. Strong probabilistic. Excellent post-processing.</td><td>Complex 3D geometry, large-scale slopes, probabilistic / sensitivity, mining</td></tr>
+     <tr><td>PLAXIS LE (formerly SVSlope)</td><td>Bentley</td><td>2D / 3D LEM</td><td>3D LEM, integrated with PLAXIS FEM workflow. Solid for tailings dams, large pits.</td><td>Tightly-coupled FE-LEM workflow; large 3D geometry</td></tr>
+     <tr><td>PLAXIS 2D / 3D (FEM SRM)</td><td>Bentley</td><td>FEM strength reduction</td><td>Premier FE in Malaysia. Excellent soil-structure. Wide soil model library.</td><td>Walls + reinforcement, deep excavation slopes, strain-softening</td></tr>
+     <tr><td>RS2 / RS3</td><td>Rocscience</td><td>FEM continuum</td><td>Best for rock slope, tunnel-slope interaction. SSR strength reduction. Coupled stress-flow.</td><td>Rock slope, tunnel portal, jointed rock mass</td></tr>
+     <tr><td>FLAC / FLAC3D</td><td>Itasca</td><td>FDM continuum</td><td>Large strain, progressive failure, dynamic. Specialist tool.</td><td>Earthquake, rapid drawdown, debris flow initiation, very weak ground</td></tr>
+     <tr><td>RocPlane / Swedge / RocTopple</td><td>Rocscience</td><td>Kinematic rock</td><td>Plane sliding, wedge, toppling failure - rock slope kinematic checks via stereonet.</td><td>Rock slope kinematic analysis (preliminary, jointed rock)</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== 02 FE Soil ===== -->
+  <section class="block principle-block" id="fe-soil">
+   <div class="sys-eye">02 / FE Soil-Structure Interaction</div>
+   <h3>The complex problems where LEM doesn't work.</h3>
+   <table class="params-table">
+    <thead><tr><th>Software</th><th>Vendor</th><th>Strengths</th><th>Soil models</th><th>Malaysian use</th></tr></thead>
+    <tbody>
+     <tr><td>PLAXIS 2D</td><td>Bentley</td><td>Most widely used Malaysia. Strong workflow. Industry training. Wide soil model library.</td><td>MC, HS, HSsmall, SS, MCC, NGI-ADP, GHS</td><td>Standard for deep excavation, walls, embankments, ground improvement</td></tr>
+     <tr><td>PLAXIS 3D</td><td>Bentley</td><td>3D capability for true geometry effects (corners, partial walls, complex piling).</td><td>Same as 2D library</td><td>Mega-projects, station boxes, complex urban excavation</td></tr>
+     <tr><td>RS2 / RS3</td><td>Rocscience</td><td>Strong rock mechanics. Joint elements. Coupled stress-flow.</td><td>MC, Hoek-Brown, Generalised Hoek-Brown, Cam-Clay variants</td><td>Tunnel, deep mining, rock slope, hydropower</td></tr>
+     <tr><td>FLAC / FLAC3D</td><td>Itasca</td><td>Explicit time-marching. Large strain. Dynamic. Most flexible programmable input.</td><td>MC, MC strain-softening, HS, Cam-Clay, custom user models</td><td>Earthquake, rapid drawdown, large-deformation analysis</td></tr>
+     <tr><td>ZSoil</td><td>Zace</td><td>Coupled multi-physics, stages, time-dependent.</td><td>MC, Cam-Clay, Mohr-Coulomb-Drucker-Prager hybrid</td><td>Less common Malaysia; specialist consultancies</td></tr>
+     <tr><td>ABAQUS</td><td>Dassault Systemes</td><td>General-purpose FEM. Most powerful for non-standard problems.</td><td>Wide library plus user subroutines</td><td>Research, very specialist work, university connections</td></tr>
+    </tbody>
+   </table>
+
+   <div class="callout"><strong>Soil model selection.</strong> Mohr-Coulomb (MC) - simple, suitable for preliminary work and where deformation is not critical. Hardening Soil (HS) - captures stress-dependent stiffness, suitable for excavations. HSsmall - adds small-strain stiffness, suitable for deep excavation deformation prediction (heave, surrounding settlement). Soft Soil / Modified Cam-Clay - for normally consolidated soft clay. NGI-ADP - for sensitive marine clay (anisotropic strength).</div>
+  </section>
+
+  <!-- ===== 03 Settlement ===== -->
+  <section class="block principle-block" id="settlement">
+   <div class="sys-eye">03 / Settlement &amp; Consolidation</div>
+   <h3>Soft soil and embankment programmes.</h3>
+   <table class="params-table">
+    <thead><tr><th>Software</th><th>Type</th><th>Use</th></tr></thead>
+    <tbody>
+     <tr><td>PLAXIS 2D / 3D</td><td>FEM with soft soil models (SS, MCC, NGI-ADP)</td><td>Embankment over soft clay - stage construction, pore pressure dissipation, time-dependent settlement</td></tr>
+     <tr><td>Sigma/W (GeoStudio)</td><td>FE deformation, integrated with Slope/W / Seep/W</td><td>Coupled flow-deformation</td></tr>
+     <tr><td>FE Coupled (PLAXIS Flow + Deformation, RS2 Groundwater + Stress)</td><td>Fully-coupled consolidation</td><td>Long-term settlement under load, dewatering effects</td></tr>
+     <tr><td>Spreadsheet / GeoStru / Settle3</td><td>1D / 2.5D classical</td><td>Routine settlement check, preliminary, simple stratigraphy</td></tr>
+     <tr><td>Asaoka / Hyperbolic / Tan-Tan</td><td>Field monitoring back-analysis</td><td>Predict ultimate settlement from observed time-settlement data; programme adjustment</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== 04 Seepage ===== -->
+  <section class="block principle-block" id="seepage">
+   <div class="sys-eye">04 / Seepage Analysis</div>
+   <h3>Steady-state and transient flow.</h3>
+   <table class="params-table">
+    <thead><tr><th>Software</th><th>Strength</th><th>Use case</th></tr></thead>
+    <tbody>
+     <tr><td>Seep/W (GeoStudio)</td><td>Standard 2D seepage. Saturated and unsaturated. Steady and transient. Integrated with Slope/W.</td><td>Slope rainfall infiltration, drainage system check, dam seepage</td></tr>
+     <tr><td>PLAXIS Flow</td><td>2D / 3D seepage integrated with PLAXIS deformation. Coupled flow-deformation for consolidation.</td><td>Excavation dewatering, embankment construction, basement seepage</td></tr>
+     <tr><td>RS2 Groundwater / RS3</td><td>FE seepage with rock joint flow capability.</td><td>Rock slope drainage, tunnel inflow, hydropower</td></tr>
+     <tr><td>FEFLOW</td><td>Specialist groundwater FE. 3D regional groundwater.</td><td>Regional groundwater modeling, environmental projects</td></tr>
+     <tr><td>VS2DI / HYDRUS</td><td>Vadose zone (unsaturated)</td><td>Specialist unsaturated flow research / agricultural / contamination</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== 05 Pile ===== -->
+  <section class="block principle-block" id="pile">
+   <div class="sys-eye">05 / Pile Design</div>
+   <h3>Axial, lateral, group, dynamic.</h3>
+   <table class="params-table">
+    <thead><tr><th>Software</th><th>Type</th><th>Use</th></tr></thead>
+    <tbody>
+     <tr><td>Spreadsheet (BS EN 1997, FHWA, AASHTO)</td><td>Closed-form bearing capacity / settlement</td><td>Routine axial pile capacity, settlement check, group efficiency</td></tr>
+     <tr><td>PIGLET (M.F. Randolph)</td><td>Pile group analysis (axial / lateral)</td><td>Group effects, settlement of pile group</td></tr>
+     <tr><td>ALLPILE (Civiltech)</td><td>Individual pile - axial, lateral, settlement</td><td>Routine production design, multiple pile types</td></tr>
+     <tr><td>LPILE (Ensoft)</td><td>Lateral pile (p-y curves)</td><td>Lateral capacity, deflection, moment - international standard for lateral piles</td></tr>
+     <tr><td>PLAXIS / RS2 (embedded pile)</td><td>FE soil-pile-structure interaction</td><td>Complex group effects, lateral cyclic load, soil-structure interaction</td></tr>
+     <tr><td>GRLWEAP / CAPWAP</td><td>Pile dynamics</td><td>Driving stress prediction, bearing capacity from driving (PDA)</td></tr>
+     <tr><td>Davisson / Chin / Brinch Hansen</td><td>Static load test interpretation</td><td>Determine ultimate / failure load from PLT</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== 06 Retaining Wall ===== -->
+  <section class="block principle-block" id="retaining-wall">
+   <div class="sys-eye">06 / Retaining Wall Analysis</div>
+   <h3>Embedded, gravity, anchored.</h3>
+   <table class="params-table">
+    <thead><tr><th>Software</th><th>Type</th><th>Use</th></tr></thead>
+    <tbody>
+     <tr><td>Wallap (Geocentrix)</td><td>Embedded wall LEM / SSI with construction stages</td><td>Sheet pile, secant pile, contiguous bored pile, diaphragm wall - widely used in Malaysia</td></tr>
+     <tr><td>ReWaRD (Geocentrix)</td><td>Anchored / tieback wall design</td><td>Multi-anchor walls, deep excavation</td></tr>
+     <tr><td>Geo5 (Fine - Czech / EU)</td><td>All-in-one suite (cantilever, gabion, sheet pile, MSE, soil nail wall)</td><td>Routine wall design, growing user base in Malaysia</td></tr>
+     <tr><td>PLAXIS 2D</td><td>FE soil-structure</td><td>Complex multi-stage excavation, soil-anchor-wall interaction</td></tr>
+     <tr><td>SPW911 / WALLAP-equivalent</td><td>Sheet pile cantilever / anchored</td><td>Specialist sheet pile</td></tr>
+     <tr><td>Spreadsheet (BS 8002, EC7)</td><td>Gravity / RC cantilever</td><td>Stability checks for routine gravity walls</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== 07 MSE ===== -->
+  <section class="block principle-block" id="mse">
+   <div class="sys-eye">07 / MSE / Reinforced Soil Walls</div>
+   <h3>Internal and external stability of reinforced soil systems.</h3>
+   <table class="params-table">
+    <thead><tr><th>Software</th><th>Vendor / Source</th><th>Method</th><th>Use</th></tr></thead>
+    <tbody>
+     <tr><td>MSEW (FHWA)</td><td>FHWA / ADAMA Engineering</td><td>FHWA-NHI-10-024 simplified method</td><td>Standard MSE wall internal / external / global. Fast, defensible.</td></tr>
+     <tr><td>ReSSA</td><td>ADAMA Engineering</td><td>Reinforced slope and wall</td><td>Steep reinforced slopes, MSE walls with sloping backfill</td></tr>
+     <tr><td>NCMA SRW Software</td><td>NCMA (US Concrete Masonry Association)</td><td>NCMA SRW Manual method</td><td>Modular block / SRW walls; segmental retaining walls</td></tr>
+     <tr><td>Tensar SoilStructures / Tensar+ / TensarPlus</td><td>Tensar International</td><td>Vendor design method, BS 8006-1 compliant</td><td>Tensar geogrid MSE / SRW walls</td></tr>
+     <tr><td>Strata WallNet / Reinforced Earth design</td><td>Strata Geosystems / Reinforced Earth Co</td><td>Vendor methods to BS 8006-1 / FHWA</td><td>Strata / RECo walls (Starwall is Strata distributor)</td></tr>
+     <tr><td>Slope/W or Slide global stability check</td><td>Bentley / Rocscience</td><td>LEM with reinforcement</td><td>Always run global stability separately - MSE software does not always cover deep slip surfaces</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== 08 Rock ===== -->
+  <section class="block principle-block" id="rock">
+   <div class="sys-eye">08 / Rock Mechanics</div>
+   <h3>Rock slope, tunnel, rock-soil interface.</h3>
+   <table class="params-table">
+    <thead><tr><th>Software</th><th>Vendor</th><th>Use</th></tr></thead>
+    <tbody>
+     <tr><td>Dips</td><td>Rocscience</td><td>Stereonet analysis - joint orientation, kinematic feasibility</td></tr>
+     <tr><td>RocPlane / Swedge / RocTopple</td><td>Rocscience</td><td>Plane sliding / wedge / toppling failure modes - LEM rock slope</td></tr>
+     <tr><td>RS2 / RS3</td><td>Rocscience</td><td>FE rock mechanics - tunnel, slope, jointed rock with strength reduction</td></tr>
+     <tr><td>UDEC / 3DEC</td><td>Itasca</td><td>Discrete element - blocky rock mass, large displacement of joint blocks</td></tr>
+     <tr><td>FLAC / FLAC3D</td><td>Itasca</td><td>Continuum FDM with joint elements - rock mechanics, earthquake</td></tr>
+     <tr><td>RocFall</td><td>Rocscience</td><td>Rockfall trajectory analysis - barrier sizing, drop tests</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== 09 Probabilistic ===== -->
+  <section class="block principle-block" id="probabilistic">
+   <div class="sys-eye">09 / Probabilistic / Reliability Analysis</div>
+   <h3>Beyond deterministic FoS.</h3>
+   <table class="params-table">
+    <thead><tr><th>Software</th><th>Method</th><th>Use</th></tr></thead>
+    <tbody>
+     <tr><td>Slide / Slide3 (probabilistic)</td><td>Monte Carlo / Latin Hypercube on input parameters</td><td>Probability of failure (Pf), reliability index (beta), sensitivity</td></tr>
+     <tr><td>Slope/W (probabilistic)</td><td>Monte Carlo</td><td>Same as Slide for slope stability</td></tr>
+     <tr><td>@Risk / Crystal Ball (Excel add-in)</td><td>Monte Carlo on spreadsheet calculations</td><td>Custom probabilistic analyses, ULS / SLS reliability</td></tr>
+     <tr><td>RBD-FORM (FORM, SORM analyses)</td><td>First / second-order reliability methods</td><td>Specialist - reliability-based design (RBD)</td></tr>
+    </tbody>
+   </table>
+   <p>Probabilistic analysis is increasingly required for critical infrastructure (federal highway / rail, dams, lifelines) where reliability index (beta) and probability of failure (Pf) targets are specified rather than (or in addition to) deterministic FoS. ISO 2394, JCSS Probabilistic Model Code, and Eurocode 0 give the framework.</p>
+  </section>
+
+  <!-- ===== 10 Choosing ===== -->
+  <section class="block principle-block" id="choosing">
+   <div class="sys-eye">10 / Choosing the Right Tool</div>
+   <h3>Match software to problem.</h3>
+   <table class="params-table">
+    <thead><tr><th>Problem type</th><th>Recommended software</th><th>Why</th></tr></thead>
+    <tbody>
+     <tr><td>Routine cut / fill slope stability</td><td>Slope/W or Slide2</td><td>LEM is sufficient; circular and non-circular slips; fast turnaround</td></tr>
+     <tr><td>Slope with reinforcement (nails, anchors, MSE)</td><td>Slide / Slope/W (LEM with reinforcement) + PLAXIS for verification</td><td>LEM for FoS; FEM for displacement and progressive failure check</td></tr>
+     <tr><td>Deep excavation with retaining wall</td><td>PLAXIS 2D + Wallap (verification)</td><td>FEM for SSI; Wallap for embedded wall LEM check</td></tr>
+     <tr><td>Soft soil embankment</td><td>PLAXIS with SS / MCC / NGI-ADP soil model</td><td>Captures consolidation, time effects, stage construction</td></tr>
+     <tr><td>Tunnel / underground</td><td>PLAXIS 2D / 3D or RS2 / RS3</td><td>FE for ground response, support optimization</td></tr>
+     <tr><td>Rock slope kinematic</td><td>Dips + RocPlane / Swedge / RocTopple</td><td>Joint orientation analysis, kinematic feasibility</td></tr>
+     <tr><td>Rock slope FE</td><td>RS2 / RS3 (or PLAXIS with Hoek-Brown)</td><td>FE strength reduction with rock mass model</td></tr>
+     <tr><td>3D geometry (open pit, headland)</td><td>Slide3 or PLAXIS LE</td><td>3D LEM with proper geometry effects</td></tr>
+     <tr><td>Earthquake / dynamic / large-strain</td><td>FLAC / FLAC3D</td><td>Time-domain dynamic, large-deformation capable</td></tr>
+     <tr><td>MSE wall design</td><td>MSEW or vendor software (Tensar / Strata) + Slope/W global check</td><td>Standard methods plus global stability verification</td></tr>
+     <tr><td>Pile group axial / lateral</td><td>PIGLET or PLAXIS embedded pile</td><td>Group effects, soil-pile-structure interaction</td></tr>
+     <tr><td>Rainfall infiltration</td><td>Seep/W transient + Slope/W</td><td>Coupled transient seepage and stability</td></tr>
+     <tr><td>Probabilistic / RBD</td><td>Slide probabilistic, @Risk on spreadsheet</td><td>Monte Carlo, reliability index, FORM / SORM</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== 11 Standards ===== -->
+  <section class="block principle-block" id="standards">
+   <div class="sys-eye">11 / Standards Reference</div>
+   <h3>What the software implements.</h3>
+   <table class="params-table">
+    <thead><tr><th>Topic</th><th>Reference</th></tr></thead>
+    <tbody>
+     <tr><td>Slope stability</td><td>BS 6031, BS EN 1997-1, JKR Slope Engineering Manual, USACE EM 1110-2-1902</td></tr>
+     <tr><td>Retaining walls / sheet pile</td><td>BS 8002, BS EN 1997-1, BS EN 1993-5 (steel), AASHTO LRFD</td></tr>
+     <tr><td>MSE / SRW</td><td>BS 8006-1, FHWA-NHI-10-024, NCMA SRW Manual, AASHTO LRFD Section 11</td></tr>
+     <tr><td>Pile design</td><td>BS EN 1997-1, FHWA-NHI-16-009, AASHTO LRFD Section 10</td></tr>
+     <tr><td>Tunnel design</td><td>BS 6164, AGS / HKGC tunnel guidelines, ITA WTC</td></tr>
+     <tr><td>Reliability / probabilistic</td><td>ISO 2394, JCSS Probabilistic Model Code, BS EN 1990 (Eurocode 0)</td></tr>
+     <tr><td>FE soil constitutive models</td><td>NAFEMS guides, PLAXIS Material Models manual, Atkinson 1993</td></tr>
+     <tr><td>Software validation</td><td>NAFEMS validation procedures, ASCE Computational Geomechanics Committee guidance</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="block" id="faq">
+   <div class="block-eye">Frequently asked</div>
+   <h2>Software <em>questions.</em></h2>
+   <details class="faq-item"><summary>What's the most common slope stability software in Malaysia? <span class="ic">+</span></summary><div class="ans">Slope/W (GeoStudio) is the industry default. Slide2 / Slide3 (Rocscience) is rising at major consultancies. PLAXIS 2D / 3D for FEM strength reduction with soil-structure interaction. RS2 / RS3 for rock mechanics. FLAC for specialist large-strain / dynamic.</div></details>
+   <details class="faq-item"><summary>What for soil-structure interaction? <span class="ic">+</span></summary><div class="ans">PLAXIS 2D / 3D dominates Malaysian practice for SSI - deep excavation, walls, embankments, ground improvement. Wide soil model library (MC, HS, HSsmall, SS, MCC, NGI-ADP). RS2 / RS3 for rock-dominated. FLAC for large-strain / dynamic.</div></details>
+   <details class="faq-item"><summary>What for retaining walls? <span class="ic">+</span></summary><div class="ans">Wallap (Geocentrix) for embedded retaining walls (sheet pile, secant pile, contiguous bored pile, diaphragm). ReWaRD for anchored walls. Geo5 for all-in-one cantilever / gabion / sheet pile / MSE. PLAXIS 2D for complex multi-stage SSI. MSEW / ReSSA / NCMA for reinforced soil.</div></details>
+   <details class="faq-item"><summary>What for pile design? <span class="ic">+</span></summary><div class="ans">Spreadsheet for routine to BS EN 1997 / FHWA. PIGLET / ALLPILE for individual / group pile capacity. LPILE for lateral piles. PLAXIS embedded pile for FE soil-pile interaction. GRLWEAP / CAPWAP for pile dynamics (driving, PDA).</div></details>
+   <details class="faq-item"><summary>What for rainfall infiltration analysis? <span class="ic">+</span></summary><div class="ans">Seep/W transient seepage with rainfall flux boundary, then Slope/W with imported pore pressures. PLAXIS Flow with rainfall boundary integrated with deformation analysis. RS2 Groundwater for rock slopes. Critical FoS often hours-days AFTER peak rainfall.</div></details>
+  </section>
+ </div>
+
+ <section class="cta-block"><div class="container"><h2>Need <em>analysis support</em> for your project?</h2><p>Send the project specification and constraints. Same-day response from the engineering team. We run Slope/W, Slide, PLAXIS, RS2, Wallap, MSEW in-house under design-build, or as the specialist contractor under your appointed consulting engineer.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp the team →</a><a class="btn btn-ghost" href="/#contact">All contact details</a></div></div></section>
+
+ <div class="container"><section class="block"><div class="block-eye">Cross-references</div><h2>Read more.</h2>
+  <div class="toc-grid">
+   <a href="/slope-stability-analysis-guide/">→ Slope Stability Analysis</a>
+   <a href="/geotechnical-design-guide/">→ Geotechnical Design Guide</a>
+   <a href="/retaining-wall-design/">→ Retaining Wall Design</a>
+   <a href="/earth-pressure-loading-reference/">→ Earth Pressure &amp; Loading</a>
+   <a href="/site-investigation-guide/">→ Site Investigation</a>
+   <a href="/qa-testing-guide/">→ QA &amp; Testing</a>
+   <a href="/resources/">→ All Resources</a>
+  </div>
+ </section></div>
+</main>
+
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor) · A <a href="/">Panthera Group</a> company</p></div></footer>
+
+</body>
+</html>

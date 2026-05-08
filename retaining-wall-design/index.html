@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Retaining Wall Design Principles Malaysia | Earth Pressure, Stability, Drainage | Infraconcrete</title>
+<meta name="description" content="The engineering principles common to all retaining wall design in Malaysia. Earth pressure theory (active, passive, at-rest, Coulomb, Rankine, Mononobe-Okabe seismic), loading combinations, stability checks (sliding, overturning, bearing, eccentricity, global), drainage design, settlement, construction sequencing. Covers MSE, RE, modular, crib, gabion, RC cantilever, sheet pile, tieback. To BS 8002, BS 8004, BS 8006, Eurocode 7, JKR." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="keywords" content="retaining wall design Malaysia, earth pressure theory, Coulomb Rankine, Mononobe-Okabe seismic, sliding overturning bearing, BS 8002, BS 8006, Eurocode 7, JKR retaining wall, active passive at-rest pressure" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Retaining Wall Design Principles | Engineer's Reference Malaysia" />
+<meta property="og:description" content="Earth pressure, stability checks, drainage, seismic - common engineering principles for all retaining wall types. CIDB G7 specialist." />
+<meta property="og:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<meta property="og:url" content="https://infraconcrete.co/retaining-wall-design/" />
+<meta property="og:site_name" content="Infraconcrete Construction Sdn Bhd" />
+<meta property="og:locale" content="en_MY" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Retaining Wall Design Principles Malaysia" />
+<meta name="twitter:description" content="Earth pressure, stability, drainage, seismic. The engineering principles for all retaining wall types." />
+<meta name="twitter:image" content="https://infraconcrete.co/images/projects/project-ekve.jpg" />
+<link rel="canonical" href="https://infraconcrete.co/retaining-wall-design/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/retaining-wall-design/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/retaining-wall-design/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="any" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","@id":"https://infraconcrete.co/retaining-wall-design/#article","headline":"Retaining Wall Design Principles for Malaysia","description":"Engineering principles common to all retaining wall design - earth pressure theory, loading, stability checks, drainage, settlement, seismic, construction sequencing.","datePublished":"2026-05-08","dateModified":"2026-05-08","author":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"publisher":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","logo":{"@type":"ImageObject","url":"https://infraconcrete.co/images/brand/logo.png"}},"image":"https://infraconcrete.co/images/projects/project-ekve.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://infraconcrete.co/retaining-wall-design/"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://infraconcrete.co/resources/"},{"@type":"ListItem","position":3,"name":"Retaining Wall Design Principles","item":"https://infraconcrete.co/retaining-wall-design/"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What earth pressure theory should I use for retaining wall design?","acceptedAnswer":{"@type":"Answer","text":"For most Malaysian retaining wall design: Coulomb's theory for active pressure on flexible walls (sheet pile, MSE, modular block) where wall friction can be mobilized. Rankine's theory for simpler analysis when wall friction is neglected (conservative). At-rest pressure for rigid walls with no allowed movement (basement walls, propped walls). Mononobe-Okabe for seismic (pseudo-static) analysis. Use active pressure where wall is free to translate; at-rest where movement is restrained; passive only where it provides resistance (toe of cantilever wall, anchor passive zone)."}},
+{"@type":"Question","name":"What's the typical factor of safety for retaining wall stability checks?","acceptedAnswer":{"@type":"Answer","text":"Per BS 8002 / Eurocode 7 / JKR: sliding FoS 1.5 minimum (1.0 LSD with partial factors), overturning FoS 2.0 (eccentricity less than B/6 for no tension at base, less than B/4 strict), bearing FoS 2.5 to 3.0 (depends on foundation soil), global stability FoS 1.4 to 1.5. Seismic combinations use lower FoS (1.1 to 1.2). Class III/IV slopes per JKR require tighter targets. Eurocode 7 partial factor approach typically gives equivalent global FoS of 1.4 to 1.5."}},
+{"@type":"Question","name":"Why does drainage matter so much for retaining wall design?","acceptedAnswer":{"@type":"Answer","text":"Hydrostatic pressure behind a retaining wall can DOUBLE the lateral earth pressure if drainage fails. A 5 m wall with full hydrostatic head adds approximately 125 kN/m at the base (half x gamma_w x H squared = 0.5 x 10 x 25). This often overstresses RC cantilever wall stems and shears MSE wall reinforcement. Drainage design (granular layer, weep holes at 1 to 3 m horizontal spacing, filter geotextile, subsoil drain at toe) is non-negotiable. RC walls fail through clogged weep holes more often than through structural inadequacy."}},
+{"@type":"Question","name":"How do I check global stability of a retaining wall?","acceptedAnswer":{"@type":"Answer","text":"Global (or overall) stability check: run a slope stability analysis with the wall and reinforcement modeled, looking for the critical slip surface that passes through or below the wall structure. Failure mode: the entire wall plus retained backfill plus foundation soil mass slides as a unit on a deep slip surface. Methods: Bishop or Morgenstern-Price typical. FoS target: 1.4 to 1.5 long-term. Software: Slope/W, Slide, PLAXIS LE. This check often controls the design for tall walls on weak foundation soil."}}]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Manrope:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/seo-page.css">
+<script src="/js/seo-nav.js" defer></script>
+<style>
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 16px;margin:20px 0;padding:16px;background:rgba(31,27,23,0.04);border-radius:6px}
+.toc-grid a{display:block;padding:6px 0;color:#1F1B17;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;border-bottom:1px solid rgba(31,27,23,0.08)}
+.toc-grid a:hover{color:#C8102E}
+.principle-block{padding:32px 0;border-top:1px solid rgba(31,27,23,0.12)}
+.principle-block:first-of-type{border-top:none}
+.principle-block h3{font-size:clamp(22px,2.4vw,30px);margin:8px 0 16px}
+.principle-block .sys-eye{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#C8102E;text-transform:uppercase}
+.p-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:20px}
+@media(min-width:880px){.p-grid{grid-template-columns:1fr 1fr}}
+.p-section h4{font-size:14px;letter-spacing:0.06em;margin:0 0 8px;color:#1F1B17;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.p-section p{margin:0 0 10px;font-size:15px;line-height:1.6}
+.p-section ul{margin:0;padding-left:20px;font-size:14px;line-height:1.7}
+.params-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13px}
+.params-table th,.params-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(31,27,23,0.1);vertical-align:top}
+.params-table th{background:rgba(31,27,23,0.06);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;font-size:11px;text-transform:uppercase}
+.callout{background:rgba(200,16,46,0.06);border-left:3px solid #C8102E;padding:14px 18px;margin:14px 0;font-size:14px;line-height:1.55}
+.callout strong{color:#C8102E}
+.formula{background:rgba(31,27,23,0.04);padding:14px 18px;border-radius:4px;margin:12px 0;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1.6}
+.formula strong{color:#C8102E}
+.pill{display:inline-block;padding:2px 8px;background:rgba(200,16,46,0.1);color:#C8102E;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;border-radius:3px;margin-right:6px}
+</style>
+</head>
+<body>
+
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">·</span><a href="/resources/">Resources</a><span class="sep">·</span><span class="here">Retaining Wall Design Principles</span></nav></div>
+
+<main>
+ <div class="container">
+  <section class="hero">
+   <div class="eyebrow">Engineering Principles · Resource Hub</div>
+   <h1>Retaining wall design <em>principles.</em></h1>
+   <p class="lede">The engineering fundamentals common to every retaining wall type used in Malaysian construction. Earth pressure theory (active, passive, at-rest, Coulomb, Rankine, Mononobe-Okabe seismic), loading combinations (dead, live, surcharge, hydrostatic, seismic), stability checks (sliding, overturning, bearing, eccentricity, global), drainage design (granular layer, weep holes, filter geotextile, subsoil drains), wall settlement and soil-wall interaction, construction sequencing. Applies to MSE walls, Reinforced Earth, modular block (SRW), crib walls, gabion walls, RC cantilever, sheet pile, tieback / anchored walls. Designed to BS 8002, BS 8004, BS 8006, BS EN 1997 (Eurocode 7), JKR Slope Engineering Manual, AASHTO LRFD. By Infraconcrete - CIDB G7 specialist geotechnical contractor, ISO 9001:2015 certified.</p>
+   <div class="stats">
+    <div class="stat"><div class="v">8</div><div class="l">Wall types covered</div></div>
+    <div class="stat"><div class="v">5</div><div class="l">Stability checks</div></div>
+    <div class="stat"><div class="v">G7</div><div class="l">CIDB highest grade</div></div>
+    <div class="stat"><div class="v">100+</div><div class="l">Projects delivered</div></div>
+   </div>
+  </section>
+
+  <section class="block">
+   <div class="block-eye">Navigation</div>
+   <h2>Jump to a topic.</h2>
+   <div class="toc-grid">
+    <a href="#earth-pressure">→ Earth Pressure Theory</a>
+    <a href="#loading">→ Loading Combinations</a>
+    <a href="#stability-sliding">→ Sliding Check</a>
+    <a href="#stability-overturning">→ Overturning &amp; Eccentricity</a>
+    <a href="#stability-bearing">→ Bearing Capacity</a>
+    <a href="#stability-global">→ Global Stability</a>
+    <a href="#drainage">→ Drainage Design</a>
+    <a href="#settlement">→ Settlement &amp; Wall-Soil Interaction</a>
+    <a href="#seismic">→ Seismic Design</a>
+    <a href="#construction">→ Construction Sequencing</a>
+    <a href="#standards">→ Standards Reference</a>
+    <a href="#faq">→ FAQ</a>
+   </div>
+  </section>
+
+  <!-- ===== EARTH PRESSURE ===== -->
+  <section class="block principle-block" id="earth-pressure">
+   <div class="sys-eye">01 / Foundation</div>
+   <h3>Earth pressure theory.</h3>
+   <p><span class="pill">Coulomb 1776</span><span class="pill">Rankine 1857</span><span class="pill">Mononobe-Okabe 1929</span></p>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Three pressure states</h4>
+     <ul>
+      <li><strong>At-rest (Ko):</strong> wall does not move. Pressure equals geostatic horizontal stress. Ko = 1 - sin(phi') for normally consolidated soil. Used for rigid walls (basement, propped, deeply embedded sheet pile).</li>
+      <li><strong>Active (Ka):</strong> wall moves AWAY from retained soil (typical retaining wall). Soil mobilizes minimum lateral pressure. Ka = (1 - sin phi) / (1 + sin phi) for level backfill, vertical wall, no friction (Rankine).</li>
+      <li><strong>Passive (Kp):</strong> wall is pushed INTO the soil. Soil mobilizes maximum resistance. Kp = (1 + sin phi) / (1 - sin phi). Used at the toe of cantilever walls and in anchor passive zones.</li>
+     </ul>
+     <div class="formula"><strong>Active force on smooth vertical wall, level backfill:</strong><br>P_a = 0.5 x Ka x gamma x H^2<br>(per metre run of wall)</div>
+    </div>
+    <div class="p-section">
+     <h4>Coulomb vs Rankine</h4>
+     <ul>
+      <li><strong>Rankine:</strong> simpler, neglects wall friction, vertical wall, level or sloping backfill. Conservative for active pressure (over-estimates), less conservative for passive (under-estimates).</li>
+      <li><strong>Coulomb:</strong> accounts for wall friction (delta), wall inclination, sloping backfill. More accurate for real walls. Use for design where wall friction can be mobilized.</li>
+      <li><strong>Wall friction angle delta:</strong> typically 0.5 to 0.67 of soil phi. Use 2/3 phi for sand on concrete, 0.5 phi for cohesive backfill, 0 for design (Rankine simplification, conservative).</li>
+     </ul>
+     <h4>Tropical residual soil considerations</h4>
+     <ul>
+      <li>Apparent cohesion (c') from cementation often present in residual soils</li>
+      <li>Reduce or zero c' where soil saturates or weathers further over design life</li>
+      <li>For ultimate limit state: use phi only (zero c) where saturation possible</li>
+     </ul>
+    </div>
+   </div>
+   <div class="callout"><strong>When to use which:</strong> Most Malaysian designs use <strong>Coulomb active pressure</strong> for the wall body and <strong>Rankine passive pressure</strong> at the toe (conservative). For seismic, use <strong>Mononobe-Okabe</strong> (covered in section 09).</div>
+  </section>
+
+  <!-- ===== LOADING ===== -->
+  <section class="block principle-block" id="loading">
+   <div class="sys-eye">02 / Loading</div>
+   <h3>Loading combinations.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Loads to consider</h4>
+     <ul>
+      <li><strong>Self weight (dead):</strong> wall mass, retained soil, water</li>
+      <li><strong>Surcharge:</strong> traffic loads (typical 10 kPa for highway, 5 kPa for residential), structures behind wall, embankment loads</li>
+      <li><strong>Hydrostatic:</strong> if drainage fails or cannot reduce water level (gamma_w = 9.81 kN/m^3)</li>
+      <li><strong>Seismic:</strong> pseudo-static (kh = 0.05 to 0.10g for Malaysia Zone 1-2)</li>
+      <li><strong>Construction loads:</strong> compaction equipment, temporary surcharges</li>
+      <li><strong>Earth pressure during compaction:</strong> often higher than long-term active pressure</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>Eurocode 7 design approaches</h4>
+     <ul>
+      <li><strong>DA1-1 (UK common):</strong> partial factor on actions only</li>
+      <li><strong>DA1-2:</strong> partial factor on resistance and material</li>
+      <li><strong>DA2 (German):</strong> partial factor on actions and resistance</li>
+      <li><strong>DA3 (slope stability default):</strong> partial factor on actions and material</li>
+     </ul>
+     <h4>Working Load Design (WLD) approach</h4>
+     <p>Single global FoS applied to ratio of resisting/driving forces. Still dominant Malaysian practice. FoS targets per JKR Slope Engineering Manual.</p>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== SLIDING ===== -->
+  <section class="block principle-block" id="stability-sliding">
+   <div class="sys-eye">03 / Stability Check 1</div>
+   <h3>Sliding stability.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Mechanism</h4>
+     <p>Wall slides horizontally along its base. Resistance comes from base friction (delta_b on cohesionless foundation) plus base adhesion (cohesive foundation) plus passive earth pressure at the toe (if mobilized).</p>
+     <div class="formula"><strong>FoS sliding =</strong><br>(W tan delta_b + c_a x B + P_p) / P_a horizontal<br>Target: FoS &gt;= 1.5 (BS 8002, JKR)</div>
+    </div>
+    <div class="p-section">
+     <h4>Design approach</h4>
+     <ul>
+      <li>Base friction angle delta_b: typically 0.5 to 0.67 of foundation phi</li>
+      <li>Base adhesion: typically 0.5 to 0.75 of foundation cohesion</li>
+      <li>Passive resistance at toe: mobilize cautiously (significant deformation needed); often neglected in BS 8002 unless specifically detailed</li>
+      <li>Inclined base or shear key: increases resistance significantly</li>
+      <li>Concrete-on-soil: rough surface preferred (in-situ pour better than precast)</li>
+     </ul>
+     <div class="callout"><strong>Common pitfall:</strong> over-relying on passive toe resistance. Passive pressure requires significant wall translation (1 to 5 percent of toe depth) to fully mobilize. If movement is restricted, do not count it.</div>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== OVERTURNING ===== -->
+  <section class="block principle-block" id="stability-overturning">
+   <div class="sys-eye">04 / Stability Check 2</div>
+   <h3>Overturning and eccentricity.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Overturning check</h4>
+     <p>Wall rotates about the toe due to lateral earth pressure. Resistance is the moment of self-weight about the toe.</p>
+     <div class="formula"><strong>FoS overturning =</strong><br>M_resisting / M_overturning<br>Target: FoS &gt;= 2.0 (BS 8002)</div>
+    </div>
+    <div class="p-section">
+     <h4>Eccentricity check (preferred modern approach)</h4>
+     <p>Modern practice (BS 8002, Eurocode 7) prefers eccentricity check over overturning FoS. Eccentricity of resultant force at base must stay within "middle third":</p>
+     <div class="formula">e &lt; B/6 (no tension at base, preferred)<br>e &lt; B/4 (strict limit, some tension permitted)<br>where e = M_net / V (eccentricity from center)</div>
+     <p>Eccentricity exceeding B/6 means tension at the back of base, which is incompatible with most retaining wall foundations on soil.</p>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== BEARING ===== -->
+  <section class="block principle-block" id="stability-bearing">
+   <div class="sys-eye">05 / Stability Check 3</div>
+   <h3>Bearing capacity.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Mechanism</h4>
+     <p>Foundation soil punches through under the eccentrically loaded wall. Bearing failure can be local (under one edge) or general (whole base shears down). Critical for tall walls on weak foundation soils.</p>
+     <h4>Design check</h4>
+     <ul>
+      <li>Compute applied bearing pressure at base (eccentric loading): use effective width B' = B - 2e</li>
+      <li>Compute ultimate bearing capacity per Terzaghi or Meyerhof using foundation soil parameters</li>
+      <li>FoS = ultimate / applied</li>
+     </ul>
+     <div class="formula"><strong>FoS bearing =</strong> q_ult / q_applied<br>Target: FoS &gt;= 2.5 to 3.0 (depends on code)</div>
+    </div>
+    <div class="p-section">
+     <h4>Bearing capacity equation (Terzaghi simplified)</h4>
+     <div class="formula">q_ult = c x Nc + q x Nq + 0.5 x gamma x B' x N_gamma<br>(Nc, Nq, N_gamma are bearing capacity factors, function of foundation phi)</div>
+     <h4>Common pitfall</h4>
+     <ul>
+      <li>Using full base width B instead of effective width B' (gives unconservative bearing pressure)</li>
+      <li>Using foundation soil parameters from a single borehole (use cautious estimate from multiple boreholes)</li>
+      <li>Not checking layered profiles (weak layer below stiff crust can fail with general shear)</li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== GLOBAL ===== -->
+  <section class="block principle-block" id="stability-global">
+   <div class="sys-eye">06 / Stability Check 4</div>
+   <h3>Global (overall) stability.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Mechanism</h4>
+     <p>The entire wall PLUS retained backfill PLUS some foundation soil mass slides as a unit on a deep slip surface that passes BEHIND or BELOW the wall. The wall doesn't fail - the whole system fails. Critical for tall walls on weak foundation soils, sloping ground, or near pre-existing slip surfaces.</p>
+     <h4>Analysis method</h4>
+     <ul>
+      <li>Slope stability software: Slope/W, Slide, PLAXIS LE</li>
+      <li>Methods: Bishop, Janbu, Spencer, Morgenstern-Price (use rigorous method for non-circular surfaces)</li>
+      <li>Model: include wall, reinforcement (if any), foundation soil, retained backfill, surcharge, groundwater</li>
+      <li>Search for critical slip surface across all candidate geometries</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>FoS target</h4>
+     <div class="formula">FoS &gt;= 1.4 to 1.5 (long-term static)<br>FoS &gt;= 1.1 to 1.2 (seismic)<br>FoS &gt;= 1.5+ (Class III/IV per JKR)</div>
+     <h4>When global stability governs</h4>
+     <ul>
+      <li>Tall walls (greater than 8 m) on weak foundation</li>
+      <li>Walls on sloping ground (below or above a slope)</li>
+      <li>Sites with pre-existing slip surface</li>
+      <li>Soft alluvial foundations under embankment loads</li>
+      <li>MSE walls with limited reinforcement length</li>
+     </ul>
+     <div class="callout"><strong>Often the controlling check.</strong> Many tall walls pass sliding/overturning/bearing easily but fail global stability. Always run this check for walls greater than 5 m or on soft foundation.</div>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== DRAINAGE ===== -->
+  <section class="block principle-block" id="drainage">
+   <div class="sys-eye">07 / Drainage</div>
+   <h3>Drainage design.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Why drainage matters</h4>
+     <p>Hydrostatic pressure behind a retaining wall can DOUBLE the lateral earth pressure if drainage fails. A 5 m wall with full hydrostatic head adds approximately 125 kN/m at the base (0.5 x gamma_w x H^2 = 0.5 x 10 x 25). This often overstresses RC cantilever wall stems and shears MSE wall reinforcement.</p>
+     <h4>Drainage components</h4>
+     <ul>
+      <li><strong>Granular drainage layer</strong> at the back of wall (typically 300 to 500 mm thick of free-draining gravel)</li>
+      <li><strong>Filter geotextile</strong> between drainage layer and retained soil (prevents fines migration)</li>
+      <li><strong>Weep holes</strong> through wall stem (75 to 100 mm at 1 to 3 m horizontal x 1 to 2 m vertical spacing)</li>
+      <li><strong>Subsoil drain</strong> at toe (slotted PVC or HDPE pipe in granular envelope)</li>
+      <li><strong>Discharge collection</strong> at toe (lined ditch, manhole, outfall)</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>Drainage by wall type</h4>
+     <ul>
+      <li><strong>RC cantilever:</strong> all components above; weep holes critical</li>
+      <li><strong>MSE wall (concrete panel):</strong> chimney drain at back of reinforced fill, weep at toe panels</li>
+      <li><strong>MSE wall (block face):</strong> drainage layer + chimney drain; the open back face provides natural drainage path</li>
+      <li><strong>Crib wall:</strong> inherent drainage through cell fill; no separate system needed</li>
+      <li><strong>Gabion wall:</strong> inherent drainage through stone fill; provide filter behind</li>
+      <li><strong>Sheet pile:</strong> typically cohesive backfill with controlled drainage if designed for water retention</li>
+     </ul>
+     <div class="callout"><strong>Most common failure mode:</strong> weep holes clog over time (sediment, plant roots). RC cantilever walls fail through clogged drainage more often than through structural inadequacy. Specify maintenance schedule, and consider drainage geocomposite as more reliable alternative.</div>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== SETTLEMENT ===== -->
+  <section class="block principle-block" id="settlement">
+   <div class="sys-eye">08 / Wall-Soil Interaction</div>
+   <h3>Settlement and wall-soil interaction.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Settlement modes</h4>
+     <ul>
+      <li><strong>Foundation settlement:</strong> wall and backfill settle together as foundation consolidates. Larger walls and softer foundation = more settlement.</li>
+      <li><strong>Differential settlement:</strong> wall and backfill settle differently. Causes face cracking on rigid walls, joint opening on segmental walls.</li>
+      <li><strong>Wall-backfill settlement differential:</strong> backfill compacts under self-weight; wall does not. Creates downdrag on wall back, increasing apparent earth pressure.</li>
+      <li><strong>Lateral wall deflection:</strong> wall translates / rotates outward. MSE walls flex; RC walls are rigid (low deflection). Tieback walls: very low deflection.</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>Tolerable movement</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>RC cantilever total settlement</td><td>50 mm typical, 25 mm if sensitive</td></tr>
+       <tr><td>RC cantilever differential settlement</td><td>1/300 to 1/500 of length</td></tr>
+       <tr><td>MSE wall total settlement</td><td>up to 100 mm tolerable</td></tr>
+       <tr><td>MSE wall differential</td><td>1/100 typical, 1/200 for federal infrastructure</td></tr>
+       <tr><td>Tieback wall lateral deflection</td><td>0.1 to 0.5 percent of wall height</td></tr>
+       <tr><td>Sheet pile cantilever lateral deflection</td><td>0.5 to 2 percent of retained height</td></tr>
+       <tr><td>RE wall lateral deflection</td><td>less than 1 percent of height</td></tr>
+       <tr><td>Modular block wall lateral deflection</td><td>typically less than 1 percent of height (geogrid-reinforced)</td></tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== SEISMIC ===== -->
+  <section class="block principle-block" id="seismic">
+   <div class="sys-eye">09 / Seismic Design</div>
+   <h3>Seismic design.</h3>
+   <p><span class="pill">Mononobe-Okabe</span><span class="pill">Eurocode 8</span><span class="pill">Pseudo-static</span></p>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Malaysian seismic context</h4>
+     <p>Malaysia is in low-seismic zones (Zone 1 to 2 per Eurocode 8 / Malaysian National Annex). Pseudo-static analysis with horizontal seismic coefficient kh = 0.05 to 0.10g is typical for retaining wall design. Federal infrastructure may require site-specific seismic hazard analysis. Vertical coefficient kv usually neglected or taken as +/- 0.5 kh.</p>
+     <h4>Mononobe-Okabe method</h4>
+     <p>Modified Coulomb active pressure with pseudo-static body forces. Gives dynamic active pressure coefficient K_AE that is higher than static Ka.</p>
+     <div class="formula"><strong>Dynamic active force:</strong><br>P_AE = 0.5 x K_AE x gamma x H^2 x (1 - kv)<br>K_AE = function of (phi, delta, alpha, beta, theta)<br>theta = arctan(kh / (1 - kv))</div>
+    </div>
+    <div class="p-section">
+     <h4>Seismic FoS targets</h4>
+     <table class="params-table">
+      <tbody>
+       <tr><td>Sliding (seismic)</td><td>FoS &gt;= 1.1 to 1.2</td></tr>
+       <tr><td>Overturning (seismic)</td><td>FoS &gt;= 1.5</td></tr>
+       <tr><td>Bearing (seismic)</td><td>FoS &gt;= 2.0</td></tr>
+       <tr><td>Global stability (seismic)</td><td>FoS &gt;= 1.1 to 1.2</td></tr>
+      </tbody>
+     </table>
+     <h4>Seismic-induced wall pressure increment</h4>
+     <p>Seismic increment Delta P_AE = P_AE - P_a is applied at 0.6H above the base (higher than static line of action at H/3). This increases overturning moment.</p>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== CONSTRUCTION ===== -->
+  <section class="block principle-block" id="construction">
+   <div class="sys-eye">10 / Construction</div>
+   <h3>Construction sequencing.</h3>
+   <div class="p-grid">
+    <div class="p-section">
+     <h4>Compaction zones</h4>
+     <ul>
+      <li><strong>Light compaction (within 1 m of face):</strong> avoid damaging wall facing or displacing precast units</li>
+      <li><strong>Heavy compaction (rest of fill):</strong> 95 to 98 percent modified Proctor</li>
+      <li><strong>Hand-tamped at face:</strong> for modular block, gabion, RE wall panel zones</li>
+     </ul>
+     <h4>Lift heights</h4>
+     <ul>
+      <li>Granular fill: 200 to 300 mm loose, compacted to 150 to 250 mm</li>
+      <li>Cohesive fill: 150 to 200 mm loose</li>
+      <li>Match facing unit height where possible (e.g., 600 mm for some MSE panels)</li>
+     </ul>
+    </div>
+    <div class="p-section">
+     <h4>Sequencing considerations</h4>
+     <ul>
+      <li>Wall face placement first, then fill - never the reverse</li>
+      <li>Reinforcement (geogrid, strip) placed on compacted lift, then next lift placed</li>
+      <li>Drainage system installed concurrently with wall (filter, drain pipe, granular layer)</li>
+      <li>Coping and final finish at top after fill complete and settled</li>
+      <li>Surcharge loads NOT applied until wall has cured / consolidated</li>
+     </ul>
+     <div class="callout"><strong>Compaction-induced earth pressure</strong> can exceed long-term active pressure during construction. Light compaction near the face avoids over-stressing the wall. Heavy plant rolling parallel to and close to the wall face is the textbook cause of over-compaction failures.</div>
+    </div>
+   </div>
+  </section>
+
+  <!-- ===== STANDARDS ===== -->
+  <section class="block" id="standards">
+   <div class="block-eye">Standards reference</div>
+   <h2>Codes that govern <em>retaining wall design.</em></h2>
+   <table class="params-table">
+    <thead><tr><th>Topic</th><th>Primary standards</th></tr></thead>
+    <tbody>
+     <tr><td>General retaining wall design</td><td>BS 8002 (Code of Practice for Earth Retaining Structures), BS EN 1997-1 (Eurocode 7 Part 1), JKR</td></tr>
+     <tr><td>Foundations</td><td>BS 8004, BS EN 1997-1</td></tr>
+     <tr><td>RC cantilever / counterfort</td><td>BS 8002, BS 8004, BS EN 1992 (Eurocode 2), JKR</td></tr>
+     <tr><td>MSE / Reinforced Earth</td><td>BS 8006-1, AASHTO LRFD, FHWA-NHI-10-024, BS EN 14475</td></tr>
+     <tr><td>Modular block (SRW)</td><td>NCMA SRW Design Manual, BS 8006</td></tr>
+     <tr><td>Gabion</td><td>BS EN 10223-3, EAD 200019, BS 8002</td></tr>
+     <tr><td>Crib wall</td><td>BS 8002, AS 4678</td></tr>
+     <tr><td>Sheet pile</td><td>BS EN 12063, BS EN 10248, BS EN 1997</td></tr>
+     <tr><td>Tieback / ground anchor</td><td>BS 8081, BS EN 1537, FHWA-IF-99-015, PTI</td></tr>
+     <tr><td>Seismic design</td><td>BS EN 1998 (Eurocode 8), Malaysian National Annex</td></tr>
+     <tr><td>Earthworks (backfill)</td><td>BS 6031, JKR/SPJ Section 2</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="block" id="faq">
+   <div class="block-eye">Frequently asked</div>
+   <h2>Design <em>questions.</em></h2>
+   <details class="faq-item"><summary>What earth pressure theory should I use? <span class="ic">+</span></summary><div class="ans">Coulomb's theory for active pressure on flexible walls (sheet pile, MSE, modular block) where wall friction can be mobilized. Rankine for simpler analysis when wall friction is neglected (conservative). At-rest pressure for rigid walls with no allowed movement (basement walls, propped walls). Mononobe-Okabe for seismic. Use active where wall is free to translate; at-rest where movement is restrained; passive only where it provides resistance (toe, anchor passive zone).</div></details>
+   <details class="faq-item"><summary>What's the typical FoS for retaining wall stability? <span class="ic">+</span></summary><div class="ans">Per BS 8002 / Eurocode 7 / JKR: sliding 1.5 minimum, overturning 2.0 (eccentricity less than B/6), bearing 2.5 to 3.0, global stability 1.4 to 1.5. Seismic combinations use lower FoS (1.1 to 1.2). Class III/IV slopes per JKR require tighter targets.</div></details>
+   <details class="faq-item"><summary>Why does drainage matter so much? <span class="ic">+</span></summary><div class="ans">Hydrostatic pressure behind a retaining wall can DOUBLE the lateral earth pressure if drainage fails. A 5 m wall with full hydrostatic head adds approximately 125 kN/m at the base. This often overstresses RC stems and shears MSE reinforcement. Drainage design (granular layer, weep holes, filter, subsoil drain) is non-negotiable.</div></details>
+   <details class="faq-item"><summary>How do I check global stability? <span class="ic">+</span></summary><div class="ans">Run a slope stability analysis with the wall and reinforcement modeled, looking for the critical slip surface that passes through or below the wall structure. Failure mode: the entire wall plus retained backfill plus foundation soil slides as a unit on a deep slip surface. Methods: Bishop or Morgenstern-Price. FoS target: 1.4 to 1.5 long-term. Software: Slope/W, Slide, PLAXIS LE.</div></details>
+   <details class="faq-item"><summary>When does seismic design control retaining wall design in Malaysia? <span class="ic">+</span></summary><div class="ans">Rarely - Malaysia is low-seismic (Zone 1 to 2). Static design typically governs. However, federal infrastructure (rail, bridges) requires seismic check per Eurocode 8 / Malaysian National Annex. Pseudo-static with kh = 0.05 to 0.10g typical. Mononobe-Okabe method for dynamic active pressure. Seismic FoS targets are lower (1.1 to 1.2) reflecting the rare-event nature.</div></details>
+  </section>
+ </div>
+
+ <section class="cta-block"><div class="container"><h2>Need design support <em>on a retaining wall?</em></h2><p>Send the wall geometry, soil report, and constraints. Same-day response from the engineering team. We design in-house under design-build, or as the specialist contractor under your appointed consulting engineer.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp the team →</a><a class="btn btn-ghost" href="/#contact">All contact details</a></div></div></section>
+
+ <div class="container"><section class="block"><div class="block-eye">Cross-references</div><h2>Read more.</h2>
+  <div class="toc-grid">
+   <a href="/geotechnical-design-guide/">→ Geotechnical Design Guide</a>
+   <a href="/compare-retaining-walls/">→ Retaining Wall Comparison</a>
+   <a href="/compare-slope-stabilization-systems/">→ All Systems Comparison</a>
+   <a href="/mse-wall/">→ MSE Wall</a>
+   <a href="/retaining-walls/">→ Retaining Walls</a>
+   <a href="/sheet-piling/">→ Sheet Piling</a>
+   <a href="/ground-anchor/">→ Ground Anchor</a>
+   <a href="/site-investigation-guide/">→ Site Investigation</a>
+   <a href="/qa-testing-guide/">→ QA &amp; Testing</a>
+   <a href="/resources/">→ All Resources</a>
+  </div>
+ </section></div>
+</main>
+
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor) · A <a href="/">Panthera Group</a> company</p></div></footer>
+
+</body>
+</html>
