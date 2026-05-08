@@ -252,8 +252,6 @@ Systems applied: [Soil Nailing](https://infraconcrete.co/soil-nailing/), [Guniti
 
 Hillside cluster home and terrace home platform cuts, gated community access road cuttings, high-density podium retaining cuts, hillside bungalow lot cuts. Tier-1 developer engagements typically span 2,000-50,000 m² of hillside platform. Architectural finish on the slope face is common.
 
-Reference projects: Bandar Batu 18 (120,000 m³ earthworks + 11,000 m² retaining wall), Mukim Sentul (5,000 m² RE wall + 6,000 m² platform), Damansara, Mont Kiara, Genting hillside lots.
-
 Systems applied: [Soil Nailing](https://infraconcrete.co/soil-nailing/), [Guniting](https://infraconcrete.co/guniting/), [MSE Wall](https://infraconcrete.co/mse-wall/), [Retaining Walls](https://infraconcrete.co/retaining-walls/), [Land Creation](https://infraconcrete.co/land-creation/), [Earthworks](https://infraconcrete.co/earthworks/), [Erosion Control](https://infraconcrete.co/erosion-control/), [Horizontal Drains](https://infraconcrete.co/horizontal-drains/).
 
 ### Vertical 03 - Commercial development (podiums, retail parks, office basements)
@@ -266,23 +264,17 @@ Systems applied: [Soil Nailing](https://infraconcrete.co/soil-nailing/), [Guniti
 
 Industrial estate platform cuttings, free trade zone retaining cuts, factory pad cut faces, logistics warehouse pads, data center compound cuts. Heavy floor loads and tight tolerance demand corrosion-protected nails for permanent works. Big-platform earthworks and ground improvement carry the schedule.
 
-Reference: Bandar Serendah (540,000 m³ for national auto-industry account, 7 retaining structures), industrial estate platforms across Iskandar, Senai, Pasir Gudang.
-
 Systems applied: [Earthworks](https://infraconcrete.co/earthworks/), [Land Creation](https://infraconcrete.co/land-creation/), [MSE Wall](https://infraconcrete.co/mse-wall/), [Reinforced Earth (RE) Wall (under Retaining Walls)](https://infraconcrete.co/retaining-walls/), [Soil Nailing](https://infraconcrete.co/soil-nailing/), [Ground Improvement](https://infraconcrete.co/ground-improvement/), [Horizontal Drains](https://infraconcrete.co/horizontal-drains/), [Sheet Piling](https://infraconcrete.co/sheet-piling/).
 
 ### Vertical 05 - Public infrastructure / federal (highways, rail, MRT/LRT, bridges)
 
-Highway and federal road cut slopes, bridge approach cuttings, rail corridor cut faces, LRT and MRT alignment cuttings. Live-traffic phasing and authority submission framework standard. Multi-system integration within single corridors is the norm - a 1 km stretch of highway typically uses 4-6 different geotechnical systems.
-
-Federal references: EKVE (East Klang Valley Expressway, 39.5 km / 450,000 m² protected), ECRL (East Coast Rail Link, 64 km / 320,000 m of drilled drains and soil nails), Central Spine Road (65,000 m² slope face / 6 systems integrated), Pan Borneo. Authority: JKR, LLM, MOW, KKR.
+Highway and federal road cut slopes, bridge approach cuttings, rail corridor cut faces, LRT and MRT alignment cuttings. Live-traffic phasing and authority submission framework standard. Multi-system integration within single corridors is the norm - a 1 km stretch of highway typically uses 4-6 different geotechnical systems. Authority framework: JKR, LLM, MOW, KKR.
 
 Systems applied: [Soil Nailing](https://infraconcrete.co/soil-nailing/), [Rock Bolting](https://infraconcrete.co/rock-bolting/), [Rock Netting](https://infraconcrete.co/rock-netting/), [Rockfall Barriers](https://infraconcrete.co/rockfall-barrier/), [Guniting](https://infraconcrete.co/guniting/), [MSE Wall](https://infraconcrete.co/mse-wall/), [Reinforced Earth Wall (under Retaining Walls)](https://infraconcrete.co/retaining-walls/), [Horizontal Drains](https://infraconcrete.co/horizontal-drains/), [Sheet Piling](https://infraconcrete.co/sheet-piling/), [Tunnel Portal Engineering](https://infraconcrete.co/tunnel-portal-engineering/).
 
 ### Vertical 06 - Hillside & special terrain (highland resorts, post-landslide, monsoon failures)
 
-Highland resort access cuts, post-landslide slope restoration, monsoon-failed cut face stabilization, hillside township platform restoration. Tropical residual soil with monsoon groundwater drives most remedial work - horizontal drains are often the single highest-leverage measure. Emergency mobilization within 2-5 days for federal post-monsoon work.
-
-Reference context: Genting Highlands and Cameron Highlands access works, post-landslide remediation in Bukit Antarabangsa, Highland Towers reconstruction lessons. Climate framework: MASMA, JKR Slope Engineering Manual.
+Highland resort access cuts, post-landslide slope restoration, monsoon-failed cut face stabilization, hillside township platform restoration. Tropical residual soil with monsoon groundwater drives most remedial work - horizontal drains are often the single highest-leverage measure. Emergency mobilization within 2-5 days for federal post-monsoon work. Climate framework: MASMA, JKR Slope Engineering Manual.
 
 Systems applied: [Soil Nailing](https://infraconcrete.co/soil-nailing/), [Rock Bolting](https://infraconcrete.co/rock-bolting/), [Rockfall Barriers](https://infraconcrete.co/rockfall-barrier/), [Horizontal Drains](https://infraconcrete.co/horizontal-drains/), [Guniting](https://infraconcrete.co/guniting/), [Slope Stabilization](https://infraconcrete.co/slope-stabilization/), [Hillside Remedial](https://infraconcrete.co/hillside-remedial/), [Post-Landslide Remediation](https://infraconcrete.co/post-landslide-remediation/), [Slope Monitoring](https://infraconcrete.co/slope-monitoring/).
 
