@@ -166,6 +166,32 @@ a { color: inherit; text-decoration: none; } img, svg { display: block; max-widt
   box-shadow: 0 4px 12px -3px rgba(159, 11, 34, 0.5);
 }
 
+/* Intermediate breadcrumb links (e.g. "Resources" between Home pill and current page) ,
+   minimalist outline pill so the path back to the parent is also clearly pressable,
+   without competing with the Home primary button. */
+.crumbs a:not(:first-of-type) {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border: 1px solid rgba(31, 27, 23, 0.22);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--grey-700);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  transition: border-color .22s var(--ease), color .22s var(--ease), background .22s var(--ease);
+}
+.crumbs a:not(:first-of-type):hover {
+  border-color: var(--ic-red);
+  color: var(--ic-red);
+  background: rgba(200, 16, 46, 0.04);
+}
+/* Tighten the dot separator on either side of an outline pill so it reads as
+   "Home pill · Resources pill · current page" without too much air. */
+.crumbs a + .sep,
+.crumbs .sep + a { margin: 0 4px; }
+
 /* Hero (topo background lives on body::before, single source of truth) */
 .hero { padding: 36px 0 48px; }
 .hero .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ic-red); margin-bottom: 16px; }
