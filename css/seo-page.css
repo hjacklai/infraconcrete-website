@@ -40,14 +40,14 @@ a { color: inherit; text-decoration: none; } img, svg { display: block; max-widt
 a.xref {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: rgba(200, 16, 46, 0.45);
-  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(200, 16, 46, 0.7);
+  text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
   transition: color .15s ease, text-decoration-color .15s ease;
 }
 a.xref:hover, a.xref:focus-visible {
-  color: var(--ink-red, #C8102E);
-  text-decoration-color: #C8102E;
+  color: var(--ic-red);
+  text-decoration-color: var(--ic-red);
 }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
 
@@ -230,6 +230,73 @@ section.block:first-of-type { border-top: 0; padding-top: 0; }
 
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
 @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; gap: 24px; } }
+
+/* ===== "Continue exploring" / "More from Infraconcrete" block ==========
+   Restyles the data-service-crosslinks footer block so its sub-headings
+   read as mono micro-labels and its inline links look clickable.
+   No markup change needed; pure CSS targeting the data attribute. */
+[data-service-crosslinks] .two-col > div { display: flex; flex-direction: column; }
+[data-service-crosslinks] h3 {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-500);
+  margin: 28px 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--grey-line);
+}
+[data-service-crosslinks] h3:first-child { margin-top: 4px; }
+[data-service-crosslinks] p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin: 0 0 10px;
+  color: var(--ink-soft);
+}
+[data-service-crosslinks] p a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(200, 16, 46, 0.6);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color .15s ease, text-decoration-color .15s ease;
+}
+[data-service-crosslinks] p a:hover,
+[data-service-crosslinks] p a:focus-visible {
+  color: var(--ic-red);
+  text-decoration-color: var(--ic-red);
+}
+/* Regional coverage callout (the inline-styled sub-block) */
+[data-service-crosslinks] > div[style*="border-left"] {
+  margin-top: 36px !important;
+  padding: 24px 28px !important;
+  background: var(--paper-bright) !important;
+  border: 1px solid var(--grey-line) !important;
+  border-left: 3px solid var(--ic-red) !important;
+  border-radius: 0 !important;
+}
+[data-service-crosslinks] > div[style*="border-left"] h3 {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  text-transform: none;
+  color: var(--ink);
+  margin: 0 0 8px;
+  padding: 0;
+  border-bottom: 0;
+}
+[data-service-crosslinks] > div[style*="border-left"] p strong {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ic-red);
+  display: inline-block;
+  margin-right: 4px;
+}
 
 .case-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 8px; }
 @media (max-width: 720px) { .case-cards { grid-template-columns: 1fr; } }

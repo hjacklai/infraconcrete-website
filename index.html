@@ -3821,7 +3821,6 @@
     grid-template-columns: 2fr 1fr 1fr;
     gap: 40px;
     padding-bottom: 44px;
-    border-bottom: 1px solid var(--grey-line);
   }
   .footer h6 {
     font-family: var(--mono);
@@ -3836,7 +3835,7 @@
   .footer li { padding: 6px 0; }
   .footer a:hover { color: var(--ic-red); }
   .footer-group {
-    margin-top: 56px;
+    margin-top: 0;
     padding: 22px 0;
     border-top: 1px solid var(--grey-line);
     border-bottom: 1px solid var(--grey-line);
@@ -4188,7 +4187,7 @@
   <div class="container nav-inner">
     <div class="logo-wrap">
       <a href="#top" class="logo">
-        <picture><source type="image/webp" srcset="images/brand/logo.webp"><img decoding="async" fetchpriority="high" src="images/brand/logo.png" alt="Infraconcrete" width="206" height="36" style="display:block;width:auto;"
+        <picture><source type="image/webp" srcset="images/brand/logo.webp"><img decoding="async" fetchpriority="high" src="images/brand/logo.png" alt="Infraconcrete" width="206" height="36" style="display:block;width:auto;height:36px;max-width:100%;"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"></picture>
         <span style="display:none;align-items:baseline;">Infra<b>concrete</b><sup>™</sup></span>
       </a>
@@ -4235,7 +4234,7 @@
       <div></div>
       <div class="hero-side reveal">
         <span class="label micro" data-i18n="hero.side.label">What we do</span>
-        <p data-i18n="hero.side.p"><a class="xref" href="/slope-stabilization/">Slope Stabilization</a>, <a class="xref" href="/retaining-walls/">Retaining Systems</a>, <a class="xref" href="/land-creation/">Land Creation</a>, Main Contracting. Specialist Geotechnical Engineering.</p>
+        <p data-i18n="hero.side.p">Slope Stabilization, Retaining Systems, Land Creation, Main Contracting. Specialist Geotechnical Engineering.</p>
         <div class="hero-cta-row">
           <a href="#brief" class="btn btn-primary"><span data-i18n="hero.cta.brief">Request a project brief</span> <span class="arr">→</span></a>
           <a href="#capabilities" class="btn btn-ghost" data-i18n="hero.cta.see">See capabilities</a>
@@ -6874,7 +6873,119 @@
   </div>
 </section>
 
-<!-- (Removed: WHAT HAPPENS NEXT - duplicates the Methodology section + FAQ "step by step" answer) -->
+<!-- ============== RESOURCES HUB SHORTCUT ============== -->
+<style>
+  .resources-hub { background: var(--paper-bright); position: relative; }
+  .resources-hub .contours { position: absolute; inset: 0; pointer-events: none; }
+  .resources-hub .contours svg { width: 100%; height: 100%; }
+  .resources-hub > .container { position: relative; z-index: 1; }
+
+  .resources-cta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 32px;
+    padding: 32px 36px;
+    background: linear-gradient(135deg, rgba(200,16,46,0.04) 0%, rgba(31,27,23,0.03) 100%);
+    border: 1px solid rgba(200,16,46,0.18);
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .resources-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(31,27,23,0.08);
+    border-color: rgba(200,16,46,0.4);
+  }
+  @media (min-width: 760px) {
+    .resources-cta { grid-template-columns: 1fr auto; align-items: center; padding: 40px 44px; }
+  }
+  .resources-cta .rc-eye {
+    display: block;
+    font-family: var(--mono, 'JetBrains Mono', monospace);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ic-red);
+    margin-bottom: 10px;
+  }
+  .resources-cta h3 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(22px, 2.4vw, 28px);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin: 0 0 12px;
+    color: var(--ink);
+  }
+  .resources-cta h3 em { font-style: italic; color: var(--ic-red); font-weight: 300; }
+  .resources-cta .rc-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 14px;
+    color: var(--ink-soft);
+    max-width: 620px;
+  }
+  .resources-cta .rc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    margin: 0;
+    font-family: var(--mono, 'JetBrains Mono', monospace);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: rgba(31,27,23,0.55);
+  }
+  .resources-cta .rc-meta strong { color: var(--ink); font-weight: 600; }
+  .resources-cta .rc-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    background: var(--ic-red);
+    color: #fff;
+    font-family: var(--mono, 'JetBrains Mono', monospace);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    white-space: nowrap;
+    align-self: start;
+    transition: background .2s ease;
+  }
+  .resources-cta:hover .rc-arrow { background: var(--ic-red-deep, #9F0B22); }
+</style>
+<section class="resources-hub" id="resources-hub">
+  <div class="contours subtle" aria-hidden="true">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="none"><use href="#topo-default" stroke="#1F1B17" stroke-width="0.55" fill="none" opacity="0.4"/></svg>
+  </div>
+  <div class="container">
+    <div class="sec-header">
+      <div>
+        <span class="eyebrow" data-i18n="s14.eyebrow">Capability Index · All Resources</span>
+        <h2 data-i18n="s14.h2">Looking for the <em>deeper engineering library?</em></h2>
+      </div>
+      <p data-i18n="s14.p">Compare every slope stabilization system, browse the design references, find the right page for your audience or region. Everything indexed in one hub.</p>
+    </div>
+
+    <a class="resources-cta" href="/resources/">
+      <div class="rc-text">
+        <span class="rc-eye" data-i18n="s14.cta.eye">Resources Hub</span>
+        <h3 data-i18n="s14.cta.h3">The complete <em>Infraconcrete index.</em></h3>
+        <p data-i18n="s14.cta.p">12 specialist services. 6 regional coverage areas. The Engineer's Guide. Comparison guides. Design references. Audience guides. The full hub of Infraconcrete capabilities, indexed.</p>
+        <div class="rc-meta">
+          <span><strong>12</strong> services</span>
+          <span><strong>6</strong> regions</span>
+          <span><strong>17</strong> systems compared</span>
+          <span><strong>3</strong> languages</span>
+        </div>
+      </div>
+      <span class="rc-arrow" data-i18n="s14.cta.arr">Open the hub →</span>
+    </a>
+  </div>
+</section>
 
 <!-- ============== CONTACT ============== -->
 <section class="contact" id="contact">
@@ -6981,7 +7092,7 @@
     <div class="footer-grid">
       <div>
         <a href="#top" class="logo" style="font-size:24px;">
-          <picture><source type="image/webp" srcset="images/brand/logo.webp"><img width="600" height="105" decoding="async" loading="lazy" src="images/brand/logo.png" alt="Infraconcrete" style="display:block;width:auto;"
+          <picture><source type="image/webp" srcset="images/brand/logo.webp"><img width="600" height="105" decoding="async" loading="lazy" src="images/brand/logo.png" alt="Infraconcrete" style="display:block;width:auto;height:auto;max-width:280px;"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"></picture>
           <span style="display:none;align-items:baseline;">Infra<b>concrete</b><sup>™</sup></span>
         </a>
@@ -7000,7 +7111,7 @@
           <rect x="48" y="41" width="20" height="6" fill="#C8102E"/>
           <rect x="100" y="27" width="20" height="6" fill="#C8102E"/>
           <rect x="152" y="13" width="20" height="6" fill="#C8102E"/>
-          <rect x="204" y="-1" width="20" height="6" fill="#C8102E"/>
+          <rect x="204" y="1" width="20" height="6" fill="#C8102E"/>
         </svg>
         <p style="margin-top:14px; max-width:340px; color: var(--grey-700); line-height: 1.65;">
           <em style="font-family: var(--serif); font-style: italic; color: var(--ic-red);" data-i18n="foot.about.tagline">Engineered slopes for maximum utility.</em><br/>
