@@ -2937,6 +2937,31 @@
   .case-scroll-hint::after {
     content: ''; flex: 1; height: 1px; background: var(--grey-line);
   }
+  .case-see-all {
+    margin-top: 26px;
+    text-align: center;
+  }
+  .case-see-all a {
+    display: inline-block;
+    padding: 14px 28px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--ic-red);
+    border: 1px solid var(--ic-red);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  .case-see-all a:hover {
+    background: var(--ic-red-deep, #9A0E25);
+    border-color: var(--ic-red-deep, #9A0E25);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px -12px rgba(200, 16, 46, 0.5);
+  }
   .case {
     background: var(--paper-bright);
     border: 1px solid var(--grey-line);
@@ -6811,6 +6836,10 @@
     </div>
 
     <div class="case-scroll-hint" data-i18n="case.scroll">Drag, scroll, or swipe →</div>
+
+    <div class="case-see-all">
+      <a href="/projects/" data-i18n="case.see_all">See all 23 client projects &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -8452,6 +8481,7 @@
         'case8.l1': 'jalan utama · lebar',
         'case8.l2': 'saliran',
         'case.scroll': 'Seret, tatal, atau leret →',
+        'case.see_all': 'Lihat kesemua 23 projek pelanggan →',
         // Footer
         'footer.tagline': 'Syarikat Panthera Group. Merekayasa cerun untuk menaikkan penggunaan tanah, sejak 2018.',
         'footer.h.solutions': 'Penyelesaian',
@@ -8832,6 +8862,7 @@
         'case8.l1': '主干道 · 宽度',
         'case8.l2': '排水长度',
         'case.scroll': '拖动、滚动或滑动 →',
+        'case.see_all': '查看全部 23 个客户项目 →',
         // Footer
         'footer.tagline': 'Panthera Group 旗下公司。自 2018 年起，专注边坡工程，发挥土地最大用途。',
         'footer.h.solutions': '解决方案',
