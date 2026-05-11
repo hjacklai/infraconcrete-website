@@ -1953,27 +1953,34 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh; /* iOS Safari address bar aware */
     z-index: 2147483000; /* above mobile sticky nav, hero overlays, anything */
+    /* flex-column + overflow-y so tall content (landscape phones, dense screens) scrolls cleanly */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    flex-direction: column;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
+    /* safe-area-aware padding for iPhones with notches / home bar */
+    padding: max(20px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
   }
   .careers-modal[hidden] { display: none; }
   .careers-modal__backdrop {
-    position: absolute;
-    inset: 0;
+    /* fixed (not absolute) so it always covers the viewport even when modal scrolls */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: rgba(31, 27, 23, 0.78);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     animation: careersFade .22s var(--ease) both;
+    z-index: 0;
   }
   .careers-modal__card {
     position: relative;
+    /* margin: auto on a flex item centers when room exists, collapses to 0 when content is taller -> clean scroll fallback */
+    margin: auto;
     background: var(--paper-bright);
     color: var(--ink);
     border-radius: 8px;
@@ -1982,6 +1989,9 @@
     padding: 36px 30px 28px;
     box-shadow: 0 30px 80px rgba(0,0,0,0.5);
     animation: careersRise .28s var(--ease) both;
+    z-index: 1;
+    /* prevent the card flex from shrinking below its content */
+    flex-shrink: 0;
   }
   @keyframes careersFade {
     from { opacity: 0; }
@@ -2040,6 +2050,10 @@
     font-weight: 500;
     background: rgba(255,255,255,0.35);
     transition: border-color .2s var(--ease), background .2s var(--ease), transform .2s var(--ease);
+    /* prevent long emails from overflowing on very narrow screens */
+    min-width: 0;
+    word-break: break-all;
+    overflow-wrap: anywhere;
   }
   .careers-modal__emails a:hover {
     border-color: var(--ic-red);
@@ -2066,6 +2080,32 @@
   @media (max-width: 520px) {
     .careers-modal__card { padding: 30px 22px 22px; }
     .careers-modal__emails a { padding: 12px 14px; font-size: 14px; }
+    .careers-modal__title { font-size: 22px; }
+    .careers-modal__intro { font-size: 14px; margin-bottom: 18px; }
+  }
+  @media (max-width: 360px) {
+    .careers-modal { padding: 12px; }
+    .careers-modal__card { padding: 26px 18px 20px; border-radius: 6px; }
+    .careers-modal__emails a { padding: 11px 12px; font-size: 13px; gap: 10px; }
+    .careers-modal__close { font-size: 26px; padding: 4px 8px; }
+  }
+  /* short landscape (e.g., phone in landscape, 375x375 split-screen, tiny laptops) */
+  @media (max-height: 520px) {
+    .careers-modal { padding: 12px; }
+    .careers-modal__card {
+      padding: 24px 22px 18px;
+      animation: none; /* skip rise animation when starting near edge */
+    }
+    .careers-modal__title { font-size: 19px; margin-bottom: 6px; }
+    .careers-modal__intro { font-size: 13px; line-height: 1.5; margin-bottom: 14px; }
+    .careers-modal__emails { gap: 6px; margin-bottom: 14px; }
+    .careers-modal__emails a { padding: 9px 12px; font-size: 13px; }
+    .careers-modal__meta { padding-top: 10px; font-size: 9px; }
+    .careers-modal__close { top: 6px; right: 8px; font-size: 24px; }
+  }
+  /* hide modal entirely when printing */
+  @media print {
+    .careers-modal { display: none !important; }
   }
 
   /* =========================================================
