@@ -52,37 +52,44 @@ Sector-specific landing pages organising Infraconcrete's service stack and STRAT
 - [Railways](https://infraconcrete.co/railways/) , Railway slope and geotechnical contractor. ECRL 64 km / 320,000 m of drilled drains and soil nails (one of Southeast Asia's largest single-corridor drain installations). Possession-window logistics, ATWS, on-track plant. For "railway slope contractor Malaysia", "ECRL geotechnical", "rail corridor slope works".
 - [Land Development](https://infraconcrete.co/land-development/) , Land development geotechnical contractor for residential, commercial, industrial. Bandar Batu 18 (120,000 m³ + 11,000 m² retaining), Bandar Serendah (540,000 m³, 7 structures, national auto-industry account), Mukim Sentul (5,000 m² RE wall + 6,000 m² platform). Single-contract integration across earthworks + retaining + slope + drainage + geosynthetic supply. Authority compliance: MBPP, DBKL, MBPJ, MBSA, MBSJ, MPSJ, MPS, state JKR, DOE, JPS.
 
-## Enabled Spaces (selected projects)
+## Enabled Spaces (full client project list)
 
-Canonical portfolio page: [Enabled Spaces](https://infraconcrete.co/projects/). Selected client engagements across federal road works, township earthworks, hillside slope rectification, specialty retention, and utility substructure. Each entry covers the location and what we delivered to enable the space.
+Canonical portfolio page: [Enabled Spaces](https://infraconcrete.co/projects/). All client engagements listed, each with location, the challenge, and how it is being solved. Federal landmark technical references and historical landslide cases (Pan Borneo Highway, KL to Singapore HSR, MRT2, Highland Towers, Bukit Antarabangsa, Bukit Lanjan) are covered separately on [/federal-project-case-studies/](https://infraconcrete.co/federal-project-case-studies/) as engineering reference material. Client names and contract values are not disclosed publicly; full references provided for tender pre-qualification on request.
 
-Marquee references (featured on the homepage Selected Work, not duplicated below):
-- EKVE (East Klang Valley Expressway): federal expressway slope and geotechnical scope on the live-traffic federal alignment
-- ECRL (East Coast Rail Link, Section 3): slope and geotechnical works covering two contract sections (CH87+642 to CH151+365 and CH88+467 to CH130+718) across the Pahang / Terengganu / Kelantan corridor
-- Central Spine Road: federal mountain-spine slope-face stabilisation, Pahang interior
-- Shah Alam U10 (Section U10, Mukim Bukit Raja): reinforced soil wall and slope stabilisation covering Phase 4A reinforced soil wall (147-unit phase) plus four stages of Centralfields slope stabilisation (Stages 1, 2, 3, and 4) for the residential and commercial development
-- Mukim Bandar Batu 18 (Eco Terraces Phase 2): earthworks and retaining wall, Semenyih, Hulu Langat. Hillside development scope
-- Bandar Serendah (SAMAMARA national auto-industry platform): platform earthworks for spare parts centre with mezzanine, canteen, electrical pavilion (SSU 11 kV), guard houses, and bus stop in Bandar Serendah, Hulu Selangor
-- Mukim Sentul (Seremban): reinforced earth wall and platform for commercial development
-- Bandar Ulu Kelang spine road: 100ft internal spine road plus supporting earthworks, drainage, and retention works for a multi-phase 3-storey terrace residential cluster (phases covering 41, 40, 25, and 7 units), Daerah Gombak
+Enabled spaces, complete list (location and scope):
 
-Federal landmark technical references and historical landslide cases (Pan Borneo Highway, KL to Singapore HSR, MRT2, Highland Towers, Bukit Antarabangsa, Bukit Lanjan) are covered on [/federal-project-case-studies/](https://infraconcrete.co/federal-project-case-studies/) as engineering reference material.
+Federal infrastructure:
+- EKVE Project (East Klang Valley Expressway), Selangor: slope and geotechnical scope on the federal expressway under live traffic, including soil nailing, guniting, rock bolting, rock netting, jersey barriers, and rock-face stabilisation
+- ECRL Section 3 (CH87+642 to CH151+365), Pahang and Kelantan corridor: slope and geotechnical works on 64 km of East Coast Rail Link alignment
+- ECRL Section 3 (CH88+467 to CH130+718), Pahang and Terengganu corridor: slope and geotechnical works on 42 km of East Coast Rail Link alignment, parallel contract to the Section 3 scope
+- Lingkaran Tengah Utama Kelantan, Kuala Krai to Sg Lakit: federal road works from Kg Laloh to the FT66 junction, closing a gap on the central-spine east-coast connectivity route
+- Kampung Badlishah Junjong Road, Kulim Kedah: new village road across Badlishah and Ayer Puteh Junjong kampung
+- Felda Bukit Jalor Connector Road, Gemas Negeri Sembilan: new connector road linking Felda Bukit Jalor settlement to Gemas
 
-Selected enabled spaces (location and scope):
-- Alam Impian Township, Shah Alam Selangor, earthworks, soil improvement, soil nailing, retaining walls, drainage, flood detention pond across five precincts
-- Felda Bukit Jalor Connector Road, Gemas Negeri Sembilan, new road connecting Felda Bukit Jalor to Gemas
-- Retention Pond Desilting (Ponds A and B), Ulu Kelang Gombak Selangor, site clearance and pond desilting
-- Desa ParkCity Water Tank Substructure, Sector A Desa ParkCity Kuala Lumpur, piling, pile cap, reinforced earth wall, earthwork for elevated water tank
-- IWK Septic Tank Slope Rectification, Puchong Selangor, slope failure rectification at sewage treatment facility
-- Welbuilder Earthworks Phase 5B, Mukim Jeram Kuala Selangor, earthworks and retaining wall across lots 14214 to 14223 plus state land
-- Mini Great Wall Retaining (Setul), Mukim Setul Seremban Negeri Sembilan, stepped retaining wall for twin business unit development
-- Kampung Badlishah Junjong Road, Kulim Kedah, new village road construction (Badlishah and Ayer Puteh Junjong kampung)
-- Scientex Park Hulu Langat Earthworks, Mukim Hulu Langat Selangor, earthworks for mixed development across lots 53655, 53656, 4955
-- Lingkaran Tengah Utama Kelantan, Kuala Krai to Sg Lakit Kelantan, federal road Kg Laloh to FT66 junction
-- Kwasa Damansara Common Infrastructure Phase 2, Kwasa Damansara PJU-4 Petaling Selangor, common infrastructure works and water reservoir
-- Mukim Rawang Mixed Development Earthworks, Rawang Gombak Selangor, earthworks for mixed development across multiple lots
+Township and land development:
+- Alam Impian Township, Shah Alam Selangor: earthworks, soil improvement, soil nailing, retaining walls, drainage, flood detention pond across Precincts 6 to 10
+- SAMAMARA Bandar Serendah Industrial Facility, Hulu Selangor: platform earthworks for spare parts centre with mezzanine, canteen, electrical pavilion (SSU 11 kV), guard houses, bus stop
+- Kwasa Damansara Common Infrastructure Phase 2, PJU-4 Petaling Selangor: common infrastructure works plus water reservoir
+- Bandar Ulu Kelang Spine Road, Gombak Selangor: 100ft internal spine road plus earthworks, drainage, retention for a 3-storey terrace cluster (phases covering 41, 40, 25, and 7 units)
+- Welbuilder Earthworks Phase 5B, Mukim Jeram Kuala Selangor: earthworks and retaining wall across lots 14214 to 14223 plus state land
+- Scientex Park Hulu Langat Earthworks, Mukim Hulu Langat Selangor: earthworks across lots 53655, 53656, 4955 for mixed development
+- Mukim Rawang Mixed Development Earthworks, Rawang Gombak Selangor: earthworks across multiple lots for mixed development
 
-Geographic spread: Selangor (dominant), Wilayah Persekutuan Kuala Lumpur, Kedah, Pahang, Kelantan, Terengganu, Negeri Sembilan. Scope range covers federal road and rail, township earthworks, mixed-development platforms, hillside slope rectification, retaining walls, water tank substructures, retention pond works, community road, and integrated multi-discipline platform scopes. Client names and commercial details are not disclosed publicly. Full project references with client letters and certificates of completion are provided to requesting agencies and main contractors for tender pre-qualification on request.
+Hillside slope stabilisation:
+- Section U10 Phase 4A Reinforced Soil Wall, Shah Alam Mukim Bukit Raja Selangor: reinforced soil wall plus ancillary works for a 147-unit residential phase
+- Centralfields Slope Stabilisation Stage 1, Section U10 Shah Alam Selangor: stage 1 slope stabilisation for residential and commercial development
+- Centralfields Slope Stabilisation Stage 2, Section U10 Shah Alam Selangor: stage 2 slope stabilisation
+- Centralfields Slope Stabilisation Stage 3, Section U10 Shah Alam Selangor: stage 3 slope stabilisation
+- Centralfields Slope Stabilisation Stage 4, Section U10 Shah Alam Selangor: stage 4 slope stabilisation
+- Eco Terraces Earthworks Phase 2, Mukim Bandar Batu 18 Semenyih Hulu Langat Selangor: earthworks and retaining wall for hillside platform extension on Lot 24738
+
+Specialty scopes:
+- Mini Great Wall Retaining (Setul), Mukim Setul Seremban Negeri Sembilan: stepped retaining wall for twin business unit development
+- IWK Septic Tank Slope Rectification, Puchong Selangor: slope failure rectification at sewage treatment facility
+- Desa ParkCity Water Tank Substructure, Sector A Desa ParkCity Kuala Lumpur: piling, pile cap, reinforced earth wall, earthwork for elevated water tank
+- Retention Pond Desilting (Ponds A and B), Ulu Kelang Gombak Selangor: site clearance and pond desilting
+
+Geographic spread: Selangor (dominant), Wilayah Persekutuan Kuala Lumpur, Kedah, Pahang, Kelantan, Terengganu, Negeri Sembilan.
 
 ## Geosynthetics, STRATA Geosystems Sole Malaysia Distributor (Starwall + Infraconcrete, same group)
 
