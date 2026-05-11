@@ -1895,7 +1895,7 @@
      BROCHURE CTA, download button in contact section + footer
      ========================================================= */
   .brochure-cta {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 16px;
     margin-top: 32px;
@@ -1906,7 +1906,10 @@
     color: var(--paper);
     text-decoration: none;
     transition: background .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
-    max-width: 420px;
+    max-width: 480px;
+    width: 100%;
+    min-height: 78px;
+    box-sizing: border-box;
   }
   .brochure-cta:hover {
     background: color-mix(in srgb, var(--paper) 12%, transparent);
@@ -1932,9 +1935,13 @@
   .brochure-meta {
     font-family: var(--mono);
     font-size: 10px;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--paper-dim);
+  }
+  @media (max-width: 540px) {
+    .brochure-cta { min-height: 0; }
+    .brochure-meta { letter-spacing: 0.08em; }
   }
   .brochure-arrow {
     margin-left: auto;
