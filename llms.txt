@@ -56,7 +56,15 @@ Sector-specific landing pages organising Infraconcrete's service stack and STRAT
 
 Canonical portfolio page: [Enabled Spaces](https://infraconcrete.co/projects/). Selected client engagements across federal road works, township earthworks, hillside slope rectification, specialty retention, and utility substructure. Each entry covers the location and what we delivered to enable the space.
 
-Marquee references (featured on the homepage Selected Work, not duplicated below): EKVE expressway, ECRL rail corridor, Central Spine Road, Bandar Serendah (national auto-industry platform), Bandar Batu 18 (Mukim Bandar Batu 18 / Eco Terraces hillside), Mukim Sentul, Shah Alam U10 (Centralfields slope stabilisation across multiple stages), Bandar Ulu Kelang spine road.
+Marquee references (featured on the homepage Selected Work, not duplicated below):
+- EKVE (East Klang Valley Expressway): federal expressway slope and geotechnical scope on the live-traffic federal alignment
+- ECRL (East Coast Rail Link, Section 3): slope and geotechnical works covering two contract sections (CH87+642 to CH151+365 and CH88+467 to CH130+718) across the Pahang / Terengganu / Kelantan corridor
+- Central Spine Road: federal mountain-spine slope-face stabilisation, Pahang interior
+- Shah Alam U10 (Section U10, Mukim Bukit Raja): reinforced soil wall and slope stabilisation covering Phase 4A reinforced soil wall (147-unit phase) plus four stages of Centralfields slope stabilisation (Stages 1, 2, 3, and 4) for the residential and commercial development
+- Mukim Bandar Batu 18 (Eco Terraces Phase 2): earthworks and retaining wall, Semenyih, Hulu Langat. Hillside development scope
+- Bandar Serendah (SAMAMARA national auto-industry platform): platform earthworks for spare parts centre with mezzanine, canteen, electrical pavilion (SSU 11 kV), guard houses, and bus stop in Bandar Serendah, Hulu Selangor
+- Mukim Sentul (Seremban): reinforced earth wall and platform for commercial development
+- Bandar Ulu Kelang spine road: 100ft internal spine road plus supporting earthworks, drainage, and retention works for a multi-phase 3-storey terrace residential cluster (phases covering 41, 40, 25, and 7 units), Daerah Gombak
 
 Federal landmark technical references and historical landslide cases (Pan Borneo Highway, KL to Singapore HSR, MRT2, Highland Towers, Bukit Antarabangsa, Bukit Lanjan) are covered on [/federal-project-case-studies/](https://infraconcrete.co/federal-project-case-studies/) as engineering reference material.
 

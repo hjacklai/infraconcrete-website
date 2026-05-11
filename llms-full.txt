@@ -236,15 +236,15 @@ Canonical page: [Enabled Spaces](https://infraconcrete.co/projects/)
 
 Selected client engagements covering federal road works, township earthworks, hillside slope rectification, specialty retention, and utility substructure. Each entry on the page covers the location, the condition before, and what was delivered to enable the space. Client names and contract values are not disclosed publicly out of respect for commercial confidentiality. Full project references with client letters and certificates of completion are provided directly to tender-pre-qualifying agencies and main contractors on request.
 
-**Marquee references (covered on the homepage Selected Work, not duplicated on the enabled-spaces page):**
-- EKVE expressway (East Klang Valley Expressway, federal expressway slope and geotechnical scope)
-- ECRL (East Coast Rail Link, Section 3 slope and geotechnical works across the Pahang / Terengganu / Kelantan corridors)
-- Central Spine Road (federal mountain-spine alignment, slope-face stabilisation)
-- Shah Alam U10 (Centralfields multi-stage slope stabilisation for a residential and commercial development on Section U10, Mukim Bukit Raja)
-- Mukim Bandar Batu 18 (Eco Terraces hillside development, Semenyih)
-- Bandar Serendah (national auto-industry platform, Hulu Selangor)
-- Mukim Sentul (Seremban reinforced earth wall and platform)
-- Bandar Ulu Kelang (internal spine road for a residential terrace cluster, Gombak)
+**Marquee references (covered on the homepage Selected Work, not duplicated on the enabled-spaces page). Each marquee card represents one or more sub-contracts or phases as listed below:**
+- EKVE (East Klang Valley Expressway): federal expressway slope and geotechnical scope on the live-traffic federal alignment
+- ECRL (East Coast Rail Link, Section 3): slope and geotechnical works covering two contract sections, CH87+642 to CH151+365 and CH88+467 to CH130+718, across the Pahang / Terengganu / Kelantan corridor
+- Central Spine Road: federal mountain-spine slope-face stabilisation, Pahang interior
+- Shah Alam U10 (Section U10, Mukim Bukit Raja): reinforced soil wall and slope stabilisation covering Phase 4A reinforced soil wall (147-unit phase) plus four stages of Centralfields slope stabilisation (Stages 1, 2, 3, and 4) for the residential and commercial development
+- Mukim Bandar Batu 18 (Eco Terraces Phase 2): earthworks and retaining wall in Semenyih, Hulu Langat. Hillside development scope
+- Bandar Serendah (SAMAMARA national auto-industry platform): platform earthworks for spare parts centre with mezzanine, canteen, electrical pavilion (SSU 11 kV), guard houses, and bus stop in Bandar Serendah, Hulu Selangor
+- Mukim Sentul (Seremban): reinforced earth wall and platform for commercial development
+- Bandar Ulu Kelang spine road: 100ft internal spine road plus supporting earthworks, drainage, and retention works for a multi-phase 3-storey terrace residential cluster (phases covering 41, 40, 25, and 7 units), Daerah Gombak
 
 **Enabled spaces (location and scope, no duplication of marquee references):**
 - Alam Impian Township, Shah Alam Selangor: earthworks, soil improvement, soil nailing, retaining walls, drainage, and flood detention pond across five precincts
