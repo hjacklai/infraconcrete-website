@@ -236,10 +236,11 @@ Canonical page: [Enabled Spaces](https://infraconcrete.co/projects/)
 
 All client engagements listed in full. Each entry on the page covers the location, the challenge, and how it is being solved. Client names and contract values are not disclosed publicly out of respect for commercial confidentiality. Full project references with client letters and certificates of completion are provided directly to tender-pre-qualifying agencies and main contractors on request.
 
+Where multiple contracts or phases share the same project location, they are grouped into one entry below with the sub-items named, matching the visible card structure on /projects/.
+
 **Federal infrastructure:**
 - EKVE Project (East Klang Valley Expressway), Selangor: slope and geotechnical scope on the federal expressway live-traffic alignment. Soil nailing, guniting, rock bolting, rock netting, jersey barriers, rock-face stabilisation
-- ECRL Section 3 (CH87+642 to CH151+365), Pahang and Kelantan corridor: slope and geotechnical works on 64 km of East Coast Rail Link alignment
-- ECRL Section 3 (CH88+467 to CH130+718), Pahang and Terengganu corridor: slope and geotechnical works on 42 km of East Coast Rail Link alignment, parallel contract to Section 3 scope
+- ECRL Section 3 (East Coast Rail Link), Pahang and Terengganu and Kelantan corridor: two parallel contract sections, CH87+642 to CH151+365 (64 km) and CH88+467 to CH130+718 (42 km), slope and geotechnical works on cut slopes and embankments
 - Lingkaran Tengah Utama Kelantan, Kuala Krai to Jambatan Sungai Lakit: federal road from Kg Laloh to the FT66 junction
 - Kampung Badlishah Junjong Road, Kulim Kedah: new village road across Badlishah and Ayer Puteh Junjong kampung
 - Felda Bukit Jalor Connector Road, Gemas Negeri Sembilan: new connector road linking Felda Bukit Jalor settlement to Gemas
@@ -253,12 +254,8 @@ All client engagements listed in full. Each entry on the page covers the locatio
 - Scientex Park Hulu Langat Earthworks, Mukim Hulu Langat Selangor: earthworks across lots 53655, 53656, and 4955 for mixed development
 - Mukim Rawang Mixed Development Earthworks, Rawang Gombak Selangor: earthworks across multiple lots for mixed development
 
-**Hillside slope stabilisation:**
-- Section U10 Phase 4A Reinforced Soil Wall, Shah Alam Mukim Bukit Raja Selangor: reinforced soil wall plus ancillary works for a 147-unit residential phase
-- Centralfields Slope Stabilisation Stage 1, Section U10 Shah Alam Selangor: stage 1 slope stabilisation for residential and commercial development
-- Centralfields Slope Stabilisation Stage 2, Section U10 Shah Alam Selangor: stage 2 slope stabilisation continuing the staged build-out
-- Centralfields Slope Stabilisation Stage 3, Section U10 Shah Alam Selangor: stage 3 slope stabilisation
-- Centralfields Slope Stabilisation Stage 4, Section U10 Shah Alam Selangor: stage 4 slope stabilisation
+**Hillside slope and reinforced soil wall:**
+- Section U10, Shah Alam (Mukim Bukit Raja) Selangor: Phase 4A reinforced soil wall plus ancillary works for the 147-unit residential phase, plus four stages of Centralfields slope stabilisation (Stages 1, 2, 3, and 4) across the residential and commercial development
 - Eco Terraces Earthworks Phase 2, Mukim Bandar Batu 18 Semenyih Hulu Langat Selangor: earthworks and retaining wall for hillside platform extension on Lot 24738
 
 **Specialty scopes:**
