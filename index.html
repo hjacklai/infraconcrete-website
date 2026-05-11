@@ -1949,12 +1949,19 @@
      ========================================================= */
   .careers-modal {
     position: fixed;
-    inset: 0;
-    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh; /* iOS Safari address bar aware */
+    z-index: 2147483000; /* above mobile sticky nav, hero overlays, anything */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    overscroll-behavior: contain;
   }
   .careers-modal[hidden] { display: none; }
   .careers-modal__backdrop {
@@ -7213,22 +7220,6 @@
           </span>
           <span class="brochure-arrow" aria-hidden="true">&rarr;</span>
         </a>
-
-        <!-- Careers modal: shown by JS on click of #careersTrigger -->
-        <div class="careers-modal" id="careersModal" role="dialog" aria-modal="true" aria-labelledby="careersModalTitle" hidden>
-          <div class="careers-modal__backdrop" data-careers-close></div>
-          <div class="careers-modal__card" role="document">
-            <button type="button" class="careers-modal__close" data-careers-close aria-label="Close">&times;</button>
-            <h3 class="careers-modal__title" id="careersModalTitle" data-i18n="contact.careers.label">Participate in the mission</h3>
-            <p class="careers-modal__intro" data-i18n="careers.modal.intro">Send your CV or enquiry to any of the three addresses below. We respond same day for project briefs and within the week for career enquiries.</p>
-            <ul class="careers-modal__emails">
-              <li><a href="mailto:ifrconcrete@gmail.com?subject=Career%20Opportunities"><span class="careers-modal__dot" aria-hidden="true"></span>ifrconcrete@gmail.com</a></li>
-              <li><a href="mailto:leviouschan@starwall.co?subject=Career%20Opportunities"><span class="careers-modal__dot" aria-hidden="true"></span>leviouschan@starwall.co</a></li>
-              <li><a href="mailto:lai@starwall.co?subject=Career%20Opportunities"><span class="careers-modal__dot" aria-hidden="true"></span>lai@starwall.co</a></li>
-            </ul>
-            <p class="careers-modal__meta" data-i18n="contact.careers.meta">Internships · Apprenticeships · Careers</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -8989,6 +8980,22 @@
     });
   })();
 </script>
+
+<!-- Careers modal: rendered at body level so position:fixed escapes any parent stacking context -->
+<div class="careers-modal" id="careersModal" role="dialog" aria-modal="true" aria-labelledby="careersModalTitle" hidden>
+  <div class="careers-modal__backdrop" data-careers-close></div>
+  <div class="careers-modal__card" role="document">
+    <button type="button" class="careers-modal__close" data-careers-close aria-label="Close">&times;</button>
+    <h3 class="careers-modal__title" id="careersModalTitle" data-i18n="contact.careers.label">Participate in the mission</h3>
+    <p class="careers-modal__intro" data-i18n="careers.modal.intro">Send your CV or enquiry to any of the three addresses below. We respond same day for project briefs and within the week for career enquiries.</p>
+    <ul class="careers-modal__emails">
+      <li><a href="mailto:ifrconcrete@gmail.com?subject=Career%20Opportunities"><span class="careers-modal__dot" aria-hidden="true"></span>ifrconcrete@gmail.com</a></li>
+      <li><a href="mailto:leviouschan@starwall.co?subject=Career%20Opportunities"><span class="careers-modal__dot" aria-hidden="true"></span>leviouschan@starwall.co</a></li>
+      <li><a href="mailto:lai@starwall.co?subject=Career%20Opportunities"><span class="careers-modal__dot" aria-hidden="true"></span>lai@starwall.co</a></li>
+    </ul>
+    <p class="careers-modal__meta" data-i18n="contact.careers.meta">Internships · Apprenticeships · Careers</p>
+  </div>
+</div>
 
 </body>
 </html>
