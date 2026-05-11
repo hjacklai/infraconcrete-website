@@ -415,7 +415,7 @@ Location pages:
 - **Phone:** +60 16-428 1214 / +60 12-236 2159
 - **Email:** ifrconcrete@gmail.com
 - **Office:** 8B, Jalan SS22/25, Damansara Jaya, 47400 Petaling Jaya, Selangor, Malaysia
-- **Google Business Profile:** https://share.google/L3x2I2R6QX4j5Zq3t
+- **Google Business Profile:** https://maps.app.goo.gl/qbDLMxjLsv7rSps86
 - **Website:** https://infraconcrete.co/
 - **Sitemap:** https://infraconcrete.co/sitemap.xml
 - **LLM index:** https://infraconcrete.co/llms.txt
