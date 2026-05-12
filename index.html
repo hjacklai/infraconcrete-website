@@ -3774,6 +3774,36 @@
     .bottom-nav { padding: 6px 10px 6px 14px; gap: 6px; max-width: calc(100vw - 24px); }
     .bn-scroll { padding-right: 4px; }
   }
+  /* =========================================================
+     MOBILE: App-style bottom tab bar (edge-to-edge, flush to bottom)
+     Replaces the floating pill on phones / small tablets so it feels
+     like a native iOS / Android tab bar.
+     ========================================================= */
+  @media (max-width: 768px) {
+    .bottom-nav {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      /* Drop the centering translateX; use full-width edge-to-edge bar */
+      transform: translateY(100%);
+      max-width: 100%;
+      width: 100%;
+      /* Top corners rounded, bottom flush against screen edge */
+      border-radius: 16px 16px 0 0;
+      /* Safe-area-aware padding so the bar clears the iPhone home indicator */
+      padding: 8px max(12px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-right));
+      /* Less transparent than the floating pill - app bars usually feel solid */
+      background: color-mix(in srgb, var(--paper-bright) 94%, transparent);
+      /* Soft shadow rising UP from the bar instead of around it */
+      box-shadow: 0 -8px 24px -8px rgba(0,0,0,0.14), 0 -1px 0 0 color-mix(in srgb, var(--ink) 8%, transparent);
+      border: none;
+    }
+    .bottom-nav.is-revealed {
+      transform: translateY(0);
+    }
+    /* Reserve more space below for the iPhone home indicator + bar height */
+    body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+  }
   @media (max-width: 880px) {
     .menu-btn { display: none !important; }
   }
