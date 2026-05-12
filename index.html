@@ -9066,8 +9066,12 @@
     allManaged.forEach(v => playIO.observe(v));
   })();
 
-  /* Careers modal: open on CTA click, close on backdrop / X / Escape */
-  (function() {
+  /* Careers modal: open on CTA click, close on backdrop / X / Escape.
+     Wrapped in DOMContentLoaded because the trigger <a> is in the body
+     above this script but the modal <div> is rendered at body-end
+     (below this script in document order) - so we have to wait until
+     the modal HTML has been parsed before getElementById can find it. */
+  function initCareersModal() {
     var trigger = document.getElementById('careersTrigger');
     var modal = document.getElementById('careersModal');
     if (!trigger || !modal) return;
@@ -9095,7 +9099,12 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && !modal.hidden) closeModal();
     });
-  })();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCareersModal);
+  } else {
+    initCareersModal();
+  }
 </script>
 
 <!-- Careers modal: rendered at body level so position:fixed escapes any parent stacking context -->
