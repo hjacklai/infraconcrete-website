@@ -222,7 +222,14 @@
   <url><loc>https://infraconcrete.co/slope-reinforcement/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
   <url><loc>https://infraconcrete.co/zh/slope-reinforcement/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/bm/pengukuhan-cerun/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://infraconcrete.co/soil-nailing/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url>
+    <loc>https://infraconcrete.co/soil-nailing/</loc><lastmod>2026-05-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/soil-nailing/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/soil-nailing/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/soil-nailing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/soil-nailing/"/>
+    <changefreq>weekly</changefreq><priority>0.95</priority>
+  </url>
   <url><loc>https://infraconcrete.co/rock-bolting/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/guniting/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/rockfall-barrier/</loc><lastmod>2026-05-06</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
