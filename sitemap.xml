@@ -206,6 +206,7 @@
   <url>
     <loc>https://infraconcrete.co/slope-contractor/</loc><lastmod>2026-05-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-contractor/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/kontraktor-cerun/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/slope-contractor/"/>
     <changefreq>weekly</changefreq>
     <priority>0.98</priority>
@@ -313,11 +314,11 @@
     <changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/bm/kontraktor-cerun/</loc><lastmod>2026-05-06</lastmod>
+    <loc>https://infraconcrete.co/bm/kontraktor-cerun/</loc><lastmod>2026-05-13</lastmod>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/kontraktor-cerun/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-stabilization/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/slope-stabilization/"/>
-    <changefreq>monthly</changefreq><priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-contractor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/slope-contractor/"/>
+    <changefreq>weekly</changefreq><priority>0.98</priority>
   </url>
   <url>
     <loc>https://infraconcrete.co/bm/tembok-penahan/</loc><lastmod>2026-05-06</lastmod>
@@ -334,7 +335,6 @@
     <loc>https://infraconcrete.co/zh/slope-stabilization/</loc><lastmod>2026-05-06</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/slope-stabilization/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-stabilization/"/>
-    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/kontraktor-cerun/"/>
     <changefreq>monthly</changefreq><priority>0.95</priority>
   </url>
   <url>

@@ -135,6 +135,7 @@ For Malaysian users searching in their native language, the same four specialty 
 - 边坡修复 (slope repair) → https://infraconcrete.co/zh/slope-repair/
 - 边坡整治 (slope rectification) → https://infraconcrete.co/zh/slope-rectification/
 - 边坡加固 (slope reinforcement) → https://infraconcrete.co/zh/slope-reinforcement/
+- Kontraktor cerun (slope contractor) → https://infraconcrete.co/bm/kontraktor-cerun/
 - Pembaikan cerun (slope repair) → https://infraconcrete.co/bm/pembaikan-cerun/
 - Pemulihan cerun (slope rectification) → https://infraconcrete.co/bm/pemulihan-cerun/
 - Pengukuhan cerun (slope reinforcement) → https://infraconcrete.co/bm/pengukuhan-cerun/
