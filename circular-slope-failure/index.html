@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html data-xrefed="1" lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DRSYDHBKMZ');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Circular Slope Failure | Rotational Failure, Bishop / Janbu / Spencer Analysis, Remediation | Engineering Reference Malaysia | Infraconcrete</title>
+<meta name="description" content="Circular slope failure: definition, rotational mechanism, slip-circle analysis methods (Bishop, Janbu, Spencer, Morgenstern-Price), root causes, and remediation approach. The dominant failure mode in homogeneous soil slopes including Malaysian residual soil. Engineering reference for consulting engineers and geotechnical specialists." />
+<meta name="keywords" content="circular slope failure, rotational slope failure, slip circle failure, Bishop method slope analysis, Janbu method slope, Spencer method slope, Morgenstern-Price method, slope-W analysis, residual soil circular failure Malaysia, soil slope failure mode" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Infraconcrete Construction Sdn Bhd" />
+
+<link rel="canonical" href="https://infraconcrete.co/circular-slope-failure/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/circular-slope-failure/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/circular-slope-failure/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","headline":"Circular Slope Failure: Rotational Mechanism, Slip-Circle Analysis, and Remediation","url":"https://infraconcrete.co/circular-slope-failure/","description":"Engineering reference page on circular (rotational) slope failure mode in homogeneous soil slopes. Mechanism, slip-circle analysis methods, root causes, and remediation framework. The dominant failure mode in Malaysian residual soil slopes.","datePublished":"2026-05-16","author":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"publisher":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd"}},
+{"@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},
+{"@type":"ListItem","position":2,"name":"Slope Failure Modes","item":"https://infraconcrete.co/slope-failure-modes/"},
+{"@type":"ListItem","position":3,"name":"Circular Slope Failure","item":"https://infraconcrete.co/circular-slope-failure/"}
+]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is circular slope failure?","acceptedAnswer":{"@type":"Answer","text":"Circular (or rotational) slope failure occurs when a soil mass rotates as a single unit about an approximately circular slip surface. The slip surface curves through the soil mass from the slope face to the crest, with the failing mass rotating outward and downward. The dominant failure mode in homogeneous fine-grained soil slopes (residual soil, soft clays, silts), in contrast to planar / wedge failure modes that require discrete discontinuities (jointed rock, bedded sedimentary)."}},
+{"@type":"Question","name":"What analysis methods apply?","acceptedAnswer":{"@type":"Answer","text":"Limit-equilibrium slip-circle methods are the standard. Bishop's Simplified Method (typically the default; satisfies moment equilibrium, assumes circular slip), Janbu's Simplified Method (satisfies force equilibrium, works for non-circular surfaces), Spencer's Method (satisfies both moment and force equilibrium, more rigorous), Morgenstern-Price Method (most general, handles all slip surface shapes and inter-slice force conditions). Software: Slope/W, Slide, Geo5, equivalent. Finite-element strength reduction method (PLAXIS, RS2) for verification on complex geometries."}},
+{"@type":"Question","name":"What are typical root causes in Malaysian residual soil?","acceptedAnswer":{"@type":"Answer","text":"1) Monsoon-driven pore-water pressure rise. Saturated residual soil loses much of its apparent cohesion as suction is destroyed by infiltration. 2) Over-steepening of the cut face beyond the limit-equilibrium stable angle. 3) Loss of vegetation cover reducing root reinforcement on weathered residual soil. 4) Surcharge loading at the crest (new construction, fill placement). 5) Toe erosion from drainage misalignment. 6) Adverse weathering: progressive softening of stiff weathered crust into a thinly clayey layer with reduced shear strength."}},
+{"@type":"Question","name":"How is circular failure remediated?","acceptedAnswer":{"@type":"Answer","text":"Five primary interventions. (1) Re-grade to flatten the slope angle below the limit-equilibrium critical angle. (2) Drainage to remove pore-water pressure (sub-horizontal drains; the most cost-effective single intervention when groundwater is the trigger). (3) Soil nailing or ground anchors across the critical slip surface, sized per Hoek limit-equilibrium with the additional anchor force in the FoS calculation. (4) Toe support: berm at the toe, retaining wall, or buttress. (5) Surface protection plus vegetated erosion control to prevent the secondary mechanisms (toe erosion, surface gullying, vegetation loss) that lead to deeper failures over time."}}
+]}
+]}
+</script>
+
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/css/seo-page.css">
+<script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" />
+</head>
+<body>
+
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">&larr; Back to home</a></div></header>
+
+<div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">&middot;</span><a href="/slope-failure-modes/">Slope Failure Modes</a><span class="sep">&middot;</span><span class="here">Circular Slope Failure</span></nav></div>
+
+<main>
+ <div class="container">
+
+ <section class="hero">
+  <div class="eyebrow">Slope failure mode &middot; Engineering reference</div>
+  <h1>Circular slope failure: rotational mechanism in <em>homogeneous soil.</em></h1>
+  <p class="lede">Circular (rotational) slope failure is the <strong>dominant failure mode in homogeneous fine-grained soil slopes</strong>, including most Malaysian residual soil slopes when no controlling discontinuity is present. The soil mass rotates as a single unit about an approximately circular slip surface. Distinguished from planar / wedge failure (which require discrete discontinuities, typical in jointed rock) and from flow slide (which involves complete loss of shear strength and fluid-like behaviour). The standard analysis tools are limit-equilibrium slip-circle methods (Bishop, Janbu, Spencer, Morgenstern-Price) implemented in Slope-W, Slide, and equivalent software.</p>
+ </section>
+
+<section class="block">
+ <div class="block-eye">01 / Definition and mechanism</div>
+ <h2>The rotational <em>slip-circle mechanism.</em></h2>
+ <p>In circular slope failure, a soil mass rotates as a single unit about an approximately circular slip surface that curves through the soil from the slope face (typically at or near the toe) up to the crest (typically at or near a vertical scarp). The slip surface is curved rather than planar because the soil is approximately homogeneous and isotropic: there is no pre-existing discontinuity to define the failure path, so the path that minimises factor of safety is the curved surface that mathematics shows to be circular (or nearly so) for an idealised homogeneous soil.</p>
+ <p>The failing mass remains coherent during initial movement (not fluidising, not breaking into individual blocks); it rotates outward and downward as a unit. Surface signs: a curved scarp at the top, a bulged toe at the bottom, transverse tension cracks across the failing mass, and progressive downward displacement. The slip-circle geometry is the foundation of soil-slope stability analysis since the 1920s and remains the standard framework today.</p>
+</section>
+
+<section class="block">
+ <div class="block-eye">02 / Analysis methods</div>
+ <h2>Limit-equilibrium <em>slip-circle methods.</em></h2>
+ <div class="two-col">
+ <div>
+ <h3>Bishop's Simplified Method (1955)</h3>
+ <p>Satisfies moment equilibrium of the failing mass about the centre of the slip circle. Assumes circular slip surface and zero shear force between vertical slices. The standard default method for routine circular-failure analysis: simple, robust, gives accurate FoS for most homogeneous slope geometries. Used in 70 to 80 percent of routine slope-stability calculations globally.</p>
+
+ <h3>Janbu's Simplified Method (1957)</h3>
+ <p>Satisfies force equilibrium (horizontal and vertical). Works for non-circular slip surfaces as well as circular. Slightly less accurate than Bishop for purely circular surfaces but more flexible for complex geometries. Often used as cross-check or for non-circular slip-surface searches.</p>
+ </div>
+ <div>
+ <h3>Spencer's Method (1967)</h3>
+ <p>Satisfies both moment and force equilibrium. Assumes constant inter-slice force inclination. More rigorous than Bishop or Janbu; typically gives slightly different FoS values. Used where higher accuracy is required, particularly on shallow slip surfaces or non-circular geometries.</p>
+
+ <h3>Morgenstern-Price Method (1965)</h3>
+ <p>Most general limit-equilibrium method. Satisfies both moment and force equilibrium with variable inter-slice force inclination defined by a user-chosen function. Handles any slip surface shape, soil profile, pore pressure distribution, and external loading. Standard for complex or critical projects. Implementations in Slope-W, Slide, Geo5, etc.</p>
+
+ <h3>Finite-element strength reduction (FE SRM)</h3>
+ <p>Alternative approach using finite-element analysis (PLAXIS, RS2, etc.) where soil strength parameters are progressively reduced until failure is computed. Does not assume a slip-surface shape; failure surface emerges from the analysis. Used for verification on critical projects.</p>
+ </div>
+ </div>
+</section>
+
+<section class="block">
+ <div class="block-eye">03 / Root causes</div>
+ <h2>What drives circular failure in <em>Malaysian residual soil.</em></h2>
+ <ul style="font-size:15px;line-height:1.85;color:var(--ink-soft);max-width:780px">
+ <li><strong>Monsoon-driven pore-water pressure rise:</strong> the dominant Malaysian trigger. Saturated residual soil loses much of its apparent cohesion as suction is destroyed by rainfall infiltration. Pore pressure on the slip surface reduces effective normal stress and effective friction.</li>
+ <li><strong>Over-steepening of the cut face:</strong> when the as-cut angle exceeds the limit-equilibrium stable angle for the actual soil parameters, factor of safety drops below 1. Often a result of optimistic design parameters not matching the actual encountered soil.</li>
+ <li><strong>Loss of vegetation cover:</strong> root reinforcement contributes significantly to shallow slope stability in residual soil. Tree-cutting or vegetation loss reduces the available cohesion.</li>
+ <li><strong>Surcharge loading at the crest:</strong> new construction (building, fill placement, traffic loading) adds driving force to the failing mass.</li>
+ <li><strong>Toe erosion:</strong> drainage misalignment or surface flow eroding the toe reduces passive resistance and triggers progressive upward failure.</li>
+ <li><strong>Adverse weathering progression:</strong> stiff weathered crust progressively softens into a thinly clayey weak layer with reduced shear strength over years to decades.</li>
+ <li><strong>Earthquake loading:</strong> seismic acceleration adds horizontal inertial force. Generally less critical in Malaysia (low seismicity) but relevant for Sabah / Sarawak projects near the Banda Arc.</li>
+ </ul>
+</section>
+
+<section class="block">
+ <div class="block-eye">04 / Remediation approach</div>
+ <h2>Five primary <em>interventions.</em></h2>
+ <div class="two-col">
+ <div>
+ <h3>1. Re-grade the slope</h3>
+ <p>Flatten the face angle below the limit-equilibrium critical angle. Most durable solution where footprint allows. Often impractical on tight-site cuts (highway corridors, urban hillside).</p>
+
+ <h3>2. Drainage (often the cheapest single intervention)</h3>
+ <p><a class="xref" href="/horizontal-drains/">Sub-horizontal drains</a> drilled into the slope body to lower the groundwater table behind the face. Typically gives 0.15 to 0.40 FoS gain at substantially lower cost than structural reinforcement. The first-line response when monsoon pore-pressure is the trigger.</p>
+
+ <h3>3. Soil nailing or ground anchors</h3>
+ <p><a class="xref" href="/soil-nailing/">Soil nails</a> or <a class="xref" href="/ground-anchor/">ground anchors</a> across the critical slip surface. The anchor force is added to the limit-equilibrium FoS calculation as restoring moment / force. Typical anchor inclination 10 to 25 degrees below horizontal, sized to cross the critical slip surface at an effective angle.</p>
+ </div>
+ <div>
+ <h3>4. Toe support</h3>
+ <p>Berm at the toe (most economical, requires available footprint), retaining wall, or buttress structure. Adds passive resistance, raises FoS by increasing the effective resisting moment.</p>
+
+ <h3>5. Surface protection + vegetation</h3>
+ <p><a class="xref" href="/guniting/">Shotcrete face</a> and <a class="xref" href="/erosion-control/">erosion-control vegetation</a> to prevent the secondary mechanisms (toe erosion, surface gullying, vegetation loss) that lead to deeper failures over time. Usually applied alongside one of the primary interventions.</p>
+
+ <h3>Combined approach (typical Malaysian package)</h3>
+ <p>Most Malaysian post-failure remediation combines drainage first (immediate FoS gain), then soil nailing across the slip surface (structural reinforcement), then shotcrete face protection (long-term durability), then vegetated face (environmental compliance). See <a class="xref" href="/post-landslide-remediation/">post-landslide remediation</a> for the integrated sequence.</p>
+ </div>
+ </div>
+</section>
+
+<section class="block">
+ <div class="block-eye">05 / Diagnostic indicators</div>
+ <h2>Visual signs <em>at site.</em></h2>
+ <ul style="font-size:15px;line-height:1.85;color:var(--ink-soft);max-width:780px">
+ <li><strong>Curved scarp at the top of the failing mass</strong> with the scarp arc tracing the surface intersection of the slip circle.</li>
+ <li><strong>Bulged toe</strong> where the failing mass is pushed outward and slightly upward.</li>
+ <li><strong>Transverse tension cracks</strong> across the failing mass surface, often appearing first at the crest and progressing downslope.</li>
+ <li><strong>Leaning trees and tilted structures</strong> on the failing mass.</li>
+ <li><strong>Differential settlement</strong> behind the crest scarp where the failing mass has rotated outward.</li>
+ <li><strong>Seepage at the toe</strong> from groundwater intercepted by the slip surface.</li>
+ <li><strong>Progressive movement readings</strong> from inclinometers and extensometers showing rotation about a central axis.</li>
+ </ul>
+</section>
+
+</div>
+
+<section class="cta-block"><div class="container"><h2>Circular failure <em>on your project?</em></h2><p>Send slope geometry, SI report (if you have one), and site photos. Same-day engineering input.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp our team &rarr;</a><a class="btn btn-ghost" href="/#contact">Full contact</a></div></div></section>
+
+<div class="container">
+<section class="block" data-service-crosslinks="1">
+<div class="block-eye">More from Infraconcrete</div>
+<h2>Continue <em>exploring.</em></h2>
+<div class="two-col">
+<div>
+<h3>Other failure modes</h3>
+<p>&rarr; <a href="/planar-slope-failure/">Planar slope failure</a></p>
+<p>&rarr; <a href="/wedge-slope-failure/">Wedge slope failure</a></p>
+<p>&rarr; <a href="/toppling-slope-failure/">Toppling slope failure</a></p>
+<p>&rarr; <a href="/flow-slide-residual-soil-malaysia/">Flow slide in residual soil</a></p>
+<p>&rarr; <a href="/slope-failure-modes/">All failure modes overview</a></p>
+<h3>Remediation capabilities</h3>
+<p><a href="/soil-nailing/">Soil Nailing</a> &middot; <a href="/horizontal-drains/">Horizontal Drains</a> &middot; <a href="/guniting/">Guniting</a> &middot; <a href="/ground-anchor/">Ground Anchor</a></p>
+</div>
+<div>
+<h3>Engineering reference</h3>
+<p>&rarr; <a href="/slope-stability-analysis-guide/">Slope stability analysis</a></p>
+<p>&rarr; <a href="/tropical-residual-soil-guide/">Tropical residual soil guide</a></p>
+<p>&rarr; <a href="/geotechnical-software-reference/">Geotechnical software reference</a></p>
+<h3>Application</h3>
+<p>&rarr; <a href="/post-landslide-remediation/">Post-landslide remediation</a></p>
+<p>&rarr; <a href="/slope-repair/">Slope repair</a></p>
+<p>&rarr; <a href="/about/">About Infraconcrete</a></p>
+</div>
+</div>
+</section>
+</div>
+</main>
+
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd &middot; CIDB G7 &middot; ISO 9001:2015 &middot; Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor) &middot; A <a href="/">Panthera Group</a> company &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p></div></footer>
+
+</body>
+</html>
