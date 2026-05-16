@@ -977,6 +977,9 @@
   <url><loc>https://infraconcrete.co/slope-works-for-data-centers/</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
   <url><loc>https://infraconcrete.co/slope-works-for-industrial-parks/</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
+  <!-- Retaining wall D&B canonical page (added 2026-05-16) -->
+  <url><loc>https://infraconcrete.co/retaining-wall-design-and-build/</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+
   <!-- Failure-mode educational pages (added 2026-05-16) -->
   <url><loc>https://infraconcrete.co/planar-slope-failure/</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://infraconcrete.co/wedge-slope-failure/</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
