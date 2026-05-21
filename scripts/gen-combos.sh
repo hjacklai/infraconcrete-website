@@ -19,8 +19,8 @@ declare -a SERVICES=(
  "land-creation|Land Creation & Earthworks|cap-landcreation|Cut-and-fill platforms, infill across natural terrain, slope cuts, embankments. JKR-spec earthworks delivered with our own fleet."
  "horizontal-drains|Horizontal Drains|cap-slope-stabilization|Drilled subsurface drains that lower the groundwater table by gravity. To BS 6031, JKR. Often the single most effective slope-stabilization measure when groundwater is the failure driver."
  "slope-repair|Slope Repair|cap-slope|Post-failure slope repair, emergency slope repair after monsoon damage, hillside development distress, retaining wall remedial works. Drainage-first methodology then structural reinforcement. Soil nailing, guniting, ground anchors, horizontal drains as integrated systems."
- "geotechnical-contractor|Geotechnical Contractor|capabilities|Specialist geotechnical contractor and geotech specialist team, six in-house systems: soil nailing, guniting, rock bolting, rockfall barriers, retaining walls, horizontal drains. CIDB G7 panel-registered. Federal-grade documentation discipline."
- "slope-rectification|Slope Rectification|cap-slope|JKR slope rectification specialist contractor. Federal-grade documentation, panel-registered, live-traffic execution. Soil nailing, guniting, drainage, ground anchors as integrated rectification packages to JKR / authority directives."
+ "geotechnical-contractor|Geotechnical Contractor|capabilities|Specialist geotechnical contractor and geotech specialist team, six in-house systems: soil nailing, guniting, rock bolting, rockfall barriers, retaining walls, horizontal drains. CIDB G7. Federal-grade documentation discipline."
+ "slope-rectification|Slope Rectification|cap-slope|JKR slope rectification specialist contractor. Federal-grade documentation, live-traffic execution. Soil nailing, guniting, drainage, ground anchors as integrated rectification packages to JKR / authority directives."
  "slope-reinforcement|Slope Reinforcement|cap-slope|Slope reinforcement contractor, soil nailing, MSE walls, ground anchors, rock bolting. Adding tensile capacity to soil masses so slopes stand at steeper angles or carry higher loads. To BS 8006-2, FHWA, Eurocode 7."
 )
 
@@ -91,7 +91,7 @@ for SVC_ROW in "${SERVICES[@]}"; do
 <section class="block"><div class="block-eye">02 / Why we deliver in ${ST_NAME}</div><h2>Federal references, <em>specialist crews.</em></h2>
 <div class="two-col">
 <div><h3>Federal-grade engineering</h3><p>EKVE (39.5 km, 450,000 m² protected), ECRL (320,000 m drilled), Central Spine Road (65,000 m²), all delivered. Same engineering team designs your ${ST_NAME} project.</p>
-<h3>CIDB G7 + ISO 9001:2015</h3><p>Highest CIDB grade, ISO 9001:2015 quality system. Eligible for JKR ${ST_NAME}, federal panels, and local authority submissions.</p></div>
+<h3>CIDB G7 + ISO 9001:2015</h3><p>Highest CIDB grade, ISO 9001:2015 quality system. Eligible for JKR ${ST_NAME} and local authority submissions.</p></div>
 <div><h3>Six in-house systems</h3><p>Soil nailing, guniting, rock bolting, rockfall barriers, retaining walls, horizontal drains, all crews are ours. No subcontracting on the geotechnical scope.</p>
 <h3>Same-day response</h3><p>WhatsApp brief acknowledged the same business day. Site visits at no obligation. Project-specific mobilization to ${ST_NAME}.</p></div></div></section>
 </div>
