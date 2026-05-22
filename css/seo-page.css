@@ -572,15 +572,15 @@ body { padding-bottom: 76px; }
   border-radius: 999px;
   transition: background .22s var(--ease), color .22s var(--ease);
 }
-.bn-item:hover { background: rgba(31, 27, 23, 0.06); color: var(--ic-red); }
+.bn-item:hover, .bn-item:focus-visible { color: var(--ink); background: color-mix(in srgb, var(--ink) 6%, transparent); }
 .bn-item svg { width: 20px; height: 20px; display: block; }
-.bn-cta {
-  background: var(--ic-red); color: #fff !important;
-  padding: 10px 18px; min-width: auto;
-  margin-left: 4px;
-}
-.bn-cta:hover { background: var(--ic-red-deep); color: #fff !important; }
-.bn-cta svg { opacity: 1; }
+/* WhatsApp CTA: only color overrides, no padding/margin changes so the CTA
+   matches every other .bn-item dimension exactly. Mirrors homepage rules:
+   `.bottom-nav > .bn-cta { flex-shrink: 0; }`
+   `.bn-item.bn-cta { background: var(--ic-red); color: #fff; }` */
+.bottom-nav > .bn-cta { flex-shrink: 0; }
+.bn-item.bn-cta { background: var(--ic-red); color: #fff; }
+.bn-item.bn-cta:hover, .bn-item.bn-cta:focus-visible { background: var(--ic-red-deep); color: #fff; }
 /* On wider desktops (>=1100px) tighten the pill horizontally and hide the
    scroll hint so it matches the homepage exactly. */
 @media (min-width: 1100px) {
