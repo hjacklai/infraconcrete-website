@@ -425,6 +425,15 @@ Location pages:
 - https://infraconcrete.co/bm/east-coast/ ,  Pantai Timur (Kelantan, Terengganu, east Pahang)
 - https://infraconcrete.co/bm/sabah-sarawak/ ,  Sabah and Sarawak
 
+Geosynthetics cluster (added 2026-05-23):
+- https://infraconcrete.co/bm/geosintetik/ ,  Hab geosintetik (cross-category overview)
+- https://infraconcrete.co/bm/geogrid/ ,  Geogrid (StrataGrid uniaksial PET + biaksial PP)
+- https://infraconcrete.co/bm/geotekstil/ ,  Geotekstil (StrataTex HSR + bukan tenunan)
+- https://infraconcrete.co/bm/geosel/ ,  Geosel (StrataWeb HDPE)
+- https://infraconcrete.co/bm/geomembran/ ,  Geomembran (HDPE/LLDPE/PVC/EPDM)
+- https://infraconcrete.co/bm/strata-malaysia/ ,  Halaman autoriti pengedar STRATA (Starwall)
+- https://infraconcrete.co/bm/perbandingan-geosintetik/ ,  Perbandingan kategori geosintetik
+
 ### 11.2 中文 Landing Pages (Simplified Chinese)
 
 Service pages:
@@ -448,6 +457,15 @@ Location pages:
 - https://infraconcrete.co/zh/pahang/ ,  彭亨
 - https://infraconcrete.co/zh/east-coast/ ,  东海岸
 - https://infraconcrete.co/zh/sabah-sarawak/ ,  沙巴砂拉越
+
+Geosynthetics cluster (added 2026-05-23):
+- https://infraconcrete.co/zh/geosynthetics/ ,  土工合成材料中心 (cross-category overview)
+- https://infraconcrete.co/zh/geogrid/ ,  土工格栅 (StrataGrid 单轴向 PET + 双轴向 PP)
+- https://infraconcrete.co/zh/geotextile/ ,  土工布 (StrataTex HSR + 非织造布)
+- https://infraconcrete.co/zh/geocell/ ,  土工格室 (StrataWeb HDPE)
+- https://infraconcrete.co/zh/geomembrane/ ,  土工膜 (HDPE/LLDPE/PVC/EPDM)
+- https://infraconcrete.co/zh/strata-malaysia/ ,  STRATA 马来西亚分销商权威页面 (Starwall)
+- https://infraconcrete.co/zh/compare-geosynthetics/ ,  土工合成材料类别对比
 
 ---
 
