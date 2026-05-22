@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DRSYDHBKMZ');
+</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Geotextile Design Guide for Malaysia | Filter, Separation, Reinforcement, Erosion | C&amp;S Engineer Reference | Infraconcrete</title>
+<meta name="description" content="A working geotextile design guide for C&S, geotechnical, and civil engineers in Malaysia. Filter criteria (Terzaghi-Cistin retention, permeability, anti-clogging gradient ratio), separation design (CBR, puncture resistance, AOS for fines), reinforcement design (basal mat on soft ground, BS 8006 plus Rowe-Soderman, MSE wall PET geogrid), drainage (in-plane transmissivity), erosion control (FHWA-HEC-23 riprap underlay). Worked examples for tropical residual soil, marine clay, peat. Standards index BS 8006, ASTM D4595/D4751/D4491/D5101/D4533/D6241, ISO 10319/11058/12956/13431, AASHTO M288, FHWA-NHI-07-092, JKR-SPJ." />
+<meta name="keywords" content="geotextile design guide, geotextile design Malaysia, geotextile filter design, geotextile separation design, geotextile reinforcement design, basal mat design, BS 8006 geotextile, FHWA-NHI-07-092, AOS design, permittivity design, gradient ratio test, Terzaghi-Cistin filter criteria, geotextile drainage design, erosion control geotextile design, soft clay basal reinforcement, peat embankment geotextile, marine alluvium basal mat, Rowe-Soderman analysis, MSE wall reinforcement design, reinforced soil slope design, geotextile spec writing, AASHTO M288 classes, JKR-SPJ geotextile" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Geotextile Design Guide for Malaysia | C&amp;S Engineer Reference | Infraconcrete" />
+<meta property="og:url" content="https://infraconcrete.co/geotextile-design-guide/" />
+<meta property="og:locale" content="en_MY" />
+<link rel="canonical" href="https://infraconcrete.co/geotextile-design-guide/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/geotextile-design-guide/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geotextile-design-guide/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="icon" type="image/png" sizes="any" href="/favicon.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Geotextile Design Guide for Malaysia: Filter, Separation, Reinforcement, Drainage, Erosion Control","description":"A working geotextile design guide for engineers. Filter criteria (retention, permeability, anti-clogging), separation design, basal reinforcement on soft ground, drainage transmissivity, erosion control under riprap. Worked examples for tropical residual soil, marine clay, peat. Standards-aligned.","author":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"publisher":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"datePublished":"2026-05-08","dateModified":"2026-05-08","proficiencyLevel":"Expert","dependencies":"BS 8006, ASTM D4751, D4491, D4595, D5101, ISO 10319, AASHTO M288, FHWA-NHI-07-092"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Geosynthetics","item":"https://infraconcrete.co/geosynthetics/"},{"@type":"ListItem","position":3,"name":"Geotextile","item":"https://infraconcrete.co/geotextile/"},{"@type":"ListItem","position":4,"name":"Design Guide","item":"https://infraconcrete.co/geotextile-design-guide/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the three filter criteria for designing a geotextile filter?","acceptedAnswer":{"@type":"Answer","text":"Retention, permeability, and anti-clogging, all three in series per FHWA-NHI-07-092 and BS 8006. Retention: O95 of the geotextile (ASTM D4751) must be small enough to hold back the protected soil. For stable cohesionless soil, the common rule is O95 below D85 of the soil; for internally unstable or gap-graded soils, O95 must drop further. Permeability: permittivity ψ (ASTM D4491) of the geotextile must allow water to pass at least one order of magnitude faster than the protected soil k. Anti-clogging: gradient ratio (ASTM D5101) on a soil-geotextile sandwich must remain below 3 over the design life. All three are necessary; passing one alone does not constitute a working filter."}},{"@type":"Question","name":"How do I design a basal reinforcement mat on soft ground?","acceptedAnswer":{"@type":"Answer","text":"For embankment fills on soft ground (undrained shear strength below 25 kPa), the basal mat tensile demand is set by limiting lateral spread of the fill and bearing capacity of the soft layer. Two main approaches. (1) Slip-circle plus tensile capacity: use a conventional limit-equilibrium slip analysis with the mat tensile capacity added as an additional resisting force on the slip surface. Compute the required wide-width tensile per BS 8006 Annex A. (2) Rowe-Soderman 1985 for very soft ground or peat: explicitly accounts for the lateral spread tendency and required tensile to prevent bearing capacity failure. Apply reduction factors per BS 8006 / ISO 13431 (installation damage, creep, biological, chemical) to convert ultimate tensile to long-term design strength. Combine with consolidation analysis (vertical drains / PVDs typical alongside basal mat) since the mat does not accelerate consolidation, it only handles the construction-stage lateral force."}},{"@type":"Question","name":"How is geotextile separation different from filtration in design?","acceptedAnswer":{"@type":"Answer","text":"Separation is about keeping two different soil gradings from intermixing. Driver properties: mass per unit area (200-400 gsm typical for road sub-base), CBR puncture (ASTM D6241), grab tensile (ASTM D4632), trapezoidal tear (ASTM D4533). The fabric must survive aggregate placement and traffic without rupturing. AOS retention also matters but is secondary. Filtration is about letting water flow through while holding back fines. Driver properties: AOS (ASTM D4751), permittivity (ASTM D4491), gradient ratio (ASTM D5101). The fabric is the boundary between flowing water and protected soil. AASHTO M288 codifies separation classes (Class 1, 2, 3) and filtration class with class-specific minimum strength and AOS. Use the right class for the function; using a filtration-class fabric in a heavy separation role typically over-specifies AOS and under-specifies survivability."}},{"@type":"Question","name":"What reduction factors apply to geotextile design strength?","acceptedAnswer":{"@type":"Answer","text":"BS 8006 and ISO 13431 set out four reduction factors converting ultimate wide-width tensile (T_ult, ISO 10319) to long-term design tensile capacity (T_d). RF_ID for installation damage (typically 1.05-1.30 depending on subgrade and fill type). RF_CR for creep (PET typically 1.40-1.80 for 100-year design; PP higher). RF_CH for chemical and biological degradation (typically 1.00-1.20 in neutral soils, higher in aggressive ground). RF_W for joins and seam efficiency (typically 1.20-1.50 for sewn seams in basal mats). T_d = T_ult divided by the product of all four RFs, with an additional factor of safety from BS 8006 partial factors. Manufacturer-declared values from STRATA datasheets are aligned with ISO 13431 standard test conditions."}},{"@type":"Question","name":"What is gradient ratio and why does it matter for Malaysian residual soils?","acceptedAnswer":{"@type":"Answer","text":"Gradient ratio (ASTM D5101) is a soil-geotextile filter compatibility test. A soil column with the candidate geotextile at the bottom is subjected to head; the ratio of head loss in the bottom 25 mm (with geotextile) over head loss in the soil 50 mm above is the gradient ratio. Values below 3 indicate the soil-geotextile system is not clogging significantly under design head. Malaysian residual soils typically carry high fines (silt and clay greater than 30 percent) and can include dispersive components, both of which raise clogging risk. Specifying gradient ratio testing on the actual project soil grading (not just AOS and permittivity) gives confidence that the filter will work over the design life. Long-term flow rate testing per ASTM D7351 or LFTL adds further confidence for critical applications."}}]}</script>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/css/seo-page.css">
+<script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" /></head>
+<body>
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs"><a href="/">Home</a><span class="sep">·</span><a href="/geosynthetics/">Geosynthetics</a><span class="sep">·</span><a href="/geotextile/">Geotextile</a><span class="sep">·</span><span class="here">Design Guide</span></nav></div>
+<main><div class="container">
+
+<section class="hero"><div class="eyebrow">Resources · Geotextile · Design Guide</div><h1>Geotextile design guide <em>for Malaysian engineers.</em></h1><p class="lede">A working reference for C&amp;S, geotechnical and civil engineers designing with geotextile in Malaysian conditions. Filter criteria, separation, basal reinforcement on soft ground, drainage transmissivity, erosion control. Worked logic for tropical residual soil, marine clay, peat. Aligned to BS 8006, ASTM D4595 / D4751 / D4491 / D5101 / D4533 / D6241, ISO 10319 / 11058 / 12956 / 13431, AASHTO M288, FHWA-NHI-07-092, JKR-SPJ. This is a working reference, not a substitute for the consulting engineer's own design judgement and submission responsibility.</p>
+<div class="stats"><div class="stat"><div class="v">5 functions</div><div class="l">Reinforcement, separation, filtration, drainage, protection, erosion</div></div><div class="stat"><div class="v">3 filter rules</div><div class="l">Retention, permeability, anti-clogging</div></div><div class="stat"><div class="v">4 RFs</div><div class="l">Installation damage, creep, chemical, joins</div></div><div class="stat"><div class="v">BS 8006</div><div class="l">Primary design code</div></div></div></section>
+
+<section class="block"><div class="block-eye">01 / Function-first design</div><h2>Start with <em>what the fabric must do.</em></h2>
+<p>Design errors in geotextile most often start at function attribution. A fabric selected for tensile reinforcement is sometimes deployed as a filter (and fails by clogging or insufficient retention); a fabric selected for filtration is sometimes asked to carry tensile load (and fails by rupture under fill placement). The first design step is to write down, explicitly, which of the five functions the geotextile is performing on this project. If the answer is two functions in the same location (e.g. separation plus filtration on a road sub-base), check that the spec satisfies both. If the answer is reinforcement, the rest of the design follows the reinforcement track (BS 8006). If the answer is filtration, the rest follows the filter track (FHWA-NHI-07-092). The two tracks share standards but the driving properties differ.</p></section>
+
+<section class="block"><div class="block-eye">02 / Filter design</div><h2>The three rules <em>in series.</em></h2>
+
+<h3>Rule 1, retention</h3>
+<p>The geotextile must hold back the protected soil under design hydraulic gradient. Express as a relationship between O95 of the fabric (ASTM D4751, equivalent to characteristic opening size O90 under ISO 12956) and the protected soil grading curve.</p>
+<ul>
+<li><strong>Stable cohesionless soil (sand, well-graded gravel):</strong> O95 less than D85 of the soil.</li>
+<li><strong>Internally unstable soil (gap-graded, high uniformity coefficient):</strong> O95 less than D50 of the soil.</li>
+<li><strong>Cohesive soil with dispersive component:</strong> standard retention rule may not be sufficient; pinhole test (ASTM D4647) on the soil first, and consider chemical stabilisation or a graded filter.</li>
+<li><strong>High-fines residual soil typical in Malaysia:</strong> use the stricter end of the range (O95 around 0.10 to 0.15 mm for soils with greater than 30 percent fines).</li>
+</ul>
+
+<h3>Rule 2, permeability</h3>
+<p>The geotextile must let water through at least one order of magnitude faster than the protected soil. Express as permittivity ψ (ASTM D4491) of the fabric against permeability k_s of the soil. Practical check: ψ × t_fabric (effective k of geotextile) at least 10 × k_soil. Permittivity values for needle-punched nonwoven 200 gsm are typically 1.5 to 2.5 s⁻¹, easily exceeding the requirement against residual soil k_soil of 10⁻⁶ m/s. Permeability becomes binding only when the soil is itself permeable (coarse sand, gravel) and the fabric has been over-clogged or over-spec'd on retention.</p>
+
+<h3>Rule 3, anti-clogging</h3>
+<p>The geotextile must not become a bottleneck over the design life. Verify by gradient-ratio test (ASTM D5101) on a soil-geotextile sandwich subjected to head. Gradient ratio below 3 indicates acceptable filter compatibility. For critical applications (waste landfill leachate, slurry impoundment, dispersive ground), use long-term flow rate testing (ASTM D7351, LFTL methodology) to extend the prediction window. Gradient ratio testing on real project soil is far more useful than a generic AOS specification when the soil carries fines or is internally unstable.</p>
+
+<h3>Combined recommendation for Malaysian residual soil (typical)</h3>
+<p>Nonwoven needle-punched PP, mass 200 to 300 gsm, AOS 0.10 to 0.20 mm, permittivity above 1.0 s⁻¹, gradient ratio under 3 against actual project soil grading. Adjust to the higher mass end (300 gsm) where installation survivability is a concern (heavy aggregate placement, hard subgrade with sharp fragments). Adjust to the lower AOS (0.10 mm) where the soil has high silt/clay fines.</p></section>
+
+<section class="block"><div class="block-eye">03 / Separation design</div><h2>Survive the placement, <em>preserve the boundary.</em></h2>
+<p>Separation between soil layers (typically sub-base aggregate above weak subgrade) is a survivability and retention design, not a tensile design. The fabric must endure aggregate placement, vehicle passes over thin lifts, and design traffic over the pavement life. AASHTO M288 codifies three classes for separation based on subgrade CBR and design traffic intensity, with corresponding minimum properties.</p>
+
+<table class="specs">
+<tr><th>Property</th><th>M288 Class 1 (severe)</th><th>M288 Class 2 (typical)</th><th>M288 Class 3 (lower-severity)</th></tr>
+<tr><td>Grab tensile (ASTM D4632)</td><td>1400 N (CBR fabric)</td><td>1100 N</td><td>800 N</td></tr>
+<tr><td>Trapezoidal tear (ASTM D4533)</td><td>500 N</td><td>400 N</td><td>300 N</td></tr>
+<tr><td>CBR puncture (ASTM D6241)</td><td>2750 N</td><td>2200 N</td><td>1650 N</td></tr>
+<tr><td>AOS (ASTM D4751)</td><td>O95 below 0.43 mm; below 0.25 mm if soil 50% fines</td><td>Same selection logic</td><td>Same selection logic</td></tr>
+<tr><td>Permittivity (ASTM D4491)</td><td>0.02 s⁻¹</td><td>0.02 s⁻¹</td><td>0.02 s⁻¹</td></tr>
+<tr><td>UV strength retention (ASTM D4355, 500 hr)</td><td>50%</td><td>50%</td><td>50%</td></tr>
+</table>
+<p>For typical Malaysian road and platform projects: Class 2 spec, mass 200-300 gsm nonwoven PP. Heavy haul or container terminal aprons: Class 1, mass 300-400 gsm. Pavement design should always confirm subgrade CBR and aggregate angularity drive the selection; M288 is a starting point, not a final answer.</p></section>
+
+<section class="block"><div class="block-eye">04 / Reinforcement design (basal mat)</div><h2>Tensile capacity <em>against lateral spread.</em></h2>
+
+<h3>Failure mode the basal mat addresses</h3>
+<p>Embankment fill on soft ground tends to spread laterally at the base. The soft soil cannot resist horizontal thrust from the active wedge of fill. Three failure modes follow: (a) bearing capacity failure of the soft layer with mud-wave at the toes, (b) lateral spreading of the fill itself, (c) circular slip through fill and soft soil combined. A high-strength woven geotextile (e.g. StrataTex HSR PET) placed horizontally below the fill carries the lateral tensile force, controlling all three failure modes for the construction stage. The mat is not a substitute for consolidation; vertical drains (PVDs) or stone columns address the long-term settlement.</p>
+
+<h3>Two analysis approaches</h3>
+
+<h4>Approach A, slip circle plus tensile capacity (BS 8006 Annex A)</h4>
+<p>Conventional limit-equilibrium slip analysis (e.g. Bishop or Spencer method) is run with the basal mat tensile capacity included as a horizontal force on the slip surface where it intersects the mat. The required wide-width tensile T_required is the value that brings the factor of safety to the target (typically FoS &ge; 1.3 short-term construction, 1.5 long-term). Apply reduction factors per BS 8006 to convert T_required to ultimate manufacturer tensile T_ult.</p>
+
+<h4>Approach B, Rowe-Soderman 1985 (very soft ground)</h4>
+<p>For very soft conditions (undrained shear strength su below 10 kPa, common in marine alluvium and peat), the lateral spreading failure dominates and Rowe-Soderman is more representative than slip-circle. The required tensile is computed from the lateral force balance accounting for embankment height H, slope angle, side friction, and soft layer thickness D_s. The result is typically 50-150 percent higher than the slip-circle answer for the same geometry.</p>
+
+<h3>Reduction factors per BS 8006 / ISO 13431</h3>
+<table class="specs">
+<tr><th>Reduction factor</th><th>Typical range</th><th>What it accounts for</th></tr>
+<tr><td>RF_ID (installation damage)</td><td>1.05 - 1.30</td><td>Mechanical damage during fill placement; rises with angular fill and thin first lift</td></tr>
+<tr><td>RF_CR (creep, 100-year)</td><td>PET 1.40-1.80; PP 1.80-2.20</td><td>Time-dependent strain at sustained load</td></tr>
+<tr><td>RF_CH (chemical, biological)</td><td>1.00 - 1.20</td><td>Higher in aggressive ground (high or low pH, saline)</td></tr>
+<tr><td>RF_W (seam, joint efficiency)</td><td>1.20 - 1.50</td><td>Sewn-seam efficiency below 100% of fabric; higher with prayer-seam stitching</td></tr>
+</table>
+<p>Long-term design tensile T_d = T_ult divided by the product (RF_ID × RF_CR × RF_CH × RF_W). The manufacturer datasheet from STRATA provides T_ult and recommends RF values aligned with ISO 13431 testing.</p>
+
+<h3>Practical numbers for typical Malaysian basal-mat applications</h3>
+<table class="specs">
+<tr><th>Application</th><th>Embankment height (m)</th><th>Soft layer su (kPa)</th><th>Typical T_d required (kN/m)</th><th>Suggested StrataTex HSR grade</th></tr>
+<tr><td>Plantation drainage embankment</td><td>2-3</td><td>15-25</td><td>20-50</td><td>50-100 kN/m</td></tr>
+<tr><td>Highway approach over alluvium</td><td>3-5</td><td>10-20</td><td>50-120</td><td>100-200 kN/m</td></tr>
+<tr><td>Port reclamation, moderate</td><td>4-6</td><td>10-15</td><td>120-200</td><td>200-400 kN/m</td></tr>
+<tr><td>Port reclamation, deep peat or marine clay</td><td>5-8</td><td>5-10</td><td>200-400</td><td>400-800 kN/m</td></tr>
+<tr><td>Federal-scale runway/port over very soft ground</td><td>6-10</td><td>3-8</td><td>400-800</td><td>800-1000 kN/m</td></tr>
+</table>
+<p>Numbers above are indicative for orientation; specific project design must be confirmed by the consulting geotechnical engineer with site-specific shear strength profile, embankment geometry, and consolidation analysis.</p></section>
+
+<section class="block"><div class="block-eye">05 / Drainage design</div><h2>Transmissivity for in-plane <em>water flow.</em></h2>
+<p>Where the geotextile must carry water along its plane (drainage layer behind a wall, beneath a pavement, in a landfill cap), the design property is in-plane transmissivity (ASTM D4716). For pure geotextile drainage, heavy needle-punched nonwoven (600-800 gsm) is the working ceiling. For demanding drainage (high gradient, long path), a geocomposite combining nonwoven faces with a 3D drainage core (e.g. StrataDrain) is the standard choice; see the <a class="xref" href="/drainage-design-with-geocomposite/">drainage design with geocomposite</a> guide for the dedicated design path.</p>
+<table class="specs">
+<tr><th>Design parameter</th><th>What it controls</th><th>Test</th></tr>
+<tr><td>In-plane transmissivity θ (m²/s)</td><td>Water flux per metre width along the fabric plane at design head</td><td>ASTM D4716</td></tr>
+<tr><td>Design normal stress (kPa)</td><td>Transmissivity falls under load; specify at the in-service stress</td><td>ASTM D4716 test condition</td></tr>
+<tr><td>Design gradient (i)</td><td>Hydraulic gradient drives in-plane flow</td><td>Computed from geometry and water sources</td></tr>
+<tr><td>Reduction factors (RF_IN, RF_CR, RF_CC, RF_BC)</td><td>Installation damage, creep, chemical clogging, biological clogging</td><td>BS EN 13252, manufacturer data</td></tr>
+</table></section>
+
+<section class="block"><div class="block-eye">06 / Erosion control design</div><h2>Geotextile under <em>hard armor.</em></h2>
+<p>For stream banks, bridge piers, river training, channel lining, and coastal toe, nonwoven geotextile underlay below dumped riprap is the standard. Design follows FHWA-HEC-23 (rock riprap) plus FHWA-NHI-07-092 for the geotextile.</p>
+<ol>
+<li><strong>Hydraulic shear stress</strong> τ from FHWA-HEC-15 or HEC-23 for the channel geometry and design flow.</li>
+<li><strong>Riprap median size D50</strong> sized to resist τ with a safety factor; typical 0.3-0.6 m on Malaysian rivers.</li>
+<li><strong>Geotextile underlay AOS</strong> against the protected soil per the three filter criteria above. Common selection: nonwoven 200-300 gsm with AOS around 0.15 mm against typical alluvial fines.</li>
+<li><strong>Survivability</strong> against riprap drop height. Mass per unit area 200-300 gsm minimum; CBR puncture above 2500 N for drop heights above 1 m.</li>
+<li><strong>Edge anchorage</strong> into a buried trench (typical 0.6-1.0 m deep, twice riprap thickness) at top and toe so storm flows do not roll the fabric.</li>
+<li><strong>UV exposure</strong>: cover with riprap within the manufacturer's UV window (typically 30 days for UV-stabilised products).</li>
+</ol></section>
+
+<section class="block"><div class="block-eye">07 / Worked example, basal mat on soft clay</div><h2>End-to-end design <em>flow.</em></h2>
+
+<p><strong>Site:</strong> Highway approach embankment, 4 m height, 1V:2H side slopes, 30 m wide crest, over 6 m of soft marine clay (undrained shear strength su = 12 kPa average), residual soil below.</p>
+
+<p><strong>Step 1, hand-check slip circle (Bishop simplified):</strong> without basal mat, FoS short-term is 0.9 (failed). Required tensile force on the slip surface to bring FoS to 1.3 is ~110 kN per metre width.</p>
+
+<p><strong>Step 2, Rowe-Soderman cross-check:</strong> for su = 12 kPa, H = 4 m, lateral spread tensile demand is ~140 kN/m. Take the higher of the two values: T_d_required = 140 kN/m for design.</p>
+
+<p><strong>Step 3, reduction factors:</strong> PET woven, installation damage 1.15 (granular fill), creep 1.55 (100 year), chemical 1.05, seams 1.25. Total RF = 1.15 × 1.55 × 1.05 × 1.25 = 2.34.</p>
+
+<p><strong>Step 4, ultimate tensile required:</strong> T_ult = T_d × RF = 140 × 2.34 = 328 kN/m wide-width.</p>
+
+<p><strong>Step 5, product selection:</strong> StrataTex HSR woven PET 400 kN/m wide-width (next standard grade above 328). Verify against the manufacturer datasheet declared values and reduction factors. Width specified to match embankment cross-section with overlap.</p>
+
+<p><strong>Step 6, accompanying consolidation:</strong> the mat handles construction stage; PVDs at 1.5 m centres triangular pattern address long-term settlement. Settlement analysis separate (Terzaghi 1D consolidation with drain spacing per Hansbo).</p>
+
+<p><strong>Step 7, monitoring:</strong> settlement plates at 4 corners and crest centre; pore pressure piezometers at mid-clay depth at one cross-section. Surface heave survey at the toes before and during fill placement to confirm no mud-wave develops.</p>
+
+<p>Numbers above are illustrative for the design flow; specific projects must be confirmed by the consulting geotechnical engineer with site-specific data and submitted under their professional responsibility.</p></section>
+
+<section class="block"><div class="block-eye">08 / Tropical and Malaysian context</div><h2>Climate and soil <em>checks.</em></h2>
+<ul>
+<li><strong>Residual soil high fines:</strong> tighten retention (lower AOS) rather than relax permeability. Verify with gradient-ratio testing on actual project soil.</li>
+<li><strong>Marine clay and peat:</strong> use Rowe-Soderman alongside slip-circle for very soft conditions; expect basal mat tensile demand 50-150 percent above slip-circle.</li>
+<li><strong>Monsoon window:</strong> cover exposed geotextile within 30 days of placement. Plan first lift placement to match the dry-window forecast where critical.</li>
+<li><strong>Acidic peat porewater:</strong> verify chemical reduction factor against manufacturer test data for the relevant pH (pH 3-5 common in deep peat).</li>
+<li><strong>Saline marine porewater:</strong> PET hydrolysis risk in elevated temperature plus saline plus alkaline scenarios; check long-term durability assumptions for ports and reclamation.</li>
+<li><strong>JKR-SPJ Section 7:</strong> separation and reinforcement class selection per AASHTO M288 with declared values from supplier.</li>
+<li><strong>Authority submission:</strong> manufacturer certificates of conformance from STRATA accompany every consignment and form part of the QA submission to MBPP, DBKL, MBPJ, JKR Cawangan, and other local authorities.</li>
+</ul></section>
+
+<section class="block"><div class="block-eye">09 / Standards register</div><h2>What to cite <em>in your design report.</em></h2>
+<table class="specs"><tr><th>Standard</th><th>Coverage</th></tr>
+<tr><td>BS 8006-1, 8006-2</td><td>Strengthened and reinforced soils, Code of practice</td></tr>
+<tr><td>BS EN 1997 (Eurocode 7)</td><td>Geotechnical design partial factor LRFD</td></tr>
+<tr><td>BS EN 13249 to 13257</td><td>Geotextiles characteristics for road, rail, foundation, drainage, erosion, landfill</td></tr>
+<tr><td>ASTM D4595, ISO 10319</td><td>Wide-width tensile</td></tr>
+<tr><td>ASTM D4751, ISO 12956</td><td>Apparent opening size, characteristic opening size</td></tr>
+<tr><td>ASTM D4491, ISO 11058</td><td>Permittivity, water permeability normal to plane</td></tr>
+<tr><td>ASTM D4716</td><td>In-plane transmissivity</td></tr>
+<tr><td>ASTM D5101, D7351</td><td>Gradient ratio, long-term flow rate</td></tr>
+<tr><td>ASTM D4533, D4632, D6241</td><td>Trapezoidal tear, grab tensile, CBR puncture</td></tr>
+<tr><td>ASTM D4355</td><td>UV resistance, xenon-arc</td></tr>
+<tr><td>ISO 13431</td><td>Tensile creep, long-term design strength</td></tr>
+<tr><td>AASHTO M288</td><td>Geotextile classes 1, 2, 3 for separation, filtration, erosion control, drainage</td></tr>
+<tr><td>FHWA-NHI-07-092</td><td>Geotextile Design and Construction Guidelines</td></tr>
+<tr><td>FHWA-NHI-10-024</td><td>MSE wall and reinforced soil slope design</td></tr>
+<tr><td>FHWA-HEC-15, HEC-23</td><td>Hydraulic design for vegetated channels and riprap</td></tr>
+<tr><td>GRI-GT12</td><td>Geotextile cushion above geomembrane</td></tr>
+<tr><td>NCMA SRW Design Manual</td><td>Segmental retaining wall design (modular block + reinforcement)</td></tr>
+<tr><td>JKR-SPJ Section 7</td><td>Earthworks and slope, Malaysian government works</td></tr></table>
+</section>
+
+<section class="block"><div class="block-eye">10 / FAQ</div><h2>Engineers and consultants <em>usually ask:</em></h2>
+<details class="faq-item"><summary>What are the three filter criteria? <span class="ic">+</span></summary><div class="ans">Retention (O95 < D85 of soil for stable soil), permeability (ψ × t_fabric &ge; 10 × k_soil), anti-clogging (gradient ratio < 3). All three apply in series.</div></details>
+<details class="faq-item"><summary>Basal mat design approach? <span class="ic">+</span></summary><div class="ans">Slip-circle plus tensile capacity (BS 8006 Annex A) for moderate soft ground; Rowe-Soderman for very soft (su below 10 kPa).</div></details>
+<details class="faq-item"><summary>Reduction factors? <span class="ic">+</span></summary><div class="ans">Four: installation damage, creep, chemical/biological, joins. T_d = T_ult ÷ (RF_ID × RF_CR × RF_CH × RF_W). Typical product PET woven HSR: total RF ~2.3-2.6.</div></details>
+<details class="faq-item"><summary>Separation design? <span class="ic">+</span></summary><div class="ans">AASHTO M288 Class selection by subgrade CBR and traffic intensity. Driver properties: CBR puncture, grab tensile, trap tear. AOS retention secondary.</div></details>
+<details class="faq-item"><summary>Drainage design? <span class="ic">+</span></summary><div class="ans">In-plane transmissivity (ASTM D4716) at design normal stress and gradient. Heavy nonwoven 600-800 gsm is the ceiling for pure geotextile; geocomposite for higher capacity.</div></details>
+<details class="faq-item"><summary>Erosion control under riprap? <span class="ic">+</span></summary><div class="ans">Nonwoven 200-300 gsm with AOS ~0.15 mm against alluvial fines, CBR puncture above 2500 N for high drop, edge anchorage in buried trench, cover within 30-day UV window.</div></details>
+<details class="faq-item"><summary>Gradient ratio for Malaysian residual soil? <span class="ic">+</span></summary><div class="ans">Run ASTM D5101 on the actual project soil. With high fines (greater than 30 percent), generic AOS specs are insufficient on their own. Target gradient ratio less than 3.</div></details>
+<details class="faq-item"><summary>How long does geotextile last? <span class="ic">+</span></summary><div class="ans">Buried PET / PP rated 50-120 years subject to chemical/biological stability of surrounding ground. Surface-exposed 5-25 years for UV-stabilised products.</div></details>
+</section>
+
+<section class="block"><div class="block-eye">11 / Related design guides</div><h2>Continue on <em>related topics.</em></h2>
+<div class="svc-grid">
+<a class="svc-link" href="/geotextile/"><div class="label">Product</div><h4>Geotextile (StrataTex + Nonwoven) →</h4><p>Product page, including all five functions, polymer selection, full standards register.</p><span class="arr">Read guide</span></a>
+<a class="svc-link" href="/geotextile-specification-guide/"><div class="label">Guide</div><h4>Geotextile specification guide →</h4><p>How to write the spec section of your BoQ. MARV vs DV, AASHTO M288 classes, JKR-SPJ alignment.</p><span class="arr">Read guide</span></a>
+<a class="svc-link" href="/slope-design-with-geotextile/"><div class="label">Guide</div><h4>Slope design with geotextile →</h4><p>Reinforced soil slope geometry, vegetated face, erosion control underlay.</p><span class="arr">Read guide</span></a>
+<a class="svc-link" href="/mse-wall-design-with-geogrid/"><div class="label">Guide</div><h4>MSE wall design with geogrid →</h4><p>Companion: when geogrid is used in place of or alongside geotextile reinforcement.</p><span class="arr">Read guide</span></a>
+<a class="svc-link" href="/drainage-design-with-geocomposite/"><div class="label">Guide</div><h4>Drainage design with geocomposite →</h4><p>StrataDrain geocomposite for high-flow in-plane drainage behind walls and basement perimeters.</p><span class="arr">Read guide</span></a>
+<a class="svc-link" href="/compare-geosynthetics/"><div class="label">Comparison</div><h4>All geosynthetics compared →</h4><p>Geogrid vs geotextile vs geocell vs geomembrane vs geocomposite. Function, polymer, cost.</p><span class="arr">Read guide</span></a>
+</div></section>
+
+</div>
+<section class="cta-block"><div class="container"><h2>Designing a geotextile system <em>for your project?</em></h2><p>Send the consultant's brief or soil report. Same-day response with a design recommendation, indicative material grade, lead time, and reference to the relevant Malaysian and international standards.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp the team →</a><a class="btn btn-ghost" href="/#contact">All contact details</a></div></div></section>
+</main>
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor) · A <a href="/">Panthera Group</a> company</p></div></footer>
+</body></html>
