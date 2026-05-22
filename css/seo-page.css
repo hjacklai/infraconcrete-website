@@ -66,7 +66,6 @@ a.xref:hover, a.xref:focus-visible {
 }
 .topbar.scrolled {
   background: rgba(244, 234, 210, 0.58);
-  border-bottom-color: var(--grey-line);
 }
 .topbar-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 76px; }
 .topbar-left { display: flex; align-items: center; flex-shrink: 0; }
@@ -593,10 +592,6 @@ body { padding-bottom: 60px; }
     -webkit-overflow-scrolling: touch;
   }
 }
-@media (max-height: 500px) and (orientation: landscape) {
-  body { padding-bottom: 110px; } .bottom-nav { bottom: 16px; }
-}
-
 /* ===== Chinese (Simplified) typography fixes =====
    English uses negative tracking on display headings and tight uppercase tracking
    on labels. On CJK characters those rules merge glyphs together or push them
@@ -692,4 +687,28 @@ body { padding-bottom: 60px; }
     transform: translateY(0);
   }
   body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+}
+
+/* Landscape phones (e.g. 700x400): revert to the floating pill so the
+   bottom-nav doesn't dominate the already-cramped vertical space. Placed
+   AFTER the mobile edge-to-edge rule so landscape orientation wins on
+   short-height devices. Matches homepage cascade order. */
+@media (max-height: 500px) and (orientation: landscape) {
+  .bottom-nav {
+    bottom: 16px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(28px);
+    max-width: calc(100vw - 24px);
+    width: auto;
+    border-radius: 999px;
+    padding: 6px 10px 6px 14px;
+    background: rgba(250, 243, 224, 0.58);
+    box-shadow: 0 12px 40px -10px rgba(0,0,0,0.18), 0 4px 12px -4px rgba(0,0,0,0.10);
+    border: 1px solid rgba(31, 27, 23, 0.12);
+  }
+  .bottom-nav.is-revealed {
+    transform: translateX(-50%) translateY(0);
+  }
+  body { padding-bottom: 110px; }
 }
