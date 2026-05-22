@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DRSYDHBKMZ');
+</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reinforced Soil Slope (RSS) Design Guide Malaysia | Geogrid Slip-Circle, Vegetated Face | C&amp;S Engineer Reference | Infraconcrete</title>
+<meta name="description" content="A working reinforced soil slope (RSS) design guide for C&S, geotechnical and civil engineers in Malaysia. End-to-end limit-state design per BS 8006-1 and FHWA-NHI-10-024 / FHWA-NHI-15-067. Slip-circle analysis with geogrid tensile capacity (Bishop simplified, Spencer, Morgenstern-Price). Face geometry 30 to 70 degrees with StrataGrid PET uniaxial reinforcement. Vegetated face (wrap-around fabric + StrataWeb HDPE geocell). Drainage and erosion control under tropical monsoon. Worked example: 10 m highway widening RSS. Aligned to BS 8006, BS EN 1997, FHWA-NHI-10-024 / 15-067, ASTM D6637/D6638/D6706, ISO 10319/13431. STRATA Geosystems distributor via Starwall Sdn Bhd." />
+<meta name="keywords" content="reinforced soil slope design, RSS design Malaysia, geogrid RSS design, slip circle geogrid, BS 8006 RSS, FHWA-NHI-10-024 RSS, FHWA-NHI-15-067, StrataGrid RSS, StrataSlope, vegetated slope face design, slope reinforcement Malaysia, geosynthetic reinforced soil slope, GRSS, highway widening RSS, hillside development RSS, dam crest RSS, landfill closure RSS, tropical monsoon slope erosion control, geocell vegetated face StrataWeb, Bishop simplified analysis, Spencer method, RSS face angle 30 70 degree" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Reinforced Soil Slope Design Guide Malaysia | Engineer Reference | Infraconcrete" />
+<meta property="og:url" content="https://infraconcrete.co/reinforced-soil-slope-design-guide/" />
+<meta property="og:locale" content="en_MY" />
+<link rel="canonical" href="https://infraconcrete.co/reinforced-soil-slope-design-guide/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/reinforced-soil-slope-design-guide/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/reinforced-soil-slope-design-guide/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="icon" type="image/png" sizes="any" href="/favicon.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Reinforced Soil Slope (RSS) Design Guide for Malaysia: Slip-Circle with Geogrid, Vegetated Face, Drainage","description":"End-to-end RSS design workflow with geogrid. Slip-circle analysis, face angle 30-70 degrees, vegetated facing systems, drainage. Worked 10 m highway widening example. Aligned to BS 8006, FHWA-NHI-10-024 / 15-067.","author":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"publisher":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"datePublished":"2026-05-22","dateModified":"2026-05-22","proficiencyLevel":"Expert","dependencies":"BS 8006, FHWA-NHI-10-024, FHWA-NHI-15-067, AASHTO LRFD, ASTM D6637 D6638 D6706, ISO 10319 13431"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Geosynthetics","item":"https://infraconcrete.co/geosynthetics/"},{"@type":"ListItem","position":3,"name":"Reinforced Soil Slope Design Guide","item":"https://infraconcrete.co/reinforced-soil-slope-design-guide/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a reinforced soil slope (RSS) and when is it the right choice?","acceptedAnswer":{"@type":"Answer","text":"A reinforced soil slope (RSS) is a geosynthetic-reinforced earth structure with a sloped (rather than vertical) face. Geogrid layers are placed in compacted fill at 0.4-0.8 m vertical spacing, with the face at angles typically 30 to 70 degrees from horizontal (1V:1.7H to 1V:0.4H). The geogrid carries the internal tensile load that would otherwise drive slope failure. Compared to a vertical MSE wall, an RSS uses more horizontal space (wider base for the same height) but is cheaper per m² of face, simpler to construct (no formal wall facing), and integrates better with vegetated finish. RSS is the preferred choice for highway widening with available right-of-way, hillside platform fill on land with relaxed setback, dam crest reshaping, landfill closure caps, and any application where a vegetated face is desired and right-of-way permits the wider footprint."}},{"@type":"Question","name":"How do I analyse an RSS for stability?","acceptedAnswer":{"@type":"Answer","text":"Limit-equilibrium slip-circle analysis (Bishop simplified, Spencer, or Morgenstern-Price method) is the standard approach per BS 8006-1 and FHWA-NHI-10-024 / FHWA-NHI-15-067. Each geogrid reinforcement layer contributes a tensile capacity (T_d, after applying reduction factors per ISO 13431) on the slip surface where the surface intersects the geogrid. The total available tensile force on the slip surface is summed; the moment or force balance is computed; the factor of safety is iterated against the critical slip surface. Iterate face angle, reinforcement vertical spacing Sv, reinforcement length L, and geogrid grade until FoS exceeds the target (typically 1.5 long-term, 1.3 short-term construction). Software tools commonly used in Malaysian practice: Slope/W (GeoStudio), Slide (Rocscience), and similar; equivalent hand calculations follow Bishop or Spencer methods."}},{"@type":"Question","name":"What face angle range works for RSS in Malaysian conditions?","acceptedAnswer":{"@type":"Answer","text":"30 to 70 degrees from horizontal (1V:1.7H to 1V:0.4H) covers the practical range. Below 30 degrees, conventional vegetated slope with soil nail or surface protection is usually more economical (RSS is overdesigned). Above 70 degrees, MSE wall (vertical) becomes economical because the right-of-way saving offsets the higher cost per m² of face. The sweet-spot for RSS in Malaysian projects is 35-55 degrees (1V:1.4H to 1V:0.7H) where the slope angle relaxation versus a vertical wall produces meaningful cost saving while the wider base is acceptable in available right-of-way. Vegetated face systems (StrataWeb geocell or wrap-around fabric with StrataSlope detail) work well across this range under tropical monsoon conditions."}},{"@type":"Question","name":"What is the typical reinforcement length and spacing for an RSS?","acceptedAnswer":{"@type":"Answer","text":"Reinforcement length L typically 0.7H to 1.0H, governed by both the slip-circle critical surface (the geogrid must extend beyond the active failure wedge) and the pullout capacity at each layer. Vertical spacing Sv 0.4-0.8 m, smaller at the base where tensile demand is highest, larger at the upper layers. Primary reinforcement uses high-strength uniaxial PET geogrid (StrataGrid SG range, manufactured by STRATA Geosystems available at https://www.strataglobal.com/). Secondary intermediate reinforcement (shorter length, lighter grade) is sometimes added between primary layers to control surface stability of the face."}},{"@type":"Question","name":"What facing system works best for tropical Malaysian RSS?","acceptedAnswer":{"@type":"Answer","text":"Two facing options are common. (1) Wrap-around fabric face: the geogrid is wrapped around the slope face perimeter and back into the next layer of fill, creating a sleeve that holds the face soil. Combine with hydroseeded vegetation and surface erosion control mat (coir or jute) during establishment. Simple, low-cost, time-tested. (2) Geocell vegetated face: StrataWeb HDPE 3D cellular confinement (100-150 mm depth) is anchored to the slope face above or alongside the geogrid reinforcement, filled with topsoil, and hydroseeded. The cellular confinement holds topsoil through monsoon rainfall while vegetation establishes (typically 60-120 days). Geocell is the more robust option for tropical monsoon conditions and where vegetation establishment is critical. Both systems retain the wrap-around or panel face on the geogrid side; geocell adds confinement on the surface side."}}]}</script>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/css/seo-page.css">
+<script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" /></head>
+<body>
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs"><a href="/">Home</a><span class="sep">·</span><a href="/geosynthetics/">Geosynthetics</a><span class="sep">·</span><span class="here">Reinforced Soil Slope Design Guide</span></nav></div>
+<main><div class="container">
+
+<section class="hero"><div class="eyebrow">Resources · Scenario Design Guide · Reinforced Soil Slope (RSS)</div><h1>Reinforced soil slope design guide <em>for Malaysian engineers.</em></h1><p class="lede">An end-to-end design workflow for reinforced soil slopes (RSS), for C&amp;S, geotechnical and civil engineers in Malaysia. Limit-equilibrium slip-circle analysis with geogrid tensile capacity per BS 8006-1 and FHWA-NHI-10-024 / FHWA-NHI-15-067. Covers face geometry (30 to 70 degree angles), reinforcement layer design with <a class="xref" href="/geogrid/">StrataGrid</a> uniaxial PET (manufactured by <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">STRATA Geosystems</a>, distributed in Malaysia by our group sister company Starwall Sdn Bhd), vegetated face systems (wrap-around fabric or <a class="xref" href="/geocell/">StrataWeb</a> HDPE geocell facing), drainage and erosion control under tropical monsoon. Worked example: 10 m highway widening RSS on residual soil. Aligned to BS 8006, BS EN 1997 (Eurocode 7), FHWA-NHI-10-024 / 15-067, AASHTO LRFD, ASTM D6637 / D6638 / D6706, ISO 10319 / 13431, JKR-SPJ Section 7.</p>
+<div class="stats"><div class="stat"><div class="v">30-70°</div><div class="l">Face angle range</div></div><div class="stat"><div class="v">Slip-circle</div><div class="l">Limit-equilibrium method</div></div><div class="stat"><div class="v">L = 0.7H-1.0H</div><div class="l">Reinforcement length</div></div><div class="stat"><div class="v">G7</div><div class="l">CIDB highest grade</div></div></div></section>
+
+<section class="block"><div class="block-eye">01 / What an RSS is</div><h2>Geogrid-reinforced fill <em>at a sloped face.</em></h2>
+<p>A reinforced soil slope (RSS) is a geosynthetic-reinforced earth structure with a sloped face. Horizontal layers of geogrid reinforcement are placed in compacted fill at typical 0.4-0.8 m vertical spacing; the face is built at an angle from 30 to 70 degrees from horizontal (1V:1.7H to 1V:0.4H). The geogrid carries the internal tensile load that would otherwise mobilise slope failure surfaces through the fill. The face system holds the surface soil and supports vegetation establishment.</p>
+<p>Compared to a <a class="xref" href="/mse-wall/">vertical MSE wall</a>, an RSS uses more horizontal space (wider base for the same height) but is cheaper per m² of face, simpler to construct (no formal wall facing or precast panels), and integrates better with a vegetated finish. The trade-off is right-of-way: an RSS at 1V:1H (45°) needs a base width equal to the height; a 10 m high RSS occupies 10 m of horizontal footprint at the toe, against the same 10 m wall taking around 7-10 m total reinforced fill length but with the toe at the wall face line. Pick RSS when the right-of-way permits the wider footprint and the vegetated face is the design intent.</p>
+<p>Common Malaysian applications: highway widening alongside existing carriageway with grass-faced fill embankments; hillside platform fill where vegetated slope blends into the landscape; dam crest reshaping; landfill closure caps with vegetated cover meeting regulatory requirements; ECRL and federal road embankments where the right-of-way comfortably accommodates a sloped facing.</p></section>
+
+<section class="block"><div class="block-eye">02 / Design workflow overview</div><h2>Five steps <em>from brief to design.</em></h2>
+<ol>
+<li><strong>Establish geometry and loads.</strong> Slope height H, target face angle, surface surcharge (live + dead), foundation soil, fill specification.</li>
+<li><strong>Pick initial reinforcement scheme.</strong> Vertical spacing Sv, length L, geogrid grade. Iterate after slip-circle analysis.</li>
+<li><strong>Slip-circle analysis</strong> (Bishop simplified, Spencer, Morgenstern-Price). Compute critical slip surface FoS with each geogrid layer contributing T_d on the intersected surface.</li>
+<li><strong>Internal checks.</strong> Rupture (T_d adequate for the design demand per layer after reduction factors). Pullout (embedment beyond active wedge gives adequate friction). Compound stability (slip surfaces through individual layers).</li>
+<li><strong>Face stability and drainage.</strong> Surface stability of the face soil, vegetated facing system, drainage detail (toe drain, intermediate berm drain, surface catch drain at crest).</li>
+</ol></section>
+
+<section class="block"><div class="block-eye">03 / Step 1: Geometry and loads</div><h2>Define the <em>problem.</em></h2>
+<table class="specs">
+<tr><th>Parameter</th><th>Notation</th><th>Typical Malaysian range</th></tr>
+<tr><td>Slope height (toe to crest)</td><td>H</td><td>3-25 m</td></tr>
+<tr><td>Face angle from horizontal</td><td>alpha</td><td>30-70° (sweet spot 35-55°)</td></tr>
+<tr><td>Reinforcement vertical spacing</td><td>Sv</td><td>0.4-0.8 m</td></tr>
+<tr><td>Reinforcement length</td><td>L</td><td>0.7H-1.0H</td></tr>
+<tr><td>Reinforced fill internal friction angle</td><td>phi'_rf</td><td>32-38° (granular or controlled residual)</td></tr>
+<tr><td>Reinforced fill unit weight</td><td>gamma_rf</td><td>18-21 kN/m³</td></tr>
+<tr><td>Surface surcharge</td><td>q</td><td>10-24 kPa (traffic, road formation)</td></tr>
+<tr><td>Foundation soil</td><td>-</td><td>Per SI; competent if FoS to be reached</td></tr>
+</table>
+<p>BS 8006-1 fill criteria for reinforced soil slopes are slightly relaxed compared to vertical MSE walls (phi' &ge; 25°, fines up to 35 percent typical), reflecting the lower stress regime at the slope face. Most Malaysian granular fill and selected residual soil sources meet RSS criteria.</p></section>
+
+<section class="block"><div class="block-eye">04 / Step 2: Initial reinforcement scheme</div><h2>First-pass <em>layer layout.</em></h2>
+<p>Start with reinforcement length L = 0.8H, vertical spacing Sv = 0.6 m, and geogrid grade selected from the manufacturer datasheet for moderate-strength RSS (typically StrataGrid SG80 or SG120 for first iteration, manufactured by <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">STRATA Geosystems</a>). This first-pass scheme is iterated after the slip-circle analysis returns the critical FoS and the controlling slip surface.</p>
+<p>For Malaysian RSS at typical 1V:1H face angle (45°), 5-10 m height, the first-pass result usually iterates to L = 0.7H to 0.8H, Sv = 0.4 m at the base, 0.6-0.8 m at the upper layers. Specific tuning depends on fill quality, surcharge, and foundation conditions.</p></section>
+
+<section class="block"><div class="block-eye">05 / Step 3: Slip-circle analysis</div><h2>Limit-equilibrium with <em>geogrid contribution.</em></h2>
+
+<h3>Method selection</h3>
+<p>Bishop simplified method is the standard quick-check for circular slip surfaces with the geogrid contributing horizontal tensile force at the layer intersection. Spencer method (used for both circular and non-circular slip surfaces with side-force consideration) is more accurate for complex geometries and is the preferred method for federal-grade designs. Morgenstern-Price is equivalent to Spencer with continuous side-force functions; used where Spencer is required by the regulator.</p>
+
+<h3>Geogrid contribution</h3>
+<p>For each reinforcement layer at depth z below the crest, where the candidate slip surface intersects the layer at horizontal distance x_i behind the face, the tensile capacity available at that intersection is:</p>
+<p><code>T_avail = min(T_d, F_pullout)</code></p>
+<p>where T_d is the long-term design tensile of the geogrid (after applying reduction factors RF_ID × RF_CR × RF_CH × RF_W per ISO 13431) and F_pullout is the pullout capacity from the embedment beyond the slip surface (computed as 2 × L_e × C_i × sigma_v × tan(phi'_rf) per BS 8006).</p>
+<p>The tensile contribution is treated as a horizontal force per metre run on the slip surface, restoring the moment balance (Bishop) or force balance (Spencer) toward FoS &ge; target.</p>
+
+<h3>Target factor of safety</h3>
+<ul>
+<li><strong>FoS &ge; 1.5 long-term:</strong> default for permanent infrastructure RSS per BS 8006.</li>
+<li><strong>FoS &ge; 1.3 short-term:</strong> during construction stage, before consolidation and vegetation establishment.</li>
+<li><strong>FoS &ge; 1.5 seismic (where applicable):</strong> pseudo-static analysis with peak ground acceleration per AASHTO or regulator. Peninsular Malaysia low seismicity is rarely binding; Sabah moderate seismicity needs explicit check.</li>
+</ul>
+
+<h3>Critical slip surface</h3>
+<p>Iterate slip surface centre and radius (for circular Bishop) or surface geometry (for Spencer / Morgenstern-Price) to find the lowest-FoS surface. The critical surface defines the controlling tensile demand. If FoS is below target on the critical surface, the design is inadequate at that location and the reinforcement scheme is iterated (lower Sv, higher T_d grade, longer L). Most commercial slope-stability software (Slope/W, Slide, equivalent) automates the iteration.</p></section>
+
+<section class="block"><div class="block-eye">06 / Step 4: Internal checks</div><h2>Rupture, pullout, <em>compound stability.</em></h2>
+
+<h3>Rupture</h3>
+<p>For each layer, the design tensile demand T (from the slip-circle critical surface) must not exceed the long-term design tensile T_d of the selected geogrid grade. T_d = T_ult / (RF_ID × RF_CR × RF_CH × RF_W). For RSS at typical Malaysian fill conditions and PET uniaxial geogrid: RF_ID = 1.15, RF_CR = 1.55, RF_CH = 1.05, RF_W = 1.10. Total RF approximately 2.05. A 120 kN/m T_ult grade delivers T_d of approximately 58 kN/m, adequate for the typical critical-surface tensile demand of 30-50 kN/m on a 5-10 m RSS.</p>
+
+<h3>Pullout</h3>
+<p>F_pullout = 2 × L_e × C_i × sigma_v × tan(phi'_rf), where L_e is the embedment length of the geogrid behind the slip surface. C_i is the soil-grid interaction coefficient (typically 0.6-0.8 for geogrid in granular fill, verified by ASTM D6706 pullout test on actual fill if available). Required F_pullout exceeds the tensile demand T at the slip surface with target FoS (typically 1.5). The total geogrid layer length L = (active wedge length to the slip surface) + L_e.</p>
+
+<h3>Compound stability</h3>
+<p>Slip surfaces that pass through individual geogrid layers (rather than around them) may govern in some geometries. Compound stability checks examine such surfaces explicitly. For Malaysian RSS at typical heights (5-15 m), compound stability is rarely governing; it becomes relevant for taller RSS (15-25 m) with low-strength fill or weak foundation.</p>
+
+<h3>Face stability</h3>
+<p>The surface soil at the face must remain stable under its own weight, surface runoff, and any temporary surcharge during construction. For face angles steeper than 1V:1H (45°), face stability typically requires either a wrap-around fabric face (geogrid wrapped back into the next layer of fill, creating a sleeve) or a separate facing system (geocell vegetated, sprayed-concrete, or anchored-mesh). For face angles less than 1V:1H, conventional vegetated finish with surface erosion control mat is usually sufficient.</p></section>
+
+<section class="block"><div class="block-eye">07 / Step 5: Face system selection</div><h2>Two working options <em>for tropical Malaysia.</em></h2>
+
+<h3>Wrap-around fabric face</h3>
+<p>The primary geogrid is wrapped around the slope face perimeter (extending up the face) and the wrap is back-anchored into the next fill lift. The geogrid sleeves contain the face soil and prevent surface unravelling. Surface erosion control mat (coir, jute, or turf reinforcement mat) is laid over the wrap during construction; vegetation hydroseeded through the mat establishes a permanent surface cover over 60-120 days.</p>
+<p>Wrap-around face is simple, cost-effective, time-tested. Best suited to face angles 30-55 degrees where surface tension on the wrap is moderate. For steeper angles, the wrap soil tends to move outward between primary geogrid layers; supplementary intermediate reinforcement (shorter length, lighter grade) addresses this if needed.</p>
+
+<h3>Geocell vegetated face (StrataWeb)</h3>
+<p>StrataWeb HDPE 3D cellular confinement (100-150 mm depth) is laid over the face after each primary reinforcement layer, filled with topsoil, and hydroseeded. The cellular confinement holds topsoil through tropical monsoon rainfall while vegetation establishes. <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">STRATA Geosystems</a> StrataWeb is the working geocell product on Malaysian RSS face systems; cell depth selected per slope angle and tropical rainfall design.</p>
+<p>Geocell face is more robust than wrap-around for steeper angles (1V:1H or steeper), demanding vegetation establishment windows (north-east monsoon construction timing), and high-aesthetic projects (hillside developments, parkland alongside infrastructure). Cost is higher than wrap-around face but lifecycle cost may be lower in the long term as maintenance is reduced.</p>
+
+<h3>StrataSlope detail</h3>
+<p>STRATA Geosystems publishes specific StrataSlope detail combining StrataGrid PET primary reinforcement with a wrap-around fabric face and optional StrataWeb geocell overlay. The detail is project-adaptable and the manufacturer datasheet provides the connection and anchorage specification. Available through Starwall Sdn Bhd in Malaysia.</p></section>
+
+<section class="block"><div class="block-eye">08 / Step 6: Drainage and erosion control</div><h2>Water management <em>under tropical monsoon.</em></h2>
+<table class="specs">
+<tr><th>Drainage element</th><th>Function</th><th>Detail</th></tr>
+<tr><td>Crest catch drain</td><td>Intercept surface flow from above the slope before it reaches the face</td><td>Lined or vegetated channel at the top of the RSS, draining to a controlled outfall</td></tr>
+<tr><td>Intermediate berm drain</td><td>Break up surface flow on tall slopes; intercept water at 5-7 m vertical intervals</td><td>Concrete-lined or geocell-lined berm channel along the slope face</td></tr>
+<tr><td>Face surface erosion control</td><td>Protect the face from rainsplash and sheet-flow erosion during vegetation establishment</td><td>Coir mat, jute mat, turf reinforcement mat, or geocell (StrataWeb) confinement</td></tr>
+<tr><td>Behind-RSS drainage</td><td>Drain water from the retained zone behind the reinforced fill mass</td><td>Geotextile-wrapped perforated pipe at the back of the reinforced zone, discharging at toe</td></tr>
+<tr><td>Toe drain</td><td>Collect runoff from the slope face plus subsurface drainage; discharge to project drainage system</td><td>Concrete-lined channel, perforated pipe in gravel envelope, or grass swale</td></tr>
+<tr><td>Subsurface drainage in retained fill</td><td>Where retained zone fill is moisture-sensitive, install <a class="xref" href="/horizontal-drains/">horizontal drains</a></td><td>Sub-horizontal slotted pipe drilled into the retained zone</td></tr>
+</table>
+<p>Drainage detail per DID (Department of Irrigation and Drainage Malaysia) Hydrological Procedure 1 for design rainfall intensity. For federal projects, JKR-SPJ Section 7 specifies the drainage layout; for hillside development, MBPP Penang Hill Slope Guideline or DBKL hill land controls apply.</p></section>
+
+<section class="block"><div class="block-eye">09 / Worked example: 10 m highway widening RSS</div><h2>End-to-end <em>workflow.</em></h2>
+
+<p><strong>Project parameters:</strong></p>
+<ul>
+<li>Slope height H = 10.0 m</li>
+<li>Face angle alpha = 45° (1V:1H)</li>
+<li>Surface surcharge q = 18 kPa (highway traffic dead + live)</li>
+<li>Reinforced fill: granular, phi'_rf = 35°, gamma_rf = 19 kN/m³</li>
+<li>Foundation: residual soil, phi'_f = 30°, gamma_f = 18 kN/m³, allowable bearing 250 kPa per SI</li>
+<li>Geogrid: StrataGrid uniaxial PET (manufactured by <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">STRATA Geosystems</a>)</li>
+<li>Face system: wrap-around fabric + StrataWeb geocell overlay for monsoon-resilient vegetation establishment</li>
+</ul>
+
+<p><strong>Step 1-2 set above.</strong> First-pass scheme: L = 0.8H = 8.0 m, Sv = 0.6 m, grade SG120.</p>
+
+<p><strong>Step 3: Slip-circle analysis</strong> (Bishop simplified). With first-pass scheme, critical slip surface FoS = 1.32 (below target 1.5). Iterate Sv: tighten to 0.4 m at lower 4 m, 0.6 m at upper 6 m. Increase grade to SG160 at lower layers, SG120 at upper layers. Re-run slip-circle: critical surface FoS = 1.55 (pass).</p>
+
+<p><strong>Step 4: Internal checks.</strong> Peak T at the critical slip surface intersection = 42 kN/m at the lowest reinforcement layer. Applying reduction factors (RF_ID 1.15, RF_CR 1.55, RF_CH 1.05, RF_W 1.10, total 2.05), the SG160 long-term T_d = 78 kN/m, well above the 42 demand × 1.5 FoS = 63. Rupture pass. Pullout: at lowest layer, embedment beyond slip surface = 3.5 m. F_pullout = 2 × 3.5 × 0.7 × 95 (sigma_v at base) × tan(35°) = 326 kN/m, well above 42 × 1.5 = 63. Pullout pass.</p>
+
+<p><strong>Step 5: Face system.</strong> Wrap-around fabric face: primary geogrid extends 1.0 m up the face and back-anchored into next lift. StrataWeb 100 mm geocell laid over the wrap, filled with topsoil, hydroseeded with native grass mix (Axonopus + Vetiver). Surface erosion mat for the first 60 days establishment window.</p>
+
+<p><strong>Step 6: Drainage.</strong> Crest catch drain at top of RSS (lined concrete channel, 0.6 m wide × 0.4 m deep). Intermediate berm drains at +3.5 m and +7.0 m elevation from toe (geocell-lined). Toe drain (perforated 200 mm pipe in gravel envelope, geotextile-wrapped, discharging to project storm drain).</p>
+
+<p><strong>Result:</strong> 10 m RSS at 1V:1H face angle, 11 primary geogrid layers (4 × SG160 at lower 4 m, 7 × SG120 at upper 6 m), L = 8.0 m, vegetated face with StrataWeb overlay. FoS to critical slip surface = 1.55 long-term. Total horizontal footprint at toe = 10 m + 8 m (reinforced fill length behind face) = 18 m, compared to ~8 m for an equivalent vertical MSE wall. The 10 m extra footprint is the right-of-way cost of the RSS option.</p>
+
+<p>Numbers illustrate the design flow. Specific projects must be confirmed by the consulting geotechnical engineer with site-specific SI, slope-stability software (Slope/W, Slide), and submitted under their professional responsibility.</p></section>
+
+<section class="block"><div class="block-eye">10 / Tropical and Malaysian context</div><h2>Climate and practice <em>considerations.</em></h2>
+<ul>
+<li><strong>Monsoon rainfall:</strong> face stability and vegetation establishment depend on managing tropical rainfall (north-east monsoon Nov-Mar peaks 100-300 mm/day events). Start vegetation 60-90 days before monsoon peak; combine wrap-around face with geocell overlay for steep slopes.</li>
+<li><strong>Residual soil fill:</strong> Malaysian residual soil typically meets RSS fill criteria after screening and moisture-conditioning. Verify with grading curve and Atterberg limits. Where fines exceed 35 percent, consider blending with crushed aggregate or specifying granular fill from quarry.</li>
+<li><strong>Foundation soft spots:</strong> for hillside or coastal RSS over soft foundation, ground improvement (PVDs, stone columns) is often needed before RSS construction to lift the foundation bearing and prevent excessive settlement.</li>
+<li><strong>Erosion control during establishment:</strong> coir mat (700 gsm), jute mat (500 gsm), or turf reinforcement mat (UV-stabilised polypropylene) provides the 60-90 day window for vegetation roots to anchor.</li>
+<li><strong>Authority spec:</strong> JKR-SPJ Section 7 (vegetated slope), MBPP Penang Hill Slope Guideline (hillside RSS), DBKL hill land controls. Federal expressway RSS typically follows FHWA-NHI-10-024 plus JKR adaptations.</li>
+<li><strong>Long-term creep at tropical temperatures:</strong> PET geogrid creep-rated for 100 years at typical Malaysian ground temperatures (25-30°C). Slightly elevated soil temperatures in shallow zones do not materially affect creep behaviour.</li>
+</ul></section>
+
+<section class="block"><div class="block-eye">11 / Standards register</div><h2>What to cite <em>in your design report.</em></h2>
+<table class="specs"><tr><th>Standard</th><th>Coverage</th></tr>
+<tr><td>BS 8006-1, 8006-2</td><td>Strengthened and reinforced soils, code of practice</td></tr>
+<tr><td>BS EN 1997 (Eurocode 7)</td><td>Geotechnical design partial factor LRFD</td></tr>
+<tr><td>FHWA-NHI-10-024</td><td>MSE walls and reinforced soil slopes</td></tr>
+<tr><td>FHWA-NHI-15-067</td><td>Reinforced soil slopes (newer reference)</td></tr>
+<tr><td>AASHTO LRFD Bridge Design</td><td>Federal infrastructure</td></tr>
+<tr><td>ASTM D6637</td><td>Geogrid wide-width tensile</td></tr>
+<tr><td>ASTM D6638</td><td>Geogrid junction strength</td></tr>
+<tr><td>ASTM D6706</td><td>Geogrid pullout resistance</td></tr>
+<tr><td>ISO 10319</td><td>Wide-width tensile</td></tr>
+<tr><td>ISO 13431</td><td>Tensile creep, design strength derivation</td></tr>
+<tr><td>JKR-SPJ Section 7</td><td>Earthworks and slope, Malaysian government works</td></tr>
+<tr><td>DID Hydrological Procedure 1</td><td>Design rainfall intensity for drainage</td></tr></table>
+</section>
+
+<section class="block"><div class="block-eye">12 / FAQ</div><h2>Engineers and developers <em>usually ask:</em></h2>
+<details class="faq-item"><summary>RSS or vertical MSE wall? <span class="ic">+</span></summary><div class="ans">RSS where right-of-way permits the wider base and vegetated face is desired. Vertical MSE wall where right-of-way is tight or architectural facing is required.</div></details>
+<details class="faq-item"><summary>What face angle? <span class="ic">+</span></summary><div class="ans">30-70 degrees from horizontal. Sweet-spot 35-55 degrees for cost-effective RSS in Malaysian conditions.</div></details>
+<details class="faq-item"><summary>Slip-circle method? <span class="ic">+</span></summary><div class="ans">Bishop simplified for quick check; Spencer or Morgenstern-Price for federal-grade detailed design.</div></details>
+<details class="faq-item"><summary>Reinforcement length? <span class="ic">+</span></summary><div class="ans">0.7H to 1.0H typical. Iterate from slip-circle critical surface and pullout requirements.</div></details>
+<details class="faq-item"><summary>Face system? <span class="ic">+</span></summary><div class="ans">Wrap-around fabric face + erosion control mat for modest angles; add StrataWeb geocell overlay for steeper or monsoon-critical projects.</div></details>
+<details class="faq-item"><summary>Drainage detail? <span class="ic">+</span></summary><div class="ans">Crest catch drain, intermediate berm drains at 5-7 m intervals, toe drain, behind-RSS subsurface drainage if retained fill is moisture-sensitive.</div></details>
+</section>
+
+<section class="block"><div class="block-eye">13 / Related guides</div><h2>Continue on <em>related topics.</em></h2>
+<div class="svc-grid">
+<a class="svc-link" href="/reinforced-soil-slopes/"><div class="label">Capability</div><h4>Reinforced soil slopes service →</h4><p>Installation capability and project context.</p><span class="arr">Read</span></a>
+<a class="svc-link" href="/geogrid/"><div class="label">Product</div><h4>Geogrid (StrataGrid) →</h4><p>Uniaxial PET grades, junction efficiency, polymer selection.</p><span class="arr">Read</span></a>
+<a class="svc-link" href="/geocell/"><div class="label">Product</div><h4>Geocell (StrataWeb) →</h4><p>HDPE 3D confinement for vegetated face systems.</p><span class="arr">Read</span></a>
+<a class="svc-link" href="/geogrid-design-guide/"><div class="label">Guide</div><h4>Geogrid design guide →</h4><p>Cross-application reduction factor framework.</p><span class="arr">Read</span></a>
+<a class="svc-link" href="/mse-wall-design-with-geogrid/"><div class="label">Companion</div><h4>MSE wall design with geogrid →</h4><p>Vertical wall alternative when right-of-way is constrained.</p><span class="arr">Read</span></a>
+<a class="svc-link" href="/compare-retaining-walls/"><div class="label">Comparison</div><h4>Retaining wall systems compared →</h4><p>RSS vs gabion, cribwall, RC, MSE, sheet pile.</p><span class="arr">Read</span></a>
+</div></section>
+
+</div>
+<section class="cta-block"><div class="container"><h2>Designing a reinforced soil slope <em>for a Malaysian project?</em></h2><p>Send the project parameters (slope height, face angle target, soil report, surcharge). Same-day response with reinforcement scheme recommendation, indicative budget, lead time, and design support.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp the team →</a><a class="btn btn-ghost" href="/#contact">All contact details</a></div></div></section>
+</main>
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor, see <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">strataglobal.com</a>) · A <a href="/">Panthera Group</a> company</p></div></footer>
+</body></html>
