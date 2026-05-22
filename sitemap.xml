@@ -1037,4 +1037,36 @@
   <url><loc>https://infraconcrete.co/strata-pahang/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/strata-east-coast/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/strata-sabah-sarawak/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Geogrid x state regional combo (added 2026-05-22) -->
+  <url><loc>https://infraconcrete.co/geogrid-klang-valley/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geogrid-penang/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geogrid-johor/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geogrid-pahang/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geogrid-east-coast/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geogrid-sabah-sarawak/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Geotextile x state regional combo (added 2026-05-22) -->
+  <url><loc>https://infraconcrete.co/geotextile-klang-valley/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geotextile-penang/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geotextile-johor/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geotextile-pahang/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geotextile-east-coast/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geotextile-sabah-sarawak/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Geocell x state regional combo (added 2026-05-22) -->
+  <url><loc>https://infraconcrete.co/geocell-klang-valley/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geocell-penang/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geocell-johor/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geocell-pahang/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geocell-east-coast/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geocell-sabah-sarawak/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Geomembrane x state regional combo (added 2026-05-22) -->
+  <url><loc>https://infraconcrete.co/geomembrane-klang-valley/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geomembrane-penang/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geomembrane-johor/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geomembrane-pahang/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geomembrane-east-coast/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://infraconcrete.co/geomembrane-sabah-sarawak/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 </urlset>
