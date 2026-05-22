@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DRSYDHBKMZ');
+</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Geogrid Design Guide for Malaysia | MSE Wall, RSS, Basal Reinforcement, Road Base | C&amp;S Engineer Reference | Infraconcrete</title>
+<meta name="description" content="A working geogrid design guide for C&S, geotechnical and civil engineers in Malaysia. MSE wall internal and external stability (BS 8006 / FHWA-NHI-10-024), reinforced soil slope slip-circle analysis, basal reinforcement on soft ground (Rowe-Soderman, slip-circle plus tensile), road sub-base reinforcement (AASHTO methodology with biaxial geogrid). Reduction factor framework per ISO 13431 (RF_ID, RF_CR, RF_CH, RF_W). Pullout and connection design. Junction efficiency. Tropical Malaysian fill criteria. Worked examples." />
+<meta name="keywords" content="geogrid design guide, geogrid design Malaysia, MSE wall geogrid design, BS 8006 design, FHWA-NHI-10-024, reinforced soil slope geogrid, RSS slip circle, basal reinforcement design, Rowe-Soderman, ISO 13431 reduction factors, RF_ID RF_CR RF_CH RF_W, geogrid pullout design, ASTM D6706, geogrid connection design, junction efficiency D6638, road sub-base reinforcement design, AASHTO geogrid, geogrid spec writing, StrataGrid design Malaysia, segmental retaining wall design NCMA, BBA certified geogrid" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Geogrid Design Guide for Malaysia | C&amp;S Engineer Reference | Infraconcrete" />
+<meta property="og:url" content="https://infraconcrete.co/geogrid-design-guide/" />
+<meta property="og:locale" content="en_MY" />
+<link rel="canonical" href="https://infraconcrete.co/geogrid-design-guide/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/geogrid-design-guide/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geogrid-design-guide/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="icon" type="image/png" sizes="any" href="/favicon.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Geogrid Design Guide for Malaysia: MSE Wall, RSS, Basal Reinforcement, Road Base","description":"A working geogrid design guide for C&S engineers. MSE wall stability, RSS slip-circle, basal reinforcement on soft ground, road sub-base reinforcement. Reduction factors per ISO 13431. Worked examples.","author":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"publisher":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"datePublished":"2026-05-08","dateModified":"2026-05-08","proficiencyLevel":"Expert","dependencies":"BS 8006, FHWA-NHI-10-024, AASHTO LRFD, ASTM D6637, D6638, D6244, D6706, ISO 10319, ISO 13431, NCMA SRW"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Geosynthetics","item":"https://infraconcrete.co/geosynthetics/"},{"@type":"ListItem","position":3,"name":"Geogrid","item":"https://infraconcrete.co/geogrid/"},{"@type":"ListItem","position":4,"name":"Design Guide","item":"https://infraconcrete.co/geogrid-design-guide/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I design an MSE wall with geogrid?","acceptedAnswer":{"@type":"Answer","text":"MSE wall design follows BS 8006-1 (UK) or FHWA-NHI-10-024 (US). Internal stability checks rupture and pullout of geogrid layers; external stability checks sliding, overturning, bearing, and global slip of the reinforced soil mass treated as a coherent gravity element. Connection stability checks the geogrid-to-facing capacity. Compute reinforced length L (typically 0.7H to 1.0H), vertical spacing of geogrid layers (typical 0.4-0.8 m), and tensile demand at each layer from the active earth pressure distribution. Apply reduction factors (RF_ID for installation damage, RF_CR for creep, RF_CH for chemical, RF_W for joins) per ISO 13431 to convert ultimate tensile to long-term design tensile. Resulting product selection: which StrataGrid PET grade per layer. Specific design must be confirmed by the consulting C&S or geotechnical engineer with site-specific data and submitted under their professional responsibility."}},{"@type":"Question","name":"How do I design a reinforced soil slope (RSS) with geogrid?","acceptedAnswer":{"@type":"Answer","text":"RSS design follows BS 8006 or FHWA-NHI-10-024 using slip-circle analysis with geogrid tensile capacity added on the slip surface. Face angles 30-70 degrees from horizontal. Compute critical slip surface (Bishop or Spencer method), check global stability factor against target FoS (typically 1.5 long-term), iterate reinforcement vertical spacing and length until adequate. Wrap-around facing or vegetated face with geocell over geogrid is the typical Malaysian tropical facing system. Reinforcement spacing 0.4-0.8 m vertical; length typically 0.7H to 1.0H. Long-term design tensile per ISO 13431 reduction factors. Drainage is critical, design includes filter and outlet path."}},{"@type":"Question","name":"How do I design basal reinforcement on soft ground?","acceptedAnswer":{"@type":"Answer","text":"Two analysis approaches. Approach A, slip-circle plus tensile capacity per BS 8006 Annex A: conventional Bishop or Spencer limit-equilibrium analysis with basal reinforcement tensile added as horizontal force on the slip surface. Approach B, Rowe-Soderman 1985 for very soft ground (su below 10 kPa): explicitly accounts for lateral spreading and required tensile to prevent bearing capacity failure. The required tensile from Approach B is typically 50-150 percent higher than Approach A for the same geometry. Take the higher of the two. Apply ISO 13431 reduction factors. Combine with consolidation analysis (vertical drains, PVDs typical) since basal reinforcement is a construction-stage measure, not a substitute for consolidation. Common Malaysian setting: port reclamation, ECRL highway approaches, plantation peat embankments."}},{"@type":"Question","name":"What reduction factors apply to geogrid design strength?","acceptedAnswer":{"@type":"Answer","text":"Four reduction factors per BS 8006 and ISO 13431 convert manufacturer ultimate wide-width tensile T_ult to long-term design tensile T_d. RF_ID for installation damage (PET geogrid 1.05-1.30 in well-graded granular fill, higher with angular fill or thin first lift). RF_CR for creep (PET typically 1.40-1.80 for 100-year design; PP biaxial higher). RF_CH for chemical and biological degradation (1.00-1.20 in neutral Malaysian soils, higher in aggressive ground). RF_W for joins and junction (1.10-1.30 typical, lower than woven geotextile because aperture interlock partially compensates). T_d = T_ult / (RF_ID * RF_CR * RF_CH * RF_W). Total RF for PET uniaxial typically 1.8-2.6, meaning a 200 kN/m T_ult product delivers 75-110 kN/m T_d depending on conditions. Manufacturer datasheets from STRATA align with ISO 13431 standard testing."}},{"@type":"Question","name":"How is geogrid pullout designed?","acceptedAnswer":{"@type":"Answer","text":"Pullout capacity governs reinforcement length L behind the active wedge. From BS 8006 / FHWA-NHI-10-024: F_pullout = 2 * L_e * Ci * sigma_v * tan(phi') where L_e is embedment length beyond the slip surface, Ci is the soil-grid interaction coefficient (typically 0.6-0.8 for geogrid in granular fill, verified by ASTM D6706 pullout test), sigma_v is vertical effective stress at the geogrid layer depth, and phi' is fill internal friction angle. Required F_pullout exceeds the design tensile T_d at that layer with the target factor of safety. Iterate L until adequate. Connection capacity to the wall facing is checked separately and is typically a smaller value in modular block systems, so it can govern total grid layer count near the top of a tall wall."}}]}</script>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/css/seo-page.css">
+<script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" /></head>
+<body>
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs"><a href="/">Home</a><span class="sep">·</span><a href="/geosynthetics/">Geosynthetics</a><span class="sep">·</span><a href="/geogrid/">Geogrid</a><span class="sep">·</span><span class="here">Design Guide</span></nav></div>
+<main><div class="container">
+
+<section class="hero"><div class="eyebrow">Resources · Geogrid · Design Guide</div><h1>Geogrid design guide <em>for Malaysian engineers.</em></h1><p class="lede">A working reference for C&amp;S, geotechnical and civil engineers designing with geogrid in Malaysian conditions. Covers MSE wall internal and external stability (BS 8006-1 / FHWA-NHI-10-024), reinforced soil slope slip-circle analysis, basal reinforcement on soft ground (slip-circle plus tensile, and Rowe-Soderman for very soft conditions), road sub-base reinforcement with biaxial geogrid (AASHTO methodology), and the four-factor reduction framework per ISO 13431. Worked examples included. Aligned to BS 8006, BS EN 1997 (Eurocode 7), ASTM D6637 / D6638 / D6244 / D6706, ISO 10319 / 13431, AASHTO LRFD, FHWA-NHI-10-024, NCMA SRW Design Manual, JKR-SPJ. This is a working reference; specific design submission remains the consulting engineer's responsibility.</p>
+<div class="stats"><div class="stat"><div class="v">4 design tracks</div><div class="l">MSE / RSS / Basal / Road</div></div><div class="stat"><div class="v">4 RFs</div><div class="l">Installation, creep, chemical, joins</div></div><div class="stat"><div class="v">BS 8006</div><div class="l">Primary design code</div></div><div class="stat"><div class="v">G7</div><div class="l">CIDB highest grade</div></div></div></section>
+
+<section class="block"><div class="block-eye">01 / Design tracks overview</div><h2>Pick the track <em>matching your application.</em></h2>
+<table class="specs">
+<tr><th>Application</th><th>Design code (primary)</th><th>Analysis</th><th>Geogrid type</th></tr>
+<tr><td>MSE wall (vertical, panel or modular block face)</td><td>BS 8006-1, FHWA-NHI-10-024, NCMA SRW</td><td>Internal + external + connection stability</td><td>Uniaxial PET (StrataGrid)</td></tr>
+<tr><td>Reinforced soil slope (RSS, sloped face)</td><td>BS 8006-1, FHWA-NHI-10-024</td><td>Slip-circle plus tensile capacity</td><td>Uniaxial PET (StrataGrid)</td></tr>
+<tr><td>Basal reinforcement on soft ground</td><td>BS 8006, Rowe-Soderman</td><td>Slip-circle + Rowe-Soderman lateral spread</td><td>Biaxial PP for confinement, woven HSR PET for tensile</td></tr>
+<tr><td>Road sub-base / working platform</td><td>AASHTO design method, Giroud-Han for unpaved, manufacturer K-factor</td><td>Aggregate thickness reduction, modulus improvement</td><td>Biaxial PP (StrataGrid Biaxial)</td></tr>
+</table></section>
+
+<section class="block"><div class="block-eye">02 / Reduction factor framework</div><h2>From T_ult <em>to T_d.</em></h2>
+<p>All four design tracks share the same reduction-factor framework per BS 8006 and ISO 13431. Manufacturer ultimate wide-width tensile T_ult (from ISO 10319 test) is reduced to long-term design tensile T_d by four cumulative factors:</p>
+<table class="specs">
+<tr><th>Factor</th><th>What it covers</th><th>Typical range (PET uniaxial)</th><th>Typical range (PP biaxial)</th></tr>
+<tr><td>RF_ID</td><td>Installation damage from fill placement, vehicle traffic on thin first lift, angular aggregate</td><td>1.05-1.30</td><td>1.10-1.50</td></tr>
+<tr><td>RF_CR</td><td>Creep over the design service life (typically 100 years)</td><td>1.40-1.80</td><td>1.80-2.20</td></tr>
+<tr><td>RF_CH</td><td>Chemical and biological degradation in the surrounding ground</td><td>1.00-1.20</td><td>1.00-1.15</td></tr>
+<tr><td>RF_W</td><td>Joins and junction efficiency loss</td><td>1.10-1.30</td><td>1.10-1.20</td></tr>
+</table>
+<p>T_d = T_ult / (RF_ID × RF_CR × RF_CH × RF_W). Total RF for PET uniaxial typically 1.8-2.6, meaning a 200 kN/m T_ult product delivers 75-110 kN/m T_d depending on conditions. Manufacturer datasheets from STRATA align RF values with ISO 13431 testing.</p>
+<p>For projects with aggressive ground (high or low pH, saline porewater, hot tropical alluvium), RF_CH should be raised after consultation with the manufacturer. Project-specific test data on the actual fill source can refine RF_ID.</p></section>
+
+<section class="block"><div class="block-eye">03 / Track 1: MSE wall design</div><h2>Internal + external + connection <em>stability.</em></h2>
+
+<h3>Geometry parameters</h3>
+<ul>
+<li><strong>Wall height H</strong> (top of facing to top of leveling pad)</li>
+<li><strong>Reinforced soil mass length L</strong> (typical 0.7H to 1.0H, governed by external stability)</li>
+<li><strong>Vertical spacing of geogrid layers Sv</strong> (typical 0.4 m at base, 0.6-0.8 m at upper layers)</li>
+<li><strong>Facing system</strong> (precast panel, modular block, wrapped fabric) and its connection detail to the geogrid</li>
+<li><strong>Reinforced fill specification</strong> (granular, well-graded, internal friction angle phi' typical 34-40 degrees, BS 8006 fill criteria)</li>
+<li><strong>Retained fill behind the reinforced mass</strong> (existing ground or imported fill, characteristic phi')</li>
+<li><strong>Surcharge</strong> (live load, dead load, embankment self-weight above wall crest)</li>
+</ul>
+
+<h3>Internal stability checks</h3>
+<ol>
+<li><strong>Rupture:</strong> tensile demand T at each reinforcement layer from the active earth pressure (Coulomb-Rankine or coherent gravity method) must not exceed the long-term design tensile T_d for the selected StrataGrid grade.</li>
+<li><strong>Pullout:</strong> embedment length L_e behind the active failure wedge must develop adequate friction. F_pullout = 2 × L_e × C_i × σ_v × tan(phi'), where C_i is the soil-grid interaction coefficient (typically 0.6-0.8 for geogrid in granular fill per ASTM D6706 pullout test). Required F_pullout exceeds T at that layer with target FoS.</li>
+<li><strong>Connection:</strong> the geogrid-to-facing capacity at each layer must exceed the design tensile at that connection (usually somewhat lower than T at the rupture critical surface due to load distribution within the reinforced zone). Manufacturer-specific connection strengths from STRATA datasheets for StrataBlock and StrataWall.</li>
+</ol>
+
+<h3>External stability checks</h3>
+<ol>
+<li><strong>Sliding</strong> of the reinforced mass on the foundation: target FoS 1.5 long-term.</li>
+<li><strong>Overturning</strong> about the toe: target FoS 2.0 long-term (with caveats on the eccentricity criterion).</li>
+<li><strong>Bearing capacity</strong> of the foundation soil under the loaded reinforced mass: target FoS 2.5 long-term.</li>
+<li><strong>Global slip</strong> through the foundation and beyond the reinforced mass: target FoS 1.5 long-term.</li>
+<li><strong>Seismic</strong> (where applicable): pseudo-static analysis per AASHTO LRFD with peak ground acceleration appropriate to Malaysian seismic zone (typically low for Peninsular Malaysia, higher for Sabah and parts of Sarawak).</li>
+</ol>
+
+<h3>Worked product selection example</h3>
+<p>For a 6 m MSE wall on competent residual soil with granular reinforced fill (phi' = 36°, gamma = 19 kN/m³), wall surcharge 12 kPa, vertical reinforcement spacing 0.6 m, the design tensile at the most-stressed layer (0.6 m above base) is approximately 28 kN/m per BS 8006 coherent gravity method. Applying total RF of 2.2 (PET, well-graded fill, neutral ground, panel facing) gives T_ult required = 62 kN/m wide-width. The next standard StrataGrid grade above 62 is 80 kN/m: select 80 kN/m for the lower 3-4 layers; transition to 50 kN/m for the upper layers where T_d demand drops. Reinforcement length L = 0.7H = 4.2 m, verified against external sliding and bearing. Specific design must be confirmed by the consulting engineer with site-specific data.</p></section>
+
+<section class="block"><div class="block-eye">04 / Track 2: Reinforced soil slope (RSS) design</div><h2>Slip-circle plus geogrid <em>tensile capacity.</em></h2>
+
+<h3>Geometry parameters</h3>
+<ul>
+<li><strong>Slope height H</strong></li>
+<li><strong>Face angle</strong> (typical 30-70 degrees from horizontal, with 1V:0.5H and 1V:1H most common Malaysian)</li>
+<li><strong>Reinforced soil mass</strong> behind the face, internal friction angle phi'</li>
+<li><strong>Reinforcement spacing Sv</strong> (typical 0.4-0.8 m)</li>
+<li><strong>Reinforcement length</strong> (typical 0.7H to 1.0H, similar to MSE wall)</li>
+<li><strong>Facing system</strong> (wrap-around geogrid + erosion control mat, or geocell vegetated facing, or sprayed-concrete face)</li>
+</ul>
+
+<h3>Analysis</h3>
+<p>Conventional limit-equilibrium slip-circle analysis (Bishop simplified or Spencer method) with each geogrid layer contributing tensile capacity T_d on the slip surface where the surface intersects the geogrid. Iterate until the lowest-FoS slip surface gives FoS &ge; target (typically 1.5 long-term; 1.3 short-term construction). Pullout and connection checks as for MSE wall.</p>
+
+<h3>Tropical Malaysian face systems</h3>
+<p>For tropical Malaysia, the wrap-around fabric face combined with geocell vegetated finish is the working default. Geocell (StrataWeb 100-150 mm depth) at the face holds topsoil while vegetation establishes; geogrid (StrataGrid uniaxial PET) inside the fill carries the internal tensile demand. Hydroseeding with native grass species (Axonopus compressus, Vetiver zizanioides) is typical, supplemented by jute or coir mat for the establishment window. Surface drainage details (catch drains at crest, intermediate berm drains, toe drain) per JKR-SPJ Section 7.</p></section>
+
+<section class="block"><div class="block-eye">05 / Track 3: Basal reinforcement design</div><h2>Two approaches in <em>parallel.</em></h2>
+
+<h3>Approach A: slip-circle plus tensile (BS 8006 Annex A)</h3>
+<p>Use conventional slip-circle (Bishop simplified or Spencer) on the embankment-on-soft-ground geometry. The basal reinforcement (woven HSR geotextile, or biaxial geogrid + HSR combination) adds horizontal tensile force on the slip surface where it crosses the reinforcement. Required tensile T_required brings the FoS to target (1.3 short-term construction, 1.5 long-term).</p>
+
+<h3>Approach B: Rowe-Soderman (very soft ground)</h3>
+<p>For undrained shear strength su below 10 kPa (common in marine alluvium and peat), the lateral spreading failure dominates. The Rowe-Soderman 1985 method explicitly computes the tensile required to prevent bearing capacity failure under lateral spreading, accounting for embankment height H, slope angle, side friction, and soft layer thickness D_s. The required tensile from Approach B is typically 50-150 percent higher than Approach A for the same geometry.</p>
+
+<h3>Combined design</h3>
+<p>Take the higher of T_required from A and B. Apply ISO 13431 reduction factors. Convert to T_ult required. Select product grade (woven HSR for tensile, biaxial geogrid for aggregate confinement). For very soft ground, combine both: biaxial geogrid + woven HSR layered, with biaxial providing aperture interlock with the first lift of granular fill and woven HSR carrying the tensile.</p>
+
+<h3>Practical T_d ranges for Malaysian basal mats</h3>
+<table class="specs">
+<tr><th>Application</th><th>Height (m)</th><th>su (kPa)</th><th>T_d required (kN/m)</th><th>Working grade</th></tr>
+<tr><td>Plantation embankment</td><td>2-3</td><td>15-25</td><td>20-50</td><td>HSR 50-100 kN/m</td></tr>
+<tr><td>Highway approach over alluvium</td><td>3-5</td><td>10-20</td><td>50-120</td><td>HSR 100-200 kN/m</td></tr>
+<tr><td>Port reclamation, moderate</td><td>4-6</td><td>10-15</td><td>120-200</td><td>HSR 200-400 kN/m</td></tr>
+<tr><td>Port reclamation, very soft</td><td>5-8</td><td>5-10</td><td>200-400</td><td>HSR 400-800 kN/m</td></tr>
+<tr><td>Federal-scale runway/port</td><td>6-10</td><td>3-8</td><td>400-800</td><td>HSR 800-1000 kN/m</td></tr>
+</table>
+<p>Numbers indicative for orientation; specific project design must be confirmed by the consulting geotechnical engineer with site-specific shear strength profile, embankment geometry, and consolidation analysis. Combine with vertical drains (PVDs) and surcharge programme for the long-term settlement; basal reinforcement is a construction-stage measure.</p></section>
+
+<section class="block"><div class="block-eye">06 / Track 4: Road and working-platform reinforcement</div><h2>Biaxial geogrid for <em>aggregate confinement.</em></h2>
+
+<h3>Design objectives</h3>
+<ol>
+<li><strong>Aggregate thickness reduction</strong> for a given design traffic (typical 20-50 percent saving)</li>
+<li><strong>Pavement design life extension</strong> for a given aggregate thickness</li>
+<li><strong>Working platform stability</strong> over soft subgrade during construction</li>
+<li><strong>Rut depth control</strong> on unpaved haul roads under repetitive heavy traffic</li>
+</ol>
+
+<h3>Design methods</h3>
+<p><strong>Paved roads, AASHTO methodology:</strong> the manufacturer publishes a K-factor (modulus improvement factor) for the biaxial geogrid that quantifies the aggregate modulus increase. AASHTO LRFD pavement design substitutes the improved modulus into the structural number equation, producing required aggregate thickness reduction. Typical K-factor 1.5-2.5 for biaxial PP geogrid on subgrade CBR 1-3 percent.</p>
+<p><strong>Unpaved haul roads, Giroud-Han 2004:</strong> the Giroud-Han method explicitly computes aggregate thickness for a given design wheel load, subgrade CBR, and target rut depth, with geogrid reinforcement quantified by an aperture stability modulus term. Standard method for plantation, mining haul, oil-and-gas yards.</p>
+<p><strong>Working platforms, BR 470 / BS 8006:</strong> for tracked plant operating on temporary platforms over soft subgrade, BR 470 (UK Building Research Establishment) or BS 8006-2 provide platform design with geogrid reinforcement. The platform takes the load from the tracked equipment and distributes it to the subgrade through the reinforced aggregate.</p>
+
+<h3>Product selection</h3>
+<p>Biaxial geogrid (StrataGrid Biaxial 20-40 kN/m wide-width, aperture stability modulus per ASTM D6244) is the default. For very weak subgrades (CBR less than 1 percent), combine biaxial geogrid with a layer of woven HSR geotextile below for additional tensile basal support, and consider geocell (StrataWeb 100-150 mm) above the geogrid for further aggregate confinement.</p></section>
+
+<section class="block"><div class="block-eye">07 / Pullout and connection design</div><h2>Embedment length <em>and connection capacity.</em></h2>
+
+<h3>Pullout capacity</h3>
+<p>From BS 8006-1 and FHWA-NHI-10-024:</p>
+<p><code>F_pullout = 2 × L_e × C_i × σ_v × tan(phi')</code></p>
+<p>where:</p>
+<ul>
+<li>L_e is embedment length beyond the design failure wedge (active wedge for MSE wall)</li>
+<li>C_i is the soil-grid interaction coefficient (typically 0.6-0.8 for geogrid in granular fill; project-specific verification via ASTM D6706 pullout test on actual fill)</li>
+<li>σ_v is the vertical effective stress at the geogrid layer depth</li>
+<li>phi' is the fill internal friction angle</li>
+</ul>
+<p>Required F_pullout = T_d at that layer with target FoS (typically 1.5). Iterate L_e until adequate. The total reinforcement length L is the sum of the active-wedge length plus L_e.</p>
+
+<h3>Connection capacity</h3>
+<p>The geogrid-to-facing connection has its own capacity, distinct from the geogrid rupture capacity. For modular block walls (StrataBlock with PET geogrid), the connection is friction-based at the block-grid interface; manufacturer-specific connection strength is tested at the block-grid combination per NCMA SRW Design Manual. For precast panel walls (StrataWall with PET geogrid), the connection is mechanical at the panel cast-in tab; tested per FHWA-NHI-10-024. Connection capacity is typically the governing constraint for the upper layers of tall walls.</p></section>
+
+<section class="block"><div class="block-eye">08 / Worked example: MSE wall</div><h2>End-to-end design <em>flow.</em></h2>
+
+<p><strong>Project parameters:</strong></p>
+<ul>
+<li>Wall height H = 7.5 m (top of leveling pad to top of facing)</li>
+<li>Surface surcharge q = 12 kPa (live + dead load)</li>
+<li>Reinforced fill: granular, phi' = 36°, gamma = 19 kN/m³</li>
+<li>Retained fill: existing residual soil, phi' = 30°, gamma = 18 kN/m³</li>
+<li>Foundation soil: residual soil, bearing capacity verified at design</li>
+<li>Facing: modular block (StrataBlock-style)</li>
+<li>Reinforcement vertical spacing Sv = 0.6 m</li>
+<li>Layers: 12 (at 0.6 m vertical spacing)</li>
+</ul>
+
+<p><strong>Step 1: Compute design tensile T at each layer</strong> using coherent gravity method (BS 8006). Active earth pressure from retained fill plus surcharge. Peak T at the lower layers; reducing toward the crest. Resulting T = 28 kN/m at the second-from-bottom layer.</p>
+
+<p><strong>Step 2: Apply reduction factors.</strong> PET uniaxial geogrid, granular reinforced fill, neutral ground, modular block facing: RF_ID = 1.15, RF_CR = 1.55, RF_CH = 1.05, RF_W = 1.20. Total RF = 1.15 × 1.55 × 1.05 × 1.20 = 2.25.</p>
+
+<p><strong>Step 3: T_ult required at the peak layer:</strong> T_ult = T × RF = 28 × 2.25 = 63 kN/m.</p>
+
+<p><strong>Step 4: Select product grade.</strong> Next standard StrataGrid grade above 63: 80 kN/m (StrataGrid SG80). Use SG80 for lower 4 layers. Transition to SG50 for upper 8 layers where T demand is lower.</p>
+
+<p><strong>Step 5: Reinforcement length L.</strong> Active wedge length from the Coulomb failure surface = 4.0 m at the base. Required embedment L_e for pullout at base = 1.5 m (per pullout calculation with C_i = 0.7). Total L = 4.0 + 1.5 = 5.5 m. Round to standard layer length: 6.0 m (= 0.8H).</p>
+
+<p><strong>Step 6: External stability.</strong> Sliding FoS = 1.6 (greater than 1.5 target). Bearing capacity FoS = 2.8 (greater than 2.5). Overturning FoS = 3.5 (greater than 2.0). Global slip-circle FoS = 1.7 (greater than 1.5). All pass.</p>
+
+<p><strong>Step 7: Connection capacity.</strong> StrataBlock-StrataGrid connection at SG80 = 60 kN/m at zero confining pressure, rising with block weight above. Check: at the second-from-bottom layer (one block stack above) the connection capacity is approximately 35 kN/m, greater than the T = 28 kN/m. Pass.</p>
+
+<p><strong>Step 8: Drainage detail.</strong> Behind the wall back, StrataDrain geocomposite (or nonwoven geotextile + drain pipe) sized for the drainage demand. Outlet through wall weeps at the base.</p>
+
+<p>Numbers indicative for the design flow. Specific projects must be confirmed by the consulting engineer with site-specific data and submitted under their professional responsibility.</p></section>
+
+<section class="block"><div class="block-eye">09 / Standards register</div><h2>What to cite <em>in your design report.</em></h2>
+<table class="specs"><tr><th>Standard</th><th>Coverage</th></tr>
+<tr><td>BS 8006-1, 8006-2</td><td>Strengthened and reinforced soils, code of practice</td></tr>
+<tr><td>BS EN 1997 (Eurocode 7)</td><td>Geotechnical design with partial factor LRFD</td></tr>
+<tr><td>ASTM D6637</td><td>Geogrid wide-width tensile (single rib or junction)</td></tr>
+<tr><td>ASTM D6638</td><td>Geogrid junction strength</td></tr>
+<tr><td>ASTM D6244</td><td>Geogrid aperture stability modulus (biaxial)</td></tr>
+<tr><td>ASTM D6706</td><td>Geogrid pullout resistance</td></tr>
+<tr><td>ISO 10319</td><td>Wide-width tensile</td></tr>
+<tr><td>ISO 13431</td><td>Creep tensile, long-term design strength</td></tr>
+<tr><td>AASHTO LRFD</td><td>Bridge and federal infrastructure design</td></tr>
+<tr><td>FHWA-NHI-10-024</td><td>MSE walls and reinforced soil slopes</td></tr>
+<tr><td>FHWA-NHI-15-067</td><td>Reinforced soil slopes (newer reference)</td></tr>
+<tr><td>NCMA SRW Design Manual</td><td>Segmental retaining wall design</td></tr>
+<tr><td>BR 470</td><td>Working platform design with geogrid (UK BRE)</td></tr>
+<tr><td>Giroud-Han 2004</td><td>Unpaved haul road design</td></tr>
+<tr><td>JKR-SPJ Section 7</td><td>Earthworks and slope, Malaysian government works</td></tr></table>
+</section>
+
+<section class="block"><div class="block-eye">10 / FAQ</div><h2>Engineers and consultants <em>usually ask:</em></h2>
+<details class="faq-item"><summary>MSE wall design approach? <span class="ic">+</span></summary><div class="ans">Internal stability (rupture, pullout, connection) + external stability (sliding, overturning, bearing, global slip) per BS 8006 / FHWA-NHI-10-024.</div></details>
+<details class="faq-item"><summary>RSS design approach? <span class="ic">+</span></summary><div class="ans">Slip-circle analysis with each geogrid layer adding tensile capacity on the slip surface. Iterate until FoS &ge; target.</div></details>
+<details class="faq-item"><summary>Basal mat on soft ground? <span class="ic">+</span></summary><div class="ans">Slip-circle + tensile (BS 8006) and Rowe-Soderman parallel; take the higher T_required.</div></details>
+<details class="faq-item"><summary>Reduction factors? <span class="ic">+</span></summary><div class="ans">Four (RF_ID, RF_CR, RF_CH, RF_W) per ISO 13431. T_d = T_ult / (RF1*RF2*RF3*RF4). Total typically 1.8-2.6 for PET.</div></details>
+<details class="faq-item"><summary>Pullout design? <span class="ic">+</span></summary><div class="ans">F_pullout = 2 * L_e * C_i * sigma_v * tan(phi'). C_i typically 0.6-0.8 for geogrid in granular fill.</div></details>
+<details class="faq-item"><summary>Connection capacity? <span class="ic">+</span></summary><div class="ans">Geogrid-to-facing capacity tested at the system level (NCMA SRW or FHWA-NHI-10-024). Often governs the upper layers of tall walls.</div></details>
+<details class="faq-item"><summary>Junction efficiency? <span class="ic">+</span></summary><div class="ans">ASTM D6638 test. STRATA PET uniaxial typically greater than 90 percent.</div></details>
+</section>
+
+<section class="block"><div class="block-eye">11 / Related guides</div><h2>Continue on <em>related design topics.</em></h2>
+<div class="svc-grid">
+<a class="svc-link" href="/geogrid/"><div class="label">Product</div><h4>Geogrid product page →</h4><p>StrataGrid uniaxial PET + biaxial PP product detail, polymer, full standards register.</p><span class="arr">Read</span></a>
+<a class="svc-link" href="/mse-wall-design-with-geogrid/"><div class="label">Scenario</div><h4>MSE wall design with geogrid →</h4><p>End-to-end MSE wall design workflow with worked example.</p><span class="arr">Read</span></a>
+<a class="svc-link" href="/reinforced-soil-slope-design-guide/"><div class="label">Scenario</div><h4>Reinforced soil slope design →</h4><p>RSS with geogrid, slip-circle analysis, vegetated face geometry, drainage.</p><span class="arr">Read</span></a>
+<a class="svc-link" href="/road-base-reinforcement-design/"><div class="label">Scenario</div><h4>Road base reinforcement design →</h4><p>Biaxial geogrid for paved and unpaved sub-base. AASHTO + Giroud-Han methodology.</p><span class="arr">Read</span></a>
+<a class="svc-link" href="/geotextile-design-guide/"><div class="label">Companion</div><h4>Geotextile design guide →</h4><p>Filter criteria, separation, basal reinforcement with woven HSR geotextile.</p><span class="arr">Read</span></a>
+<a class="svc-link" href="/compare-geosynthetics/"><div class="label">Comparison</div><h4>All geosynthetics compared →</h4><p>Geogrid vs geotextile vs geocell vs geomembrane vs geocomposite.</p><span class="arr">Read</span></a>
+</div></section>
+
+</div>
+<section class="cta-block"><div class="container"><h2>Designing with geogrid <em>for a Malaysian project?</em></h2><p>Send the consultant's brief, soil report, or just the project parameters. Same-day response with grade recommendation, indicative budget, lead time, and design support from the engineering team in Petaling Jaya.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp the team →</a><a class="btn btn-ghost" href="/#contact">All contact details</a></div></div></section>
+</main>
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor) · A <a href="/">Panthera Group</a> company</p></div></footer>
+</body></html>
