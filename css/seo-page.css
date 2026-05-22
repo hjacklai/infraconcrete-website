@@ -513,9 +513,9 @@ footer li a { font-size: 13.5px; color: var(--ink-soft); }
 @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } .footer-group { gap: 14px; } .footer-group-r { font-size: 11px; } .footer-bottom { font-size: 9.5px; flex-direction: column; align-items: flex-start; gap: 10px; } }
 
 /* Bottom-nav swipe pill (matches homepage). Injected by /js/seo-nav.js.
-   Just enough clearance for the floating pill (~72px tall + 12px from bottom)
-   so scroll ends right after the credentials line ,  no big blank below. */
-body { padding-bottom: 60px; }
+   76px reserve so the floating pill (44px item + 6px x 2 padding + 12px bottom
+   offset = ~68px tall) clears the last line of content. Same value as homepage. */
+body { padding-bottom: 76px; }
 .bottom-nav {
   position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%) translateY(28px);
   z-index: 200;
@@ -535,15 +535,18 @@ body { padding-bottom: 60px; }
   opacity: 1; pointer-events: auto;
   transform: translateX(-50%) translateY(0);
 }
-.bottom-nav .bn-hint {
+.bn-hint {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  color: color-mix(in srgb, var(--ink) 55%, transparent);
+  padding: 0 6px 0 4px;
+  align-self: center;
   flex-shrink: 0;
-  font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--grey-500); padding: 0 14px 0 10px;
-  display: inline-flex; align-items: center; gap: 6px;
-  transition: opacity .35s var(--ease), max-width .35s var(--ease);
-  max-width: 90px; overflow: hidden; white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
 }
-.bottom-nav.has-scrolled .bn-hint { opacity: 0; max-width: 0; padding: 0; }
+.bottom-nav.has-scrolled .bn-hint { display: none; }
 .bn-hint-arrow { color: var(--ic-red); }
 .bn-scroll {
   display: flex; gap: 4px;
@@ -578,17 +581,20 @@ body { padding-bottom: 60px; }
 }
 .bn-cta:hover { background: var(--ic-red-deep); color: #fff !important; }
 .bn-cta svg { opacity: 1; }
-/* Mobile bottom-nav sizing now matches homepage: same gap (6px), same outer
-   padding, same item size ,  no more "smaller pill on SEO pages" mismatch. */
+/* On wider desktops (>=1100px) tighten the pill horizontally and hide the
+   scroll hint so it matches the homepage exactly. */
+@media (min-width: 1100px) {
+  .bn-scroll { mask-image: none; -webkit-mask-image: none; padding-right: 4px; }
+  .bn-hint { display: none; }
+  .bottom-nav { padding: 6px 10px 6px 14px; gap: 6px; max-width: calc(100vw - 24px); }
+}
+/* Small-phone tweak: soften the edge-fade gradient (24px would clip the
+   first/last nav item at narrow widths) and turn on iOS momentum scroll.
+   Mirrors homepage @media (max-width: 540px) for the inner scroll. */
 @media (max-width: 540px) {
-  .bottom-nav { padding: 6px 10px 6px 14px; gap: 6px; bottom: 12px; max-width: calc(100vw - 24px); }
-  .bn-item { font-size: 9px; }
-  .bn-item svg { width: 20px; height: 20px; }
-  .bottom-nav .bn-hint { padding: 0 6px 0 4px; font-size: 8.5px; }
-  /* Mobile scroll: just iOS momentum on (touch). Snap behavior is now
-     proximity (universal) + default snap-stop, so feel is consistent
-     across mobile, tablet, and desktop. */
   .bn-scroll {
+    mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 10px, black calc(100% - 10px), transparent 100%);
     -webkit-overflow-scrolling: touch;
   }
 }
