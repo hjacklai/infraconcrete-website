@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DRSYDHBKMZ');</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Geogrid Pullout Capacity Calculator (BS 8006 / FHWA-NHI-10-024) | Free Online | Infraconcrete</title>
+<meta name="description" content="Free online geogrid pullout capacity calculator per BS 8006 and FHWA-NHI-10-024. Formula: F = 2 × Lₑ × Cᵢ × σᵥ × tan φ'. Enter embedment length, vertical stress, interaction coefficient, friction angle; get pullout capacity per metre width and factor of safety. By Infraconcrete (CIDB G7) and Starwall (STRATA distributor)." />
+<meta name="keywords" content="geogrid pullout calculator, geogrid anchorage calculator, BS 8006 pullout calculator, FHWA pullout calculator, MSE wall pullout, geogrid interaction coefficient, geogrid anchor length, pullout resistance calculator" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" /><meta property="og:title" content="Geogrid Pullout Capacity Calculator" /><meta property="og:url" content="https://infraconcrete.co/tools/geogrid-pullout-calculator/" /><meta property="og:locale" content="en_MY" />
+<link rel="canonical" href="https://infraconcrete.co/tools/geogrid-pullout-calculator/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="icon" type="image/png" sizes="any" href="/favicon.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Geogrid Pullout Capacity Calculator","applicationCategory":"EngineeringApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"MYR"},"description":"Geogrid pullout resistance per BS 8006 / FHWA-NHI-10-024.","creator":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd"}},{"@type":"HowTo","name":"How to calculate geogrid pullout capacity","step":[{"@type":"HowToStep","name":"Step 1","text":"Determine embedment length Le past the failure surface."},{"@type":"HowToStep","name":"Step 2","text":"Determine vertical effective stress sigma v at the geogrid level."},{"@type":"HowToStep","name":"Step 3","text":"Look up interaction coefficient Ci for the geogrid-soil pair (typical 0.6-0.9)."},{"@type":"HowToStep","name":"Step 4","text":"Enter friction angle phi prime of reinforced fill."},{"@type":"HowToStep","name":"Step 5","text":"Read pullout capacity F per metre width and factor of safety against design tension."}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://infraconcrete.co/tools/"},{"@type":"ListItem","position":3,"name":"Geogrid Pullout Calculator","item":"https://infraconcrete.co/tools/geogrid-pullout-calculator/"}]}]}</script>
+<link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/css/seo-page.css">
+<style>
+.calc-form{background:#fff;border:1px solid #E5DBC1;border-radius:12px;padding:24px;margin:24px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.calc-form label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+.calc-form input{width:100%;padding:10px;font-size:16px;border:1px solid #C9BC9C;border-radius:6px;font-family:inherit}
+.calc-out{background:#F8F2E0;border:1px solid #C9BC9C;border-radius:12px;padding:24px;margin:24px 0}
+.calc-out .out-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dotted #C9BC9C}
+.calc-out .out-row:last-child{border-bottom:none}
+.calc-out .out-label{font-weight:500}
+.calc-out .out-val{font-weight:700;font-family:'JetBrains Mono',monospace}
+.calc-note{background:#FFF7E0;border-left:4px solid #C9A227;padding:12px 16px;margin:16px 0;font-size:14px}
+.pass{color:#0a7d3a;font-weight:700}
+.fail{color:#c0392b;font-weight:700}
+@media (max-width:640px){.calc-form{grid-template-columns:1fr}}
+</style>
+<script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" /></head>
+<body>
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs"><a href="/">Home</a><span class="sep">·</span><a href="/tools/">Tools</a><span class="sep">·</span><span class="here">Geogrid Pullout Calculator</span></nav></div>
+<main><div class="container">
+
+<section class="hero"><div class="eyebrow">Engineering Tool · BS 8006 + FHWA-NHI-10-024</div><h1>Geogrid pullout <em>capacity calculator.</em></h1><p class="lede">Pullout resistance F = 2 × Lₑ × Cᵢ × σᵥ × tan φ', per BS 8006 and FHWA-NHI-10-024. Factor 2 accounts for top and bottom surfaces of the geogrid sheet engaging with soil. Calculator returns pullout capacity per metre width and a factor of safety against design tension. Use to verify each reinforcement layer in an MSE wall or RSS design.</p></section>
+
+<section class="block">
+<form class="calc-form" id="calc">
+ <div><label>Embedment length Lₑ past failure surface (m)</label><input type="number" id="Le" value="3.0" step="0.1" min="0.5" max="20"></div>
+ <div><label>Vertical effective stress σᵥ at geogrid level (kPa)</label><input type="number" id="sv" value="100" step="5" min="10" max="500"></div>
+ <div><label>Interaction coefficient Cᵢ</label><input type="number" id="ci" value="0.8" step="0.05" min="0.4" max="1.0"></div>
+ <div><label>Reinforced fill friction angle φ' (°)</label><input type="number" id="phi" value="34" step="1" min="25" max="42"></div>
+ <div><label>Design tension T at this layer (kN/m)</label><input type="number" id="T" value="40" step="5" min="5" max="400"></div>
+ <div><label>Required FoS against pullout</label><input type="number" id="fos" value="1.5" step="0.1" min="1.0" max="3.0"></div>
+</form>
+
+<div class="calc-out" id="out"><div id="outBody">Inputs feed live.</div></div>
+
+<div class="calc-note"><strong>Formula:</strong> F = 2 × Lₑ × Cᵢ × σᵥ × tan φ', where Lₑ is the embedment length past the assumed failure surface, Cᵢ is the interaction coefficient between geogrid and reinforced fill (typical 0.6-0.9 for StrataGrid PET in granular fill), σᵥ is the effective overburden plus surcharge at the geogrid level, φ' is the reinforced fill friction angle. The factor 2 captures both top and bottom soil-geogrid interfaces. <strong>Preliminary check only.</strong> Verify against laboratory pullout test data per ASTM D6706 or BS EN 13738 where high-confidence design is needed.</div>
+
+<script>
+function calc(){
+ const Le=+document.getElementById('Le').value;
+ const sv=+document.getElementById('sv').value;
+ const ci=+document.getElementById('ci').value;
+ const phi=+document.getElementById('phi').value;
+ const T=+document.getElementById('T').value;
+ const fosReq=+document.getElementById('fos').value;
+ const F=2*Le*ci*sv*Math.tan(phi*Math.PI/180);
+ const fos=F/T;
+ const status=fos>=fosReq?'<span class="pass">PASS</span>':'<span class="fail">FAIL — increase Lₑ or check σᵥ</span>';
+ const LeReqMin=T*fosReq/(2*ci*sv*Math.tan(phi*Math.PI/180));
+ document.getElementById('outBody').innerHTML='<h3>Pullout check</h3>'+
+  '<div class="out-row"><span class="out-label">Pullout capacity F = 2 × Lₑ × Cᵢ × σᵥ × tan φ\'</span><span class="out-val">'+F.toFixed(1)+' kN/m</span></div>'+
+  '<div class="out-row"><span class="out-label">Design tension T at this layer</span><span class="out-val">'+T.toFixed(1)+' kN/m</span></div>'+
+  '<div class="out-row"><span class="out-label">Computed FoS = F / T</span><span class="out-val">'+fos.toFixed(2)+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Required FoS</span><span class="out-val">'+fosReq.toFixed(2)+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Status</span><span class="out-val">'+status+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Minimum required Lₑ for required FoS</span><span class="out-val">'+LeReqMin.toFixed(2)+' m</span></div>';
+}
+document.querySelectorAll('#calc input').forEach(i=>i.addEventListener('input',calc));
+calc();
+</script>
+</section>
+
+<section class="block"><div class="block-eye">Typical Cᵢ values</div><h2>Interaction coefficient <em>by geogrid-soil pair.</em></h2>
+<table class="specs">
+<tr><th>Geogrid type</th><th>Fill type</th><th>Typical Cᵢ</th></tr>
+<tr><td>StrataGrid uniaxial PET (PVC coated)</td><td>Well-graded crushed aggregate</td><td>0.85-0.95</td></tr>
+<tr><td>StrataGrid uniaxial PET</td><td>Granular sand-gravel mix</td><td>0.75-0.85</td></tr>
+<tr><td>StrataGrid uniaxial PET</td><td>Silty sand (Malaysian residual soil)</td><td>0.65-0.80</td></tr>
+<tr><td>StrataGrid biaxial PP (SGB)</td><td>Crushed aggregate base</td><td>0.80-0.90</td></tr>
+<tr><td>StrataGrid biaxial PP</td><td>Granular sand</td><td>0.65-0.80</td></tr>
+<tr><td>Generic woven PET</td><td>Granular fill</td><td>0.50-0.70</td></tr>
+</table>
+<p>For project-specific Cᵢ, request the STRATA datasheet pullout test result against your fill grading; we hold these for Malaysian fills under the distributor appointment.</p></section>
+
+<section class="block"><div class="block-eye">When pullout governs</div><h2>Top layers <em>vs bottom.</em></h2>
+<p>In MSE walls, pullout usually governs design at the <strong>top reinforcement layers</strong> because σᵥ is small there (low embedment depth), while design tension T may still be substantial because of surcharge. At the bottom layers, σᵥ is high and pullout is rarely critical; rupture governs there instead. Always verify pullout at every layer, not just the bottom. Use the table below as a starting point:</p>
+<table class="specs">
+<tr><th>Layer position</th><th>Likely governing mode</th></tr>
+<tr><td>Top 1-3 layers</td><td>Pullout (low σᵥ)</td></tr>
+<tr><td>Middle layers</td><td>Mixed pullout / rupture</td></tr>
+<tr><td>Bottom 2-3 layers</td><td>Rupture (high T, high σᵥ)</td></tr>
+</table></section>
+
+<section class="block"><div class="block-eye">Related</div><h2>Other <em>tools.</em></h2>
+<div class="svc-grid">
+<a class="svc-link" href="/tools/mse-wall-calculator/"><h4>MSE Wall Calculator →</h4><p>Preliminary wall sizing.</p></a>
+<a class="svc-link" href="/tools/basal-reinforcement-calculator/"><h4>Basal Reinforcement Calculator →</h4><p>Soft-ground embankment.</p></a>
+<a class="svc-link" href="/mse-wall-design-with-geogrid/"><h4>MSE Wall Design Guide →</h4><p>Full BS 8006 process.</p></a>
+<a class="svc-link" href="/geogrid/"><h4>StrataGrid Product →</h4><p>Uniaxial PET reference.</p></a>
+</div></section>
+
+</div>
+<section class="cta-block"><div class="container"><h2>Need pullout test data for <em>a specific fill?</em></h2><p>WhatsApp the gradation curve; we'll send the matched STRATA datasheet.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp engineering desk →</a><a class="btn btn-ghost" href="/#contact">Full contact details</a></div></div></section>
+</main>
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor, see <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">strataglobal.com</a>) · A <a href="/">Panthera Group</a> company</p></div></footer>
+</body></html>

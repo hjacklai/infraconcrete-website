@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DRSYDHBKMZ');</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Geomembrane Thickness Selector (GRI-GM13 / DOE Malaysia) | HDPE / LLDPE | Infraconcrete</title>
+<meta name="description" content="Free online geomembrane thickness and polymer selector. GRI-GM13 (HDPE) + GM17 (LLDPE) + DOE Malaysia compliance + ASTM D7007. Enter application (landfill base / cap / TSF / pond / containment), waste class, design life; get polymer recommendation, minimum thickness, seam QA spec, NDT method. By Infraconcrete and Starwall (STRATA Geosystems Malaysia distributor)." />
+<meta name="keywords" content="geomembrane thickness calculator, HDPE liner thickness, LLDPE thickness, landfill liner calculator Malaysia, DOE Malaysia geomembrane, GRI-GM13 calculator, TSF liner thickness, mining liner Malaysia, pond liner thickness" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" /><meta property="og:title" content="Geomembrane Thickness Selector" /><meta property="og:url" content="https://infraconcrete.co/tools/geomembrane-thickness-calculator/" /><meta property="og:locale" content="en_MY" />
+<link rel="canonical" href="https://infraconcrete.co/tools/geomembrane-thickness-calculator/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="icon" type="image/png" sizes="any" href="/favicon.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Geomembrane Thickness Selector","applicationCategory":"EngineeringApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"MYR"},"description":"Geomembrane polymer + thickness selector per GRI-GM13 + DOE Malaysia."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://infraconcrete.co/tools/"},{"@type":"ListItem","position":3,"name":"Geomembrane Thickness Selector","item":"https://infraconcrete.co/tools/geomembrane-thickness-calculator/"}]}]}</script>
+<link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/css/seo-page.css">
+<style>
+.calc-form{background:#fff;border:1px solid #E5DBC1;border-radius:12px;padding:24px;margin:24px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.calc-form label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+.calc-form select,.calc-form input{width:100%;padding:10px;font-size:16px;border:1px solid #C9BC9C;border-radius:6px;font-family:inherit}
+.calc-out{background:#F8F2E0;border:1px solid #C9BC9C;border-radius:12px;padding:24px;margin:24px 0}
+.calc-out .out-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dotted #C9BC9C;gap:16px}
+.calc-out .out-row:last-child{border-bottom:none}
+.calc-out .out-label{font-weight:500}
+.calc-out .out-val{font-weight:700;font-family:'JetBrains Mono',monospace;text-align:right}
+.calc-note{background:#FFF7E0;border-left:4px solid #C9A227;padding:12px 16px;margin:16px 0;font-size:14px}
+@media (max-width:640px){.calc-form{grid-template-columns:1fr}}
+</style>
+<script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" /></head>
+<body>
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs"><a href="/">Home</a><span class="sep">·</span><a href="/tools/">Tools</a><span class="sep">·</span><span class="here">Geomembrane Thickness Selector</span></nav></div>
+<main><div class="container">
+
+<section class="hero"><div class="eyebrow">Engineering Tool · GRI-GM13 / GM17 + DOE Malaysia</div><h1>Geomembrane thickness <em>selector.</em></h1><p class="lede">Polymer (HDPE / LLDPE / PVC / EPDM) + thickness + seam QA + NDT method. Per GRI-GM13 (HDPE), GRI-GM17 (LLDPE), GRI-GM19 (seam strength), ASTM D7007 (geoelectric leak detection), and DOE Malaysia landfill design guidance.</p></section>
+
+<section class="block">
+<form class="calc-form" id="calc">
+ <div><label>Application</label><select id="app">
+  <option value="landfill-base">Landfill basal liner</option>
+  <option value="landfill-cap">Landfill cap liner</option>
+  <option value="tsf">Mining tailings storage (TSF)</option>
+  <option value="raw-water">Raw water reservoir</option>
+  <option value="treatment-pond">Treatment / sewage pond</option>
+  <option value="aquaculture">Aquaculture pond (shrimp / fish)</option>
+  <option value="chemical-containment">Chemical secondary containment</option>
+  <option value="floating-cover">Floating cover</option>
+ </select></div>
+ <div><label>Waste / fluid classification</label><select id="waste">
+  <option value="inert">Inert (clean water, fish)</option>
+  <option value="non-hazardous">Non-hazardous (sewage, MSW)</option>
+  <option value="hazardous">Hazardous (chemical, mining acid)</option>
+ </select></div>
+ <div><label>Design life (years)</label><select id="life">
+  <option value="20">20</option>
+  <option value="30" selected>30</option>
+  <option value="50">50</option>
+  <option value="100">100</option>
+ </select></div>
+ <div><label>Side slope (1V:nH), n</label><input type="number" id="slope" value="3.0" step="0.5" min="1.0" max="6.0"></div>
+ <div><label>Expected differential settlement (m)</label><input type="number" id="settle" value="0.3" step="0.1" min="0" max="3"></div>
+ <div><label>Texture requirement</label><select id="tex">
+  <option value="smooth">Smooth (flat or low-slope)</option>
+  <option value="textured-one">Textured one side (typical slope)</option>
+  <option value="textured-both">Textured both sides (steep slope)</option>
+ </select></div>
+</form>
+
+<div class="calc-out" id="out"><div id="outBody">Inputs feed live.</div></div>
+
+<div class="calc-note"><strong>Method:</strong> Polymer selection driven by chemical compatibility (HDPE = broadest), flexibility for differential settlement (LLDPE for high settlement), and side-slope interface friction (textured for slope above 1V:3H). Thickness driven by waste class and design life per GRI-GM13/GM17 minimums plus DOE Malaysia overlay for hazardous waste. Seam QA combines hot-wedge dual-track air-pressure test plus extrusion repair with vacuum-box; ASTM D7007 geoelectric leak detection for hazardous and TSF.</div>
+
+<script>
+function calc(){
+ const app=document.getElementById('app').value;
+ const waste=document.getElementById('waste').value;
+ const life=+document.getElementById('life').value;
+ const slope=+document.getElementById('slope').value;
+ const settle=+document.getElementById('settle').value;
+ const tex=document.getElementById('tex').value;
+ let polymer,thick,seam,ndt,note='';
+ polymer=(app==='landfill-cap'||settle>0.5)?'LLDPE':'HDPE';
+ if(app==='aquaculture'){polymer='HDPE';}
+ if(app==='chemical-containment'&&waste==='hazardous'){polymer='HDPE (verify chemical compatibility per manufacturer chart)';}
+ if(app==='floating-cover'){polymer='Reinforced PP or EPDM';}
+ const tBase={'landfill-base':1.5,'landfill-cap':1.0,'tsf':2.0,'raw-water':1.0,'treatment-pond':1.5,'aquaculture':1.0,'chemical-containment':1.5,'floating-cover':1.0};
+ thick=tBase[app];
+ if(waste==='hazardous')thick=Math.max(thick,2.0);
+ if(life>=50)thick=Math.max(thick,1.5);
+ if(life>=100)thick=Math.max(thick,2.0);
+ if(slope<3.0)thick=Math.max(thick,1.5);
+ if(app==='landfill-base'&&waste==='hazardous')thick=Math.max(thick,2.5);
+ const grade=polymer.startsWith('HDPE')?'GRI-GM13 compliant':polymer.startsWith('LLDPE')?'GRI-GM17 compliant':'project-specific';
+ seam='Hot-wedge dual-track for production seams (air-pressure 200-240 kPa, 5 min, loss &lt; 4 kPa). Extrusion fillet for repairs and details (vacuum-box per ASTM D7466).';
+ if(waste==='hazardous'){ndt='100% seam testing + ASTM D7007 geoelectric leak detection of full liner (mandatory)';note+=' Double-liner with interlayer leak detection geomembrane required by DOE for hazardous landfills.';}
+ else if(app==='tsf'){ndt='100% seam testing + ASTM D7007 geoelectric leak detection (strongly recommended for TSF)';}
+ else{ndt='100% seam testing (air-pressure + vacuum-box). Spark test on extrusion welds.';}
+ const texRec=slope<3.0?'Textured one or both sides (high friction)':tex==='smooth'?'Smooth':'Textured';
+ const anchorTrench=0.5+0.3*Math.max(0,3-slope);
+ document.getElementById('outBody').innerHTML='<h3>Geomembrane spec</h3>'+
+  '<div class="out-row"><span class="out-label">Recommended polymer</span><span class="out-val">'+polymer+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Minimum thickness</span><span class="out-val">'+thick.toFixed(1)+' mm</span></div>'+
+  '<div class="out-row"><span class="out-label">Reference standard</span><span class="out-val">'+grade+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Texture recommendation</span><span class="out-val">'+texRec+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Seam welding method</span><span class="out-val">'+seam+'</span></div>'+
+  '<div class="out-row"><span class="out-label">NDT regime</span><span class="out-val">'+ndt+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Anchor trench depth (GRI-GM14)</span><span class="out-val">'+anchorTrench.toFixed(2)+' m</span></div>'+
+  '<div class="out-row"><span class="out-label">Cushion above (geotextile gsm)</span><span class="out-val">'+(thick>=1.5?'600 g/m² nonwoven':'400 g/m² nonwoven')+'</span></div>'+
+  (note?'<div class="out-row"><span class="out-label">Regulatory note</span><span class="out-val">'+note+'</span></div>':'');
+}
+document.querySelectorAll('#calc input,#calc select').forEach(i=>i.addEventListener('input',calc));
+calc();
+</script>
+</section>
+
+<section class="block"><div class="block-eye">Polymer selection logic</div><h2>Why <em>each polymer.</em></h2>
+<table class="specs">
+<tr><th>Polymer</th><th>Best for</th><th>Avoid in</th></tr>
+<tr><td>HDPE</td><td>Broad chemical resistance, long life, low cost, basal liners</td><td>High differential settlement (LLDPE better), cap with steep folds</td></tr>
+<tr><td>LLDPE</td><td>High flexibility, cap liners, areas with pipe penetrations, differential settlement</td><td>Long-term chemical exposure (HDPE better)</td></tr>
+<tr><td>PVC</td><td>Indoor / temporary applications, easy solvent welding, small water containment</td><td>UV exposure, hazardous waste, long design life</td></tr>
+<tr><td>EPDM</td><td>Drinking water, extreme temperature, ozone exposure</td><td>Cost-sensitive large landfills</td></tr>
+<tr><td>Reinforced PP</td><td>Floating covers, exposed long-term</td><td>Buried applications below grade (HDPE better)</td></tr>
+</table></section>
+
+<section class="block"><div class="block-eye">DOE Malaysia compliance</div><h2>Regulatory <em>minimums.</em></h2>
+<p>DOE (Department of Environment) Malaysia Garis Panduan for solid waste landfills sets composite-liner minimums for hazardous, non-hazardous, and inert wastes. For hazardous landfills the basal liner system requires geomembrane (typically HDPE 2.0+ mm) + GCL or clay layer + cushion + leachate collection. ASTM D7007 geoelectric leak detection is becoming standard practice on critical liners and is the only NDT method that finds pinholes missed by visual + vacuum-box inspection. For TSF (mining), the regulatory standard is the Department of Mineral and Geoscience Malaysia plus the Malaysian Mining Code; project-specific requirements often exceed DOE for landfills.</p></section>
+
+<section class="block"><div class="block-eye">Related</div><h2>Other <em>tools.</em></h2>
+<div class="svc-grid">
+<a class="svc-link" href="/landfill-liner-design-geomembrane/"><h4>Landfill Liner Design Guide →</h4><p>Composite system walkthrough.</p></a>
+<a class="svc-link" href="/geomembrane-design-guide/"><h4>Geomembrane Design Guide →</h4><p>Five-step selection method.</p></a>
+<a class="svc-link" href="/geomembrane/"><h4>Geomembrane Product →</h4><p>HDPE / LLDPE / PVC / EPDM reference.</p></a>
+<a class="svc-link" href="/drainage-design-with-geocomposite/"><h4>Drainage Design (Geocomposite) →</h4><p>StrataDrain above the liner.</p></a>
+</div></section>
+
+</div>
+<section class="cta-block"><div class="container"><h2>DOE landfill or <em>TSF design?</em></h2><p>WhatsApp the EIA approval + section drawing; we'll spec the composite liner system end-to-end.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp engineering desk →</a><a class="btn btn-ghost" href="/#contact">Full contact details</a></div></div></section>
+</main>
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor, see <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">strataglobal.com</a>) · A <a href="/">Panthera Group</a> company</p></div></footer>
+</body></html>

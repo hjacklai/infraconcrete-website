@@ -1090,4 +1090,23 @@
   <url><loc>https://infraconcrete.co/zh/geomembrane/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/zh/strata-malaysia/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://infraconcrete.co/zh/compare-geosynthetics/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Engineering calculators + tools hub (added 2026-05-23) -->
+  <url><loc>https://infraconcrete.co/tools/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://infraconcrete.co/tools/mse-wall-calculator/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://infraconcrete.co/tools/geogrid-pullout-calculator/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://infraconcrete.co/tools/geotextile-filter-calculator/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://infraconcrete.co/tools/geocell-calculator/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://infraconcrete.co/tools/basal-reinforcement-calculator/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://infraconcrete.co/tools/geomembrane-thickness-calculator/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+
+  <!-- Team / E-E-A-T credentials page (added 2026-05-23) -->
+  <url><loc>https://infraconcrete.co/team/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Industry-vertical geosynthetics pages (added 2026-05-23) -->
+  <url><loc>https://infraconcrete.co/geosynthetics-highway-malaysia/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/geosynthetics-rail-malaysia/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/geosynthetics-port-reclamation-malaysia/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/geosynthetics-mining-tsf-malaysia/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://infraconcrete.co/geosynthetics-landfill-malaysia/</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>

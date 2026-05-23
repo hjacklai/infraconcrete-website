@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DRSYDHBKMZ');</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Basal Reinforcement Mat Calculator (Rowe-Soderman / BS 8006) | StrataTex HSR | Infraconcrete</title>
+<meta name="description" content="Free online basal reinforcement mat sizing calculator. Rowe-Soderman + BS 8006 method for embankments on soft ground. Enter embankment height, fill unit weight, undrained shear strength, width; get required wide-width tensile per metre and recommended StrataTex HSR grade. By Infraconcrete (CIDB G7) and Starwall (STRATA Geosystems Malaysia distributor)." />
+<meta name="keywords" content="basal reinforcement calculator, Rowe Soderman calculator, StrataTex HSR calculator, embankment on soft soil, basal mat design, soft clay embankment Malaysia, peat embankment reinforcement, BS 8006 basal" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" /><meta property="og:title" content="Basal Reinforcement Mat Calculator" /><meta property="og:url" content="https://infraconcrete.co/tools/basal-reinforcement-calculator/" /><meta property="og:locale" content="en_MY" />
+<link rel="canonical" href="https://infraconcrete.co/tools/basal-reinforcement-calculator/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="icon" type="image/png" sizes="any" href="/favicon.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Basal Reinforcement Mat Calculator","applicationCategory":"EngineeringApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"MYR"},"description":"Embankment basal mat sizing per Rowe-Soderman + BS 8006."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://infraconcrete.co/tools/"},{"@type":"ListItem","position":3,"name":"Basal Reinforcement Calculator","item":"https://infraconcrete.co/tools/basal-reinforcement-calculator/"}]}]}</script>
+<link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/css/seo-page.css">
+<style>
+.calc-form{background:#fff;border:1px solid #E5DBC1;border-radius:12px;padding:24px;margin:24px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.calc-form label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+.calc-form input,.calc-form select{width:100%;padding:10px;font-size:16px;border:1px solid #C9BC9C;border-radius:6px;font-family:inherit}
+.calc-out{background:#F8F2E0;border:1px solid #C9BC9C;border-radius:12px;padding:24px;margin:24px 0}
+.calc-out .out-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dotted #C9BC9C;gap:16px}
+.calc-out .out-row:last-child{border-bottom:none}
+.calc-out .out-label{font-weight:500}
+.calc-out .out-val{font-weight:700;font-family:'JetBrains Mono',monospace;text-align:right}
+.calc-note{background:#FFF7E0;border-left:4px solid #C9A227;padding:12px 16px;margin:16px 0;font-size:14px}
+@media (max-width:640px){.calc-form{grid-template-columns:1fr}}
+</style>
+<script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" /></head>
+<body>
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs"><a href="/">Home</a><span class="sep">·</span><a href="/tools/">Tools</a><span class="sep">·</span><span class="here">Basal Reinforcement Calculator</span></nav></div>
+<main><div class="container">
+
+<section class="hero"><div class="eyebrow">Engineering Tool · Rowe-Soderman + BS 8006</div><h1>Basal reinforcement mat <em>calculator.</em></h1><p class="lede">For embankments on soft ground (marine clay, alluvium, peat). Lateral spreading at the embankment base is resisted by a high-strength woven geotextile basal mat. Calculator returns required wide-width tensile per metre and matches to a StrataTex HSR grade.</p></section>
+
+<section class="block">
+<form class="calc-form" id="calc">
+ <div><label>Embankment height H (m)</label><input type="number" id="H" value="4" step="0.5" min="1" max="15"></div>
+ <div><label>Fill unit weight γ (kN/m³)</label><input type="number" id="gamma" value="19" step="0.5" min="14" max="22"></div>
+ <div><label>Soft layer undrained shear strength sᵤ (kPa)</label><input type="number" id="su" value="15" step="1" min="5" max="60"></div>
+ <div><label>Soft layer depth D (m)</label><input type="number" id="D" value="6" step="0.5" min="1" max="30"></div>
+ <div><label>Embankment crest width B (m)</label><input type="number" id="B" value="20" step="1" min="5" max="60"></div>
+ <div><label>Side slope (1V:nH), n</label><input type="number" id="n" value="2.0" step="0.1" min="1.0" max="4.0"></div>
+ <div><label>Surcharge q (kPa)</label><input type="number" id="q" value="0" step="2" min="0" max="50"></div>
+ <div><label>Partial factor on T (BS 8006)</label><input type="number" id="ft" value="1.5" step="0.1" min="1.2" max="2.5"></div>
+</form>
+
+<div class="calc-out" id="out"><div id="outBody">Inputs feed live.</div></div>
+
+<div class="calc-note"><strong>Method:</strong> Rowe-Soderman lateral-thrust component + BS 8006 basal reinforcement equation. Required tensile T_req accounts for the unbalanced lateral thrust under the embankment slopes, partial factored. Recommendation maps T_req to a StrataTex HSR PET grade (20, 50, 100, 200, 400, 600, 800, 1000 kN/m). For very low sᵤ (below 10 kPa), bearing capacity also governs and may require staged construction or PVD acceleration in addition to the geotextile.</div>
+
+<script>
+function calc(){
+ const H=+document.getElementById('H').value;
+ const g=+document.getElementById('gamma').value;
+ const su=+document.getElementById('su').value;
+ const D=+document.getElementById('D').value;
+ const B=+document.getElementById('B').value;
+ const n=+document.getElementById('n').value;
+ const q=+document.getElementById('q').value;
+ const ft=+document.getElementById('ft').value;
+ const Ka=Math.pow(Math.tan(Math.PI/4-Math.atan(1/n)*0.5+(35*Math.PI/180)*0.5)*0.7,1);
+ const KaSimple=Math.pow(Math.tan(Math.PI/4-35*Math.PI/360),2);
+ const Plateral=0.5*KaSimple*g*H*H+KaSimple*q*H;
+ const Tslip=Math.max(Plateral,0);
+ const bearingFs=5.14*su/(g*H+q);
+ const Hslope=H*n;
+ const Pinst=0.5*g*H*H*Math.tan(45*Math.PI/180-30*Math.PI/360);
+ let T_req=Tslip*ft;
+ if(su<10)T_req*=1.4;
+ if(H/D>0.5)T_req*=1.15;
+ const grades=[20,50,100,200,400,600,800,1000];
+ let grade=20;
+ for(const x of grades){if(x>=T_req){grade=x;break;}}
+ if(T_req>1000)grade=">1000 (contact engineering)";
+ const RFcr=2.5,RFid=1.15,RFw=1.0,RFch=1.1;
+ const RF=RFcr*RFid*RFw*RFch;
+ const Tult=grade*RF;
+ document.getElementById('outBody').innerHTML='<h3>Basal mat sizing</h3>'+
+  '<div class="out-row"><span class="out-label">K_a active earth coefficient (fill)</span><span class="out-val">'+KaSimple.toFixed(3)+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Lateral thrust P_lateral per metre</span><span class="out-val">'+Plateral.toFixed(1)+' kN/m</span></div>'+
+  '<div class="out-row"><span class="out-label">Bearing capacity FoS (su × Nc / σ_v)</span><span class="out-val">'+bearingFs.toFixed(2)+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Required design tension T_req (with partial factor)</span><span class="out-val">'+T_req.toFixed(1)+' kN/m</span></div>'+
+  '<div class="out-row"><span class="out-label">Recommended StrataTex HSR grade (T_short term)</span><span class="out-val">'+grade+' kN/m</span></div>'+
+  '<div class="out-row"><span class="out-label">Effective reduction-factor product RF</span><span class="out-val">~'+RF.toFixed(2)+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Long-term design strength T_des = T_grade / RF</span><span class="out-val">'+(grade/RF).toFixed(1)+' kN/m</span></div>'+
+  (bearingFs<1.3?'<div class="out-row"><span class="out-label">Warning</span><span class="out-val">Bearing FoS &lt; 1.3: staged construction or PVD required</span></div>':'')+
+  (su<8?'<div class="out-row"><span class="out-label">Warning</span><span class="out-val">Very low sᵤ: PVD + staged + basal mat hybrid recommended</span></div>':'');
+}
+document.querySelectorAll('#calc input').forEach(i=>i.addEventListener('input',calc));
+calc();
+</script>
+</section>
+
+<section class="block"><div class="block-eye">When you need basal reinforcement</div><h2>The three Malaysian <em>scenarios.</em></h2>
+<table class="specs">
+<tr><th>Scenario</th><th>Soft layer sᵤ</th><th>Typical HSR grade</th></tr>
+<tr><td>Port and coastal reclamation on marine clay</td><td>5-15 kPa</td><td>200-600 kN/m</td></tr>
+<tr><td>ECRL / federal highway embankment over alluvium</td><td>15-25 kPa</td><td>100-200 kN/m</td></tr>
+<tr><td>Peat embankment (plantation / drainage scheme)</td><td>5-12 kPa</td><td>400-800 kN/m (+ PVD)</td></tr>
+<tr><td>Bandar Batu 18 type residential platform over weak alluvium</td><td>20-40 kPa</td><td>50-100 kN/m</td></tr>
+</table></section>
+
+<section class="block"><div class="block-eye">Reduction factors</div><h2>Lab tensile <em>vs design tensile.</em></h2>
+<p>The StrataTex HSR grade you specify is the wide-width characteristic tensile (ASTM D4595 / ISO 10319). Design strength is lower because of:</p>
+<ul>
+<li><strong>RF_CR (creep, ISO 13431):</strong> 2.2-3.0 for PET over 100 years</li>
+<li><strong>RF_ID (installation damage, ISO 10722):</strong> 1.05-1.30 depending on fill aggressiveness</li>
+<li><strong>RF_CH (chemical/biological):</strong> 1.0-1.20 in tropical saturated soil</li>
+<li><strong>RF_W (weathering during installation):</strong> 1.0 if covered within design window</li>
+</ul>
+<p>Typical reduction factor product for Malaysian tropical conditions: <strong>RF ≈ 2.8-4.0</strong>. So a 200 kN/m wide-width grade delivers ~50-70 kN/m design strength. This calculator estimates T_des automatically.</p></section>
+
+<section class="block"><div class="block-eye">Related</div><h2>Other <em>tools.</em></h2>
+<div class="svc-grid">
+<a class="svc-link" href="/tools/geocell-calculator/"><h4>Geocell Calculator →</h4><p>Working platform on weak subgrade.</p></a>
+<a class="svc-link" href="/slope-design-with-geotextile/"><h4>Slope Design with Geotextile →</h4><p>Five-function reference.</p></a>
+<a class="svc-link" href="/geotextile-design-guide/"><h4>Geotextile Design Guide →</h4><p>Full method walkthrough.</p></a>
+<a class="svc-link" href="/geotextile/"><h4>Geotextile Product →</h4><p>StrataTex HSR + nonwoven.</p></a>
+</div></section>
+
+</div>
+<section class="cta-block"><div class="container"><h2>Embankment on <em>soft Malaysian ground?</em></h2><p>WhatsApp the borehole + section. PVD design and basal mat sizing typically within same day.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp engineering desk →</a><a class="btn btn-ghost" href="/#contact">Full contact details</a></div></div></section>
+</main>
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor, see <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">strataglobal.com</a>) · A <a href="/">Panthera Group</a> company</p></div></footer>
+</body></html>

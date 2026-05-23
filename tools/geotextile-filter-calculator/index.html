@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DRSYDHBKMZ');</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Geotextile Filter Criteria Calculator (Terzaghi-Cistin / FHWA-NHI-07-092) | Infraconcrete</title>
+<meta name="description" content="Free online geotextile filter criteria calculator: AOS retention, permeability, anti-clogging. Per Terzaghi-Cistin filter rules + FHWA-NHI-07-092 + BS 8006. Enter soil D85, soil permeability, fines content; get required O95 (AOS), required permittivity ψ, and recommended nonwoven grade. By Infraconcrete (CIDB G7) and Starwall (STRATA Geosystems Malaysia distributor)." />
+<meta name="keywords" content="geotextile filter calculator, AOS calculator, O95 calculator, geotextile permittivity calculator, Terzaghi Cistin filter, FHWA NHI 07-092, geotextile filter design Malaysia, nonwoven geotextile selection" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" /><meta property="og:title" content="Geotextile Filter Criteria Calculator" /><meta property="og:url" content="https://infraconcrete.co/tools/geotextile-filter-calculator/" /><meta property="og:locale" content="en_MY" />
+<link rel="canonical" href="https://infraconcrete.co/tools/geotextile-filter-calculator/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="icon" type="image/png" sizes="any" href="/favicon.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Geotextile Filter Criteria Calculator","applicationCategory":"EngineeringApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"MYR"},"description":"Geotextile filter sizing per Terzaghi-Cistin + FHWA-NHI-07-092 + BS 8006."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://infraconcrete.co/tools/"},{"@type":"ListItem","position":3,"name":"Geotextile Filter Calculator","item":"https://infraconcrete.co/tools/geotextile-filter-calculator/"}]}]}</script>
+<link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/css/seo-page.css">
+<style>
+.calc-form{background:#fff;border:1px solid #E5DBC1;border-radius:12px;padding:24px;margin:24px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.calc-form label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+.calc-form input,.calc-form select{width:100%;padding:10px;font-size:16px;border:1px solid #C9BC9C;border-radius:6px;font-family:inherit}
+.calc-out{background:#F8F2E0;border:1px solid #C9BC9C;border-radius:12px;padding:24px;margin:24px 0}
+.calc-out .out-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dotted #C9BC9C;gap:16px}
+.calc-out .out-row:last-child{border-bottom:none}
+.calc-out .out-label{font-weight:500}
+.calc-out .out-val{font-weight:700;font-family:'JetBrains Mono',monospace;text-align:right}
+.calc-note{background:#FFF7E0;border-left:4px solid #C9A227;padding:12px 16px;margin:16px 0;font-size:14px}
+@media (max-width:640px){.calc-form{grid-template-columns:1fr}}
+</style>
+<script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" /></head>
+<body>
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs"><a href="/">Home</a><span class="sep">·</span><a href="/tools/">Tools</a><span class="sep">·</span><span class="here">Geotextile Filter Calculator</span></nav></div>
+<main><div class="container">
+
+<section class="hero"><div class="eyebrow">Engineering Tool · Terzaghi-Cistin + FHWA-NHI-07-092</div><h1>Geotextile filter criteria <em>calculator.</em></h1><p class="lede">Three filter tests in series: retention, permeability, anti-clogging. Per FHWA-NHI-07-092 (Holtz et al., 2008) and BS 8006. Enter soil grading characteristics, get required O95 (AOS), required permittivity ψ, gradient-ratio target, and recommended nonwoven geotextile grade.</p></section>
+
+<section class="block">
+<form class="calc-form" id="calc">
+ <div><label>Soil D85 (mm) — particle size, 85% finer</label><input type="number" id="D85" value="0.15" step="0.01" min="0.001" max="50"></div>
+ <div><label>Soil D50 (mm)</label><input type="number" id="D50" value="0.08" step="0.01" min="0.001" max="50"></div>
+ <div><label>Soil D15 (mm)</label><input type="number" id="D15" value="0.02" step="0.01" min="0.001" max="50"></div>
+ <div><label>Soil permeability k (m/s)</label><input type="number" id="k" value="0.000001" step="0.0000001" min="0.000000001" max="0.01"></div>
+ <div><label>Fines content (% &lt; 0.075 mm)</label><input type="number" id="fines" value="25" step="1" min="0" max="100"></div>
+ <div><label>Hydraulic condition</label><select id="cond"><option value="static">Static / steady seepage</option><option value="dynamic">Dynamic / cyclic / reversing</option></select></div>
+ <div><label>Soil internal stability</label><select id="stab"><option value="stable">Stable (well-graded)</option><option value="unstable">Internally unstable / gap-graded</option></select></div>
+ <div><label>Application criticality</label><select id="crit"><option value="standard">Standard (drain wrap, etc.)</option><option value="critical">Critical (dam, dyke, levee)</option></select></div>
+</form>
+
+<div class="calc-out" id="out"><div id="outBody">Inputs feed live.</div></div>
+
+<div class="calc-note"><strong>Three-test method:</strong> (1) Retention: O95 must hold back soil. Stable cohesionless soil: O95 ≤ D85. Unstable: O95 ≤ D50. (2) Permeability: ψ × t_fabric ≥ 10 × k_soil (factor up to 100 for critical or fines &gt; 30%). (3) Anti-clogging: gradient ratio &lt; 3 (ASTM D5101). For Malaysian residual soils with 20-40% fines, the binding constraint is usually retention, with permeability secondary.</div>
+
+<script>
+function calc(){
+ const D85=+document.getElementById('D85').value;
+ const D50=+document.getElementById('D50').value;
+ const D15=+document.getElementById('D15').value;
+ const k=+document.getElementById('k').value;
+ const fines=+document.getElementById('fines').value;
+ const cond=document.getElementById('cond').value;
+ const stab=document.getElementById('stab').value;
+ const crit=document.getElementById('crit').value;
+ let o95max;
+ if(stab==='unstable')o95max=D50;
+ else if(cond==='dynamic')o95max=0.5*D85;
+ else o95max=D85;
+ if(crit==='critical')o95max*=0.7;
+ const kFactor=(fines>30||crit==='critical')?100:10;
+ const psiMin=kFactor*k/0.002;
+ let grade,gsm,massBand;
+ if(fines<5){grade='Light nonwoven PP 150-200 gsm';gsm=180;massBand='150-200';}
+ else if(fines<15){grade='Standard nonwoven PP 200-300 gsm';gsm=250;massBand='200-300';}
+ else if(fines<30){grade='Heavy nonwoven PP 300-400 gsm';gsm=350;massBand='300-400';}
+ else if(fines<50){grade='Heavy nonwoven PP 400-600 gsm';gsm=500;massBand='400-600';}
+ else{grade='Heavy nonwoven PP 600-800 gsm + gradient ratio test';gsm=700;massBand='600-800';}
+ const grTarget=crit==='critical'?2.0:3.0;
+ document.getElementById('outBody').innerHTML='<h3>Filter criteria results</h3>'+
+  '<div class="out-row"><span class="out-label">Required O95 (AOS) — retention rule</span><span class="out-val">≤ '+o95max.toFixed(3)+' mm</span></div>'+
+  '<div class="out-row"><span class="out-label">Required permittivity ψ (cross-plane)</span><span class="out-val">≥ '+psiMin.toFixed(2)+' s⁻¹</span></div>'+
+  '<div class="out-row"><span class="out-label">Gradient ratio target (ASTM D5101)</span><span class="out-val">&lt; '+grTarget.toFixed(1)+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Recommended grade</span><span class="out-val">'+grade+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Recommended mass per unit area</span><span class="out-val">'+massBand+' g/m²</span></div>'+
+  '<div class="out-row"><span class="out-label">Cᵤ of soil (D85/D15)</span><span class="out-val">'+(D85/D15).toFixed(1)+'</span></div>'+
+  (crit==='critical'?'<div class="out-row"><span class="out-label">Note</span><span class="out-val">Critical app: confirm with LFTL test (long-term filter)</span></div>':'')+
+  (fines>40?'<div class="out-row"><span class="out-label">Warning</span><span class="out-val">High fines &gt; 40%: gradient ratio test on actual soil-geotextile pair mandatory</span></div>':'');
+}
+document.querySelectorAll('#calc input,#calc select').forEach(i=>i.addEventListener('input',calc));
+calc();
+</script>
+</section>
+
+<section class="block"><div class="block-eye">Three rules explained</div><h2>What each <em>output means.</em></h2>
+<h3>Rule 1: Retention</h3>
+<p>The fabric must hold back the protected soil. Express as O95 (ASTM D4751) ≤ multiplier × D85 of the soil. Stable cohesionless soil uses O95 ≤ D85. Internally unstable or gap-graded soils tighten this to O95 ≤ D50. Dynamic (reversing flow) conditions tighten further to O95 ≤ 0.5 × D85.</p>
+<h3>Rule 2: Permeability</h3>
+<p>The fabric must let water through faster than the protected soil. Express as ψ × t (effective k of geotextile) ≥ 10 × k_soil for standard; ≥ 100 × k_soil for critical or high-fines. For Malaysian residual soils with k around 10⁻⁶ m/s, this is rarely the binding rule; on clean sands and gravels it can be.</p>
+<h3>Rule 3: Anti-clogging</h3>
+<p>The fabric must remain open through service life. Gradient-ratio test (ASTM D5101) on the soil-geotextile sandwich; ratio &lt; 3 (or &lt; 2 for critical) means flow stays adequate. Long-term flow capacity (LFTL) testing is the higher-confidence variant for dispersive or unusual soils.</p>
+</section>
+
+<section class="block"><div class="block-eye">Malaysian residual soil typical</div><h2>Starting <em>spec.</em></h2>
+<p>For typical Malaysian residual soil with 20-40% fines, k around 10⁻⁶ to 10⁻⁷ m/s, the calculator usually returns: O95 ≤ 0.10-0.18 mm, permittivity ≥ 1-3 s⁻¹, nonwoven PP 250-350 gsm. This matches the STRATA datasheet for grades commonly stocked through Starwall for Malaysian drainage and filter applications.</p></section>
+
+<section class="block"><div class="block-eye">Related</div><h2>Other <em>tools.</em></h2>
+<div class="svc-grid">
+<a class="svc-link" href="/tools/basal-reinforcement-calculator/"><h4>Basal Reinforcement Calculator →</h4><p>For tensile reinforcement instead of filter.</p></a>
+<a class="svc-link" href="/geotextile-design-guide/"><h4>Geotextile Design Guide →</h4><p>Full method walkthrough.</p></a>
+<a class="svc-link" href="/geotextile-specification-guide/"><h4>Geotextile Spec Guide →</h4><p>QS / spec-writer reference.</p></a>
+<a class="svc-link" href="/geotextile/"><h4>Geotextile Product →</h4><p>StrataTex HSR + nonwoven.</p></a>
+</div></section>
+
+</div>
+<section class="cta-block"><div class="container"><h2>Need a gradient-ratio test on <em>your project soil?</em></h2><p>WhatsApp the gradation curve and project parameters; we'll match it to the right STRATA nonwoven grade.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp engineering desk →</a><a class="btn btn-ghost" href="/#contact">Full contact details</a></div></div></section>
+</main>
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor, see <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">strataglobal.com</a>) · A <a href="/">Panthera Group</a> company</p></div></footer>
+</body></html>

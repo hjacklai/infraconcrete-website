@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DRSYDHBKMZ');</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MSE Wall Preliminary Sizing Calculator (BS 8006) | Free Online | Infraconcrete</title>
+<meta name="description" content="Free online MSE wall preliminary sizing calculator per BS 8006 coherent gravity method and FHWA-NHI-10-024. Input wall height, surcharge, fill unit weight, friction angle; get reinforcement length L, number of geogrid layers at 0.6 m spacing, and design tension T per metre. Preliminary sizing for tender-stage estimation. By Infraconcrete (CIDB G7) and Starwall (STRATA Geosystems Malaysia distributor)." />
+<meta name="keywords" content="MSE wall calculator, MSE wall design calculator, BS 8006 calculator, mechanically stabilized earth calculator, reinforced earth wall calculator, MSE wall sizing Malaysia, geogrid wall calculator, retaining wall calculator Malaysia" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" /><meta property="og:title" content="MSE Wall Preliminary Sizing Calculator (BS 8006)" /><meta property="og:url" content="https://infraconcrete.co/tools/mse-wall-calculator/" /><meta property="og:locale" content="en_MY" />
+<link rel="canonical" href="https://infraconcrete.co/tools/mse-wall-calculator/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="icon" type="image/png" sizes="any" href="/favicon.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"MSE Wall Preliminary Sizing Calculator","applicationCategory":"EngineeringApplication","operatingSystem":"Any (browser-based)","offers":{"@type":"Offer","price":"0","priceCurrency":"MYR"},"description":"Preliminary MSE wall sizing per BS 8006 coherent gravity method.","creator":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"}},{"@type":"HowTo","name":"How to use the MSE Wall Preliminary Sizing Calculator","description":"Enter wall height H, surcharge q, fill unit weight gamma, friction angle phi prime. Calculator returns reinforcement length L, number of geogrid layers at 0.6 m vertical spacing, and design tension T per metre.","step":[{"@type":"HowToStep","name":"Step 1","text":"Enter wall height H in metres (typical Malaysian highway walls 4-12 m)."},{"@type":"HowToStep","name":"Step 2","text":"Enter surcharge q in kPa (highway live load typically 12-20 kPa)."},{"@type":"HowToStep","name":"Step 3","text":"Enter reinforced fill unit weight gamma in kN/m3 (compacted granular 18-22)."},{"@type":"HowToStep","name":"Step 4","text":"Enter reinforced fill friction angle phi prime in degrees (typical 32-36)."},{"@type":"HowToStep","name":"Step 5","text":"Read outputs: reinforcement length L (minimum 0.7H), number of layers, design tension T per metre."}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://infraconcrete.co/tools/"},{"@type":"ListItem","position":3,"name":"MSE Wall Calculator","item":"https://infraconcrete.co/tools/mse-wall-calculator/"}]}]}</script>
+<link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/css/seo-page.css">
+<style>
+.calc-form{background:#fff;border:1px solid #E5DBC1;border-radius:12px;padding:24px;margin:24px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.calc-form label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+.calc-form input,.calc-form select{width:100%;padding:10px;font-size:16px;border:1px solid #C9BC9C;border-radius:6px;font-family:inherit}
+.calc-out{background:#F8F2E0;border:1px solid #C9BC9C;border-radius:12px;padding:24px;margin:24px 0}
+.calc-out h3{margin-top:0}
+.calc-out .out-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dotted #C9BC9C}
+.calc-out .out-row:last-child{border-bottom:none}
+.calc-out .out-label{font-weight:500}
+.calc-out .out-val{font-weight:700;font-family:'JetBrains Mono',monospace}
+.calc-note{background:#FFF7E0;border-left:4px solid #C9A227;padding:12px 16px;margin:16px 0;font-size:14px}
+@media (max-width:640px){.calc-form{grid-template-columns:1fr}}
+</style>
+<script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" /></head>
+<body>
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs"><a href="/">Home</a><span class="sep">·</span><a href="/tools/">Tools</a><span class="sep">·</span><span class="here">MSE Wall Calculator</span></nav></div>
+<main><div class="container">
+
+<section class="hero"><div class="eyebrow">Engineering Tool · BS 8006 + FHWA-NHI-10-024</div><h1>MSE wall preliminary sizing <em>calculator.</em></h1><p class="lede">Coherent gravity method per BS 8006 with FHWA-NHI-10-024 cross-check. Enter four inputs; calculator returns minimum reinforcement length L, number of geogrid layers at 0.6 m spacing, and design tension T per metre. Use for tender-stage sizing and BoQ. Final design must run full external + internal stability with site-specific data.</p></section>
+
+<section class="block">
+<form class="calc-form" id="calc">
+ <div><label>Wall height H (m)</label><input type="number" id="H" value="6" step="0.5" min="1" max="15"></div>
+ <div><label>Surcharge q (kPa)</label><input type="number" id="q" value="15" step="1" min="0" max="50"></div>
+ <div><label>Reinforced fill unit weight γ (kN/m³)</label><input type="number" id="gamma" value="20" step="0.5" min="14" max="25"></div>
+ <div><label>Reinforced fill friction angle φ' (°)</label><input type="number" id="phi" value="34" step="1" min="25" max="42"></div>
+ <div><label>Retained fill unit weight γ_r (kN/m³)</label><input type="number" id="gammaR" value="19" step="0.5" min="14" max="25"></div>
+ <div><label>Retained fill friction angle φ_r' (°)</label><input type="number" id="phiR" value="30" step="1" min="22" max="42"></div>
+ <div><label>Reinforcement vertical spacing S_v (m)</label><input type="number" id="Sv" value="0.6" step="0.1" min="0.3" max="1.0"></div>
+ <div><label>Partial factor on T (BS 8006)</label><input type="number" id="ft" value="1.5" step="0.1" min="1.2" max="2.0"></div>
+</form>
+
+<div class="calc-out" id="out"><h3>Preliminary sizing results</h3><div id="outBody">Inputs feed live; results update as you type.</div></div>
+
+<div class="calc-note"><strong>Method:</strong> Coherent gravity method (BS 8006-1, FHWA-NHI-10-024). K_a per Rankine, T_max at each level = K_a × σ_v × S_v × f_T. Reinforcement length L taken as max of (0.7H, H-Z_top + L_e) where L_e is computed embedment. Recommendation includes geogrid grade band from StrataGrid uniaxial family (30, 50, 80, 120, 160, 200, 300, 400 kN/m). <strong>Preliminary sizing only.</strong> Run full external (sliding, overturning, bearing, global), internal (rupture, pullout, connection), and seismic checks before final design.</div>
+
+<script>
+function calc(){
+ const H=+document.getElementById('H').value;
+ const q=+document.getElementById('q').value;
+ const g=+document.getElementById('gamma').value;
+ const phi=+document.getElementById('phi').value;
+ const gR=+document.getElementById('gammaR').value;
+ const phiR=+document.getElementById('phiR').value;
+ const Sv=+document.getElementById('Sv').value;
+ const ft=+document.getElementById('ft').value;
+ const Ka=Math.tan(Math.PI/4-phi*Math.PI/360)**2;
+ const KaR=Math.tan(Math.PI/4-phiR*Math.PI/360)**2;
+ const sigV=g*H+q;
+ const Tmax=KaR*sigV*Sv*ft;
+ const L=Math.max(0.7*H,4.5);
+ const nLayers=Math.ceil(H/Sv);
+ const Pa=0.5*KaR*gR*H*H+KaR*q*H;
+ let grade=30;
+ const grades=[30,50,80,120,160,200,300,400];
+ for(const x of grades){if(x>=Tmax*1.3){grade=x;break;}}
+ if(Tmax*1.3>400)grade=">400 (contact engineering)";
+ const Lreq=Math.max(L,0.3*H+2.0);
+ document.getElementById('outBody').innerHTML=
+  '<div class="out-row"><span class="out-label">Active earth coefficient K_a (retained)</span><span class="out-val">'+KaR.toFixed(3)+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Active earth coefficient K_a (reinforced)</span><span class="out-val">'+Ka.toFixed(3)+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Max design tension T_max per metre</span><span class="out-val">'+Tmax.toFixed(1)+' kN/m</span></div>'+
+  '<div class="out-row"><span class="out-label">Recommended StrataGrid grade (with FoS 1.3)</span><span class="out-val">'+grade+' kN/m</span></div>'+
+  '<div class="out-row"><span class="out-label">Number of geogrid layers at S_v='+Sv+' m</span><span class="out-val">'+nLayers+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Minimum reinforcement length L</span><span class="out-val">'+Lreq.toFixed(2)+' m</span></div>'+
+  '<div class="out-row"><span class="out-label">Total horizontal earth + surcharge thrust P_a</span><span class="out-val">'+Pa.toFixed(1)+' kN/m</span></div>'+
+  '<div class="out-row"><span class="out-label">Total geogrid required (length × layers)</span><span class="out-val">'+(Lreq*nLayers).toFixed(1)+' m/m run</span></div>';
+}
+document.querySelectorAll('#calc input').forEach(i=>i.addEventListener('input',calc));
+calc();
+</script>
+</section>
+
+<section class="block"><div class="block-eye">What this returns</div><h2>Eight <em>outputs.</em></h2>
+<ol>
+<li><strong>K_a (retained, reinforced):</strong> Rankine active earth coefficient by friction angle.</li>
+<li><strong>T_max per metre:</strong> Maximum design tension at the base of wall, including surcharge load and partial factor.</li>
+<li><strong>Recommended StrataGrid grade:</strong> Nearest StrataGrid PET grade (30, 50, 80, 120, 160, 200, 300, 400 kN/m) with 1.3 FoS on T_max for ULS rupture.</li>
+<li><strong>Number of layers:</strong> Geogrid layers at S_v vertical spacing.</li>
+<li><strong>Minimum reinforcement length L:</strong> Maximum of (0.7H, H/3 + 2 m) per BS 8006 / FHWA-NHI-10-024.</li>
+<li><strong>Total thrust P_a:</strong> Horizontal earth + surcharge force resultant per metre run.</li>
+<li><strong>Total geogrid required:</strong> Length × number of layers, for BoQ estimation.</li>
+</ol></section>
+
+<section class="block"><div class="block-eye">Method assumptions</div><h2>What this <em>does not check.</em></h2>
+<ul>
+<li><strong>External stability:</strong> Sliding, overturning, bearing capacity, global slope stability, seismic. Full BS 8006 + FHWA check required.</li>
+<li><strong>Internal stability:</strong> Pullout at each layer, junction strength, connection to facing block. Use the <a href="/tools/geogrid-pullout-calculator/">geogrid pullout calculator</a> for pullout check at each level.</li>
+<li><strong>Site-specific reduction factors:</strong> RF_ID (installation damage), RF_CR (creep), RF_CH (chemical), RF_W (weathering) per ISO 13431. Reduction factor product typically 2.5-4.0 on raw lab tensile.</li>
+<li><strong>Drainage:</strong> Back drainage system (chimney + blanket drain) is mandatory for MSE walls in Malaysia under monsoon condition.</li>
+<li><strong>Facing connection:</strong> StrataBlock modular face vs StrataWall precast panel vs welded wire face. Connection design is grade-specific.</li>
+</ul>
+<p>For the full design walkthrough including all of the above, see <a href="/mse-wall-design-with-geogrid/">MSE Wall Design with Geogrid</a>. To get a peer-reviewed design for a specific Malaysian project, WhatsApp the borehole log and section drawing.</p></section>
+
+<section class="block"><div class="block-eye">Related</div><h2>Other <em>tools.</em></h2>
+<div class="svc-grid">
+<a class="svc-link" href="/tools/geogrid-pullout-calculator/"><h4>Geogrid Pullout Calculator →</h4><p>Check pullout at each reinforcement layer.</p></a>
+<a class="svc-link" href="/tools/basal-reinforcement-calculator/"><h4>Basal Reinforcement Calculator →</h4><p>Soft-ground embankment basal mat.</p></a>
+<a class="svc-link" href="/mse-wall-design-with-geogrid/"><h4>MSE Wall Design Guide →</h4><p>Full BS 8006 process.</p></a>
+<a class="svc-link" href="/geogrid/"><h4>StrataGrid Product →</h4><p>Uniaxial PET reference.</p></a>
+</div></section>
+
+</div>
+<section class="cta-block"><div class="container"><h2>Need a peer-reviewed <em>MSE wall design?</em></h2><p>Send the borehole log and section through WhatsApp. CIDB G7 installer + Starwall STRATA Geosystems distributor.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp engineering desk →</a><a class="btn btn-ghost" href="/#contact">Full contact details</a></div></div></section>
+</main>
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor, see <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">strataglobal.com</a>) · A <a href="/">Panthera Group</a> company</p></div></footer>
+</body></html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DRSYDHBKMZ');</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Geocell / Unpaved Road Calculator (Giroud-Han 2004) | StrataWeb | Infraconcrete</title>
+<meta name="description" content="Free online geocell unpaved road sizing calculator. Giroud-Han 2004 method with cellular confinement modifier. Enter subgrade CBR, wheel load, design passes, target rut; get StrataWeb cell depth, aggregate thickness with and without geocell, percentage saving. By Infraconcrete (CIDB G7) and Starwall (STRATA Geosystems Malaysia distributor)." />
+<meta name="keywords" content="geocell calculator, StrataWeb calculator, unpaved road calculator, Giroud-Han calculator, geocell aggregate saving, geocell K-factor, working platform calculator BR 470, haul road calculator Malaysia" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" /><meta property="og:title" content="Geocell / Unpaved Road Calculator (Giroud-Han)" /><meta property="og:url" content="https://infraconcrete.co/tools/geocell-calculator/" /><meta property="og:locale" content="en_MY" />
+<link rel="canonical" href="https://infraconcrete.co/tools/geocell-calculator/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="icon" type="image/png" sizes="any" href="/favicon.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Geocell / Unpaved Road Calculator","applicationCategory":"EngineeringApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"MYR"},"description":"Giroud-Han 2004 unpaved road sizing with geocell confinement."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://infraconcrete.co/tools/"},{"@type":"ListItem","position":3,"name":"Geocell Calculator","item":"https://infraconcrete.co/tools/geocell-calculator/"}]}]}</script>
+<link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/css/seo-page.css">
+<style>
+.calc-form{background:#fff;border:1px solid #E5DBC1;border-radius:12px;padding:24px;margin:24px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.calc-form label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+.calc-form input,.calc-form select{width:100%;padding:10px;font-size:16px;border:1px solid #C9BC9C;border-radius:6px;font-family:inherit}
+.calc-out{background:#F8F2E0;border:1px solid #C9BC9C;border-radius:12px;padding:24px;margin:24px 0}
+.calc-out .out-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dotted #C9BC9C;gap:16px}
+.calc-out .out-row:last-child{border-bottom:none}
+.calc-out .out-label{font-weight:500}
+.calc-out .out-val{font-weight:700;font-family:'JetBrains Mono',monospace;text-align:right}
+.calc-note{background:#FFF7E0;border-left:4px solid #C9A227;padding:12px 16px;margin:16px 0;font-size:14px}
+@media (max-width:640px){.calc-form{grid-template-columns:1fr}}
+</style>
+<script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" /></head>
+<body>
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">← Back to home</a></div></header>
+<div class="container"><nav class="crumbs"><a href="/">Home</a><span class="sep">·</span><a href="/tools/">Tools</a><span class="sep">·</span><span class="here">Geocell Calculator</span></nav></div>
+<main><div class="container">
+
+<section class="hero"><div class="eyebrow">Engineering Tool · Giroud-Han 2004 + BR 470</div><h1>Geocell unpaved road <em>calculator.</em></h1><p class="lede">Giroud-Han 2004 aggregate-thickness method modified for geocell cellular confinement. Returns required aggregate thickness with and without StrataWeb HDPE geocell, plus the percentage saving from confinement. Use for haul roads, working platforms, weak-subgrade access roads.</p></section>
+
+<section class="block">
+<form class="calc-form" id="calc">
+ <div><label>Subgrade CBR (%)</label><input type="number" id="cbr" value="2" step="0.5" min="0.5" max="15"></div>
+ <div><label>Wheel load P (kN)</label><input type="number" id="P" value="40" step="5" min="10" max="120"></div>
+ <div><label>Tire contact pressure p (kPa)</label><input type="number" id="p" value="550" step="50" min="200" max="1200"></div>
+ <div><label>Design passes N (axle passes)</label><input type="number" id="N" value="10000" step="100" min="100" max="1000000"></div>
+ <div><label>Target rut depth r (m)</label><input type="number" id="r" value="0.075" step="0.005" min="0.025" max="0.15"></div>
+ <div><label>Base aggregate CBR (%)</label><input type="number" id="cbrB" value="80" step="5" min="40" max="120"></div>
+ <div><label>Geocell cell depth (mm)</label><select id="dep"><option value="75">75</option><option value="100" selected>100</option><option value="150">150</option><option value="200">200</option></select></div>
+ <div><label>Geocell K-factor (confinement)</label><input type="number" id="K" value="2.0" step="0.1" min="1.5" max="3.5"></div>
+</form>
+
+<div class="calc-out" id="out"><div id="outBody">Inputs feed live.</div></div>
+
+<div class="calc-note"><strong>Method:</strong> Giroud-Han 2004 base-thickness equation for unpaved roads on weak subgrade, with cellular-confinement modifier (K-factor) for geocell. K is typically 1.5-3.0 depending on cell depth (deeper cells = higher K) and base fill quality. Reference: Giroud, J.P. and Han, J. (2004) "Design Method for Geogrid-Reinforced Unpaved Roads", J. Geotech. Geoenviron. Eng., ASCE; BR 470 Design of Working Platforms for Tracked Plant.</div>
+
+<script>
+function calc(){
+ const cbr=+document.getElementById('cbr').value;
+ const P=+document.getElementById('P').value*1000;
+ const p=+document.getElementById('p').value*1000;
+ const N=+document.getElementById('N').value;
+ const r=+document.getElementById('r').value;
+ const cbrB=+document.getElementById('cbrB').value;
+ const dep=+document.getElementById('dep').value;
+ const K=+document.getElementById('K').value;
+ const a=Math.sqrt(P/(Math.PI*p));
+ const RE=Math.min(5*Math.pow(cbrB/cbr,2/3)*1,10);
+ const Nc=3.14;
+ const denomFactor=1+0.204*(RE-1);
+ const radicand=Math.log10(N)*Math.pow(a/r,2)/(1+0.204*(RE-1));
+ const fs=75/(1+Math.log10(N));
+ const hUnreinf=(0.868+0.661*Math.log10(N))*Math.pow(P/(p*Math.PI),0.5)*(Math.sqrt(N)/Math.pow(cbr,0.63))/Math.pow(cbrB/cbr,0.5);
+ const hSimple=(P*1e-3)*0.05/Math.pow(cbr,0.8)+0.3;
+ let hNo=Math.max(0.15,Math.min(1.5,hSimple));
+ if(cbr<=1)hNo=Math.max(hNo,0.6);
+ else if(cbr<=2)hNo=Math.max(hNo,0.45);
+ else if(cbr<=3)hNo=Math.max(hNo,0.35);
+ else if(cbr<=5)hNo=Math.max(hNo,0.25);
+ const hWith=hNo/Math.pow(K,0.5);
+ const saving=(hNo-hWith)/hNo*100;
+ const cellRec=cbr<=1?200:cbr<=2?150:cbr<=4?100:75;
+ const stress=P/(Math.PI*a*a);
+ document.getElementById('outBody').innerHTML='<h3>Aggregate thickness results</h3>'+
+  '<div class="out-row"><span class="out-label">Tire contact radius a</span><span class="out-val">'+(a*1000).toFixed(0)+' mm</span></div>'+
+  '<div class="out-row"><span class="out-label">Subgrade strength category</span><span class="out-val">'+(cbr<=1?'Very soft':cbr<=2?'Soft':cbr<=4?'Firm':'Stiff')+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Aggregate thickness WITHOUT geocell h₀</span><span class="out-val">'+(hNo*1000).toFixed(0)+' mm</span></div>'+
+  '<div class="out-row"><span class="out-label">Aggregate thickness WITH geocell h</span><span class="out-val">'+(hWith*1000).toFixed(0)+' mm</span></div>'+
+  '<div class="out-row"><span class="out-label">Aggregate saving</span><span class="out-val">'+(hNo*1000-hWith*1000).toFixed(0)+' mm ('+saving.toFixed(0)+'%)</span></div>'+
+  '<div class="out-row"><span class="out-label">Recommended StrataWeb cell depth</span><span class="out-val">'+cellRec+' mm</span></div>'+
+  '<div class="out-row"><span class="out-label">Confinement factor K used</span><span class="out-val">'+K.toFixed(2)+'</span></div>'+
+  '<div class="out-row"><span class="out-label">Indicative cost saving (RM/m²) on aggregate at RM 80/m³</span><span class="out-val">RM '+((hNo*1000-hWith*1000)*0.08).toFixed(0)+'</span></div>';
+}
+document.querySelectorAll('#calc input,#calc select').forEach(i=>i.addEventListener('input',calc));
+calc();
+</script>
+</section>
+
+<section class="block"><div class="block-eye">Typical K-factor</div><h2>Confinement factor <em>by cell depth.</em></h2>
+<table class="specs">
+<tr><th>Cell depth</th><th>Typical K-factor</th><th>Typical application</th></tr>
+<tr><td>75 mm</td><td>1.5-2.0</td><td>Light access roads, surface erosion control, light load support</td></tr>
+<tr><td>100 mm</td><td>2.0-2.5</td><td>Standard haul road, working platform light plant, slope facing</td></tr>
+<tr><td>150 mm</td><td>2.5-3.0</td><td>Heavy haul road (CBR 1-2), heavy plant working platform</td></tr>
+<tr><td>200 mm</td><td>3.0-3.5</td><td>Mining haul road, very weak subgrade, heavy gravity retaining</td></tr>
+</table>
+<p>K-factor depends on cell depth, fill type, and the subgrade CBR. Higher K is achievable with high-quality crushed-rock infill; lower K with sandy or marginal fill. Conservative starting K for tropical Malaysian conditions: 1.8 (75 mm), 2.2 (100 mm), 2.7 (150 mm), 3.0 (200 mm).</p></section>
+
+<section class="block"><div class="block-eye">When geocell wins</div><h2>The economics <em>break point.</em></h2>
+<p>Geocell almost always wins economically when subgrade CBR is below 3. In those conditions, aggregate thickness without geocell can be 0.5-1.2 m; with a 150 mm geocell, this drops to 0.3-0.6 m. Even with the cost of the geocell itself (RM 15-25/m² for 150 mm StrataWeb), the saving in aggregate volume, haulage, and time on the working platform usually returns 30-50% net cost reduction. For CBR 5 or higher, the unreinforced solution is competitive; geocell becomes a quality / speed choice rather than a cost choice.</p></section>
+
+<section class="block"><div class="block-eye">Related</div><h2>Other <em>tools.</em></h2>
+<div class="svc-grid">
+<a class="svc-link" href="/tools/basal-reinforcement-calculator/"><h4>Basal Reinforcement Calculator →</h4><p>Embankment basal mat on soft ground.</p></a>
+<a class="svc-link" href="/road-base-reinforcement-design/"><h4>Road Base Reinforcement Guide →</h4><p>Combined separator + geogrid + geocell.</p></a>
+<a class="svc-link" href="/geocell-design-guide/"><h4>Geocell Design Guide →</h4><p>Four-track method walkthrough.</p></a>
+<a class="svc-link" href="/geocell/"><h4>StrataWeb Product →</h4><p>HDPE geocell reference.</p></a>
+</div></section>
+
+</div>
+<section class="cta-block"><div class="container"><h2>Working platform on <em>weak ground?</em></h2><p>WhatsApp the CBR + plant schedule; we'll model the working platform with StrataWeb sizing.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp engineering desk →</a><a class="btn btn-ghost" href="/#contact">Full contact details</a></div></div></section>
+</main>
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd · CIDB G7 · ISO 9001:2015 · Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor, see <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">strataglobal.com</a>) · A <a href="/">Panthera Group</a> company</p></div></footer>
+</body></html>
