@@ -20,7 +20,7 @@
     <priority>0.97</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/geogrid/</loc><lastmod>2026-05-24</lastmod>
+    <loc>https://infraconcrete.co/geogrid/</loc><lastmod>2026-05-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/geogrid/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/geogrid/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/geogrid/"/>
@@ -29,13 +29,55 @@
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/geotextile/</loc><lastmod>2026-05-24</lastmod>
+    <loc>https://infraconcrete.co/geogrid-supplier-malaysia/</loc><lastmod>2026-05-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/geogrid-supplier-malaysia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geogrid-supplier-malaysia/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/geogrid-design-and-build-malaysia/</loc><lastmod>2026-05-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/geogrid-design-and-build-malaysia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geogrid-design-and-build-malaysia/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/geotextile/</loc><lastmod>2026-05-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/geotextile/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/geotekstil/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/geotextile/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geotextile/"/>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/geotextile-supplier-malaysia/</loc><lastmod>2026-05-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/geotextile-supplier-malaysia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geotextile-supplier-malaysia/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/geotextile-contractor-malaysia/</loc><lastmod>2026-05-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/geotextile-contractor-malaysia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geotextile-contractor-malaysia/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/geotextile-installer-malaysia/</loc><lastmod>2026-05-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/geotextile-installer-malaysia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geotextile-installer-malaysia/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/geotextile-design-and-build-malaysia/</loc><lastmod>2026-05-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/geotextile-design-and-build-malaysia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/geotextile-design-and-build-malaysia/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://infraconcrete.co/geocell/</loc><lastmod>2026-05-07</lastmod>
@@ -88,13 +130,34 @@
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://infraconcrete.co/resources/</loc><lastmod>2026-05-07</lastmod>
+    <loc>https://infraconcrete.co/resources/</loc><lastmod>2026-05-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/resources/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/bm/sumber/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://infraconcrete.co/zh/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/resources/"/>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.98</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/standards/</loc><lastmod>2026-05-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/standards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/standards/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.93</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/credentials/</loc><lastmod>2026-05-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/credentials/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/credentials/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.93</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/glossary/</loc><lastmod>2026-05-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/glossary/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.91</priority>
   </url>
   <url>
     <loc>https://infraconcrete.co/compare-slope-stabilization-systems/</loc><lastmod>2026-05-07</lastmod>
