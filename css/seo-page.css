@@ -51,6 +51,16 @@ a.xref:hover, a.xref:focus-visible {
   text-decoration-color: var(--ic-red);
 }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
+/* "More for [city]" continue-exploring crosslink section on city/location pages
+   is missing the .container wrapper in the generated HTML across ~180 city pages.
+   Give it the same gutters + max-width as .container so it doesn't bleed to edges. */
+section.block[data-rich-crosslinks="1"] {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  box-sizing: content-box;
+}
+@media (min-width: 720px) { section.block[data-rich-crosslinks="1"] { box-sizing: border-box; max-width: calc(1100px + 2 * var(--gutter)); } }
 
 /* ===== Topbar (mirrors homepage .nav exactly ,  same transparency,
    same border behavior, same height. Barely-there frosted glass at the
