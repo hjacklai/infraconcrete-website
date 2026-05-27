@@ -73,7 +73,7 @@ function calc(){
  const fosReq=+document.getElementById('fos').value;
  const F=2*Le*ci*sv*Math.tan(phi*Math.PI/180);
  const fos=F/T;
- const status=fos>=fosReq?'<span class="pass">PASS</span>':'<span class="fail">FAIL — increase Lₑ or check σᵥ</span>';
+ const status=fos>=fosReq?'<span class="pass">PASS</span>':'<span class="fail">FAIL - increase Lₑ or check σᵥ</span>';
  const LeReqMin=T*fosReq/(2*ci*sv*Math.tan(phi*Math.PI/180));
  document.getElementById('outBody').innerHTML='<h3>Pullout check</h3>'+
   '<div class="out-row"><span class="out-label">Pullout capacity F = 2 × Lₑ × Cᵢ × σᵥ × tan φ\'</span><span class="out-val">'+F.toFixed(1)+' kN/m</span></div>'+
