@@ -1373,4 +1373,21 @@
   <url><loc>https://infraconcrete.co/blog/tanjung-bungah-2017-engineering-lessons/</loc><lastmod>2026-05-29</lastmod><changefreq>yearly</changefreq><priority>0.85</priority></url>
   <url><loc>https://infraconcrete.co/blog/felcra-semungkis-2011-engineering-lessons/</loc><lastmod>2026-05-29</lastmod><changefreq>yearly</changefreq><priority>0.85</priority></url>
   <url><loc>https://infraconcrete.co/jkr-cawangan-kejuruteraan-cerun-explained/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
+  <url>
+    <loc>https://infraconcrete.co/slope-disaster-prevention-penang/</loc><lastmod>2026-05-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-disaster-prevention-penang/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/pencegahan-tanah-runtuh-pulau-pinang/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/slope-disaster-prevention-penang/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.94</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/pencegahan-tanah-runtuh-pulau-pinang/</loc><lastmod>2026-05-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/pencegahan-tanah-runtuh-pulau-pinang/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-disaster-prevention-penang/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/slope-disaster-prevention-penang/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.93</priority>
+  </url>
+  <url><loc>https://infraconcrete.co/slope-stabilization-cost-calculator-malaysia/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
 </urlset>
