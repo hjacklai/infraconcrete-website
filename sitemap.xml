@@ -1409,4 +1409,23 @@
   <url><loc>https://infraconcrete.co/jmb-mc-slope-governance-malaysia/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
   <url><loc>https://infraconcrete.co/hillside-campsite-compliance-malaysia/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.94</priority></url>
   <url><loc>https://infraconcrete.co/malaysian-slope-safety-glossary/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
+  <url>
+    <loc>https://infraconcrete.co/slope-disaster-prevention-pahang-highlands/</loc><lastmod>2026-05-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-disaster-prevention-pahang-highlands/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/pencegahan-tanah-runtuh-tanah-tinggi-pahang/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/slope-disaster-prevention-pahang-highlands/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.94</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/pencegahan-tanah-runtuh-tanah-tinggi-pahang/</loc><lastmod>2026-05-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/pencegahan-tanah-runtuh-tanah-tinggi-pahang/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-disaster-prevention-pahang-highlands/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/slope-disaster-prevention-pahang-highlands/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.93</priority>
+  </url>
+  <url><loc>https://infraconcrete.co/blog/bukit-lanjan-2003-engineering-lessons/</loc><lastmod>2026-05-29</lastmod><changefreq>yearly</changefreq><priority>0.86</priority></url>
+  <url><loc>https://infraconcrete.co/monsoon-slope-preparedness-malaysia/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.94</priority></url>
+  <url><loc>https://infraconcrete.co/slope-disaster-prevention-sabah/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
 </urlset>
