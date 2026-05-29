@@ -1316,7 +1316,22 @@
   <url><loc>https://infraconcrete.co/soil-nailing-contractor-malaysia/</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
   <url><loc>https://infraconcrete.co/pull-out-test-soil-nailing-malaysia/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
   <url><loc>https://infraconcrete.co/pre-stressed-soil-nail-malaysia/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
-  <url><loc>https://infraconcrete.co/slope-disaster-prevention-malaysia/</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq><priority>0.97</priority></url>
+  <url>
+    <loc>https://infraconcrete.co/slope-disaster-prevention-malaysia/</loc><lastmod>2026-05-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-disaster-prevention-malaysia/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/pencegahan-tanah-runtuh-malaysia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/slope-disaster-prevention-malaysia/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.97</priority>
+  </url>
+  <url>
+    <loc>https://infraconcrete.co/pencegahan-tanah-runtuh-malaysia/</loc><lastmod>2026-05-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://infraconcrete.co/pencegahan-tanah-runtuh-malaysia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://infraconcrete.co/slope-disaster-prevention-malaysia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/slope-disaster-prevention-malaysia/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.96</priority>
+  </url>
   <url><loc>https://infraconcrete.co/horizontal-drains-malaysia/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
   <url><loc>https://infraconcrete.co/rockfall-protection-malaysia/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
   <url><loc>https://infraconcrete.co/rock-bolting-malaysia/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
