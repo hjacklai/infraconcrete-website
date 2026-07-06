@@ -1,0 +1,30 @@
+{
+  "name": "Infraconcrete Construction Sdn Bhd",
+  "short_name": "Infraconcrete",
+  "description": "CIDB G7 slope specialist contractor and STRATA Geosystems Malaysia distributor (via Starwall Sdn Bhd).",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ECE0C6",
+  "theme_color": "#ECE0C6",
+  "lang": "en-MY",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
