@@ -380,7 +380,8 @@
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
 
 <style>
   /* =========================================================
@@ -4529,7 +4530,7 @@
   <!-- Hero video carousel: 3 clips alternate in fixed order (Hero 1, Hero, VID-WA0242), cross-fade, loop forever -->
   <!-- Optimization: posters paint instantly, only the active video preloads fully; the others fetch in the background while it plays -->
   <div class="hero-video-stage" aria-hidden="true">
-    <video class="hero-vid active" data-idx="0" autoplay muted playsinline disablepictureinpicture disableremoteplayback preload="auto" poster="images/hero/posters/hero-clip-2.jpg">
+    <video class="hero-vid active" data-idx="0" autoplay muted playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="images/hero/posters/hero-clip-2.jpg">
       <source src="images/hero/hero-clip-2.mp4" type="video/mp4">
     </video>
     <video class="hero-vid" data-idx="1" muted playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="images/hero/posters/hero-clip-3.jpg">
@@ -9109,6 +9110,22 @@
     const heroVids = document.querySelectorAll('video.hero-vid');
     const allManaged = [...lazyVids, ...heroVids];
     if (allManaged.length === 0) return;
+    // All-devices courtesy: on Data Saver, a very slow (2G-class) connection,
+    // or reduced-motion, keep the hero as its static poster instead of
+    // autoplaying and streaming the clip. Saves mobile data and battery.
+    // Fast, motion-OK visitors (the vast majority) are completely unaffected.
+    (() => {
+      const conn = navigator.connection || {};
+      const lite = conn.saveData === true
+                   || /2g/.test(conn.effectiveType || '')
+                   || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!lite) return;
+      heroVids.forEach(v => {
+        v.removeAttribute('autoplay');
+        try { v.pause(); } catch (e) {}
+        v.play = () => Promise.resolve(); // later rotation play() calls become no-ops
+      });
+    })();
     if (!('IntersectionObserver' in window)) {
       // Ancient browser fallback: hydrate lazy videos immediately, leave
       // hero alone (it autoplays from markup).

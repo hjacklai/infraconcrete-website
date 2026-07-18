@@ -1,33 +1,22 @@
-/* Shared topbar + bottom-nav for SEO landing pages.
-   Matches homepage chrome: Infraconcrete logo image + Panthera badge on the
-   left, EN/BM/Chinese language switcher pill on the right, and the swipe-pill
-   bottom-nav. */
 (function () {
   const lang = (document.documentElement.lang || 'en').toLowerCase();
   const isMs = lang.indexOf('ms') === 0 || lang === 'bm';
   const isZh = lang.indexOf('zh') === 0;
   const isEn = !isMs && !isZh;
-
-  /* ---------- 1. TOPBAR (matches homepage .nav structure) ---------- */
   const topbarRow = document.querySelector('.topbar .topbar-row');
   if (topbarRow && !topbarRow.querySelector('.lang-switch')) {
     const brand = topbarRow.querySelector('.brand');
     const homeLink = topbarRow.querySelector('.home-link');
-
-    /* Replace text wordmark with logo image, mirroring homepage pattern */
     if (brand && !brand.querySelector('img')) {
       brand.innerHTML =
         '<img src="/images/brand/logo.png" alt="Infraconcrete" height="36" style="display:block;width:auto;" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'inline-flex\';" />' +
         '<span style="display:none;align-items:baseline;">Infra<b>concrete</b><sup>&trade;</sup></span>';
     }
-
-    /* Wrap brand + Panthera badge into a single left group */
     if (brand && !topbarRow.querySelector('.topbar-left')) {
       const leftGroup = document.createElement('div');
       leftGroup.className = 'topbar-left';
       brand.parentNode.insertBefore(leftGroup, brand);
       leftGroup.appendChild(brand);
-
       const badge = document.createElement('span');
       badge.className = 'group-badge';
       badge.setAttribute('aria-label', 'Part of Panthera Group');
@@ -36,10 +25,6 @@
         '<img src="/images/brand/panthera-logo.png" alt="Panthera Group" height="14" style="display:block;width:auto;opacity:.7;" />';
       leftGroup.appendChild(badge);
     }
-
-    /* Build language toggle - mirrors homepage .lang-toggle exactly:
-       desktop: 3-button pill (EN/BM/中文); mobile <=540px: only the active
-       button shows, tap cycles to next language. */
     function getHref(code, fallback) {
       const el = document.querySelector('link[rel="alternate"][hreflang="' + code + '"]');
       return el ? el.getAttribute('href') : fallback;
@@ -47,7 +32,6 @@
     const enHref = getHref('en', '/');
     const msHref = getHref('ms', '/?lang=bm');
     const zhHref = getHref('zh-Hans', '/?lang=zh');
-
     const toggle = document.createElement('div');
     toggle.className = 'lang-toggle';
     toggle.setAttribute('role', 'group');
@@ -56,10 +40,6 @@
       '<button type="button" data-lang="en" data-href="' + enHref + '"' + (isEn ? ' class="active"' : '') + '>EN</button>' +
       '<button type="button" data-lang="ms" data-href="' + msHref + '"' + (isMs ? ' class="active"' : '') + '>BM</button>' +
       '<button type="button" data-lang="zh" data-href="' + zhHref + '"' + (isZh ? ' class="active"' : '') + '>中文</button>';
-
-    /* Click handler: on desktop the button takes you to its target lang;
-       on mobile only the active button is visible so tapping cycles to the
-       next language (EN -> BM -> ZH -> EN). */
     toggle.addEventListener('click', function (e) {
       const btn = e.target.closest('button[data-lang]');
       if (!btn) return;
@@ -75,11 +55,6 @@
       const href = target && target.dataset.href;
       if (href) window.location.href = href;
     });
-
-    /* Standalone back button removed ,  the breadcrumb "← Home" is the primary
-       back affordance. Goes to homepage IN THE CURRENT LANGUAGE, and ALSO
-       deep-links to the matching section so e.g. /soil-nailing/ -> #cap-soil-nailing,
-       /sabah/ -> #record. The href is rewritten on mount so it's always fresh. */
     const SECTION_MAP = {
       // Capabilities cards (in-house specialist services ,  each has its own #cap-* card)
       'soil-nailing': '#cap-soil-nailing',
@@ -150,12 +125,10 @@
       // Resources -> faq area
       'resources': '#faq', 'sumber': '#faq'
     };
-
     const path = window.location.pathname.replace(/\/+$/, '');
     const segments = path.split('/').filter(Boolean);
     const slug = segments[segments.length - 1] || '';
     const sectionAnchor = SECTION_MAP[slug] || '';
-
     const crumbHome = document.querySelector('.crumbs a[href="/"], .crumbs a[href="/?lang=bm"], .crumbs a[href="/?lang=zh"]');
     if (crumbHome) {
       const langCode = isMs ? 'bm' : isZh ? 'zh' : 'en';
@@ -163,17 +136,11 @@
       crumbHome.href = langPath + sectionAnchor;
       crumbHome.addEventListener('click', function () {
         try { localStorage.setItem('lang', langCode); } catch (err) {}
-        /* Fall through to href ,  homepage init reads ?lang= and localStorage,
-           and the browser scrolls to the #anchor (with scroll-margin-top set
-           so the card isn't hidden under the sticky topbar). */
       });
     }
-
     if (homeLink) homeLink.replaceWith(toggle);
     else topbarRow.appendChild(toggle);
   }
-
-  /* ---------- 2. RICH FOOTER (mirrors homepage .footer) ---------- */
   const existingFooter = document.querySelector('footer');
   if (existingFooter && !existingFooter.classList.contains('footer-rich')) {
     const F = isMs ? {
@@ -207,12 +174,10 @@
       partOf: 'Part of', panOf: 'A Panthera Group company. Engineering slopes for maximum utility since 2018.',
       cred: 'CIDB G7 · ISO 9001:2015 · ARS · UAF · IAF'
     };
-
     const langPrefix = isMs ? '/bm' : isZh ? '/zh' : '';
     const slopeUrl = isMs ? '/bm/kontraktor-cerun/' : isZh ? '/zh/slope-stabilization/' : '/slope-stabilization/';
     const retainUrl = isMs ? '/bm/tembok-penahan/' : isZh ? '/zh/retaining-walls/' : '/retaining-walls/';
     const earthUrl = isMs ? '/bm/kerja-tanah/' : isZh ? '/zh/earthworks/' : '/earthworks/';
-
     existingFooter.classList.add('footer-rich');
     existingFooter.innerHTML =
       '<div class="container">' +
@@ -260,10 +225,7 @@
         '</div>' +
       '</div>';
   }
-
-  /* ---------- 3. BOTTOM-NAV ---------- */
   if (document.querySelector('.bottom-nav')) return;
-
   const L = isMs ? {
     swipe: 'LEREK', home: 'Utama', start: 'Mula', solutions: 'Solusi',
     example: 'Contoh', ba: 'Sblm/Slps', process: 'Proses', services: 'Khidmat',
@@ -281,7 +243,6 @@
     faq: 'FAQ', resources: 'Resources', cta: 'WhatsApp'
   };
   const resHref = isMs ? '/bm/sumber/' : isZh ? '/zh/resources/' : '/resources/';
-
   const nav = document.createElement('nav');
   nav.className = 'bottom-nav';
   nav.setAttribute('aria-label', 'Site navigation');
@@ -346,7 +307,6 @@
       '<span>' + L.cta + '</span>' +
     '</a>';
   document.body.appendChild(nav);
-
   const track = nav.querySelector('.bn-scroll');
   if (track) {
     const dismiss = function () {
@@ -354,21 +314,14 @@
       track.removeEventListener('scroll', dismiss);
     };
     track.addEventListener('scroll', dismiss, { passive: true, once: true });
-
-    /* Long-press click-and-drag scroll. Quick click on a nav icon -> navigate.
-       Long-press (>=250ms) OR drag (>=6px move) on ANY surface (icon or gap)
-       -> activates pan/scroll mode. Mirrors homepage logic exactly so the
-       behavior is identical across landing + every SEO page. */
     (function enableDragScroll(el) {
       if (!el) return;
       var isDown = false, isDragging = false;
       var startX = 0, startScroll = 0, pressTimer = null, origSnap = '';
-
       // Defense against browser native link drag-and-drop (the ghost image)
       // which would otherwise hijack the pan handler.
       el.addEventListener('dragstart', function (e) { e.preventDefault(); });
       el.querySelectorAll('a, img, svg').forEach(function (n) { n.setAttribute('draggable', 'false'); });
-
       function startDragMode () {
         if (isDragging) return;
         isDragging = true;
@@ -379,7 +332,6 @@
         el.style.userSelect = 'none';
         el.querySelectorAll('a, button').forEach(function (n) { n.style.pointerEvents = 'none'; });
       }
-
       el.addEventListener('mousedown', function (e) {
         if (e.button !== 0) return;
         isDown = true;
@@ -389,7 +341,6 @@
         clearTimeout(pressTimer);
         pressTimer = setTimeout(function () { if (isDown) startDragMode(); }, 250);
       });
-
       function stop () {
         clearTimeout(pressTimer);
         pressTimer = null;
@@ -404,7 +355,6 @@
         }
       }
       el.addEventListener('mouseleave', stop);
-
       el.addEventListener('mouseup', function () {
         var wasDragging = isDragging;
         stop();
@@ -414,7 +364,6 @@
           setTimeout(function () { el.removeEventListener('click', blocker, true); }, 50);
         }
       });
-
       el.addEventListener('mousemove', function (e) {
         if (!isDown) return;
         var dx = e.pageX - startX;
@@ -424,11 +373,9 @@
           e.preventDefault();
         }
       });
-
       el.style.cursor = 'grab';
       el.querySelectorAll('a').forEach(function (n) { n.style.cursor = 'grab'; });
     })(track);
-
     // Desktop wheel: convert vertical wheel ticks to horizontal pan.
     // 120px clamp (~2 icons) matches homepage feel ,  smooth/momentum-ish.
     track.addEventListener('wheel', function (e) {
@@ -439,11 +386,6 @@
       track.scrollLeft += Math.sign(dy) * Math.min(Math.abs(dy), 120);
     }, { passive: false });
   }
-
-  /* Reveal on scroll + sticky topbar scrolled state (matches homepage).
-     Trigger at 40% of viewport (~430px on a 1080p screen) ,  appears as the
-     user nears the end of the hero section, well before the first content
-     block starts. */
   const topbarEl = document.querySelector('.topbar');
   function onScroll () {
     const y = window.scrollY;
