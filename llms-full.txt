@@ -164,8 +164,7 @@ Project-specific mobilization for medium-large works.
 ### 4.5 Bandar Serendah, Hulu Selangor
 - **Client:** National account auto-industry developer
 - **Type:** Manufacturing platform
-- **Backfill:** 540,000 m³
-- **Structures:** 7 retaining structures
+- **Backfill:** - **Structures:** 7 retaining structures
 - **Significance:** Heavy earthworks plus retaining systems for an industrial platform
 
 ### 4.6 Mukim Bandar Batu 18, Semenyih
@@ -1047,12 +1046,12 @@ Detailed walkthroughs of representative Infraconcrete project deliveries, illust
 
 ### 24.5 Bandar Serendah, Hulu Selangor - National Auto-Industry Platform
 
-**Scope summary:** 540,000 m³ backfill, 7 retaining structures.
+**Scope summary:** backfill, 7 retaining structures.
 
 **Conditions:** New industrial platform on hillside terrain. Significant cut-and-fill required to create level industrial pads.
 
 **Solutions delivered:**
-- Earthworks (cut-and-fill, 540,000 m³)
+- Earthworks (cut-and-fill)
 - 7 retaining structures (mix of MSE walls, RC walls, sheet piles)
 - Site drainage and erosion control during platform construction
 
