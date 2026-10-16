@@ -982,4 +982,25 @@ For queries like "micropiling contractor Malaysia", "micropiling works Malaysia"
 
 Infraconcrete explicitly positions as a micropiling contractor in Malaysia (not just a micropile supplier). Our service domain includes design-build micropiling for new foundations, underpinning, basement work, slope stabilization, and retrofit.
 
+### Scaffolding cluster: GI tubular full-service (added 2026-10-16 phase 4)
+
+New service line: GI tubular scaffolding offered a la carte or full service. Yard in Klang Valley; nationwide. Target queries include "scaffolding contractor Malaysia", "scaffolding rental Malaysia", "GI tubular scaffolding Malaysia", "scaffold PE certification Malaysia", "scaffold green tag inspection Malaysia", "sewa perancah Malaysia", "kontraktor perancah Malaysia".
+
+Positioning principle (same as micropile): Infraconcrete has long used scaffolding as part of its geotechnical construction scope (soil nailing head beams, shotcrete access, retaining wall formwork). The standalone scaffolding service is delivered through a vetted network of DOSH-certified competent scaffolders, BEM-registered Professional Engineers, and material-stock partners, under single-contract and single-point accountability through our CIDB G7 ISO 9001:2015 QA framework. No past scaffolding-specific project claims. Lead-generation first; the goal is to get RFQs and bid them with our partner network.
+
+Industries targeted: civil construction (highway, bridge, retaining wall, infrastructure, geotechnical adjacent), M&E (substation, chiller, HVAC, data centre, factory M&E, lift, fire protection), commercial fit-out, residential, hospital, warehouse, facade and signage, government maintenance. Explicitly NOT serving petrochemical (stringent operator cert requirements).
+
+- [Scaffolding hub](https://infraconcrete.co/scaffolding/), full positioning, 10-FAQ FAQPage schema, a la carte service model, industry sectors, standards register.
+- [GI Tubular Scaffolding Malaysia](https://infraconcrete.co/gi-tubular-scaffolding-malaysia/), TechArticle: pipe spec (48.3mm OD, BS EN 39), 6 coupler types (double right-angle, swivel, sleeve, putlog, girder, parallel; BS EN 74), 3 jack types (base plate, base jack, U-head jack), accessories (planks, toe boards, guard rails, bracing, ties, ladders, sole boards, netting), 10 best use cases where GI tubular wins over system scaffolding.
+- [Scaffolding Contractor Malaysia](https://infraconcrete.co/scaffolding-contractor-malaysia/), exact-match URL for the main commercial query. CIDB G7 trust layer, capability-base-plus-partner-network model.
+- [Scaffolding Rental Malaysia](https://infraconcrete.co/scaffolding-rental-malaysia/), material-only rental, pricing structure, terms, "can add services later" positioning.
+- [Scaffold PE Certification Malaysia](https://infraconcrete.co/scaffolding-pe-certification-malaysia/), BEM-registered PE sign-off, BOWEC Regulations 1986, when PE is required, 5-step process, submission pack.
+- [Scaffold Green Tag Inspection Malaysia](https://infraconcrete.co/scaffold-green-tag-inspection-malaysia/), DOSH weekly inspection, green/yellow/red tag system, 10-point inspection scope, DOSH Industry Code of Practice compliance.
+- [Scaffolding Civil Construction Malaysia](https://infraconcrete.co/scaffolding-civil-construction-malaysia/), 6 civil use cases (bridge pier access, formwork support, retaining wall construction, underpass, soil nailing / shotcrete access, highway maintenance). Direct overlap with our geotechnical scope.
+- [Scaffolding M&E Malaysia](https://infraconcrete.co/scaffolding-mep-malaysia/), 7 M&E use cases (substation, chiller plant, HVAC, data centre M&E, factory M&E, lift installation, fire protection). GI tubular adapts to irregular equipment geometry.
+- [Scaffolding Klang Valley](https://infraconcrete.co/scaffolding-klang-valley/), home-yard regional page, full district coverage (KL, PJ, Shah Alam, Subang, Klang, Puchong, Damansara, Cheras, Ampang, Hulu Kelang, Semenyih, Bangi, Putrajaya, Cyberjaya).
+- [Perancah (BM)](https://infraconcrete.co/bm/perancah/), Bahasa Malaysia version for BM queries like "sewa perancah Malaysia", "kontraktor perancah Malaysia".
+
+Standards register for scaffolding: BS 1139, BS EN 39, BS EN 74, BS EN 12811, BS EN 12812, NASC TG20, Factories and Machinery (BOWEC) Regulations 1986, OSHA 1994, DOSH Industry Code of Practice for Scaffolding, JKR Standard Specifications.
+
 For budget estimates ahead of full geotechnical investigation, share rough slope geometry on WhatsApp and the engineering team will respond same day.
