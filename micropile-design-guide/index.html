@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRSYDHBKMZ"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DRSYDHBKMZ');</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Micropile Design Guide Malaysia | FHWA-NHI-05-039 + BS EN 14199 + Eurocode 7 | Worked Example | Infraconcrete</title>
+<meta name="description" content="Micropile design guide for Malaysian geotechnical engineers. Six-step design process: load definition, ground characterisation, pile geometry, geotechnical bond strength (FHWA-NHI-05-039 Table 5-3), structural capacity check, load test program. Worked example: 200 mm micropile in Malaysian residual soil with weathered granite rock socket, 600 kN working load. Standards: BS EN 14199, FHWA-NHI-05-039, BS EN 1997, AASHTO LRFD, DFI Micropile Manual." />
+<meta name="keywords" content="micropile design Malaysia, FHWA-NHI-05-039, BS EN 14199, micropile design guide, Eurocode 7 micropile, DFI micropile manual, micropile worked example, geotechnical bond strength micropile, rock socket design, pali radice design" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Micropile Design Guide Malaysia | Infraconcrete" />
+<meta property="og:url" content="https://infraconcrete.co/micropile-design-guide/" />
+<meta property="og:image" content="https://infraconcrete.co/images/capabilities/cap-slope-stabilization.jpg" />
+<meta property="og:image:alt" content="Infraconcrete specialist geotechnical contractor in Malaysia" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://infraconcrete.co/images/capabilities/cap-slope-stabilization.jpg" />
+<meta property="og:locale" content="en_MY" />
+<link rel="canonical" href="https://infraconcrete.co/micropile-design-guide/" />
+<link rel="alternate" hreflang="en" href="https://infraconcrete.co/micropile-design-guide/" />
+<link rel="alternate" hreflang="x-default" href="https://infraconcrete.co/micropile-design-guide/" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" /><link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="icon" type="image/png" sizes="256x256" href="/favicon.png" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /><link rel="manifest" href="/site.webmanifest" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Micropile Design Guide for Malaysian Projects","description":"Six-step micropile design process per FHWA-NHI-05-039, BS EN 14199, and Eurocode 7, with a worked example for Malaysian residual soil + weathered granite rock socket.","author":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"publisher":{"@type":"Organization","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/"},"datePublished":"2026-10-16","dateModified":"2026-10-16"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://infraconcrete.co/"},{"@type":"ListItem","position":2,"name":"Micropile","item":"https://infraconcrete.co/micropile/"},{"@type":"ListItem","position":3,"name":"Design Guide","item":"https://infraconcrete.co/micropile-design-guide/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://infraconcrete.co/#org","name":"Infraconcrete Construction Sdn Bhd","url":"https://infraconcrete.co/","telephone":"+60-16-428-1214","email":"engineer@infraconcrete.co","sameAs":["https://www.google.com/maps?cid=16864131507088918181"],"hasMap":"https://maps.app.goo.gl/qbDLMxjLsv7rSps86","address":{"@type":"PostalAddress","streetAddress":"8B, Jalan SS22/25, Damansara Jaya","addressLocality":"Petaling Jaya","addressRegion":"Selangor","postalCode":"47400","addressCountry":"MY"},"geo":{"@type":"GeoCoordinates","latitude":3.1339,"longitude":101.6243},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:30","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:30","closes":"13:00"}],"areaServed":{"@type":"Country","name":"Malaysia"},"contactPoint":[{"@type":"ContactPoint","contactType":"sales","telephone":"+60-16-428-1214","url":"https://wa.me/60164281214","availableLanguage":["English","Malay","Mandarin","Cantonese"],"areaServed":"MY"},{"@type":"ContactPoint","contactType":"customer support","telephone":"+60-16-428-1214","email":"engineer@infraconcrete.co","availableLanguage":["English","Malay","Mandarin","Cantonese"],"areaServed":"MY"},{"@type":"ContactPoint","contactType":"technical support","telephone":"+60-12-236-2159","availableLanguage":["English","Malay","Mandarin"],"areaServed":"MY"}]}</script>
+<link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/css/seo-page.css"><script src="/js/seo-nav.js" defer></script>
+<meta name="theme-color" content="#ECE0C6" /></head>
+<body>
+<header class="topbar"><div class="container topbar-row"><a href="/" class="brand">Infra<em>concrete</em></a><a href="/" class="home-link">&larr; Back to home</a></div></header>
+<div class="container"><nav class="crumbs"><a href="/">Home</a><span class="sep">&middot;</span><a href="/micropile/">Micropile</a><span class="sep">&middot;</span><span class="here">Design Guide</span></nav></div>
+<main><div class="container">
+
+<section class="hero"><div class="eyebrow">Engineer Reference &middot; Micropile Design &middot; FHWA + BS + Eurocode</div><h1>Micropile design guide for <em>Malaysian projects.</em></h1><p class="lede">A working reference for C&amp;S and geotechnical engineers specifying micropile on Malaysian hillside foundations, underpinning, and slope stabilization projects. Six-step design process per FHWA-NHI-05-039 (primary reference), BS EN 14199 (execution), BS EN 1997 (geotechnical limit state), AASHTO LRFD, and DFI Micropile Manual. Worked example at the end for a typical Malaysian residual-soil + weathered-granite rock-socket case.</p></section>
+
+<section class="block"><div class="block-eye">01 / Define loads and performance</div><h2>Start with <em>what the pile must carry.</em></h2>
+<p>Specify at ULS and SLS:</p>
+<ul>
+<li><strong>Axial compression</strong> (dead + imposed, factored and unfactored).</li>
+<li><strong>Axial tension / uplift</strong> (if applicable: tall tower, uplift from hydrostatic pressure, deep basement).</li>
+<li><strong>Lateral load</strong> (wind, seismic, impact; may be dominant for towers or bridge piers).</li>
+<li><strong>Settlement limit</strong> (typical 10-25 mm for sensitive structures, up to 50 mm for industrial).</li>
+<li><strong>Group efficiency</strong> considerations if piles are spaced less than 3 diameters.</li>
+<li><strong>Durability</strong> and design life (typically 50-120 years; corrosion allowance on reinforcement).</li>
+</ul></section>
+
+<section class="block"><div class="block-eye">02 / Characterise the ground</div><h2>Minimum data <em>needed.</em></h2>
+<p>Micropile design depends heavily on ground data quality. Minimum requirements per FHWA-NHI-05-039:</p>
+<ul>
+<li>Borehole log at or near each pile cluster, extended at least 2 pile diameters below predicted pile tip.</li>
+<li>SPT N-values for granular layers and residual soil; UU triaxial or vane shear for cohesive layers.</li>
+<li>Water table level and seasonal variation.</li>
+<li>Rock description per BS 5930: lithology, weathering grade (I-VI per BS 5930), fracture spacing, RQD, UCS or point-load index for intact rock.</li>
+<li>Chemical analysis if aggressive ground is suspected (sulfate, chloride, pH; relevant to grout and reinforcement durability).</li>
+</ul>
+<p>In Malaysian hillside work, variability is the dominant risk. One borehole can miss a 10 m difference in rock depth within 20 m horizontal distance. Specify borehole clusters, not single boreholes, for any micropile project.</p></section>
+
+<section class="block"><div class="block-eye">03 / Select pile geometry</div><h2>Diameter, depth, reinforcement, <em>grout.</em></h2>
+<table class="specs">
+<tr><th>Parameter</th><th>Typical range</th><th>Design driver</th></tr>
+<tr><td>Diameter</td><td>150, 175, 200, 250, 300 mm</td><td>Capacity required, rig reach, cost per metre</td></tr>
+<tr><td>Depth</td><td>10-60 m</td><td>Depth to competent stratum + required bond length</td></tr>
+<tr><td>Bond length in competent stratum</td><td>3-6 m typical, up to 10 m for high-capacity</td><td>Geotechnical bond strength and design capacity</td></tr>
+<tr><td>Steel reinforcement</td><td>Grade 500 / 550 threaded bar 32-75 mm diameter; or HSS casing 140-200 mm OD</td><td>Structural axial + bending capacity</td></tr>
+<tr><td>Grout</td><td>Portland cement + water, w/c 0.40-0.50, 25-40 MPa 28-day</td><td>Durability, bond strength, pumpability</td></tr>
+<tr><td>Rig size</td><td>Small (3 m headroom), medium (5 m), full-size (10+ m)</td><td>Site access, headroom, production rate</td></tr>
+</table></section>
+
+<section class="block"><div class="block-eye">04 / Geotechnical bond strength</div><h2>From FHWA Table 5-3 <em>or load test.</em></h2>
+<p>Geotechnical bond strength (grout-to-soil ultimate interface shear) is tabulated by soil type in FHWA-NHI-05-039 Table 5-3. Representative values commonly used for Malaysian conditions:</p>
+<table class="specs">
+<tr><th>Soil / rock type</th><th>Ultimate bond strength &alpha;<sub>b</sub> (kPa)</th><th>Grouting type (A/B/C/D)</th></tr>
+<tr><td>Soft to medium clay</td><td>35-70</td><td>B</td></tr>
+<tr><td>Stiff clay</td><td>70-140</td><td>B / C</td></tr>
+<tr><td>Loose to medium sand</td><td>70-140</td><td>B</td></tr>
+<tr><td>Dense sand / gravel</td><td>140-350</td><td>B / C</td></tr>
+<tr><td>Residual soil (grade VI, Malaysian context)</td><td>100-200</td><td>B</td></tr>
+<tr><td>Weathered rock grade V/IV (completely to highly weathered)</td><td>200-500</td><td>B / C</td></tr>
+<tr><td>Weathered rock grade III (moderately weathered)</td><td>400-900</td><td>B / C</td></tr>
+<tr><td>Weathered rock grade II (slightly weathered)</td><td>700-1800</td><td>C</td></tr>
+<tr><td>Fresh rock (grade I)</td><td>1500-3000+</td><td>C / D</td></tr>
+</table>
+<p>Compute ultimate pile capacity P<sub>ult</sub> = &pi; &times; D &times; L<sub>bond</sub> &times; &alpha;<sub>b</sub>. Apply FoS of 2.0-2.5 for working load. For critical projects, confirm &alpha;<sub>b</sub> by on-site sacrificial pile load test to failure.</p></section>
+
+<section class="block"><div class="block-eye">05 / Structural capacity check</div><h2>Steel + grout <em>interaction.</em></h2>
+<p>Micropile structural capacity under axial compression:</p>
+<p><strong>P<sub>struct</sub> = &phi;<sub>c</sub> &times; (0.85 &times; f<sub>c</sub> &times; A<sub>grout</sub> + f<sub>y</sub> &times; A<sub>steel</sub>)</strong></p>
+<p>where &phi;<sub>c</sub> = 0.65-0.75 (per code), f<sub>c</sub> = grout compressive strength (typically 25-40 MPa), A<sub>grout</sub> = net grout area (pile cross-section minus steel), f<sub>y</sub> = steel yield (500-550 MPa for threaded bar), A<sub>steel</sub> = steel cross-sectional area.</p>
+<p>Combined axial + bending (lateral load case) uses interaction equations per ACI 318 or BS EN 1992. Lateral load capacity is usually determined via p-y analysis (LPILE or equivalent).</p>
+<p>Governing capacity is the lower of geotechnical (bond strength) and structural (steel + grout). Report both in the design record.</p></section>
+
+<section class="block"><div class="block-eye">06 / Load test program</div><h2>Verify <em>design assumptions.</em></h2>
+<ul>
+<li><strong>Sacrificial pile load test</strong>: at least one pile loaded to 2.0-2.5 &times; working load. Static method per ASTM D1143 (compressive) or D3689 (tension). Settlement acceptance per Davisson or specification criteria.</li>
+<li><strong>Proof testing on production piles</strong>: 1-5 percent of production piles loaded to 1.5 &times; working load. Confirms uniformity.</li>
+<li><strong>Lateral test</strong>: ASTM D3966 where lateral load is a design case.</li>
+<li><strong>High-strain dynamic testing (PDA)</strong>: supplementary verification on working piles, correlates to CAPWAP analysis.</li>
+</ul></section>
+
+<section class="block"><div class="block-eye">07 / Worked example</div><h2>200 mm micropile on <em>Malaysian hillside.</em></h2>
+<p><strong>Project:</strong> hillside residential, 3-storey terrace, column load (unfactored dead + live) 600 kN at pile cap.</p>
+<p><strong>Ground:</strong> residual soil (grade VI) 8 m thick; completely weathered granite (grade V) 4 m; moderately weathered granite (grade III) continuing below 12 m. Water table 3 m below ground.</p>
+<p><strong>Pile selected:</strong> 200 mm diameter, 18 m deep. 6 m terminal socket into grade III weathered granite (grade III assumed from 12 m to 18 m).</p>
+<p><strong>Reinforcement:</strong> 50 mm grade 500 threaded bar; grout 32 MPa.</p>
+<p><strong>Geotechnical capacity:</strong></p>
+<ul>
+<li>Bond length considered only in competent stratum (grade III and better): L<sub>bond</sub> = 6 m.</li>
+<li>&alpha;<sub>b</sub> for grade III weathered granite, Type B grouting: use 500 kPa (lower bound).</li>
+<li>P<sub>ult, geotechnical</sub> = &pi; &times; 0.200 &times; 6 &times; 500 = 1884 kN.</li>
+<li>Allowable working load with FoS 2.5: 1884 / 2.5 = 754 kN.</li>
+</ul>
+<p><strong>Structural capacity:</strong></p>
+<ul>
+<li>Grout area A<sub>grout</sub> = &pi;/4 &times; (0.200)&sup2; - A<sub>steel</sub> = 31,416 - 1,963 = 29,453 mm&sup2;.</li>
+<li>Steel area A<sub>steel</sub> = &pi;/4 &times; (0.050)&sup2; = 1,963 mm&sup2;.</li>
+<li>P<sub>struct</sub> = 0.70 &times; (0.85 &times; 32 &times; 29,453 + 500 &times; 1,963) &times; 10<sup>-3</sup> = 0.70 &times; (801 + 982) kN = 1,248 kN.</li>
+</ul>
+<p><strong>Governing capacity:</strong> geotechnical (754 kN working) vs structural (1,248 kN ultimate; approx. 830 kN working at FoS 1.5). Geotechnical governs; working capacity 754 kN &gt; required 600 kN. &check; Design is OK.</p>
+<p><strong>Load test:</strong> at least one sacrificial pile to 1,500 kN (2.5 &times; 600). Confirm settlement at working load &lt; 10 mm, settlement at 1.5 &times; working &lt; 25 mm, no runaway settlement to 2.5 &times; working.</p></section>
+
+<section class="block"><div class="block-eye">08 / Related references</div><h2>Deeper <em>reading.</em></h2>
+<div class="svc-grid">
+<a class="svc-link" href="/micropile/"><h4>Micropile hub &rarr;</h4><p>Full product and service reference.</p></a>
+<a class="svc-link" href="/micropile-slope-stabilization-malaysia/"><h4>Micropile slope stabilization &rarr;</h4><p>In-situ reinforcement design for slopes.</p></a>
+<a class="svc-link" href="/foundation-underpinning-malaysia/"><h4>Foundation underpinning &rarr;</h4><p>Underpinning design and method selection.</p></a>
+<a class="svc-link" href="/basement-underpinning-malaysia/"><h4>Basement underpinning &rarr;</h4><p>Low-headroom work.</p></a>
+<a class="svc-link" href="/soil-nailing/"><h4>Soil nailing &rarr;</h4><p>Related drilling + grouting method.</p></a>
+<a class="svc-link" href="/resources/"><h4>Resources hub &rarr;</h4><p>All design guides and references.</p></a>
+</div></section>
+
+</div>
+<section class="cta-block"><div class="container"><h2>Need peer-reviewed <em>micropile design for your project?</em></h2><p>WhatsApp borehole log, structural loads, and site layout. Same-day engineering response with preliminary pile sizing, methodology, and indicative quote.</p><div class="cta-row"><a class="btn btn-primary" href="https://wa.me/60164281214" target="_blank" rel="noopener">WhatsApp engineering desk &rarr;</a><a class="btn btn-ghost" href="/#contact">Full contact details</a></div></div></section>
+</main>
+<footer><div class="container"><p>Infraconcrete Construction Sdn Bhd &middot; CIDB G7 &middot; ISO 9001:2015 &middot; Group includes <strong>Starwall Sdn Bhd</strong> (sole STRATA Geosystems Malaysia distributor, see <a href="https://www.strataglobal.com/" rel="noopener external" target="_blank">strataglobal.com</a>) &middot; A <a href="/">Panthera Group</a> company</p></div></footer>
+</body></html>

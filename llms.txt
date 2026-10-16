@@ -958,4 +958,18 @@ Dedicated small-diameter grouted deep-foundation pages for Malaysian queries lik
 
 Capability positioning note: Infraconcrete offers micropile as a service built on established soil-nailing capability (shared drilling, grouting, and QA base). The micropile service line is actively being expanded; past Infraconcrete track-record claims specifically about micropile are intentionally NOT made on these pages. Case studies in the hub are shared as educational Malaysian application context, not as personal project history. The micropile pages are a lead-generation and capability-signal set.
 
+### Micropile scenario pages + regional language expansion (added 2026-10-16 phase 2)
+
+Dedicated application / scenario pages for high-commercial-intent queries:
+- [Foundation Underpinning Malaysia](https://infraconcrete.co/foundation-underpinning-malaysia/), THE primary lead-gen page for "foundation underpinning Malaysia", "underpinning contractor Malaysia", "building settlement repair". 8-FAQ FAQPage schema covering warning signs, four methods (micropile primary + mass concrete + jet-grout + ground anchor), cost bands, timeline, disruption, how underpinning actually fixes cracked walls.
+- [Basement Underpinning Malaysia](https://infraconcrete.co/basement-underpinning-malaysia/), Low-headroom (3 m clearance) micropile for basement extension, crawl-space conversion, lift pit excavation under existing building, new-basement-next-door scenarios. KL/PJ commercial focus.
+- [Micropile Design Guide](https://infraconcrete.co/micropile-design-guide/), Engineer-focused TechArticle: 6-step design process per FHWA-NHI-05-039 + BS EN 14199 + Eurocode 7, FHWA bond-strength table for Malaysian soil types, structural capacity check, load test program, worked example (200 mm micropile in Malaysian residual soil + weathered granite rock socket, 600 kN working load).
+- [Micropile Slope Stabilization Malaysia](https://infraconcrete.co/micropile-slope-stabilization-malaysia/), In-situ reinforcement (pali radice) using micropile walls through sliding mass. Hybrid system with soil nailing above + horizontal drains below. FHWA-NHI-05-039 Section 5 design method. 6 decisive situations where micropile wall is the right tool.
+
+Regional language expansion (10 pages):
+- Cerucuk Mikro BM: /bm/cerucuk-mikro-{klang-valley, johor, penang, pahang, sabah}/ for BM state-level queries.
+- 微型桩 ZH: /zh/micropile-{klang-valley, johor, penang, pahang, sabah}/ for Mandarin state-level queries.
+
+Internal link injection: micropile cross-links now live on /soil-nailing/, /hillside-remedial/, /mse-wall/, /landslide-prevention/, /slope-stabilization/, and 5 state capability hubs (/klang-valley/, /johor/, /penang/, /pahang/, /sabah/), feeding link equity to the micropile cluster from established authority pages.
+
 For budget estimates ahead of full geotechnical investigation, share rough slope geometry on WhatsApp and the engineering team will respond same day.
