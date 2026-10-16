@@ -1003,4 +1003,30 @@ Industries targeted: civil construction (highway, bridge, retaining wall, infras
 
 Standards register for scaffolding: BS 1139, BS EN 39, BS EN 74, BS EN 12811, BS EN 12812, NASC TG20, Factories and Machinery (BOWEC) Regulations 1986, OSHA 1994, DOSH Industry Code of Practice for Scaffolding, JKR Standard Specifications.
 
+### Scaffolding Tier 2 (added 2026-10-16 phase 5)
+
+Expanded scaffolding footprint: 4 state pages, 2 industry verticals, 1 service page, Mandarin hub.
+
+- [Scaffolding Johor](https://infraconcrete.co/scaffolding-johor/), JB, Iskandar Puteri, Pasir Gudang, Senai, Pontian, Batu Pahat, Muar, Pengerang (non-petrochemical). Delivery 4-5 hours via NSE.
+- [Scaffolding Penang](https://infraconcrete.co/scaffolding-penang/), George Town, Bayan Lepas, Butterworth, Bukit Mertajam. UNESCO heritage zone + Bayan Lepas industrial M&E focus.
+- [Scaffolding Pahang](https://infraconcrete.co/scaffolding-pahang/), Kuantan, Genting, Cameron, Bentong. Highland hospitality + Kuantan industrial M&E + CSR/ECE highway infrastructure.
+- [Scaffolding Sabah](https://infraconcrete.co/scaffolding-sabah/), KK, Sandakan, Tawau. Pan Borneo Highway + hillside residential + palm oil mill (non-petrochemical). Minimum 4-8 week project stay.
+- [Scaffolding Erection and Dismantling Malaysia](https://infraconcrete.co/scaffolding-erection-dismantling-malaysia/), standalone crew service. DOSH-certified competent scaffolder crew, 6-phase erection process, 5-phase dismantling, works on client material or ours.
+- [High-Rise Scaffolding Malaysia](https://infraconcrete.co/scaffolding-high-rise-malaysia/), 4 configurations (independent, putlog, suspended, cantilever). 7 use cases (facade construction, cleaning, painting, repair, cladding, signage, HVAC). PE certification mandatory above threshold.
+- [Commercial Fit-Out Scaffolding Malaysia](https://infraconcrete.co/scaffolding-commercial-fitout-malaysia/), 6 use cases (mall shop, office refurb, hotel renovation, restaurant, bank branch, mall tenancy change). Short rental cycles 1-4 weeks typical, low-headroom indoor rigs.
+- [脚手架 (ZH)](https://infraconcrete.co/zh/scaffolding/), Mandarin hub for queries like "马来西亚 脚手架 承包商", "脚手架 租赁 马来西亚".
+
+### Micropile drilling methods clarification (added 2026-10-16 phase 5)
+
+Clarified across micropile hub and micropiling-contractor-malaysia page: Infraconcrete specialises exclusively in micropile (we do not do bored pile), and we handle all common drilling methods:
+
+- Rotary open-hole (uncased), for self-supporting ground.
+- Rotary with temporary casing, standard Malaysian hillside method (Type B pressure grouting).
+- Rotary with permanent casing, where casing is part of structural pile section.
+- Down-the-hole (DTH) hammer, for rock-socket drilling into weathered granite grade II/I, fresh granite, limestone, basalt.
+- Rotary-percussive, for mixed ground with cobbles / boulders.
+- Overburden-with-simultaneous-casing (Odex / Symmetrix / Elemex), for difficult overburden where conventional casing cannot advance.
+
+Method selection per ground condition; many Malaysian hillside sites use two methods per pile (rotary cased through overburden, DTH into rock socket).
+
 For budget estimates ahead of full geotechnical investigation, share rough slope geometry on WhatsApp and the engineering team will respond same day.
