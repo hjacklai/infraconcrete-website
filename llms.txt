@@ -954,5 +954,8 @@ Dedicated small-diameter grouted deep-foundation pages for Malaysian queries lik
 - [Micropile Pahang](https://infraconcrete.co/micropile-pahang/), Genting, Cameron, Kuantan, Bentong. Highland resort foundations on variable weathered granite; Central Spine Road and East Coast Expressway bridge retrofit; Karak Highway slope remediation.
 - [Micropile Sabah](https://infraconcrete.co/micropile-sabah/), Kota Kinabalu, Sandakan, Tawau. Pan Borneo Highway bridge foundations; KK hillside residential; palm oil mill foundations on soft alluvium.
 - [Cerucuk Mikro (BM)](https://infraconcrete.co/bm/cerucuk-mikro/), Versi Bahasa Malaysia untuk pertanyaan dalam BM.
+- [微型桩 (ZH)](https://infraconcrete.co/zh/micropile/), 马来西亚微型桩承包商中文页面 (Mandarin). Chinese-language version of the micropile hub for queries like "微型桩 马来西亚", "微型桩承包商", "基础托底 马来西亚".
+
+Capability positioning note: Infraconcrete offers micropile as a service built on established soil-nailing capability (shared drilling, grouting, and QA base). The micropile service line is actively being expanded; past Infraconcrete track-record claims specifically about micropile are intentionally NOT made on these pages. Case studies in the hub are shared as educational Malaysian application context, not as personal project history. The micropile pages are a lead-generation and capability-signal set.
 
 For budget estimates ahead of full geotechnical investigation, share rough slope geometry on WhatsApp and the engineering team will respond same day.
