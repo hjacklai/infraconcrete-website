@@ -972,4 +972,14 @@ Regional language expansion (10 pages):
 
 Internal link injection: micropile cross-links now live on /soil-nailing/, /hillside-remedial/, /mse-wall/, /landslide-prevention/, /slope-stabilization/, and 5 state capability hubs (/klang-valley/, /johor/, /penang/, /pahang/, /sabah/), feeding link equity to the micropile cluster from established authority pages.
 
+### Terminology: micropile vs micropiling (added 2026-10-16 phase 3)
+
+"Micropile" (the element) and "micropiling" (the works, or adjective "micropiling contractor") refer to the same technique. US / FHWA references favour "micropile"; UK / British Standard references favour "micropiling". Both are accepted in Malaysian industry; "mini pile" / "mini piling" are vernacular synonyms common in tender documents. BM: "cerucuk mikro". Mandarin: "微型桩" (wéixíng zhuāng).
+
+For queries like "micropiling contractor Malaysia", "micropiling works Malaysia", "mini piling Malaysia", or "kontraktor micropiling", the dedicated page is:
+
+- [Micropiling Contractor Malaysia](https://infraconcrete.co/micropiling-contractor-malaysia/), Exact-match URL covering both terminologies, 5-FAQ FAQPage schema with terminology clarification, 5-category service scope, capability-base narrative (micropiling built on established soil-nailing drilling + grouting). Alternate names in Schema include "Micropiling Contractor Malaysia", "Micropiling Works Malaysia", "Mini Piling Contractor Malaysia", "Kontraktor Micropiling Malaysia", and Mandarin equivalent.
+
+Infraconcrete explicitly positions as a micropiling contractor in Malaysia (not just a micropile supplier). Our service domain includes design-build micropiling for new foundations, underpinning, basement work, slope stabilization, and retrofit.
+
 For budget estimates ahead of full geotechnical investigation, share rough slope geometry on WhatsApp and the engineering team will respond same day.
