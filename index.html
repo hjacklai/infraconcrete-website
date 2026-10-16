@@ -4530,13 +4530,13 @@
   <!-- Hero video carousel: 3 clips alternate in fixed order (Hero 1, Hero, VID-WA0242), cross-fade, loop forever -->
   <!-- Optimization: posters paint instantly, only the active video preloads fully; the others fetch in the background while it plays -->
   <div class="hero-video-stage" aria-hidden="true">
-    <video class="hero-vid active" data-idx="0" autoplay muted playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="images/hero/posters/hero-clip-2.jpg">
+    <video class="hero-vid active" data-idx="0" muted playsinline disablepictureinpicture disableremoteplayback preload="none" poster="images/hero/posters/hero-clip-2.jpg">
       <source src="images/hero/hero-clip-2.mp4" type="video/mp4">
     </video>
-    <video class="hero-vid" data-idx="1" muted playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="images/hero/posters/hero-clip-3.jpg">
+    <video class="hero-vid" data-idx="1" muted playsinline disablepictureinpicture disableremoteplayback preload="none" poster="images/hero/posters/hero-clip-3.jpg">
       <source src="images/hero/hero-clip-3.mp4" type="video/mp4">
     </video>
-    <video class="hero-vid" data-idx="2" muted playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="images/hero/posters/hero-clip-1.jpg">
+    <video class="hero-vid" data-idx="2" muted playsinline disablepictureinpicture disableremoteplayback preload="none" poster="images/hero/posters/hero-clip-1.jpg">
       <source src="images/hero/hero-clip-1.mp4" type="video/mp4">
     </video>
   </div>
@@ -7736,6 +7736,22 @@
   (() => {
     const vids = Array.from(document.querySelectorAll('.hero-vid'));
     if (vids.length === 0) return;
+
+    // Mobile / data-saver / 2G / reduced-motion: show static poster only.
+    // Hero clip-2 is 13 MB; downloading on mobile causes blank-screen stalls
+    // on weak 4G and burns cellular data. Posters are ~150 KB each and still
+    // give the hero its visual identity. Desktop viewport (>768px) gets the
+    // full video rotation unchanged.
+    const conn = navigator.connection || {};
+    const lite = conn.saveData === true
+                 || /2g/.test(conn.effectiveType || '')
+                 || window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                 || window.matchMedia('(max-width: 768px)').matches;
+    if (lite) {
+      vids.forEach(v => v.classList.remove('active'));
+      vids[0].classList.add('active');
+      return; // skip all play/rotation, poster-only
+    }
 
     let pos = 0; // index into vids; always starts on clip-1 (data-idx="0")
 
