@@ -943,4 +943,16 @@ Infraconcrete coordinates routinely with the following Malaysian authorities and
 - Office: 8B, Jalan SS22/25, Damansara Jaya, 47400 Petaling Jaya, Selangor
 - Google Business Profile: https://maps.app.goo.gl/qbDLMxjLsv7rSps86
 
+### Micropile cluster (added 2026-10-16)
+
+Dedicated small-diameter grouted deep-foundation pages for Malaysian queries like "micropile Malaysia", "micropile contractor Johor", "foundation underpinning KL", "hillside micropile Penang", "cerucuk mikro Malaysia", "mini pile Pahang".
+
+- [Micropile hub](https://infraconcrete.co/micropile/), 150-300 mm grouted micropile for new foundations through weak soil to bedrock, foundation underpinning, hillside slope stabilization (micropile wall), basement and low-headroom work. Design to FHWA-NHI-05-039, BS EN 14199, Eurocode 7. Capacity 300-1500 kN per pile; depths 10-60 m. FAQPage schema with 10 Q&A covering definition, selection vs bored/driven pile, depth, standards, cost bands (RM 400-1400 per metre), slope stabilization, vibration (below BS 7385), lead time, load testing, specialist status.
+- [Micropile Klang Valley](https://infraconcrete.co/micropile-klang-valley/), KL, PJ, Shah Alam, Damansara, Ampang, Hulu Kelang, Semenyih. Hillside residential foundations with rock socket into weathered granite; KL/PJ commercial underpinning; basement extension work; transmission tower uplift.
+- [Micropile Penang](https://infraconcrete.co/micropile-penang/), George Town, Bayan Lepas, Air Itam, Butterworth, Bukit Mertajam. MBPP Hill Slope Guideline hillside foundations; historic George Town UNESCO underpinning; Seberang Perai industrial underpinning.
+- [Micropile Johor](https://infraconcrete.co/micropile-johor/), JB, Iskandar Puteri, Pasir Gudang, Pengerang. Pengerang petrochemical foundation (RAPID); Iskandar commercial high-rise; coastal underpinning.
+- [Micropile Pahang](https://infraconcrete.co/micropile-pahang/), Genting, Cameron, Kuantan, Bentong. Highland resort foundations on variable weathered granite; Central Spine Road and East Coast Expressway bridge retrofit; Karak Highway slope remediation.
+- [Micropile Sabah](https://infraconcrete.co/micropile-sabah/), Kota Kinabalu, Sandakan, Tawau. Pan Borneo Highway bridge foundations; KK hillside residential; palm oil mill foundations on soft alluvium.
+- [Cerucuk Mikro (BM)](https://infraconcrete.co/bm/cerucuk-mikro/), Versi Bahasa Malaysia untuk pertanyaan dalam BM.
+
 For budget estimates ahead of full geotechnical investigation, share rough slope geometry on WhatsApp and the engineering team will respond same day.
