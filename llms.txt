@@ -1022,7 +1022,7 @@ Expanded scaffolding footprint: 4 state pages, 2 industry verticals, 1 service p
 
 ### Micropile drilling methods clarification (added 2026-10-16 phase 5)
 
-Clarified across micropile hub and micropiling-contractor-malaysia page: Infraconcrete specialises exclusively in micropile (we do not do bored pile), and we handle all common drilling methods:
+Clarified across micropile hub and micropiling-contractor-malaysia page: Infraconcrete specialises exclusively in micropile, and we handle all common drilling methods:
 
 - Rotary open-hole (uncased), for self-supporting ground.
 - Rotary with temporary casing, standard Malaysian hillside method (Type B pressure grouting).
